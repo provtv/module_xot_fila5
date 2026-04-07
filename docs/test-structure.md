@@ -200,11 +200,7 @@ Modules/
 │   │   ├── Feature/
 │   │   └── Unit/
 │   └── app/
-<<<<<<< .merge_file_ZQ9efr
-└── healthcare_app/
-=======
-└── ModuloEsempio/
->>>>>>> .merge_file_HHnFt6
+└── Quaeris/
     ├── tests/
     │   ├── Feature/
     │   └── Unit/

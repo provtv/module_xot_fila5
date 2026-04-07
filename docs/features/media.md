@@ -2,47 +2,27 @@
 
 ## Video Player
 ```txt
-<<<<<<< .merge_file_2iPc45
-${cat /mnt/f/var/www/healthcare_app/laravel/Modules/Xot/_docs/video_player.txt}
-=======
-${cat /mnt/f/var/www/ptvx/laravel/Modules/Xot/_docs/video_player.txt}
->>>>>>> .merge_file_mBH33J
+${cat /mnt/f/var/www/Quaeris/laravel/Modules/Xot/_docs/video_player.txt}
 ```
 
 ## Video Editor
 ```txt
-<<<<<<< .merge_file_2iPc45
-${cat /mnt/f/var/www/healthcare_app/laravel/Modules/Xot/_docs/video_editor.txt}
-=======
-${cat /mnt/f/var/www/ptvx/laravel/Modules/Xot/_docs/video_editor.txt}
->>>>>>> .merge_file_mBH33J
+${cat /mnt/f/var/www/Quaeris/laravel/Modules/Xot/_docs/video_editor.txt}
 ```
 
 ## FFmpeg Integration
 ```txt
-<<<<<<< .merge_file_2iPc45
-${cat /mnt/f/var/www/healthcare_app/laravel/Modules/Xot/_docs/ffmpeg.txt}
-=======
-${cat /mnt/f/var/www/ptvx/laravel/Modules/Xot/_docs/ffmpeg.txt}
->>>>>>> .merge_file_mBH33J
+${cat /mnt/f/var/www/Quaeris/laravel/Modules/Xot/_docs/ffmpeg.txt}
 ```
 
 ## Image Handling
 ```txt
-<<<<<<< .merge_file_2iPc45
-${cat /mnt/f/var/www/healthcare_app/laravel/Modules/Xot/_docs/image.txt}
-=======
-${cat /mnt/f/var/www/ptvx/laravel/Modules/Xot/_docs/image.txt}
->>>>>>> .merge_file_mBH33J
+${cat /mnt/f/var/www/Quaeris/laravel/Modules/Xot/_docs/image.txt}
 ```
 
 ## File Upload
 ```txt
-<<<<<<< .merge_file_2iPc45
-${cat /mnt/f/var/www/healthcare_app/laravel/Modules/Xot/_docs/upload.txt}
-=======
-${cat /mnt/f/var/www/ptvx/laravel/Modules/Xot/_docs/upload.txt}
->>>>>>> .merge_file_mBH33J
+${cat /mnt/f/var/www/Quaeris/laravel/Modules/Xot/_docs/upload.txt}
 ```
 ### Versione HEAD
 

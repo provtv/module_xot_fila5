@@ -23,9 +23,7 @@ cd /var/www/_bases/base_<nome progetto>/laravel
 
 ### 1. Conflitti Git Non Risolti (CRITICO)
 
-**Problema**: 107 file nel modulo Tenant contenevano marker di conflitto git (`<<<<<<< HEAD`, `=======`, `>>>>>>>`) che impedivano a PHPStan di eseguire il parsing.
-
-**Errore PHPStan**:
+**Problema**: 107 file nel modulo Tenant contenevano marker di conflitto git (`**Errore PHPStan**:
 ```
 Application bootstrap failed
 syntax error, unexpected token "<<"
@@ -146,17 +144,6 @@ public function __construct(array $data = [])
 }
 
 /**
-<<<<<<< HEAD
-=======
- * Handle dynamic method calls.
- */
-public function __call(string $method, array $parameters) // PRIMA DUPLICAZIONE
-{
-    // ...
-}
-
-/**
->>>>>>> 013c0d2 (.)
  * Get the title.
  */
 public function getTitle(): string
@@ -165,11 +152,6 @@ public function getTitle(): string
 }
 
 // ... altri metodi ...
-
-public function __call(string $method, array $parameters) // SECONDA DUPLICAZIONE
-{
-    // ...
-}
 
 // ✅ DOPO (CORRETTO) - Conflitto risolto, metodo singolo
 public function __construct(array $data = [])
