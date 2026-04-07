@@ -69,7 +69,7 @@ Tutti i cambiamenti sono legati alla migrazione a Livewire 4:
 
 ## Livewire v4 (obbligatorio per Filament 5)
 
-Filament v5 richiede Livewire v4. Seguire la guida: <https://livewire.laravel.com/docs/4.x/upgrading>.
+Filament v5 richiede Livewire v4. Seguire la guida: <https://livewire.laravel.com/docs/upgrading>.
 
 **Punti principali Livewire 4:**
 - Config: `layout` → `component_layout`, `lazy_placeholder` → `component_placeholder`
@@ -113,4 +113,4 @@ Nel progetto: verificare `filament/spatie-laravel-media-library-plugin` e altri 
 - [filament-v4-migration-guide.md](filament-v4-migration-guide.md) - Migrazione v4 (riferimento storico)
 - [filament-best-practices.md](filament-best-practices.md) - Regole e pattern Filament
 - [Upgrade guide ufficiale Filament 5](https://filamentphp.com/docs/5.x/upgrade-guide)
-- [Upgrade guide Livewire 4](https://livewire.laravel.com/docs/4.x/upgrading)
+- [Upgrade guide Livewire 4](https://livewire.laravel.com/docs/upgrading)

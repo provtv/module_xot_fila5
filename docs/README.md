@@ -41,3 +41,6 @@ Il modulo **Xot** è il nucleo fondativo dell'intero progetto Laraxot PTVX. Forn
 - [User Module](../User/docs/)
 - [UI Module](../UI/docs/)
 - [Tenant Module](../Tenant/docs/)
+
+## AI Workflows
+- [AI Methodologies](./ai-methodologies.md)

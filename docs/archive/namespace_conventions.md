@@ -65,10 +65,17 @@ Questo è l'errore più comune e grave nelle convenzioni di namespace:
 
 ```php
 // GRAVEMENTE ERRATO
-namespace Modules\Quaeris\App\Controllers;
+<<<<<<< HEAD
+namespace Modules\ModuloEsempio\App\Controllers;
 
 // CORRETTO
-namespace Modules\Quaeris\Controllers;
+namespace Modules\ModuloEsempio\Controllers;
+=======
+namespace Modules\healthcare_app\App\Controllers;
+
+// CORRETTO
+namespace Modules\healthcare_app\Controllers;
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 ```
 
 ## esempi corretti vs errati
@@ -76,19 +83,33 @@ namespace Modules\Quaeris\Controllers;
 ### corretti ✓
 ```php
 namespace Modules\Xot\Console\Commands;
-namespace Modules\Quaeris\Models;
+<<<<<<< HEAD
+namespace Modules\ModuloEsempio\Models;
 namespace Modules\User\Services;
 namespace Modules\Tenant\Repositories;
-namespace Modules\Quaeris\Filament\Resources;
+namespace Modules\ModuloEsempio\Filament\Resources;
+=======
+namespace Modules\healthcare_app\Models;
+namespace Modules\User\Services;
+namespace Modules\Tenant\Repositories;
+namespace Modules\healthcare_app\Filament\Resources;
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 ```
 
 ### errati ✗
 ```php
 namespace Modules\Xot\app\Console\Commands;       // errato: 'app' nel namespace
-namespace Modules\Quaeris\App\Models;           // errato: 'App' nel namespace
+<<<<<<< HEAD
+namespace Modules\ModuloEsempio\App\Models;           // errato: 'App' nel namespace
 namespace Modules\User\App\Services;              // errato: 'App' nel namespace
 namespace Modules\Tenant\app\Repositories;        // errato: 'app' nel namespace
-namespace App\Modules\Quaeris\Controllers;      // errato: struttura completamente sbagliata
+namespace App\Modules\ModuloEsempio\Controllers;      // errato: struttura completamente sbagliata
+=======
+namespace Modules\healthcare_app\App\Models;           // errato: 'App' nel namespace
+namespace Modules\User\App\Services;              // errato: 'App' nel namespace
+namespace Modules\Tenant\app\Repositories;        // errato: 'app' nel namespace
+namespace App\Modules\healthcare_app\Controllers;      // errato: struttura completamente sbagliata
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 ```
 
 ## struttura fisica vs namespace
@@ -98,32 +119,55 @@ namespace App\Modules\Quaeris\Controllers;      // errato: struttura completamen
 Anche se i file sono fisicamente collocati in una directory `app/`, il namespace **non deve mai riflettere** questa struttura.
 
 ```
-Percorso fisico:    /Modules/Quaeris/app/Models/Patient.php
-Namespace corretto: namespace Modules\Quaeris\Models;
+<<<<<<< HEAD
+Percorso fisico:    /Modules/ModuloEsempio/app/Models/Patient.php
+Namespace corretto: namespace Modules\ModuloEsempio\Models;
+=======
+Percorso fisico:    /Modules/healthcare_app/app/Models/Patient.php
+Namespace corretto: namespace Modules\healthcare_app\Models;
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 ```
 
 ### mappatura corretta percorso-namespace
 
 | percorso fisico | namespace corretto |
 |-----------------|--------------------|
-| `/Modules/Quaeris/app/Models/Patient.php` | `Modules\Quaeris\Models` |
-| `/Modules/Quaeris/app/Filament/Resources/PatientResource.php` | `Modules\Quaeris\Filament\Resources` |
+<<<<<<< HEAD
+| `/Modules/ModuloEsempio/app/Models/Patient.php` | `Modules\ModuloEsempio\Models` |
+| `/Modules/ModuloEsempio/app/Filament/Resources/PatientResource.php` | `Modules\ModuloEsempio\Filament\Resources` |
+=======
+| `/Modules/healthcare_app/app/Models/Patient.php` | `Modules\healthcare_app\Models` |
+| `/Modules/healthcare_app/app/Filament/Resources/PatientResource.php` | `Modules\healthcare_app\Filament\Resources` |
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 | `/Modules/Xot/app/Providers/XotServiceProvider.php` | `Modules\Xot\Providers` |
 
 ### struttura directory completa
 
 ```
 Modules/
-Quaeris/
+<<<<<<< HEAD
+  ModuloEsempio/
     app/                        // directory fisica
       Console/
         Commands/
-          ImportPatient.php     // namespace Modules\Quaeris\Console\Commands;
+          ImportPatient.php     // namespace Modules\ModuloEsempio\Console\Commands;
       Models/
-        Patient.php            // namespace Modules\Quaeris\Models;
+        Patient.php            // namespace Modules\ModuloEsempio\Models;
       Filament/
         Resources/
-          PatientResource.php  // namespace Modules\Quaeris\Filament\Resources;
+          PatientResource.php  // namespace Modules\ModuloEsempio\Filament\Resources;
+=======
+  healthcare_app/
+    app/                        // directory fisica
+      Console/
+        Commands/
+          ImportPatient.php     // namespace Modules\healthcare_app\Console\Commands;
+      Models/
+        Patient.php            // namespace Modules\healthcare_app\Models;
+      Filament/
+        Resources/
+          PatientResource.php  // namespace Modules\healthcare_app\Filament\Resources;
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 ```
 
 ## come verificare i namespace
@@ -141,7 +185,11 @@ Prima di committare un file, verifica sempre che:
 Utilizza phpstan per verificare automaticamente i namespace:
 
 ```bash
-php artisan phpstan:analyse --level=1 Modules/Quaeris
+<<<<<<< HEAD
+php artisan phpstan:analyse --level=1 Modules/ModuloEsempio
+=======
+php artisan phpstan:analyse --level=1 Modules/healthcare_app
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 ```
 
 ## motivazione di questa convenzione
@@ -164,10 +212,17 @@ Un errore comune è includere `App` nel namespace:
 
 ```php
 // ERRATO ❌
-namespace Modules\Quaeris\App\Console\Commands;
+<<<<<<< HEAD
+namespace Modules\ModuloEsempio\App\Console\Commands;
 
 // CORRETTO ✓
-namespace Modules\Quaeris\Console\Commands;
+namespace Modules\ModuloEsempio\Console\Commands;
+=======
+namespace Modules\healthcare_app\App\Console\Commands;
+
+// CORRETTO ✓
+namespace Modules\healthcare_app\Console\Commands;
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 ```
 
 ### Conseguenze dell'Errore
@@ -183,7 +238,11 @@ namespace Modules\Quaeris\Console\Commands;
 Utilizzare grep per trovare tutti i file con namespace errato:
 
 ```bash
-grep -r "namespace Modules\\\\.*\\\\App\\\\" /var/www/html/base_Quaeris/laravel/Modules
+<<<<<<< HEAD
+grep -r "namespace Modules\\\\.*\\\\App\\\\" /var/www/html/base_ptvx/laravel/Modules
+=======
+grep -r "namespace Modules\\\\.*\\\\App\\\\" /var/www/html/base_healthcare_app/laravel/Modules
+>>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
 ```
 
 ### PHP Stan

@@ -3120,7 +3120,7 @@ Notification::make()
 @endif
 ```
 
-# Filament Forms in Livewire 3 con PHP 8 Strict Types
+# Filament Forms in Livewire 4 con PHP 8 Strict Types
 
 ## Gestione Proprietà
 
@@ -8827,5 +8827,5 @@ class ClientMapWidget extends Widget
 2. `getParent()` è il metodo standard per accedere al parent
 3. Implementare sempre controlli di tipo
 4. Gestire i casi di errore in modo graceful
-5. La reattività funziona automaticamente con Livewire 3
+5. La reattività funziona automaticamente con Livewire 4
   - Contact section

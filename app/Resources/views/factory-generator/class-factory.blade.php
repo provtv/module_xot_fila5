@@ -1,4 +1,3 @@
-
 <?php
 
 declare(strict_types=1);
@@ -6,7 +5,6 @@ declare(strict_types=1);
 /** @var \ReflectionClass $reflection */
 /** @var array<string, string> $properties */
 ?>
-
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;

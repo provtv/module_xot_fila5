@@ -115,6 +115,6 @@ class QuestionChartAnswersWidget extends XotBaseTableWidget
 ```
 
 ## References
-- Livewire Documentation: https://livewire.laravel.com/docs/3.x/properties
+- Livewire Documentation: https://livewire.laravel.com/docs/properties
 - Filament Widgets: https://filamentphp.com/docs/4.x/widgets/overview
 - Laravel Service Container: Parameter Injection patterns

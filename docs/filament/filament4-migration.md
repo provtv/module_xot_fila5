@@ -50,7 +50,7 @@ Chart.register(ChartDataLabels);
 ## 🔗 Risorse
 
 - [Filament 5.x Upgrade Guide](https://filamentphp.com/docs/5.x/upgrade-guide)
-- [Livewire 4.x Upgrade Guide](https://livewire.laravel.com/docs/4.x/upgrading)
+- [Livewire 4.x Upgrade Guide](https://livewire.laravel.com/docs/upgrading)
 
 
 **Versione Attuale**: Filament 5.1.1
@@ -102,7 +102,7 @@ Chart.register(ChartDataLabels);
 ## 🔗 Risorse
 
 - [Filament 5.x Upgrade Guide](https://filamentphp.com/docs/5.x/upgrade-guide)
-- [Livewire 4.x Upgrade Guide](https://livewire.laravel.com/docs/4.x/upgrading)
+- [Livewire 4.x Upgrade Guide](https://livewire.laravel.com/docs/upgrading)
 
 
 **Versione Attuale**: Filament 5.1.1
@@ -154,5 +154,5 @@ Chart.register(ChartDataLabels);
 ## 🔗 Risorse
 
 - [Filament 5.x Upgrade Guide](https://filamentphp.com/docs/5.x/upgrade-guide)
-- [Livewire 4.x Upgrade Guide](https://livewire.laravel.com/docs/4.x/upgrading)
+- [Livewire 4.x Upgrade Guide](https://livewire.laravel.com/docs/upgrading)
 

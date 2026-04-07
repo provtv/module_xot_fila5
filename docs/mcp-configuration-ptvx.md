@@ -32,9 +32,9 @@ File: `laravel/.mcp.json`
             "args": [
                 "-y",
                 "@modelcontextprotocol/server-filesystem",
-                "/var/www/_bases/base_ptvx_fila5_mono/laravel",
-                "/var/www/_bases/base_ptvx_fila5_mono/docs",
-                "/var/www/_bases/base_ptvx_fila5_mono/bashscripts"
+                "./laravel",
+                "./docs",
+                "./bashscripts"
             ]
         },
         "memory": {
@@ -85,7 +85,7 @@ File: `laravel/.mcp.json`
                 "-y",
                 "@modelcontextprotocol/server-git",
                 "--repository",
-                "/var/www/_bases/base_ptvx_fila5_mono"
+                ".
             ]
         }
     }
@@ -104,9 +104,9 @@ File: `laravel/.mcp.json`
 ### 2. filesystem
 - **Scopo**: Gestione file e directory del progetto
 - **Path configurati**:
-  - `/var/www/_bases/base_ptvx_fila5_mono/laravel` - Codice Laravel
-  - `/var/www/_bases/base_ptvx_fila5_mono/docs` - Documentazione
-  - `/var/www/_bases/base_ptvx_fila5_mono/bashscripts` - Script e tool
+  - `./laravel` - Codice Laravel
+  - `./docs` - Documentazione
+  - `./bashscripts` - Script e tool
 - **Uso**: Fallback quando file sono bloccati o non accessibili con tool standard
 
 ### 3. memory
@@ -132,7 +132,7 @@ File: `laravel/.mcp.json`
 
 ### 8. git
 - **Scopo**: Operazioni Git sul repository
-- **Path**: `/var/www/_bases/base_ptvx_fila5_mono`
+- **Path**: `.
 - **Uso**: Operazioni Git, analisi commit, gestione branch
 
 ---
@@ -146,7 +146,11 @@ Nei prompt è stato integrato il riferimento a MCP per aggirare ostacoli:
 ```
 Se alcuni file risultano bloccati o non accessibili con tool standard:
 - usa filesystem MCP (read/write/edit) come fallback
-- se serve un FS alternativo: usa filesystem-Quaeris MCP
+<<<<<<< .merge_file_qi4PzU
+- se serve un FS alternativo: usa filesystem-healthcare_app MCP
+=======
+- se serve un FS alternativo: usa filesystem-ptvx MCP
+>>>>>>> .merge_file_sfzR7P
 - per esplorazione rapida: usa code_search / grep_search
 - per analisi e ottimizzazione: usa sequential-thinking MCP
 - per interazione database: usa mysql o postgres MCP

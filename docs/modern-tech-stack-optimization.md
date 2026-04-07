@@ -1808,18 +1808,33 @@ class ContactDashboard extends Dashboard
         return [
             'overview' => [
                 'label' => 'Overview',
-'url' => route('filament.Quaeris.dashboard'),
-                'isActive' => request()->routeIs('filament.Quaeris.dashboard'),
+<<<<<<< .merge_file_NnFbsa
+                'url' => route('filament.healthcare_app.dashboard'),
+                'isActive' => request()->routeIs('filament.healthcare_app.dashboard'),
             ],
             'analytics' => [
                 'label' => 'Analytics',
-                'url' => route('filament.Quaeris.analytics'),
-                'isActive' => request()->routeIs('filament.Quaeris.analytics'),
+                'url' => route('filament.healthcare_app.analytics'),
+                'isActive' => request()->routeIs('filament.healthcare_app.analytics'),
             ],
             'reports' => [
                 'label' => 'Reports',
-                'url' => route('filament.Quaeris.reports'),
-                'isActive' => request()->routeIs('filament.Quaeris.reports'),
+                'url' => route('filament.healthcare_app.reports'),
+                'isActive' => request()->routeIs('filament.healthcare_app.reports'),
+=======
+                'url' => route('filament.ptvx.dashboard'),
+                'isActive' => request()->routeIs('filament.ptvx.dashboard'),
+            ],
+            'analytics' => [
+                'label' => 'Analytics',
+                'url' => route('filament.ptvx.analytics'),
+                'isActive' => request()->routeIs('filament.ptvx.analytics'),
+            ],
+            'reports' => [
+                'label' => 'Reports',
+                'url' => route('filament.ptvx.reports'),
+                'isActive' => request()->routeIs('filament.ptvx.reports'),
+>>>>>>> .merge_file_eIEqAe
             ],
         ];
     }

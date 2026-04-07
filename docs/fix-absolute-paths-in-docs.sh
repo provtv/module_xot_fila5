@@ -5,7 +5,7 @@
 set -e
 
 DOCS_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-PROJECT_ROOT="/var/www/_bases/base_<nome progetto>_fila5_mono"
+PROJECT_ROOT=". progetto>_fila5_mono"
 
 echo "🔍 Analisi link assoluti in: $DOCS_DIR"
 echo ""
@@ -33,18 +33,18 @@ tar -czf "/tmp/docs-backup-$(date +%Y%m%d_%H%M%S).tar.gz" .
 
 # Pattern da sostituire:
 # 1. /var/www/html/<directory progetto>/laravel/Modules/...
-# 2. /var/www/_bases/base_*/laravel/Modules/...
+# 2. ./laravel/Modules/...
 
 echo "🔧 Pattern da correggere:"
 echo "  - /var/www/html/<directory progetto>/"
-echo "  - /var/www/_bases/base_*/"
+echo "  - ./"
 echo "  - Path assoluti hardcoded"
 echo ""
 
 # Conta occorrenze per tipo
 echo "📊 Analisi occorrenze:"
 grep -r "/var/www/html/<directory progetto>" --include="*.md" . 2>/dev/null | wc -l | xargs -I {} echo "  Template paths: {}"
-grep -r "/var/www/_bases/base_" --include="*.md" . 2>/dev/null | wc -l | xargs -I {} echo "  Hardcoded paths: {}"
+grep -r ". --include="*.md" . 2>/dev/null | wc -l | xargs -I {} echo "  Hardcoded paths: {}"
 echo ""
 
 echo "⚠️  ATTENZIONE: Questo script richiede revisione manuale"
