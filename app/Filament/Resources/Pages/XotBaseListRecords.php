@@ -43,13 +43,7 @@ abstract class XotBaseListRecords extends FilamentListRecords
         return $resource;
     }
 
-    /*
-     * Get the table columns.
-     *
-     * @return array<string, Tables\Columns\Column>
-     *
-     * abstract public function getTableColumns(): array;
-     */
+    
 
     /**
      * Get the default sort column and direction.

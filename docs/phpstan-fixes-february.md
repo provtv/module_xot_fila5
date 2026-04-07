@@ -8,7 +8,7 @@ Documentazione completa dei fix PHPStan applicati durante l'analisi di tutti i m
 
 ### Comando Eseguito
 ```bash
-cd /var/www/_bases/base_<nome progetto>/laravel
+cd . progetto>/laravel
 ./vendor/bin/phpstan analyse Modules --memory-limit=2G
 ```
 

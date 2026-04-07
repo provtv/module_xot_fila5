@@ -28,7 +28,15 @@
 ```
 Xot (Core Engine)
 ├── User (Authentication & Authorization)
-├── Quaeris (Core Business Logic - Surveys)
+<<<<<<< .merge_file_RiU4Vo
+├── healthcare_app (Core Business Logic - Surveys)
+=======
+<<<<<<< HEAD
+├── ExternalProject (Core Business Logic - Surveys)
+=======
+├── ModuloEsempio (Core Business Logic - Surveys)
+>>>>>>> f04e1ab44 (refactor: update project references from <nome progetto> to PTVX)
+>>>>>>> .merge_file_mSTn06
 ├── Cms (Content Management)
 ├── Media (File Management)
 ├── Geo (Location Services)
@@ -49,7 +57,7 @@ Xot (Core Engine)
 - **PHP 8.3.27** - Modern PHP with strict typing
 - **Laravel 12.38.1** - Latest Laravel framework
 - **Filament 4.2.2** - Admin panel framework
-- **Livewire 3.6.4** - Reactive UI components
+- **Livewire 4.2.1** - Reactive UI components
 - **MySQL** - Primary database
 - **TailwindCSS 3.4.17** - Utility-first CSS
 
@@ -108,7 +116,15 @@ TextInput::make('name');
 - **Power**: Controls access to all resources
 - **Responsibility**: Security and permissions
 
-#### 3. **Quaeris Module (The Economy)**
+<<<<<<< .merge_file_RiU4Vo
+#### 3. **healthcare_app Module (The Economy)**
+=======
+<<<<<<< HEAD
+#### 3. **ExternalProject Module (The Economy)**
+=======
+#### 3. **ModuloEsempio Module (The Economy)**
+>>>>>>> f04e1ab44 (refactor: update project references from <nome progetto> to PTVX)
+>>>>>>> .merge_file_mSTn06
 - **Role**: Core business logic, surveys, reporting
 - **Power**: Main revenue-generating functionality
 - **Responsibility**: Business operations

@@ -386,7 +386,7 @@ git push origin feature-branch
 ### Documentazione Laravel Ecosystem
 - [Laravel 12 Docs](https://laravel.com/docs/12.x)
 - [Filament 4 Docs](https://filamentphp.com/docs/4.x)
-- [Livewire 3 Docs](https://livewire.laravel.com/docs/3.x)
+- [Livewire 4 Docs](https://livewire.laravel.com/docs)
 - [Spatie Laravel Data](https://spatie.be/docs/laravel-data)
 - [Spatie QueueableAction](https://github.com/spatie/laravel-queueable-action)
 

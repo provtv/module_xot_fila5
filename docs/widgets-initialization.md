@@ -2,7 +2,7 @@
 
 ## ⚠️ Problema delle Signature (Incompatibilità)
 
-In Filament v4 (Livewire 3), i widget che estendono `XotBaseWidget` (che a sua volta estende `Filament\Widgets\Widget`) spesso presentano firme (signature) del metodo `mount()` differenti:
+In Filament v4 (Livewire 4), i widget che estendono `XotBaseWidget` (che a sua volta estende `Filament\Widgets\Widget`) spesso presentano firme (signature) del metodo `mount()` differenti:
 
 - `EditUserWidget::mount(string $type, ?string $userId = null)`
 - `TimeClockWidget::mount()` (senza parametri)

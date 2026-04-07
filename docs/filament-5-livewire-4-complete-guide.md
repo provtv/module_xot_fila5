@@ -3,7 +3,7 @@
 
 ## 📋 Sommario
 
-Questa guida documenta l'upgrade da Filament 4.x + Livewire 3.x a Filament 5.x + Livewire 4.x per il progetto Laraxot, con particolare focus sul modulo Xot e le sue classi base.
+Questa guida documenta l'upgrade da Filament 4.x + Livewire 4.x a Filament 5.x + Livewire 4.x per il progetto Laraxot, con particolare focus sul modulo Xot e le sue classi base.
 
 ---
 
@@ -31,7 +31,7 @@ Questa guida documenta l'upgrade da Filament 4.x + Livewire 3.x a Filament 5.x +
 
 ---
 
-## 🔍 Breaking Changes: Livewire 3 → 4
+## 🔍 Breaking Changes: Livewire 4 → 4
 
 ### 1. Config File Updates (CRITICO)
 
@@ -40,7 +40,7 @@ Le chiavi di configurazione sono state rinominate in Livewire 4:
 #### Chiavi Rinominate
 
 ```php
-// ❌ Livewire 3
+// ❌ Livewire 4
 'layout' => 'components.layouts.app',
 'lazy_placeholder' => 'livewire.placeholder',
 
@@ -86,7 +86,7 @@ Le chiavi di configurazione sono state rinominate in Livewire 4:
 Per componenti full-page, l'approccio consigliato è cambiato:
 
 ```php
-// ❌ Livewire 3 (ancora supportato ma non raccomandato)
+// ❌ Livewire 4 (ancora supportato ma non raccomandato)
 Route::get('/dashboard', Dashboard::class);
 
 // ✅ Livewire 4 (raccomandato)
@@ -101,7 +101,7 @@ Route::livewire('/dashboard', 'pages::dashboard');
 In Livewire 4, `wire:model` **non ascolta più gli eventi dei figli** di default:
 
 ```php
-// ❌ Livewire 3 - ascoltava eventi figli
+// ❌ Livewire 4 - ascoltava eventi figli
 <div wire:model="value">
     <input type="text">
 </div>
@@ -119,14 +119,14 @@ In Livewire 4, `wire:model` **non ascolta più gli eventi dei figli** di default
 In Livewire 4, i modificatori `.blur` e `.change` controllano quando lo stato client-side viene sincronizzato:
 
 ```php
-// Livewire 3
+// Livewire 4
 <input wire:model.blur="title">
 
 // Livewire 4 equivalente
 <input wire:model.live.blur="title">
 ```
 
-| Livewire 3 | Livewire 4 Equivalente |
+| Livewire 4 | Livewire 4 Equivalente |
 |-------------|------------------------|
 | `wire:model.blur` | `wire:model.live.blur` |
 | `wire:model.change` | `wire:model.live.change` |
@@ -152,7 +152,7 @@ In Livewire 4, `wire:transition` usa la View Transitions API nativa del browser:
 In Livewire 4, i tag dei componenti devono essere correttamente chiusi:
 
 ```php
-// ❌ Livewire 3 - tag non chiuso
+// ❌ Livewire 4 - tag non chiuso
 <livewire:component-name>
 
 // ✅ Livewire 4 - self-closing
@@ -167,7 +167,7 @@ In Livewire 4, i tag dei componenti devono essere correttamente chiusi:
 ### 7. `wire:scroll` → `wire:navigate:scroll`
 
 ```php
-// ❌ Livewire 3
+// ❌ Livewire 4
 <div class="overflow-y-scroll" wire:scroll>
     <!-- ... -->
 </div>
@@ -183,7 +183,7 @@ In Livewire 4, i tag dei componenti devono essere correttamente chiusi:
 #### Streaming
 
 ```php
-// ❌ Livewire 3
+// ❌ Livewire 4
 $this->stream(to: '#container', content: 'Hello', replace: true);
 
 // ✅ Livewire 4
@@ -193,7 +193,7 @@ $this->stream(content: 'Hello', replace: true, el: '#container');
 #### Component Mounting
 
 ```php
-// ❌ Livewire 3
+// ❌ Livewire 4
 public function mount($name, $params = [], $key = null)
 
 // ✅ Livewire 4
@@ -383,8 +383,8 @@ Tutti i cambiamenti sono legati alla migrazione a Livewire 4:
 #### 1.1 Backup
 
 ```bash
-cp -r /var/www/_bases/base_<nome progetto>/laravel \
-      /var/www/_bases/base_<nome progetto>_backup_$(date +%Y%m%d)
+cp -r . progetto>/laravel \
+      . progetto>_backup_$(date +%Y%m%d)
 ```
 
 #### 1.2 Risolvere Conflitti Git
@@ -392,7 +392,7 @@ cp -r /var/www/_bases/base_<nome progetto>/laravel \
 Il progetto ha conflitti git da risolvere prima dell'upgrade:
 
 ```bash
-cd /var/www/_bases/base_<nome progetto>
+cd . progetto>
 
 # Verifica stato git
 git status
@@ -441,7 +441,7 @@ git commit -m "Risolto conflitti git prima upgrade Filament 5"
 #### 3.1 Installa Script di Upgrade
 
 ```bash
-cd /var/www/_bases/base_<nome progetto>/laravel
+cd . progetto>/laravel
 
 composer require filament/upgrade:"^5.0" -W --dev
 ```

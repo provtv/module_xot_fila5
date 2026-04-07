@@ -59,7 +59,7 @@ The **Xot Module** is the foundational core of the Laraxot PTVX ecosystem. It pr
 │  • Shared Patterns & Traits              │
 │  • Common Services & Utilities           │
 ├─────────────────────────────────────────┤
-│  Laravel 12 │ Filament 4 │ Livewire 3   │  ← Framework Layer
+│  Laravel 12 │ Filament 4 │ Livewire 4   │  ← Framework Layer
 └─────────────────────────────────────────┘
 ```
 
@@ -702,7 +702,7 @@ See [ROADMAP.md](./roadmap.md) for details.
 ### External Resources
 - [Laravel 12 Documentation](https://laravel.com/docs/12.x)
 - [Filament 4 Documentation](https://filamentphp.com/docs/4.x)
-- [Livewire 3 Documentation](https://livewire.laravel.com/docs)
+- [Livewire 4 Documentation](https://livewire.laravel.com/docs)
 - [PHPStan Documentation](https://phpstan.org/user-guide/getting-started)
 - [Pest Documentation](https://pestphp.com/docs)
 
