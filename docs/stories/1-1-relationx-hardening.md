@@ -13,7 +13,7 @@ related:
   - ../relationx-trait-analysis.md
   - ../../../../../docs/wiki/bmad/story-scopes.md
 github:
-  repository: git@github.com:laraxot/module_xot_fila5.git
+  repository: https://github.com/laraxot/module_xot_fila5
   issues: https://github.com/laraxot/module_xot_fila5/issues
   discussions: https://github.com/laraxot/module_xot_fila5/discussions
 ---
@@ -118,3 +118,20 @@ Analisi completa: [relationx-trait-analysis.md](../relationx-trait-analysis.md).
 ## Dev Agent Record
 
 _(da compilare in fase di dev-story)_
+
+## GitHub (tracciamento)
+
+Repository letto da frontmatter `github.repository` o `git remote -v` (se assente: repo root **`laraxot/base_quaeris_fila5`**): **`laraxot/module_xot_fila5`**.
+
+| Risorsa | Stato | Link |
+|---|---|---|
+| Issue | **DA CREARE** | https://github.com/laraxot/module_xot_fila5/issues |
+| Discussion | **DA CREARE** | https://github.com/laraxot/module_xot_fila5/discussions |
+
+Il numero non e' scritto perche' non esiste ancora: `gh` non e' autenticato in questa sessione e i repo sono privati. Appena disponibile, creare con:
+
+```bash
+gh issue create --repo laraxot/module_xot_fila5 \
+  --title "RelationX — fallire forte invece che in silenzio" --body-file 1-1-relationx-hardening.md
+gh api repos/laraxot/module_xot_fila5/discussions -f title="RelationX — fallire forte invece che in silenzio" -f body="vedi la story"
+```

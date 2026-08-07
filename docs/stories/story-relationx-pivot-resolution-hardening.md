@@ -30,10 +30,20 @@ Status: `ready-for-dev` · Scope: `module:Xot` (tutti i commit toccano solo `lar
 
 ## GitHub (tracciamento)
 
-| Tipo | Owner | URL |
-|------|-------|-----|
-| Issue | `laraxot/module_xot_fila5` | da aprire — `gh` non autenticato alla stesura |
-| Discussion | `laraxot/module_xot_fila5` | da aprire |
+Repository letto da frontmatter `github.repository` o `git remote -v` (se assente: repo root **`laraxot/base_quaeris_fila5`**): **`laraxot/module_xot_fila5`**.
+
+| Risorsa | Stato | Link |
+|---|---|---|
+| Issue | **DA CREARE** | https://github.com/laraxot/module_xot_fila5/issues |
+| Discussion | **DA CREARE** | https://github.com/laraxot/module_xot_fila5/discussions |
+
+Il numero non e' scritto perche' non esiste ancora: `gh` non e' autenticato in questa sessione e i repo sono privati. Appena disponibile, creare con:
+
+```bash
+gh issue create --repo laraxot/module_xot_fila5 \
+  --title "RelationX — rimuovere il parametro morto, chiudere il gap cross-database e rendere esplicito il contratto dei pivot" --body-file story-relationx-pivot-resolution-hardening.md
+gh api repos/laraxot/module_xot_fila5/discussions -f title="RelationX — rimuovere il parametro morto, chiudere il gap cross-database e rendere esplicito il contratto dei pivot" -f body="vedi la story"
+```
 
 ## Story
 
