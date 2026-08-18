@@ -234,6 +234,31 @@ abstract class XotBaseMigration extends LaravelMigration
     }
 
     /**
+     * Verifica l'esistenza di un vincolo di foreign key sulla tabella.
+     *
+     * Serve alle migrazioni idempotenti sui database storici, dove la CREATE puo'
+     * essere andata a buon fine senza che la FK sia stata creata: senza questo
+     * controllo il secondo passaggio fallirebbe con "Duplicate foreign key constraint".
+     */
+    public function hasForeignKey(string $constraint): bool
+    {
+        $connection = $this->getConn()->getConnection();
+        $table = $this->getTable();
+        $database = $connection->getDatabaseName();
+
+        $query = "SELECT COUNT(*) as count
+              FROM information_schema.table_constraints
+              WHERE table_schema = ?
+              AND table_name = ?
+              AND constraint_name = ?
+              AND constraint_type = 'FOREIGN KEY'";
+
+        $result = $connection->selectOne($query, [$database, $table, $constraint]);
+
+        return $this->extractPrimaryKeyCount($result) > 0;
+    }
+
+    /**
      * Drop the primary key from the table.
      */
     public function dropPrimaryKey(): void

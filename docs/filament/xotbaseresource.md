@@ -14,7 +14,7 @@ Fonte: `app/Filament/Resources/XotBaseResource.php`.
 | `table()` | **non** final — carica `{Resource}\Tables\{Plural}Table` | Preferire la Table nested, non reimplementare a caso |
 | `getFormSchema()` | **non** final, **non** abstract: delega a `getFormSchemaOld()` | Ponte: 74 Resource lo sovrascrivono ancora. `final` qui = pagina bianca all'autoload |
 | `getFormSchemaOld()` | **non** abstract, default `[]` | Ponte di migrazione verso `{Model}Form::getFormSchema()`. Non esiste sui Widget |
-| `getFormClass()` / `getTableClass()` | se manca la classe nested → **`LogicException`** | Nessun fallback Action nel call site attuale |
+| `getFormClass()` / `getTableClass()` / `getInfolistClass()` | nested su `static::class`, poi Resource canonica del model (`GetResourceClassNameByModelClassAction`) | Nessun form/table vuoto. `LogicException` solo se mancano **entrambe** |
 
 Wiki root che dice «`getFormSchema` final + `getFormSchemaOld` abstract» è **fiction**. SSoT = questo file + il PHP.
 

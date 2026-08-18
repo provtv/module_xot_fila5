@@ -81,6 +81,6 @@ class NotificationResource extends XotBaseResource
 
 `form()` è `final`; `table()` nel codice **non** lo è. Lo schema vive in `{Resource}\Schemas\{Model}Form` e `{Resource}\Tables\{Plural}Table`.
 
-`getFormClass()` / `getTableClass()` cercano le classi nested su `static::class`. Se mancano → `LogicException`. L'Action `GetResourceClassNameByModelClassAction` **esiste ma non è cablata**: [get-resource-class-name-by-model-class-action.md](./get-resource-class-name-by-model-class-action.md).
+`getFormClass()` / `getTableClass()` / `getInfolistClass()` cercano le classi nested su `static::class`. Se mancano, `GetResourceClassNameByModelClassAction` risolve la Resource del model nel pannello (Performance/IR su model Ptv). `LogicException` solo se manca anche quella. Dettaglio e lezione: [get-resource-class-name-by-model-class-action.md](./get-resource-class-name-by-model-class-action.md).
 
 `getFormSchemaOld()` resta solo come ponte di migrazione sulle Resource, **non** sui Widget (`XotBaseWidget::getFormSchema()`).

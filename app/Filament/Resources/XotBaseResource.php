@@ -23,6 +23,7 @@ use Illuminate\Support\HtmlString;
 use Illuminate\Support\Str;
 use LogicException;
 use Modules\Media\Actions\GetAttachmentsSchemaAction;
+use Modules\Xot\Actions\Filament\GetResourceClassNameByModelClassAction;
 use Modules\Xot\Actions\GetTransKeyAction;
 use Modules\Xot\Actions\ModelClass\CountAction;
 use Modules\Xot\Filament\Resources\Schemas\XotBaseResourceForm;
@@ -149,11 +150,12 @@ abstract class XotBaseResource extends FilamentResource
         $formClass = static::class.'\Schemas\\'.class_basename(static::getModel()).'Form';
         if (class_exists($formClass)) {
             Assert::subclassOf($formClass, XotBaseResourceForm::class);
-
-            return $formClass;
+            return $formClass;    
         }
-
-        throw new LogicException("Form class [{$formClass}] not found for resource [".static::class.'].');
+        $class1=app(GetResourceClassNameByModelClassAction::class)->execute(static::getModel());
+        $class1 = $class1.'\Schemas\\'.class_basename(static::getModel()).'Form';
+        Assert::subclassOf($class1, XotBaseResourceForm::class);
+        return $class1;
     }
 
     final public static function form(Schema $schema): Schema
@@ -178,11 +180,14 @@ abstract class XotBaseResource extends FilamentResource
         $class = static::class.'\Tables\\'.Str::plural(class_basename(static::getModel())).'Table';
         if (class_exists($class)) {
             Assert::subclassOf($class, XotBaseResourceTable::class);
-
             return $class;
         }
 
-        throw new LogicException("Table class [{$class}] not found for resource [".static::class.'].');
+        $class1=app(GetResourceClassNameByModelClassAction::class)->execute(static::getModel());
+        $class1 = $class1.'\Tables\\'.Str::plural(class_basename(static::getModel())).'Table';
+        Assert::subclassOf($class1, XotBaseResourceTable::class);
+
+        return $class1;
     }
 
     public static function table(Table $table): Table
@@ -220,17 +225,14 @@ abstract class XotBaseResource extends FilamentResource
     public static function getInfolistClass(): string
     {
         $class = static::class.'\Schemas\\'.class_basename(static::getModel()).'Infolist';
-        if (! class_exists($class)) {
-            throw new LogicException(\sprintf(
-                'Infolist class %s does not exist. Create it extending %s. During migration schema may live temporarily in %s::getInfolistSchema(), then move into the Infolist class — the Infolist class itself must still exist.',
-                $class,
-                XotBaseResourceInfolist::class,
-                static::class,
-            ));
+        if (class_exists($class)) {
+            Assert::subclassOf($class, XotBaseResourceInfolist::class);
+            return $class;    
         }
-        Assert::subclassOf($class, XotBaseResourceInfolist::class);
-
-        return $class;
+        $class1=app(GetResourceClassNameByModelClassAction::class)->execute(static::getModel());
+        $class1 = $class1.'\Schemas\\'.class_basename(static::getModel()).'Infolist';
+        Assert::subclassOf($class1, XotBaseResourceInfolist::class);
+        return $class1;
     }
 
     final public static function infolist(Schema $schema): Schema
