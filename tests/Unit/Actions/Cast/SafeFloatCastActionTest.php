@@ -72,7 +72,7 @@ it('casts arrays', function (): void {
 });
 
 it('casts objects', function (): void {
-    $result = app(SafeFloatCastAction::class)->execute(new stdClass);
+    $result = app(SafeFloatCastAction::class)->execute(new stdClass());
     Assert::assertSame(0.0, $result);
 });
 

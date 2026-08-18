@@ -9,7 +9,7 @@ use PHPUnit\Framework\Assert;
 uses(TestCase::class);
 
 describe('ModuleAction', function (): void {
-    $service = new ModuleAction;
+    $service = new ModuleAction();
 
     it('can be instantiated', function () use ($service): void {
         Assert::assertInstanceOf(ModuleAction::class, $service);

@@ -17,7 +17,7 @@ class BuildNestedRouteNameAction
         $action = $params->act ?? 'show';
         $parts = inAdmin(['in_admin' => $params->in_admin]) ? ['admin'] : [];
 
-        for ($i = 0; $i <= $depth; $i++) {
+        for ($i = 0; $i <= $depth; ++$i) {
             $parts[] = 'container'.$i;
         }
 

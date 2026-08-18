@@ -11,18 +11,18 @@ class IsAdminRouteAction
 {
     use QueueableAction;
 
-    public function execute(RouteParamsData $params = new RouteParamsData): bool
+    public function execute(RouteParamsData $params = new RouteParamsData()): bool
     {
-        if ($params->in_admin !== null) {
+        if (null !== $params->in_admin) {
             return $params->in_admin;
         }
 
-        if (request()->segment(1) === 'admin') {
+        if ('admin' === request()->segment(1)) {
             return true;
         }
 
         $segments = request()->segments();
 
-        return $segments !== [] && $segments[0] === 'livewire' && session('in_admin', false) === true;
+        return [] !== $segments && 'livewire' === $segments[0] && true === session('in_admin', false);
     }
 }

@@ -20,7 +20,7 @@ class BuildActionUrlAction
         $row = $params->row ?? (object) [];
         $query = $params->query ?? [];
         $route = request()->route();
-        if (! $route instanceof Route || $route->getName() === null) {
+        if (! $route instanceof Route || null === $route->getName()) {
             return '#'.$action;
         }
 

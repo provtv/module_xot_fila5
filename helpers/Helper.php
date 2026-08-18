@@ -15,17 +15,16 @@ use Modules\Xot\Actions\Cast\SafeStringCastAction;
 use Modules\Xot\Actions\Factory\GetFactoryAction;
 use Modules\Xot\Actions\File\FixPathAction;
 use Modules\Xot\Actions\Route\GetRouteParametersAction;
-use Webmozart\Assert\Assert;
 
 use function Safe\define;
 use function Safe\preg_match;
 
+use Webmozart\Assert\Assert;
+
 if (! function_exists('isRunningTestBench')) {
     function isRunningTestBench(): bool
     {
-        /** @var mixed $pathResult */
         $pathResult = app(FixPathAction::class)->execute('\vendor\orchestra\testbench-core\laravel');
-        /** @var mixed $baseResult */
         $baseResult = app(FixPathAction::class)->execute(base_path());
 
         $path = is_string($pathResult) ? $pathResult : '';
@@ -44,7 +43,6 @@ if (! function_exists('dddx')) {
         if (! defined('LARAVEL_START')) {
             define('LARAVEL_START', $start);
         }
-        /** @var mixed $fileResult */
         $fileResult = app(FixPathAction::class)->execute($tmp[0]['file'] ?? 'file-unknown');
         $file = is_string($fileResult) ? $fileResult : 'file-unknown';
 
@@ -57,14 +55,11 @@ if (! function_exists('dddx')) {
         ];
 
         if (File::exists($data['file'])) {
-            /** @var mixed $storageResult */
             $storageResult = app(FixPathAction::class)->execute(storage_path('framework/views'));
             $storagePath = is_string($storageResult) ? $storageResult : '';
             if (Str::startsWith($data['file'], $storagePath)) {
                 $content = File::get($data['file']);
-                /** @var mixed $betweenResult */
                 $betweenResult = Str::between($content, '/**PATH ', ' ENDPATH**/');
-                /** @var mixed $viewResult */
                 $viewResult = app(FixPathAction::class)->execute(is_string($betweenResult) ? $betweenResult : '');
                 $data['view_file'] = is_string($viewResult) ? $viewResult : '';
             }
@@ -90,29 +85,30 @@ if (! function_exists('inAdmin')) {
             return (bool) $params['in_admin'];
         }
 
-        if (Request::segment(2) === 'admin') {
+        if ('admin' === Request::segment(2)) {
             return true;
         }
 
         /** @var iterable<int|string, string>|null $segments */
         $segments = Request::segments();
 
-        if (! is_array($segments) || count($segments) === 0) {
+        if (! is_array($segments) || 0 === count($segments)) {
             return false;
         }
 
-        return $segments[0] === 'livewire' && session('in_admin') === true;
+        return 'livewire' === $segments[0] && true === session('in_admin');
     }
 }
 
 if (! function_exists('params2ContainerItem')) {
     /**
-     * @param  array<string, mixed>|null  $params
+     * @param array<string, mixed>|null $params
+     *
      * @return array{0: array<string, mixed>, 1: array<string, mixed>}
      */
     function params2ContainerItem(?array $params = null): array
     {
-        if ($params === null) {
+        if (null === $params) {
             $params = [];
             $route_current = Route::current();
             if ($route_current instanceof Illuminate\Routing\Route) {
@@ -124,12 +120,12 @@ if (! function_exists('params2ContainerItem')) {
         $item = [];
         foreach ($params as $k => $v) {
             $pattern = '/(container|item)(\d+)/';
-            if (preg_match($pattern, $k, $matches) !== 1) {
+            if (1 !== preg_match($pattern, $k, $matches)) {
                 continue;
             }
             $sk = $matches[1] ?? '';
             $sv = $matches[2] ?? '';
-            if ($sk !== '' && $sv !== '') {
+            if ('' !== $sk && '' !== $sv) {
                 ${$sk}[$sv] = $v;
             }
         }
@@ -158,7 +154,7 @@ if (! function_exists('authId')) {
         try {
             $id = Filament::auth()->id() ?? auth()->guard()->id();
 
-            return $id === null ? null : strval($id);
+            return null === $id ? null : strval($id);
         } catch (Throwable) {
             return null;
         }
@@ -175,7 +171,7 @@ if (! function_exists('trans_string')) {
                 continue;
             }
 
-            $safeReplace[$k] = (is_scalar($v) || $v === null) ? $v : SafeStringCastAction::cast($v);
+            $safeReplace[$k] = (is_scalar($v) || null === $v) ? $v : SafeStringCastAction::cast($v);
         }
 
         $result = __($key, $safeReplace, $locale);
@@ -211,7 +207,8 @@ if (! function_exists('actingAs')) {
 
 if (! function_exists('get')) {
     /**
-     * @param  array<string, mixed>  $options
+     * @param array<string, mixed> $options
+     *
      * @return TestResponse<Response>
      */
     function get(string $uri = '', array $options = []): TestResponse
@@ -222,7 +219,8 @@ if (! function_exists('get')) {
 
 if (! function_exists('post')) {
     /**
-     * @param  array<string, mixed>  $options
+     * @param array<string, mixed> $options
+     *
      * @return TestResponse<Response>
      */
     function post(string $uri, mixed $data = [], array $options = []): TestResponse
@@ -307,11 +305,11 @@ if (! function_exists('describe')) {
 
 if (! function_exists('xotSeedModelOnce')) {
     /**
-     * @param  class-string<Model>  $modelClass
+     * @param class-string<Model> $modelClass
      */
     function xotSeedModelOnce(string $modelClass): void
     {
-        (new GetFactoryAction)
+        (new GetFactoryAction())
             ->execute($modelClass)
             ->createOne();
     }
