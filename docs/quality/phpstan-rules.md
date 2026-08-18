@@ -124,9 +124,9 @@ public function via($notifiable): array
     return ['mail', 'nexmo'];
 }
 
-// ✅ CORRETTO - array<string, mixed>
+// ✅ CORRETTO - array<string, string>, non mixed
 /**
- * @return array<string, mixed>
+ * @return array<string, string>
  */
 public function via($notifiable): array
 {
