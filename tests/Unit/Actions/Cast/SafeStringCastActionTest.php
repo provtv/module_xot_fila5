@@ -19,7 +19,7 @@ it('casts various values to string correctly', function (): void {
     Assert::assertSame('1.23', $action->execute(1.23));
     // Non-scalar
     Assert::assertSame('', $action->execute(['a']));
-    Assert::assertSame('', $action->execute(new stdClass));
+    Assert::assertSame('', $action->execute(new stdClass()));
 });
 
 it('uses static string cast method correctly', function (): void {

@@ -10,12 +10,12 @@ use PHPUnit\Framework\Assert;
 uses(TestCase::class);
 
 test('MetatagData puo essere istanziata', function () {
-    $metatagData = new MetatagData;
+    $metatagData = new MetatagData();
     Assert::assertInstanceOf(MetatagData::class, $metatagData);
 });
 
 test('getFilamentColors restituisce i colori Filament corretti', function (): void {
-    $metatagData = new MetatagData;
+    $metatagData = new MetatagData();
     $colors = $metatagData->getFilamentColors();
 
     Assert::assertArrayHasKey('danger', $colors);
@@ -29,7 +29,7 @@ test('getFilamentColors restituisce i colori Filament corretti', function (): vo
 });
 
 test('getColors gestisce correttamente i colori personalizzati', function () {
-    $metatagData = new MetatagData;
+    $metatagData = new MetatagData();
     $metatagData->colors = [
         'custom_color' => [
             'key' => 'custom_color',
@@ -49,14 +49,14 @@ test('getColors gestisce correttamente i colori personalizzati', function () {
 });
 
 test('getLogoHeight restituisce il valore corretto', function () {
-    $metatagData = new MetatagData;
+    $metatagData = new MetatagData();
     $metatagData->logo_height = '3em';
 
     Assert::assertSame('3em', $metatagData->getLogoHeight());
 });
 
 test('Le proprieta hanno i valori di default corretti', function () {
-    $metatagData = new MetatagData;
+    $metatagData = new MetatagData();
 
     Assert::assertSame('xot', $metatagData->generator);
     Assert::assertSame('UTF-8', $metatagData->charset);

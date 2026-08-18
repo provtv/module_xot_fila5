@@ -8,8 +8,6 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Actions\Filament;
 
-use function Safe\date;
-
 // use Filament\Forms\Commands\Concerns\CanGenerateForms; // Non disponibile in Filament v4
 use Filament\Support\Commands\Concerns\CanReadModelSchemas;
 // use Filament\Tables\Commands\Concerns\CanGenerateTables; // Non disponibile in Filament v4

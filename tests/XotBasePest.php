@@ -41,7 +41,7 @@ if (! function_exists('xotAssertTableHas')) {
     /**
      * Riga presente sulla connessione indicata.
      *
-     * @param  array<string, mixed>  $where
+     * @param array<string, mixed> $where
      */
     function xotAssertTableHas(string $connection, string $table, array $where): void
     {
@@ -53,7 +53,7 @@ if (! function_exists('xotAssertTableMissing')) {
     /**
      * Riga assente sulla connessione indicata.
      *
-     * @param  array<string, mixed>  $where
+     * @param array<string, mixed> $where
      */
     function xotAssertTableMissing(string $connection, string $table, array $where): void
     {
@@ -63,7 +63,7 @@ if (! function_exists('xotAssertTableMissing')) {
 
 if (! function_exists('xotTableQueryExists')) {
     /**
-     * @param  array<string, mixed>  $where
+     * @param array<string, mixed> $where
      */
     function xotTableQueryExists(string $connection, string $table, array $where): bool
     {
@@ -83,8 +83,9 @@ if (! function_exists('xotAssertFreshModel')) {
      *
      * @template T of Model
      *
-     * @param  T  $model
-     * @param  class-string<T>  $class
+     * @param T               $model
+     * @param class-string<T> $class
+     *
      * @return T
      */
     function xotAssertFreshModel(Model $model, string $class)
@@ -100,8 +101,9 @@ if (! function_exists('xotAssertFirstModel')) {
     /**
      * @template T of Model
      *
-     * @param  EloquentCollection<int, T>|Collection<int, T>  $collection
-     * @param  class-string<T>  $class
+     * @param EloquentCollection<int, T>|Collection<int, T> $collection
+     * @param class-string<T>                               $class
+     *
      * @return T
      */
     function xotAssertFirstModel(EloquentCollection|Collection $collection, string $class)
@@ -124,20 +126,20 @@ if (! function_exists('xotAssertArray')) {
     {
         Assert::assertIsArray($value);
 
-        /** @var array<string, mixed> $value */
+        /* @var array<string, mixed> $value */
         return $value;
     }
 }
 
 if (! function_exists('xotAssertThrows')) {
     /**
-     * @param  class-string<\Throwable>  $exceptionClass
+     * @param class-string<Throwable> $exceptionClass
      */
     function xotAssertThrows(callable $callback, string $exceptionClass): void
     {
         try {
             $callback();
-        } catch (\Throwable $exception) {
+        } catch (Throwable $exception) {
             Assert::assertInstanceOf($exceptionClass, $exception);
 
             return;
@@ -149,7 +151,7 @@ if (! function_exists('xotAssertThrows')) {
 
 if (! function_exists('xotAssertListContains')) {
     /**
-     * @param  list<string>|array<int, string>  $haystack
+     * @param list<string>|array<int, string> $haystack
      */
     function xotAssertListContains(string $needle, array $haystack): void
     {
@@ -158,17 +160,17 @@ if (! function_exists('xotAssertListContains')) {
 }
 
 if (! function_exists('xotAssertReflectionNamedType')) {
-    function xotAssertReflectionNamedType(?\ReflectionType $type): \ReflectionNamedType
+    function xotAssertReflectionNamedType(?ReflectionType $type): ReflectionNamedType
     {
         Assert::assertNotNull($type);
-        Assert::assertInstanceOf(\ReflectionNamedType::class, $type);
+        Assert::assertInstanceOf(ReflectionNamedType::class, $type);
 
         return $type;
     }
 }
 
 if (! function_exists('xotAssertReflectionTypeName')) {
-    function xotAssertReflectionTypeName(?\ReflectionType $type, string $expected): void
+    function xotAssertReflectionTypeName(?ReflectionType $type, string $expected): void
     {
         Assert::assertSame($expected, xotAssertReflectionNamedType($type)->getName());
     }
@@ -179,11 +181,11 @@ if (! function_exists('xotReflectionFilename')) {
      * Path del file che dichiara la classe: `getFileName()` può tornare `false`
      * per le classi interne, quindi l'assert è parte del contratto.
      *
-     * @param  class-string  $class
+     * @param class-string $class
      */
     function xotReflectionFilename(string $class): string
     {
-        $filename = (new \ReflectionClass($class))->getFileName();
+        $filename = (new ReflectionClass($class))->getFileName();
         Assert::assertIsString($filename);
 
         return $filename;
@@ -194,7 +196,7 @@ if (! function_exists('xotReflectionSource')) {
     /**
      * Sorgente della classe, per gli assert "il codice non contiene X".
      *
-     * @param  class-string  $class
+     * @param class-string $class
      */
     function xotReflectionSource(string $class): string
     {
