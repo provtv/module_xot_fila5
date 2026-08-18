@@ -21,7 +21,7 @@
 - **Property exists**: NON funziona con magic attributes Eloquent - usa `isset()`
 - **Complexity target**: Ogni metodo < 10 cyclomatic complexity
 - **Function length**: Ogni metodo < 20 righe (target), max 50 righe
-- **Mixed types**: Usali solo come ultima spiaggia
+- **Mixed**: ultima spiaggia. Prima: proprietà Eloquent già castate, union, generics (`array<string, Action>`). Poi, solo sul bordo (JSON, `getState()`, config) le `Safe*CastAction`. Mai `(int) $mixed`, mai `@var mixed` per chiudere PHPStan. Chi lo usa: widget job/firme — un int sbagliato è un numero sbagliato in admin. Caso: [Job typed properties](../../Job/docs/typed-model-properties-over-raw-attributes.md).
 
 ---
 
@@ -58,7 +58,7 @@ public function getTableActions(): array
     return [EditAction::make(), DeleteAction::make()];
 }
 
-// ✅ CORRETTO - array<string, mixed>
+// ✅ CORRETTO - chiavi stringa, valore tipizzato (non mixed)
 public function getTableActions(): array
 {
     return [
