@@ -157,7 +157,7 @@ abstract class XotBasePage extends Page implements HasForms
      */
     public function schema(Schema $schema): Schema
     {
-        $schema = $schema->components($this->getFormSchema());
+        $schema = $schema->components($this->getXotFormSchema());
 
         $schema->statePath('data');
 
@@ -187,6 +187,16 @@ abstract class XotBasePage extends Page implements HasForms
         }
 
         return $this->view;
+    }
+
+    /**
+     * Schema form della pagina (API Filament v5 — evita getFormSchema() deprecato).
+     *
+     * @return array<int|string, \Filament\Schemas\Components\Component>
+     */
+    protected function getXotFormSchema(): array
+    {
+        return [];
     }
 
     /**

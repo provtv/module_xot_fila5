@@ -8,7 +8,9 @@ use Filament\Schemas\Components\Component;
 use Filament\Schemas\Components\Wizard\Step;
 use Filament\Schemas\Schema;
 use Illuminate\Contracts\Support\Htmlable;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
+use Modules\Xot\Actions\Cast\SafeStringCastAction;
 
 class XotBaseResourceForm
 {
@@ -42,6 +44,24 @@ class XotBaseResourceForm
     public static function getSteps(): array
     {
         return [];
+    }
+
+    /**
+     * Etichetta opzione Select da record: titolo valorizzato, altrimenti `#id`.
+     *
+     * @return \Closure(Model): string
+     */
+    protected static function optionLabelFromRecord(string $titleAttribute = 'name'): \Closure
+    {
+        return static function (Model $record) use ($titleAttribute): string {
+            $title = $record->getAttribute($titleAttribute);
+
+            if (is_string($title) && $title !== '') {
+                return $title;
+            }
+
+            return '#'.SafeStringCastAction::cast($record->getKey() ?? '');
+        };
     }
 
     protected static function getStepByName(string $name): Step

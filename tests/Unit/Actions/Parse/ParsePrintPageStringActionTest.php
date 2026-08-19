@@ -17,11 +17,17 @@ it('parses single pages and ranges', function (): void {
     Assert::assertSame([1, 2, 3], ParsePrintPageStringAction::execute('1-3'));
 });
 
-it('throws when no valid page number exists', function (): void {});
+it('throws when no valid page number exists', function (): void {
+    expect(fn (): array => ParsePrintPageStringAction::execute('abc'))
+        ->toThrow(InvalidArgumentException::class);
+});
 
 it('builds inclusive ranges from fromTo helper', function (): void {
     Assert::assertSame([1, 2, 3], ParsePrintPageStringAction::fromTo(1, 3));
     Assert::assertSame([5], ParsePrintPageStringAction::fromTo(5, 5));
 });
 
-it('throws when fromTo end is lower than start', function (): void {});
+it('throws when fromTo end is lower than start', function (): void {
+    expect(fn (): array => ParsePrintPageStringAction::fromTo(5, 3))
+        ->toThrow(InvalidArgumentException::class);
+});

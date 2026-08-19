@@ -4,20 +4,38 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Rules;
 
-use Illuminate\Contracts\Validation\Rule;
+use Illuminate\Contracts\Validation\ValidationRule;
 use Illuminate\Support\Carbon;
+use Illuminate\Translation\PotentiallyTranslatedString;
 
 use function Safe\preg_replace;
 
 /**
  * Class DateTimeRule.
  */
-class DateTimeRule implements Rule
+class DateTimeRule implements ValidationRule
 {
     /**
-     * Determine if the validation rule passes.
-     *
-     * @param  string  $attribute  The attribute name being validated
+     * @param  \Closure(string, ?string=): PotentiallyTranslatedString  $fail
+     */
+    public function validate(string $attribute, mixed $value, \Closure $fail): void
+    {
+        if (! is_string($value)) {
+            $fail('The :attribute is not a valid datetime');
+
+            return;
+        }
+
+        $format = 'd/m/Y H:i';
+        try {
+            Carbon::createFromFormat($format, $value);
+        } catch (\Exception) {
+            $fail('The :attribute is not a valid datetime');
+        }
+    }
+
+    /**
+     * @deprecated Implementa {@see ValidationRule} — mantenuto per compatibilità call site legacy.
      */
     public function passes(mixed $attribute, mixed $value): bool
     {

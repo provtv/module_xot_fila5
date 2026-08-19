@@ -64,8 +64,11 @@ it('adds columns to blueprint in update context with hasColumn check', function 
 
     $table = $this->createUnitMock(Blueprint::class);
     $table->method('string')
-        ->with('beta')
-        ->willReturn($columnBeta);
+        ->willReturnCallback(static function (string $name) use ($columnBeta): Blueprint {
+            Assert::assertSame('beta', $name);
+
+            return $columnBeta;
+        });
 
     TestEnum::columns($table, $migration);
 });
@@ -86,7 +89,11 @@ it('updates columns calls columns', function (): void {
 it('drops columns', function (): void {
     $table = $this->createUnitMock(Blueprint::class);
     $table->method('dropColumn')
-        ->with(['alpha', 'beta']);
+        ->willReturnCallback(static function (array $columns) use ($table): Blueprint {
+            Assert::assertSame(['alpha', 'beta'], $columns);
+
+            return $table;
+        });
 
     TestEnum::dropColumns($table);
 });

@@ -6,4 +6,6 @@ use Modules\Xot\Tests\TestCase;
 
 uses(TestCase::class);
 
-it('basic test works', function (): void {});
+it('boots laravel application container', function (): void {
+    expect(app()->bound('config'))->toBeTrue();
+});

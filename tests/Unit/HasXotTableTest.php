@@ -62,20 +62,19 @@ it('tests table method with all methods implemented', function (): void {
     /** @var HasTableWithXotTestClass&MockInterface $mock */
     $mock = Mockery::mock(HasTableWithXotTestClass::class)
         ->makePartial()
-        ->shouldAllowMockingProtectedMethods()
-        ->shouldDeferMissing();
+        ->shouldAllowMockingProtectedMethods();
     $mock->allows([
-        'getTableHeaderActions' => [],
-        'getTableActions' => [],
-        'getTableBulkActions' => [],
+        'getXotTableHeaderActions' => [],
+        'getXotTableActions' => [],
+        'getXotTableBulkActions' => [],
         'getModelClass' => DummyTestModel::class,
         'getTableRecordTitleAttribute' => 'name',
-        'getTableHeading' => 'Test Table',
-        'getTableFilters' => [],
+        'getXotTableHeading' => 'Test Table',
+        'getXotTableFilters' => [],
         'getTableFiltersFormColumns' => 1,
-        'getTableEmptyStateActions' => [],
-        'getDefaultTableSortColumn' => null,
-        'getDefaultTableSortDirection' => null,
+        'getXotTableEmptyStateActions' => [],
+        'getXotDefaultTableSortColumn' => null,
+        'getXotDefaultTableSortDirection' => null,
         'getTablePollInterval' => null,
     ]);
 
@@ -95,20 +94,19 @@ it('tests table method with no optional methods implemented', function (): void 
     /** @var HasTableWithoutOptionalMethodsTestClass&MockInterface $mock */
     $mock = Mockery::mock(HasTableWithoutOptionalMethodsTestClass::class)
         ->makePartial()
-        ->shouldAllowMockingProtectedMethods()
-        ->shouldDeferMissing();
+        ->shouldAllowMockingProtectedMethods();
     $mock->allows([
         'getModelClass' => DummyTestModel::class,
         'getTableRecordTitleAttribute' => 'name',
-        'getTableHeading' => 'Test Table',
-        'getTableFilters' => [],
-        'getTableHeaderActions' => [],
-        'getTableActions' => [],
-        'getTableBulkActions' => [],
+        'getXotTableHeading' => 'Test Table',
+        'getXotTableFilters' => [],
+        'getXotTableHeaderActions' => [],
+        'getXotTableActions' => [],
+        'getXotTableBulkActions' => [],
         'getTableFiltersFormColumns' => 1,
-        'getTableEmptyStateActions' => [],
-        'getDefaultTableSortColumn' => null,
-        'getDefaultTableSortDirection' => null,
+        'getXotTableEmptyStateActions' => [],
+        'getXotDefaultTableSortColumn' => null,
+        'getXotDefaultTableSortDirection' => null,
         'getTablePollInterval' => null,
     ]);
 

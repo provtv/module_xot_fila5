@@ -15,8 +15,11 @@ uses(TestCase::class);
 it('calculates view path correctly', function (): void {
     $nsMock = $this->createUnitMock(GetViewNameSpacePathAction::class);
     $nsMock->method('execute')
-        ->with('test_ns')
-        ->willReturn('/path/to/views');
+        ->willReturnCallback(static function (string $namespace): string {
+            Assert::assertSame('test_ns', $namespace);
+
+            return '/path/to/views';
+        });
 
     app()->instance(GetViewNameSpacePathAction::class, $nsMock);
 

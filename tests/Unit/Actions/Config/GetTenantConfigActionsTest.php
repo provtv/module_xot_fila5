@@ -24,8 +24,11 @@ describe('Get Tenant Config Actions', function (): void {
 
         $mock = $this->createUnitMock(GetTenantFilePathAction::class);
         $mock->method('execute')
-            ->with($configName.'.php')
-            ->willReturn($tempPath);
+            ->willReturnCallback(static function (string $filename) use ($configName, $tempPath): string {
+                Assert::assertSame($configName.'.php', $filename);
+
+                return $tempPath;
+            });
 
         app()->instance(GetTenantFilePathAction::class, $mock);
 
