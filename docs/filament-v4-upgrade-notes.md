@@ -36,6 +36,53 @@ This document outlines specific considerations and changes for the `Xot` module,
     }
     ```
 
+### **4. Metodi deprecati in Filament v4 — mappa delle sostituzioni**
+
+PHPStan a `level: max` segnala questi con identifier `method.deprecated`,
+`staticMethod.deprecated`, `method.deprecatedClass`, `staticMethod.deprecatedClass` e
+`classConstant.deprecatedClass`. Tabella verificata il 2026-08-19 sul modulo `User`
+(19 segnalazioni chiuse) leggendo i messaggi di deprecazione di Filament, non a memoria.
+
+| Deprecato | Sostituto | Classe |
+|-----------|-----------|--------|
+| `modalSubheading()` | `modalDescription()` | `Filament\Actions\Action` |
+| `modalButton()` | `modalSubmitActionLabel()` | `Filament\Actions\Action` |
+| `form([...])` | `schema([...])` | `Filament\Actions\Action` |
+| `bulkActions()` | `toolbarActions()` | `Filament\Tables\Table` |
+| `actions()` | `recordActions()` | `Filament\Tables\Table` |
+| `getTableColumns()`, `getTableFilters()`, `getTableActions()`, `getTableBulkActions()`, `getTableHeaderActions()`, `getTableEmptyStateActions()`, `getTableHeading()`, `getDefaultTableSortColumn()`, `getDefaultTableSortDirection()` | override di `table()` | `Filament\Resources\Pages\ListRecords`, `Filament\Widgets\TableWidget` |
+| `Filament\Forms\Components\Placeholder` (intera classe) | `Filament\Infolists\Components\TextEntry` con `state()` | — |
+
+#### `Placeholder` → `TextEntry`: due dettagli che non sono un rename
+
+1. **`content()` diventa `state()`**, ma `TextEntry` **scappa l'HTML per default** mentre
+   `Placeholder` lo rendeva. Se la closure può restituire `HtmlString` — il caso tipico è
+   `return new HtmlString('&mdash;')` come fallback di un campo vuoto — serve `->html()`,
+   altrimenti in pagina compare la entity letterale:
+
+   ```php
+   TextEntry::make('created_at')->html()->state(static function ($record) {
+       // …
+       return new HtmlString('&mdash;');
+   })
+   ```
+
+   Se il contenuto è testo semplice (una traduzione senza markup), `->html()` non serve.
+
+2. **`TextEntry` vive in `Filament\Infolists\Components`**, non in `Filament\Forms\Components`:
+   l'import va cambiato, e in Filament v4 il componente è utilizzabile dentro uno `Schema`
+   di form senza wrapper.
+
+#### La convenzione Laraxot `getTableColumns()` è un caso a parte
+
+I metodi `getTableXxx()` deprecati dal framework sono anche i nomi della convenzione
+Laraxot: una sottoclasse che li dichiara **sovrascrive un metodo deprecato del parent**, e
+ogni chiamata da `HasXotTable` diventa un `method.deprecated`. La via d'uscita è rinominare
+la convenzione (non il pattern) con un nome che non collida — ma va fatta con un default
+nel trait, mai con un `abstract`: `abstract` su un trait montato da 98 classi concrete rende
+il tree non caricabile finché l'ultima non è migrata. Incidente del 2026-08-19 documentato
+in [`docs/chat/xot-getxottablecolumns-abstract-blocca-bootstrap-2026-08-19.md`](../../../../docs/chat/xot-getxottablecolumns-abstract-blocca-bootstrap-2026-08-19.md).
+
 ---
 **DRY (Don't Repeat Yourself) / KISS (Keep It Simple, Stupid) Principles:**
 
