@@ -9,6 +9,8 @@ use Filament\Schemas\Concerns\InteractsWithSchemas;
 use Filament\Schemas\Contracts\HasSchemas;
 use Filament\Schemas\Schema;
 use Illuminate\Database\Eloquent\Model;
+use InvalidArgumentException;
+use LogicException;
 use Modules\Xot\Actions\Cast\SafeStringCastAction;
 use Webmozart\Assert\Assert;
 
@@ -31,7 +33,7 @@ use Webmozart\Assert\Assert;
  * validazione campi solo nello schema — submit usa `$this->form->getState()` (mai `validateForm()`).
  * La *Form class è lo spartito (campi + regole + dehydrate). MAI duplicare TextInput nel widget.
  *
- * @property Schema                    $form
+ * @property Schema $form
  * @property array<string, mixed>|null $data
  */
 abstract class XotBaseSchemaWidget extends XotBaseWidget implements HasSchemas
@@ -78,11 +80,11 @@ abstract class XotBaseSchemaWidget extends XotBaseWidget implements HasSchemas
     {
         $formClass = static::formClass();
 
-        if (null !== $formClass) {
+        if ($formClass !== null) {
             $method = static::schemaMethod();
 
             if (! method_exists($formClass, $method)) {
-                throw new \LogicException(sprintf('formClass()=%s must expose method %s() (widget %s).', $formClass, $method, static::class));
+                throw new LogicException(sprintf('formClass()=%s must expose method %s() (widget %s).', $formClass, $method, static::class));
             }
 
             /** @var array<int|string, Component> $components */
@@ -95,15 +97,14 @@ abstract class XotBaseSchemaWidget extends XotBaseWidget implements HasSchemas
     }
 
     /**
-     * @param class-string $formClass Es. UserForm::class
-     * @param string       $method    Es. getRegisterFormSchema
-     *
+     * @param  class-string  $formClass  Es. UserForm::class
+     * @param  string  $method  Es. getRegisterFormSchema
      * @return array<int|string, Component>
      */
     protected static function resourceFormSchema(string $formClass, string $method): array
     {
         if (! method_exists($formClass, $method)) {
-            throw new \InvalidArgumentException(sprintf('Resource form schema method %s::%s() does not exist.', $formClass, $method));
+            throw new InvalidArgumentException(sprintf('Resource form schema method %s::%s() does not exist.', $formClass, $method));
         }
 
         /** @var callable(): array<int|string, Component> $callable */
@@ -118,7 +119,7 @@ abstract class XotBaseSchemaWidget extends XotBaseWidget implements HasSchemas
     public function getFormFill(): array
     {
         $model = $this->getFormModel();
-        if (null === $model) {
+        if ($model === null) {
             return [];
         }
         if (\is_string($model)) {
@@ -157,9 +158,7 @@ abstract class XotBaseSchemaWidget extends XotBaseWidget implements HasSchemas
         $this->form->fill([]);
     }
 
-    public function save(): void
-    {
-    }
+    public function save(): void {}
 
     protected function getFormModel(): Model|string|null
     {

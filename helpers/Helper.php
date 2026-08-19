@@ -23,13 +23,8 @@ use function Safe\preg_match;
 if (! function_exists('isRunningTestBench')) {
     function isRunningTestBench(): bool
     {
-        /** @var mixed $pathResult */
-        $pathResult = app(FixPathAction::class)->execute('\vendor\orchestra\testbench-core\laravel');
-        /** @var mixed $baseResult */
-        $baseResult = app(FixPathAction::class)->execute(base_path());
-
-        $path = is_string($pathResult) ? $pathResult : '';
-        $base = is_string($baseResult) ? $baseResult : '';
+        $path = app(FixPathAction::class)->execute('\vendor\orchestra\testbench-core\laravel');
+        $base = app(FixPathAction::class)->execute(base_path());
 
         return Str::endsWith($base, $path);
     }
@@ -44,9 +39,7 @@ if (! function_exists('dddx')) {
         if (! defined('LARAVEL_START')) {
             define('LARAVEL_START', $start);
         }
-        /** @var mixed $fileResult */
-        $fileResult = app(FixPathAction::class)->execute($tmp[0]['file'] ?? 'file-unknown');
-        $file = is_string($fileResult) ? $fileResult : 'file-unknown';
+        $file = app(FixPathAction::class)->execute($tmp[0]['file'] ?? 'file-unknown');
 
         $data = [
             '_' => $params,
@@ -57,16 +50,11 @@ if (! function_exists('dddx')) {
         ];
 
         if (File::exists($data['file'])) {
-            /** @var mixed $storageResult */
-            $storageResult = app(FixPathAction::class)->execute(storage_path('framework/views'));
-            $storagePath = is_string($storageResult) ? $storageResult : '';
+            $storagePath = app(FixPathAction::class)->execute(storage_path('framework/views'));
             if (Str::startsWith($data['file'], $storagePath)) {
                 $content = File::get($data['file']);
-                /** @var mixed $betweenResult */
                 $betweenResult = Str::between($content, '/**PATH ', ' ENDPATH**/');
-                /** @var mixed $viewResult */
-                $viewResult = app(FixPathAction::class)->execute(is_string($betweenResult) ? $betweenResult : '');
-                $data['view_file'] = is_string($viewResult) ? $viewResult : '';
+                $data['view_file'] = app(FixPathAction::class)->execute($betweenResult);
             }
         }
 

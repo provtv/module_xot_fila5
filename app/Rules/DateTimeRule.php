@@ -18,7 +18,6 @@ class DateTimeRule implements Rule
      * Determine if the validation rule passes.
      *
      * @param  string  $attribute  The attribute name being validated
-     * @param  mixed  $value  The value being validated
      */
     public function passes(mixed $attribute, mixed $value): bool
     {

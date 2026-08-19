@@ -35,8 +35,6 @@ use function Safe\unlink;
  * @property object|null $extraClass
  * @property Model|null $baseModel
  * @property string|null $testDir
- * @property mixed $saved
- * @property mixed $extra_attributes
  */
 abstract class TestCase extends XotBaseTestCase
 {

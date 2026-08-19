@@ -15,6 +15,7 @@ use Modules\Xot\Actions\Blade\RegisterBladeComponentsAction;
 use Modules\Xot\Actions\File\GetComponentsAction;
 use Modules\Xot\Actions\Livewire\RegisterLivewireComponentsAction;
 use Modules\Xot\Actions\Module\GetModulePathByGeneratorAction;
+use Modules\Xot\Datas\ComponentFileData;
 use Nwidart\Modules\Traits\PathNamespace;
 use Webmozart\Assert\Assert;
 
@@ -157,15 +158,15 @@ abstract class XotBaseServiceProvider extends ServiceProvider
         if (0 === $comps->count()) {
             return;
         }
-        $commands = $comps->toArray();
-        /** @var array<int, array{ns: string}> $commands */
-        $commands = array_map(static function (mixed $item): string {
-            Assert::isArray($item);
-            Assert::keyExists($item, 'ns');
-            Assert::string($item['ns'], __FILE__.':'.__LINE__.' - '.class_basename(self::class));
 
-            return $item['ns'];
-        }, $commands);
+        $commands = [];
+        foreach ($comps->items() as $comp) {
+            if (! $comp instanceof ComponentFileData) {
+                continue;
+            }
+            Assert::string($comp->ns, __FILE__.':'.__LINE__.' - '.class_basename(self::class));
+            $commands[] = $comp->ns;
+        }
         $this->commands($commands);
     }
 

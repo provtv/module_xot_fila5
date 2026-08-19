@@ -78,6 +78,7 @@ public function register(): void
 - Registra i comandi del modulo
 - Supporta namespace personalizzati
 - Gestisce l'autoloading dei comandi
+- `registerCommands()` estrae i class-string da `GetComponentsAction` (`ComponentFileData::$ns`), stesso narrowing di `RegisterBladeComponentsAction`. Non è una lista già `string[]`: `mixed $item` in `array_map` era il `toArray()` del DTO.
 
 ## Requisiti per l'Implementazione
 
@@ -173,3 +174,9 @@ try {
 3. I percorsi sono relativi alla root del modulo
 4. Le eccezioni vengono gestite con fallback appropriati
 5. La registrazione dei componenti è automatica ma configurabile
+
+## Collegamenti
+
+- [PHPStan rules](../quality/phpstan-rules.md)
+- [Service provider best practices](../service-provider-best-practices.md)
+- [Mixed ultima spiaggia](../../../Notify/docs/mixed-type-ultima-spiaggia.md)

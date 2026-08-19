@@ -39,10 +39,6 @@ it('handles numeric strings in diff', function (): void {
 });
 
 it('throws exception for non-array items in fixType', function (): void {
-    try {
-        DiffAssocRecursiveAction::fixType(['a' => 'not-an-array']);
-        Assert::fail('Expected exception not thrown');
-    } catch (Exception) {
-        // Expected
-    }
+    expect(static fn (): array => DiffAssocRecursiveAction::fixType(['a' => 'not-an-array']))
+        ->toThrow(\Exception::class);
 });
