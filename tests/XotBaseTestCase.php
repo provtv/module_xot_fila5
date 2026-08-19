@@ -135,10 +135,13 @@ abstract class XotBaseTestCase extends BaseTestCase
      */
     public function expectApplicationException(string $exceptionClass, ?string $message = null): void
     {
-        $this->expectException($exceptionClass);
         if ($message !== null) {
-            $this->expectExceptionMessage($message);
+            $this->expectExceptionObject(new $exceptionClass($message));
+
+            return;
         }
+
+        $this->expectException($exceptionClass);
     }
 
     /**
@@ -191,7 +194,7 @@ abstract class XotBaseTestCase extends BaseTestCase
         parent::setUp();
 
         if (! $this->app->bound('translator')) {
-            $this->app->singleton('translator', function ($app) {
+            $this->app->singleton('translator', static function (Application $app): Translator {
                 return new Translator(
                     new ArrayLoader,
                     'en'
@@ -356,7 +359,7 @@ abstract class XotBaseTestCase extends BaseTestCase
 
     public function expectThrowableMessage(string $message): void
     {
-        $this->expectExceptionMessage($message);
+        $this->expectExceptionMessageMatches('/'.preg_quote($message, '/').'/');
     }
 
     public function expectThrowableMessageMatches(string $pattern): void
