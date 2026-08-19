@@ -22,6 +22,9 @@
 - **Complexity target**: Ogni metodo < 10 cyclomatic complexity
 - **Function length**: Ogni metodo < 20 righe (target), max 50 righe
 - **Mixed**: ultima spiaggia. Prima: proprietà Eloquent già castate, union, generics (`array<string, Action>`). Poi, solo sul bordo (JSON, `getState()`, config) le `Safe*CastAction`. Mai `(int) $mixed`, mai `@var mixed` per chiudere PHPStan. Chi lo usa: widget job/firme — un int sbagliato è un numero sbagliato in admin. Caso: [Job typed properties](../../Job/docs/typed-model-properties-over-raw-attributes.md).
+  - `ArrayToRawJsAction::jsValue` è `string|int|float|bool|null`: i caller passano scalari; array e `RawJs` sono già filtrati. `SafeStringCastAction` solo se arriva un oggetto inatteso.
+  - `HasCommonScopes::scopeCreatedAfter/Before/UpdatedAfter` è `Carbon|string|\DateTimeInterface`: è ciò che Eloquent `where()` accetta sulle timestamp, e i test passano una stringa ISO.
+  - `XotBaseServiceProvider::registerCommands` itera `ComponentFileData` (stesso idioma di `RegisterBladeComponentsAction`), non `array_map(mixed $item)`. Il class-string del comando è `$comp->ns`.
 
 ---
 
@@ -225,3 +228,10 @@ $string = (string) $value;
 $array = SafeArrayCastAction::cast($data);
 $string = SafeStringCastAction::cast($value);
 ```
+
+## Collegamenti
+
+- [Cast actions](../cast-actions.md)
+- [Mixed ultima spiaggia](../../../Notify/docs/mixed-type-ultima-spiaggia.md)
+- [XotBaseServiceProvider](../providers/xotbaseserviceprovider.md)
+- [HasCommonScopes](../wiki/architecture/architecture-complete.md)

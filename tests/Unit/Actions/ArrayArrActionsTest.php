@@ -62,7 +62,7 @@ it('covers all branches of range intersect', function (): void {
     Assert::assertFalse($action->execute(10, 11, 1, 5));
     Assert::assertFalse($action->execute(7, 6, 5, 8));
     Assert::assertSame([4, 4], $action->execute(4, 10, 2, 4));
-    Assert::assertFalse($action->execute(1, 5, 2, 7));
+    Assert::assertSame([2, 5], $action->execute(1, 5, 2, 7));
 });
 
 it('writes JSON and PHP arrays', function (): void {

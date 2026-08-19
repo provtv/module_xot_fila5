@@ -30,3 +30,15 @@ canonical: ../../../../Themes/docs/shared-components/00-index-Modules.md
 ## Collegamenti
 
 - [00-index modulo](../00-index.md)
+
+---
+
+<!-- Merged from INDEX.md, which collided with this file on case-insensitive filesystems. -->
+
+---
+module: theme
+topic: index
+canonical: ../../../../Themes/docs/shared-components/00-index-Modules.md
+---
+
+See canonical documentation: ../../../../Themes/docs/shared-components/00-index-Modules.md

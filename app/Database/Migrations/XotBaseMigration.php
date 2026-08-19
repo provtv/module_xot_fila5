@@ -229,8 +229,12 @@ abstract class XotBaseMigration extends LaravelMigration
               AND constraint_type = 'PRIMARY KEY'";
 
         $result = $connection->selectOne($query, [$database, $table]);
+        $row = $this->constraintCountRow($result);
+        if ($row === null) {
+            return false;
+        }
 
-        return $this->extractPrimaryKeyCount($result) > 0;
+        return $this->extractPrimaryKeyCount($row) > 0;
     }
 
     /**
@@ -254,8 +258,12 @@ abstract class XotBaseMigration extends LaravelMigration
               AND constraint_type = 'FOREIGN KEY'";
 
         $result = $connection->selectOne($query, [$database, $table, $constraint]);
+        $row = $this->constraintCountRow($result);
+        if ($row === null) {
+            return false;
+        }
 
-        return $this->extractPrimaryKeyCount($result) > 0;
+        return $this->extractPrimaryKeyCount($row) > 0;
     }
 
     /**
@@ -336,19 +344,43 @@ abstract class XotBaseMigration extends LaravelMigration
         $this->getConn()->table($tableName, $next);
     }
 
-    protected function extractPrimaryKeyCount(mixed $result): int
+    /**
+     * `selectOne()` è `mixed`. Si tiene solo oggetto o riga associativa.
+     *
+     * @return object|array<string, mixed>|null
+     */
+    private function constraintCountRow(mixed $result): object|array|null
+    {
+        if (is_object($result)) {
+            return $result;
+        }
+
+        if (! is_array($result)) {
+            return null;
+        }
+
+        $row = [];
+        foreach ($result as $key => $value) {
+            if (is_string($key)) {
+                $row[$key] = $value;
+            }
+        }
+
+        return $row;
+    }
+
+    /**
+     * @param  object|array<string, mixed>  $result
+     */
+    protected function extractPrimaryKeyCount(object|array $result): int
     {
         if (is_array($result)) {
             return isset($result['count']) ? SafeIntCastAction::cast($result['count']) : 0;
         }
 
-        if (is_object($result)) {
-            $resultAsArray = (array) $result;
+        $resultAsArray = (array) $result;
 
-            return isset($resultAsArray['count']) ? SafeIntCastAction::cast($resultAsArray['count']) : 0;
-        }
-
-        return 0;
+        return isset($resultAsArray['count']) ? SafeIntCastAction::cast($resultAsArray['count']) : 0;
     }
 
     public function updateTimestamps(Blueprint $table, bool $hasSoftDeletes = false): void

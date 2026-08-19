@@ -7,7 +7,7 @@ namespace Modules\Xot\Actions\Generate;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
-use Modules\Xot\Actions\Class\GetFilenameByClassnameAction;
+use Modules\Xot\Actions\Classes\GetFilenameByClassnameAction;
 use Spatie\QueueableAction\QueueableAction;
 use Webmozart\Assert\Assert;
 

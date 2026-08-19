@@ -7,6 +7,7 @@ namespace Modules\Xot\Actions\Model\Update;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use InvalidArgumentException;
 use Modules\Xot\Actions\Model\UpdateAction;
 use Modules\Xot\Datas\HasManyUpdateData;
 use Modules\Xot\Datas\RelationData;
@@ -20,15 +21,20 @@ class HasManyAction
     /**
      * Execute the HasMany relation update.
      *
-     * @throws \InvalidArgumentException
+     * @throws InvalidArgumentException
      */
     public function execute(Model $model, RelationData $relationDTO): void
     {
         Assert::isInstanceOf($relation = $relationDTO->rows, HasMany::class);
 
+        $parentKey = $model->getAttribute($relation->getLocalKeyName());
+        if (! is_int($parentKey) && ! is_string($parentKey)) {
+            throw new InvalidArgumentException('La chiave locale della relazione non e\' una chiave valida.');
+        }
+
         $updateData = new HasManyUpdateData(
             foreignKey: $relation->getForeignKeyName(),
-            parentKey: $model->getAttribute($relation->getLocalKeyName()),
+            parentKey: $parentKey,
         );
 
         match (true) {

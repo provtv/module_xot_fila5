@@ -41,16 +41,15 @@ describe('Save Json Array Action', function (): void {
         $path = $this->tempDir.'/data.json';
 
         $result = app(SaveJsonArrayAction::class)->execute($data, $path);
-        Assert::assertSame($data, $result);
-
-        Assert::assertTrue(file_exists($path));
+        Assert::assertTrue($result);
+        Assert::assertSame($data, json_decode(file_get_contents($path), true));
     });
 
     test('saves empty array', function (): void {
         $path = $this->tempDir.'/empty.json';
         $result = app(SaveJsonArrayAction::class)->execute([], $path);
 
-        Assert::assertSame([], $result);
+        Assert::assertTrue($result);
         Assert::assertSame([], json_decode(file_get_contents($path), true));
     });
 });

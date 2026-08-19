@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Models\Traits;
 
+use DateTimeInterface;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Carbon;
 
@@ -97,7 +98,7 @@ trait HasCommonScopes
      *
      * @return Builder<static>
      */
-    public function scopeCreatedAfter(Builder $query, mixed $date): Builder
+    public function scopeCreatedAfter(Builder $query, Carbon|string|DateTimeInterface $date): Builder
     {
         return $query->where('created_at', '>=', $date);
     }
@@ -109,7 +110,7 @@ trait HasCommonScopes
      *
      * @return Builder<static>
      */
-    public function scopeCreatedBefore(Builder $query, mixed $date): Builder
+    public function scopeCreatedBefore(Builder $query, Carbon|string|DateTimeInterface $date): Builder
     {
         return $query->where('created_at', '<=', $date);
     }
@@ -121,7 +122,7 @@ trait HasCommonScopes
      *
      * @return Builder<static>
      */
-    public function scopeUpdatedAfter(Builder $query, mixed $date): Builder
+    public function scopeUpdatedAfter(Builder $query, Carbon|string|DateTimeInterface $date): Builder
     {
         return $query->where('updated_at', '>=', $date);
     }

@@ -6,10 +6,9 @@ namespace Modules\Xot\Actions\Arr;
 
 use Filament\Support\RawJs;
 use Modules\Xot\Actions\Cast\SafeStringCastAction;
+use Spatie\QueueableAction\QueueableAction;
 
 use function Safe\preg_match;
-
-use Spatie\QueueableAction\QueueableAction;
 
 /**
  * Converte un array PHP in RawJs (oggetto JavaScript) sicuro per attributi HTML.
@@ -25,7 +24,7 @@ class ArrayToRawJsAction
     /**
      * Converte l'array in una stringa JavaScript (oggetto letterale) e restituisce RawJs.
      *
-     * @param array<int|string, mixed> $array Array associativo (anche annidato); valori RawJs restano raw
+     * @param  array<int|string, mixed>  $array  Array associativo (anche annidato); valori RawJs restano raw
      */
     public function execute(array $array): RawJs
     {
@@ -36,8 +35,10 @@ class ArrayToRawJsAction
                 $parts[] = $k.': '.$value->toHtml();
             } elseif (is_array($value)) {
                 $parts[] = $k.': '.$this->execute($value)->toHtml();
-            } else {
+            } elseif (is_scalar($value) || $value === null) {
                 $parts[] = $k.': '.$this->jsValue($value);
+            } else {
+                $parts[] = $k.': '.$this->jsValue(SafeStringCastAction::cast($value));
             }
         }
 
@@ -51,18 +52,18 @@ class ArrayToRawJsAction
     }
 
     /** Valore JS sicuro per attributo HTML: niente virgolette doppie. */
-    private function jsValue(mixed $value): string
+    private function jsValue(string|int|float|bool|null $value): string
     {
         if (is_bool($value)) {
             return $value ? 'true' : 'false';
         }
-        if (is_null($value)) {
+        if ($value === null) {
             return 'null';
         }
         if (is_numeric($value)) {
             return (string) $value;
         }
 
-        return "'".str_replace(['\\', "'"], ['\\\\', "\\'"], SafeStringCastAction::cast($value))."'";
+        return "'".str_replace(['\\', "'"], ['\\\\', "\\'"], $value)."'";
     }
 }

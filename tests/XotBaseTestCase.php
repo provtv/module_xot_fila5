@@ -43,8 +43,6 @@ use PHPUnit\Framework\MockObject\MockObject;
  * @property Model|null $baseModel
  * @property string|null $testDir
  * @property string|null $workDir
- * @property mixed $saved
- * @property mixed $extra_attributes
  */
 abstract class XotBaseTestCase extends BaseTestCase
 {
@@ -141,6 +139,41 @@ abstract class XotBaseTestCase extends BaseTestCase
         if ($message !== null) {
             $this->expectExceptionMessage($message);
         }
+    }
+
+    /**
+     * Punta l'intero ambiente di test sul file sqlite condiviso.
+     *
+     * Gira dentro `refreshApplication()`, cioe' dopo la creazione dell'app ma prima
+     * che `setUpTraits()` faccia partire `DatabaseTransactions`: e' l'unico punto in
+     * cui la connessione di default e' ancora modificabile. Senza questo la default
+     * resta quella di `.env` (MySQL su un host non raggiungibile) e ogni test muore
+     * dopo 120 s di timeout PDO. Le connessioni nominate dei moduli (`ptv`, `sigma`,
+     * `activity`, ...) vengono rimappate qui, cosi' `DB::connection('activity')`
+     * risolve invece di sollevare "Database connection [activity] not configured".
+     */
+    protected function refreshApplication(): void
+    {
+        parent::refreshApplication();
+
+        $database = database_path('fixcity_data.sqlite');
+
+        /** @var array<string, mixed> $connections */
+        $connections = (array) config('database.connections', []);
+
+        foreach (array_keys($connections) as $name) {
+            config()->set('database.connections.'.$name, [
+                'driver' => 'sqlite',
+                'database' => $database,
+                'prefix' => '',
+                'foreign_key_constraints' => false,
+                'busy_timeout' => 10000,
+            ]);
+            DB::purge((string) $name);
+        }
+
+        config()->set('database.default', 'sqlite');
+        DB::purge('sqlite');
     }
 
     /**

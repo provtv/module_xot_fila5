@@ -4,15 +4,19 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Exports;
 
+use ArrayIterator;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Contracts\Support\Arrayable;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Collection;
 use Illuminate\Support\LazyCollection;
+use Iterator;
 use Maatwebsite\Excel\Concerns\Exportable;
 use Maatwebsite\Excel\Concerns\FromIterator;
 use Maatwebsite\Excel\Concerns\WithHeadings;
 use Maatwebsite\Excel\Concerns\WithMapping;
 use Modules\Lang\Actions\TransCollectionAction;
+use Traversable;
 
 /**
  * @implements WithMapping<mixed>
@@ -30,14 +34,24 @@ class LazyCollectionExport implements FromIterator, ShouldQueue, WithHeadings, W
     public array $fields = [];
 
     /**
-     * @param LazyCollection<int, mixed> $collection
+     * Cursor Eloquent: TValue di LazyCollection è invariante, quindi
+     * proprietà, costruttore e collection() devono dichiarare lo stesso generic.
+     * Il chiamante passa `Builder::cursor()` → Model, non mixed.
+     *
+     * @var LazyCollection<int, Model>
+     */
+    public LazyCollection $collection;
+
+    /**
+     * @param LazyCollection<int, Model> $collection
      * @param array<int, string>         $fields
      */
     public function __construct(
-        public LazyCollection $collection,
+        LazyCollection $collection,
         ?string $transKey = null,
         array $fields = [],
     ) {
+        $this->collection = $collection;
         $this->transKey = $transKey;
         $this->fields = $fields;
     }
@@ -104,7 +118,7 @@ class LazyCollectionExport implements FromIterator, ShouldQueue, WithHeadings, W
     }
 
     /**
-     * @return LazyCollection<int, mixed>
+     * @return LazyCollection<int, Model>
      */
     public function collection(): LazyCollection
     {
@@ -112,11 +126,11 @@ class LazyCollectionExport implements FromIterator, ShouldQueue, WithHeadings, W
     }
 
     /**
-     * @return \Iterator<int, mixed>
+     * @return Iterator<int, mixed>
      */
-    public function iterator(): \Iterator
+    public function iterator(): Iterator
     {
-        return new \ArrayIterator(iterator_to_array($this->collection->getIterator(), false));
+        return new ArrayIterator(iterator_to_array($this->collection->getIterator(), false));
     }
 
     /**
@@ -136,7 +150,7 @@ class LazyCollectionExport implements FromIterator, ShouldQueue, WithHeadings, W
             return $row;
         }
 
-        if ($row instanceof \Traversable) {
+        if ($row instanceof Traversable) {
             return iterator_to_array($row);
         }
 

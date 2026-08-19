@@ -9,7 +9,6 @@ declare(strict_types=1);
 namespace Modules\Xot\Filament\Actions\Header;
 
 use Filament\Resources\Pages\ListRecords;
-use Illuminate\Support\LazyCollection;
 use Modules\Xot\Actions\Export\ExportXlsByLazyCollection;
 use Modules\Xot\Actions\Export\ExportXlsByQuery;
 use Modules\Xot\Actions\Export\ExportXlsStreamByLazyCollection;
@@ -71,7 +70,7 @@ class ExportXlsLazyAction extends XotBaseAction
                 }
 
                 $lazy = $livewire->getFilteredTableQuery();
-                if (null === $lazy) {
+                if ($lazy === null) {
                     throw new \Exception('Query is null');
                 }
 
@@ -83,11 +82,9 @@ class ExportXlsLazyAction extends XotBaseAction
                     return app(ExportXlsByQuery::class)->execute($lazy, $filename, $stringFields, null);
                 }
 
-                $lazyCursor = $lazy->cursor();
-                /** @var LazyCollection<int, mixed> $exportCollection */
-                $exportCollection = $lazyCursor->map(static fn (mixed $row): mixed => $row);
+                $exportCollection = $lazy->cursor();
 
-                if ($lazyCursor->count() > 3000) {
+                if ($exportCollection->count() > 3000) {
                     return app(ExportXlsStreamByLazyCollection::class)
                         ->execute($exportCollection, $filename, $transKey, array_values($fields));
                 }
