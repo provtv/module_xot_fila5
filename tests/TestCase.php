@@ -15,6 +15,10 @@ use PHPUnit\Framework\Assert;
 use function Safe\rmdir;
 use function Safe\scandir;
 use function Safe\unlink;
+use Modules\Xot\States\Transitions\XotBaseTransition;
+use Modules\Xot\Actions\Cast\SafeEloquentCastAction;
+use Modules\User\Models\User;
+use Modules\User\Database\Factories\UserFactory;
 
 /**
  * Base test case for Xot module.
@@ -38,6 +42,49 @@ use function Safe\unlink;
  */
 abstract class TestCase extends XotBaseTestCase
 {
+
+    /**
+     * Fixture condivisa per i test di SafeEloquentCastAction.
+     *
+     * @return array{0: SafeEloquentCastAction, 1: Model}
+     */
+    public static function safeEloquentCastFixture(): array
+    {
+        $model = new class extends Model
+        {
+            /** @var array<string, mixed> */
+            protected $attributes = [
+                'name' => 'Mario',
+                'age' => 42,
+                'score' => 12.5,
+                'active' => true,
+                'meta' => ['k' => 'v'],
+                'empty' => '',
+            ];
+
+            protected $guarded = [];
+        };
+
+        return [app(SafeEloquentCastAction::class), $model];
+    }
+
+    /**
+     * Fixture condivisa per i test di XotBaseTransition.
+     *
+     * @return array{0: User, 1: XotBaseTransition}
+     */
+    public static function xotBaseTransitionFixture(): array
+    {
+        /** @var User $record */
+        $record = UserFactory::new()->make();
+
+        $transition = new class($record) extends XotBaseTransition
+        {
+            public static string $name = 'test_transition';
+        };
+
+        return [$record, $transition];
+    }
     use DatabaseTransactions;
 
     /** @var list<string> */

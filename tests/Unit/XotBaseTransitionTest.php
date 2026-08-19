@@ -12,13 +12,13 @@ uses(TestCase::class);
 
 describe('XotBaseTransition', function (): void {
     it('can be instantiated', function (): void {
-        [, $transition] = xotBaseTransitionFixture();
+        [, $transition] = TestCase::xotBaseTransitionFixture();
 
         Assert::assertInstanceOf(XotBaseTransition::class, $transition);
     });
 
     it('can get record', function (): void {
-        [$record, $transition] = xotBaseTransitionFixture();
+        [$record, $transition] = TestCase::xotBaseTransitionFixture();
 
         Assert::assertSame($record, $transition->record);
     });
