@@ -109,9 +109,6 @@
         ]
     },
     "autoload-dev": {
-        "files": [
-            "tests/Support/helpers.php"
-        ]
     },
     "scripts": {
         "analyse": "vendor/bin/phpstan analyse",
