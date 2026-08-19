@@ -9,7 +9,7 @@ updated: 2026-08-19
 qmd: "filament closure parametri tipi record livewire records state set get type coverage phpstan"
 related:
   - ../../stories/5.19.type-coverage-campaign.story.md
-  - ../../../../../../docs/chat/phpstan-type-coverage-campaign.md
+  - ../../../../../../docs/chat/type-coverage-campaign.md
 ---
 
 # Tipi dei parametri nelle closure Filament
