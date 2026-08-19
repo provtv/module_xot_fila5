@@ -14,4 +14,7 @@ it('accepts valid phone', function (): void {
     Assert::assertSame($phone, $vo->toString());
 });
 
-it('throws on invalid phone', function (): void {});
+it('throws on invalid phone', function (): void {
+    expect(fn (): PhoneValueObject => PhoneValueObject::fromString('invalid'))
+        ->toThrow(InvalidArgumentException::class);
+});

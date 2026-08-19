@@ -108,6 +108,11 @@ class HandlersRepository
             return false;
         }
 
-        return $params[0]->getClass() instanceof \ReflectionClass ? $params[0]->getClass()->isInstance($e) : true;
+        $type = $params[0]->getType();
+        if (! $type instanceof \ReflectionNamedType || $type->isBuiltin()) {
+            return true;
+        }
+
+        return is_a($e, $type->getName(), true);
     }
 }

@@ -16,8 +16,11 @@ describe('Get Tenant Config Path Action', function (): void {
         /** @var TestCase $this */
         $tenantPathAction = $this->createUnitMock(GetTenantFilePathAction::class);
         $tenantPathAction->method('execute')
-            ->with('mail.php')
-            ->willReturn('/tmp/tenant/mail.php');
+            ->willReturnCallback(static function (string $filename): string {
+                Assert::assertSame('mail.php', $filename);
+
+                return '/tmp/tenant/mail.php';
+            });
 
         app()->instance(GetTenantFilePathAction::class, $tenantPathAction);
 

@@ -17,7 +17,7 @@ namespace Modules\Xot\Filament\Support;
  */
 final class RecordAnchor
 {
-    public const PREFIX = 'record-';
+    public const string PREFIX = 'record-';
 
     /**
      * Valore dell'attributo id da mettere nel DOM.

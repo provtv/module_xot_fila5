@@ -27,9 +27,8 @@ class HasTableWithXotTestClass
         return $mock;
     }
 
-    #[\Override]
-    /** @return array<int, mixed> */
-    public function getTableColumns(): array
+    /** @return array<string, mixed> */
+    protected function getTableColumns(): array
     {
         return [];
     }

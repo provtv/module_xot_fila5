@@ -22,6 +22,8 @@ class GetTableIndexesByModelClassAction
         $table = $model->getTable();
         $formManager = app(GetSchemaManagerByModelClassAction::class)->execute($modelClass);
 
-        return $formManager->listTableIndexes($table);
+        Assert::stringNotEmpty($table);
+
+        return $formManager->introspectTableIndexesByUnquotedName($table);
     }
 }

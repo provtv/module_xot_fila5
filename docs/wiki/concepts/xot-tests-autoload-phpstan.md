@@ -4,7 +4,7 @@ type: concept
 module: Xot
 tags: [xot, phpstan, autoload, tests, testcase]
 created: 2026-06-13
-updated: 2026-06-13
+updated: 2026-08-19
 qmd: "Xot Tests autoload XotBaseTestCase class not found phpstan composer psr-4"
 issues:
   - "https://github.com/laraxot/base_fixcity_fila5/issues/330"
@@ -12,6 +12,7 @@ related:
   - ../../../../../../docs/wiki/PHPSTAN-INDEX.md
   - ../../../../../../docs/wiki/memories/phpstan-neon-immutable-agents.md
   - ./phpstan-pest-bridge-discipline.md
+  - ../../../../../../bmad-output/architecture.md
 ---
 
 # Xot Tests autoload e PHPStan
@@ -39,8 +40,8 @@ In `Modules/Xot/composer.json` l'autoload PSR-4 era incoerente:
 1. **`Modules/Xot/composer.json`**: registrare `Modules\Xot\Tests\` in `autoload.psr-4` (produzione), rimuovere mapping minuscolo.
 2. **`composer dump-autoload`**
 3. **Normalizzare namespace** `Modules\{Mod}\tests` → `Modules\{Mod}\Tests` in Activity, Fixcity, User, Xot.
-4. **`PestFunctionBridge.php`**: `uses|test|it|describe` → `void`; `expect()` → `PestExpectation` (catene tipizzate).
-5. **Pest in file namespaced**: `uses(\Modules\Geo\Tests\TestCase::class)` sempre FQCN; `uses()` **dopo** gli `import use`.
+4. **Bootstrap Pest:** [`XotBasePest.php`](../../../tests/XotBasePest.php) + `PestStubs.php` — vietato `tests/Support` e `PestFunctionBridge.php` (vedi ADR-002 in [`architecture.md`](../../../../../../bmad-output/architecture.md)).
+5. **Pest in file namespaced:** `uses(\Modules\Geo\Tests\TestCase::class)` sempre FQCN; `uses()` **dopo** gli `import use`.
 
 ## Verifica
 
@@ -53,7 +54,7 @@ php -d memory_limit=2048M ./vendor/bin/phpstan analyse Modules
 
 ## Regola sacra
 
-**Solo l'utente modifica `laravel/phpstan.neon`.** Gli agenti correggono codice, autoload composer dei moduli, bridge Pest e PHPDoc.
+**Solo l'utente modifica `laravel/phpstan.neon`.** Gli agenti correggono codice, autoload composer dei moduli, `XotBasePest` e PHPDoc.
 
 ## Collegamenti
 

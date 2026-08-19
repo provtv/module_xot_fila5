@@ -22,8 +22,7 @@ class RouteService
     /**
      * Verifica se l'utente è in modalità amministrazione.
      *
-     * @param array<string,string> $params Parametri aggiuntivi
-     *
+     * @param  array<string,string>  $params  Parametri aggiuntivi
      * @return bool True se l'utente è in modalità amministrazione, false altrimenti
      */
     public static function inAdmin(array $params = []): bool
@@ -35,7 +34,7 @@ class RouteService
         }
 
         // Se il primo segmento dell'URL è 'admin', siamo in modalità amministrazione
-        if ('admin' === Request::segment(1)) {
+        if (Request::segment(1) === 'admin') {
             return true;
         }
 
@@ -44,12 +43,12 @@ class RouteService
 
         // Se abbiamo almeno un segmento, è 'livewire' e la sessione 'in_admin' è true
         return (is_countable($segments) ? \count($segments) : 0) > 0
-            && 'livewire' === $segments[0]
-            && true === session('in_admin', false);
+            && $segments[0] === 'livewire'
+            && session('in_admin', false) === true;
     }
 
     /**
-     * @param array<string,string> $params
+     * @param  array<string,string>  $params
      */
     public static function urlAct(array $params): string
     {
@@ -102,7 +101,7 @@ class RouteService
     // se n=0 => 'container0'
     // se n=1 => 'containers.container1'
     /**
-     * @param array<string,string> $params
+     * @param  array<string,string>  $params
      */
     public static function getRoutenameN(array $params): string
     {
@@ -116,7 +115,7 @@ class RouteService
             $tmp[] = 'admin';
         }
 
-        for ($i = 0; $i <= $n; ++$i) {
+        for ($i = 0; $i <= $n; $i++) {
             $tmp[] = 'container'.$i;
         }
 
@@ -204,7 +203,7 @@ class RouteService
      * }
      */
     /**
-     * @param array<string,string> $params
+     * @param  array<string,string>  $params
      */
     public static function urlLang(array $params = []): string
     {
@@ -281,7 +280,7 @@ class RouteService
     public static function getAct(): string
     {
         $route_action = Route::currentRouteAction();
-        if (null === $route_action) {
+        if ($route_action === null) {
             throw new \Exception('$route_action is null');
         }
 
@@ -307,7 +306,7 @@ class RouteService
     public static function getModuleName(): string
     {
         $route_action = Route::currentRouteAction();
-        if (null === $route_action) {
+        if ($route_action === null) {
             throw new \Exception('$route_action is null');
         }
 
@@ -322,7 +321,7 @@ class RouteService
     public static function getControllerName(): string
     {
         $route_action = Route::currentRouteAction();
-        if (null === $route_action) {
+        if ($route_action === null) {
             throw new \Exception('$route_action is null');
         }
 
@@ -355,7 +354,5 @@ class RouteService
             ->implode('.');
     }
 
-    public function execute(): void
-    {
-    }
+    public function execute(): void {}
 }

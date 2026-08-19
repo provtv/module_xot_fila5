@@ -23,7 +23,7 @@ class ListSessions extends XotBaseListRecords
     public function getGridTableColumns(): array
     {
         return [
-            Stack::make($this->getTableColumns()),
+            Stack::make($this->resolveTableColumnsForXotTable()),
         ];
     }
 
