@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
 use Modules\Xot\Relations\CustomRelation;
 use Modules\Xot\Tests\TestCase;
@@ -23,9 +24,9 @@ it('creates custom relation', function (): void {
         protected $table = 'parent';
     };
 
-    $baseConstraints = fn ($relation) => null;
-    $eagerConstraints = fn ($relation, $models) => null;
-    $eagerMatcher = fn ($models, $results, $relation) => [];
+    $baseConstraints = static fn (CustomRelation $relation): null => null;
+    $eagerConstraints = static fn (CustomRelation $relation, array $models): null => null;
+    $eagerMatcher = static fn (array $models, Collection $results, mixed $relation): array => [];
 
     $relation = $parentModel->customRelation(
         get_class($relatedModel),

@@ -104,7 +104,7 @@ class SafeBooleanCastAction
             if (
                 in_array(
                     $trimmed,
-                    array_map(fn ($value) => is_string($value) ? strtolower($value) : $value, $trueValues),
+                    array_map(static fn (mixed $value): mixed => is_string($value) ? strtolower($value) : $value, $trueValues),
                     true,
                 )
             ) {
@@ -114,7 +114,7 @@ class SafeBooleanCastAction
             if (
                 in_array(
                     $trimmed,
-                    array_map(fn ($value) => is_string($value) ? strtolower($value) : $value, $falseValues),
+                    array_map(static fn (mixed $value): mixed => is_string($value) ? strtolower($value) : $value, $falseValues),
                     true,
                 )
             ) {

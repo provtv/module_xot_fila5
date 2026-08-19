@@ -7,13 +7,12 @@ namespace Modules\Xot\Actions\File;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
 use Modules\Xot\Datas\ComponentFileData;
-
-use function Safe\json_decode;
-use function Safe\json_encode;
-
 use Spatie\LaravelData\DataCollection;
 use Spatie\QueueableAction\QueueableAction;
 use Webmozart\Assert\Assert;
+
+use function Safe\json_decode;
+use function Safe\json_encode;
 
 class GetComponentsAction
 {
@@ -63,7 +62,7 @@ class GetComponentsAction
         $comps = [];
 
         foreach ($files as $file) {
-            if ('php' !== $file->getExtension()) {
+            if ($file->getExtension() !== 'php') {
                 continue;
             }
 
@@ -78,10 +77,10 @@ class GetComponentsAction
             $comp_name = $prefix.$comp_name;
             $comp_ns = $namespace.'\\'.$class_name;
 
-            if ('' !== $relative_path) {
+            if ($relative_path !== '') {
                 $comp_name = '';
                 $piece = collect(explode('\\', $relative_path))
-                    ->map(fn ($item) => Str::slug(Str::snake($item)))
+                    ->map(static fn (string $item): string => Str::slug(Str::snake($item)))
                     ->implode('.');
 
                 $comp_name = $prefix.$piece.'.'.Str::slug(Str::snake(Str::replace('\\', ' ', $class_name)));

@@ -14,13 +14,12 @@ class DiffAssocRecursiveAction
     use QueueableAction;
 
     /**
-     * @param array<int|string, mixed> $data
-     *
+     * @param  array<int|string, mixed>  $data
      * @return array<int|string, array<int|string, mixed>>
      */
     public static function fixType(array $data): array
     {
-        return collect($data)->map(static function ($item): array {
+        return collect($data)->map(static function (mixed $item): array {
             if (! is_array($item)) {
                 throw new \Exception('['.__LINE__.']['.self::class.']');
             }
@@ -30,13 +29,12 @@ class DiffAssocRecursiveAction
     }
 
     /**
-     * @param array<int|string, mixed> $data
-     *
+     * @param  array<int|string, mixed>  $data
      * @return array<int|string, mixed>
      */
     private static function normalizeArray(array $data): array
     {
-        return collect($data)->map(static function ($value) {
+        return collect($data)->map(static function (mixed $value) {
             if (is_array($value)) {
                 return self::normalizeArray($value);
             }
@@ -50,9 +48,8 @@ class DiffAssocRecursiveAction
     }
 
     /**
-     * @param array<int|string, mixed> $arr_1
-     * @param array<int|string, mixed> $arr_2
-     *
+     * @param  array<int|string, mixed>  $arr_1
+     * @param  array<int|string, mixed>  $arr_2
      * @return array<int|string, array<int|string, mixed>>
      */
     public function execute(array $arr_1, array $arr_2): array
