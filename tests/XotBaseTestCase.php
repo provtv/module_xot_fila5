@@ -197,6 +197,12 @@ abstract class XotBaseTestCase extends BaseTestCase
         config()->set('database.default', 'sqlite');
         DB::purge('sqlite');
 
+        // Il cache store `database` vuole una tabella `cache` che nessuna migration del
+        // repo crea: `spatie/laravel-permission` passa dal suo registrar cacheato, e
+        // duecento test di Incentivi morivano su `no such table: cache`. In un test la
+        // cache non deve nemmeno essere condivisa fra un caso e l'altro.
+        config()->set('cache.default', 'array');
+
         $this->shareSingleSqlitePdoAcrossConnections();
     }
 
