@@ -138,12 +138,53 @@ class BuildTestSqliteCommand extends Command
                 ]);
                 $this->line(sprintf('  %-32s <fg=green>ok</>', $module));
             } catch (Throwable $e) {
-                $failures[$module] = $this->firstLine($e->getMessage());
-                $this->line(sprintf('  %-32s <fg=red>KO</>', $module));
+                // Una migration che inciampa ferma tutte quelle dopo di lei nella stessa
+                // directory: la prima volta è successo con `imports already exists`, e le
+                // tabelle `cache` e `model_has_roles` — dichiarate più avanti nella stessa
+                // cartella — non sono mai state create. Si riprova file per file.
+                $survivors = $this->migrateFileByFile($path);
+
+                if ($survivors === []) {
+                    $this->line(sprintf('  %-32s <fg=green>ok</> (file per file)', $module));
+                } else {
+                    $failures[$module] = $this->firstLine(implode('; ', $survivors));
+                    $this->line(sprintf('  %-32s <fg=yellow>parziale</> (%d migration non applicate)', $module, count($survivors)));
+                }
+                unset($e);
             }
         }
 
         return $failures;
+    }
+
+    /**
+     * Applica le migration di una directory una alla volta, restituendo solo quelle che
+     * non passano. Serve dopo il fallimento del passaggio in blocco: senza, una singola
+     * incompatibilità con SQLite si porta dietro tutte le migration successive.
+     *
+     * @return list<string>
+     */
+    private function migrateFileByFile(string $path): array
+    {
+        $files = glob($path.'/*.php');
+        $files = $files === false ? [] : $files;
+        sort($files);
+
+        $failed = [];
+
+        foreach ($files as $file) {
+            try {
+                $this->callSilent('migrate', [
+                    '--force' => true,
+                    '--path' => $file,
+                    '--realpath' => true,
+                ]);
+            } catch (Throwable $e) {
+                $failed[] = basename($file).': '.$this->firstLine($e->getMessage());
+            }
+        }
+
+        return $failed;
     }
 
     private function countTables(string $target): int
