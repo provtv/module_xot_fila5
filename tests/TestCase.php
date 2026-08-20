@@ -126,20 +126,72 @@ abstract class TestCase extends XotBaseTestCase
 
     protected function setUp(): void
     {
+        $this->prepareSharedFixcitySqliteForTesting();
+
         parent::setUp();
 
-        $database = database_path('fixcity_data.sqlite');
+        if ($this->shouldSkipForMissingXotDb()) {
+            $this->markTestSkipped('DB condiviso non disponibile per test Feature Xot.');
+        }
+    }
 
-        /** @var array<string, array<string, mixed>> $connections */
-        $connections = config('database.connections', []);
+    /**
+     * Salta Feature / `xot-db` offline; Unit puri e `no-xot-db` restano verdi.
+     * Shared sqlite non è la replica MySQL di testing.
+     *
+     * Nota: Pest `uses()->group('xot-db')` non sempre riempie `$this->groups()` —
+     * fallback: rileva `group('xot-db')` nel file sorgente del test.
+     */
+    protected function shouldSkipForMissingXotDb(): bool
+    {
+        if (in_array('no-xot-db', $this->groups(), true)) {
+            return false;
+        }
 
-        foreach (array_keys($connections) as $connection) {
-            if (config("database.connections.{$connection}.driver") !== 'sqlite') {
-                continue;
-            }
+        $testFile = $this->resolvePestTestFile();
+        $isUnit = $testFile !== null && str_contains($testFile, '/tests/Unit/');
+        $isXotDbGroup = in_array('xot-db', $this->groups(), true)
+            || ($testFile !== null && is_file($testFile) && str_contains((string) file_get_contents($testFile), "group('xot-db')"));
 
-            $this->app['config']->set("database.connections.{$connection}.database", $database);
-            DB::purge($connection);
+        if ($isUnit && ! $isXotDbGroup) {
+            return false;
+        }
+
+        // Qui c'era uno skip incondizionato quando il driver è sqlite. La premessa —
+        // «lo sqlite condiviso è scratch / incompleto» — è decaduta: lo schema si
+        // costruisce con `php artisan xot:build-test-sqlite` e le suite parallele non si
+        // lockano più (un solo PDO condiviso, un file per processo via `XOT_TEST_SQLITE`).
+        // Se il database manca davvero lo dice il metodo qui sopra, che guarda le tabelle.
+        return static::xotDbUnavailable();
+    }
+
+    private function resolvePestTestFile(): ?string
+    {
+        $class = static::class;
+
+        if (property_exists($class, '__filename')) {
+            /** @var string $filename */
+            $filename = $class::$__filename;
+
+            return $filename;
+        }
+
+        $file = (new \ReflectionClass($this))->getFileName();
+
+        return $file !== false ? $file : null;
+    }
+
+    /**
+     * Feature Xot spesso persistono su `users`: verifica connessione user.
+     */
+    public static function xotDbUnavailable(): bool
+    {
+        try {
+            DB::connection('user')->getPdo();
+
+            return ! DB::connection('user')->getSchemaBuilder()->hasTable('users');
+        } catch (\Throwable) {
+            return true;
         }
     }
 
