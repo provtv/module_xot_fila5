@@ -145,6 +145,25 @@ abstract class XotBaseTestCase extends BaseTestCase
     }
 
     /**
+     * Percorso del file SQLite condiviso dai test.
+     *
+     * Sovrascrivibile con `XOT_TEST_SQLITE` perché SQLite ammette un solo writer: per
+     * far girare più moduli in parallelo serve un file per processo, altrimenti i run
+     * si bloccano a vicenda. Senza la variabile resta il file storico, quindi il
+     * comportamento di default non cambia.
+     */
+    public static function sharedSqlitePath(): string
+    {
+        $override = getenv('XOT_TEST_SQLITE');
+
+        if (is_string($override) && $override !== '') {
+            return $override;
+        }
+
+        return database_path('fixcity_data.sqlite');
+    }
+
+    /**
      * Punta l'intero ambiente di test sul file sqlite condiviso.
      *
      * Gira dentro `refreshApplication()`, cioe' dopo la creazione dell'app ma prima
@@ -159,7 +178,7 @@ abstract class XotBaseTestCase extends BaseTestCase
     {
         parent::refreshApplication();
 
-        $database = database_path('fixcity_data.sqlite');
+        $database = self::sharedSqlitePath();
 
         /** @var array<string, mixed> $connections */
         $connections = (array) config('database.connections', []);
@@ -177,6 +196,46 @@ abstract class XotBaseTestCase extends BaseTestCase
 
         config()->set('database.default', 'sqlite');
         DB::purge('sqlite');
+
+        $this->shareSingleSqlitePdoAcrossConnections();
+    }
+
+    /**
+     * Fa condividere a tutte le connessioni lo stesso oggetto Connection, e quindi lo
+     * stesso PDO.
+     *
+     * Puntarle tutte allo stesso file non basta: ogni nome risolto apre un handle
+     * distinto, e `DatabaseTransactions` ne apre una transazione per ciascuno di quelli
+     * elencati in `$connectionsToTransact`. SQLite ammette un solo writer, quindi dal
+     * secondo `BEGIN` in poi si prende `SQLSTATE[HY000]: General error: 5 database is
+     * locked` — otto test di Media morivano così, e nessuno per colpa dello schema.
+     *
+     * Deve girare **qui**, in coda a `refreshApplication()`: farlo prima di
+     * `parent::setUp()` non serve, perché Testbench ricostruisce l'app e l'aliasing
+     * viene buttato via insieme alle connessioni risolte.
+     */
+    private function shareSingleSqlitePdoAcrossConnections(): void
+    {
+        /** @var DatabaseManager $manager */
+        $manager = $this->app->make('db');
+
+        $shared = $manager->connection('sqlite');
+
+        $managerReflection = new \ReflectionClass($manager);
+        $connectionsProperty = $managerReflection->getProperty('connections');
+        $connectionsProperty->setAccessible(true);
+
+        /** @var array<string, mixed> $resolved */
+        $resolved = $connectionsProperty->getValue($manager);
+
+        /** @var array<string, mixed> $connections */
+        $connections = (array) config('database.connections', []);
+
+        foreach (array_keys($connections) as $name) {
+            $resolved[(string) $name] = $shared;
+        }
+
+        $connectionsProperty->setValue($manager, $resolved);
     }
 
     /**
@@ -286,7 +345,7 @@ abstract class XotBaseTestCase extends BaseTestCase
             $this->refreshApplication();
         }
 
-        $database = database_path('fixcity_data.sqlite');
+        $database = self::sharedSqlitePath();
 
         /** @var array<string, array<string, mixed>> $connections */
         $connections = config('database.connections', []);
