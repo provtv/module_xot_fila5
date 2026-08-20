@@ -23,6 +23,7 @@ use Modules\Xot\Datas\XotData;
 use Modules\Xot\Models\Module;
 use Modules\Xot\Providers\XotServiceProvider;
 use PHPUnit\Framework\MockObject\MockObject;
+use Spatie\Permission\PermissionRegistrar;
 
 /**
  * Class XotBaseTestCase.
@@ -254,9 +255,29 @@ abstract class XotBaseTestCase extends BaseTestCase
         ];
     }
 
+    /**
+     * Fissa il team corrente per `spatie/laravel-permission`.
+     *
+     * `permission.teams` è `true` in questo progetto, quindi la pivot `model_has_role`
+     * ha `team_id` NOT NULL e Spatie lo prende dal registrar, non dal chiamante: senza
+     * un team corrente `assignRole()` scrive null e il database rifiuta la riga.
+     * In un test non c'è tenant risolto da richiesta HTTP, quindi lo si fissa qui.
+     */
+    private function setPermissionsTeamContext(): void
+    {
+        if (config('permission.teams') !== true) {
+            return;
+        }
+
+        $registrar = $this->app->make(PermissionRegistrar::class);
+        $registrar->setPermissionsTeamId(1);
+    }
+
     protected function setUp(): void
     {
         parent::setUp();
+
+        $this->setPermissionsTeamContext();
 
         if (! $this->app->bound('translator')) {
             $this->app->singleton('translator', static function (Application $app): Translator {
