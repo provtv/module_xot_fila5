@@ -9,7 +9,7 @@ use Modules\Xot\Datas\RouteParamsData;
 use Modules\Xot\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
-uses(TestCase::class);
+uses(TestCase::class)->group('no-xot-db');
 
 it('executes the converted route use cases through the container', function (): void {
     Assert::assertTrue(app(IsAdminRouteAction::class)->execute(RouteParamsData::from(['in_admin' => true])));

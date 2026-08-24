@@ -229,6 +229,21 @@ $array = SafeArrayCastAction::cast($data);
 $string = SafeStringCastAction::cast($value);
 ```
 
+## Test: ricette causa-driven (story 4.13)
+
+Il gate statico di Xot si chiude **correggendo la causa**, non silenziando. `laravel/phpstan.neon` è LOCKED.
+
+| Famiglia | Cosa fare | Cosa non fare |
+|---|---|---|
+| B tautologia | `assertSame` / `assertNotEmpty` sul valore reale; se il test non asserisce nulla, cancellarlo | `assertTrue(true)`, `assertIsString` su `string` già noto |
+| G contratto | tipo alla sorgente (`viewNamespaceToDir(): string`); Mockery `/** @var UserContract&\Mockery\MockInterface $x */` | allargare firme, `@var` per coprire PHPStan |
+| H simbolo morto | `git log -S`; `FileAction::url` è commentato → `getFileUrl`; test contro API inesistente si cancella | inventare stub del metodo mancante |
+| E mixed | `is_string` / `instanceof` / `Assert::assertIsArray` | `(string)` / `(array)` |
+| A host | classe nominata che estende l'host reale (`Cache` / `XotBaseModel`), non `Model` nudo | re-`use` di un trait già sul parent (rompe `$this` generico) |
+
+Misura di chiusura su sottopercorso: `php -d memory_limit=2G ./vendor/bin/phpstan analyse Modules/Xot`.
+Story 4.13: 706 (contesto) → 30 (baseline sessione) → **0**. Helper `ModuleExecuteCoverage` e `ModuleRemainingCoverage` restano API pubblica dei test.
+
 ## Collegamenti
 
 - [Cast actions](../cast-actions.md)

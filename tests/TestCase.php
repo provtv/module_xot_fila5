@@ -15,6 +15,7 @@ use PHPUnit\Framework\Assert;
 use function Safe\rmdir;
 use function Safe\scandir;
 use function Safe\unlink;
+use function Safe\file_get_contents;
 use Modules\Xot\States\Transitions\XotBaseTransition;
 use Modules\Xot\Actions\Cast\SafeEloquentCastAction;
 use Modules\User\Models\User;
@@ -144,14 +145,16 @@ abstract class TestCase extends XotBaseTestCase
      */
     protected function shouldSkipForMissingXotDb(): bool
     {
-        if (in_array('no-xot-db', $this->groups(), true)) {
-            return false;
-        }
-
         $testFile = $this->resolvePestTestFile();
         $isUnit = $testFile !== null && str_contains($testFile, '/tests/Unit/');
-        $isXotDbGroup = in_array('xot-db', $this->groups(), true)
-            || ($testFile !== null && is_file($testFile) && str_contains((string) file_get_contents($testFile), "group('xot-db')"));
+        $isXotDbGroup = false;
+        if ($testFile !== null && is_file($testFile)) {
+            $source = file_get_contents($testFile);
+            if (str_contains($source, "group('no-xot-db')")) {
+                return false;
+            }
+            $isXotDbGroup = str_contains($source, "group('xot-db')");
+        }
 
         if ($isUnit && ! $isXotDbGroup) {
             return false;

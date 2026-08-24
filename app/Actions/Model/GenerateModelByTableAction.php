@@ -17,6 +17,6 @@ class GenerateModelByTableAction
 
     public function execute(): void
     {
-        dddx('WIP');
+        throw new \RuntimeException('Removed debug dddx');
     }
 }

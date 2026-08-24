@@ -40,6 +40,6 @@ class ParsePrintPageStringCommand extends Command
         if (! is_string($str)) {
             throw new \Exception('argument str must be a string');
         }
-        dddx(app(ParsePrintPageStringAction::class)->execute($str));
+        throw new \RuntimeException('Removed debug dddx');
     }
 }

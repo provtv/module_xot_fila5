@@ -45,6 +45,6 @@ class ViewDatabaseConfigCommand extends Command
 
             // return Arr::except($item, ['password']);
         });
-        dddx($database);
+        throw new \RuntimeException('Removed debug dddx');
     }
 }

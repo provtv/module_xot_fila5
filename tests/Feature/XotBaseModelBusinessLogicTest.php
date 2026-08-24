@@ -55,7 +55,7 @@ describe('Xot Base Model Business Logic', function (): void {
         $tableName = $baseModel->getTable();
 
         // Assert
-        Assert::assertIsString($tableName);
+        Assert::assertNotEmpty($tableName);
         Assert::assertNotEmpty($tableName);
     });
 
@@ -79,7 +79,7 @@ describe('Xot Base Model Business Logic', function (): void {
         $keyName = $baseModel->getKeyName();
 
         // Assert
-        Assert::assertIsString($keyName);
+        Assert::assertNotEmpty($keyName);
         Assert::assertEquals('id', $keyName);
     });
 
@@ -102,9 +102,9 @@ describe('Xot Base Model Business Logic', function (): void {
         $casts = $baseModel->getCasts();
 
         // Assert
-        Assert::assertIsArray($fillable);
-        Assert::assertIsArray($hidden);
-        Assert::assertIsArray($casts);
+        Assert::assertNotEmpty($fillable);
+        Assert::assertNotEmpty($hidden);
+        Assert::assertNotEmpty($casts);
     });
 
     test('it supports soft deletes when configured', function (): void {
@@ -183,7 +183,7 @@ describe('Xot Base Model Business Logic', function (): void {
         $array = $baseModel->toArray();
 
         // Assert
-        Assert::assertIsArray($array);
+        Assert::assertNotEmpty($array);
         Assert::assertNotEmpty($array);
     });
 
@@ -195,7 +195,7 @@ describe('Xot Base Model Business Logic', function (): void {
         $json = $baseModel->toJson();
 
         // Assert
-        Assert::assertIsString($json);
+        Assert::assertNotEmpty($json);
         Assert::assertNotEmpty($json);
     });
 
@@ -222,8 +222,8 @@ describe('Xot Base Model Business Logic', function (): void {
         $guarded = $baseModel->getGuarded();
 
         // Assert
-        Assert::assertIsArray($fillable);
-        Assert::assertIsArray($guarded);
+        Assert::assertNotEmpty($fillable);
+        Assert::assertNotEmpty($guarded);
     });
 
     test('it supports model events', function (): void {
@@ -262,7 +262,7 @@ describe('Xot Base Model Business Logic', function (): void {
         $casts = $baseModel->getCasts();
 
         // Assert
-        Assert::assertIsArray($casts);
+        Assert::assertNotEmpty($casts);
     });
 
     test('it supports dates', function (): void {
@@ -273,7 +273,7 @@ describe('Xot Base Model Business Logic', function (): void {
         $dates = $baseModel->getDates();
 
         // Assert
-        Assert::assertIsArray($dates);
+        Assert::assertNotEmpty($dates);
     });
 
     test('it supports hidden attributes', function (): void {
@@ -284,7 +284,7 @@ describe('Xot Base Model Business Logic', function (): void {
         $hidden = $baseModel->getHidden();
 
         // Assert
-        Assert::assertIsArray($hidden);
+        Assert::assertNotEmpty($hidden);
     });
 
     test('it supports visible attributes', function (): void {
@@ -295,7 +295,7 @@ describe('Xot Base Model Business Logic', function (): void {
         $visible = $baseModel->getVisible();
 
         // Assert
-        Assert::assertIsArray($visible);
+        Assert::assertNotEmpty($visible);
     });
 
     test('it supports appends', function (): void {
@@ -306,7 +306,7 @@ describe('Xot Base Model Business Logic', function (): void {
         $appends = $baseModel->getAppends();
 
         // Assert
-        Assert::assertIsArray($appends);
+        Assert::assertNotEmpty($appends);
     });
 
     test('it supports with relationships', function (): void {
@@ -317,6 +317,6 @@ describe('Xot Base Model Business Logic', function (): void {
         $with = $baseModel->getAppends();
 
         // Assert
-        Assert::assertIsArray($with);
+        Assert::assertNotEmpty($with);
     });
 });

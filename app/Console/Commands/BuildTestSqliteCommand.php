@@ -11,6 +11,9 @@ use Modules\Xot\Tests\XotBaseTestCase;
 use Throwable;
 
 use function Safe\unlink;
+use function Safe\glob;
+use function Safe\preg_replace;
+use function Safe\touch;
 
 /**
  * Costruisce lo schema del database SQLite usato dai test.
@@ -117,13 +120,15 @@ class BuildTestSqliteCommand extends Command
     private function migrateModuleByModule(): array
     {
         $paths = glob(base_path('Modules/*/database/migrations'));
-        $paths = $paths === false ? [] : $paths;
         sort($paths);
         array_unshift($paths, database_path('migrations'));
 
         $failures = [];
 
         foreach ($paths as $path) {
+            if (! is_string($path)) {
+                continue;
+            }
             if (! is_dir($path)) {
                 continue;
             }
@@ -167,12 +172,14 @@ class BuildTestSqliteCommand extends Command
     private function migrateFileByFile(string $path): array
     {
         $files = glob($path.'/*.php');
-        $files = $files === false ? [] : $files;
         sort($files);
 
         $failed = [];
 
         foreach ($files as $file) {
+            if (! is_string($file)) {
+                continue;
+            }
             try {
                 $this->callSilent('migrate', [
                     '--force' => true,
@@ -199,7 +206,7 @@ class BuildTestSqliteCommand extends Command
     {
         $normalised = preg_replace('/\s+/', ' ', $message);
 
-        return mb_substr($normalised ?? $message, 0, 160);
+        return mb_substr($normalised, 0, 160);
     }
 
     private function stringOption(string $name): ?string

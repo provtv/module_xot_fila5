@@ -65,9 +65,12 @@ class ExecuteArtisanCommandAction
         Event::dispatch('artisan-command.started', [$command]);
 
         try {
+            // In testing evita hang lunghi (es. passport:purge su DB bloccato); in prod resta 300s.
+            $timeout = app()->environment('testing') ? 10 : 300;
+
             $process = Process::path(base_path())
                 ->command("php artisan {$command}")
-                ->timeout(300)
+                ->timeout($timeout)
                 ->start();
 
             // Cattura l'output in tempo reale

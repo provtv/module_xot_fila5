@@ -80,8 +80,6 @@ class XotBaseResourceForm
 
             return Step::make($name)->schema($schemaComponents);
         }
-        dddx($methodName);
-
-        return Step::make($name)->schema([]);
+        throw new \RuntimeException('Removed debug dddx');
     }
 }

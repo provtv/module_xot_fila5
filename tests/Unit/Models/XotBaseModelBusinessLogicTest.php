@@ -7,7 +7,7 @@ use Modules\Xot\Models\XotBaseModel;
 use Modules\Xot\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
-uses(TestCase::class);
+uses(TestCase::class)->group('no-xot-db');
 
 describe('XotBaseModel Business Logic', function (): void {
     test('xot base model extends eloquent model', function (): void {

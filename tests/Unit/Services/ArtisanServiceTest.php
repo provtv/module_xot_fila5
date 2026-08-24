@@ -11,7 +11,7 @@ use Modules\Xot\Tests\TestCase;
 use function Safe\ob_end_clean;
 use function Safe\ob_start;
 
-uses(TestCase::class);
+uses(TestCase::class)->group('no-xot-db');
 
 beforeEach(function (): void {
     // Configure mysql connection for tests (required by ArtisanService)

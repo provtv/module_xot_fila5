@@ -33,7 +33,7 @@ class CustomRelationAction
                 $ids[] = $res->getKey();
                 $models[] = $res;
             } else {
-                dddx(['model' => $model, 'relationDTO' => $relationDTO]);
+                throw new \RuntimeException('Removed debug dddx');
             }
         }
     }

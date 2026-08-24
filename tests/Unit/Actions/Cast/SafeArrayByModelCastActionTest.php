@@ -9,9 +9,40 @@ use Modules\Activity\Models\Activity;
 use Modules\Xot\Actions\Cast\SafeArrayByModelCastAction;
 use Modules\Xot\Tests\TestCase;
 use PHPUnit\Framework\Assert;
-use PHPUnit\Framework\MockObject\MockObject;
+use ValueError;
 
 uses(TestCase::class);
+
+/**
+ * Model di fixture: attributesToArray lancia ValueError (catturato da SafeArrayByModelCastAction).
+ */
+final class BrokenAttributesModelForSafeArrayCast extends Model
+{
+    public $incrementing = false;
+
+    protected $table = 'broken_attrs_safe_array';
+
+    /**
+     * @return array<string, mixed>
+     */
+    public function attributesToArray(): array
+    {
+        throw new ValueError('Mock error');
+    }
+
+    /**
+     * @return array<string, mixed>
+     */
+    public function getAttributes(): array
+    {
+        return ['name' => 'Fallback'];
+    }
+
+    public function getAttribute($key): mixed
+    {
+        return $key === 'name' ? 'Fallback' : null;
+    }
+}
 
 describe('Safe Array By Model Cast Action', function (): void {
     test('converts model attributes to array correctly', function (): void {
@@ -21,21 +52,17 @@ describe('Safe Array By Model Cast Action', function (): void {
         $action = app(SafeArrayByModelCastAction::class);
         $result = $action->execute($model);
 
-        Assert::assertIsArray($result);
+        Assert::assertNotEmpty($result);
         Assert::assertArrayHasKey('name', $result);
     });
 
     test('falls back to safe execute on error', function (): void {
-        /** @var Model&MockObject $model */
-        $model = $this->createUnitMock(Model::class);
-        $model->method('attributesToArray')->willThrowException(new \Exception('Mock error'));
-        $model->method('getAttributes')->willReturn(['name' => 'Fallback']);
-        $model->method('getAttribute')->willReturn('Fallback');
+        $model = new BrokenAttributesModelForSafeArrayCast();
 
         $action = app(SafeArrayByModelCastAction::class);
         $result = $action->execute($model);
 
-        Assert::assertIsArray($result);
+        Assert::assertNotEmpty($result);
         Assert::assertArrayHasKey('name', $result);
         Assert::assertSame('Fallback', $result['name']);
     });

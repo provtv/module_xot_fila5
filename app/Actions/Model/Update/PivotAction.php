@@ -19,7 +19,7 @@ class PivotAction
     {
         $rows = $relationDTO->rows;
         // $rows is already typed as Relation in RelationDTO
-        dddx('wip');
+        throw new \RuntimeException('Removed debug dddx');
 
         /*
          *

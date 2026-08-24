@@ -335,6 +335,16 @@ Grazie a:
 - **La Comunità** per la saggezza condivisa
 - **Il Codice** per insegnarci l'umiltà
 
+## Xot: da coverage-farming a gate statico vero
+
+Lo scopo non è «zero errori». È che un test **possa fallire** quando il comportamento è sbagliato.
+
+`assertTrue(true)` dopo aver invocato un metodo alza la coverage e inganna PHPStan (`alreadyNarrowedType`).
+La story 4.13 ha cancellato quelle tautologie, ristretto `FileAction::viewNamespaceToDir()` a `string`
+(la funzione non ha mai restituito un array) e ripuntato i test da `FileAction::url` (morto) a `getFileUrl`.
+
+Misura `analyse Modules/Xot`, tmpDir isolata: **30 → 0**. Dettaglio ricette: [phpstan-rules.md](./quality/phpstan-rules.md).
+
 ## 🌟 Conclusione: Il Cerchio Infinito
 
 ```

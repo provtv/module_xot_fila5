@@ -185,7 +185,13 @@ if (! function_exists('getRouteParameters')) {
 }
 
 if (! function_exists('xotSeedModelOnce')) {
+    require_once dirname(__DIR__).'/app/Helpers/xot.seed.helper.php';
+}
+
+if (! function_exists('xotSeedModelOnce')) {
     /**
+     * Fallback se il file app/Helpers non ha registrato la function.
+     *
      * @param  class-string<Model>  $modelClass
      */
     function xotSeedModelOnce(string $modelClass): void

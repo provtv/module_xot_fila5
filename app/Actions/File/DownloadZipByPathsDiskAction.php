@@ -42,7 +42,7 @@ class DownloadZipByPathsDiskAction
                         $zip->addFromString($attachment.'.pdf', $fileContent);
                     }
                 } else {
-                    dddx(['filePath' => $filePath]);
+                    throw new \RuntimeException('Removed debug dddx');
                 }
             }
             $zip->close();

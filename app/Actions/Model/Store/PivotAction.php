@@ -15,7 +15,7 @@ class PivotAction
     public function execute(Model $_model, RelationDTO $_relationDTO): void
     {
         // Assert::isInstanceOf($rows = $relationDTO->rows, MorphToOne::class);
-        dddx('wip');
+        throw new \RuntimeException('Removed debug dddx');
 
         /*
          *

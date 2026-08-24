@@ -26,7 +26,7 @@ class PdfByHtmlAction
         try {
             $html2pdf->writeHTML($html);
         } catch (HtmlParsingException $e) {
-            dddx($html);
+            throw new \RuntimeException('Removed debug dddx');
         }
         $path = Storage::disk($disk)->path($filename);
         $html2pdf->output($path, 'F');

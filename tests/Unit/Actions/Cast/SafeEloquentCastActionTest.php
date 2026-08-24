@@ -7,7 +7,7 @@ use Modules\Xot\Actions\Cast\SafeStringCastAction;
 use Modules\Xot\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
-uses(TestCase::class);
+uses(TestCase::class)->group('no-xot-db');
 
 it('checks attribute presence and emptiness', function (): void {
     [$action, $model] = TestCase::safeEloquentCastFixture();

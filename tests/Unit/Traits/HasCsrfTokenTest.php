@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Session;
 use Modules\Xot\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
-uses(TestCase::class);
+uses(TestCase::class)->group('no-xot-db');
 
 it('sets csrf token on mount', function (): void {
     $token = 'test-token-123';

@@ -8,7 +8,7 @@ use Modules\Xot\Actions\GetViewByClassAction;
 use Modules\Xot\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
-uses(TestCase::class);
+uses(TestCase::class)->group('no-xot-db');
 
 test('get view actions work', function (): void {
     $classAction = app(GetViewByClassAction::class);

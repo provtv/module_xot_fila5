@@ -343,7 +343,7 @@ class XotData extends Data implements Wireable
 
     public function save(): void
     {
-        dddx('wip');
+        throw new \RuntimeException('Removed debug dddx');
     }
 
     public function getPubThemeViewPath(string $key = ''): string

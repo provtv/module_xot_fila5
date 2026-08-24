@@ -79,7 +79,7 @@ class StatesChartWidget extends XotBaseChartWidget
                 ],
                 'labels' => $labels,
             ];
-        } catch (\Exception $e) {
+        } catch (\Throwable $e) {
             // Fallback appropriato senza logging inutile
             return [
                 'datasets' => [
