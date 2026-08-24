@@ -93,11 +93,7 @@ trait HasCommonScopes
      * @param  Builder<static>  $query
      * @return Builder<static>
      */
-<<<<<<< .merge_file_7BtKAf
     public function scopeCreatedAfter(Builder $query, Carbon|string|DateTimeInterface $date): Builder
-=======
-    public function scopeCreatedAfter(Builder $query, Carbon|string|\DateTimeInterface $date): Builder
->>>>>>> .merge_file_UcmNsy
     {
         return $query->where('created_at', '>=', $date);
     }
@@ -108,11 +104,7 @@ trait HasCommonScopes
      * @param  Builder<static>  $query
      * @return Builder<static>
      */
-<<<<<<< .merge_file_7BtKAf
     public function scopeCreatedBefore(Builder $query, Carbon|string|DateTimeInterface $date): Builder
-=======
-    public function scopeCreatedBefore(Builder $query, Carbon|string|\DateTimeInterface $date): Builder
->>>>>>> .merge_file_UcmNsy
     {
         return $query->where('created_at', '<=', $date);
     }
@@ -123,11 +115,7 @@ trait HasCommonScopes
      * @param  Builder<static>  $query
      * @return Builder<static>
      */
-<<<<<<< .merge_file_7BtKAf
     public function scopeUpdatedAfter(Builder $query, Carbon|string|DateTimeInterface $date): Builder
-=======
-    public function scopeUpdatedAfter(Builder $query, Carbon|string|\DateTimeInterface $date): Builder
->>>>>>> .merge_file_UcmNsy
     {
         return $query->where('updated_at', '>=', $date);
     }

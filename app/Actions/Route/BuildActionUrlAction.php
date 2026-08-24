@@ -20,11 +20,7 @@ class BuildActionUrlAction
         $row = $params->row ?? (object) [];
         $query = $params->query ?? [];
         $route = request()->route();
-<<<<<<< .merge_file_XZboDh
         if (! $route instanceof Route || $route->getName() === null) {
-=======
-        if (! $route instanceof Route || null === $route->getName()) {
->>>>>>> .merge_file_bl3NLM
             return '#'.$action;
         }
 

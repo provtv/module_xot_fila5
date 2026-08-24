@@ -1,3 +1,12 @@
+---
+title: "Third-Party Model Integration - Quick Reference"
+module: xot
+type: integration
+tags: [integrations, modules, xot]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Third-Party Model Integration - Quick Reference
 
 ## 🚨 CRITICAL RULES

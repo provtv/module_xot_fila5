@@ -9,10 +9,7 @@ use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Process;
 use Illuminate\Support\Facades\Queue;
-<<<<<<< .merge_file_MenNV5
 use Mockery;
-=======
->>>>>>> .merge_file_tyl5N2
 use Modules\Xot\Tests\ModuleExecuteCoverage;
 use Modules\Xot\Tests\TestCase;
 use PHPUnit\Framework\Assert;
@@ -20,11 +17,7 @@ use PHPUnit\Framework\Assert;
 uses(TestCase::class)->group('no-xot-db');
 
 afterEach(function (): void {
-<<<<<<< .merge_file_MenNV5
     Mockery::close();
-=======
-    \Mockery::close();
->>>>>>> .merge_file_tyl5N2
 });
 
 describe('Xot floor50 extras non-public', function (): void {
@@ -77,9 +70,6 @@ describe('Xot floor50 extras non-public', function (): void {
         } catch (\Throwable $e) {
             Assert::assertNotEmpty($e->getMessage());
         }
-<<<<<<< .merge_file_MenNV5
 
-=======
->>>>>>> .merge_file_tyl5N2
     });
 });

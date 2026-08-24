@@ -5,15 +5,11 @@ declare(strict_types=1);
 namespace Modules\Xot\Tests;
 
 use Illuminate\Database\Eloquent\Model;
-<<<<<<< .merge_file_5kWPAL
 use Mockery;
 use PHPUnit\Framework\Assert;
 use ReflectionClass;
 use ReflectionMethod;
 use ReflectionNamedType;
-=======
-use PHPUnit\Framework\Assert;
->>>>>>> .merge_file_M6pZDl
 
 use function Safe\file_get_contents;
 use function Safe\glob;
@@ -29,11 +25,7 @@ final class ModuleDeepCoverage
         $executed = 0;
 
         foreach (ModuleBusinessCoverage::discoverPhpClasses($appRoot, $moduleNamespace, 'Actions') as $class) {
-<<<<<<< .merge_file_5kWPAL
             $ref = new ReflectionClass($class);
-=======
-            $ref = new \ReflectionClass($class);
->>>>>>> .merge_file_M6pZDl
             if (! $ref->hasMethod('execute')) {
                 continue;
             }
@@ -52,11 +44,7 @@ final class ModuleDeepCoverage
             $sourceFile = $ref->getFileName();
             if (is_string($sourceFile) && is_file($sourceFile)) {
                 $source = file_get_contents($sourceFile);
-<<<<<<< .merge_file_5kWPAL
                 if (preg_match('/^\s*dddx\s*\(/m', $source) === 1) {
-=======
-                if (1 === preg_match('/^\s*dddx\s*\(/m', $source)) {
->>>>>>> .merge_file_M6pZDl
                     ++$executed;
 
                     continue;
@@ -83,11 +71,7 @@ final class ModuleDeepCoverage
     /**
      * @return list<mixed>
      */
-<<<<<<< .merge_file_5kWPAL
     private static function defaultArgsForMethod(ReflectionMethod $method): array
-=======
-    private static function defaultArgsForMethod(\ReflectionMethod $method): array
->>>>>>> .merge_file_M6pZDl
     {
         $args = [];
 
@@ -101,7 +85,6 @@ final class ModuleDeepCoverage
                 continue;
             }
 
-<<<<<<< .merge_file_5kWPAL
             if ($type instanceof ReflectionNamedType && ! $type->isBuiltin()) {
                 $typeName = $type->getName();
                 if (is_subclass_of($typeName, Model::class) || $typeName === Model::class) {
@@ -112,18 +95,6 @@ final class ModuleDeepCoverage
                         continue;
                     }
                     $args[] = new $typeName;
-=======
-            if ($type instanceof \ReflectionNamedType && ! $type->isBuiltin()) {
-                $typeName = $type->getName();
-                if (is_subclass_of($typeName, Model::class) || Model::class === $typeName) {
-                    $modelRef = new \ReflectionClass($typeName);
-                    if ($modelRef->isAbstract()) {
-                        $args[] = \Mockery::mock($typeName);
-
-                        continue;
-                    }
-                    $args[] = new $typeName();
->>>>>>> .merge_file_M6pZDl
 
                     continue;
                 }
@@ -135,11 +106,7 @@ final class ModuleDeepCoverage
                 continue;
             }
 
-<<<<<<< .merge_file_5kWPAL
             if ($type instanceof ReflectionNamedType) {
-=======
-            if ($type instanceof \ReflectionNamedType) {
->>>>>>> .merge_file_M6pZDl
                 $args[] = match ($type->getName()) {
                     'array' => [],
                     'string' => '',
@@ -164,15 +131,9 @@ final class ModuleDeepCoverage
 
         foreach (ModuleBusinessCoverage::discoverPhpClasses($appRoot, $moduleNamespace, 'Events') as $class) {
             try {
-<<<<<<< .merge_file_5kWPAL
                 $ref = new ReflectionClass($class);
                 $ctor = $ref->getConstructor();
                 if ($ctor === null || $ctor->getNumberOfRequiredParameters() === 0) {
-=======
-                $ref = new \ReflectionClass($class);
-                $ctor = $ref->getConstructor();
-                if (null === $ctor || 0 === $ctor->getNumberOfRequiredParameters()) {
->>>>>>> .merge_file_M6pZDl
                     new $class();
                 }
                 ++$executed;
@@ -198,15 +159,9 @@ final class ModuleDeepCoverage
                 ++$executed;
             } catch (\Throwable) {
                 try {
-<<<<<<< .merge_file_5kWPAL
                     $ref = new ReflectionClass($class);
                     $ctor = $ref->getConstructor();
                     if ($ctor !== null) {
-=======
-                    $ref = new \ReflectionClass($class);
-                    $ctor = $ref->getConstructor();
-                    if (null !== $ctor) {
->>>>>>> .merge_file_M6pZDl
                         $args = self::defaultArgsForMethod($ctor);
                         $ref->newInstanceArgs($args);
                     }
@@ -233,11 +188,7 @@ final class ModuleDeepCoverage
                 continue;
             }
 
-<<<<<<< .merge_file_5kWPAL
             $ref = new ReflectionClass($class);
-=======
-            $ref = new \ReflectionClass($class);
->>>>>>> .merge_file_M6pZDl
             if ($ref->isAbstract()) {
                 continue;
             }
@@ -266,11 +217,7 @@ final class ModuleDeepCoverage
             }
 
             try {
-<<<<<<< .merge_file_5kWPAL
                 $ref = new ReflectionClass($class);
-=======
-                $ref = new \ReflectionClass($class);
->>>>>>> .merge_file_M6pZDl
                 if ($ref->isAbstract()) {
                     continue;
                 }

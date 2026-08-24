@@ -1,3 +1,12 @@
+---
+title: "ServiceProvider Common Errors - Lessons Learned"
+module: xot
+type: integration
+tags: [integrations, modules, xot]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # ServiceProvider Common Errors - Lessons Learned
 
 **Data**: 2025-01-10

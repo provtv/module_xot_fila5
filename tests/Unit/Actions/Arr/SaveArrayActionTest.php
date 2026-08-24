@@ -41,10 +41,6 @@ test('save array action saves as json', function () {
 test('save array action throws exception for unsupported format', function (): void {
     $action = app(SaveArrayAction::class);
     expect(static fn (): bool => $action->execute(['foo' => 'bar'], 'file.txt', 'xml'))
-<<<<<<< .merge_file_pyCVLX
         ->toThrow(\InvalidArgumentException::class);
-=======
-        ->toThrow(InvalidArgumentException::class);
->>>>>>> .merge_file_noCbv3
 });
 

@@ -56,11 +56,7 @@ class XotBaseResourceForm
         return static function (Model $record) use ($titleAttribute): string {
             $title = $record->getAttribute($titleAttribute);
 
-<<<<<<< .merge_file_bllFfa
             if (is_string($title) && $title !== '') {
-=======
-            if (is_string($title) && '' !== $title) {
->>>>>>> .merge_file_NjBQO9
                 return $title;
             }
 

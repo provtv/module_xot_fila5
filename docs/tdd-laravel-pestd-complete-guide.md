@@ -1,3 +1,12 @@
+---
+title: "Test-Driven Development (TDD) in Laravel Modules with Pest"
+module: xot
+type: integration
+tags: [integrations, modules, xot]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Test-Driven Development (TDD) in Laravel Modules with Pest
 
 > **CRITICAL RULE**: This document provides the complete TDD workflow for Laravel Modules using Pest PHP. Follow these patterns EXACTLY for 100% test coverage.

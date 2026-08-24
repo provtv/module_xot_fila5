@@ -1,3 +1,12 @@
+---
+title: "Problemi di Configurazione Variabili d'Ambiente - Modulo Xot"
+module: xot
+type: integration
+tags: [integrations, modules, xot]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Problemi di Configurazione Variabili d'Ambiente - Modulo Xot
 
 ## Problema: env() non funziona durante il bootstrap

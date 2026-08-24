@@ -1,3 +1,12 @@
+---
+title: "Service Provider in il progetto"
+module: xot
+type: integration
+tags: [integrations, modules, xot]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Service Provider in il progetto
 
 Il service provider è responsabile della registrazione e configurazione del tema. Ogni tema deve avere il proprio service provider.

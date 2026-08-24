@@ -52,9 +52,6 @@ class HtmlAction
             $formatter = new ExceptionFormatter($html2PdfException);
             throw new \RuntimeException('Removed debug dddx');
         }
-<<<<<<< .merge_file_qQdWBX
 
-=======
->>>>>>> .merge_file_XHJ3NE
     }
 }

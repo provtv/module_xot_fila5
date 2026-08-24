@@ -26,11 +26,7 @@ class RegisterBladeComponentsAction
                 continue;
             }
             // Skip incomplete DTO (cache JSON parziale / Spatie Data uninitialized props).
-<<<<<<< .merge_file_DgIumv
             if (! isset($comp->name, $comp->ns) || $comp->name === '' || $comp->ns === '') {
-=======
-            if (! isset($comp->name, $comp->ns) || '' === $comp->name || '' === $comp->ns) {
->>>>>>> .merge_file_xZ4OW7
                 continue;
             }
             Blade::component($comp->name, $comp->ns);

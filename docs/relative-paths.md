@@ -1,3 +1,12 @@
+---
+title: "Regole per i Percorsi Relativi nella Documentazione"
+module: xot
+type: integration
+tags: [integrations, modules, xot]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Regole per i Percorsi Relativi nella Documentazione
 
 > **Collegamenti correlati**

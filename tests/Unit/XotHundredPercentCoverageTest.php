@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Modules\Xot\Tests\Unit;
 
 use Illuminate\Http\Request;
-<<<<<<< .merge_file_qVx3f8
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\File;
@@ -15,29 +14,16 @@ use Modules\Xot\Actions\File\FileAction;
 use Modules\Xot\Datas\MetatagData;
 use Modules\Xot\Datas\XotData;
 use Modules\Xot\Database\Migrations\XotBaseMigration;
-=======
-use Illuminate\Support\Facades\Cache;
-use Illuminate\Support\Facades\File;
-use Illuminate\Support\Facades\View;
-use Modules\Xot\Actions\File\FileAction;
-use Modules\Xot\Database\Migrations\XotBaseMigration;
-use Modules\Xot\Datas\MetatagData;
-use Modules\Xot\Datas\XotData;
->>>>>>> .merge_file_oJOQky
 use Modules\Xot\Http\Middleware\SecurityMiddleware;
 use Modules\Xot\Models\Cache as CacheModel;
 use Modules\Xot\Tests\ModuleRemainingCoverage;
 use Modules\Xot\Tests\TestCase;
 use PHPUnit\Framework\Assert;
-<<<<<<< .merge_file_qVx3f8
 use Symfony\Component\HttpFoundation\Response;
-=======
->>>>>>> .merge_file_oJOQky
 
 use function Safe\ob_end_clean;
 use function Safe\ob_start;
 
-<<<<<<< .merge_file_qVx3f8
 uses(TestCase::class)->group('no-xot-db');
 
 afterEach(function (): void {
@@ -47,16 +33,6 @@ afterEach(function (): void {
 /**
  * @return mixed
  */
-=======
-use Symfony\Component\HttpFoundation\Response;
-
-uses(TestCase::class)->group('no-xot-db');
-
-afterEach(function (): void {
-    \Mockery::close();
-});
-
->>>>>>> .merge_file_oJOQky
 function xot100Invoke(object $target, string $method, mixed ...$args): mixed
 {
     $reflection = new \ReflectionMethod($target, $method);
@@ -292,11 +268,7 @@ PHP);
             FileAction::getFileNameByClassName(XotData::class)
         );
 
-<<<<<<< .merge_file_qVx3f8
         $action = new FileAction;
-=======
-        $action = new FileAction();
->>>>>>> .merge_file_oJOQky
         try {
             $action->execute();
         } catch (\Throwable) {
@@ -304,11 +276,7 @@ PHP);
     });
 
     test('XotData rami SSL tenant profile team child e update', function (): void {
-<<<<<<< .merge_file_qVx3f8
         $xot = new XotData;
-=======
-        $xot = new XotData();
->>>>>>> .merge_file_oJOQky
         $xot->main_module = 'User';
         $xot->pub_theme = 'One';
         $xot->adm_theme = 'One';
@@ -351,11 +319,7 @@ PHP);
         File::ensureDirectoryExists(dirname($logoPath));
         File::put($logoPath, 'png-data');
 
-<<<<<<< .merge_file_qVx3f8
         $meta = new MetatagData;
-=======
-        $meta = new MetatagData();
->>>>>>> .merge_file_oJOQky
         $meta->title = 'Titolo';
         $meta->sitename = 'Sito';
         $meta->description = 'Desc';
@@ -391,11 +355,7 @@ PHP);
         config(['cache.default' => 'array']);
         Cache::store('array')->flush();
 
-<<<<<<< .merge_file_qVx3f8
         $mw = new SecurityMiddleware;
-=======
-        $mw = new SecurityMiddleware();
->>>>>>> .merge_file_oJOQky
 
         // GET ok
         $ok = Request::create('/dashboard', 'GET', [], [], [], [
@@ -455,12 +415,8 @@ PHP);
     });
 
     test('XotBaseMigration reflection helper schema e blueprint', function (): void {
-<<<<<<< .merge_file_qVx3f8
         $migration = new class extends XotBaseMigration
         {
-=======
-        $migration = new class extends XotBaseMigration {
->>>>>>> .merge_file_oJOQky
             protected ?string $model_class = CacheModel::class;
 
             public function up(): void
@@ -474,11 +430,7 @@ PHP);
 
         $ref = new \ReflectionClass($migration);
         foreach ($ref->getMethods(\ReflectionMethod::IS_PUBLIC | \ReflectionMethod::IS_PROTECTED | \ReflectionMethod::IS_PRIVATE) as $method) {
-<<<<<<< .merge_file_qVx3f8
             if ($method->getDeclaringClass()->getName() !== XotBaseMigration::class) {
-=======
-            if (XotBaseMigration::class !== $method->getDeclaringClass()->getName()) {
->>>>>>> .merge_file_oJOQky
                 continue;
             }
             if (str_starts_with($method->getName(), '__')) {

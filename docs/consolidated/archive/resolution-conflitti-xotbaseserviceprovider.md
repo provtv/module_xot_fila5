@@ -1,3 +1,12 @@
+---
+title: "Risoluzione Conflitti in XotBaseServiceProvider"
+module: xot
+type: integration
+tags: [integrations, modules, xot]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Risoluzione Conflitti in XotBaseServiceProvider
 
 ## File Coinvolto

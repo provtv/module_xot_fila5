@@ -43,13 +43,8 @@ class LazyCollectionExport implements FromIterator, ShouldQueue, WithHeadings, W
     public LazyCollection $collection;
 
     /**
-<<<<<<< .merge_file_kEs19O
      * @param  LazyCollection<int, Model>  $collection
      * @param  array<int, string>  $fields
-=======
-     * @param LazyCollection<int, Model> $collection
-     * @param array<int, string>         $fields
->>>>>>> .merge_file_3VrGjP
      */
     public function __construct(
         LazyCollection $collection,

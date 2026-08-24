@@ -1,3 +1,12 @@
+---
+title: "Provider Common Mistakes - Comprehensive Guide"
+module: xot
+type: integration
+tags: [integrations, modules, xot]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Provider Common Mistakes - Comprehensive Guide
 
 **Last Updated**: 2025-12-16

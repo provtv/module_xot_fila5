@@ -10,13 +10,8 @@ use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\ServiceProvider;
 use Mockery\MockInterface;
-use Modules\User\Database\Factories\UserFactory;
-use Modules\User\Models\User;
-use Modules\Xot\Actions\Cast\SafeEloquentCastAction;
-use Modules\Xot\States\Transitions\XotBaseTransition;
 use PHPUnit\Framework\Assert;
 
-use function Safe\file_get_contents;
 use function Safe\rmdir;
 use function Safe\scandir;
 use function Safe\unlink;
@@ -93,47 +88,6 @@ abstract class TestCase extends XotBaseTestCase
     }
     use DatabaseTransactions;
 
-    /**
-     * Fixture condivisa per i test di SafeEloquentCastAction.
-     *
-     * @return array{0: SafeEloquentCastAction, 1: Model}
-     */
-    public static function safeEloquentCastFixture(): array
-    {
-        $model = new class extends Model {
-            /** @var array<string, mixed> */
-            protected $attributes = [
-                'name' => 'Mario',
-                'age' => 42,
-                'score' => 12.5,
-                'active' => true,
-                'meta' => ['k' => 'v'],
-                'empty' => '',
-            ];
-
-            protected $guarded = [];
-        };
-
-        return [app(SafeEloquentCastAction::class), $model];
-    }
-
-    /**
-     * Fixture condivisa per i test di XotBaseTransition.
-     *
-     * @return array{0: User, 1: XotBaseTransition}
-     */
-    public static function xotBaseTransitionFixture(): array
-    {
-        /** @var User $record */
-        $record = UserFactory::new()->make();
-
-        $transition = new class($record) extends XotBaseTransition {
-            public static string $name = 'test_transition';
-        };
-
-        return [$record, $transition];
-    }
-
     /** @var list<string> */
     protected $connectionsToTransact = ['sqlite', 'user', 'tenant', 'xot'];
 
@@ -192,22 +146,15 @@ abstract class TestCase extends XotBaseTestCase
     protected function shouldSkipForMissingXotDb(): bool
     {
         $testFile = $this->resolvePestTestFile();
-<<<<<<< .merge_file_Qjat1p
         $isUnit = $testFile !== null && str_contains($testFile, '/tests/Unit/');
         $isXotDbGroup = false;
         if ($testFile !== null && is_file($testFile)) {
-=======
-        $isUnit = null !== $testFile && str_contains($testFile, '/tests/Unit/');
-        $isXotDbGroup = false;
-        if (null !== $testFile && is_file($testFile)) {
->>>>>>> .merge_file_xeDs99
             $source = file_get_contents($testFile);
             if (str_contains($source, "group('no-xot-db')")) {
                 return false;
             }
             $isXotDbGroup = str_contains($source, "group('xot-db')");
         }
-<<<<<<< .merge_file_Qjat1p
 
         if ($isUnit && ! $isXotDbGroup) {
             return false;
@@ -245,45 +192,6 @@ abstract class TestCase extends XotBaseTestCase
         try {
             DB::connection('user')->getPdo();
 
-=======
-
-        if ($isUnit && ! $isXotDbGroup) {
-            return false;
-        }
-
-        // Qui c'era uno skip incondizionato quando il driver è sqlite. La premessa —
-        // «lo sqlite condiviso è scratch / incompleto» — è decaduta: lo schema si
-        // costruisce con `php artisan xot:build-test-sqlite` e le suite parallele non si
-        // lockano più (un solo PDO condiviso, un file per processo via `XOT_TEST_SQLITE`).
-        // Se il database manca davvero lo dice il metodo qui sopra, che guarda le tabelle.
-        return static::xotDbUnavailable();
-    }
-
-    private function resolvePestTestFile(): ?string
-    {
-        $class = static::class;
-
-        if (property_exists($class, '__filename')) {
-            /** @var string $filename */
-            $filename = $class::$__filename;
-
-            return $filename;
-        }
-
-        $file = (new \ReflectionClass($this))->getFileName();
-
-        return false !== $file ? $file : null;
-    }
-
-    /**
-     * Feature Xot spesso persistono su `users`: verifica connessione user.
-     */
-    public static function xotDbUnavailable(): bool
-    {
-        try {
-            DB::connection('user')->getPdo();
-
->>>>>>> .merge_file_xeDs99
             return ! DB::connection('user')->getSchemaBuilder()->hasTable('users');
         } catch (\Throwable) {
             return true;

@@ -12,13 +12,7 @@ use PHPUnit\Framework\Assert;
 
 uses(TestCase::class);
 
-<<<<<<< .merge_file_3fBtIP
 beforeEach(function (): void { $this->markTestSkipped('fragile offline mocks File/Module/DB'); });
-=======
-beforeEach(function (): void {
-    $this->markTestSkipped('fragile offline mocks File/Module/DB');
-});
->>>>>>> .merge_file_CjDniH
 
 it('calculates view path correctly', function (): void {
     $nsMock = $this->createUnitMock(GetViewNameSpacePathAction::class);

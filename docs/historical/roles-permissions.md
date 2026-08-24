@@ -1,3 +1,12 @@
+---
+title: "Regole generali su roles, permissions e guard_name"
+module: xot
+type: integration
+tags: [integrations, modules, xot]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Regole generali su roles, permissions e guard_name
 
 ## Regola generale

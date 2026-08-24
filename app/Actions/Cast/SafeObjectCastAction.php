@@ -190,16 +190,9 @@ class SafeObjectCastAction
     /**
      * Ottiene una proprietà con cast sicuro a un tipo specifico.
      *
-<<<<<<< .merge_file_zBEu2A
      * @param  object  $object  L'oggetto da cui ottenere la proprietà
      * @param  string  $property  Il nome della proprietà
      * @param  string  $type  Il tipo di cast desiderato (string, int, float, bool, array)
-=======
-     * @param object $object   L'oggetto da cui ottenere la proprietà
-     * @param string $property Il nome della proprietà
-     * @param string $type     Il tipo di cast desiderato (string, int, float, bool, array)
-     *
->>>>>>> .merge_file_KbULEQ
      * @return string|int|float|bool|array<int|string, mixed> Il valore della proprietà convertito nel tipo specificato
      */
     public function getTypedProperty(object $object, string $property, string $type, mixed $default = null): string|int|float|bool|array
@@ -224,14 +217,8 @@ class SafeObjectCastAction
     /**
      * Verifica se un oggetto ha una proprietà con valore specifico.
      *
-<<<<<<< .merge_file_zBEu2A
      * @param  object  $object  L'oggetto da verificare
      * @param  string  $property  Il nome della proprietà
-=======
-     * @param object $object   L'oggetto da verificare
-     * @param string $property Il nome della proprietà
-     *
->>>>>>> .merge_file_KbULEQ
      * @return bool True se l'oggetto ha la proprietà con il valore atteso
      */
     public function hasPropertyValue(object $object, string $property, mixed $expectedValue): bool
@@ -250,17 +237,10 @@ class SafeObjectCastAction
     /**
      * Ottiene una proprietà con validazione di tipo e valore.
      *
-<<<<<<< .merge_file_zBEu2A
      * @param  object  $object  L'oggetto da cui ottenere la proprietà
      * @param  string  $property  Il nome della proprietà
      * @param  string  $type  Il tipo di cast desiderato
      * @param  callable|null  $validator  Funzione di validazione opzionale
-=======
-     * @param object        $object    L'oggetto da cui ottenere la proprietà
-     * @param string        $property  Il nome della proprietà
-     * @param string        $type      Il tipo di cast desiderato
-     * @param callable|null $validator Funzione di validazione opzionale
->>>>>>> .merge_file_KbULEQ
      */
     public function getValidatedProperty(
         object $object,
@@ -298,15 +278,9 @@ class SafeObjectCastAction
     /**
      * Esegue un metodo su un oggetto in modo sicuro.
      *
-<<<<<<< .merge_file_zBEu2A
      * @param  object  $object  L'oggetto su cui eseguire il metodo
      * @param  string  $method  Il nome del metodo
      * @param  array<mixed>  $parameters  I parametri del metodo
-=======
-     * @param object       $object     L'oggetto su cui eseguire il metodo
-     * @param string       $method     Il nome del metodo
-     * @param array<mixed> $parameters I parametri del metodo
->>>>>>> .merge_file_KbULEQ
      */
     public function callMethodSafely(
         object $object,

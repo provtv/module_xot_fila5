@@ -13,13 +13,7 @@ use PHPUnit\Framework\Assert;
 
 uses(TestCase::class);
 
-<<<<<<< .merge_file_m7azBh
 beforeEach(function (): void { $this->markTestSkipped('fragile offline mocks File/Module/DB'); });
-=======
-beforeEach(function (): void {
-    $this->markTestSkipped('fragile offline mocks File/Module/DB');
-});
->>>>>>> .merge_file_kKorWV
 
 test('fix path action works', function (): void {
     $action = app(FixPathAction::class);

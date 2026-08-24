@@ -4,23 +4,14 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Tests\Unit;
 
-<<<<<<< .merge_file_CmJnfp
 use Mockery;
 use Modules\Xot\Tests\TestCase;
 use Modules\Xot\Tests\ModuleBusinessCoverage;
-=======
-use Modules\Xot\Tests\ModuleBusinessCoverage;
-use Modules\Xot\Tests\TestCase;
->>>>>>> .merge_file_ec5MN1
 
 uses(TestCase::class)->group('no-xot-db');
 
 afterEach(function (): void {
-<<<<<<< .merge_file_CmJnfp
     Mockery::close();
-=======
-    \Mockery::close();
->>>>>>> .merge_file_ec5MN1
 });
 
 /** @return array{string, string} */

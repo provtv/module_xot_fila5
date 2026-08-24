@@ -8,10 +8,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 use Modules\Xot\Database\Migrations\XotBaseMigration;
-<<<<<<< .merge_file_4C1OXs
 use Throwable;
-=======
->>>>>>> .merge_file_oCyOdD
 
 /**
  * Crea sul database di test le tabelle che il modulo dichiara nelle proprie migration,
@@ -63,11 +60,7 @@ final class XotModuleSchema
     private static array $done = [];
 
     /**
-<<<<<<< .merge_file_4C1OXs
      * @param  string  $module  nome del modulo in PascalCase, come la directory sotto Modules/
-=======
-     * @param string $module nome del modulo in PascalCase, come la directory sotto Modules/
->>>>>>> .merge_file_oCyOdD
      */
     public static function ensure(string $module): void
     {
@@ -193,11 +186,7 @@ final class XotModuleSchema
 
             $table = self::tableOf($migration);
 
-<<<<<<< .merge_file_4C1OXs
             if ($table !== null && Schema::hasTable($table)) {
-=======
-            if (null !== $table && Schema::hasTable($table)) {
->>>>>>> .merge_file_oCyOdD
                 return;
             }
 
@@ -210,11 +199,7 @@ final class XotModuleSchema
             /** @var callable(): void $up */
             $up = [$migration, 'up'];
             $up();
-<<<<<<< .merge_file_4C1OXs
         } catch (Throwable) {
-=======
-        } catch (\Throwable) {
->>>>>>> .merge_file_oCyOdD
             // Una migration che non gira lascia semplicemente la tabella assente: i test
             // che la richiedono si salteranno per precondizione. Vedi il docblock.
         }
@@ -234,13 +219,8 @@ final class XotModuleSchema
         try {
             $table = $migration->getTable();
 
-<<<<<<< .merge_file_4C1OXs
             return $table !== '' ? $table : null;
         } catch (Throwable) {
-=======
-            return '' !== $table ? $table : null;
-        } catch (\Throwable) {
->>>>>>> .merge_file_oCyOdD
             return null;
         }
     }

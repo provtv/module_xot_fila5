@@ -10,14 +10,11 @@ use Filament\Tables\Columns\Column;
 use Modules\Xot\Filament\Resources\Schemas\XotBaseResourceForm;
 use Modules\Xot\Filament\Resources\Tables\XotBaseResourceTable;
 use PHPUnit\Framework\Assert;
-<<<<<<< .merge_file_hJggUG
 use RecursiveDirectoryIterator;
 use RecursiveIteratorIterator;
 use ReflectionClass;
 use ReflectionMethod;
 use SplFileInfo;
-=======
->>>>>>> .merge_file_Wqa3zs
 
 /**
  * Helper condiviso per coverage Filament: discovery + assert su schema keyed.
@@ -34,17 +31,10 @@ final class FilamentSchemaCoverage
         }
 
         $classes = [];
-<<<<<<< .merge_file_hJggUG
         $iterator = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($appRoot));
 
         foreach ($iterator as $file) {
             if (! $file instanceof SplFileInfo) {
-=======
-        $iterator = new \RecursiveIteratorIterator(new \RecursiveDirectoryIterator($appRoot));
-
-        foreach ($iterator as $file) {
-            if (! $file instanceof \SplFileInfo) {
->>>>>>> .merge_file_Wqa3zs
                 continue;
             }
             if (! $file->isFile()) {
@@ -63,11 +53,7 @@ final class FilamentSchemaCoverage
                 continue;
             }
 
-<<<<<<< .merge_file_hJggUG
             $ref = new ReflectionClass($class);
-=======
-            $ref = new \ReflectionClass($class);
->>>>>>> .merge_file_Wqa3zs
             if ($ref->isAbstract() || $ref->isInterface()) {
                 continue;
             }
@@ -81,11 +67,7 @@ final class FilamentSchemaCoverage
     }
 
     /**
-<<<<<<< .merge_file_hJggUG
      * @param  array<array-key, mixed>  $schema
-=======
-     * @param array<array-key, mixed> $schema
->>>>>>> .merge_file_Wqa3zs
      */
     public static function assertKeyedSchema(array $schema, string $context): void
     {
@@ -93,11 +75,7 @@ final class FilamentSchemaCoverage
 
         $hasStringKeys = true;
         foreach (array_keys($schema) as $chiave) {
-<<<<<<< .merge_file_hJggUG
             if (! is_string($chiave) || $chiave === '') {
-=======
-            if (! is_string($chiave) || '' === $chiave) {
->>>>>>> .merge_file_Wqa3zs
                 $hasStringKeys = false;
                 break;
             }
@@ -122,22 +100,14 @@ final class FilamentSchemaCoverage
                 continue;
             }
 
-<<<<<<< .merge_file_hJggUG
             if (! (new ReflectionClass($class))->hasMethod('getFormSchema')) {
-=======
-            if (! (new \ReflectionClass($class))->hasMethod('getFormSchema')) {
->>>>>>> .merge_file_Wqa3zs
                 continue;
             }
 
             try {
                 $schema = $class::getFormSchema();
                 ++$executed;
-<<<<<<< .merge_file_hJggUG
                 if ($schema === []) {
-=======
-                if ([] === $schema) {
->>>>>>> .merge_file_Wqa3zs
                     continue;
                 }
 
@@ -165,11 +135,7 @@ final class FilamentSchemaCoverage
                 $colonne = $tabella->getTableColumns();
                 ++$executed;
 
-<<<<<<< .merge_file_hJggUG
                 if ($colonne !== []) {
-=======
-                if ([] !== $colonne) {
->>>>>>> .merge_file_Wqa3zs
                     self::assertKeyedSchema($colonne, $class);
                     Assert::assertContainsOnlyInstancesOf(Column::class, $colonne);
                 }
@@ -177,13 +143,8 @@ final class FilamentSchemaCoverage
                 $filters = $tabella->getTableFilters();
                 Assert::assertSame(array_values($filters), $filters, "{$class} filters devono essere una lista");
 
-<<<<<<< .merge_file_hJggUG
                 if ((new ReflectionClass($tabella))->hasMethod('getTableActions')) {
                     $actionsMethod = new ReflectionMethod($tabella, 'getTableActions');
-=======
-                if ((new \ReflectionClass($tabella))->hasMethod('getTableActions')) {
-                    $actionsMethod = new \ReflectionMethod($tabella, 'getTableActions');
->>>>>>> .merge_file_Wqa3zs
                     $actions = $actionsMethod->invoke($tabella);
                     Assert::assertNotEmpty($actions);
                 }
@@ -207,11 +168,7 @@ final class FilamentSchemaCoverage
             try {
                 $schema = $class::getInfolistSchema();
                 ++$executed;
-<<<<<<< .merge_file_hJggUG
                 if ($schema === []) {
-=======
-                if ([] === $schema) {
->>>>>>> .merge_file_Wqa3zs
                     continue;
                 }
 
@@ -271,17 +228,10 @@ final class FilamentSchemaCoverage
         }
 
         $classes = [];
-<<<<<<< .merge_file_hJggUG
         $iterator = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($appRoot));
 
         foreach ($iterator as $file) {
             if (! $file instanceof SplFileInfo) {
-=======
-        $iterator = new \RecursiveIteratorIterator(new \RecursiveDirectoryIterator($appRoot));
-
-        foreach ($iterator as $file) {
-            if (! $file instanceof \SplFileInfo) {
->>>>>>> .merge_file_Wqa3zs
                 continue;
             }
             if (! $file->isFile()) {
@@ -304,11 +254,7 @@ final class FilamentSchemaCoverage
                 continue;
             }
 
-<<<<<<< .merge_file_hJggUG
             $ref = new ReflectionClass($class);
-=======
-            $ref = new \ReflectionClass($class);
->>>>>>> .merge_file_Wqa3zs
             if ($ref->isAbstract()) {
                 continue;
             }
@@ -323,11 +269,7 @@ final class FilamentSchemaCoverage
 
     public static function testAllListPages(string $appRoot, string $moduleNamespace): void
     {
-<<<<<<< .merge_file_hJggUG
         if (config('app.date_format') === null) {
-=======
-        if (null === config('app.date_format')) {
->>>>>>> .merge_file_Wqa3zs
             config(['app.date_format' => 'd/m/Y']);
         }
 

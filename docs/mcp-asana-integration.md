@@ -1,3 +1,12 @@
+---
+title: "Xot Module - Asana MCP Integration Guide"
+module: xot
+type: integration
+tags: [integrations, modules, xot]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Xot Module - Asana MCP Integration Guide
 
 **Versione**: 1.0.0

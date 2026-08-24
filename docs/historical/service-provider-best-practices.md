@@ -1,3 +1,12 @@
+---
+title: "Service Provider: Best Practices in Laraxot"
+module: xot
+type: integration
+tags: [integrations, modules, xot]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Service Provider: Best Practices in Laraxot
 
 Questo documento definisce le linee guida ufficiali e le best practices per l'implementazione dei Service Provider all'interno del framework Laraxot.

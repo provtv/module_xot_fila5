@@ -1,3 +1,12 @@
+---
+title: "Raccomandazioni di Ottimizzazione - Modulo Xot"
+module: xot
+type: integration
+tags: [integrations, modules, xot]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Raccomandazioni di Ottimizzazione - Modulo Xot
 
 ## 🎯 Stato Attuale e Problemi Critici

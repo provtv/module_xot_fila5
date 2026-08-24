@@ -61,11 +61,6 @@ class BuildTrendCollectionAction
                     throw new UnexpectedValueException('Trend returned an invalid aggregate.');
                 }
 
-                $aggregate = $value->aggregate;
-                if (null !== $aggregate && ! is_int($aggregate) && ! is_float($aggregate) && ! is_string($aggregate)) {
-                    throw new \UnexpectedValueException('Trend returned an invalid aggregate.');
-                }
-
                 return TrendData::from([
                     'date' => $value->date,
                     'aggregate' => $aggregate,

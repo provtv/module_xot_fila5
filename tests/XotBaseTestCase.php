@@ -136,11 +136,7 @@ abstract class XotBaseTestCase extends BaseTestCase
      */
     public function expectApplicationException(string $exceptionClass, ?string $message = null): void
     {
-<<<<<<< .merge_file_yGuMjB
         if ($message !== null) {
-=======
-        if (null !== $message) {
->>>>>>> .merge_file_hjKZp4
             $this->expectExceptionObject(new $exceptionClass($message));
 
             return;
@@ -161,11 +157,7 @@ abstract class XotBaseTestCase extends BaseTestCase
     {
         $override = getenv('XOT_TEST_SQLITE');
 
-<<<<<<< .merge_file_yGuMjB
         if (is_string($override) && $override !== '') {
-=======
-        if (is_string($override) && '' !== $override) {
->>>>>>> .merge_file_hjKZp4
             return $override;
         }
 
@@ -273,11 +265,7 @@ abstract class XotBaseTestCase extends BaseTestCase
      */
     private function setPermissionsTeamContext(): void
     {
-<<<<<<< .merge_file_yGuMjB
         if (config('permission.teams') !== true) {
-=======
-        if (true !== config('permission.teams')) {
->>>>>>> .merge_file_hjKZp4
             return;
         }
 

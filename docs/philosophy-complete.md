@@ -1,3 +1,12 @@
+---
+title: "Xot - Filosofia Completa: Logica, Religione, Politica, Zen"
+module: xot
+type: integration
+tags: [integrations, modules, xot]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Xot - Filosofia Completa: Logica, Religione, Politica, Zen
 
 **Data Creazione**: 2025-01-18

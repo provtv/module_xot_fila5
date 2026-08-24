@@ -1,3 +1,12 @@
+---
+title: "Soluzioni Tecniche - Modulo Xot"
+module: xot
+type: integration
+tags: [integrations, modules, xot]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Soluzioni Tecniche - Modulo Xot
 
 ## Problemi Identificati e Soluzioni

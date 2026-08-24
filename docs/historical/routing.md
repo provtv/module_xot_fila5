@@ -1,3 +1,12 @@
+---
+title: "Routing nel Progetto il progetto"
+module: xot
+type: integration
+tags: [integrations, modules, xot]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Routing nel Progetto il progetto
 
 ## Indice
