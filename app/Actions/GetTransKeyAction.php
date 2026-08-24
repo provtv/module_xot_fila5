@@ -20,7 +20,11 @@ class GetTransKeyAction
     public function execute(string $class = ''): string
     {
         // If no class is provided, try to get it from the backtrace
+<<<<<<< .merge_file_ncZ9af
         if ($class === '') {
+=======
+        if ('' === $class) {
+>>>>>>> .merge_file_uRmMc3
             /** @var list<array{function: string, line?: int, file?: string, class?: class-string, type?: '->'|'::', args?: list<mixed>, object?: object}> $backtrace PHPStan knows this is always array */
             $backtrace = debug_backtrace();
             $class = Arr::get($backtrace, '1.class');
@@ -30,6 +34,7 @@ class GetTransKeyAction
         $arr = explode('\\', $class);
 
         // Handle cases where the provided class is not in the "Modules" namespace
+<<<<<<< .merge_file_ncZ9af
         if ($arr[0] !== 'Modules') {
             $backtrace = array_slice(debug_backtrace(), 2);
             $res = Arr::first(
@@ -38,6 +43,16 @@ class GetTransKeyAction
             );
 
             if ($res === null || ! isset($res['object'])) {
+=======
+        if ('Modules' !== $arr[0]) {
+            $backtrace = array_slice(debug_backtrace(), 2);
+            $res = Arr::first(
+                $backtrace,
+                fn (array $item): bool => isset($item['object']) && 'Modules' === explode('\\', get_class($item['object']))[0],
+            );
+
+            if (null === $res || ! isset($res['object'])) {
+>>>>>>> .merge_file_uRmMc3
                 $page = Arr::get(debug_backtrace(), '0.args.0');
                 Assert::string($page, __FILE__.':'.__LINE__.' - '.class_basename(self::class));
                 $main_module = XotData::make()->main_module;

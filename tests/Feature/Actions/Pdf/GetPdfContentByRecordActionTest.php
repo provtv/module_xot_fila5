@@ -76,7 +76,10 @@ describe('Get Pdf Content By Record Action', function (): void {
             protected $table = 'test_performance';
 
             protected $fillable = ['id', 'matr', 'cognome', 'nome'];
+<<<<<<< .merge_file_DXvmfC
 
+=======
+>>>>>>> .merge_file_sr33dV
         };
 
         $record->setAttribute('id', 456);

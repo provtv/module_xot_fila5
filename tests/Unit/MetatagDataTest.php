@@ -53,7 +53,11 @@ test('getColors gestisce correttamente i colori personalizzati', function () {
 });
 
 test('getBrandLogoHeight restituisce il valore corretto', function () {
+<<<<<<< .merge_file_7zsUDx
     $metatagData = new MetatagData;
+=======
+    $metatagData = new MetatagData();
+>>>>>>> .merge_file_47hIek
     $metatagData->logo_height = '3em';
 
     Assert::assertSame('3em', $metatagData->getBrandLogoHeight());

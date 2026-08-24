@@ -5,11 +5,17 @@ declare(strict_types=1);
 namespace Modules\Xot\Tests\Unit;
 
 use Illuminate\Http\Request;
+<<<<<<< .merge_file_wGGQQ4
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\View;
 use Mockery;
+=======
+use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\View;
+>>>>>>> .merge_file_m88wJe
 use Modules\Xot\Actions\File\FileAction;
 use Modules\Xot\Actions\RouteDynAction;
 use Modules\Xot\Console\Commands\OptimizeFilamentMemoryCommand;
@@ -17,23 +23,39 @@ use Modules\Xot\Database\Migrations\XotBaseMigration;
 use Modules\Xot\Datas\MetatagData;
 use Modules\Xot\Datas\XotData;
 use Modules\Xot\Filament\Builders\ColumnBuilder;
+<<<<<<< .merge_file_wGGQQ4
 use Modules\Xot\Filament\Builders\FilterBuilder;
+=======
+>>>>>>> .merge_file_m88wJe
 use Modules\Xot\Http\Middleware\SecurityMiddleware;
 use Modules\Xot\Models\Cache as CacheModel;
 use Modules\Xot\Tests\FilamentSchemaCoverage;
 use Modules\Xot\Tests\ModuleExecuteCoverage;
 use Modules\Xot\Tests\TestCase;
 use PHPUnit\Framework\Assert;
+<<<<<<< .merge_file_wGGQQ4
 use Symfony\Component\Console\Input\ArrayInput;
 use Symfony\Component\Console\Output\NullOutput;
+=======
+>>>>>>> .merge_file_m88wJe
 
 use function Safe\ob_get_clean;
 use function Safe\ob_start;
 
+<<<<<<< .merge_file_wGGQQ4
 uses(TestCase::class)->group('no-xot-db');
 
 afterEach(function (): void {
     Mockery::close();
+=======
+use Symfony\Component\Console\Input\ArrayInput;
+use Symfony\Component\Console\Output\NullOutput;
+
+uses(TestCase::class)->group('no-xot-db');
+
+afterEach(function (): void {
+    \Mockery::close();
+>>>>>>> .merge_file_m88wJe
 });
 
 /** @return array{string, string} */
@@ -43,9 +65,12 @@ function xotExecuteContext(): array
     return [dirname(__DIR__, 2).'/app', 'Modules\\Xot\\'];
 }
 
+<<<<<<< .merge_file_wGGQQ4
 /**
  * @return mixed
  */
+=======
+>>>>>>> .merge_file_m88wJe
 function xotInvoke(object $target, string $method, mixed ...$args): mixed
 {
     $reflection = new \ReflectionMethod($target, $method);
@@ -55,7 +80,12 @@ function xotInvoke(object $target, string $method, mixed ...$args): mixed
 }
 
 /**
+<<<<<<< .merge_file_wGGQQ4
  * @param  list<\Illuminate\Database\Eloquent\Model>  $models
+=======
+ * @param list<\Illuminate\Database\Eloquent\Model> $models
+ *
+>>>>>>> .merge_file_m88wJe
  * @return \Illuminate\Support\LazyCollection<int, \Illuminate\Database\Eloquent\Model>
  */
 function xotModelRows(array $models): \Illuminate\Support\LazyCollection
@@ -70,7 +100,10 @@ describe('Xot execute coverage floor 50', function (): void {
     });
 
     test('FileAction static helpers e XotData factory', function (): void {
+<<<<<<< .merge_file_wGGQQ4
 
+=======
+>>>>>>> .merge_file_m88wJe
         $data = XotData::make();
         Assert::assertSame('it', $data->primary_lang);
 
@@ -132,7 +165,11 @@ describe('Xot execute coverage floor 50', function (): void {
     });
 
     test('XotData e MetatagData eseguono getter semantici e rami puri', function (): void {
+<<<<<<< .merge_file_wGGQQ4
         $xot = new XotData;
+=======
+        $xot = new XotData();
+>>>>>>> .merge_file_m88wJe
         $xot->main_module = 'User';
         $xot->pub_theme = 'One';
         $xot->force_ssl = true;
@@ -154,7 +191,11 @@ describe('Xot execute coverage floor 50', function (): void {
         File::ensureDirectoryExists(dirname($logoPath));
         File::put($logoPath, 'png-data');
 
+<<<<<<< .merge_file_wGGQQ4
         $meta = new MetatagData;
+=======
+        $meta = new MetatagData();
+>>>>>>> .merge_file_m88wJe
         $meta->title = 'Titolo';
         $meta->sitename = 'Sito';
         $meta->description = 'Descrizione';
@@ -256,7 +297,11 @@ describe('Xot execute coverage floor 50', function (): void {
 
         $splFiles = (new \Illuminate\Filesystem\Filesystem())->allFiles($tmp);
         $original = File::getFacadeRoot();
+<<<<<<< .merge_file_wGGQQ4
         $mockFs = Mockery::mock(\Illuminate\Filesystem\Filesystem::class)->makePartial();
+=======
+        $mockFs = \Mockery::mock(\Illuminate\Filesystem\Filesystem::class)->makePartial();
+>>>>>>> .merge_file_m88wJe
         $mockFs->shouldReceive('allFiles')->andReturn($splFiles);
         File::swap($mockFs);
 
@@ -274,13 +319,21 @@ describe('Xot execute coverage floor 50', function (): void {
             Assert::assertSame(0, $exitCode);
         } finally {
             File::swap($original);
+<<<<<<< .merge_file_wGGQQ4
             Mockery::close();
+=======
+            \Mockery::close();
+>>>>>>> .merge_file_m88wJe
         }
     });
 
     test('XotBaseMigration espone modello tabella e connessione', function (): void {
+<<<<<<< .merge_file_wGGQQ4
         $migration = new class extends XotBaseMigration
         {
+=======
+        $migration = new class extends XotBaseMigration {
+>>>>>>> .merge_file_m88wJe
             protected ?string $model_class = CacheModel::class;
 
             public function up(): void
@@ -382,7 +435,11 @@ describe('Xot execute coverage floor 50', function (): void {
                 foreach ($method->getParameters() as $param) {
                     if ($param->isDefaultValueAvailable()) {
                         $args[] = $param->getDefaultValue();
+<<<<<<< .merge_file_wGGQQ4
                     } elseif ($param->getName() === 'params' || (($type = $param->getType()) instanceof \ReflectionNamedType && $type->getName() === 'array')) {
+=======
+                    } elseif ('params' === $param->getName() || (($type = $param->getType()) instanceof \ReflectionNamedType && 'array' === $type->getName())) {
+>>>>>>> .merge_file_m88wJe
                         $args[] = ['in_admin' => false, 'act' => 'show'];
                     } else {
                         $args[] = 'test';
@@ -414,7 +471,11 @@ describe('Xot execute coverage floor 50', function (): void {
                         continue;
                     }
                     $m = new \ReflectionMethod($instance, $method);
+<<<<<<< .merge_file_wGGQQ4
                     if ($m->getNumberOfRequiredParameters() === 0) {
+=======
+                    if (0 === $m->getNumberOfRequiredParameters()) {
+>>>>>>> .merge_file_m88wJe
                         $m->invoke($instance);
                     }
                 }
@@ -424,8 +485,12 @@ describe('Xot execute coverage floor 50', function (): void {
     });
 
     test('XotBaseMigration helper schema su blueprint in memoria', function (): void {
+<<<<<<< .merge_file_wGGQQ4
         $migration = new class extends XotBaseMigration
         {
+=======
+        $migration = new class extends XotBaseMigration {
+>>>>>>> .merge_file_m88wJe
             protected ?string $model_class = CacheModel::class;
 
             public function up(): void
@@ -578,12 +643,19 @@ describe('Xot execute coverage floor 50', function (): void {
             $provider->boot();
         } catch (\Throwable) {
         }
+<<<<<<< .merge_file_wGGQQ4
 
     });
 
     test('XotBaseMigration blueprint helpers e schema methods', function (): void {
         $migration = new class extends XotBaseMigration
         {
+=======
+    });
+
+    test('XotBaseMigration blueprint helpers e schema methods', function (): void {
+        $migration = new class extends XotBaseMigration {
+>>>>>>> .merge_file_m88wJe
             protected ?string $model_class = CacheModel::class;
 
             public function up(): void
@@ -600,7 +672,11 @@ describe('Xot execute coverage floor 50', function (): void {
             $blueprint = null;
         }
 
+<<<<<<< .merge_file_wGGQQ4
         if ($blueprint !== null) {
+=======
+        if (null !== $blueprint) {
+>>>>>>> .merge_file_m88wJe
             try {
                 $migration->addCommonFields($blueprint);
                 $migration->updateTimestamps($blueprint, true);
@@ -790,7 +866,11 @@ describe('Xot execute coverage floor 50', function (): void {
         }
 
         try {
+<<<<<<< .merge_file_wGGQQ4
             app(\Modules\Xot\Actions\Factory\GetPropertiesFromMethodsByModelAction::class)->execute(new CacheModel);
+=======
+            app(\Modules\Xot\Actions\Factory\GetPropertiesFromMethodsByModelAction::class)->execute(new CacheModel());
+>>>>>>> .merge_file_m88wJe
         } catch (\Throwable) {
         }
 
@@ -807,7 +887,11 @@ describe('Xot execute coverage floor 50', function (): void {
                         continue;
                     }
                     $method = new \ReflectionMethod($widget, $wm);
+<<<<<<< .merge_file_wGGQQ4
                     if ($method->getNumberOfRequiredParameters() === 0) {
+=======
+                    if (0 === $method->getNumberOfRequiredParameters()) {
+>>>>>>> .merge_file_m88wJe
                         try {
                             $method->invoke($widget);
                         } catch (\Throwable) {
@@ -887,8 +971,12 @@ describe('Xot execute coverage floor 50', function (): void {
         Assert::assertStringEndsWith('#record-7', \Modules\Xot\Filament\Support\RecordAnchor::appendTo('/list', 7));
         Assert::assertSame('/list#x', \Modules\Xot\Filament\Support\RecordAnchor::appendTo('/list#x', 7));
 
+<<<<<<< .merge_file_wGGQQ4
         $qb = new class extends \Modules\Xot\QueryBuilders\BaseQueryBuilder
         {
+=======
+        $qb = new class extends \Modules\Xot\QueryBuilders\BaseQueryBuilder {
+>>>>>>> .merge_file_m88wJe
             protected function getModel(): string
             {
                 return CacheModel::class;
@@ -950,7 +1038,11 @@ describe('Xot execute coverage floor 50', function (): void {
         Assert::assertSame(200, $decorator->render(Request::create('/'), new \RuntimeException('r'))->getStatusCode());
         Assert::assertTrue($decorator->shouldReport(new \RuntimeException('s')));
         try {
+<<<<<<< .merge_file_wGGQQ4
             $decorator->renderForConsole(new \Symfony\Component\Console\Output\NullOutput(), new \RuntimeException('c'));
+=======
+            $decorator->renderForConsole(new NullOutput(), new \RuntimeException('c'));
+>>>>>>> .merge_file_m88wJe
         } catch (\Throwable) {
         }
         try {
@@ -959,7 +1051,11 @@ describe('Xot execute coverage floor 50', function (): void {
         }
 
         $export = new \Modules\Xot\Actions\Export\ExportXlsStreamByLazyCollection();
+<<<<<<< .merge_file_wGGQQ4
         $rowExport = new CacheModel;
+=======
+        $rowExport = new CacheModel();
+>>>>>>> .merge_file_m88wJe
         $rowExport->setRawAttributes(['id' => 3, 'name' => 'B']);
         $lazy2 = xotModelRows([$rowExport]);
         Assert::assertSame([], $export->headings(\Illuminate\Support\LazyCollection::make([])));
@@ -991,8 +1087,12 @@ describe('Xot execute coverage floor 50', function (): void {
         } catch (\Throwable) {
         }
 
+<<<<<<< .merge_file_wGGQQ4
         $chart = new class extends \Modules\Xot\Filament\Widgets\XotBaseChartWidget
         {
+=======
+        $chart = new class extends \Modules\Xot\Filament\Widgets\XotBaseChartWidget {
+>>>>>>> .merge_file_m88wJe
         };
         $cref = new \ReflectionClass($chart);
         foreach (['getHeading', 'getData', 'getType', 'getOptionsArray', 'getHeight'] as $method) {
@@ -1007,8 +1107,12 @@ describe('Xot execute coverage floor 50', function (): void {
             }
         }
 
+<<<<<<< .merge_file_wGGQQ4
         $state = new class extends \Modules\Xot\States\XotBaseState
         {
+=======
+        $state = new class extends \Modules\Xot\States\XotBaseState {
+>>>>>>> .merge_file_m88wJe
             public static string $name = 'cov_state';
         };
         Assert::assertSame('cov_state', $state::getName());
@@ -1023,15 +1127,25 @@ describe('Xot execute coverage floor 50', function (): void {
         }
         try {
             Assert::assertSame(['message' => 'x'], $state->modalFillForm([], ['message' => 'x']));
+<<<<<<< .merge_file_wGGQQ4
             Assert::assertSame([], $state->modalFillFormByRecord(new CacheModel));
             $state->modalAction([], ['message' => 'x']);
             $state->modalActionByRecord(new CacheModel, ['message' => 'x']);
+=======
+            Assert::assertSame([], $state->modalFillFormByRecord(new CacheModel()));
+            $state->modalAction([], ['message' => 'x']);
+            $state->modalActionByRecord(new CacheModel(), ['message' => 'x']);
+>>>>>>> .merge_file_m88wJe
             Assert::assertSame([], $state::getOptions());
         } catch (\Throwable $e) {
             Assert::assertNotEmpty($e->getMessage());
         }
 
+<<<<<<< .merge_file_wGGQQ4
         $cache = new CacheModel;
+=======
+        $cache = new CacheModel();
+>>>>>>> .merge_file_m88wJe
         try {
             $cache->guessPivotFullClass('CacheSession', CacheModel::class);
         } catch (\Throwable) {
@@ -1054,16 +1168,24 @@ describe('Xot execute coverage floor 50', function (): void {
         }
 
         try {
+<<<<<<< .merge_file_wGGQQ4
             $pivot = new class extends \Modules\Xot\Models\XotBasePivot
             {
+=======
+            $pivot = new class extends \Modules\Xot\Models\XotBasePivot {
+>>>>>>> .merge_file_m88wJe
                 protected $table = 'cache';
             };
             Assert::assertInstanceOf(\Modules\Xot\Models\XotBasePivot::class, $pivot);
         } catch (\Throwable) {
         }
         try {
+<<<<<<< .merge_file_wGGQQ4
             $morph = new class extends \Modules\Xot\Models\XotBaseMorphPivot
             {
+=======
+            $morph = new class extends \Modules\Xot\Models\XotBaseMorphPivot {
+>>>>>>> .merge_file_m88wJe
                 protected $table = 'cache';
             };
             Assert::assertInstanceOf(\Modules\Xot\Models\XotBaseMorphPivot::class, $morph);
@@ -1071,16 +1193,24 @@ describe('Xot execute coverage floor 50', function (): void {
         }
 
         try {
+<<<<<<< .merge_file_wGGQQ4
             $uuid = new class extends \Modules\Xot\Models\XotBaseUuidModel
             {
+=======
+            $uuid = new class extends \Modules\Xot\Models\XotBaseUuidModel {
+>>>>>>> .merge_file_m88wJe
                 protected $table = 'cache';
             };
             Assert::assertNotEmpty((string) $uuid->getKeyName());
         } catch (\Throwable) {
         }
 
+<<<<<<< .merge_file_wGGQQ4
         $csrf = new class
         {
+=======
+        $csrf = new class {
+>>>>>>> .merge_file_m88wJe
             use \Modules\Xot\Traits\HasCsrfToken;
         };
         try {

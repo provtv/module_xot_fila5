@@ -45,7 +45,11 @@ class TransCollectionAction
      */
     public function trans(string $item): string
     {
+<<<<<<< .merge_file_NhMWyD
         if (empty($item) || $this->transKey === null) {
+=======
+        if (empty($item) || null === $this->transKey) {
+>>>>>>> .merge_file_UYOZxP
             return $item;
         }
 

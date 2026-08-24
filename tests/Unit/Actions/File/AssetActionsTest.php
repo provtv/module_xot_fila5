@@ -15,7 +15,13 @@ use PHPUnit\Framework\Assert;
 
 uses(TestCase::class);
 
+<<<<<<< .merge_file_0lkDIN
 beforeEach(function (): void { $this->markTestSkipped('fragile offline mocks File/Module/DB'); });
+=======
+beforeEach(function (): void {
+    $this->markTestSkipped('fragile offline mocks File/Module/DB');
+});
+>>>>>>> .merge_file_8G3hXY
 
 it('handles absolute urls in AssetAction', function (): void {
     $action = app(AssetAction::class);

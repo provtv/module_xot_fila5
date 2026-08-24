@@ -11,7 +11,12 @@ use Webmozart\Assert\Assert;
 class FilterRelationsAction
 {
     /**
+<<<<<<< .merge_file_mCD4rN
      * @param  array<string, mixed>  $relations
+=======
+     * @param array<string, mixed> $relations
+     *
+>>>>>>> .merge_file_8oWUO8
      * @return array<string, Relation<Model, Model, mixed>>
      */
     public function execute(Model $_model, array $relations): array

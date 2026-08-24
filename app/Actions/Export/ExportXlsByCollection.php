@@ -118,7 +118,11 @@ class ExportXlsByCollection
     /**
      * Estrae il valore da un oggetto o array usando il campo specificato.
      *
+<<<<<<< .merge_file_lgDeIM
      * @param  string  $field  Il campo da estrarre
+=======
+     * @param string $field Il campo da estrarre
+>>>>>>> .merge_file_n7S9cv
      */
     protected function extractValue(mixed $data, string $field): mixed
     {

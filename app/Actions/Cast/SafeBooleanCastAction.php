@@ -40,7 +40,12 @@ class SafeBooleanCastAction
     /**
      * Converte in modo sicuro un valore mixed in boolean.
      *
+<<<<<<< .merge_file_b4KTPM
      * @param  bool|null  $default  Valore di default se la conversione fallisce (default: false)
+=======
+     * @param bool|null $default Valore di default se la conversione fallisce (default: false)
+     *
+>>>>>>> .merge_file_14PnaQ
      * @return bool Il valore convertito
      */
     public function execute(mixed $value, ?bool $default = false): bool
@@ -87,9 +92,16 @@ class SafeBooleanCastAction
     /**
      * Converte un valore in boolean con validazione di valori specifici.
      *
+<<<<<<< .merge_file_b4KTPM
      * @param  array<mixed>  $trueValues  Array di valori che rappresentano true
      * @param  array<mixed>  $falseValues  Array di valori che rappresentano false
      * @param  bool|null  $default  Valore di default se la conversione fallisce
+=======
+     * @param array<mixed> $trueValues  Array di valori che rappresentano true
+     * @param array<mixed> $falseValues Array di valori che rappresentano false
+     * @param bool|null    $default     Valore di default se la conversione fallisce
+     *
+>>>>>>> .merge_file_14PnaQ
      * @return bool Il valore convertito
      */
     public function executeWithCustomValues(
@@ -129,9 +141,16 @@ class SafeBooleanCastAction
     /**
      * Converte un valore in boolean con validazione di range numerico.
      *
+<<<<<<< .merge_file_b4KTPM
      * @param  float  $threshold  Soglia per determinare true/false
      * @param  bool  $greaterThanTrue  True se valori > threshold sono true, false altrimenti
      * @param  bool|null  $default  Valore di default se la conversione fallisce
+=======
+     * @param float     $threshold       Soglia per determinare true/false
+     * @param bool      $greaterThanTrue True se valori > threshold sono true, false altrimenti
+     * @param bool|null $default         Valore di default se la conversione fallisce
+     *
+>>>>>>> .merge_file_14PnaQ
      * @return bool Il valore convertito
      */
     public function executeWithThreshold(
@@ -167,7 +186,12 @@ class SafeBooleanCastAction
     /**
      * Metodo statico di convenienza per chiamate dirette.
      *
+<<<<<<< .merge_file_b4KTPM
      * @param  bool|null  $default  Valore di default se la conversione fallisce (default: false)
+=======
+     * @param bool|null $default Valore di default se la conversione fallisce (default: false)
+     *
+>>>>>>> .merge_file_14PnaQ
      * @return bool Il valore convertito in boolean
      */
     public static function cast(mixed $value, ?bool $default = false): bool
@@ -178,9 +202,16 @@ class SafeBooleanCastAction
     /**
      * Metodo statico per cast con valori personalizzati.
      *
+<<<<<<< .merge_file_b4KTPM
      * @param  array<mixed>  $trueValues  Array di valori che rappresentano true
      * @param  array<mixed>  $falseValues  Array di valori che rappresentano false
      * @param  bool|null  $default  Valore di default se la conversione fallisce
+=======
+     * @param array<mixed> $trueValues  Array di valori che rappresentano true
+     * @param array<mixed> $falseValues Array di valori che rappresentano false
+     * @param bool|null    $default     Valore di default se la conversione fallisce
+     *
+>>>>>>> .merge_file_14PnaQ
      * @return bool Il valore convertito
      */
     public static function castWithCustomValues(
@@ -195,9 +226,16 @@ class SafeBooleanCastAction
     /**
      * Metodo statico per cast con soglia numerica.
      *
+<<<<<<< .merge_file_b4KTPM
      * @param  float  $threshold  Soglia per determinare true/false
      * @param  bool  $greaterThanTrue  True se valori > threshold sono true, false altrimenti
      * @param  bool|null  $default  Valore di default se la conversione fallisce
+=======
+     * @param float     $threshold       Soglia per determinare true/false
+     * @param bool      $greaterThanTrue True se valori > threshold sono true, false altrimenti
+     * @param bool|null $default         Valore di default se la conversione fallisce
+     *
+>>>>>>> .merge_file_14PnaQ
      * @return bool Il valore convertito
      */
     public static function castWithThreshold(

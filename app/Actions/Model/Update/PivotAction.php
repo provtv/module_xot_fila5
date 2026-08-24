@@ -20,7 +20,10 @@ class PivotAction
         $rows = $relationDTO->rows;
         // $rows is already typed as Relation in RelationDTO
         throw new \RuntimeException('Removed debug dddx');
+<<<<<<< .merge_file_qLJ0NZ
 
+=======
+>>>>>>> .merge_file_MdSMcV
         /*
          *
          * $parent_panel = $this->panel->getParent();

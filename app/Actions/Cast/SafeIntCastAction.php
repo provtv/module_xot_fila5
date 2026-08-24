@@ -26,7 +26,12 @@ class SafeIntCastAction
     /**
      * Converte in modo sicuro un valore mixed in int.
      *
+<<<<<<< .merge_file_edFhzn
      * @param  int|null  $default  Valore di default se la conversione fallisce (default: 0)
+=======
+     * @param int|null $default Valore di default se la conversione fallisce (default: 0)
+     *
+>>>>>>> .merge_file_VMfhPQ
      * @return int Il valore convertito in int
      */
     public function execute(mixed $value, ?int $default = 0): int
@@ -73,7 +78,12 @@ class SafeIntCastAction
     /**
      * Metodo statico di convenienza per chiamate dirette.
      *
+<<<<<<< .merge_file_edFhzn
      * @param  int|null  $default  Valore di default se la conversione fallisce (default: 0)
+=======
+     * @param int|null $default Valore di default se la conversione fallisce (default: 0)
+     *
+>>>>>>> .merge_file_VMfhPQ
      * @return int Il valore convertito in int
      */
     public static function cast(mixed $value, ?int $default = 0): int
@@ -84,9 +94,16 @@ class SafeIntCastAction
     /**
      * Converte un valore in int con validazione di range.
      *
+<<<<<<< .merge_file_edFhzn
      * @param  int  $min  Valore minimo consentito
      * @param  int  $max  Valore massimo consentito
      * @param  int|null  $default  Valore di default se la conversione fallisce
+=======
+     * @param int      $min     Valore minimo consentito
+     * @param int      $max     Valore massimo consentito
+     * @param int|null $default Valore di default se la conversione fallisce
+     *
+>>>>>>> .merge_file_VMfhPQ
      * @return int Il valore convertito e validato
      */
     public function executeWithRange(mixed $value, int $min, int $max, ?int $default = null): int
@@ -100,9 +117,16 @@ class SafeIntCastAction
     /**
      * Metodo statico di convenienza per cast con range.
      *
+<<<<<<< .merge_file_edFhzn
      * @param  int  $min  Valore minimo consentito
      * @param  int  $max  Valore massimo consentito
      * @param  int|null  $default  Valore di default se la conversione fallisce
+=======
+     * @param int      $min     Valore minimo consentito
+     * @param int      $max     Valore massimo consentito
+     * @param int|null $default Valore di default se la conversione fallisce
+     *
+>>>>>>> .merge_file_VMfhPQ
      * @return int Il valore convertito e validato
      */
     public static function castWithRange(mixed $value, int $min, int $max, ?int $default = null): int
@@ -113,7 +137,12 @@ class SafeIntCastAction
     /**
      * Converte un valore in ID positivo (sempre >= 1).
      *
+<<<<<<< .merge_file_edFhzn
      * @param  int|null  $default  Valore di default se la conversione fallisce (default: 1)
+=======
+     * @param int|null $default Valore di default se la conversione fallisce (default: 1)
+     *
+>>>>>>> .merge_file_VMfhPQ
      * @return int Il valore convertito come ID positivo
      */
     public function executeAsId(mixed $value, ?int $default = 1): int
@@ -126,7 +155,12 @@ class SafeIntCastAction
     /**
      * Metodo statico per cast come ID positivo.
      *
+<<<<<<< .merge_file_edFhzn
      * @param  int|null  $default  Valore di default se la conversione fallisce (default: 1)
+=======
+     * @param int|null $default Valore di default se la conversione fallisce (default: 1)
+     *
+>>>>>>> .merge_file_VMfhPQ
      * @return int Il valore convertito come ID positivo
      */
     public static function castAsId(mixed $value, ?int $default = 1): int

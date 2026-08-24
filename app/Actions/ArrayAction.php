@@ -7,15 +7,24 @@ namespace Modules\Xot\Actions;
 use Spatie\QueueableAction\QueueableAction;
 
 /**
+<<<<<<< .merge_file_vaoHDi
  * @deprecated 2026-08-19 Nessun chiamante in laravel/. Usare {@see \Modules\Xot\Actions\Arr\RangeIntersectAction}
  *             e {@see \Modules\Xot\Actions\Arr\DiffAssocRecursiveAction} via `app(...)->execute(...)`.
+=======
+ * @deprecated 2026-08-19 Nessun chiamante in laravel/. Usare {@see Arr\RangeIntersectAction}
+ *             e {@see Arr\DiffAssocRecursiveAction} via `app(...)->execute(...)`.
+>>>>>>> .merge_file_sXpUuo
  */
 class ArrayAction
 {
     use QueueableAction;
 
     /**
+<<<<<<< .merge_file_vaoHDi
      * @deprecated Usare {@see \Modules\Xot\Actions\Arr\RangeIntersectAction::execute()}
+=======
+     * @deprecated Usare {@see Arr\RangeIntersectAction::execute()}
+>>>>>>> .merge_file_sXpUuo
      *
      * @return array{0: int, 1: int}|false
      */
@@ -32,7 +41,11 @@ class ArrayAction
     }
 
     /**
+<<<<<<< .merge_file_vaoHDi
      * @deprecated Usare {@see \Modules\Xot\Actions\Arr\DiffAssocRecursiveAction::execute()}
+=======
+     * @deprecated Usare {@see Arr\DiffAssocRecursiveAction::execute()}
+>>>>>>> .merge_file_sXpUuo
      *
      * @param array<int|string, mixed> $array1
      * @param array<int|string, mixed> $array2

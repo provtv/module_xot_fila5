@@ -6,7 +6,10 @@ namespace Modules\Xot\Tests\Unit;
 
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Process;
+<<<<<<< .merge_file_vXHsda
 use Mockery;
+=======
+>>>>>>> .merge_file_OYWNpv
 use Modules\Xot\Filament\Forms\Components\XotBaseCheckboxList;
 use Modules\Xot\Filament\Forms\Components\XotBaseRadio;
 use Modules\Xot\Filament\Forms\Components\XotBaseSelect;
@@ -17,13 +20,20 @@ use Modules\Xot\Filament\Tables\Columns\XotBaseViewColumn;
 use Modules\Xot\Filament\Widgets\XotBaseWizardWidget;
 use Modules\Xot\Tests\TestCase;
 use PHPUnit\Framework\Assert;
+<<<<<<< .merge_file_vXHsda
 use ReflectionClass;
 use ReflectionMethod;
+=======
+>>>>>>> .merge_file_OYWNpv
 
 uses(TestCase::class)->group('no-xot-db');
 
 afterEach(function (): void {
+<<<<<<< .merge_file_vXHsda
     Mockery::close();
+=======
+    \Mockery::close();
+>>>>>>> .merge_file_OYWNpv
 });
 
 final class XotAbsSelect3 extends XotBaseSelect
@@ -82,12 +92,21 @@ describe('Xot abstract Filament stubs', function (): void {
             try {
                 $inst = method_exists($class, 'make')
                     ? $class::make('field')
+<<<<<<< .merge_file_vXHsda
                     : (new ReflectionClass($class))->newInstanceWithoutConstructor();
                 Assert::assertIsObject($inst);
                 ++$n;
                 $parent = (new ReflectionClass($class))->getParentClass();
                 if ($parent) {
                     foreach ($parent->getMethods(ReflectionMethod::IS_PROTECTED | ReflectionMethod::IS_PUBLIC) as $method) {
+=======
+                    : (new \ReflectionClass($class))->newInstanceWithoutConstructor();
+                Assert::assertIsObject($inst);
+                ++$n;
+                $parent = (new \ReflectionClass($class))->getParentClass();
+                if ($parent) {
+                    foreach ($parent->getMethods(\ReflectionMethod::IS_PROTECTED | \ReflectionMethod::IS_PUBLIC) as $method) {
+>>>>>>> .merge_file_OYWNpv
                         if ($method->getDeclaringClass()->getName() !== $parent->getName()) {
                             continue;
                         }

@@ -4,7 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Filament\Resources;
 
+<<<<<<< .merge_file_AHYXoN
 use Exception;
+=======
+>>>>>>> .merge_file_oDpjTE
 use Filament\Pages\Enums\SubNavigationPosition;
 use Filament\Resources\Pages\Page;
 use Filament\Resources\Pages\PageRegistration;
@@ -30,11 +33,19 @@ use Modules\Xot\Filament\Resources\Schemas\XotBaseResourceForm;
 use Modules\Xot\Filament\Resources\Schemas\XotBaseResourceInfolist;
 use Modules\Xot\Filament\Resources\Tables\XotBaseResourceTable;
 use Modules\Xot\Filament\Traits\NavigationLabelTrait;
+<<<<<<< .merge_file_AHYXoN
 use ReflectionClass;
 use Webmozart\Assert\Assert;
 
 use function Safe\glob;
 
+=======
+
+use function Safe\glob;
+
+use Webmozart\Assert\Assert;
+
+>>>>>>> .merge_file_oDpjTE
 /**
  * @method static string getUrl(?string $name = null, array<string, mixed> $parameters = [], bool $isAbsolute = true, ?string $panel = null, ?\Illuminate\Database\Eloquent\Model $tenant = null, bool $shouldGuessMissingParameters = false, ?string $configuration = null)
  */
@@ -47,7 +58,11 @@ abstract class XotBaseResource extends FilamentResource
     protected static ?SubNavigationPosition $subNavigationPosition = SubNavigationPosition::Top;
 
     /**
+<<<<<<< .merge_file_AHYXoN
      * @param  array<string, bool|float|int|string|null>  $params
+=======
+     * @param array<string, bool|float|int|string|null> $params
+>>>>>>> .merge_file_oDpjTE
      */
     public static function trans(string $key, bool $exceptionIfNotExist = false, array $params = []): string
     {
@@ -56,7 +71,11 @@ abstract class XotBaseResource extends FilamentResource
 
         if (is_string($res)) {
             if ($exceptionIfNotExist && $res === $tmp) {
+<<<<<<< .merge_file_AHYXoN
                 throw new Exception('['.__LINE__.']['.class_basename(self::class).']');
+=======
+                throw new \Exception('['.__LINE__.']['.class_basename(self::class).']');
+>>>>>>> .merge_file_oDpjTE
             }
 
             return $res;
@@ -87,7 +106,11 @@ abstract class XotBaseResource extends FilamentResource
      */
     public static function getModel(): string
     {
+<<<<<<< .merge_file_AHYXoN
         if (static::$model !== null) {
+=======
+        if (null !== static::$model) {
+>>>>>>> .merge_file_oDpjTE
             $res = static::$model;
             Assert::subclassOf(
                 $res,
@@ -150,11 +173,21 @@ abstract class XotBaseResource extends FilamentResource
         $formClass = static::class.'\Schemas\\'.class_basename(static::getModel()).'Form';
         if (class_exists($formClass)) {
             Assert::subclassOf($formClass, XotBaseResourceForm::class);
+<<<<<<< .merge_file_AHYXoN
             return $formClass;    
         }
         $class1=app(GetResourceClassNameByModelClassAction::class)->execute(static::getModel());
         $class1 = $class1.'\Schemas\\'.class_basename(static::getModel()).'Form';
         Assert::subclassOf($class1, XotBaseResourceForm::class);
+=======
+
+            return $formClass;
+        }
+        $class1 = app(GetResourceClassNameByModelClassAction::class)->execute(static::getModel());
+        $class1 = $class1.'\Schemas\\'.class_basename(static::getModel()).'Form';
+        Assert::subclassOf($class1, XotBaseResourceForm::class);
+
+>>>>>>> .merge_file_oDpjTE
         return $class1;
     }
 
@@ -162,7 +195,11 @@ abstract class XotBaseResource extends FilamentResource
     {
         $formClass = static::getFormClass();
         $configured = $formClass::configure($schema);
+<<<<<<< .merge_file_AHYXoN
         
+=======
+
+>>>>>>> .merge_file_oDpjTE
         Assert::isInstanceOf($configured, Schema::class);
 
         return $configured;
@@ -180,10 +217,18 @@ abstract class XotBaseResource extends FilamentResource
         $class = static::class.'\Tables\\'.Str::plural(class_basename(static::getModel())).'Table';
         if (class_exists($class)) {
             Assert::subclassOf($class, XotBaseResourceTable::class);
+<<<<<<< .merge_file_AHYXoN
             return $class;
         }
 
         $class1=app(GetResourceClassNameByModelClassAction::class)->execute(static::getModel());
+=======
+
+            return $class;
+        }
+
+        $class1 = app(GetResourceClassNameByModelClassAction::class)->execute(static::getModel());
+>>>>>>> .merge_file_oDpjTE
         $class1 = $class1.'\Tables\\'.Str::plural(class_basename(static::getModel())).'Table';
         Assert::subclassOf($class1, XotBaseResourceTable::class);
 
@@ -227,11 +272,21 @@ abstract class XotBaseResource extends FilamentResource
         $class = static::class.'\Schemas\\'.class_basename(static::getModel()).'Infolist';
         if (class_exists($class)) {
             Assert::subclassOf($class, XotBaseResourceInfolist::class);
+<<<<<<< .merge_file_AHYXoN
             return $class;    
         }
         $class1=app(GetResourceClassNameByModelClassAction::class)->execute(static::getModel());
         $class1 = $class1.'\Schemas\\'.class_basename(static::getModel()).'Infolist';
         Assert::subclassOf($class1, XotBaseResourceInfolist::class);
+=======
+
+            return $class;
+        }
+        $class1 = app(GetResourceClassNameByModelClassAction::class)->execute(static::getModel());
+        $class1 = $class1.'\Schemas\\'.class_basename(static::getModel()).'Infolist';
+        Assert::subclassOf($class1, XotBaseResourceInfolist::class);
+
+>>>>>>> .merge_file_oDpjTE
         return $class1;
     }
 
@@ -268,7 +323,11 @@ abstract class XotBaseResource extends FilamentResource
             $count = app(CountAction::class)->execute(static::getModel());
 
             return number_format($count, 0).'';
+<<<<<<< .merge_file_AHYXoN
         } catch (Exception $e) {
+=======
+        } catch (\Exception $e) {
+>>>>>>> .merge_file_oDpjTE
             return '--';
         }
     }
@@ -312,7 +371,11 @@ abstract class XotBaseResource extends FilamentResource
      */
     public static function getRelations(): array
     {
+<<<<<<< .merge_file_AHYXoN
         $reflector = new ReflectionClass(static::class);
+=======
+        $reflector = new \ReflectionClass(static::class);
+>>>>>>> .merge_file_oDpjTE
         $filename = $reflector->getFileName();
         Assert::string($filename, __FILE__.':'.__LINE__.' - '.class_basename(self::class));
 
@@ -325,7 +388,11 @@ abstract class XotBaseResource extends FilamentResource
         $filesResult = glob($path.\DIRECTORY_SEPARATOR.'*RelationManager.php');
 
         // PHPStan: glob() with valid pattern returns array
+<<<<<<< .merge_file_AHYXoN
         if ($filesResult === []) {
+=======
+        if ([] === $filesResult) {
+>>>>>>> .merge_file_oDpjTE
             return [];
         }
 
@@ -354,7 +421,11 @@ abstract class XotBaseResource extends FilamentResource
     {
         $submitView = 'pub_theme::filament.wizard.submit-button';
         if (! View::exists($submitView)) {
+<<<<<<< .merge_file_AHYXoN
             throw new Exception("View {$submitView} does not exist");
+=======
+            throw new \Exception("View {$submitView} does not exist");
+>>>>>>> .merge_file_oDpjTE
         }
         $render = View::make($submitView)->render();
 
@@ -424,4 +495,8 @@ abstract class XotBaseResource extends FilamentResource
 
         return Step::make($name)->schema([]);
     }
+<<<<<<< .merge_file_AHYXoN
 }
+=======
+}
+>>>>>>> .merge_file_oDpjTE

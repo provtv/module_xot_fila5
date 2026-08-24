@@ -10,7 +10,13 @@ use PHPUnit\Framework\Assert;
 
 uses(TestCase::class);
 
+<<<<<<< .merge_file_JCDQgu
 beforeEach(function (): void { $this->markTestSkipped('fragile offline mocks File/Module/DB'); });
+=======
+beforeEach(function (): void {
+    $this->markTestSkipped('fragile offline mocks File/Module/DB');
+});
+>>>>>>> .merge_file_7zUarP
 
 it('gets module path from facade correctly', function (): void {
     // Spy on Module facade

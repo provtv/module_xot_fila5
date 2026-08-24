@@ -15,7 +15,13 @@ use function Safe\unlink;
 
 uses(TestCase::class);
 
+<<<<<<< .merge_file_19yOht
 beforeEach(function (): void { $this->markTestSkipped('fragile offline mocks File/Module/DB'); });
+=======
+beforeEach(function (): void {
+    $this->markTestSkipped('fragile offline mocks File/Module/DB');
+});
+>>>>>>> .merge_file_cVWtlZ
 
 test('get module name by class action works', function (): void {
     $action = app(GetModuleNameByClassAction::class);

@@ -261,7 +261,11 @@ class FileAction
         if (! File::exists(\dirname($filename_pub))) {
             try {
                 File::makeDirectory(\dirname($filename_pub), 0755, true, true);
+<<<<<<< .merge_file_LjXpcj
             } catch (Exception $e) {
+=======
+            } catch (\Exception $e) {
+>>>>>>> .merge_file_yc7tLb
                 throw new \RuntimeException('Caught exception: '.$e->getMessage().' ['.__LINE__.']['.class_basename(static::class).']', 0, $e);
             }
         }
@@ -270,7 +274,11 @@ class FileAction
             try {
                 // echo '<hr>'.$filename.' >>>>  '.$filename_pub; //4 debug
                 File::copy($filename, $filename_pub);
+<<<<<<< .merge_file_LjXpcj
             } catch (Exception $e) {
+=======
+            } catch (\Exception $e) {
+>>>>>>> .merge_file_yc7tLb
                 throw new \RuntimeException('Caught exception: '.$e->getMessage().' ['.__LINE__.']['.class_basename(static::class).']', 0, $e);
             }
         } else {
@@ -310,7 +318,11 @@ class FileAction
         if (! File::exists(\dirname($filename_pub))) {
             try {
                 File::makeDirectory(\dirname($filename_pub), 0755, true, true);
+<<<<<<< .merge_file_LjXpcj
             } catch (Exception $e) {
+=======
+            } catch (\Exception $e) {
+>>>>>>> .merge_file_yc7tLb
                 throw new \RuntimeException('Caught exception: '.$e->getMessage().' ['.__LINE__.']['.class_basename(static::class).']', 0, $e);
             }
         }
@@ -319,7 +331,11 @@ class FileAction
             try {
                 // echo '<hr>'.$filename.' >>>>  '.$filename_pub; //4 debug
                 File::copy($filename, $filename_pub);
+<<<<<<< .merge_file_LjXpcj
             } catch (Exception $e) {
+=======
+            } catch (\Exception $e) {
+>>>>>>> .merge_file_yc7tLb
                 throw new \RuntimeException('Caught exception: '.$e->getMessage().' ['.__LINE__.']['.class_basename(static::class).']', 0, $e);
             }
         } else {
@@ -361,7 +377,11 @@ class FileAction
         if (! File::exists(\dirname($filename_pub))) {
             try {
                 File::makeDirectory(\dirname($filename_pub), 0755, true, true);
+<<<<<<< .merge_file_LjXpcj
             } catch (Exception $e) {
+=======
+            } catch (\Exception $e) {
+>>>>>>> .merge_file_yc7tLb
                 throw new \RuntimeException('Caught exception: '.$e->getMessage().' ['.__LINE__.']['.class_basename(static::class).']', 0, $e);
             }
         }
@@ -370,7 +390,11 @@ class FileAction
             try {
                 // echo '<hr>'.$filename.' >>>>  '.$filename_pub; //4 debug
                 File::copy($filename, $filename_pub);
+<<<<<<< .merge_file_LjXpcj
             } catch (Exception $e) {
+=======
+            } catch (\Exception $e) {
+>>>>>>> .merge_file_yc7tLb
                 throw new \RuntimeException('Caught exception: '.$e->getMessage().' ['.__LINE__.']['.class_basename(static::class).']', 0, $e);
             }
         }
@@ -408,7 +432,11 @@ class FileAction
         if (! File::exists($dir_to)) {
             try {
                 File::makeDirectory($dir_to, 0755, true, true);
+<<<<<<< .merge_file_LjXpcj
             } catch (Exception $e) {
+=======
+            } catch (\Exception $e) {
+>>>>>>> .merge_file_yc7tLb
                 throw new \RuntimeException('Removed debug dddx');
             }
         }
@@ -422,7 +450,11 @@ class FileAction
         if (! File::exists($filename_to)) {
             try {
                 File::copy($filename_from, $filename_to);
+<<<<<<< .merge_file_LjXpcj
             } catch (Exception $e) {
+=======
+            } catch (\Exception $e) {
+>>>>>>> .merge_file_yc7tLb
                 throw new \RuntimeException('Removed debug dddx');
             }
         }
@@ -488,7 +520,11 @@ class FileAction
         if (! File::exists($dir_to)) {
             try {
                 File::makeDirectory($dir_to, 0755, true, true);
+<<<<<<< .merge_file_LjXpcj
             } catch (Exception $e) {
+=======
+            } catch (\Exception $e) {
+>>>>>>> .merge_file_yc7tLb
                 throw new \RuntimeException('Caught exception: '.$e->getMessage().' ['.__LINE__.']['.class_basename(static::class).']', 0, $e);
             }
         }
@@ -513,7 +549,11 @@ class FileAction
         }
         try {
             File::copy($filename_from, $filename_to);
+<<<<<<< .merge_file_LjXpcj
         } catch (Exception $exception) {
+=======
+        } catch (\Exception $exception) {
+>>>>>>> .merge_file_yc7tLb
             throw new \RuntimeException('Removed debug dddx');
         }
 
@@ -631,7 +671,11 @@ class FileAction
                     if (! File::exists(\dirname($new_path))) {
                         try {
                             File::makeDirectory(\dirname($new_path), 0755, true, true);
+<<<<<<< .merge_file_LjXpcj
                         } catch (Exception $e) {
+=======
+                        } catch (\Exception $e) {
+>>>>>>> .merge_file_yc7tLb
                             throw new \RuntimeException('Caught exception: '.$e->getMessage().' ['.__LINE__.']['.class_basename(static::class).']', 0, $e);
                         }
                     }
@@ -639,7 +683,11 @@ class FileAction
                     if (File::exists($old_path)) {
                         try {
                             File::copy($old_path, $new_path);
+<<<<<<< .merge_file_LjXpcj
                         } catch (Exception $e) {
+=======
+                        } catch (\Exception $e) {
+>>>>>>> .merge_file_yc7tLb
                             throw new \RuntimeException('Caught exception: '.$e->getMessage().' ['.__LINE__.']['.class_basename(static::class).']', 0, $e);
                         }
                     }
@@ -821,7 +869,11 @@ class FileAction
         if (! File::exists(\dirname($to))) {
             try {
                 File::makeDirectory(\dirname($to), 0755, true, true);
+<<<<<<< .merge_file_LjXpcj
             } catch (Exception $e) {
+=======
+            } catch (\Exception $e) {
+>>>>>>> .merge_file_yc7tLb
                 throw new \RuntimeException('Caught exception: '.$e->getMessage().' ['.__LINE__.']['.class_basename(static::class).']', 0, $e);
             }
         }

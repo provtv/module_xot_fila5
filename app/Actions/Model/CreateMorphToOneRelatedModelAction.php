@@ -14,7 +14,11 @@ class CreateMorphToOneRelatedModelAction
     use QueueableAction;
 
     /**
+<<<<<<< .merge_file_E4CQDx
      * @param  array<string, mixed>  $attributes
+=======
+     * @param array<string, mixed> $attributes
+>>>>>>> .merge_file_D1Wtza
      */
     public function execute(object $relation, array $attributes): Model
     {
