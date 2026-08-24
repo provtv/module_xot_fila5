@@ -7,9 +7,12 @@ namespace Modules\Xot\Tests\Unit\Actions\Config;
 use Mockery\MockInterface;
 use Modules\Xot\Actions\Config\GetTenantConfigArrayAction;
 use Modules\Xot\Actions\Config\GetTenantConfigPathAction;
+use Modules\Xot\Tests\TestCase;
 
 use function Safe\file_put_contents;
 use function Safe\unlink;
+
+uses(TestCase::class)->group('no-xot-db');
 
 it('returns empty array when tenant config file does not exist', function (): void {
     /** @var GetTenantConfigPathAction&MockInterface $pathAction */

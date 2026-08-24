@@ -12,7 +12,7 @@ use Modules\Xot\Models\Module;
 use Modules\Xot\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
-uses(TestCase::class);
+uses(TestCase::class)->group('xot-db');
 
 it('can create a test user', function () {
     $email = 'test-'.uniqid('', true).'@example.com';

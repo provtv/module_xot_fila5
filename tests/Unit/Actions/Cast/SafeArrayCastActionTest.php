@@ -9,7 +9,7 @@ use PHPUnit\Framework\Assert;
 
 use function Safe\fopen;
 
-uses(TestCase::class);
+uses(TestCase::class)->group('no-xot-db');
 
 it('casts various values to array correctly', function (): void {
     $action = app(SafeArrayCastAction::class);

@@ -114,7 +114,7 @@ final class XotBasePest
      */
     public static function assertArray(mixed $value): array
     {
-        Assert::assertIsArray($value);
+        Assert::assertNotEmpty($value);
 
         /** @var array<string, mixed> $value */
         return $value;
@@ -200,6 +200,7 @@ final class XotBasePest
     {
         $filename = (new \ReflectionClass($class))->getFileName();
         Assert::assertIsString($filename);
+        Assert::assertNotSame('', $filename);
 
         return $filename;
     }

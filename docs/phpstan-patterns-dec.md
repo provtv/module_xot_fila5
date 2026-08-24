@@ -42,6 +42,56 @@ use Illuminate\Support\Facades\View;
 
 **Spiegazione**: Verificare sempre che le classi importate esistano e usare il nome corretto delle facade.
 
+#### 3-bis. Gli alias di root non sono classi — misurato il 2026-08-24
+
+L'anti-pattern più costoso di questa famiglia non è la facade sbagliata: è la facade
+importata **dalla root del namespace**, cioè l'alias di `config/app.php` usato come se fosse
+una classe.
+
+```php
+// ❌ ANTI-PATTERN — funziona a runtime, per PHPStan la classe non esiste
+use Route;
+use Request;
+use Validator;
+use Log;
+use Str;
+
+// ✅ CORRETTO
+use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Request;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Str;   // ← NON una facade: la classe vera sta in Support
+```
+
+**Perché costa più di quanto sembra.** Un solo import sbagliato produce da due a quattro
+errori, perché quello vero è il primo e gli altri sono la sua ombra:
+
+```
+class.notFound     Call to static method current() on an unknown class Route.
+method.nonObject   Cannot call method parameters() on mixed.
+argument.type      Parameter #1 $array of function extract expects array, mixed given.
+return.type        Method …::getContextName() should return string but returns mixed.
+```
+
+Nessuno dei tre a valle si corregge dove è scritto: si correggono **tutti** risalendo
+all'import. È il caso da manuale della regola «`mixed` è l'ultima spiaggia — risali alla
+sorgente, non castare».
+
+**Come si trova l'intera famiglia in un modulo:**
+
+```bash
+grep -rn "^use [A-Z][A-Za-z]*;" Modules/<Modulo>/app
+```
+
+Un `use` con un solo segmento e nessuna barra è sempre sospetto: le uniche forme legittime
+sono le classi globali di PHP (`Exception`, `Throwable`, `DateTime`, `ArrayAccess`, …).
+
+**Misura del 2026-08-24**: su tutta la corsa `analyse Modules` (5 709 errori) gli errori
+attribuiti a file di `app/` analizzati per sé erano **19**, e **tutti e 19** venivano da
+questa famiglia: 7 file, 5 nomi. Corretti gli import, `[OK] No errors`, senza toccare una
+riga di logica. Story `bmad-output/stories/2.11.phpstan-facade-import-root-namespace.story.md`.
+
 ## 🔧 Pattern Consolidati
 
 ### 1. SafeStringCastAction per Cast Sicuri

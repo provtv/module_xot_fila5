@@ -10,7 +10,7 @@ use Modules\Xot\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 use PHPUnit\Framework\MockObject\MockObject;
 
-uses(TestCase::class);
+uses(TestCase::class)->group('no-xot-db');
 
 describe('Safe Attribute Cast Action', function (): void {
     test('manages eloquent attributes safely', function (): void {

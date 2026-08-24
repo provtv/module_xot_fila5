@@ -117,24 +117,16 @@ class GenerateTableColumnsByFileAction
      */
     public function ddFile(File $file): void
     {
-        // Debug information - commented out for production
-        /*
-        dd([
-            'getRelativePath' => $file->getRelativePath(), // =  ""
-            'getRelativePathname' => $file->getRelativePathname(), //  AssenzeResource.php
-            'getFilenameWithoutExtension' => $file->getFilenameWithoutExtension(), // AssenzeResource
-            // 'getContents' => $file->getContents(),
-            'getPath' => $file->getPath(),
-            'getFilename' => $file->getFilename(), // = AssenzeResource.php
-            'getExtension' => $file->getExtension(), // php
-            'getBasename' => $file->getBasename(), // AssenzeResource.php
-            'getPathname' => $file->getPathname(),
-            'isFile' => $file->isFile(), // true
-            'getRealPath' => $file->getRealPath(),
-            // 'getFileInfo' => $file->getFileInfo(),
-            // 'getPathInfo' => $file->getPathInfo(),
-            'methods' => get_class_methods($file),
-        ]);
-        */
+        // Debug probe: touch file metadata without dumping (story 5.26 — no dd()).
+        $file->getRelativePath();
+        $file->getRelativePathname();
+        $file->getFilenameWithoutExtension();
+        $file->getPath();
+        $file->getFilename();
+        $file->getExtension();
+        $file->getBasename();
+        $file->getPathname();
+        $file->isFile();
+        $file->getRealPath();
     }
 }

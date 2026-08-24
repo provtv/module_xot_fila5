@@ -9,7 +9,7 @@ use Modules\Xot\Actions\File\AddStrictTypesDeclarationAction;
 use Modules\Xot\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
-uses(TestCase::class);
+uses(TestCase::class)->group('no-xot-db');
 
 beforeEach(function (): void {
     /* @var \Modules\Xot\Tests\TestCase $this */
@@ -31,39 +31,39 @@ describe('Add Strict Types Declaration Action', function (): void {
     test('adds strict types declaration to php file', function (): void {
         /** @var TestCase $this */
         $file = $this->workDir.'/test.php';
-        Assert::assertIsString($this->workDir);
+        Assert::assertNotEmpty($this->workDir);
         File::put($file, "<?php\n\nnamespace Test;\n\nclass TestClass {}");
 
         app(AddStrictTypesDeclarationAction::class)->execute($file);
 
         $content = File::get($file);
-        Assert::assertIsString($content);
+        Assert::assertNotEmpty($content);
         Assert::assertStringContainsString('declare(strict_types=1)', $content);
     });
 
     test('does not duplicate strict types if already present', function (): void {
         /** @var TestCase $this */
         $file = $this->workDir.'/test.php';
-        Assert::assertIsString($this->workDir);
+        Assert::assertNotEmpty($this->workDir);
         File::put($file, "<?php\n\n\n\nnamespace Test;");
 
         app(AddStrictTypesDeclarationAction::class)->execute($file);
 
         $content = File::get($file);
-        Assert::assertIsString($content);
+        Assert::assertNotEmpty($content);
         Assert::assertSame(1, substr_count($content, 'declare(strict_types=1)'));
     });
 
     test('handles file with existing namespace', function (): void {
         /** @var TestCase $this */
         $file = $this->workDir.'/test.php';
-        Assert::assertIsString($this->workDir);
+        Assert::assertNotEmpty($this->workDir);
         File::put($file, "<?php\n\n\n\nclass TestAction {}");
 
         app(AddStrictTypesDeclarationAction::class)->execute($file);
 
         $content = File::get($file);
-        Assert::assertIsString($content);
+        Assert::assertNotEmpty($content);
         Assert::assertStringContainsString('declare(strict_types=1)', $content);
         Assert::assertStringContainsString('class TestAction {}', $content);
     });

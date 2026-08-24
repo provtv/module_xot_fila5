@@ -25,6 +25,10 @@ class RegisterBladeComponentsAction
             if (! $comp instanceof ComponentFileData) {
                 continue;
             }
+            // Skip incomplete DTO (cache JSON parziale / Spatie Data uninitialized props).
+            if (! isset($comp->name, $comp->ns) || $comp->name === '' || $comp->ns === '') {
+                continue;
+            }
             Blade::component($comp->name, $comp->ns);
         }
     }

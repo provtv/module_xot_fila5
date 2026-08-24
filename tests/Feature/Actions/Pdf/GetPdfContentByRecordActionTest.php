@@ -77,12 +77,9 @@ describe('Get Pdf Content By Record Action', function (): void {
 
             protected $fillable = ['id', 'matr', 'cognome', 'nome'];
 
-            public function testGetKey(): int
-            {
-                return 456;
-            }
         };
 
+        $record->setAttribute('id', 456);
         $record->setAttribute('matr', 'ABC123');
         $record->setAttribute('cognome', 'Rossi');
         $record->setAttribute('nome', 'Mario');
@@ -116,7 +113,10 @@ describe('Get Pdf Content By Record Action', function (): void {
         $params = $method->invoke($action, $user, 'user::user.show.pdf');
 
         // Assert
-        Assert::assertIsArray($params);
+        if (! is_array($params)) {
+            throw new \UnexpectedValueException('prepareViewParameters deve restituire un array');
+        }
+        Assert::assertNotEmpty($params);
         Assert::assertArrayHasKey('view', $params);
         Assert::assertArrayHasKey('row', $params);
         Assert::assertArrayHasKey('transKey', $params);

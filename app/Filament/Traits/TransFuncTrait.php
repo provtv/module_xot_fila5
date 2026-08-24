@@ -50,10 +50,7 @@ trait TransFuncTrait
             $trans = trans($key);
         } catch (\TypeError $e) {
             /*
-            dddx([
-                'e' => $e,
-                'key' => $key,
-            ]);
+            throw new \RuntimeException('Removed debug dddx');
             */
             return 'fix:'.$key;
 

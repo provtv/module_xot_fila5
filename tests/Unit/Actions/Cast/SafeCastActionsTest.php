@@ -85,7 +85,8 @@ test('safe int cast action works', function (): void {
     Assert::assertSame(0, $action->executeWithRange(-50, 0, 100));
     Assert::assertSame(50, $action->executeWithRange(50, 0, 100));
     Assert::assertSame(10, $action->executeAsId(10));
-    Assert::assertSame(0, $action->executeAsId(0));
+    // executeAsId forza ID ≥ 1 (max(1, $int)).
+    Assert::assertSame(1, $action->executeAsId(0));
     Assert::assertSame(99, SafeIntCastAction::cast('99'));
 });
 

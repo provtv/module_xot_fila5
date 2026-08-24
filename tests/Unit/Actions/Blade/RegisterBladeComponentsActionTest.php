@@ -8,8 +8,11 @@ use Mockery\MockInterface;
 use Modules\Xot\Actions\Blade\RegisterBladeComponentsAction;
 use Modules\Xot\Actions\File\GetComponentsAction;
 use Modules\Xot\Datas\ComponentFileData;
+use Modules\Xot\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 use Spatie\LaravelData\DataCollection;
+
+uses(TestCase::class)->group('no-xot-db');
 
 it('registers blade components correctly', function (): void {
     $path = 'some/path';

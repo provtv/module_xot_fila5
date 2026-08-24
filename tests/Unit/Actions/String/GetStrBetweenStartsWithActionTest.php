@@ -6,7 +6,7 @@ use Modules\Xot\Actions\String\GetStrBetweenStartsWithAction;
 use Modules\Xot\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
-uses(TestCase::class);
+uses(TestCase::class)->group('no-xot-db');
 
 it('extracts string between markers correctly', function (): void {
     $action = app(GetStrBetweenStartsWithAction::class);

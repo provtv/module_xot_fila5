@@ -76,9 +76,10 @@ describe('Module Business Logic', function (): void {
             'dependencies' => ['user', 'auth'],
         ]);
 
-        $dependencies = $module->dependencies;
+        $dependencies = $module->getAttribute('dependencies');
 
         Assert::assertIsArray($dependencies);
+        Assert::assertNotEmpty($dependencies);
         Assert::assertContains('user', $dependencies);
         Assert::assertContains('auth', $dependencies);
         Assert::assertCount(2, $dependencies);
@@ -114,7 +115,7 @@ describe('Module Business Logic', function (): void {
         /** @var array{setting1: string, setting2: string, nested: array{key: string}} $moduleConfig */
         $moduleConfig = $module->getAttribute('config');
 
-        Assert::assertIsArray($moduleConfig);
+        Assert::assertNotEmpty($moduleConfig);
         Assert::assertEquals('value1', $moduleConfig['setting1']);
         Assert::assertEquals('value2', $moduleConfig['setting2']);
         Assert::assertEquals('value', $moduleConfig['nested']['key']);
@@ -143,7 +144,7 @@ describe('Module Business Logic', function (): void {
         /** @var array{author: string, website: string, license: string, tags: string[]} $moduleMetadata */
         $moduleMetadata = $module->getAttribute('metadata');
 
-        Assert::assertIsArray($moduleMetadata);
+        Assert::assertNotEmpty($moduleMetadata);
         Assert::assertEquals('Test Author', $moduleMetadata['author']);
         Assert::assertEquals('https://example.com', $moduleMetadata['website']);
         Assert::assertEquals('MIT', $moduleMetadata['license']);
@@ -199,7 +200,7 @@ describe('Module Business Logic', function (): void {
         /** @var array<int, array{version: string, date: string, changes: string}> $moduleUpdateHistory */
         $moduleUpdateHistory = $module->getAttribute('update_history');
 
-        Assert::assertIsArray($moduleUpdateHistory);
+        Assert::assertNotEmpty($moduleUpdateHistory);
         Assert::assertCount(2, $moduleUpdateHistory);
         Assert::assertEquals('1.0.0', $moduleUpdateHistory[0]['version']);
         Assert::assertEquals('Initial release', $moduleUpdateHistory[0]['changes']);
@@ -232,7 +233,7 @@ describe('Module Business Logic', function (): void {
         /** @var string[] $modulePermissions */
         $modulePermissions = $module->getAttribute('permissions');
 
-        Assert::assertIsArray($modulePermissions);
+        Assert::assertNotEmpty($modulePermissions);
         Assert::assertContains('module.read', $modulePermissions);
         Assert::assertContains('module.write', $modulePermissions);
         Assert::assertContains('module.delete', $modulePermissions);
@@ -250,7 +251,7 @@ describe('Module Business Logic', function (): void {
         /** @var array<string, array{prefix: string, middleware: string[]}> $moduleRoutes */
         $moduleRoutes = $module->getAttribute('routes');
 
-        Assert::assertIsArray($moduleRoutes);
+        Assert::assertNotEmpty($moduleRoutes);
         Assert::assertArrayHasKey('web', $moduleRoutes);
         Assert::assertArrayHasKey('api', $moduleRoutes);
         Assert::assertEquals('module', $moduleRoutes['web']['prefix']);
@@ -269,7 +270,7 @@ describe('Module Business Logic', function (): void {
         /** @var array{css: string[], js: string[], images: string[]} $moduleAssets */
         $moduleAssets = $module->getAttribute('assets');
 
-        Assert::assertIsArray($moduleAssets);
+        Assert::assertNotEmpty($moduleAssets);
         Assert::assertArrayHasKey('css', $moduleAssets);
         Assert::assertArrayHasKey('js', $moduleAssets);
         Assert::assertArrayHasKey('images', $moduleAssets);
@@ -291,7 +292,7 @@ describe('Module Business Logic', function (): void {
         /** @var array{debug: bool, cache: bool, timeout: int, features: string[]} $moduleSettings */
         $moduleSettings = $module->getAttribute('settings');
 
-        Assert::assertIsArray($moduleSettings);
+        Assert::assertNotEmpty($moduleSettings);
         Assert::assertFalse($moduleSettings['debug']);
         Assert::assertTrue($moduleSettings['cache']);
         Assert::assertEquals(30, $moduleSettings['timeout']);
@@ -361,7 +362,7 @@ describe('Module Business Logic', function (): void {
         /** @var array{total_requests: int, unique_users: int, last_used: mixed, popular_features: string[]} $usage_statistics */
         $usage_statistics = $module->getAttribute('usage_statistics');
 
-        Assert::assertIsArray($usage_statistics);
+        Assert::assertNotEmpty($usage_statistics);
         Assert::assertEquals(1000, $usage_statistics['total_requests']);
         Assert::assertEquals(150, $usage_statistics['unique_users']);
         Assert::assertNotNull($usage_statistics['last_used']);
@@ -384,7 +385,7 @@ describe('Module Business Logic', function (): void {
         /** @var array<int, array{level: string, message: string, context: array{file: string, line: int}}> $module_error_log */
         $module_error_log = $module->getAttribute('error_log');
 
-        Assert::assertIsArray($module_error_log);
+        Assert::assertNotEmpty($module_error_log);
         Assert::assertCount(1, $module_error_log);
         Assert::assertEquals('error', $module_error_log[0]['level']);
         Assert::assertEquals('Test error message', $module_error_log[0]['message']);

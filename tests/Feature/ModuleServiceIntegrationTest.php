@@ -86,8 +86,8 @@ describe('ModuleAction Integration', function () {
         $models = $xotService->getModels();
 
         foreach ($models as $key => $modelClass) {
-            Assert::assertIsString($key);
-            Assert::assertIsString($modelClass);
+            Assert::assertNotEmpty($key);
+            Assert::assertNotEmpty($modelClass);
             Assert::assertTrue(str_contains($modelClass, 'Modules\\'));
         }
     });
@@ -184,8 +184,8 @@ describe('ModuleAction Integration', function () {
 
         // Validate that all keys are strings and all values are class strings
         foreach ($models as $key => $value) {
-            Assert::assertIsString($key);
-            Assert::assertIsString($value);
+            Assert::assertNotEmpty($key);
+            Assert::assertNotEmpty($value);
             Assert::assertGreaterThan(0, strlen($key));
             Assert::assertGreaterThan(0, strlen($value));
         }

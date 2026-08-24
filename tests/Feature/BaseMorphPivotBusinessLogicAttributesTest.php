@@ -20,7 +20,7 @@ describe('Base Morph Pivot Business Logic', function (): void {
         /** @var array<int, string> $pivotTags */
         $pivotTags = $pivot->getAttribute('tags');
 
-        Assert::assertIsArray($pivotTags);
+        Assert::assertNotEmpty($pivotTags);
         Assert::assertContains('tag1', $pivotTags);
         Assert::assertContains('tag2', $pivotTags);
         Assert::assertContains('important', $pivotTags);
@@ -39,7 +39,7 @@ describe('Base Morph Pivot Business Logic', function (): void {
         $pivotCategories = $pivot->getAttribute('categories');
 
         // Assert
-        Assert::assertIsArray($pivotCategories);
+        Assert::assertNotEmpty($pivotCategories);
         Assert::assertContains('category1', $pivotCategories);
         Assert::assertContains('category2', $pivotCategories);
         Assert::assertCount(2, $pivotCategories);
@@ -61,7 +61,7 @@ describe('Base Morph Pivot Business Logic', function (): void {
         $pivotPermissions = $pivot->getAttribute('permissions');
 
         // Assert
-        Assert::assertIsArray($pivotPermissions);
+        Assert::assertNotEmpty($pivotPermissions);
         Assert::assertTrue($pivotPermissions['read']);
         Assert::assertFalse($pivotPermissions['write']);
         Assert::assertFalse($pivotPermissions['delete']);
@@ -83,7 +83,7 @@ describe('Base Morph Pivot Business Logic', function (): void {
         $pivotSettings = $pivot->getAttribute('settings');
 
         // Assert
-        Assert::assertIsArray($pivotSettings);
+        Assert::assertNotEmpty($pivotSettings);
         Assert::assertTrue($pivotSettings['notifications']);
         Assert::assertFalse($pivotSettings['auto_save']);
         Assert::assertEquals(30, $pivotSettings['timeout']);

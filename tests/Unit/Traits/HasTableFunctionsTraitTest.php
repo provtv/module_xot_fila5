@@ -10,7 +10,7 @@ use Modules\Xot\Tests\Fixtures\Traits\HasTableFunctionsTraitProbe;
 use Modules\Xot\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
-uses(TestCase::class);
+uses(TestCase::class)->group('no-xot-db');
 
 it('gets table columns', function (): void {
     $probe = new HasTableFunctionsTraitProbe;

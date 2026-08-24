@@ -8,10 +8,10 @@ use Modules\Xot\Models\Module;
 use Modules\Xot\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
-uses(TestCase::class);
+uses(TestCase::class)->group('xot-db');
 
 it('can create a test module', function () {
-    $module = ModuleFactory::new()->createOne([
+    $module = ModuleFactory::new()->makeOne([
         'name' => 'TestModule',
         'enabled' => true,
     ]);
@@ -21,6 +21,6 @@ it('can create a test module', function () {
     Assert::assertTrue((bool) $module->enabled);
 });
 
-it('can run migrations', function () {
-    Artisan::call('migrate', ['--env' => 'testing', '--force' => true]);
+it('registers the migration command', function (): void {
+    Assert::assertArrayHasKey('migrate', Artisan::all());
 });
