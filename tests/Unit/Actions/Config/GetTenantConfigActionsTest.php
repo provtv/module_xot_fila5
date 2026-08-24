@@ -30,7 +30,7 @@ describe('Get Tenant Config Actions', function (): void {
 
         app()->instance(GetTenantConfigPathAction::class, $pathMock);
 
-        $result = (new GetTenantConfigArrayAction)->execute($configName);
+        $result = (new GetTenantConfigArrayAction())->execute($configName);
 
         Assert::assertSame($configData, $result);
         File::delete($tempPath);
@@ -41,7 +41,7 @@ describe('Get Tenant Config Actions', function (): void {
         $pathMock->method('execute')->willReturn('/path/to/nothing.php');
         app()->instance(GetTenantConfigPathAction::class, $pathMock);
 
-        $result = (new GetTenantConfigArrayAction)->execute('non_existent');
+        $result = (new GetTenantConfigArrayAction())->execute('non_existent');
 
         Assert::assertSame([], $result);
     });

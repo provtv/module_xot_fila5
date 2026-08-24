@@ -4,20 +4,17 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Tests\Unit;
 
-use Mockery;
 use Modules\Xot\Filament\Builders\ColumnBuilder;
 use Modules\Xot\Filament\Builders\FilterBuilder;
 use Modules\Xot\Filament\Support\ColumnBuilder as SupportColumnBuilder;
 use Modules\Xot\Filament\Support\RecordAnchor;
 use Modules\Xot\Tests\TestCase;
 use PHPUnit\Framework\Assert;
-use ReflectionClass;
-use ReflectionMethod;
 
 uses(TestCase::class)->group('no-xot-db');
 
 afterEach(function (): void {
-    Mockery::close();
+    \Mockery::close();
 });
 
 describe('Xot filament support hundred', function (): void {
@@ -27,7 +24,7 @@ describe('Xot filament support hundred', function (): void {
             if (! class_exists($class)) {
                 continue;
             }
-            $ref = new ReflectionClass($class);
+            $ref = new \ReflectionClass($class);
             $inst = null;
             if (! $ref->isAbstract()) {
                 try {
@@ -36,7 +33,7 @@ describe('Xot filament support hundred', function (): void {
                     $inst = null;
                 }
             }
-            foreach ($ref->getMethods(ReflectionMethod::IS_PUBLIC | ReflectionMethod::IS_PROTECTED | ReflectionMethod::IS_PRIVATE) as $method) {
+            foreach ($ref->getMethods(\ReflectionMethod::IS_PUBLIC | \ReflectionMethod::IS_PROTECTED | \ReflectionMethod::IS_PRIVATE) as $method) {
                 if ($method->getDeclaringClass()->getName() !== $class || str_starts_with($method->getName(), '__')) {
                     continue;
                 }
@@ -60,7 +57,7 @@ describe('Xot filament support hundred', function (): void {
                     }
                     if ($method->isStatic()) {
                         $method->invoke(null, ...$args);
-                    } elseif ($inst !== null) {
+                    } elseif (null !== $inst) {
                         $method->invoke($inst, ...$args);
                     }
                     ++$n;

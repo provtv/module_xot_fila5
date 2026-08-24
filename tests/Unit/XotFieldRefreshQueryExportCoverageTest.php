@@ -10,19 +10,16 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Process;
 use Illuminate\Support\Facades\Schema;
-use Mockery;
 use Modules\Xot\Exports\QueryExport;
 use Modules\Xot\Filament\Actions\Form\FieldRefreshAction;
 use Modules\Xot\Models\Cache as CacheModel;
 use Modules\Xot\Tests\TestCase;
 use PHPUnit\Framework\Assert;
-use ReflectionClass;
-use ReflectionMethod;
 
 uses(TestCase::class)->group('no-xot-db');
 
 afterEach(function (): void {
-    Mockery::close();
+    \Mockery::close();
 });
 
 final class XotRefreshRecord extends CacheModel
@@ -51,7 +48,7 @@ describe('Xot FieldRefresh QueryExport coverage', function (): void {
         }
 
         // Reflect setUp and action closure via invoking protected methods
-        $ref = new ReflectionClass(FieldRefreshAction::class);
+        $ref = new \ReflectionClass(FieldRefreshAction::class);
         $inst = null;
         try {
             $inst = FieldRefreshAction::make('title');
@@ -61,9 +58,9 @@ describe('Xot FieldRefresh QueryExport coverage', function (): void {
             } catch (\Throwable) {
             }
         }
-        if ($inst !== null) {
-            foreach ($ref->getMethods(ReflectionMethod::IS_PUBLIC | ReflectionMethod::IS_PROTECTED | ReflectionMethod::IS_PRIVATE) as $method) {
-                if ($method->getDeclaringClass()->getName() !== FieldRefreshAction::class) {
+        if (null !== $inst) {
+            foreach ($ref->getMethods(\ReflectionMethod::IS_PUBLIC | \ReflectionMethod::IS_PROTECTED | \ReflectionMethod::IS_PRIVATE) as $method) {
+                if (FieldRefreshAction::class !== $method->getDeclaringClass()->getName()) {
                     continue;
                 }
                 if (in_array($method->getName(), ['__construct', 'mount', 'render'], true)) {
@@ -75,12 +72,12 @@ describe('Xot FieldRefresh QueryExport coverage', function (): void {
                     foreach ($method->getParameters() as $param) {
                         if ($param->isDefaultValueAvailable()) {
                             $args[] = $param->getDefaultValue();
-                        } elseif ($param->getType() instanceof \ReflectionNamedType && $param->getType()->getName() === Set::class) {
-                            $set = Mockery::mock(Set::class);
+                        } elseif ($param->getType() instanceof \ReflectionNamedType && Set::class === $param->getType()->getName()) {
+                            $set = \Mockery::mock(Set::class);
                             $set->shouldReceive('__invoke')->zeroOrMoreTimes();
                             $args[] = $set;
                         } else {
-                            $args[] = new XotRefreshRecord;
+                            $args[] = new XotRefreshRecord();
                         }
                     }
                     $method->invoke($inst, ...$args);
@@ -128,9 +125,9 @@ describe('Xot FieldRefresh QueryExport coverage', function (): void {
         }
 
         $n = 0;
-        $ref = new ReflectionClass(QueryExport::class);
+        $ref = new \ReflectionClass(QueryExport::class);
         foreach ($ref->getMethods() as $method) {
-            if ($method->getDeclaringClass()->getName() !== QueryExport::class || str_starts_with($method->getName(), '__')) {
+            if (QueryExport::class !== $method->getDeclaringClass()->getName() || str_starts_with($method->getName(), '__')) {
                 continue;
             }
             try {

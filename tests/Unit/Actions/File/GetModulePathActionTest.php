@@ -10,13 +10,15 @@ use PHPUnit\Framework\Assert;
 
 uses(TestCase::class);
 
-beforeEach(function (): void { $this->markTestSkipped('fragile offline mocks File/Module/DB'); });
+beforeEach(function (): void {
+    $this->markTestSkipped('fragile offline mocks File/Module/DB');
+});
 
 it('gets module path from facade correctly', function (): void {
     // Spy on Module facade
     Module::partialMock()->allows([
         'getModulePath' => function (string $module): string {
-            return $module === 'Xot' ? '/path/to/Xot/' : '';
+            return 'Xot' === $module ? '/path/to/Xot/' : '';
         },
     ]);
 

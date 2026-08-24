@@ -19,7 +19,8 @@ uses(TestCase::class);
 
 function createXotBaseModelFixture(): BaseModel
 {
-    return new class extends BaseModel {};
+    return new class extends BaseModel {
+    };
 }
 
 describe('Xot Base Model Business Logic', function (): void {
@@ -85,7 +86,7 @@ describe('Xot Base Model Business Logic', function (): void {
 
     test('it can be used as base for other models', function (): void {
         // Arrange
-        $module = new Module;
+        $module = new Module();
 
         // Act & Assert
         Assert::assertInstanceOf(XotBaseModel::class, $module);

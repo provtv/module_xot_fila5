@@ -56,7 +56,7 @@ class XotBaseResourceForm
         return static function (Model $record) use ($titleAttribute): string {
             $title = $record->getAttribute($titleAttribute);
 
-            if (is_string($title) && $title !== '') {
+            if (is_string($title) && '' !== $title) {
                 return $title;
             }
 

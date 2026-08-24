@@ -76,7 +76,6 @@ describe('Get Pdf Content By Record Action', function (): void {
             protected $table = 'test_performance';
 
             protected $fillable = ['id', 'matr', 'cognome', 'nome'];
-
         };
 
         $record->setAttribute('id', 456);

@@ -43,7 +43,7 @@ final class XotBasePest
     /**
      * Riga presente sulla connessione indicata.
      *
-     * @param  array<string, mixed>  $where
+     * @param array<string, mixed> $where
      */
     public static function assertTableHas(string $connection, string $table, array $where): void
     {
@@ -53,7 +53,7 @@ final class XotBasePest
     /**
      * Riga assente sulla connessione indicata.
      *
-     * @param  array<string, mixed>  $where
+     * @param array<string, mixed> $where
      */
     public static function assertTableMissing(string $connection, string $table, array $where): void
     {
@@ -61,7 +61,7 @@ final class XotBasePest
     }
 
     /**
-     * @param  array<string, mixed>  $where
+     * @param array<string, mixed> $where
      */
     public static function tableQueryExists(string $connection, string $table, array $where): bool
     {
@@ -79,8 +79,9 @@ final class XotBasePest
      *
      * @template T of Model
      *
-     * @param  T  $model
-     * @param  class-string<T>  $class
+     * @param T               $model
+     * @param class-string<T> $class
+     *
      * @return T
      */
     public static function assertFreshModel(Model $model, string $class)
@@ -94,8 +95,9 @@ final class XotBasePest
     /**
      * @template T of Model
      *
-     * @param  EloquentCollection<int, T>|Collection<int, T>  $collection
-     * @param  class-string<T>  $class
+     * @param EloquentCollection<int, T>|Collection<int, T> $collection
+     * @param class-string<T>                               $class
+     *
      * @return T
      */
     public static function assertFirstModel(EloquentCollection|Collection $collection, string $class)
@@ -116,7 +118,7 @@ final class XotBasePest
     {
         Assert::assertNotEmpty($value);
 
-        /** @var array<string, mixed> $value */
+        /* @var array<string, mixed> $value */
         return $value;
     }
 
@@ -154,7 +156,7 @@ final class XotBasePest
     }
 
     /**
-     * @param  class-string<\Throwable>  $exceptionClass
+     * @param class-string<\Throwable> $exceptionClass
      */
     public static function assertThrows(callable $callback, string $exceptionClass): void
     {
@@ -170,7 +172,7 @@ final class XotBasePest
     }
 
     /**
-     * @param  list<string>|array<int, string>  $haystack
+     * @param list<string>|array<int, string> $haystack
      */
     public static function assertListContains(string $needle, array $haystack): void
     {
@@ -194,7 +196,7 @@ final class XotBasePest
      * Path del file che dichiara la classe: `getFileName()` può tornare `false`
      * per le classi interne, quindi l'assert è parte del contratto.
      *
-     * @param  class-string  $class
+     * @param class-string $class
      */
     public static function reflectionFilename(string $class): string
     {
@@ -208,7 +210,7 @@ final class XotBasePest
     /**
      * Sorgente della classe, per gli assert "il codice non contiene X".
      *
-     * @param  class-string  $class
+     * @param class-string $class
      */
     public static function reflectionSource(string $class): string
     {

@@ -6,7 +6,7 @@ use Modules\Xot\Helpers\XotSeedHelper;
 
 if (! function_exists('xotSeedModelOnce')) {
     /**
-     * @param  class-string  $modelClass
+     * @param class-string $modelClass
      */
     function xotSeedModelOnce(string $modelClass): void
     {

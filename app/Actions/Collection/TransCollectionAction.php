@@ -20,12 +20,13 @@ class TransCollectionAction
     /**
      * Esegue la traduzione di una collezione.
      *
-     * @param  Collection<int|string, mixed>  $collection
+     * @param Collection<int|string, mixed> $collection
+     *
      * @return Collection<int|string, string>
      */
     public function execute(Collection $collection, ?string $transKey): Collection
     {
-        if ($transKey === null) {
+        if (null === $transKey) {
             return $collection->map(SafeStringCastAction::cast(...));
         }
 
@@ -45,7 +46,7 @@ class TransCollectionAction
      */
     public function trans(string $item): string
     {
-        if (empty($item) || $this->transKey === null) {
+        if (empty($item) || null === $this->transKey) {
             return $item;
         }
 

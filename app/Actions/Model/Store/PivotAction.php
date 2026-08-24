@@ -16,7 +16,6 @@ class PivotAction
     {
         // Assert::isInstanceOf($rows = $relationDTO->rows, MorphToOne::class);
         throw new \RuntimeException('Removed debug dddx');
-
         /*
          *
          * $parent_panel = $this->panel->getParent();

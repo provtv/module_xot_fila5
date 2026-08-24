@@ -6,10 +6,6 @@ namespace Modules\Xot\Tests;
 
 use Illuminate\Database\Eloquent\Model;
 use PHPUnit\Framework\Assert;
-use ReflectionClass;
-use ReflectionMethod;
-use ReflectionNamedType;
-use SplFileInfo;
 
 use function Safe\posix_kill;
 use function Safe\preg_match;
@@ -20,7 +16,7 @@ use function Safe\preg_match;
 final class XotForkedInvoke
 {
     /**
-     * @param  list<string>  $denyMethodRegexes
+     * @param list<string> $denyMethodRegexes
      */
     public static function sweepClass(
         string $class,
@@ -32,7 +28,7 @@ final class XotForkedInvoke
             return 0;
         }
 
-        $ref = new ReflectionClass($class);
+        $ref = new \ReflectionClass($class);
 
         if ($ref->isInterface()) {
             return 0;
@@ -44,7 +40,7 @@ final class XotForkedInvoke
             return self::sweepEnum($class, $timeoutSeconds);
         }
 
-        if ($instance === null && ! $ref->isAbstract() && ! $ref->isTrait()) {
+        if (null === $instance && ! $ref->isAbstract() && ! $ref->isTrait()) {
             try {
                 $instance = $ref->newInstanceWithoutConstructor();
                 if ($instance instanceof Model) {
@@ -61,7 +57,7 @@ final class XotForkedInvoke
             }
         }
 
-        foreach ($ref->getMethods(ReflectionMethod::IS_PUBLIC | ReflectionMethod::IS_PROTECTED | ReflectionMethod::IS_PRIVATE) as $method) {
+        foreach ($ref->getMethods(\ReflectionMethod::IS_PUBLIC | \ReflectionMethod::IS_PROTECTED | \ReflectionMethod::IS_PRIVATE) as $method) {
             if ($method->getDeclaringClass()->getName() !== $class) {
                 continue;
             }
@@ -94,7 +90,7 @@ final class XotForkedInvoke
                     $method->setAccessible(true);
                     if ($method->isStatic()) {
                         $method->invoke(null, ...$args);
-                    } elseif ($instance !== null) {
+                    } elseif (null !== $instance) {
                         $method->invoke($instance, ...$args);
                     }
                 },
@@ -109,7 +105,7 @@ final class XotForkedInvoke
     }
 
     /**
-     * @param  class-string  $enumClass
+     * @param class-string $enumClass
      */
     private static function sweepEnum(string $enumClass, int $timeoutSeconds): int
     {
@@ -132,7 +128,7 @@ final class XotForkedInvoke
                 if (! method_exists($enumClass, $sm)) {
                     continue;
                 }
-                $method = new ReflectionMethod($enumClass, $sm);
+                $method = new \ReflectionMethod($enumClass, $sm);
                 if (self::invokeWithTimeout(static fn () => $method->invoke(null), $timeoutSeconds)) {
                     ++$executed;
                 }
@@ -147,7 +143,7 @@ final class XotForkedInvoke
     /**
      * @return list<mixed>
      */
-    public static function defaultArgs(ReflectionMethod $method): array
+    public static function defaultArgs(\ReflectionMethod $method): array
     {
         $args = [];
         foreach ($method->getParameters() as $param) {
@@ -158,21 +154,21 @@ final class XotForkedInvoke
             }
             $type = $param->getType();
             $name = $param->getName();
-            if ($type instanceof ReflectionNamedType) {
+            if ($type instanceof \ReflectionNamedType) {
                 $tn = $type->getName();
                 $args[] = match (true) {
-                    $tn === 'string' => str_contains(strtolower($name), 'class')
+                    'string' === $tn => str_contains(strtolower($name), 'class')
                         ? \Modules\Xot\Models\Cache::class
                         : (str_contains(strtolower($name), 'email') ? 'a@b.c' : 'test'),
-                    $tn === 'array' => [],
-                    $tn === 'bool' => true,
-                    $tn === 'int' => 1,
-                    $tn === 'float' => 1.0,
+                    'array' === $tn => [],
+                    'bool' === $tn => true,
+                    'int' === $tn => 1,
+                    'float' === $tn => 1.0,
                     is_a($tn, Model::class, true) => (static function () use ($tn): Model {
-                        if ($tn === Model::class || (new ReflectionClass($tn))->isAbstract()) {
-                            $m = new \Modules\Xot\Models\Cache;
+                        if (Model::class === $tn || (new \ReflectionClass($tn))->isAbstract()) {
+                            $m = new \Modules\Xot\Models\Cache();
                         } else {
-                            $m = new $tn;
+                            $m = new $tn();
                         }
                         $m->setRawAttributes(['id' => 1, 'key' => 'k', 'value' => 'v']);
 
@@ -201,7 +197,7 @@ final class XotForkedInvoke
         }
 
         $pid = pcntl_fork();
-        if ($pid === -1) {
+        if (-1 === $pid) {
             try {
                 $fn();
 
@@ -211,7 +207,7 @@ final class XotForkedInvoke
             }
         }
 
-        if ($pid === 0) {
+        if (0 === $pid) {
             // child
             pcntl_alarm($timeoutSeconds);
             try {
@@ -227,8 +223,8 @@ final class XotForkedInvoke
         $waited = 0;
         while ($waited < ($timeoutSeconds + 1) * 10) {
             $res = pcntl_waitpid($pid, $status, WNOHANG);
-            if ($res === -1 || $res > 0) {
-                return $res > 0 && is_int($status) && pcntl_wifexited($status) && pcntl_wexitstatus($status) === 0;
+            if (-1 === $res || $res > 0) {
+                return $res > 0 && is_int($status) && pcntl_wifexited($status) && 0 === pcntl_wexitstatus($status);
             }
             usleep(100_000);
             ++$waited;
@@ -240,8 +236,8 @@ final class XotForkedInvoke
     }
 
     /**
-     * @param  list<string>  $relativeDirs  relative to app/
-     * @param  list<string>  $denyMethodRegexes
+     * @param list<string> $relativeDirs      relative to app/
+     * @param list<string> $denyMethodRegexes
      */
     public static function sweepDirs(
         string $appRoot,
@@ -271,7 +267,7 @@ final class XotForkedInvoke
                 if (microtime(true) > $deadline) {
                     break 2;
                 }
-                if (! $file instanceof SplFileInfo || ! $file->isFile() || ! str_ends_with($file->getFilename(), '.php')) {
+                if (! $file instanceof \SplFileInfo || ! $file->isFile() || ! str_ends_with($file->getFilename(), '.php')) {
                     continue;
                 }
                 if (str_contains($file->getFilename(), '.php-cs-fixer') || str_contains($file->getFilename(), '.blade.')) {

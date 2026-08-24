@@ -5,11 +5,9 @@ declare(strict_types=1);
 namespace Modules\Xot\Tests\Unit;
 
 use Illuminate\Support\Facades\Artisan;
-use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Process;
 use Illuminate\Support\Facades\Request;
-use Mockery;
 use Modules\Xot\Actions\ArtisanAction;
 use Modules\Xot\Console\Commands\BuildTestSqliteCommand;
 use Modules\Xot\Console\Commands\ExecuteSqlFileCommand;
@@ -20,15 +18,13 @@ use Modules\Xot\Services\RouteService;
 use Modules\Xot\States\Transitions\XotBaseTransition;
 use Modules\Xot\Tests\TestCase;
 use PHPUnit\Framework\Assert;
-use ReflectionClass;
-use ReflectionMethod;
 use Symfony\Component\Console\Input\ArrayInput;
 use Symfony\Component\Console\Output\NullOutput;
 
 uses(TestCase::class)->group('no-xot-db');
 
 afterEach(function (): void {
-    Mockery::close();
+    \Mockery::close();
 });
 
 describe('Xot artisan commands helpers coverage', function (): void {
@@ -48,9 +44,9 @@ describe('Xot artisan commands helpers coverage', function (): void {
             }
         }
 
-        $ref = new ReflectionClass(ArtisanAction::class);
+        $ref = new \ReflectionClass(ArtisanAction::class);
         foreach ($ref->getMethods() as $method) {
-            if ($method->getDeclaringClass()->getName() !== ArtisanAction::class || str_starts_with($method->getName(), '__')) {
+            if (ArtisanAction::class !== $method->getDeclaringClass()->getName() || str_starts_with($method->getName(), '__')) {
                 continue;
             }
             try {
@@ -59,7 +55,7 @@ describe('Xot artisan commands helpers coverage', function (): void {
                 foreach ($method->getParameters() as $param) {
                     $args[] = $param->isDefaultValueAvailable()
                         ? $param->getDefaultValue()
-                        : ($param->getType() instanceof \ReflectionNamedType && $param->getType()->getName() === 'string' ? 'Xot' : null);
+                        : ($param->getType() instanceof \ReflectionNamedType && 'string' === $param->getType()->getName() ? 'Xot' : null);
                 }
                 if ($method->isStatic()) {
                     $method->invoke(null, ...$args);
@@ -86,7 +82,7 @@ describe('Xot artisan commands helpers coverage', function (): void {
                 continue;
             }
             try {
-                $ref = new ReflectionClass($class);
+                $ref = new \ReflectionClass($class);
                 $inst = $ref->isAbstract() ? null : $ref->newInstanceWithoutConstructor();
                 if ($inst instanceof \Illuminate\Console\Command) {
                     try {
@@ -94,7 +90,7 @@ describe('Xot artisan commands helpers coverage', function (): void {
                     } catch (\Throwable) {
                     }
                 }
-                foreach ($ref->getMethods(ReflectionMethod::IS_PUBLIC | ReflectionMethod::IS_PROTECTED | ReflectionMethod::IS_PRIVATE) as $method) {
+                foreach ($ref->getMethods(\ReflectionMethod::IS_PUBLIC | \ReflectionMethod::IS_PROTECTED | \ReflectionMethod::IS_PRIVATE) as $method) {
                     if ($method->getDeclaringClass()->getName() !== $class || str_starts_with($method->getName(), '__')) {
                         continue;
                     }
@@ -107,11 +103,11 @@ describe('Xot artisan commands helpers coverage', function (): void {
                         foreach ($method->getParameters() as $param) {
                             $args[] = $param->isDefaultValueAvailable()
                                 ? $param->getDefaultValue()
-                                : ($param->getType() instanceof \ReflectionNamedType && $param->getType()->getName() === 'string' ? 'Xot' : []);
+                                : ($param->getType() instanceof \ReflectionNamedType && 'string' === $param->getType()->getName() ? 'Xot' : []);
                         }
                         if ($method->isStatic()) {
                             $method->invoke(null, ...$args);
-                        } elseif ($inst !== null) {
+                        } elseif (null !== $inst) {
                             $method->invoke($inst, ...$args);
                         }
                         ++$n;
@@ -132,7 +128,7 @@ describe('Xot artisan commands helpers coverage', function (): void {
                         if ($def->hasOption('module')) {
                             $input['--module'] = 'Xot';
                         }
-                        $inst->run(new ArrayInput($input), new NullOutput);
+                        $inst->run(new ArrayInput($input), new NullOutput());
                         ++$n;
                     } catch (\Throwable) {
                         ++$n;

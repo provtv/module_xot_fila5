@@ -67,7 +67,7 @@ it('reports isPublished false when published_at is in the future', function (): 
 it('reports isActive correctly based on is_active flag', function (): void {
     $active = new HasCommonScopesProbe(['is_active' => true]);
     $inactive = new HasCommonScopesProbe(['is_active' => false]);
-    $unset = new HasCommonScopesProbe;
+    $unset = new HasCommonScopesProbe();
 
     Assert::assertTrue($active->isActive());
     Assert::assertFalse($inactive->isActive());
