@@ -27,7 +27,7 @@ final class BrokenAttributesModelForSafeArrayCast extends Model
      */
     public function attributesToArray(): array
     {
-        throw new ValueError('Mock error');
+        throw new \ValueError('Mock error');
     }
 
     /**
@@ -40,7 +40,7 @@ final class BrokenAttributesModelForSafeArrayCast extends Model
 
     public function getAttribute($key): mixed
     {
-        return $key === 'name' ? 'Fallback' : null;
+        return 'name' === $key ? 'Fallback' : null;
     }
 }
 

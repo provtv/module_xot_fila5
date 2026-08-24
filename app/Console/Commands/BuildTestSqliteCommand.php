@@ -8,12 +8,11 @@ use Illuminate\Console\Command;
 use Illuminate\Contracts\Config\Repository;
 use Illuminate\Support\Facades\DB;
 use Modules\Xot\Tests\XotBaseTestCase;
-use Throwable;
 
-use function Safe\unlink;
 use function Safe\glob;
 use function Safe\preg_replace;
 use function Safe\touch;
+use function Safe\unlink;
 
 /**
  * Costruisce lo schema del database SQLite usato dai test.
@@ -51,7 +50,7 @@ class BuildTestSqliteCommand extends Command
     {
         $target = $this->stringOption('path') ?? XotBaseTestCase::sharedSqlitePath();
 
-        if ($this->option('fresh') === true && file_exists($target)) {
+        if (true === $this->option('fresh') && file_exists($target)) {
             unlink($target);
         }
 
@@ -66,7 +65,7 @@ class BuildTestSqliteCommand extends Command
         $this->newLine();
         $this->info(sprintf('Tabelle in %s: %d', $target, $this->countTables($target)));
 
-        if ($failures === []) {
+        if ([] === $failures) {
             return self::SUCCESS;
         }
 
@@ -142,14 +141,14 @@ class BuildTestSqliteCommand extends Command
                     '--realpath' => true,
                 ]);
                 $this->line(sprintf('  %-32s <fg=green>ok</>', $module));
-            } catch (Throwable $e) {
+            } catch (\Throwable $e) {
                 // Una migration che inciampa ferma tutte quelle dopo di lei nella stessa
                 // directory: la prima volta è successo con `imports already exists`, e le
                 // tabelle `cache` e `model_has_roles` — dichiarate più avanti nella stessa
                 // cartella — non sono mai state create. Si riprova file per file.
                 $survivors = $this->migrateFileByFile($path);
 
-                if ($survivors === []) {
+                if ([] === $survivors) {
                     $this->line(sprintf('  %-32s <fg=green>ok</> (file per file)', $module));
                 } else {
                     $failures[$module] = $this->firstLine(implode('; ', $survivors));
@@ -186,7 +185,7 @@ class BuildTestSqliteCommand extends Command
                     '--path' => $file,
                     '--realpath' => true,
                 ]);
-            } catch (Throwable $e) {
+            } catch (\Throwable $e) {
                 $failed[] = basename($file).': '.$this->firstLine($e->getMessage());
             }
         }
@@ -199,7 +198,7 @@ class BuildTestSqliteCommand extends Command
         $pdo = new \PDO('sqlite:'.$target);
         $count = $pdo->query('SELECT count(*) FROM sqlite_master WHERE type = "table"');
 
-        return $count === false ? 0 : (int) $count->fetchColumn();
+        return false === $count ? 0 : (int) $count->fetchColumn();
     }
 
     private function firstLine(string $message): string
@@ -213,6 +212,6 @@ class BuildTestSqliteCommand extends Command
     {
         $value = $this->option($name);
 
-        return is_string($value) && $value !== '' ? $value : null;
+        return is_string($value) && '' !== $value ? $value : null;
     }
 }

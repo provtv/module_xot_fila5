@@ -6,7 +6,6 @@ namespace Modules\Xot\Tests\Unit;
 
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Process;
-use Mockery;
 use Modules\Xot\Filament\Forms\Components\XotBaseCheckboxList;
 use Modules\Xot\Filament\Forms\Components\XotBaseRadio;
 use Modules\Xot\Filament\Forms\Components\XotBaseSelect;
@@ -17,13 +16,11 @@ use Modules\Xot\Filament\Tables\Columns\XotBaseViewColumn;
 use Modules\Xot\Filament\Widgets\XotBaseWizardWidget;
 use Modules\Xot\Tests\TestCase;
 use PHPUnit\Framework\Assert;
-use ReflectionClass;
-use ReflectionMethod;
 
 uses(TestCase::class)->group('no-xot-db');
 
 afterEach(function (): void {
-    Mockery::close();
+    \Mockery::close();
 });
 
 final class XotAbsSelect3 extends XotBaseSelect
@@ -82,12 +79,12 @@ describe('Xot abstract Filament stubs', function (): void {
             try {
                 $inst = method_exists($class, 'make')
                     ? $class::make('field')
-                    : (new ReflectionClass($class))->newInstanceWithoutConstructor();
+                    : (new \ReflectionClass($class))->newInstanceWithoutConstructor();
                 Assert::assertIsObject($inst);
                 ++$n;
-                $parent = (new ReflectionClass($class))->getParentClass();
+                $parent = (new \ReflectionClass($class))->getParentClass();
                 if ($parent) {
-                    foreach ($parent->getMethods(ReflectionMethod::IS_PROTECTED | ReflectionMethod::IS_PUBLIC) as $method) {
+                    foreach ($parent->getMethods(\ReflectionMethod::IS_PROTECTED | \ReflectionMethod::IS_PUBLIC) as $method) {
                         if ($method->getDeclaringClass()->getName() !== $parent->getName()) {
                             continue;
                         }

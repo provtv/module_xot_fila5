@@ -41,6 +41,5 @@ test('save array action saves as json', function () {
 test('save array action throws exception for unsupported format', function (): void {
     $action = app(SaveArrayAction::class);
     expect(static fn (): bool => $action->execute(['foo' => 'bar'], 'file.txt', 'xml'))
-        ->toThrow(\InvalidArgumentException::class);
+        ->toThrow(InvalidArgumentException::class);
 });
-

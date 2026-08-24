@@ -52,6 +52,5 @@ class HtmlAction
             $formatter = new ExceptionFormatter($html2PdfException);
             throw new \RuntimeException('Removed debug dddx');
         }
-
     }
 }

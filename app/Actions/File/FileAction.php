@@ -14,12 +14,13 @@ use Modules\Xot\Actions\Arr\SaveArrayAction;
 use Modules\Xot\Actions\Cast\SafeStringCastAction;
 use Modules\Xot\Datas\XotData;
 use Nwidart\Modules\Facades\Module;
-use Spatie\QueueableAction\QueueableAction;
-use Webmozart\Assert\Assert;
 
 use function Safe\json_decode;
 use function Safe\realpath;
 use function Safe\scandir;
+
+use Spatie\QueueableAction\QueueableAction;
+use Webmozart\Assert\Assert;
 
 /**
  * Classe wrapper che raccoglie i metodi legacy di FileService in un'unica
@@ -35,7 +36,7 @@ class FileAction
     {
         try {
             $module_path = Module::getModulePath($moduleName);
-        } catch (Exception) {
+        } catch (\Exception) {
             $modulesPath = base_path('Modules');
             if (! File::exists($modulesPath)) {
                 return __DIR__.'/../../..';
@@ -115,8 +116,8 @@ class FileAction
 
                 try {
                     File::copy($filename_from, $filename_to);
-                } catch (Exception $e) {
-                    throw new Exception('message:['.$e->getMessage().']
+                } catch (\Exception $e) {
+                    throw new \Exception('message:['.$e->getMessage().']
                         path :['.$path.']
                         file from ['.$filename_from.']
                         file to ['.$filename_to.']', $e->getCode(), $e);
@@ -142,11 +143,11 @@ class FileAction
             if (isRunningTestBench()) {
                 return $path;
             }
-            throw new Exception('file ['.$filename_from.'] not Exists , path ['.$path.']');
+            throw new \Exception('file ['.$filename_from.'] not Exists , path ['.$path.']');
         }
 
         // dddx(app()->environment());// local
-        if (! File::exists($filename_to) || app()->environment() !== 'production') {
+        if (! File::exists($filename_to) || 'production' !== app()->environment()) {
             if (! File::exists(\dirname($filename_to))) {
                 File::makeDirectory(\dirname($filename_to), 0755, true, true);
             }
@@ -261,7 +262,7 @@ class FileAction
         if (! File::exists(\dirname($filename_pub))) {
             try {
                 File::makeDirectory(\dirname($filename_pub), 0755, true, true);
-            } catch (Exception $e) {
+            } catch (\Exception $e) {
                 throw new \RuntimeException('Caught exception: '.$e->getMessage().' ['.__LINE__.']['.class_basename(static::class).']', 0, $e);
             }
         }
@@ -270,7 +271,7 @@ class FileAction
             try {
                 // echo '<hr>'.$filename.' >>>>  '.$filename_pub; //4 debug
                 File::copy($filename, $filename_pub);
-            } catch (Exception $e) {
+            } catch (\Exception $e) {
                 throw new \RuntimeException('Caught exception: '.$e->getMessage().' ['.__LINE__.']['.class_basename(static::class).']', 0, $e);
             }
         } else {
@@ -310,7 +311,7 @@ class FileAction
         if (! File::exists(\dirname($filename_pub))) {
             try {
                 File::makeDirectory(\dirname($filename_pub), 0755, true, true);
-            } catch (Exception $e) {
+            } catch (\Exception $e) {
                 throw new \RuntimeException('Caught exception: '.$e->getMessage().' ['.__LINE__.']['.class_basename(static::class).']', 0, $e);
             }
         }
@@ -319,7 +320,7 @@ class FileAction
             try {
                 // echo '<hr>'.$filename.' >>>>  '.$filename_pub; //4 debug
                 File::copy($filename, $filename_pub);
-            } catch (Exception $e) {
+            } catch (\Exception $e) {
                 throw new \RuntimeException('Caught exception: '.$e->getMessage().' ['.__LINE__.']['.class_basename(static::class).']', 0, $e);
             }
         } else {
@@ -361,7 +362,7 @@ class FileAction
         if (! File::exists(\dirname($filename_pub))) {
             try {
                 File::makeDirectory(\dirname($filename_pub), 0755, true, true);
-            } catch (Exception $e) {
+            } catch (\Exception $e) {
                 throw new \RuntimeException('Caught exception: '.$e->getMessage().' ['.__LINE__.']['.class_basename(static::class).']', 0, $e);
             }
         }
@@ -370,7 +371,7 @@ class FileAction
             try {
                 // echo '<hr>'.$filename.' >>>>  '.$filename_pub; //4 debug
                 File::copy($filename, $filename_pub);
-            } catch (Exception $e) {
+            } catch (\Exception $e) {
                 throw new \RuntimeException('Caught exception: '.$e->getMessage().' ['.__LINE__.']['.class_basename(static::class).']', 0, $e);
             }
         }
@@ -408,7 +409,7 @@ class FileAction
         if (! File::exists($dir_to)) {
             try {
                 File::makeDirectory($dir_to, 0755, true, true);
-            } catch (Exception $e) {
+            } catch (\Exception $e) {
                 throw new \RuntimeException('Removed debug dddx');
             }
         }
@@ -422,7 +423,7 @@ class FileAction
         if (! File::exists($filename_to)) {
             try {
                 File::copy($filename_from, $filename_to);
-            } catch (Exception $e) {
+            } catch (\Exception $e) {
                 throw new \RuntimeException('Removed debug dddx');
             }
         }
@@ -441,7 +442,7 @@ class FileAction
         })->collapse()->first();
         */
         $ns_dir = self::getViewNameSpacePath($ns_name);
-        if ($ns_dir === null) {
+        if (null === $ns_dir) {
             return '#['.$key.']['.__LINE__.']['.class_basename(static::class).']';
         }
 
@@ -488,7 +489,7 @@ class FileAction
         if (! File::exists($dir_to)) {
             try {
                 File::makeDirectory($dir_to, 0755, true, true);
-            } catch (Exception $e) {
+            } catch (\Exception $e) {
                 throw new \RuntimeException('Caught exception: '.$e->getMessage().' ['.__LINE__.']['.class_basename(static::class).']', 0, $e);
             }
         }
@@ -513,7 +514,7 @@ class FileAction
         }
         try {
             File::copy($filename_from, $filename_to);
-        } catch (Exception $exception) {
+        } catch (\Exception $exception) {
             throw new \RuntimeException('Removed debug dddx');
         }
 
@@ -589,7 +590,8 @@ class FileAction
     // *
 
     /**
-     * @param  array<string>  $files
+     * @param array<string> $files
+     *
      * @return array<string>
      */
     public static function viewNamespaceToUrl(array $files): array
@@ -609,12 +611,12 @@ class FileAction
                     $viewNamespace = '---';
                 }
                 */
-                if ($hints === 'pub_theme') {
+                if ('pub_theme' === $hints) {
                     $tmp = str_replace(public_path(''), '', $viewNamespace);
                     $tmp = str_replace(\DIRECTORY_SEPARATOR, '/', $tmp);
                     $pos = mb_strpos($filename, '/');
-                    if ($pos === false) {
-                        throw new Exception('not found / on filename');
+                    if (false === $pos) {
+                        throw new \Exception('not found / on filename');
                     }
 
                     $filename0 = mb_substr($filename, 0, $pos);
@@ -631,7 +633,7 @@ class FileAction
                     if (! File::exists(\dirname($new_path))) {
                         try {
                             File::makeDirectory(\dirname($new_path), 0755, true, true);
-                        } catch (Exception $e) {
+                        } catch (\Exception $e) {
                             throw new \RuntimeException('Caught exception: '.$e->getMessage().' ['.__LINE__.']['.class_basename(static::class).']', 0, $e);
                         }
                     }
@@ -639,7 +641,7 @@ class FileAction
                     if (File::exists($old_path)) {
                         try {
                             File::copy($old_path, $new_path);
-                        } catch (Exception $e) {
+                        } catch (\Exception $e) {
                             throw new \RuntimeException('Caught exception: '.$e->getMessage().' ['.__LINE__.']['.class_basename(static::class).']', 0, $e);
                         }
                     }
@@ -717,7 +719,8 @@ class FileAction
     */
 
     /**
-     * @param  array<int, string>  $except
+     * @param array<int, string> $except
+     *
      * @return array<int, string>
      */
     public static function allDirectories(string $path, array $except = [], string $dir = ''): array
@@ -727,11 +730,11 @@ class FileAction
         foreach ($dirs as $v) {
             $v = SafeStringCastAction::cast($v);
             $name = Str::after($v, $path.\DIRECTORY_SEPARATOR);
-            $value = $dir === '' ? $name : $dir.\DIRECTORY_SEPARATOR.$name;
+            $value = '' === $dir ? $name : $dir.\DIRECTORY_SEPARATOR.$name;
             if (! \in_array($name, $except, false)) {
                 $data[] = $value;
                 $sub = self::allDirectories($v, $except, $value);
-                if ($sub !== []) {
+                if ([] !== $sub) {
                     $data = array_merge($data, $sub);
                 }
             }
@@ -763,7 +766,7 @@ class FileAction
 
         $data = File::getRequire($path);
         if (! \is_array($data)) {
-            throw new Exception('['.__LINE__.']['.class_basename(self::class).']');
+            throw new \Exception('['.__LINE__.']['.class_basename(self::class).']');
         }
 
         $value = Arr::get($data, $item);
@@ -784,11 +787,11 @@ class FileAction
             return $value;
         }
 
-        if ($value === null) {
+        if (null === $value) {
             return $value;
         }
 
-        throw new Exception('['.__LINE__.']['.class_basename(self::class).']');
+        throw new \Exception('['.__LINE__.']['.class_basename(self::class).']');
     }
 
     public static function viewPath(string $key): string
@@ -821,7 +824,7 @@ class FileAction
         if (! File::exists(\dirname($to))) {
             try {
                 File::makeDirectory(\dirname($to), 0755, true, true);
-            } catch (Exception $e) {
+            } catch (\Exception $e) {
                 throw new \RuntimeException('Caught exception: '.$e->getMessage().' ['.__LINE__.']['.class_basename(static::class).']', 0, $e);
             }
         }
@@ -837,8 +840,8 @@ class FileAction
         // not rewite
         try {
             File::copy($from, $to);
-        } catch (Exception $exception) {
-            throw new Exception('Unable to copy
+        } catch (\Exception $exception) {
+            throw new \Exception('Unable to copy
                     from ['.$from.']
                     to ['.$to.']
                     message ['.$exception->getMessage().']', $exception->getCode(), $exception);
@@ -881,7 +884,7 @@ class FileAction
         $from_value = self::config($from);
         $to_value = self::config($to);
 
-        if ($to_value !== null) {
+        if (null !== $to_value) {
             return;
         }
 
@@ -942,7 +945,7 @@ class FileAction
 
         $comps = [];
         foreach ($files as $file) {
-            if ($file->getExtension() === 'php') {
+            if ('php' === $file->getExtension()) {
                 $tmp = (object) [];
                 $class_name = $file->getFilenameWithoutExtension();
 
@@ -955,7 +958,7 @@ class FileAction
                 $relative_path = $file->getRelativePath();
                 Assert::string($relative_path = Str::replace('/', '\\', $relative_path), '['.__LINE__.']['.class_basename(static::class).']');
 
-                if ($relative_path !== '') {
+                if ('' !== $relative_path) {
                     $tmp->comp_name = '';
                     $piece = collect(explode('\\', $relative_path))
                         ->map(
@@ -997,7 +1000,7 @@ class FileAction
     {
         if ($binaryPrefix) {
             $unit = ['B', 'KiB', 'MiB', 'GiB', 'TiB', 'PiB'];
-            if ($bytes === 0) {
+            if (0 === $bytes) {
                 return '0 '.$unit[0];
             }
 
@@ -1005,7 +1008,7 @@ class FileAction
         }
 
         $unit = ['B', 'KB', 'MB', 'GB', 'TB', 'PB'];
-        if ($bytes === 0) {
+        if (0 === $bytes) {
             return '0 '.$unit[0];
         }
 
@@ -1015,7 +1018,7 @@ class FileAction
     /**
      * Undocumented function.
      *
-     * @param  class-string  $class_name
+     * @param class-string $class_name
      */
     public static function getFileNameByClassName(string $class_name): ?string
     {
@@ -1030,7 +1033,7 @@ class FileAction
         // } catch (\Exception $e) {
         //    return null;
         // }
-        if ($reflectionClass->getFileName() === false) {
+        if (false === $reflectionClass->getFileName()) {
             return null;
         }
 

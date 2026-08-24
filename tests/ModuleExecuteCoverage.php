@@ -5,13 +5,9 @@ declare(strict_types=1);
 namespace Modules\Xot\Tests;
 
 use Illuminate\Database\Eloquent\Model;
-use Mockery;
 use Modules\Xot\Actions\File\FileAction;
 use Modules\Xot\Datas\XotData;
 use PHPUnit\Framework\Assert;
-use ReflectionClass;
-use ReflectionMethod;
-use ReflectionNamedType;
 
 use function Safe\file;
 use function Safe\file_get_contents;
@@ -66,11 +62,7 @@ final class ModuleExecuteCoverage
      */
     public static function runFloor100(string $appRoot, string $moduleNamespace): void
     {
-        throw new \RuntimeException(
-            'ModuleExecuteCoverage::runFloor100 is banned (story 5.26 / quality gate). '
-            .'Write behavioral Pest tests with real assertions — coverage without intent is not poetry. '
-            .'See Modules/Xot/docs/coverage.md § anti-pattern ModuleExecuteCoverage.'
-        );
+        throw new \RuntimeException('ModuleExecuteCoverage::runFloor100 is banned (story 5.26 / quality gate). Write behavioral Pest tests with real assertions — coverage without intent is not poetry. See Modules/Xot/docs/coverage.md § anti-pattern ModuleExecuteCoverage.');
     }
 
     public static function testInvokeNonPublicMethods(string $appRoot, string $moduleNamespace, string $relativeDir): void
@@ -82,7 +74,7 @@ final class ModuleExecuteCoverage
                 continue;
             }
 
-            $ref = new ReflectionClass($class);
+            $ref = new \ReflectionClass($class);
             if ($ref->isAbstract() || $ref->isInterface() || $ref->isTrait() || $ref->isEnum()) {
                 continue;
             }
@@ -93,7 +85,7 @@ final class ModuleExecuteCoverage
                 $instance = self::instantiate($class);
             }
 
-            if ($instance === null) {
+            if (null === $instance) {
                 continue;
             }
 
@@ -101,7 +93,7 @@ final class ModuleExecuteCoverage
                 $instance->setRawAttributes(self::defaultModelAttributes());
             }
 
-            foreach ($ref->getMethods(ReflectionMethod::IS_PROTECTED | ReflectionMethod::IS_PRIVATE) as $method) {
+            foreach ($ref->getMethods(\ReflectionMethod::IS_PROTECTED | \ReflectionMethod::IS_PRIVATE) as $method) {
                 if ($method->getDeclaringClass()->getName() !== $class) {
                     continue;
                 }
@@ -171,7 +163,7 @@ final class ModuleExecuteCoverage
         ];
 
         foreach (ModuleBusinessCoverage::discoverPhpClasses($appRoot, $moduleNamespace, 'Filament') as $class) {
-            $ref = new ReflectionClass($class);
+            $ref = new \ReflectionClass($class);
             if ($ref->isAbstract() || $ref->isInterface() || $ref->isTrait()) {
                 continue;
             }
@@ -182,7 +174,7 @@ final class ModuleExecuteCoverage
                 }
 
                 try {
-                    $refMethod = new ReflectionMethod($class, $method);
+                    $refMethod = new \ReflectionMethod($class, $method);
                     if ($refMethod->isStatic()) {
                         if ($refMethod->getNumberOfRequiredParameters() > 0) {
                             continue;
@@ -206,7 +198,7 @@ final class ModuleExecuteCoverage
             }
 
             try {
-                $ref = new ReflectionClass($class);
+                $ref = new \ReflectionClass($class);
                 if ($ref->isAbstract()) {
                     continue;
                 }
@@ -220,7 +212,7 @@ final class ModuleExecuteCoverage
                 continue;
             }
 
-            foreach ($ref->getMethods(ReflectionMethod::IS_PUBLIC) as $method) {
+            foreach ($ref->getMethods(\ReflectionMethod::IS_PUBLIC) as $method) {
                 if ($method->isStatic() || str_starts_with($method->getName(), '__')) {
                     continue;
                 }
@@ -257,8 +249,8 @@ final class ModuleExecuteCoverage
             \Modules\Xot\Filament\Builders\ColumnBuilder::class,
             \Modules\Xot\Filament\Builders\FilterBuilder::class,
         ] as $class) {
-            $ref = new ReflectionClass($class);
-            foreach ($ref->getMethods(ReflectionMethod::IS_PUBLIC | ReflectionMethod::IS_STATIC) as $method) {
+            $ref = new \ReflectionClass($class);
+            foreach ($ref->getMethods(\ReflectionMethod::IS_PUBLIC | \ReflectionMethod::IS_STATIC) as $method) {
                 if (! $method->isStatic() || str_starts_with($method->getName(), '__')) {
                     continue;
                 }
@@ -298,8 +290,8 @@ final class ModuleExecuteCoverage
                 }
             }
 
-            $sourceFile = (new ReflectionClass($class))->getFileName();
-            if (is_string($sourceFile) && is_file($sourceFile) && preg_match('/^\s*dddx\s*\(/m', file_get_contents($sourceFile)) === 1) {
+            $sourceFile = (new \ReflectionClass($class))->getFileName();
+            if (is_string($sourceFile) && is_file($sourceFile) && 1 === preg_match('/^\s*dddx\s*\(/m', file_get_contents($sourceFile))) {
                 continue;
             }
 
@@ -396,8 +388,7 @@ final class ModuleExecuteCoverage
 
     public static function testXotBaseMigrationHelpers(): void
     {
-        $migration = new class extends \Modules\Xot\Database\Migrations\XotBaseMigration
-        {
+        $migration = new class extends \Modules\Xot\Database\Migrations\XotBaseMigration {
             protected ?string $model_class = \Modules\Xot\Models\Cache::class;
 
             public function up(): void
@@ -406,14 +397,14 @@ final class ModuleExecuteCoverage
         };
 
         $executed = 0;
-        $ref = new ReflectionClass($migration);
+        $ref = new \ReflectionClass($migration);
 
-        foreach ($ref->getMethods(ReflectionMethod::IS_PUBLIC) as $method) {
+        foreach ($ref->getMethods(\ReflectionMethod::IS_PUBLIC) as $method) {
             if ($method->isStatic() || str_starts_with($method->getName(), '__')) {
                 continue;
             }
 
-            if ($method->getDeclaringClass()->getName() !== \Modules\Xot\Database\Migrations\XotBaseMigration::class) {
+            if (\Modules\Xot\Database\Migrations\XotBaseMigration::class !== $method->getDeclaringClass()->getName()) {
                 continue;
             }
 
@@ -468,11 +459,11 @@ final class ModuleExecuteCoverage
                 continue;
             }
 
-            $ref = new ReflectionClass($class);
+            $ref = new \ReflectionClass($class);
             $sourceFile = $ref->getFileName();
             if (is_string($sourceFile) && is_file($sourceFile)) {
                 $source = file_get_contents($sourceFile);
-                if (preg_match('/^\s*dddx\s*\(/m', $source) === 1) {
+                if (1 === preg_match('/^\s*dddx\s*\(/m', $source)) {
                     ++$executed;
 
                     continue;
@@ -493,7 +484,7 @@ final class ModuleExecuteCoverage
 
                 if ($ref->hasMethod('handle')) {
                     $handle = $ref->getMethod('handle');
-                    if ($handle->getNumberOfRequiredParameters() === 0) {
+                    if (0 === $handle->getNumberOfRequiredParameters()) {
                         $handle->invoke($command);
                     }
                 }
@@ -518,16 +509,16 @@ final class ModuleExecuteCoverage
                 continue;
             }
 
-            $ref = new ReflectionClass($class);
+            $ref = new \ReflectionClass($class);
             $sourceFile = $ref->getFileName();
             if (is_string($sourceFile) && is_file($sourceFile)) {
                 $source = file_get_contents($sourceFile);
-                if (preg_match('/^\s*dddx\s*\(/m', $source) === 1) {
+                if (1 === preg_match('/^\s*dddx\s*\(/m', $source)) {
                     continue;
                 }
             }
 
-            foreach ($ref->getMethods(ReflectionMethod::IS_PUBLIC | ReflectionMethod::IS_STATIC) as $method) {
+            foreach ($ref->getMethods(\ReflectionMethod::IS_PUBLIC | \ReflectionMethod::IS_STATIC) as $method) {
                 if (! $method->isStatic() || str_starts_with($method->getName(), '__')) {
                     continue;
                 }
@@ -589,7 +580,7 @@ final class ModuleExecuteCoverage
 
             foreach (['getSearchable', 'getFormSchema', 'toArray', 'getColumnNames', 'getColumnDefinitions'] as $staticMethod) {
                 if (method_exists($class, $staticMethod)) {
-                    (new ReflectionMethod($class, $staticMethod))->invoke(null);
+                    (new \ReflectionMethod($class, $staticMethod))->invoke(null);
                 }
             }
         }
@@ -625,7 +616,7 @@ final class ModuleExecuteCoverage
 
             foreach (['getSearchable', 'getFormSchema', 'toArray', 'getColumnNames', 'getColumnDefinitions'] as $staticMethod) {
                 if (method_exists($class, $staticMethod)) {
-                    (new ReflectionMethod($class, $staticMethod))->invoke(null);
+                    (new \ReflectionMethod($class, $staticMethod))->invoke(null);
                 }
             }
         }
@@ -646,7 +637,7 @@ final class ModuleExecuteCoverage
                 continue;
             }
 
-            $ref = new ReflectionClass($class);
+            $ref = new \ReflectionClass($class);
             if ($ref->isAbstract()) {
                 try {
                     $class::query();
@@ -663,7 +654,7 @@ final class ModuleExecuteCoverage
                 $model->setRawAttributes(self::defaultModelAttributes());
                 ++$executed;
 
-                foreach ($ref->getMethods(ReflectionMethod::IS_PUBLIC) as $method) {
+                foreach ($ref->getMethods(\ReflectionMethod::IS_PUBLIC) as $method) {
                     if ($method->isStatic()) {
                         continue;
                     }
@@ -693,13 +684,13 @@ final class ModuleExecuteCoverage
 
                 try {
                     $query = $model::query();
-                    foreach ($ref->getMethods(ReflectionMethod::IS_PUBLIC) as $scopeMethod) {
+                    foreach ($ref->getMethods(\ReflectionMethod::IS_PUBLIC) as $scopeMethod) {
                         if (! $scopeMethod->isStatic()) {
                             continue;
                         }
 
                         $scope = $scopeMethod->getName();
-                        if ($scope === 'query') {
+                        if ('query' === $scope) {
                             continue;
                         }
 
@@ -748,7 +739,7 @@ final class ModuleExecuteCoverage
                 continue;
             }
 
-            $ref = new ReflectionClass($class);
+            $ref = new \ReflectionClass($class);
             if ($ref->isAbstract() || $ref->isInterface() || $ref->isTrait() || $ref->isEnum()) {
                 continue;
             }
@@ -759,7 +750,7 @@ final class ModuleExecuteCoverage
                 continue;
             }
 
-            if ($instance === null) {
+            if (null === $instance) {
                 continue;
             }
 
@@ -771,8 +762,8 @@ final class ModuleExecuteCoverage
                 }
 
                 try {
-                    $rm = new ReflectionMethod($instance, $method);
-                    if ($method === 'fromArray') {
+                    $rm = new \ReflectionMethod($instance, $method);
+                    if ('fromArray' === $method) {
                         if ($rm->isStatic()) {
                             $class::fromArray([]);
                         }
@@ -780,14 +771,14 @@ final class ModuleExecuteCoverage
                         continue;
                     }
 
-                    if ($rm->getNumberOfRequiredParameters() === 0) {
+                    if (0 === $rm->getNumberOfRequiredParameters()) {
                         $rm->invoke($instance);
                     }
                 } catch (\Throwable) {
                 }
             }
 
-            foreach ($ref->getMethods(ReflectionMethod::IS_PUBLIC) as $method) {
+            foreach ($ref->getMethods(\ReflectionMethod::IS_PUBLIC) as $method) {
                 if ($method->isStatic() || str_starts_with($method->getName(), '__')) {
                     continue;
                 }
@@ -815,9 +806,9 @@ final class ModuleExecuteCoverage
         $executed = 0;
 
         foreach (ModuleBusinessCoverage::discoverPhpClasses($appRoot, $moduleNamespace, $relativeDir) as $class) {
-            $ref = new ReflectionClass($class);
+            $ref = new \ReflectionClass($class);
             $sourceFile = $ref->getFileName();
-            if (is_string($sourceFile) && is_file($sourceFile) && preg_match('/^\s*dddx\s*\(/m', file_get_contents($sourceFile)) === 1) {
+            if (is_string($sourceFile) && is_file($sourceFile) && 1 === preg_match('/^\s*dddx\s*\(/m', file_get_contents($sourceFile))) {
                 continue;
             }
 
@@ -827,11 +818,11 @@ final class ModuleExecuteCoverage
                 continue;
             }
 
-            if ($instance === null) {
+            if (null === $instance) {
                 continue;
             }
 
-            foreach ($ref->getMethods(ReflectionMethod::IS_PUBLIC) as $method) {
+            foreach ($ref->getMethods(\ReflectionMethod::IS_PUBLIC) as $method) {
                 if ($method->isStatic() || str_starts_with($method->getName(), '__')) {
                     continue;
                 }
@@ -863,7 +854,7 @@ final class ModuleExecuteCoverage
         foreach (ModuleBusinessCoverage::discoverPhpClasses($appRoot, $moduleNamespace, 'Transformers') as $class) {
             try {
                 $instance = self::instantiate($class);
-                if ($instance === null) {
+                if (null === $instance) {
                     continue;
                 }
 
@@ -873,8 +864,8 @@ final class ModuleExecuteCoverage
                     }
 
                     try {
-                        $ref = new ReflectionMethod($instance, $method);
-                        if ($ref->getNumberOfRequiredParameters() === 0) {
+                        $ref = new \ReflectionMethod($instance, $method);
+                        if (0 === $ref->getNumberOfRequiredParameters()) {
                             $ref->invoke($instance);
                         }
                         ++$executed;
@@ -896,7 +887,7 @@ final class ModuleExecuteCoverage
 
         foreach (ModuleBusinessCoverage::discoverPhpClasses($appRoot, $moduleNamespace, 'Filament') as $class) {
             try {
-                $ref = new ReflectionClass($class);
+                $ref = new \ReflectionClass($class);
                 if ($ref->isAbstract() || $ref->isInterface() || $ref->isTrait()) {
                     continue;
                 }
@@ -909,8 +900,8 @@ final class ModuleExecuteCoverage
                             continue;
                         }
                         try {
-                            $rm = new ReflectionMethod($class, $staticMethod);
-                            if ($rm->getNumberOfRequiredParameters() === 0) {
+                            $rm = new \ReflectionMethod($class, $staticMethod);
+                            if (0 === $rm->getNumberOfRequiredParameters()) {
                                 $rm->invoke(null);
                             }
                         } catch (\Throwable) {
@@ -955,7 +946,7 @@ final class ModuleExecuteCoverage
                 continue;
             }
 
-            $ref = new ReflectionClass($class);
+            $ref = new \ReflectionClass($class);
             if ($ref->isAbstract()) {
                 continue;
             }
@@ -1040,7 +1031,7 @@ final class ModuleExecuteCoverage
      */
     private static array $dddxMethodCache = [];
 
-    private static function methodCallsDddx(ReflectionMethod $method): bool
+    private static function methodCallsDddx(\ReflectionMethod $method): bool
     {
         $cacheKey = $method->getDeclaringClass()->getName().'::'.$method->getName();
         if (isset(self::$dddxMethodCache[$cacheKey])) {
@@ -1048,7 +1039,7 @@ final class ModuleExecuteCoverage
         }
 
         $file = $method->getFileName();
-        if ($file === false || ! is_readable($file)) {
+        if (false === $file || ! is_readable($file)) {
             return self::$dddxMethodCache[$cacheKey] = false;
         }
 
@@ -1072,15 +1063,16 @@ final class ModuleExecuteCoverage
     }
 
     /**
-     * @param  ReflectionClass<Model>  $ref
+     * @param \ReflectionClass<Model> $ref
+     *
      * @return array<string, list<mixed>>
      */
-    private static function discoverLocalScopes(ReflectionClass $ref): array
+    private static function discoverLocalScopes(\ReflectionClass $ref): array
     {
         $scopes = [];
 
         // Laravel scopes can be protected *or* public (module conventions vary).
-        foreach ($ref->getMethods(ReflectionMethod::IS_PROTECTED | ReflectionMethod::IS_PUBLIC) as $method) {
+        foreach ($ref->getMethods(\ReflectionMethod::IS_PROTECTED | \ReflectionMethod::IS_PUBLIC) as $method) {
             $name = $method->getName();
             if (! str_starts_with($name, 'scope') || $method->getDeclaringClass()->getName() !== $ref->getName()) {
                 continue;
@@ -1129,7 +1121,7 @@ final class ModuleExecuteCoverage
     /**
      * @return list<mixed>
      */
-    private static function defaultArgsForMethod(ReflectionMethod $method): array
+    private static function defaultArgsForMethod(\ReflectionMethod $method): array
     {
         $args = [];
 
@@ -1143,7 +1135,7 @@ final class ModuleExecuteCoverage
             $type = $param->getType();
             $name = $param->getName();
 
-            if ($type instanceof ReflectionNamedType && ! $type->isBuiltin()) {
+            if ($type instanceof \ReflectionNamedType && ! $type->isBuiltin()) {
                 $typeName = $type->getName();
                 if (enum_exists($typeName)) {
                     $cases = $typeName::cases();
@@ -1151,10 +1143,10 @@ final class ModuleExecuteCoverage
 
                     continue;
                 }
-                if (is_subclass_of($typeName, Model::class) || $typeName === Model::class) {
-                    $modelRef = new ReflectionClass($typeName);
+                if (is_subclass_of($typeName, Model::class) || Model::class === $typeName) {
+                    $modelRef = new \ReflectionClass($typeName);
                     if ($modelRef->isAbstract()) {
-                        $args[] = Mockery::mock($typeName);
+                        $args[] = \Mockery::mock($typeName);
 
                         continue;
                     }
@@ -1175,7 +1167,7 @@ final class ModuleExecuteCoverage
                 continue;
             }
 
-            if ($type instanceof ReflectionNamedType) {
+            if ($type instanceof \ReflectionNamedType) {
                 $args[] = match ($type->getName()) {
                     'array' => [],
                     'string' => 'test',
@@ -1195,7 +1187,7 @@ final class ModuleExecuteCoverage
     }
 
     /**
-     * @param  class-string  $class
+     * @param class-string $class
      */
     private static function instantiate(string $class, int $depth = 0): ?object
     {
@@ -1203,13 +1195,13 @@ final class ModuleExecuteCoverage
             return null;
         }
 
-        $ref = new ReflectionClass($class);
+        $ref = new \ReflectionClass($class);
         if ($ref->isAbstract() || $ref->isInterface() || $ref->isTrait() || $ref->isEnum()) {
             return null;
         }
 
         $ctor = $ref->getConstructor();
-        if ($ctor === null) {
+        if (null === $ctor) {
             try {
                 return $ref->newInstance();
             } catch (\Throwable) {
@@ -1226,7 +1218,7 @@ final class ModuleExecuteCoverage
             }
 
             $type = $param->getType();
-            if ($type instanceof ReflectionNamedType && ! $type->isBuiltin()) {
+            if ($type instanceof \ReflectionNamedType && ! $type->isBuiltin()) {
                 $dependencyClass = $type->getName();
                 $args[] = class_exists($dependencyClass) ? self::instantiate($dependencyClass, $depth + 1) : null;
 

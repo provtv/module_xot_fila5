@@ -7,13 +7,8 @@ namespace Modules\Xot\Actions\ModelClass;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\MorphPivot;
 use Illuminate\Database\Eloquent\Relations\Pivot;
-use Illuminate\Support\Str;
-use Modules\Xot\Actions\Cast\SafeStringCastAction;
-use Modules\Xot\Actions\ModelClass\GuessPivotFullClassAction;
 use Spatie\QueueableAction\QueueableAction;
 use Webmozart\Assert\Assert;
-
-use function Safe\file;
 
 class GuessMorphPivotAction
 {
@@ -23,7 +18,7 @@ class GuessMorphPivotAction
      * Guess the pivot class for a many-to-many relationship.
      *
      * @param string|class-string<Model> $related The related model class name
-     * @param string|class-string<Model> $class   The class 
+     * @param string|class-string<Model> $class   The class
      */
     public function execute(string $related, string $class): MorphPivot
     {
@@ -35,6 +30,4 @@ class GuessMorphPivotAction
 
         return $pivot;
     }
-
-   
 }

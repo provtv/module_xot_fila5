@@ -10,16 +10,16 @@ use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\ServiceProvider;
 use Mockery\MockInterface;
+use Modules\User\Database\Factories\UserFactory;
+use Modules\User\Models\User;
+use Modules\Xot\Actions\Cast\SafeEloquentCastAction;
+use Modules\Xot\States\Transitions\XotBaseTransition;
 use PHPUnit\Framework\Assert;
 
+use function Safe\file_get_contents;
 use function Safe\rmdir;
 use function Safe\scandir;
 use function Safe\unlink;
-use function Safe\file_get_contents;
-use Modules\Xot\States\Transitions\XotBaseTransition;
-use Modules\Xot\Actions\Cast\SafeEloquentCastAction;
-use Modules\User\Models\User;
-use Modules\User\Database\Factories\UserFactory;
 
 /**
  * Base test case for Xot module.
@@ -30,19 +30,20 @@ use Modules\User\Database\Factories\UserFactory;
  * DatabaseTransactions handles rollback between tests.
  *
  * @property object|null $action
- * @property Model|null $model
+ * @property Model|null  $model
  * @property object|null $service
  * @property string|null $tempDir
  * @property object|null $record
  * @property object|null $transition
  * @property object|null $resource
- * @property Model|null $testModel
+ * @property Model|null  $testModel
  * @property object|null $extraClass
- * @property Model|null $baseModel
+ * @property Model|null  $baseModel
  * @property string|null $testDir
  */
 abstract class TestCase extends XotBaseTestCase
 {
+    use DatabaseTransactions;
 
     /**
      * Fixture condivisa per i test di SafeEloquentCastAction.
@@ -51,8 +52,7 @@ abstract class TestCase extends XotBaseTestCase
      */
     public static function safeEloquentCastFixture(): array
     {
-        $model = new class extends Model
-        {
+        $model = new class extends Model {
             /** @var array<string, mixed> */
             protected $attributes = [
                 'name' => 'Mario',
@@ -79,14 +79,12 @@ abstract class TestCase extends XotBaseTestCase
         /** @var User $record */
         $record = UserFactory::new()->make();
 
-        $transition = new class($record) extends XotBaseTransition
-        {
+        $transition = new class($record) extends XotBaseTransition {
             public static string $name = 'test_transition';
         };
 
         return [$record, $transition];
     }
-    use DatabaseTransactions;
 
     /** @var list<string> */
     protected $connectionsToTransact = ['sqlite', 'user', 'tenant', 'xot'];
@@ -146,9 +144,9 @@ abstract class TestCase extends XotBaseTestCase
     protected function shouldSkipForMissingXotDb(): bool
     {
         $testFile = $this->resolvePestTestFile();
-        $isUnit = $testFile !== null && str_contains($testFile, '/tests/Unit/');
+        $isUnit = null !== $testFile && str_contains($testFile, '/tests/Unit/');
         $isXotDbGroup = false;
-        if ($testFile !== null && is_file($testFile)) {
+        if (null !== $testFile && is_file($testFile)) {
             $source = file_get_contents($testFile);
             if (str_contains($source, "group('no-xot-db')")) {
                 return false;
@@ -181,7 +179,7 @@ abstract class TestCase extends XotBaseTestCase
 
         $file = (new \ReflectionClass($this))->getFileName();
 
-        return $file !== false ? $file : null;
+        return false !== $file ? $file : null;
     }
 
     /**
@@ -201,7 +199,8 @@ abstract class TestCase extends XotBaseTestCase
     /**
      * @template T of object
      *
-     * @param  class-string<T>  $class
+     * @param class-string<T> $class
+     *
      * @return T
      */
     public function getAction(string $class): object
@@ -217,8 +216,9 @@ abstract class TestCase extends XotBaseTestCase
     /**
      * @template T of object
      *
-     * @param  class-string<T>  $abstract
-     * @param  (\Closure(MockInterface&T): void)|null  $callback
+     * @param class-string<T>                        $abstract
+     * @param (\Closure(MockInterface&T): void)|null $callback
+     *
      * @return MockInterface&T
      */
     public function mockService(string $abstract, ?\Closure $callback = null): MockInterface
@@ -230,7 +230,7 @@ abstract class TestCase extends XotBaseTestCase
     }
 
     /**
-     * @param  class-string<\Throwable>  $exception
+     * @param class-string<\Throwable> $exception
      */
     public function expectThrowable(string $exception): void
     {
@@ -265,7 +265,7 @@ abstract class TestCase extends XotBaseTestCase
         $files = scandir($dir);
 
         foreach ($files as $file) {
-            if ($file === '.' || $file === '..') {
+            if ('.' === $file || '..' === $file) {
                 continue;
             }
 

@@ -25,7 +25,7 @@ class FieldRefreshAction extends XotBaseAction
             ->tooltip('Ricalcola valore')
             ->action(function (mixed $record, Set $set): void {
                 $name = $this->getName();
-                if (! is_string($name) || $name === '') {
+                if (! is_string($name) || '' === $name) {
                     Notification::make()
                         ->title('Errore')
                         ->body('Nome campo non valido')

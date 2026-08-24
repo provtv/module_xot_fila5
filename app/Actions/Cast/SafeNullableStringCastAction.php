@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Actions\Cast;
 
-use Modules\Xot\Actions\Cast\SafeStringCastAction;
-
 final class SafeNullableStringCastAction
 {
     public function execute(mixed $value): ?string

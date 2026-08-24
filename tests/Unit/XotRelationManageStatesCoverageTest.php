@@ -38,12 +38,12 @@ final class XotCovRelationHost extends CacheModel
 
     public function guessPivot(string $related, ?string $class = null): Pivot
     {
-        return new XotCovPivot;
+        return new XotCovPivot();
     }
 
     public function guessMorphPivot(string $related, ?string $_class = null): MorphPivot
     {
-        return new XotCovMorphPivot;
+        return new XotCovMorphPivot();
     }
 }
 
@@ -91,7 +91,7 @@ describe('Xot RelationX ManageRelated StatesChart', function (): void {
             $t->timestamps();
         });
 
-        $host = new XotCovRelationHost;
+        $host = new XotCovRelationHost();
         $host->forceFill(['id' => 1, 'key' => 'k', 'value' => 'v']);
         $host->exists = true;
 

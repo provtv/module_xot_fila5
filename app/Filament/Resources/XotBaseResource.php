@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Filament\Resources;
 
-use Exception;
 use Filament\Pages\Enums\SubNavigationPosition;
 use Filament\Resources\Pages\Page;
 use Filament\Resources\Pages\PageRegistration;
@@ -30,10 +29,10 @@ use Modules\Xot\Filament\Resources\Schemas\XotBaseResourceForm;
 use Modules\Xot\Filament\Resources\Schemas\XotBaseResourceInfolist;
 use Modules\Xot\Filament\Resources\Tables\XotBaseResourceTable;
 use Modules\Xot\Filament\Traits\NavigationLabelTrait;
-use ReflectionClass;
-use Webmozart\Assert\Assert;
 
 use function Safe\glob;
+
+use Webmozart\Assert\Assert;
 
 /**
  * @method static string getUrl(?string $name = null, array<string, mixed> $parameters = [], bool $isAbsolute = true, ?string $panel = null, ?\Illuminate\Database\Eloquent\Model $tenant = null, bool $shouldGuessMissingParameters = false, ?string $configuration = null)
@@ -47,7 +46,7 @@ abstract class XotBaseResource extends FilamentResource
     protected static ?SubNavigationPosition $subNavigationPosition = SubNavigationPosition::Top;
 
     /**
-     * @param  array<string, bool|float|int|string|null>  $params
+     * @param array<string, bool|float|int|string|null> $params
      */
     public static function trans(string $key, bool $exceptionIfNotExist = false, array $params = []): string
     {
@@ -56,7 +55,7 @@ abstract class XotBaseResource extends FilamentResource
 
         if (is_string($res)) {
             if ($exceptionIfNotExist && $res === $tmp) {
-                throw new Exception('['.__LINE__.']['.class_basename(self::class).']');
+                throw new \Exception('['.__LINE__.']['.class_basename(self::class).']');
             }
 
             return $res;
@@ -87,7 +86,7 @@ abstract class XotBaseResource extends FilamentResource
      */
     public static function getModel(): string
     {
-        if (static::$model !== null) {
+        if (null !== static::$model) {
             $res = static::$model;
             Assert::subclassOf(
                 $res,
@@ -150,11 +149,13 @@ abstract class XotBaseResource extends FilamentResource
         $formClass = static::class.'\Schemas\\'.class_basename(static::getModel()).'Form';
         if (class_exists($formClass)) {
             Assert::subclassOf($formClass, XotBaseResourceForm::class);
-            return $formClass;    
+
+            return $formClass;
         }
-        $class1=app(GetResourceClassNameByModelClassAction::class)->execute(static::getModel());
+        $class1 = app(GetResourceClassNameByModelClassAction::class)->execute(static::getModel());
         $class1 = $class1.'\Schemas\\'.class_basename(static::getModel()).'Form';
         Assert::subclassOf($class1, XotBaseResourceForm::class);
+
         return $class1;
     }
 
@@ -162,7 +163,7 @@ abstract class XotBaseResource extends FilamentResource
     {
         $formClass = static::getFormClass();
         $configured = $formClass::configure($schema);
-        
+
         Assert::isInstanceOf($configured, Schema::class);
 
         return $configured;
@@ -180,10 +181,11 @@ abstract class XotBaseResource extends FilamentResource
         $class = static::class.'\Tables\\'.Str::plural(class_basename(static::getModel())).'Table';
         if (class_exists($class)) {
             Assert::subclassOf($class, XotBaseResourceTable::class);
+
             return $class;
         }
 
-        $class1=app(GetResourceClassNameByModelClassAction::class)->execute(static::getModel());
+        $class1 = app(GetResourceClassNameByModelClassAction::class)->execute(static::getModel());
         $class1 = $class1.'\Tables\\'.Str::plural(class_basename(static::getModel())).'Table';
         Assert::subclassOf($class1, XotBaseResourceTable::class);
 
@@ -227,11 +229,13 @@ abstract class XotBaseResource extends FilamentResource
         $class = static::class.'\Schemas\\'.class_basename(static::getModel()).'Infolist';
         if (class_exists($class)) {
             Assert::subclassOf($class, XotBaseResourceInfolist::class);
-            return $class;    
+
+            return $class;
         }
-        $class1=app(GetResourceClassNameByModelClassAction::class)->execute(static::getModel());
+        $class1 = app(GetResourceClassNameByModelClassAction::class)->execute(static::getModel());
         $class1 = $class1.'\Schemas\\'.class_basename(static::getModel()).'Infolist';
         Assert::subclassOf($class1, XotBaseResourceInfolist::class);
+
         return $class1;
     }
 
@@ -268,7 +272,7 @@ abstract class XotBaseResource extends FilamentResource
             $count = app(CountAction::class)->execute(static::getModel());
 
             return number_format($count, 0).'';
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
             return '--';
         }
     }
@@ -312,7 +316,7 @@ abstract class XotBaseResource extends FilamentResource
      */
     public static function getRelations(): array
     {
-        $reflector = new ReflectionClass(static::class);
+        $reflector = new \ReflectionClass(static::class);
         $filename = $reflector->getFileName();
         Assert::string($filename, __FILE__.':'.__LINE__.' - '.class_basename(self::class));
 
@@ -325,7 +329,7 @@ abstract class XotBaseResource extends FilamentResource
         $filesResult = glob($path.\DIRECTORY_SEPARATOR.'*RelationManager.php');
 
         // PHPStan: glob() with valid pattern returns array
-        if ($filesResult === []) {
+        if ([] === $filesResult) {
             return [];
         }
 
@@ -354,7 +358,7 @@ abstract class XotBaseResource extends FilamentResource
     {
         $submitView = 'pub_theme::filament.wizard.submit-button';
         if (! View::exists($submitView)) {
-            throw new Exception("View {$submitView} does not exist");
+            throw new \Exception("View {$submitView} does not exist");
         }
         $render = View::make($submitView)->render();
 

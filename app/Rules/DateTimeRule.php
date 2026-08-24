@@ -16,7 +16,7 @@ use function Safe\preg_replace;
 class DateTimeRule implements ValidationRule
 {
     /**
-     * @param  \Closure(string, ?string=): PotentiallyTranslatedString  $fail
+     * @param \Closure(string, ?string=): PotentiallyTranslatedString $fail
      */
     public function validate(string $attribute, mixed $value, \Closure $fail): void
     {
@@ -35,7 +35,7 @@ class DateTimeRule implements ValidationRule
     }
 
     /**
-     * @deprecated Implementa {@see ValidationRule} — mantenuto per compatibilità call site legacy.
+     * @deprecated implementa {@see ValidationRule} — mantenuto per compatibilità call site legacy
      */
     public function passes(mixed $attribute, mixed $value): bool
     {

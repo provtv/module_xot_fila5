@@ -11,7 +11,6 @@ use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Process;
 use Illuminate\Support\Facades\Queue;
-use Mockery;
 use Modules\Xot\Exceptions\Handlers\HandlersRepository;
 use Modules\Xot\Http\Middleware\SecurityMiddleware;
 use Modules\Xot\Tests\TestCase;
@@ -22,7 +21,7 @@ use Symfony\Component\HttpKernel\Exception\HttpException;
 uses(TestCase::class)->group('no-xot-db');
 
 afterEach(function (): void {
-    Mockery::close();
+    \Mockery::close();
 });
 
 describe('Xot security handlers deep', function (): void {
@@ -34,7 +33,7 @@ describe('Xot security handlers deep', function (): void {
         Log::shouldReceive('debug')->zeroOrMoreTimes();
         Log::shouldReceive('error')->zeroOrMoreTimes();
 
-        $mw = new SecurityMiddleware;
+        $mw = new SecurityMiddleware();
         $next = static fn (Request $r): Response => new Response('ok', 200);
         $response = $mw->handle(Request::create('/health', 'GET'), $next);
 
@@ -53,7 +52,7 @@ describe('Xot security handlers deep', function (): void {
         $request = Request::create('/api/flood', 'GET', [], [], [], ['REMOTE_ADDR' => $ip]);
 
         try {
-            (new SecurityMiddleware)->handle($request, static fn (): Response => new Response('ok'));
+            (new SecurityMiddleware())->handle($request, static fn (): Response => new Response('ok'));
             Assert::fail('The request exceeded the configured IP rate limit.');
         } catch (HttpException $exception) {
             Assert::assertSame(429, $exception->getStatusCode());
@@ -67,7 +66,7 @@ describe('Xot security handlers deep', function (): void {
         Queue::fake();
         Process::fake();
 
-        $repo = new HandlersRepository;
+        $repo = new HandlersRepository();
         $repo->addReporter(static function (\InvalidArgumentException $e): void {
         });
         $repo->addReporter(static function (\Throwable $e): void {

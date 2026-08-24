@@ -13,7 +13,8 @@ use PHPUnit\Framework\Assert;
 uses(TestCase::class)->group('no-xot-db');
 
 /**
- * @param  MockInterface&Table  $tableMock
+ * @param MockInterface&Table $tableMock
+ *
  * @return MockInterface&Table
  */
 function stubTableChain(MockInterface $tableMock): MockInterface

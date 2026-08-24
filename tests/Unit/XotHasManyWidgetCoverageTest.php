@@ -12,20 +12,17 @@ use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Process;
 use Illuminate\Support\Facades\Queue;
 use Illuminate\Support\Facades\Schema;
-use Mockery;
 use Modules\Xot\Actions\Model\Update\HasManyAction;
 use Modules\Xot\Datas\RelationData;
 use Modules\Xot\Filament\Widgets\XotBaseWidget;
 use Modules\Xot\Models\Cache as CacheModel;
 use Modules\Xot\Tests\TestCase;
 use PHPUnit\Framework\Assert;
-use ReflectionClass;
-use ReflectionMethod;
 
 uses(TestCase::class)->group('no-xot-db');
 
 afterEach(function (): void {
-    Mockery::close();
+    \Mockery::close();
 });
 
 final class XotWidgetFormHost extends XotBaseWidget
@@ -70,14 +67,14 @@ describe('Xot HasMany and Widget form coverage', function (): void {
             $t->unsignedBigInteger('parent_id')->nullable();
         });
 
-        $parent = new CacheModel;
+        $parent = new CacheModel();
         $parent->forceFill(['id' => 1, 'key' => 'p', 'value' => 'v']);
         $parent->exists = true;
 
-        $related = new CacheModel;
+        $related = new CacheModel();
         $related->forceFill(['id' => 2, 'key' => 'c', 'value' => 'v', 'parent_id' => null]);
 
-        $hasMany = Mockery::mock(HasMany::class);
+        $hasMany = \Mockery::mock(HasMany::class);
         $hasMany->shouldReceive('getLocalKeyName')->andReturn('id');
         $hasMany->shouldReceive('getForeignKeyName')->andReturn('parent_id');
 
@@ -88,7 +85,7 @@ describe('Xot HasMany and Widget form coverage', function (): void {
             'data' => ['to' => [2], 'from' => [3]],
         ]);
 
-        $action = new HasManyAction;
+        $action = new HasManyAction();
         try {
             $action->execute($parent, $dto);
         } catch (\Throwable $e) {
@@ -111,7 +108,7 @@ describe('Xot HasMany and Widget form coverage', function (): void {
         }
 
         // invalid parent key
-        $badParent = new CacheModel;
+        $badParent = new CacheModel();
         $badParent->forceFill(['id' => null, 'key' => 'x']);
         try {
             $action->execute($badParent, $dto);
@@ -120,9 +117,9 @@ describe('Xot HasMany and Widget form coverage', function (): void {
             Assert::assertNotEmpty($e->getMessage());
         }
 
-        $ref = new ReflectionClass(HasManyAction::class);
-        foreach ($ref->getMethods(ReflectionMethod::IS_PRIVATE | ReflectionMethod::IS_PROTECTED | ReflectionMethod::IS_PUBLIC) as $method) {
-            if ($method->getDeclaringClass()->getName() !== HasManyAction::class || str_starts_with($method->getName(), '__')) {
+        $ref = new \ReflectionClass(HasManyAction::class);
+        foreach ($ref->getMethods(\ReflectionMethod::IS_PRIVATE | \ReflectionMethod::IS_PROTECTED | \ReflectionMethod::IS_PUBLIC) as $method) {
+            if (HasManyAction::class !== $method->getDeclaringClass()->getName() || str_starts_with($method->getName(), '__')) {
                 continue;
             }
             try {
@@ -131,7 +128,7 @@ describe('Xot HasMany and Widget form coverage', function (): void {
                 foreach ($method->getParameters() as $param) {
                     if ($param->isDefaultValueAvailable()) {
                         $args[] = $param->getDefaultValue();
-                    } elseif ($param->getName() === 'data' || ($param->getType() instanceof \ReflectionNamedType && $param->getType()->getName() === 'array')) {
+                    } elseif ('data' === $param->getName() || ($param->getType() instanceof \ReflectionNamedType && 'array' === $param->getType()->getName())) {
                         $args[] = ['to' => [1], 'from' => [2]];
                     } else {
                         $args[] = null;
@@ -147,12 +144,12 @@ describe('Xot HasMany and Widget form coverage', function (): void {
         Http::fake();
         Process::fake();
         try {
-            $w = new XotWidgetFormHost;
+            $w = new XotWidgetFormHost();
             Assert::assertNotEmpty($w->getFormSchema());
             Assert::assertNotEmpty($w->getFormFill());
-            $ref = new ReflectionClass(XotBaseWidget::class);
-            foreach ($ref->getMethods(ReflectionMethod::IS_PUBLIC | ReflectionMethod::IS_PROTECTED | ReflectionMethod::IS_PRIVATE) as $method) {
-                if ($method->getDeclaringClass()->getName() !== XotBaseWidget::class) {
+            $ref = new \ReflectionClass(XotBaseWidget::class);
+            foreach ($ref->getMethods(\ReflectionMethod::IS_PUBLIC | \ReflectionMethod::IS_PROTECTED | \ReflectionMethod::IS_PRIVATE) as $method) {
+                if (XotBaseWidget::class !== $method->getDeclaringClass()->getName()) {
                     continue;
                 }
                 if (in_array($method->getName(), ['__construct', 'mount', 'render', 'boot'], true)) {
@@ -167,7 +164,7 @@ describe('Xot HasMany and Widget form coverage', function (): void {
                     foreach ($method->getParameters() as $param) {
                         if ($param->isDefaultValueAvailable()) {
                             $args[] = $param->getDefaultValue();
-                        } elseif ($param->getType() instanceof \ReflectionNamedType && $param->getType()->getName() === 'string') {
+                        } elseif ($param->getType() instanceof \ReflectionNamedType && 'string' === $param->getType()->getName()) {
                             $args[] = 'x';
                         } else {
                             $args[] = null;
