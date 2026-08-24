@@ -38,12 +38,7 @@ class SafeFloatCastAction
     /**
      * Converte in modo sicuro un valore mixed in float.
      *
-<<<<<<< .merge_file_Guanaa
      * @param  float|null  $default  Valore di default se la conversione fallisce (default: 0.0)
-=======
-     * @param float|null $default Valore di default se la conversione fallisce (default: 0.0)
-     *
->>>>>>> .merge_file_Ux2i90
      * @return float Il valore convertito
      */
     public function execute(mixed $value, ?float $default = 0.0): float
@@ -90,12 +85,7 @@ class SafeFloatCastAction
     /**
      * Metodo statico di convenienza per chiamate dirette.
      *
-<<<<<<< .merge_file_Guanaa
      * @param  float|null  $default  Valore di default se la conversione fallisce (default: 0.0)
-=======
-     * @param float|null $default Valore di default se la conversione fallisce (default: 0.0)
-     *
->>>>>>> .merge_file_Ux2i90
      * @return float Il valore convertito in float
      */
     public static function cast(mixed $value, ?float $default = 0.0): float
@@ -106,16 +96,9 @@ class SafeFloatCastAction
     /**
      * Converte un valore in float con validazione di range.
      *
-<<<<<<< .merge_file_Guanaa
      * @param  float  $min  Valore minimo consentito
      * @param  float  $max  Valore massimo consentito
      * @param  float|null  $default  Valore di default se la conversione fallisce
-=======
-     * @param float      $min     Valore minimo consentito
-     * @param float      $max     Valore massimo consentito
-     * @param float|null $default Valore di default se la conversione fallisce
-     *
->>>>>>> .merge_file_Ux2i90
      * @return float Il valore convertito e validato
      */
     public function executeWithRange(mixed $value, float $min, float $max, ?float $default = null): float
@@ -129,16 +112,9 @@ class SafeFloatCastAction
     /**
      * Metodo statico di convenienza per cast con range.
      *
-<<<<<<< .merge_file_Guanaa
      * @param  float  $min  Valore minimo consentito
      * @param  float  $max  Valore massimo consentito
      * @param  float|null  $default  Valore di default se la conversione fallisce
-=======
-     * @param float      $min     Valore minimo consentito
-     * @param float      $max     Valore massimo consentito
-     * @param float|null $default Valore di default se la conversione fallisce
-     *
->>>>>>> .merge_file_Ux2i90
      * @return float Il valore convertito e validato
      */
     public static function castWithRange(mixed $value, float $min, float $max, ?float $default = null): float
@@ -149,14 +125,8 @@ class SafeFloatCastAction
     /**
      * Converte un valore in float con controllo di precisione.
      *
-<<<<<<< .merge_file_Guanaa
      * @param  int  $precision  Numero di decimali (default: 2)
      * @param  float|null  $default  Valore di default se la conversione fallisce
-=======
-     * @param int        $precision Numero di decimali (default: 2)
-     * @param float|null $default   Valore di default se la conversione fallisce
-     *
->>>>>>> .merge_file_Ux2i90
      * @return float Il valore convertito con precisione specificata
      */
     public function executeWithPrecision(mixed $value, int $precision = 2, ?float $default = 0.0): float
@@ -169,14 +139,8 @@ class SafeFloatCastAction
     /**
      * Metodo statico per cast con precisione.
      *
-<<<<<<< .merge_file_Guanaa
      * @param  int  $precision  Numero di decimali (default: 2)
      * @param  float|null  $default  Valore di default se la conversione fallisce
-=======
-     * @param int        $precision Numero di decimali (default: 2)
-     * @param float|null $default   Valore di default se la conversione fallisce
-     *
->>>>>>> .merge_file_Ux2i90
      * @return float Il valore convertito con precisione specificata
      */
     public static function castWithPrecision(mixed $value, int $precision = 2, ?float $default = 0.0): float
@@ -187,12 +151,7 @@ class SafeFloatCastAction
     /**
      * Converte un valore in percentuale (0-100).
      *
-<<<<<<< .merge_file_Guanaa
      * @param  float|null  $default  Valore di default se la conversione fallisce
-=======
-     * @param float|null $default Valore di default se la conversione fallisce
-     *
->>>>>>> .merge_file_Ux2i90
      * @return float Il valore convertito come percentuale (0-100)
      */
     public function executeAsPercentage(mixed $value, ?float $default = 0.0): float
@@ -203,12 +162,7 @@ class SafeFloatCastAction
     /**
      * Metodo statico per cast come percentuale.
      *
-<<<<<<< .merge_file_Guanaa
      * @param  float|null  $default  Valore di default se la conversione fallisce
-=======
-     * @param float|null $default Valore di default se la conversione fallisce
-     *
->>>>>>> .merge_file_Ux2i90
      * @return float Il valore convertito come percentuale (0-100)
      */
     public static function castAsPercentage(mixed $value, ?float $default = 0.0): float
@@ -219,12 +173,7 @@ class SafeFloatCastAction
     /**
      * Converte un valore in formato monetario (sempre positivo, 2 decimali).
      *
-<<<<<<< .merge_file_Guanaa
      * @param  float|null  $default  Valore di default se la conversione fallisce
-=======
-     * @param float|null $default Valore di default se la conversione fallisce
-     *
->>>>>>> .merge_file_Ux2i90
      * @return float Il valore convertito come importo monetario
      */
     public function executeAsCurrency(mixed $value, ?float $default = 0.0): float
@@ -237,12 +186,7 @@ class SafeFloatCastAction
     /**
      * Metodo statico per cast come importo monetario.
      *
-<<<<<<< .merge_file_Guanaa
      * @param  float|null  $default  Valore di default se la conversione fallisce
-=======
-     * @param float|null $default Valore di default se la conversione fallisce
-     *
->>>>>>> .merge_file_Ux2i90
      * @return float Il valore convertito come importo monetario
      */
     public static function castAsCurrency(mixed $value, ?float $default = 0.0): float

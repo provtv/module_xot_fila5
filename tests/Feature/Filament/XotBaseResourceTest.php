@@ -11,11 +11,7 @@ use PHPUnit\Framework\Assert;
 uses(TestCase::class);
 
 test('xot base resource extends filament resource', function (): void {
-<<<<<<< .merge_file_VMQb1L
     Assert::assertInstanceOf(Resource::class, new NavigationProbeResource);
-=======
-    Assert::assertInstanceOf(Resource::class, new NavigationProbeResource());
->>>>>>> .merge_file_xJ3Tqd
 });
 
 test('xot base resource has navigation icon', function (): void {
@@ -31,9 +27,5 @@ test('xot base resource has navigation sort', function (): void {
 });
 
 test('xot base resource can be instantiated', function (): void {
-<<<<<<< .merge_file_VMQb1L
     Assert::assertInstanceOf(XotBaseResource::class, new NavigationProbeResource);
-=======
-    Assert::assertInstanceOf(XotBaseResource::class, new NavigationProbeResource());
->>>>>>> .merge_file_xJ3Tqd
 });

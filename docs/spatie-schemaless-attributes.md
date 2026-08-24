@@ -1,3 +1,12 @@
+---
+title: "spatie/laravel-schemaless-attributes — Central Reference"
+module: xot
+type: integration
+tags: [integrations, modules, xot]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # spatie/laravel-schemaless-attributes — Central Reference
 
 **Package**: [`spatie/laravel-schemaless-attributes`](https://github.com/spatie/laravel-schemaless-attributes)

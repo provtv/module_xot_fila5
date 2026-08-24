@@ -9,7 +9,6 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Process;
 use Illuminate\Support\Facades\Schema;
-<<<<<<< .merge_file_qq9vpc
 use Mockery;
 use Modules\Xot\Database\Migrations\XotBaseMigration;
 use Modules\Xot\Models\Cache as CacheModel;
@@ -19,21 +18,11 @@ use PHPUnit\Framework\Assert;
 use ReflectionClass;
 use ReflectionMethod;
 use ReflectionProperty;
-=======
-use Modules\Xot\Database\Migrations\XotBaseMigration;
-use Modules\Xot\Models\Cache as CacheModel;
-use Modules\Xot\Tests\TestCase;
-use PHPUnit\Framework\Assert;
->>>>>>> .merge_file_q0C3OK
 
 uses(TestCase::class)->group('no-xot-db');
 
 afterEach(function (): void {
-<<<<<<< .merge_file_qq9vpc
     Mockery::close();
-=======
-    \Mockery::close();
->>>>>>> .merge_file_q0C3OK
 });
 
 describe('Xot migration getModelClass and uuid paths', function (): void {
@@ -54,12 +43,8 @@ describe('Xot migration getModelClass and uuid paths', function (): void {
 
         // Force getModelClass() discovery path (model_class null until resolved)
         try {
-<<<<<<< .merge_file_qq9vpc
             new class extends XotBaseMigration
             {
-=======
-            new class extends XotBaseMigration {
->>>>>>> .merge_file_q0C3OK
                 public function up(): void
                 {
                 }
@@ -82,12 +67,8 @@ describe('Xot migration getModelClass and uuid paths', function (): void {
             'value' => 'v',
         ]);
 
-<<<<<<< .merge_file_qq9vpc
         $migration = new class extends XotBaseMigration
         {
-=======
-        $migration = new class extends XotBaseMigration {
->>>>>>> .merge_file_q0C3OK
             protected ?string $model_class = CacheModel::class;
 
             public function up(): void
@@ -95,20 +76,12 @@ describe('Xot migration getModelClass and uuid paths', function (): void {
             }
         };
 
-<<<<<<< .merge_file_qq9vpc
         $isUuid = new ReflectionMethod($migration, 'isUuidColumnType');
-=======
-        $isUuid = new \ReflectionMethod($migration, 'isUuidColumnType');
->>>>>>> .merge_file_q0C3OK
         $isUuid->setAccessible(true);
         Assert::assertTrue($isUuid->invoke($migration, 'char'));
 
         // Force convert when id is uuid-like
-<<<<<<< .merge_file_qq9vpc
         $convert = new ReflectionMethod($migration, 'convertIdFromUuidToBigintIfNeeded');
-=======
-        $convert = new \ReflectionMethod($migration, 'convertIdFromUuidToBigintIfNeeded');
->>>>>>> .merge_file_q0C3OK
         $convert->setAccessible(true);
         try {
             $convert->invoke(
@@ -141,11 +114,7 @@ describe('Xot migration getModelClass and uuid paths', function (): void {
         DB::table('cache')->insert(['id' => 1, 'uuid' => null, 'key' => 'a', 'value' => 'b']);
         DB::table('cache')->insert(['id' => 2, 'uuid' => (string) \Illuminate\Support\Str::uuid(), 'key' => 'c', 'value' => 'd']);
 
-<<<<<<< .merge_file_qq9vpc
         $backfill = new ReflectionMethod($migration, 'backfillUuidColumnIfNeeded');
-=======
-        $backfill = new \ReflectionMethod($migration, 'backfillUuidColumnIfNeeded');
->>>>>>> .merge_file_q0C3OK
         $backfill->setAccessible(true);
         try {
             $backfill->invoke($migration);
@@ -158,11 +127,7 @@ describe('Xot migration getModelClass and uuid paths', function (): void {
             if (! method_exists($migration, $name)) {
                 continue;
             }
-<<<<<<< .merge_file_qq9vpc
             $rm = new ReflectionMethod($migration, $name);
-=======
-            $rm = new \ReflectionMethod($migration, $name);
->>>>>>> .merge_file_q0C3OK
             $rm->setAccessible(true);
             $args = [];
             foreach ($rm->getParameters() as $param) {
@@ -174,7 +139,6 @@ describe('Xot migration getModelClass and uuid paths', function (): void {
                 $tn = $param->getType() instanceof \ReflectionNamedType ? $param->getType()->getName() : '';
                 $pn = $param->getName();
                 $args[] = match (true) {
-<<<<<<< .merge_file_qq9vpc
                     $tn === Blueprint::class => new Blueprint(DB::connection(), 'cache'),
                     $tn === \Closure::class || $tn === 'callable' => static function (Blueprint $t): void {
                         $t->id();
@@ -187,20 +151,6 @@ describe('Xot migration getModelClass and uuid paths', function (): void {
                     $pn === 'class' => CacheModel::class,
                     $tn === 'string' => 'cache',
                     $tn === 'bool' => true,
-=======
-                    Blueprint::class === $tn => new Blueprint(DB::connection(), 'cache'),
-                    \Closure::class === $tn || 'callable' === $tn => static function (Blueprint $t): void {
-                        $t->id();
-                    },
-                    'array' === $tn => ['key', 'value'],
-                    'from' === $pn || 'oldTable' === $pn || 'sourceTable' === $pn => 'cache',
-                    'to' === $pn || 'newTable' === $pn => 'cache_new',
-                    'pivotTable' === $pn => 'cache',
-                    'fkColumn' === $pn || 'column' === $pn || 'constraint' === $pn => 'key',
-                    'class' === $pn => CacheModel::class,
-                    'string' === $tn => 'cache',
-                    'bool' === $tn => true,
->>>>>>> .merge_file_q0C3OK
                     default => null,
                 };
             }

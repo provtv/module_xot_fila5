@@ -16,11 +16,7 @@ use function Safe\preg_replace;
 class DateTimeRule implements ValidationRule
 {
     /**
-<<<<<<< .merge_file_XnmqR9
      * @param  \Closure(string, ?string=): PotentiallyTranslatedString  $fail
-=======
-     * @param \Closure(string, ?string=): PotentiallyTranslatedString $fail
->>>>>>> .merge_file_3dZyZV
      */
     public function validate(string $attribute, mixed $value, \Closure $fail): void
     {
@@ -39,11 +35,7 @@ class DateTimeRule implements ValidationRule
     }
 
     /**
-<<<<<<< .merge_file_XnmqR9
      * @deprecated Implementa {@see ValidationRule} — mantenuto per compatibilità call site legacy.
-=======
-     * @deprecated implementa {@see ValidationRule} — mantenuto per compatibilità call site legacy
->>>>>>> .merge_file_3dZyZV
      */
     public function passes(mixed $attribute, mixed $value): bool
     {

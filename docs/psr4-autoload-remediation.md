@@ -1,3 +1,12 @@
+---
+title: "PSR-4 Autoload Remediation (2026-03-09)"
+module: xot
+type: integration
+tags: [integrations, modules, xot]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # PSR-4 Autoload Remediation (2026-03-09)
 
 ## Contesto

@@ -6,7 +6,6 @@ namespace Modules\Xot\Actions\ModelClass;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\Pivot;
-<<<<<<< .merge_file_Gw7eX6
 use Illuminate\Support\Str;
 use Modules\Xot\Actions\Cast\SafeStringCastAction;
 use Modules\Xot\Actions\ModelClass\GuessPivotFullClassAction;
@@ -15,11 +14,6 @@ use Webmozart\Assert\Assert;
 
 use function Safe\file;
 
-=======
-use Spatie\QueueableAction\QueueableAction;
-use Webmozart\Assert\Assert;
-
->>>>>>> .merge_file_zQ5JGd
 class GuessPivotAction
 {
     use QueueableAction;
@@ -28,11 +22,7 @@ class GuessPivotAction
      * Guess the pivot class for a many-to-many relationship.
      *
      * @param string|class-string<Model> $related The related model class name
-<<<<<<< .merge_file_Gw7eX6
      * @param string|class-string<Model> $class   The class 
-=======
-     * @param string|class-string<Model> $class   The class
->>>>>>> .merge_file_zQ5JGd
      */
     public function execute(string $related, string $class): Pivot
     {
@@ -50,9 +40,6 @@ class GuessPivotAction
 
         return $pivot;
     }
-<<<<<<< .merge_file_Gw7eX6
 
    
-=======
->>>>>>> .merge_file_zQ5JGd
 }

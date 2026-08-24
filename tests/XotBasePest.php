@@ -143,7 +143,6 @@ final class XotBasePest
      *
      * `Model::getKey()` è tipizzato `mixed` in Eloquent: questo è il punto unico dove
      * la chiave torna utilizzabile senza cast.
-<<<<<<< .merge_file_D68typ
      */
     public static function assertModelKey(mixed $value, string $message = ''): int|string
     {
@@ -157,21 +156,6 @@ final class XotBasePest
     /**
      * @param  class-string<\Throwable>  $exceptionClass
      */
-=======
-     */
-    public static function assertModelKey(mixed $value, string $message = ''): int|string
-    {
-        if (! \is_int($value) && ! \is_string($value)) {
-            Assert::fail('' !== $message ? $message : 'Expected model key (int|string), got '.get_debug_type($value).'.');
-        }
-
-        return $value;
-    }
-
-    /**
-     * @param class-string<\Throwable> $exceptionClass
-     */
->>>>>>> .merge_file_76CqtW
     public static function assertThrows(callable $callback, string $exceptionClass): void
     {
         try {

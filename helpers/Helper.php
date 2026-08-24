@@ -192,11 +192,7 @@ if (! function_exists('xotSeedModelOnce')) {
     /**
      * Fallback se il file app/Helpers non ha registrato la function.
      *
-<<<<<<< .merge_file_eqlHOU
      * @param  class-string<Model>  $modelClass
-=======
-     * @param class-string<Model> $modelClass
->>>>>>> .merge_file_Ujb7Fp
      */
     function xotSeedModelOnce(string $modelClass): void
     {

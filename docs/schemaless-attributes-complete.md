@@ -1,3 +1,12 @@
+---
+title: "Schemaless Attributes - Pattern Completi PTVX v3.0"
+module: xot
+type: integration
+tags: [integrations, modules, xot]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Schemaless Attributes - Pattern Completi PTVX v3.0
 
 ## 🎯 **OVERVIEW**

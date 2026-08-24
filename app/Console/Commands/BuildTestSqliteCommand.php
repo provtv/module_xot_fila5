@@ -8,20 +8,12 @@ use Illuminate\Console\Command;
 use Illuminate\Contracts\Config\Repository;
 use Illuminate\Support\Facades\DB;
 use Modules\Xot\Tests\XotBaseTestCase;
-<<<<<<< .merge_file_Qfq1g3
 use Throwable;
 
 use function Safe\unlink;
 use function Safe\glob;
 use function Safe\preg_replace;
 use function Safe\touch;
-=======
-
-use function Safe\glob;
-use function Safe\preg_replace;
-use function Safe\touch;
-use function Safe\unlink;
->>>>>>> .merge_file_0qP9Jb
 
 /**
  * Costruisce lo schema del database SQLite usato dai test.
@@ -59,11 +51,7 @@ class BuildTestSqliteCommand extends Command
     {
         $target = $this->stringOption('path') ?? XotBaseTestCase::sharedSqlitePath();
 
-<<<<<<< .merge_file_Qfq1g3
         if ($this->option('fresh') === true && file_exists($target)) {
-=======
-        if (true === $this->option('fresh') && file_exists($target)) {
->>>>>>> .merge_file_0qP9Jb
             unlink($target);
         }
 
@@ -78,11 +66,7 @@ class BuildTestSqliteCommand extends Command
         $this->newLine();
         $this->info(sprintf('Tabelle in %s: %d', $target, $this->countTables($target)));
 
-<<<<<<< .merge_file_Qfq1g3
         if ($failures === []) {
-=======
-        if ([] === $failures) {
->>>>>>> .merge_file_0qP9Jb
             return self::SUCCESS;
         }
 
@@ -158,22 +142,14 @@ class BuildTestSqliteCommand extends Command
                     '--realpath' => true,
                 ]);
                 $this->line(sprintf('  %-32s <fg=green>ok</>', $module));
-<<<<<<< .merge_file_Qfq1g3
             } catch (Throwable $e) {
-=======
-            } catch (\Throwable $e) {
->>>>>>> .merge_file_0qP9Jb
                 // Una migration che inciampa ferma tutte quelle dopo di lei nella stessa
                 // directory: la prima volta è successo con `imports already exists`, e le
                 // tabelle `cache` e `model_has_roles` — dichiarate più avanti nella stessa
                 // cartella — non sono mai state create. Si riprova file per file.
                 $survivors = $this->migrateFileByFile($path);
 
-<<<<<<< .merge_file_Qfq1g3
                 if ($survivors === []) {
-=======
-                if ([] === $survivors) {
->>>>>>> .merge_file_0qP9Jb
                     $this->line(sprintf('  %-32s <fg=green>ok</> (file per file)', $module));
                 } else {
                     $failures[$module] = $this->firstLine(implode('; ', $survivors));
@@ -210,11 +186,7 @@ class BuildTestSqliteCommand extends Command
                     '--path' => $file,
                     '--realpath' => true,
                 ]);
-<<<<<<< .merge_file_Qfq1g3
             } catch (Throwable $e) {
-=======
-            } catch (\Throwable $e) {
->>>>>>> .merge_file_0qP9Jb
                 $failed[] = basename($file).': '.$this->firstLine($e->getMessage());
             }
         }
@@ -227,11 +199,7 @@ class BuildTestSqliteCommand extends Command
         $pdo = new \PDO('sqlite:'.$target);
         $count = $pdo->query('SELECT count(*) FROM sqlite_master WHERE type = "table"');
 
-<<<<<<< .merge_file_Qfq1g3
         return $count === false ? 0 : (int) $count->fetchColumn();
-=======
-        return false === $count ? 0 : (int) $count->fetchColumn();
->>>>>>> .merge_file_0qP9Jb
     }
 
     private function firstLine(string $message): string
@@ -245,10 +213,6 @@ class BuildTestSqliteCommand extends Command
     {
         $value = $this->option($name);
 
-<<<<<<< .merge_file_Qfq1g3
         return is_string($value) && $value !== '' ? $value : null;
-=======
-        return is_string($value) && '' !== $value ? $value : null;
->>>>>>> .merge_file_0qP9Jb
     }
 }

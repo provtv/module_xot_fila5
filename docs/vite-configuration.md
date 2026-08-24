@@ -1,3 +1,12 @@
+---
+title: "Vite Configuration For Theme Builds"
+module: xot
+type: integration
+tags: [integrations, modules, xot]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Vite Configuration For Theme Builds
 
 ## Purpose

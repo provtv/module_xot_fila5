@@ -1,3 +1,12 @@
+---
+title: "Miglioramenti Prompt - Laraxot Framework"
+module: xot
+type: integration
+tags: [integrations, modules, xot]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Miglioramenti Prompt - Laraxot Framework
 
 **Data**: 2026-01-12  

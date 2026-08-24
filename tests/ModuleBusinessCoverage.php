@@ -8,11 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 use Mockery;
 use Modules\Xot\Contracts\UserContract;
 use PHPUnit\Framework\Assert;
-<<<<<<< .merge_file_tBhghL
 use ReflectionClass;
 use ReflectionMethod;
-=======
->>>>>>> .merge_file_620ZiA
 
 /**
  * Coverage business: policies, models, actions — esecuzione reale, non class_exists.
@@ -47,11 +44,7 @@ final class ModuleBusinessCoverage
                 continue;
             }
 
-<<<<<<< .merge_file_tBhghL
             $ref = new ReflectionClass($class);
-=======
-            $ref = new \ReflectionClass($class);
->>>>>>> .merge_file_620ZiA
             if ($ref->isAbstract() || $ref->isInterface() || $ref->isTrait()) {
                 continue;
             }
@@ -70,11 +63,7 @@ final class ModuleBusinessCoverage
     public static function mockUser(): UserContract
     {
         /** @var Mockery\MockInterface&UserContract $user */
-<<<<<<< .merge_file_tBhghL
         $user = Mockery::mock(UserContract::class);
-=======
-        $user = \Mockery::mock(UserContract::class);
->>>>>>> .merge_file_620ZiA
         $user->shouldIgnoreMissing();
         $user->shouldReceive('can')->andReturn(true);
         $user->shouldReceive('hasRole')->andReturn(false);
@@ -90,11 +79,7 @@ final class ModuleBusinessCoverage
     {
         $executed = 0;
         $user = self::mockUser();
-<<<<<<< .merge_file_tBhghL
         $record = Mockery::mock(Model::class);
-=======
-        $record = \Mockery::mock(Model::class);
->>>>>>> .merge_file_620ZiA
         $record->shouldIgnoreMissing();
 
         foreach (self::discoverPhpClasses($appRoot, $moduleNamespace, 'Models/Policies') as $class) {
@@ -102,19 +87,11 @@ final class ModuleBusinessCoverage
                 $policy = new $class();
                 ++$executed;
 
-<<<<<<< .merge_file_tBhghL
                 $ref = new ReflectionClass($policy);
 
                 foreach ($ref->getMethods(ReflectionMethod::IS_PUBLIC) as $method) {
                     $name = $method->getName();
                     if ($name === '__construct') {
-=======
-                $ref = new \ReflectionClass($policy);
-
-                foreach ($ref->getMethods(\ReflectionMethod::IS_PUBLIC) as $method) {
-                    $name = $method->getName();
-                    if ('__construct' === $name) {
->>>>>>> .merge_file_620ZiA
                         continue;
                     }
 
@@ -125,20 +102,12 @@ final class ModuleBusinessCoverage
                             $type = $param->getType();
                             if ($type instanceof \ReflectionNamedType && ! $type->isBuiltin()) {
                                 $typeName = $type->getName();
-<<<<<<< .merge_file_tBhghL
                                 if ($typeName === UserContract::class || is_subclass_of($typeName, UserContract::class)) {
-=======
-                                if (UserContract::class === $typeName || is_subclass_of($typeName, UserContract::class)) {
->>>>>>> .merge_file_620ZiA
                                     $args[] = $user;
 
                                     continue;
                                 }
-<<<<<<< .merge_file_tBhghL
                                 if (is_subclass_of($typeName, Model::class) || $typeName === Model::class) {
-=======
-                                if (is_subclass_of($typeName, Model::class) || Model::class === $typeName) {
->>>>>>> .merge_file_620ZiA
                                     $args[] = $record;
 
                                     continue;
@@ -184,11 +153,7 @@ final class ModuleBusinessCoverage
             }
         }
 
-<<<<<<< .merge_file_tBhghL
         if ($discovered === 0) {
-=======
-        if (0 === $discovered) {
->>>>>>> .merge_file_620ZiA
             Assert::assertSame(0, $executed);
 
             return;
@@ -203,11 +168,7 @@ final class ModuleBusinessCoverage
 
         foreach (self::discoverPhpClasses($appRoot, $moduleNamespace, 'Actions') as $class) {
             try {
-<<<<<<< .merge_file_tBhghL
                 $ref = new ReflectionClass($class);
-=======
-                $ref = new \ReflectionClass($class);
->>>>>>> .merge_file_620ZiA
                 if (! $ref->hasMethod('execute') && ! $ref->hasMethod('handle')) {
                     continue;
                 }
@@ -221,11 +182,7 @@ final class ModuleBusinessCoverage
                     }
                 }
 
-<<<<<<< .merge_file_tBhghL
                 if ($instance === null) {
-=======
-                if (null === $instance) {
->>>>>>> .merge_file_620ZiA
                     continue;
                 }
 
@@ -246,11 +203,7 @@ final class ModuleBusinessCoverage
             try {
                 ++$executed;
                 if (method_exists($class, 'from')) {
-<<<<<<< .merge_file_tBhghL
                     Assert::assertTrue((new ReflectionClass($class))->hasMethod('from'));
-=======
-                    Assert::assertTrue((new \ReflectionClass($class))->hasMethod('from'));
->>>>>>> .merge_file_620ZiA
                 }
             } catch (\Throwable) {
                 ++$executed;

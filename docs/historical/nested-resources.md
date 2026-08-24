@@ -1,3 +1,12 @@
+---
+title: "Xot Module - Nested Resource Implementation Guide"
+module: xot
+type: integration
+tags: [integrations, modules, xot]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Xot Module - Nested Resource Implementation Guide
 
 ## Overview

@@ -28,11 +28,7 @@ class ModuleAction
     public static function getInstance(): self
     {
         if (! self::$_instance instanceof self) {
-<<<<<<< .merge_file_NfuRwK
             self::$_instance = new self;
-=======
-            self::$_instance = new self();
->>>>>>> .merge_file_bcIdwM
         }
 
         return self::$_instance;
@@ -70,11 +66,7 @@ class ModuleAction
             $filename = $file->getRelativePathname();
             $ext = '.php';
             if (Str::endsWith($filename, $ext)) {
-<<<<<<< .merge_file_NfuRwK
                 $tmp = new \stdClass;
-=======
-                $tmp = new \stdClass();
->>>>>>> .merge_file_bcIdwM
 
                 $name = mb_substr($filename, 0, -mb_strlen($ext));
 
@@ -100,11 +92,5 @@ class ModuleAction
         return $data;
     }
 
-<<<<<<< .merge_file_NfuRwK
     public function execute(): void {}
-=======
-    public function execute(): void
-    {
-    }
->>>>>>> .merge_file_bcIdwM
 }

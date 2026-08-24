@@ -29,11 +29,7 @@ class HasManyAction
 
         $parentKey = $model->getAttribute($relation->getLocalKeyName());
         if (! is_int($parentKey) && ! is_string($parentKey)) {
-<<<<<<< .merge_file_swoUwD
             throw new InvalidArgumentException('La chiave locale della relazione non e\' una chiave valida.');
-=======
-            throw new \InvalidArgumentException('La chiave locale della relazione non e\' una chiave valida.');
->>>>>>> .merge_file_CeHo9t
         }
 
         $updateData = new HasManyUpdateData(

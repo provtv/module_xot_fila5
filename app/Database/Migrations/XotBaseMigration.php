@@ -231,11 +231,7 @@ abstract class XotBaseMigration extends LaravelMigration
 
         $result = $connection->selectOne($query, [$database, $table]);
         $row = $this->constraintCountRow($result);
-<<<<<<< .merge_file_MaaJsV
         if ($row === null) {
-=======
-        if (null === $row) {
->>>>>>> .merge_file_CRchku
             return false;
         }
 
@@ -264,11 +260,7 @@ abstract class XotBaseMigration extends LaravelMigration
 
         $result = $connection->selectOne($query, [$database, $table, $constraint]);
         $row = $this->constraintCountRow($result);
-<<<<<<< .merge_file_MaaJsV
         if ($row === null) {
-=======
-        if (null === $row) {
->>>>>>> .merge_file_CRchku
             return false;
         }
 
@@ -379,11 +371,7 @@ abstract class XotBaseMigration extends LaravelMigration
     }
 
     /**
-<<<<<<< .merge_file_MaaJsV
      * @param  object|array<string, mixed>  $result
-=======
-     * @param object|array<string, mixed> $result
->>>>>>> .merge_file_CRchku
      */
     protected function extractPrimaryKeyCount(object|array $result): int
     {

@@ -1,3 +1,12 @@
+---
+title: "Risoluzione della Disputa Zen: Priorità e Approccio Laraxot"
+module: xot
+type: integration
+tags: [integrations, modules, xot]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Risoluzione della Disputa Zen: Priorità e Approccio Laraxot
 
 ## 🥊 La Disputa Interiore

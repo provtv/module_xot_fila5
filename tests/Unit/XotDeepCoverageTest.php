@@ -4,13 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Tests\Unit;
 
-<<<<<<< .merge_file_qO8377
 use Modules\Xot\Tests\TestCase;
 use Modules\Xot\Tests\ModuleDeepCoverage;
-=======
-use Modules\Xot\Tests\ModuleDeepCoverage;
-use Modules\Xot\Tests\TestCase;
->>>>>>> .merge_file_3rM5J0
 
 uses(TestCase::class)->group('no-xot-db');
 

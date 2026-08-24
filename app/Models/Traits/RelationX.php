@@ -20,7 +20,6 @@ trait RelationX
     /**
      * @template TRelatedModel of Model
      *
-<<<<<<< .merge_file_f4rpNK
      * @param  class-string<TRelatedModel>  $related  Related model class
      * @param  class-string<Model>|string|null  $_table  Pivot table name
      * @param  string|null  $foreignPivotKey  Foreign pivot key
@@ -28,16 +27,6 @@ trait RelationX
      * @param  string|null  $parentKey  Parent key
      * @param  string|null  $relatedKey  Related key
      * @param  string|null  $relation  Relation name
-=======
-     * @param class-string<TRelatedModel>     $related         Related model class
-     * @param class-string<Model>|string|null $_table          Pivot table name
-     * @param string|null                     $foreignPivotKey Foreign pivot key
-     * @param string|null                     $relatedPivotKey Related pivot key
-     * @param string|null                     $parentKey       Parent key
-     * @param string|null                     $relatedKey      Related key
-     * @param string|null                     $relation        Relation name
-     *
->>>>>>> .merge_file_o02Xk7
      * @return BelongsToMany<TRelatedModel, $this, Pivot, 'pivot'>
      */
     public function belongsToManyX(
@@ -49,11 +38,7 @@ trait RelationX
         ?string $relatedKey = null,
         ?string $relation = null,
     ): BelongsToMany {
-<<<<<<< .merge_file_f4rpNK
         /** @var class-string<TRelatedModel> $related */
-=======
-        /* @var class-string<TRelatedModel> $related */
->>>>>>> .merge_file_o02Xk7
         Assert::subclassOf($related, Model::class);
         Assert::isInstanceOf(
             $related_model = app($related),
@@ -72,11 +57,7 @@ trait RelationX
             $pivotDriver = $pivot->getConnection()->getDriverName();
             // Only add database prefix for non-SQLite drivers
             // SQLite doesn't support database.table syntax
-<<<<<<< .merge_file_f4rpNK
             if ($pivotDriver !== 'sqlite') {
-=======
-            if ('sqlite' !== $pivotDriver) {
->>>>>>> .merge_file_o02Xk7
                 $table = $pivotDbName.'.'.$table;
             }
         }
@@ -104,12 +85,7 @@ trait RelationX
      *
      * @template TRelatedModel of \Illuminate\Database\Eloquent\Model
      *
-<<<<<<< .merge_file_f4rpNK
      * @param  class-string<TRelatedModel>  $related
-=======
-     * @param class-string<TRelatedModel> $related
-     *
->>>>>>> .merge_file_o02Xk7
      * @return MorphToMany<TRelatedModel, $this>
      */
     public function morphToManyX(
@@ -123,22 +99,14 @@ trait RelationX
         ?string $relation = null,
         bool $inverse = false,
     ): MorphToMany {
-<<<<<<< .merge_file_f4rpNK
         /** @var class-string<TRelatedModel> $related */
-=======
-        /* @var class-string<TRelatedModel> $related */
->>>>>>> .merge_file_o02Xk7
         Assert::subclassOf($related, Model::class);
         $pivot = $this->guessMorphPivot($related);
         $table = $pivot->getTable();
         $pivotFields = $pivot->getFillable();
 
         // $relatedDbName = $related_model->getConnection()->getDatabaseName();
-<<<<<<< .merge_file_f4rpNK
         if ($table === null) {
-=======
-        if (null === $table) {
->>>>>>> .merge_file_o02Xk7
             $table = $pivot->getTable();
         }
 
@@ -176,13 +144,8 @@ trait RelationX
     /**
      * Guess the pivot class for a many-to-many relationship.
      *
-<<<<<<< .merge_file_f4rpNK
      * @param  string  $related  The related model class name
      * @param  string|class-string|null  $class  The class to use for parent class lookup (used internally)
-=======
-     * @param string                   $related The related model class name
-     * @param string|class-string|null $class   The class to use for parent class lookup (used internally)
->>>>>>> .merge_file_o02Xk7
      */
     public function guessPivot(string $related, ?string $class = null): Pivot
     {
@@ -233,11 +196,7 @@ trait RelationX
     private function tryParentClassPivot(string $pivot_name, string $related, string $class): string
     {
         $parent_class = get_parent_class($class);
-<<<<<<< .merge_file_f4rpNK
         if ($parent_class === false) {
-=======
-        if (false === $parent_class) {
->>>>>>> .merge_file_o02Xk7
             return $this->buildPivotClassName($class, $pivot_name);
         }
 

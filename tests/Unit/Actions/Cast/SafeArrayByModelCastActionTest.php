@@ -27,11 +27,7 @@ final class BrokenAttributesModelForSafeArrayCast extends Model
      */
     public function attributesToArray(): array
     {
-<<<<<<< .merge_file_rxqVJZ
         throw new ValueError('Mock error');
-=======
-        throw new \ValueError('Mock error');
->>>>>>> .merge_file_vNVKee
     }
 
     /**
@@ -44,11 +40,7 @@ final class BrokenAttributesModelForSafeArrayCast extends Model
 
     public function getAttribute($key): mixed
     {
-<<<<<<< .merge_file_rxqVJZ
         return $key === 'name' ? 'Fallback' : null;
-=======
-        return 'name' === $key ? 'Fallback' : null;
->>>>>>> .merge_file_vNVKee
     }
 }
 

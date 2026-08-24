@@ -23,17 +23,10 @@ class ExportXlsStreamByLazyCollection
     /**
      * Esporta una LazyCollection in un file CSV streamed.
      *
-<<<<<<< .merge_file_SMBfZo
      * @param  LazyCollection<int, Model>  $data  I dati da esportare
      * @param  string  $filename  Nome del file CSV
      * @param  string|null  $transKey  Chiave di traduzione per le intestazioni
      * @param  array<string>|null  $_fields  Campi da includere nell'export (attualmente non utilizzato)
-=======
-     * @param LazyCollection<int, Model> $data     I dati da esportare
-     * @param string                     $filename Nome del file CSV
-     * @param string|null                $transKey Chiave di traduzione per le intestazioni
-     * @param array<string>|null         $_fields  Campi da includere nell'export (attualmente non utilizzato)
->>>>>>> .merge_file_YfLCwz
      */
     public function execute(
         LazyCollection $data,
@@ -69,11 +62,7 @@ class ExportXlsStreamByLazyCollection
                     }
                     // Convertiamo tutti i valori in stringhe o null
                     $safeRowData = array_map(function (string|int|float|bool|null $item): string {
-<<<<<<< .merge_file_SMBfZo
                         if ($item === null) {
-=======
-                        if (null === $item) {
->>>>>>> .merge_file_YfLCwz
                             return '';
                         }
 
@@ -99,14 +88,8 @@ class ExportXlsStreamByLazyCollection
     /**
      * Ottiene le intestazioni per l'export.
      *
-<<<<<<< .merge_file_SMBfZo
      * @param  LazyCollection<int, Model>  $data  I dati da cui estrarre le intestazioni
      * @param  string|null  $transKey  Chiave di traduzione per le intestazioni
-=======
-     * @param LazyCollection<int, Model> $data     I dati da cui estrarre le intestazioni
-     * @param string|null                $transKey Chiave di traduzione per le intestazioni
-     *
->>>>>>> .merge_file_YfLCwz
      * @return array<string>
      */
     public function headings(LazyCollection $data, ?string $transKey = null): array

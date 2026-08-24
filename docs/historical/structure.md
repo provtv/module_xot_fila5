@@ -1,3 +1,12 @@
+---
+title: "Analisi della Discrepanza tra Namespace e Struttura Directory nei Moduli Laraxot"
+module: xot
+type: integration
+tags: [integrations, modules, xot]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 ### Versione HEAD
 
 # Analisi della Discrepanza tra Namespace e Struttura Directory nei Moduli Laraxot

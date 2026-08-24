@@ -1,3 +1,12 @@
+---
+title: "PHP Strict Types in Laravel Modules"
+module: xot
+type: integration
+tags: [integrations, modules, xot]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # PHP Strict Types in Laravel Modules
 
 ## Overview

@@ -165,16 +165,9 @@ class SafeEloquentCastAction
     /**
      * Ottiene un attributo con cast sicuro a un tipo specifico.
      *
-<<<<<<< .merge_file_70YGQh
      * @param  Model  $model  Il modello Eloquent
      * @param  string  $attribute  Il nome dell'attributo
      * @param  string  $type  Il tipo di cast desiderato (string, int, float, bool, array)
-=======
-     * @param Model  $model     Il modello Eloquent
-     * @param string $attribute Il nome dell'attributo
-     * @param string $type      Il tipo di cast desiderato (string, int, float, bool, array)
-     *
->>>>>>> .merge_file_fl2ZOP
      * @return string|int|float|bool|array<int|string, mixed> Il valore dell'attributo convertito nel tipo specificato
      */
     public function getTypedAttribute(Model $model, string $attribute, string $type, mixed $default = null): string|int|float|bool|array
@@ -199,14 +192,8 @@ class SafeEloquentCastAction
     /**
      * Verifica se un attributo esiste e ha un valore specifico.
      *
-<<<<<<< .merge_file_70YGQh
      * @param  Model  $model  Il modello Eloquent
      * @param  string  $attribute  Il nome dell'attributo
-=======
-     * @param Model  $model     Il modello Eloquent
-     * @param string $attribute Il nome dell'attributo
-     *
->>>>>>> .merge_file_fl2ZOP
      * @return bool True se l'attributo esiste e ha il valore atteso
      */
     public function hasAttributeValue(Model $model, string $attribute, mixed $expectedValue): bool
@@ -221,17 +208,10 @@ class SafeEloquentCastAction
     /**
      * Ottiene un attributo con validazione di tipo e valore.
      *
-<<<<<<< .merge_file_70YGQh
      * @param  Model  $model  Il modello Eloquent
      * @param  string  $attribute  Il nome dell'attributo
      * @param  string  $type  Il tipo di cast desiderato
      * @param  callable|null  $validator  Funzione di validazione opzionale
-=======
-     * @param Model         $model     Il modello Eloquent
-     * @param string        $attribute Il nome dell'attributo
-     * @param string        $type      Il tipo di cast desiderato
-     * @param callable|null $validator Funzione di validazione opzionale
->>>>>>> .merge_file_fl2ZOP
      */
     public function getValidatedAttribute(
         Model $model,
@@ -276,18 +256,10 @@ class SafeEloquentCastAction
     /**
      * Ottiene un attributo con fallback a un altro attributo se il primo è null.
      *
-<<<<<<< .merge_file_70YGQh
      * @param  Model  $model  Il modello Eloquent
      * @param  string  $primaryAttribute  L'attributo primario
      * @param  string  $fallbackAttribute  L'attributo di fallback
      * @param  string  $type  Il tipo di cast desiderato
-=======
-     * @param Model  $model             Il modello Eloquent
-     * @param string $primaryAttribute  L'attributo primario
-     * @param string $fallbackAttribute L'attributo di fallback
-     * @param string $type              Il tipo di cast desiderato
-     *
->>>>>>> .merge_file_fl2ZOP
      * @return string|int|float|bool|array<int|string, mixed> Il valore dell'attributo primario o di fallback
      */
     public function getAttributeWithFallback(
@@ -313,16 +285,9 @@ class SafeEloquentCastAction
     /**
      * Metodo di convenienza per ottenere attributi con cast sicuro.
      *
-<<<<<<< .merge_file_70YGQh
      * @param  Model  $model  Il modello Eloquent
      * @param  string  $attribute  Il nome dell'attributo
      * @param  string  $type  Il tipo di cast desiderato
-=======
-     * @param Model  $model     Il modello Eloquent
-     * @param string $attribute Il nome dell'attributo
-     * @param string $type      Il tipo di cast desiderato
-     *
->>>>>>> .merge_file_fl2ZOP
      * @return string|int|float|bool|array<int|string, mixed> Il valore dell'attributo convertito
      */
     public static function get(Model $model, string $attribute, string $type, mixed $default = null): string|int|float|bool|array

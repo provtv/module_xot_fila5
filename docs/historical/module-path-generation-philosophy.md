@@ -1,3 +1,12 @@
+---
+title: "Module Path Generation - Philosophy and Business Logic"
+module: xot
+type: integration
+tags: [integrations, modules, xot]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Module Path Generation - Philosophy and Business Logic
 
 **Data Creazione**: 2026-01-02

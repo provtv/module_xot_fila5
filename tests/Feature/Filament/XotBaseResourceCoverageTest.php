@@ -40,12 +40,8 @@ it('covers default page discovery including optional view page', function (): vo
 });
 
 it('covers translation helper key normalization', function (): void {
-<<<<<<< .merge_file_Di4JOB
     app()->instance(GetTransKeyAction::class, new class
     {
-=======
-    app()->instance(GetTransKeyAction::class, new class {
->>>>>>> .merge_file_OZtHvS
         public function execute(string $class): string
         {
             return 'probe.cluster.pages.item_widget';
@@ -56,12 +52,8 @@ it('covers translation helper key normalization', function (): void {
 });
 
 it('covers translation helper edit and widget normalization branches', function (): void {
-<<<<<<< .merge_file_Di4JOB
     app()->instance(GetTransKeyAction::class, new class
     {
-=======
-    app()->instance(GetTransKeyAction::class, new class {
->>>>>>> .merge_file_OZtHvS
         public function execute(string $class): string
         {
             return 'edit_';
@@ -69,12 +61,8 @@ it('covers translation helper edit and widget normalization branches', function 
     });
 
     Assert::assertSame('.name', ProbeResource::callGetKeyTrans('name'));
-<<<<<<< .merge_file_Di4JOB
     app()->instance(GetTransKeyAction::class, new class
     {
-=======
-    app()->instance(GetTransKeyAction::class, new class {
->>>>>>> .merge_file_OZtHvS
         public function execute(string $class): string
         {
             return 'probe';
@@ -85,12 +73,8 @@ it('covers translation helper edit and widget normalization branches', function 
 });
 
 it('covers translation helper string path and missing key fallback', function (): void {
-<<<<<<< .merge_file_Di4JOB
     app()->instance(GetTransKeyAction::class, new class
     {
-=======
-    app()->instance(GetTransKeyAction::class, new class {
->>>>>>> .merge_file_OZtHvS
         public function execute(string $class): string
         {
             return 'probe.messages';
@@ -104,12 +88,8 @@ it('covers translation helper string path and missing key fallback', function ()
 });
 
 it('covers translation helper array and fix fallback branches', function (): void {
-<<<<<<< .merge_file_Di4JOB
     app()->instance(GetTransKeyAction::class, new class
     {
-=======
-    app()->instance(GetTransKeyAction::class, new class {
->>>>>>> .merge_file_OZtHvS
         public function execute(string $class): string
         {
             return 'probe.arr';
@@ -126,12 +106,8 @@ it('covers translation helper array and fix fallback branches', function (): voi
 });
 
 it('covers translation helper exception branch', function (): void {
-<<<<<<< .merge_file_Di4JOB
     app()->instance(GetTransKeyAction::class, new class
     {
-=======
-    app()->instance(GetTransKeyAction::class, new class {
->>>>>>> .merge_file_OZtHvS
         public function execute(string $class): string
         {
             return 'probe.exceptions';
@@ -148,12 +124,8 @@ it('covers translation helper exception branch', function (): void {
 });
 
 it('covers navigation badge success and fallback', function (): void {
-<<<<<<< .merge_file_Di4JOB
     app()->instance(CountAction::class, new class
     {
-=======
-    app()->instance(CountAction::class, new class {
->>>>>>> .merge_file_OZtHvS
         public function execute(string $class): int
         {
             return 42;
@@ -161,12 +133,8 @@ it('covers navigation badge success and fallback', function (): void {
     });
 
     Assert::assertSame('42', ProbeResource::getNavigationBadge());
-<<<<<<< .merge_file_Di4JOB
     app()->instance(CountAction::class, new class
     {
-=======
-    app()->instance(CountAction::class, new class {
->>>>>>> .merge_file_OZtHvS
         public function execute(string $class): int
         {
             throw new Exception('boom');
@@ -177,12 +145,8 @@ it('covers navigation badge success and fallback', function (): void {
 });
 
 it('covers get attachments schema branches', function (): void {
-<<<<<<< .merge_file_Di4JOB
     $resourceNoAttachments = new class extends XotBaseResource
     {
-=======
-    $resourceNoAttachments = new class extends XotBaseResource {
->>>>>>> .merge_file_OZtHvS
         protected static ?string $model = Probe::class;
 
         public static function getFormSchema(): array
@@ -196,12 +160,8 @@ it('covers get attachments schema branches', function (): void {
         eval(' class ProbeBadAttachments extends \\Illuminate\\Database\\Eloquent\\Model { public static function getAttachments(): string { return "invalid"; } }');
     }
 
-<<<<<<< .merge_file_Di4JOB
     $resourceBadAttachments = new class extends XotBaseResource
     {
-=======
-    $resourceBadAttachments = new class extends XotBaseResource {
->>>>>>> .merge_file_OZtHvS
         protected static ?string $model = ProbeBadAttachments::class;
 
         public static function getFormSchema(): array
@@ -215,26 +175,15 @@ it('covers get attachments schema branches', function (): void {
         eval(' class ProbeGoodAttachments extends \\Illuminate\\Database\\Eloquent\\Model { public static function getAttachments(): array { return ["one", 7, "two"]; } }');
     }
 
-<<<<<<< .merge_file_Di4JOB
     app()->instance(GetAttachmentsSchemaAction::class, new class
     {
         /**
          * @param  string[]  $attachments
-=======
-    app()->instance(GetAttachmentsSchemaAction::class, new class {
-        /**
-         * @param string[] $attachments
-         *
->>>>>>> .merge_file_OZtHvS
          * @return string[]
          */
         public function execute(array $attachments, string $disk): array
         {
-<<<<<<< .merge_file_Di4JOB
             if ($attachments !== ['one', 'two'] || $disk !== 'attachments') {
-=======
-            if ($attachments !== ['one', 'two'] || 'attachments' !== $disk) {
->>>>>>> .merge_file_OZtHvS
                 throw new RuntimeException('unexpected attachments payload');
             }
 
@@ -242,12 +191,8 @@ it('covers get attachments schema branches', function (): void {
         }
     });
 
-<<<<<<< .merge_file_Di4JOB
     $resourceGoodAttachments = new class extends XotBaseResource
     {
-=======
-    $resourceGoodAttachments = new class extends XotBaseResource {
->>>>>>> .merge_file_OZtHvS
         protected static ?string $model = ProbeGoodAttachments::class;
 
         public static function getFormSchema(): array
@@ -278,11 +223,7 @@ it('covers step builder branches', function (): void {
 });
 
 it('covers simple base helpers', function (): void {
-<<<<<<< .merge_file_Di4JOB
     $resource = new ProbeResource;
-=======
-    $resource = new ProbeResource();
->>>>>>> .merge_file_OZtHvS
 
     Assert::assertSame([], ProbeResource::getInfolistSchema());
     Assert::assertSame([], ProbeResource::extendTableCallback());

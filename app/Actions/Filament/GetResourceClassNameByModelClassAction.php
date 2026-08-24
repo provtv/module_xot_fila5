@@ -6,10 +6,7 @@ namespace Modules\Xot\Actions\Filament;
 
 use Filament\Facades\Filament;
 use Illuminate\Database\Eloquent\Model;
-<<<<<<< .merge_file_TPqtvK
 use LogicException;
-=======
->>>>>>> .merge_file_Ow4DlN
 use Modules\Xot\Filament\Resources\XotBaseResource;
 use Spatie\QueueableAction\QueueableAction;
 use Webmozart\Assert\Assert;
@@ -30,12 +27,7 @@ class GetResourceClassNameByModelClassAction
     use QueueableAction;
 
     /**
-<<<<<<< .merge_file_TPqtvK
      * @param  class-string<Model>  $modelClass
-=======
-     * @param class-string<Model> $modelClass
-     *
->>>>>>> .merge_file_Ow4DlN
      * @return class-string<XotBaseResource>
      */
     public function execute(string $modelClass): string
@@ -44,7 +36,6 @@ class GetResourceClassNameByModelClassAction
 
         $resourceClass = Filament::getModelResource($modelClass);
 
-<<<<<<< .merge_file_TPqtvK
         if ($resourceClass === null) {
             throw new LogicException(
                 sprintf(
@@ -53,10 +44,6 @@ class GetResourceClassNameByModelClassAction
                     $modelClass
                 )
             );
-=======
-        if (null === $resourceClass) {
-            throw new \LogicException(sprintf('[%s] Nessuna Filament Resource registrata nel pannello corrente per il model [%s].', class_basename($this), $modelClass));
->>>>>>> .merge_file_Ow4DlN
         }
 
         Assert::subclassOf($resourceClass, XotBaseResource::class);

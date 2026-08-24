@@ -1,3 +1,12 @@
+---
+title: "PHPInsights — Installazione Standalone"
+module: xot
+type: integration
+tags: [integrations, modules, xot]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # PHPInsights — Installazione Standalone
 
 **Versione**: v2.12.0+ (isolata in `tools/phpinsights/`)

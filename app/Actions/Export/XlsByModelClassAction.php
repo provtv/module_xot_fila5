@@ -56,11 +56,7 @@ class XlsByModelClassAction
         $rows = $query->get();
 
         // Filtriamo i campi se sono specificati gli includes
-<<<<<<< .merge_file_meq3Dj
         if ($includes !== []) {
-=======
-        if ([] !== $includes) {
->>>>>>> .merge_file_4WUMXB
             $rows = $rows->map(static function (Model $item) use ($includes) {
                 $data = [];
                 foreach ($includes as $include) {
@@ -71,11 +67,7 @@ class XlsByModelClassAction
             });
         }
 
-<<<<<<< .merge_file_meq3Dj
         if ($excludes !== []) {
-=======
-        if ([] !== $excludes) {
->>>>>>> .merge_file_4WUMXB
             $rows = $rows->map(function (mixed $item) use ($excludes) {
                 if ($item instanceof Model) {
                     return $item->makeHidden($excludes);

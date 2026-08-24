@@ -55,10 +55,6 @@ class MorphToOneAction
         }
 
         // Return the prepared data
-<<<<<<< .merge_file_telr0y
         return array_filter($data, static fn (mixed $value): bool => $value !== null);
-=======
-        return array_filter($data, static fn (mixed $value): bool => null !== $value);
->>>>>>> .merge_file_ACBvBy
     }
 }
