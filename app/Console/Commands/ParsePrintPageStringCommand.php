@@ -9,7 +9,6 @@ declare(strict_types=1);
 namespace Modules\Xot\Console\Commands;
 
 use Illuminate\Console\Command;
-use Modules\Xot\Actions\ParsePrintPageStringAction;
 
 class ParsePrintPageStringCommand extends Command
 {

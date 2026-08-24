@@ -10,7 +10,13 @@ use PHPUnit\Framework\Assert;
 
 uses(TestCase::class);
 
+<<<<<<< .merge_file_poE3xA
 beforeEach(function (): void { $this->markTestSkipped('fragile offline mocks File/Module/DB'); });
+=======
+beforeEach(function (): void {
+    $this->markTestSkipped('fragile offline mocks File/Module/DB');
+});
+>>>>>>> .merge_file_IB0Umt
 
 test('count actions work', function (): void {
     $action = app(CountAction::class);

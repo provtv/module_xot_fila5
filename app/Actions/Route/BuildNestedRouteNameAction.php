@@ -17,7 +17,11 @@ class BuildNestedRouteNameAction
         $action = $params->act ?? 'show';
         $parts = inAdmin(['in_admin' => $params->in_admin]) ? ['admin'] : [];
 
+<<<<<<< .merge_file_VGj39j
         for ($i = 0; $i <= $depth; $i++) {
+=======
+        for ($i = 0; $i <= $depth; ++$i) {
+>>>>>>> .merge_file_ghFAsD
             $parts[] = 'container'.$i;
         }
 

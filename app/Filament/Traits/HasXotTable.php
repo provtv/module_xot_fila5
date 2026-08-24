@@ -229,7 +229,11 @@ trait HasXotTable
         // Configurazioni opzionali personalizzabili
         $sortColumn = $this->getXotDefaultTableSortColumn();
         $sortDirection = $this->getXotDefaultTableSortDirection();
+<<<<<<< .merge_file_EI0esT
         if ($sortColumn !== null && $sortDirection !== null) {
+=======
+        if (null !== $sortColumn && null !== $sortDirection) {
+>>>>>>> .merge_file_OXjQg9
             $table = $table->defaultSort($sortColumn, $sortDirection);
         }
 
@@ -266,8 +270,14 @@ trait HasXotTable
      * @phpstan-return array<int|string, \Filament\Actions\Action|\Filament\Actions\ActionGroup>
      */
     /**
+<<<<<<< .merge_file_EI0esT
      * @return array<int|string, \Filament\Actions\Action|\Filament\Actions\ActionGroup>
      * @phpstan-return array<int|string, \Filament\Actions\Action|\Filament\Actions\ActionGroup>
+=======
+     * @return array<int|string, Action|ActionGroup>
+     *
+     * @phpstan-return array<int|string, Action|ActionGroup>
+>>>>>>> .merge_file_OXjQg9
      */
     public function getXotTableActions(): array
     {
@@ -405,7 +415,11 @@ trait HasXotTable
         $method = new \ReflectionMethod($this, 'getTableColumns');
         $declaring = $method->getDeclaringClass()->getName();
 
+<<<<<<< .merge_file_EI0esT
         if ($declaring === self::class || str_starts_with($declaring, 'Filament\\')) {
+=======
+        if (self::class === $declaring || str_starts_with($declaring, 'Filament\\')) {
+>>>>>>> .merge_file_OXjQg9
             return [];
         }
 

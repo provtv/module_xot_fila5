@@ -29,7 +29,12 @@ class DiffAssocRecursiveAction
     }
 
     /**
+<<<<<<< .merge_file_y7I4KX
      * @param  array<int|string, mixed>  $data
+=======
+     * @param array<int|string, mixed> $data
+     *
+>>>>>>> .merge_file_Uzp7dc
      * @return array<int|string, mixed>
      */
     private static function normalizeArray(array $data): array
@@ -73,7 +78,11 @@ class DiffAssocRecursiveAction
                     static fn (mixed $item): bool => ! \in_array($item, $rightList, false)
                 ));
 
+<<<<<<< .merge_file_y7I4KX
                 if ($filtered !== []) {
+=======
+                if ([] !== $filtered) {
+>>>>>>> .merge_file_Uzp7dc
                     $result[$key] = $filtered;
                 }
 

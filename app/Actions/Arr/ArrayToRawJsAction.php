@@ -35,7 +35,11 @@ class ArrayToRawJsAction
                 $parts[] = $k.': '.$value->toHtml();
             } elseif (is_array($value)) {
                 $parts[] = $k.': '.$this->execute($value)->toHtml();
+<<<<<<< .merge_file_BJfDru
             } elseif (is_scalar($value) || $value === null) {
+=======
+            } elseif (is_scalar($value) || null === $value) {
+>>>>>>> .merge_file_nav2fe
                 $parts[] = $k.': '.$this->jsValue($value);
             } else {
                 $parts[] = $k.': '.$this->jsValue(SafeStringCastAction::cast($value));
@@ -57,7 +61,11 @@ class ArrayToRawJsAction
         if (is_bool($value)) {
             return $value ? 'true' : 'false';
         }
+<<<<<<< .merge_file_BJfDru
         if ($value === null) {
+=======
+        if (null === $value) {
+>>>>>>> .merge_file_nav2fe
             return 'null';
         }
         if (is_numeric($value)) {

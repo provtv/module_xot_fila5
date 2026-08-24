@@ -40,5 +40,9 @@ it('handles numeric strings in diff', function (): void {
 
 it('throws exception for non-array items in fixType', function (): void {
     expect(static fn (): array => DiffAssocRecursiveAction::fixType(['a' => 'not-an-array']))
+<<<<<<< .merge_file_tDzuOs
         ->toThrow(\Exception::class);
+=======
+        ->toThrow(Exception::class);
+>>>>>>> .merge_file_tGgbEO
 });

@@ -14,7 +14,13 @@ use function Safe\unlink;
 
 uses(TestCase::class);
 
+<<<<<<< .merge_file_qIvvv2
 beforeEach(function (): void { $this->markTestSkipped('fragile offline mocks File/Module/DB'); });
+=======
+beforeEach(function (): void {
+    $this->markTestSkipped('fragile offline mocks File/Module/DB');
+});
+>>>>>>> .merge_file_FFXZxc
 
 it('returns config array from module config file', function (): void {
     $tempDir = sys_get_temp_dir().'/xot_modcfg_'.uniqid('', true);

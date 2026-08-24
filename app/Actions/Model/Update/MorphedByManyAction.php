@@ -19,7 +19,10 @@ class MorphedByManyAction
     {
         // Assert::isInstanceOf($relation = $relationDTO->rows, HasMany::class);
         throw new \RuntimeException('Removed debug dddx');
+<<<<<<< .merge_file_WCpuEl
 
+=======
+>>>>>>> .merge_file_qHGicc
         /*
          * foreach ($data as $k => $v) {
          * if (! \is_array($v)) {

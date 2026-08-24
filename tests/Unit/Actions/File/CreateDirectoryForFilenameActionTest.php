@@ -14,6 +14,10 @@ uses(TestCase::class);
 beforeEach(function (): void { $this->markTestSkipped('fragile offline mocks File/Module/DB'); });
 
 beforeEach(function (): void {
+    $this->markTestSkipped('fragile offline mocks File/Module/DB');
+});
+
+beforeEach(function (): void {
     /* @var \Modules\Xot\Tests\TestCase $this */
     $this->action = app(CreateDirectoryForFilenameAction::class);
     $this->workDir = sys_get_temp_dir().DIRECTORY_SEPARATOR.'test_create_dir_'.uniqid();

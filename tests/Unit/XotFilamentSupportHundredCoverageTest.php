@@ -4,20 +4,30 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Tests\Unit;
 
+<<<<<<< .merge_file_gHSACA
 use Mockery;
+=======
+>>>>>>> .merge_file_edtEyF
 use Modules\Xot\Filament\Builders\ColumnBuilder;
 use Modules\Xot\Filament\Builders\FilterBuilder;
 use Modules\Xot\Filament\Support\ColumnBuilder as SupportColumnBuilder;
 use Modules\Xot\Filament\Support\RecordAnchor;
 use Modules\Xot\Tests\TestCase;
 use PHPUnit\Framework\Assert;
+<<<<<<< .merge_file_gHSACA
 use ReflectionClass;
 use ReflectionMethod;
+=======
+>>>>>>> .merge_file_edtEyF
 
 uses(TestCase::class)->group('no-xot-db');
 
 afterEach(function (): void {
+<<<<<<< .merge_file_gHSACA
     Mockery::close();
+=======
+    \Mockery::close();
+>>>>>>> .merge_file_edtEyF
 });
 
 describe('Xot filament support hundred', function (): void {
@@ -27,7 +37,11 @@ describe('Xot filament support hundred', function (): void {
             if (! class_exists($class)) {
                 continue;
             }
+<<<<<<< .merge_file_gHSACA
             $ref = new ReflectionClass($class);
+=======
+            $ref = new \ReflectionClass($class);
+>>>>>>> .merge_file_edtEyF
             $inst = null;
             if (! $ref->isAbstract()) {
                 try {
@@ -36,7 +50,11 @@ describe('Xot filament support hundred', function (): void {
                     $inst = null;
                 }
             }
+<<<<<<< .merge_file_gHSACA
             foreach ($ref->getMethods(ReflectionMethod::IS_PUBLIC | ReflectionMethod::IS_PROTECTED | ReflectionMethod::IS_PRIVATE) as $method) {
+=======
+            foreach ($ref->getMethods(\ReflectionMethod::IS_PUBLIC | \ReflectionMethod::IS_PROTECTED | \ReflectionMethod::IS_PRIVATE) as $method) {
+>>>>>>> .merge_file_edtEyF
                 if ($method->getDeclaringClass()->getName() !== $class || str_starts_with($method->getName(), '__')) {
                     continue;
                 }
@@ -60,7 +78,11 @@ describe('Xot filament support hundred', function (): void {
                     }
                     if ($method->isStatic()) {
                         $method->invoke(null, ...$args);
+<<<<<<< .merge_file_gHSACA
                     } elseif ($inst !== null) {
+=======
+                    } elseif (null !== $inst) {
+>>>>>>> .merge_file_edtEyF
                         $method->invoke($inst, ...$args);
                     }
                     ++$n;

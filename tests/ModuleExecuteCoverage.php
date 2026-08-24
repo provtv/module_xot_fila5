@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Modules\Xot\Tests;
 
 use Illuminate\Database\Eloquent\Model;
+<<<<<<< .merge_file_8SD7Ow
 use Mockery;
 use Modules\Xot\Actions\File\FileAction;
 use Modules\Xot\Datas\XotData;
@@ -12,6 +13,11 @@ use PHPUnit\Framework\Assert;
 use ReflectionClass;
 use ReflectionMethod;
 use ReflectionNamedType;
+=======
+use Modules\Xot\Actions\File\FileAction;
+use Modules\Xot\Datas\XotData;
+use PHPUnit\Framework\Assert;
+>>>>>>> .merge_file_krXxnx
 
 use function Safe\file;
 use function Safe\file_get_contents;
@@ -66,11 +72,15 @@ final class ModuleExecuteCoverage
      */
     public static function runFloor100(string $appRoot, string $moduleNamespace): void
     {
+<<<<<<< .merge_file_8SD7Ow
         throw new \RuntimeException(
             'ModuleExecuteCoverage::runFloor100 is banned (story 5.26 / quality gate). '
             .'Write behavioral Pest tests with real assertions — coverage without intent is not poetry. '
             .'See Modules/Xot/docs/coverage.md § anti-pattern ModuleExecuteCoverage.'
         );
+=======
+        throw new \RuntimeException('ModuleExecuteCoverage::runFloor100 is banned (story 5.26 / quality gate). Write behavioral Pest tests with real assertions — coverage without intent is not poetry. See Modules/Xot/docs/coverage.md § anti-pattern ModuleExecuteCoverage.');
+>>>>>>> .merge_file_krXxnx
     }
 
     public static function testInvokeNonPublicMethods(string $appRoot, string $moduleNamespace, string $relativeDir): void
@@ -82,7 +92,11 @@ final class ModuleExecuteCoverage
                 continue;
             }
 
+<<<<<<< .merge_file_8SD7Ow
             $ref = new ReflectionClass($class);
+=======
+            $ref = new \ReflectionClass($class);
+>>>>>>> .merge_file_krXxnx
             if ($ref->isAbstract() || $ref->isInterface() || $ref->isTrait() || $ref->isEnum()) {
                 continue;
             }
@@ -93,7 +107,11 @@ final class ModuleExecuteCoverage
                 $instance = self::instantiate($class);
             }
 
+<<<<<<< .merge_file_8SD7Ow
             if ($instance === null) {
+=======
+            if (null === $instance) {
+>>>>>>> .merge_file_krXxnx
                 continue;
             }
 
@@ -101,7 +119,11 @@ final class ModuleExecuteCoverage
                 $instance->setRawAttributes(self::defaultModelAttributes());
             }
 
+<<<<<<< .merge_file_8SD7Ow
             foreach ($ref->getMethods(ReflectionMethod::IS_PROTECTED | ReflectionMethod::IS_PRIVATE) as $method) {
+=======
+            foreach ($ref->getMethods(\ReflectionMethod::IS_PROTECTED | \ReflectionMethod::IS_PRIVATE) as $method) {
+>>>>>>> .merge_file_krXxnx
                 if ($method->getDeclaringClass()->getName() !== $class) {
                     continue;
                 }
@@ -171,7 +193,11 @@ final class ModuleExecuteCoverage
         ];
 
         foreach (ModuleBusinessCoverage::discoverPhpClasses($appRoot, $moduleNamespace, 'Filament') as $class) {
+<<<<<<< .merge_file_8SD7Ow
             $ref = new ReflectionClass($class);
+=======
+            $ref = new \ReflectionClass($class);
+>>>>>>> .merge_file_krXxnx
             if ($ref->isAbstract() || $ref->isInterface() || $ref->isTrait()) {
                 continue;
             }
@@ -182,7 +208,11 @@ final class ModuleExecuteCoverage
                 }
 
                 try {
+<<<<<<< .merge_file_8SD7Ow
                     $refMethod = new ReflectionMethod($class, $method);
+=======
+                    $refMethod = new \ReflectionMethod($class, $method);
+>>>>>>> .merge_file_krXxnx
                     if ($refMethod->isStatic()) {
                         if ($refMethod->getNumberOfRequiredParameters() > 0) {
                             continue;
@@ -206,7 +236,11 @@ final class ModuleExecuteCoverage
             }
 
             try {
+<<<<<<< .merge_file_8SD7Ow
                 $ref = new ReflectionClass($class);
+=======
+                $ref = new \ReflectionClass($class);
+>>>>>>> .merge_file_krXxnx
                 if ($ref->isAbstract()) {
                     continue;
                 }
@@ -220,7 +254,11 @@ final class ModuleExecuteCoverage
                 continue;
             }
 
+<<<<<<< .merge_file_8SD7Ow
             foreach ($ref->getMethods(ReflectionMethod::IS_PUBLIC) as $method) {
+=======
+            foreach ($ref->getMethods(\ReflectionMethod::IS_PUBLIC) as $method) {
+>>>>>>> .merge_file_krXxnx
                 if ($method->isStatic() || str_starts_with($method->getName(), '__')) {
                     continue;
                 }
@@ -257,8 +295,13 @@ final class ModuleExecuteCoverage
             \Modules\Xot\Filament\Builders\ColumnBuilder::class,
             \Modules\Xot\Filament\Builders\FilterBuilder::class,
         ] as $class) {
+<<<<<<< .merge_file_8SD7Ow
             $ref = new ReflectionClass($class);
             foreach ($ref->getMethods(ReflectionMethod::IS_PUBLIC | ReflectionMethod::IS_STATIC) as $method) {
+=======
+            $ref = new \ReflectionClass($class);
+            foreach ($ref->getMethods(\ReflectionMethod::IS_PUBLIC | \ReflectionMethod::IS_STATIC) as $method) {
+>>>>>>> .merge_file_krXxnx
                 if (! $method->isStatic() || str_starts_with($method->getName(), '__')) {
                     continue;
                 }
@@ -298,8 +341,13 @@ final class ModuleExecuteCoverage
                 }
             }
 
+<<<<<<< .merge_file_8SD7Ow
             $sourceFile = (new ReflectionClass($class))->getFileName();
             if (is_string($sourceFile) && is_file($sourceFile) && preg_match('/^\s*dddx\s*\(/m', file_get_contents($sourceFile)) === 1) {
+=======
+            $sourceFile = (new \ReflectionClass($class))->getFileName();
+            if (is_string($sourceFile) && is_file($sourceFile) && 1 === preg_match('/^\s*dddx\s*\(/m', file_get_contents($sourceFile))) {
+>>>>>>> .merge_file_krXxnx
                 continue;
             }
 
@@ -396,8 +444,12 @@ final class ModuleExecuteCoverage
 
     public static function testXotBaseMigrationHelpers(): void
     {
+<<<<<<< .merge_file_8SD7Ow
         $migration = new class extends \Modules\Xot\Database\Migrations\XotBaseMigration
         {
+=======
+        $migration = new class extends \Modules\Xot\Database\Migrations\XotBaseMigration {
+>>>>>>> .merge_file_krXxnx
             protected ?string $model_class = \Modules\Xot\Models\Cache::class;
 
             public function up(): void
@@ -406,14 +458,24 @@ final class ModuleExecuteCoverage
         };
 
         $executed = 0;
+<<<<<<< .merge_file_8SD7Ow
         $ref = new ReflectionClass($migration);
 
         foreach ($ref->getMethods(ReflectionMethod::IS_PUBLIC) as $method) {
+=======
+        $ref = new \ReflectionClass($migration);
+
+        foreach ($ref->getMethods(\ReflectionMethod::IS_PUBLIC) as $method) {
+>>>>>>> .merge_file_krXxnx
             if ($method->isStatic() || str_starts_with($method->getName(), '__')) {
                 continue;
             }
 
+<<<<<<< .merge_file_8SD7Ow
             if ($method->getDeclaringClass()->getName() !== \Modules\Xot\Database\Migrations\XotBaseMigration::class) {
+=======
+            if (\Modules\Xot\Database\Migrations\XotBaseMigration::class !== $method->getDeclaringClass()->getName()) {
+>>>>>>> .merge_file_krXxnx
                 continue;
             }
 
@@ -468,11 +530,19 @@ final class ModuleExecuteCoverage
                 continue;
             }
 
+<<<<<<< .merge_file_8SD7Ow
             $ref = new ReflectionClass($class);
             $sourceFile = $ref->getFileName();
             if (is_string($sourceFile) && is_file($sourceFile)) {
                 $source = file_get_contents($sourceFile);
                 if (preg_match('/^\s*dddx\s*\(/m', $source) === 1) {
+=======
+            $ref = new \ReflectionClass($class);
+            $sourceFile = $ref->getFileName();
+            if (is_string($sourceFile) && is_file($sourceFile)) {
+                $source = file_get_contents($sourceFile);
+                if (1 === preg_match('/^\s*dddx\s*\(/m', $source)) {
+>>>>>>> .merge_file_krXxnx
                     ++$executed;
 
                     continue;
@@ -493,7 +563,11 @@ final class ModuleExecuteCoverage
 
                 if ($ref->hasMethod('handle')) {
                     $handle = $ref->getMethod('handle');
+<<<<<<< .merge_file_8SD7Ow
                     if ($handle->getNumberOfRequiredParameters() === 0) {
+=======
+                    if (0 === $handle->getNumberOfRequiredParameters()) {
+>>>>>>> .merge_file_krXxnx
                         $handle->invoke($command);
                     }
                 }
@@ -518,16 +592,28 @@ final class ModuleExecuteCoverage
                 continue;
             }
 
+<<<<<<< .merge_file_8SD7Ow
             $ref = new ReflectionClass($class);
             $sourceFile = $ref->getFileName();
             if (is_string($sourceFile) && is_file($sourceFile)) {
                 $source = file_get_contents($sourceFile);
                 if (preg_match('/^\s*dddx\s*\(/m', $source) === 1) {
+=======
+            $ref = new \ReflectionClass($class);
+            $sourceFile = $ref->getFileName();
+            if (is_string($sourceFile) && is_file($sourceFile)) {
+                $source = file_get_contents($sourceFile);
+                if (1 === preg_match('/^\s*dddx\s*\(/m', $source)) {
+>>>>>>> .merge_file_krXxnx
                     continue;
                 }
             }
 
+<<<<<<< .merge_file_8SD7Ow
             foreach ($ref->getMethods(ReflectionMethod::IS_PUBLIC | ReflectionMethod::IS_STATIC) as $method) {
+=======
+            foreach ($ref->getMethods(\ReflectionMethod::IS_PUBLIC | \ReflectionMethod::IS_STATIC) as $method) {
+>>>>>>> .merge_file_krXxnx
                 if (! $method->isStatic() || str_starts_with($method->getName(), '__')) {
                     continue;
                 }
@@ -589,7 +675,11 @@ final class ModuleExecuteCoverage
 
             foreach (['getSearchable', 'getFormSchema', 'toArray', 'getColumnNames', 'getColumnDefinitions'] as $staticMethod) {
                 if (method_exists($class, $staticMethod)) {
+<<<<<<< .merge_file_8SD7Ow
                     (new ReflectionMethod($class, $staticMethod))->invoke(null);
+=======
+                    (new \ReflectionMethod($class, $staticMethod))->invoke(null);
+>>>>>>> .merge_file_krXxnx
                 }
             }
         }
@@ -625,7 +715,11 @@ final class ModuleExecuteCoverage
 
             foreach (['getSearchable', 'getFormSchema', 'toArray', 'getColumnNames', 'getColumnDefinitions'] as $staticMethod) {
                 if (method_exists($class, $staticMethod)) {
+<<<<<<< .merge_file_8SD7Ow
                     (new ReflectionMethod($class, $staticMethod))->invoke(null);
+=======
+                    (new \ReflectionMethod($class, $staticMethod))->invoke(null);
+>>>>>>> .merge_file_krXxnx
                 }
             }
         }
@@ -646,7 +740,11 @@ final class ModuleExecuteCoverage
                 continue;
             }
 
+<<<<<<< .merge_file_8SD7Ow
             $ref = new ReflectionClass($class);
+=======
+            $ref = new \ReflectionClass($class);
+>>>>>>> .merge_file_krXxnx
             if ($ref->isAbstract()) {
                 try {
                     $class::query();
@@ -663,7 +761,11 @@ final class ModuleExecuteCoverage
                 $model->setRawAttributes(self::defaultModelAttributes());
                 ++$executed;
 
+<<<<<<< .merge_file_8SD7Ow
                 foreach ($ref->getMethods(ReflectionMethod::IS_PUBLIC) as $method) {
+=======
+                foreach ($ref->getMethods(\ReflectionMethod::IS_PUBLIC) as $method) {
+>>>>>>> .merge_file_krXxnx
                     if ($method->isStatic()) {
                         continue;
                     }
@@ -693,13 +795,21 @@ final class ModuleExecuteCoverage
 
                 try {
                     $query = $model::query();
+<<<<<<< .merge_file_8SD7Ow
                     foreach ($ref->getMethods(ReflectionMethod::IS_PUBLIC) as $scopeMethod) {
+=======
+                    foreach ($ref->getMethods(\ReflectionMethod::IS_PUBLIC) as $scopeMethod) {
+>>>>>>> .merge_file_krXxnx
                         if (! $scopeMethod->isStatic()) {
                             continue;
                         }
 
                         $scope = $scopeMethod->getName();
+<<<<<<< .merge_file_8SD7Ow
                         if ($scope === 'query') {
+=======
+                        if ('query' === $scope) {
+>>>>>>> .merge_file_krXxnx
                             continue;
                         }
 
@@ -748,7 +858,11 @@ final class ModuleExecuteCoverage
                 continue;
             }
 
+<<<<<<< .merge_file_8SD7Ow
             $ref = new ReflectionClass($class);
+=======
+            $ref = new \ReflectionClass($class);
+>>>>>>> .merge_file_krXxnx
             if ($ref->isAbstract() || $ref->isInterface() || $ref->isTrait() || $ref->isEnum()) {
                 continue;
             }
@@ -759,7 +873,11 @@ final class ModuleExecuteCoverage
                 continue;
             }
 
+<<<<<<< .merge_file_8SD7Ow
             if ($instance === null) {
+=======
+            if (null === $instance) {
+>>>>>>> .merge_file_krXxnx
                 continue;
             }
 
@@ -771,8 +889,13 @@ final class ModuleExecuteCoverage
                 }
 
                 try {
+<<<<<<< .merge_file_8SD7Ow
                     $rm = new ReflectionMethod($instance, $method);
                     if ($method === 'fromArray') {
+=======
+                    $rm = new \ReflectionMethod($instance, $method);
+                    if ('fromArray' === $method) {
+>>>>>>> .merge_file_krXxnx
                         if ($rm->isStatic()) {
                             $class::fromArray([]);
                         }
@@ -780,14 +903,22 @@ final class ModuleExecuteCoverage
                         continue;
                     }
 
+<<<<<<< .merge_file_8SD7Ow
                     if ($rm->getNumberOfRequiredParameters() === 0) {
+=======
+                    if (0 === $rm->getNumberOfRequiredParameters()) {
+>>>>>>> .merge_file_krXxnx
                         $rm->invoke($instance);
                     }
                 } catch (\Throwable) {
                 }
             }
 
+<<<<<<< .merge_file_8SD7Ow
             foreach ($ref->getMethods(ReflectionMethod::IS_PUBLIC) as $method) {
+=======
+            foreach ($ref->getMethods(\ReflectionMethod::IS_PUBLIC) as $method) {
+>>>>>>> .merge_file_krXxnx
                 if ($method->isStatic() || str_starts_with($method->getName(), '__')) {
                     continue;
                 }
@@ -815,9 +946,15 @@ final class ModuleExecuteCoverage
         $executed = 0;
 
         foreach (ModuleBusinessCoverage::discoverPhpClasses($appRoot, $moduleNamespace, $relativeDir) as $class) {
+<<<<<<< .merge_file_8SD7Ow
             $ref = new ReflectionClass($class);
             $sourceFile = $ref->getFileName();
             if (is_string($sourceFile) && is_file($sourceFile) && preg_match('/^\s*dddx\s*\(/m', file_get_contents($sourceFile)) === 1) {
+=======
+            $ref = new \ReflectionClass($class);
+            $sourceFile = $ref->getFileName();
+            if (is_string($sourceFile) && is_file($sourceFile) && 1 === preg_match('/^\s*dddx\s*\(/m', file_get_contents($sourceFile))) {
+>>>>>>> .merge_file_krXxnx
                 continue;
             }
 
@@ -827,11 +964,19 @@ final class ModuleExecuteCoverage
                 continue;
             }
 
+<<<<<<< .merge_file_8SD7Ow
             if ($instance === null) {
                 continue;
             }
 
             foreach ($ref->getMethods(ReflectionMethod::IS_PUBLIC) as $method) {
+=======
+            if (null === $instance) {
+                continue;
+            }
+
+            foreach ($ref->getMethods(\ReflectionMethod::IS_PUBLIC) as $method) {
+>>>>>>> .merge_file_krXxnx
                 if ($method->isStatic() || str_starts_with($method->getName(), '__')) {
                     continue;
                 }
@@ -863,7 +1008,11 @@ final class ModuleExecuteCoverage
         foreach (ModuleBusinessCoverage::discoverPhpClasses($appRoot, $moduleNamespace, 'Transformers') as $class) {
             try {
                 $instance = self::instantiate($class);
+<<<<<<< .merge_file_8SD7Ow
                 if ($instance === null) {
+=======
+                if (null === $instance) {
+>>>>>>> .merge_file_krXxnx
                     continue;
                 }
 
@@ -873,8 +1022,13 @@ final class ModuleExecuteCoverage
                     }
 
                     try {
+<<<<<<< .merge_file_8SD7Ow
                         $ref = new ReflectionMethod($instance, $method);
                         if ($ref->getNumberOfRequiredParameters() === 0) {
+=======
+                        $ref = new \ReflectionMethod($instance, $method);
+                        if (0 === $ref->getNumberOfRequiredParameters()) {
+>>>>>>> .merge_file_krXxnx
                             $ref->invoke($instance);
                         }
                         ++$executed;
@@ -896,7 +1050,11 @@ final class ModuleExecuteCoverage
 
         foreach (ModuleBusinessCoverage::discoverPhpClasses($appRoot, $moduleNamespace, 'Filament') as $class) {
             try {
+<<<<<<< .merge_file_8SD7Ow
                 $ref = new ReflectionClass($class);
+=======
+                $ref = new \ReflectionClass($class);
+>>>>>>> .merge_file_krXxnx
                 if ($ref->isAbstract() || $ref->isInterface() || $ref->isTrait()) {
                     continue;
                 }
@@ -909,8 +1067,13 @@ final class ModuleExecuteCoverage
                             continue;
                         }
                         try {
+<<<<<<< .merge_file_8SD7Ow
                             $rm = new ReflectionMethod($class, $staticMethod);
                             if ($rm->getNumberOfRequiredParameters() === 0) {
+=======
+                            $rm = new \ReflectionMethod($class, $staticMethod);
+                            if (0 === $rm->getNumberOfRequiredParameters()) {
+>>>>>>> .merge_file_krXxnx
                                 $rm->invoke(null);
                             }
                         } catch (\Throwable) {
@@ -955,7 +1118,11 @@ final class ModuleExecuteCoverage
                 continue;
             }
 
+<<<<<<< .merge_file_8SD7Ow
             $ref = new ReflectionClass($class);
+=======
+            $ref = new \ReflectionClass($class);
+>>>>>>> .merge_file_krXxnx
             if ($ref->isAbstract()) {
                 continue;
             }
@@ -1040,7 +1207,11 @@ final class ModuleExecuteCoverage
      */
     private static array $dddxMethodCache = [];
 
+<<<<<<< .merge_file_8SD7Ow
     private static function methodCallsDddx(ReflectionMethod $method): bool
+=======
+    private static function methodCallsDddx(\ReflectionMethod $method): bool
+>>>>>>> .merge_file_krXxnx
     {
         $cacheKey = $method->getDeclaringClass()->getName().'::'.$method->getName();
         if (isset(self::$dddxMethodCache[$cacheKey])) {
@@ -1048,7 +1219,11 @@ final class ModuleExecuteCoverage
         }
 
         $file = $method->getFileName();
+<<<<<<< .merge_file_8SD7Ow
         if ($file === false || ! is_readable($file)) {
+=======
+        if (false === $file || ! is_readable($file)) {
+>>>>>>> .merge_file_krXxnx
             return self::$dddxMethodCache[$cacheKey] = false;
         }
 
@@ -1072,15 +1247,27 @@ final class ModuleExecuteCoverage
     }
 
     /**
+<<<<<<< .merge_file_8SD7Ow
      * @param  ReflectionClass<Model>  $ref
      * @return array<string, list<mixed>>
      */
     private static function discoverLocalScopes(ReflectionClass $ref): array
+=======
+     * @param \ReflectionClass<Model> $ref
+     *
+     * @return array<string, list<mixed>>
+     */
+    private static function discoverLocalScopes(\ReflectionClass $ref): array
+>>>>>>> .merge_file_krXxnx
     {
         $scopes = [];
 
         // Laravel scopes can be protected *or* public (module conventions vary).
+<<<<<<< .merge_file_8SD7Ow
         foreach ($ref->getMethods(ReflectionMethod::IS_PROTECTED | ReflectionMethod::IS_PUBLIC) as $method) {
+=======
+        foreach ($ref->getMethods(\ReflectionMethod::IS_PROTECTED | \ReflectionMethod::IS_PUBLIC) as $method) {
+>>>>>>> .merge_file_krXxnx
             $name = $method->getName();
             if (! str_starts_with($name, 'scope') || $method->getDeclaringClass()->getName() !== $ref->getName()) {
                 continue;
@@ -1129,7 +1316,11 @@ final class ModuleExecuteCoverage
     /**
      * @return list<mixed>
      */
+<<<<<<< .merge_file_8SD7Ow
     private static function defaultArgsForMethod(ReflectionMethod $method): array
+=======
+    private static function defaultArgsForMethod(\ReflectionMethod $method): array
+>>>>>>> .merge_file_krXxnx
     {
         $args = [];
 
@@ -1143,7 +1334,11 @@ final class ModuleExecuteCoverage
             $type = $param->getType();
             $name = $param->getName();
 
+<<<<<<< .merge_file_8SD7Ow
             if ($type instanceof ReflectionNamedType && ! $type->isBuiltin()) {
+=======
+            if ($type instanceof \ReflectionNamedType && ! $type->isBuiltin()) {
+>>>>>>> .merge_file_krXxnx
                 $typeName = $type->getName();
                 if (enum_exists($typeName)) {
                     $cases = $typeName::cases();
@@ -1151,10 +1346,17 @@ final class ModuleExecuteCoverage
 
                     continue;
                 }
+<<<<<<< .merge_file_8SD7Ow
                 if (is_subclass_of($typeName, Model::class) || $typeName === Model::class) {
                     $modelRef = new ReflectionClass($typeName);
                     if ($modelRef->isAbstract()) {
                         $args[] = Mockery::mock($typeName);
+=======
+                if (is_subclass_of($typeName, Model::class) || Model::class === $typeName) {
+                    $modelRef = new \ReflectionClass($typeName);
+                    if ($modelRef->isAbstract()) {
+                        $args[] = \Mockery::mock($typeName);
+>>>>>>> .merge_file_krXxnx
 
                         continue;
                     }
@@ -1175,7 +1377,11 @@ final class ModuleExecuteCoverage
                 continue;
             }
 
+<<<<<<< .merge_file_8SD7Ow
             if ($type instanceof ReflectionNamedType) {
+=======
+            if ($type instanceof \ReflectionNamedType) {
+>>>>>>> .merge_file_krXxnx
                 $args[] = match ($type->getName()) {
                     'array' => [],
                     'string' => 'test',
@@ -1195,7 +1401,11 @@ final class ModuleExecuteCoverage
     }
 
     /**
+<<<<<<< .merge_file_8SD7Ow
      * @param  class-string  $class
+=======
+     * @param class-string $class
+>>>>>>> .merge_file_krXxnx
      */
     private static function instantiate(string $class, int $depth = 0): ?object
     {
@@ -1203,13 +1413,21 @@ final class ModuleExecuteCoverage
             return null;
         }
 
+<<<<<<< .merge_file_8SD7Ow
         $ref = new ReflectionClass($class);
+=======
+        $ref = new \ReflectionClass($class);
+>>>>>>> .merge_file_krXxnx
         if ($ref->isAbstract() || $ref->isInterface() || $ref->isTrait() || $ref->isEnum()) {
             return null;
         }
 
         $ctor = $ref->getConstructor();
+<<<<<<< .merge_file_8SD7Ow
         if ($ctor === null) {
+=======
+        if (null === $ctor) {
+>>>>>>> .merge_file_krXxnx
             try {
                 return $ref->newInstance();
             } catch (\Throwable) {
@@ -1226,7 +1444,11 @@ final class ModuleExecuteCoverage
             }
 
             $type = $param->getType();
+<<<<<<< .merge_file_8SD7Ow
             if ($type instanceof ReflectionNamedType && ! $type->isBuiltin()) {
+=======
+            if ($type instanceof \ReflectionNamedType && ! $type->isBuiltin()) {
+>>>>>>> .merge_file_krXxnx
                 $dependencyClass = $type->getName();
                 $args[] = class_exists($dependencyClass) ? self::instantiate($dependencyClass, $depth + 1) : null;
 

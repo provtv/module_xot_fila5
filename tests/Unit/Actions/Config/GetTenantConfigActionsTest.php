@@ -30,7 +30,11 @@ describe('Get Tenant Config Actions', function (): void {
 
         app()->instance(GetTenantConfigPathAction::class, $pathMock);
 
+<<<<<<< .merge_file_KV3pwk
         $result = (new GetTenantConfigArrayAction)->execute($configName);
+=======
+        $result = (new GetTenantConfigArrayAction())->execute($configName);
+>>>>>>> .merge_file_YQ1Lrv
 
         Assert::assertSame($configData, $result);
         File::delete($tempPath);
@@ -41,7 +45,11 @@ describe('Get Tenant Config Actions', function (): void {
         $pathMock->method('execute')->willReturn('/path/to/nothing.php');
         app()->instance(GetTenantConfigPathAction::class, $pathMock);
 
+<<<<<<< .merge_file_KV3pwk
         $result = (new GetTenantConfigArrayAction)->execute('non_existent');
+=======
+        $result = (new GetTenantConfigArrayAction())->execute('non_existent');
+>>>>>>> .merge_file_YQ1Lrv
 
         Assert::assertSame([], $result);
     });
