@@ -1,3 +1,11 @@
+---
+title: "Documentation Prompts"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Prompt di Documentazione
 
 ## Panoramica
@@ -60,6 +68,8 @@ Questo documento descrive le regole e le best practices per i prompt di document
 ```
 
 ### Formato Non Corretto
+```
+
 ```markdown
 
 # Collegamenti Non Corretti

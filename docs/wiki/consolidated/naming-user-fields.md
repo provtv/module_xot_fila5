@@ -1,3 +1,11 @@
+---
+title: "Naming User Fields"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Convenzione Naming Campi Utente: `first_name` e `last_name`
 
 ## Regola Fondamentale

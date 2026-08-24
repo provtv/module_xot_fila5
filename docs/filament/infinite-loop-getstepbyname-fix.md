@@ -65,6 +65,8 @@ $attachments = $model::$attachments;
 
 ### **Correzione Applicata**
 ```php
+```
+
 ```php  
 // ✅ CORRETTO - Check esistenza proprietà
 $attachments = property_exists($model, 'attachments') ? $model::$attachments : [];

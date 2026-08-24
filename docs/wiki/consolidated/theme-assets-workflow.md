@@ -1,3 +1,11 @@
+---
+title: "Theme Assets Workflow"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # 🎨 Theme Assets Workflow - CSS/JS Frontend
 
 **⚠️ REGOLA CRITICA**: Per modifiche CSS/JS del frontend, lavorare SEMPRE nella cartella del tema, NON nella root Laravel.

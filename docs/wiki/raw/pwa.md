@@ -1,3 +1,11 @@
+---
+title: "Pwa"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 https://www.freecodecamp.org/news/build-a-pwa-from-scratch-with-html-css-and-javascript/
 https://devcoffee-pwa.netlify.app/
 

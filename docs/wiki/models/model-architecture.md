@@ -1,3 +1,11 @@
+---
+title: "Model Architecture"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Model Architecture - Guida Completa
 
 **Data**: 2025-10-16

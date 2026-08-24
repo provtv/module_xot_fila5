@@ -1,3 +1,11 @@
+---
+title: "Safe Functions"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Funzioni Safe nel Modulo Xot
 
 ## Panoramica

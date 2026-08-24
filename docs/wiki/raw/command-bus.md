@@ -1,3 +1,11 @@
+---
+title: "Command Bus"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 Command Bus in Laravel Published 21 Mar 2019
 https://martinbean.dev/blog/2019/03/21/command-bus-in-laravel/
 

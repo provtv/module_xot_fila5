@@ -1,3 +1,11 @@
+---
+title: "License Renamed"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 The MIT License (MIT)
 
 Copyright (c) :vendor_name <author@domain.com>

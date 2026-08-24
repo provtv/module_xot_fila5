@@ -1,3 +1,11 @@
+---
+title: "Localization Guide"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Guida alla Localizzazione nel Framework Laraxot <nome progetto>
 
 ## Introduzione

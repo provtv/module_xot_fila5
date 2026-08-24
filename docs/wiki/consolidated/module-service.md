@@ -1,3 +1,11 @@
+---
+title: "Module Service"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # ModuleService
 
 La classe `ModuleService` fornisce funzionalità per la gestione dei moduli nell'applicazione.

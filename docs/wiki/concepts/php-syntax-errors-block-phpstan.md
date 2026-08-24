@@ -1,3 +1,11 @@
+---
+title: "Php Syntax Errors Block Phpstan"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # PHP Syntax Errors Block PHPStan Analysis
 
 ## Problem

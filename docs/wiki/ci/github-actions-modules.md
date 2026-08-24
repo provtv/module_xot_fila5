@@ -1,3 +1,11 @@
+---
+title: "Github Actions Modules"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # GitHub Actions per moduli e temi (CI)
 
 ## Scopo

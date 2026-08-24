@@ -1,3 +1,11 @@
+---
+title: "Git Conflicts Resolution"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Risoluzione Conflitti Git - 6 Gennaio 2025
 
 ## Data: 2025-01-06
@@ -114,6 +122,8 @@ Sono stati identificati e risolti conflitti Git in diversi file del progetto <no
 - Risolto conflitto nella gestione del campo postal_code
 
 **Modifiche Applicate**:
+```
+
 ```php
 // VERSIONE CORRETTA
 $res=Locality::query()

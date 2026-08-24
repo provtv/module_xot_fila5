@@ -1,3 +1,11 @@
+---
+title: "Route Service Provider"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # RouteServiceProvider nei Moduli <nome progetto>
 
 Questo documento descrive le linee guida per l'implementazione corretta del RouteServiceProvider nei moduli <nome progetto>.

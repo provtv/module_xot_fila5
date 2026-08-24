@@ -1,3 +1,11 @@
+---
+title: "Git Conflict Package Json"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Template Gestione Conflitti Git - package.json
 
 ## File: bashscripts/package.json

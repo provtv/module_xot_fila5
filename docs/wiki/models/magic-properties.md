@@ -1,3 +1,11 @@
+---
+title: "Magic Properties"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Magic Properties in Laravel Eloquent Models
 
 ## Overview

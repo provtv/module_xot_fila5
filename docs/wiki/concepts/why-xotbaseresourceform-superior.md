@@ -1,3 +1,11 @@
+---
+title: "Why Xotbaseresourceform Superior"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Why XotBaseResourceForm Pattern is Superior to Filament Demo Pure-Static Classes
 
 **Date:** 2026-05-05

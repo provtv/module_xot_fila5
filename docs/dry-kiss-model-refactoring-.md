@@ -24,6 +24,8 @@ namespace Modules\healthcare_app\Models;
 ### 1. ❌ ModuloEsempio\Models\BaseModel estendeva Model invece di XotBaseModel
 
 **Prima** (VIOLAZIONE CRITICA):
+```
+
 ```php
 namespace Modules\ModuloEsempio\Models;
 

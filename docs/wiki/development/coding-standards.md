@@ -1,3 +1,11 @@
+---
+title: "Coding Standards"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Standard di Sviluppo
 
 ## 1. Principi Generali

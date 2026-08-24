@@ -1,3 +1,11 @@
+---
+title: "Hasfactory Signature Compatibility"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Bugfix: HasFactory newFactory() Signature Compatibility
 
 **Data Fix**: 11 Novembre 2025

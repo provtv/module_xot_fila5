@@ -1,3 +1,11 @@
+---
+title: "Nwidart Laravel Modules Complete Guide"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # nWidart/laravel-modules - Guida Completa
 
 **Data Creazione:** Gennaio 2026  

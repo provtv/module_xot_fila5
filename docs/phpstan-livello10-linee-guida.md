@@ -641,3 +641,5 @@ namespace Modules\Xot\Console\Commands;
 ```
 
 Errori PHPStan come `Class Modules\Xot\Console\Commands\DatabaseSchemaExportCommand not found` indicano che è necessario rimuovere il segmento `app` dal namespace.
+
+```

@@ -1,3 +1,11 @@
+---
+title: "Error Curl Download The Latest Cacertpem File From"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 Download the latest cacert.pem file from
 https://curl.se/docs/caextract.html
 

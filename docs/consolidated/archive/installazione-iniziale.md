@@ -29,6 +29,8 @@ cd var/www/html/<nome progetto>/laravel`
 
 ### 3. Installazione Laravel Modules
 
+```
+
 ```bash
 cd laravel
 composer require nwidart/laravel-modules

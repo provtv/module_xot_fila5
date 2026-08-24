@@ -1,3 +1,11 @@
+---
+title: "Filament"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Filament - Best Practices Centralizzate
 
 ## Principi Fondamentali

@@ -1,3 +1,11 @@
+---
+title: "Widget Fileupload Errors"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Widget FileUpload Errors - Troubleshooting Guide
 
 ## Errore: "foreach() argument must be of type array|object, string given"

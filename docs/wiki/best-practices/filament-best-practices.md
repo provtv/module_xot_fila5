@@ -1,3 +1,11 @@
+---
+title: "Filament Best Practices"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Best Practices per Risorse Filament in Laraxot
 
 Questo documento riassume le migliori pratiche per la creazione e gestione delle risorse Filament all'interno dell'ecosistema Laraxot. Seguire queste linee guida garantirà compatibilità e coerenza in tutto il progetto.
@@ -181,6 +189,8 @@ Best practice generiche per l'utilizzo di Filament in moduli Laravel riutilizzab
 - Non usare ->label() direttamente nei form: usare sempre i file di traduzione
 
 ## Esempi
+```
+
 ```php
 // ❌ Anti-pattern
 class MyResource extends \Filament\Resources\Resource {}

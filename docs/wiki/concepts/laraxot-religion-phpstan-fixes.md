@@ -1,3 +1,11 @@
+---
+title: "Laraxot Religion Phpstan Fixes"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # 🧘 Laraxot Religion: Guida per Fix PHPStan
 
 > **Ogni fix deve rispettare la filosofia, religione, politica e zen di Laraxot**

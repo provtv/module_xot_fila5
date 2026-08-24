@@ -1,3 +1,11 @@
+---
+title: "Directory Structure Guide"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Guida alla Struttura Corretta delle Directory nei Moduli Laraxot <nome progetto>
 
 ## Panoramica

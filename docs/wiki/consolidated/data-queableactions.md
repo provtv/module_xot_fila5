@@ -1,3 +1,11 @@
+---
+title: "Data Queableactions"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Convenzioni per Data Objects e QueueableActions
 
 Questo documento definisce le convenzioni per l'utilizzo dei Data Objects e QueueableActions nel framework Laraxot <nome progetto>, con una chiara preferenza per le librerie Spatie rispetto agli approcci tradizionali.

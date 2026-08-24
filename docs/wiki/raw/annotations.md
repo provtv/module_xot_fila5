@@ -1,3 +1,11 @@
+---
+title: "Annotations"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 //---
 continuo di type_hinting
 --//

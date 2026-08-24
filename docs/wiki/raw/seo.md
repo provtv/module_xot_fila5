@@ -1,3 +1,11 @@
+---
+title: "Seo"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 Now Let's see Some Laravel SEO Packages
 
 6. Laravel Meta Manager

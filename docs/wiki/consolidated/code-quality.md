@@ -1,3 +1,11 @@
+---
+title: "Code Quality"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Code Quality Guidelines for Laravel Modules
 
 ## Overview
@@ -78,6 +86,8 @@ class ExampleModel extends BaseModel
 - **Type Errors**: Ensure all methods and functions have explicit return types and parameter types to avoid type-related bugs.
 - **Static Analysis Failures**: Address PHPStan errors by refining code or updating the baseline for existing code.
 - **Code Duplication**: Refactor duplicated code into reusable methods or traits to reduce maintenance overhead.
+
+```
 
 ```php
 return new class extends XotBaseMigration {

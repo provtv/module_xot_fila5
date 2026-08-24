@@ -1,3 +1,11 @@
+---
+title: "Model With Author Contract"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # ModelWithAuthorContract
 
 Il `ModelWithAuthorContract` è un'interfaccia che estende `ModelContract` e definisce il contratto per i modelli che necessitano di tracciare l'autore e l'editor delle modifiche.
@@ -78,6 +86,8 @@ interface ModelWithAuthorContract extends ModelContract
 - Modules\User\Models\User
 
 ## Esempio di Utilizzo
+
+```
 
 ```php
 class Article extends Model implements ModelWithAuthorContract

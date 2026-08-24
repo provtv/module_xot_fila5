@@ -1,3 +1,11 @@
+---
+title: "Has Recursive Relationships Contract Update"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # HasRecursiveRelationshipsContract - Aggiornamento 2025-01-18
 
 ## 📋 Riepilogo Modifiche

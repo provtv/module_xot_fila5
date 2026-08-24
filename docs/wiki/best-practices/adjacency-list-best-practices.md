@@ -1,3 +1,11 @@
+---
+title: "Adjacency List Best Practices"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Adjacency List Best Practices
 
 > Questo documento sostituisce `nestedset-migration-best-practices.md` (legacy).

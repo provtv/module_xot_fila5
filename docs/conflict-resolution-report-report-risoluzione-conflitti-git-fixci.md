@@ -236,6 +236,8 @@ Tutti i file di documentazione sono stati aggiornati per:
 ## Verifiche Eseguite
 
 ### Sintassi PHP
+```
+
 ```bash
 php -l Modules/Xot/tests/Feature/FixStructureTest.pest.php
 php -l Modules/Xot/tests/Pest.php

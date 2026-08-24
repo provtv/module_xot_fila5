@@ -1,3 +1,11 @@
+---
+title: "Filament4 Upgrade Fixes"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Risoluzione Errori Upgrade Filament 4 - Laraxot PTVX
 
 ## Problema Iniziale: ProviderRepository array_merge()

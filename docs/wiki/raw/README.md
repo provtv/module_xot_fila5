@@ -1,3 +1,11 @@
+---
+title: "Readme"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Raw LLM Wiki Sources
 
 Append-only staging area for source material that must be preserved before it is summarized into the local wiki.

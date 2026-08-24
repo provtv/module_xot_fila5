@@ -1,3 +1,11 @@
+---
+title: "Cyclomatic Complexity Refactoring Plan"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Cyclomatic Complexity Refactoring Plan - Module Xot
 
 **Created:** 2025-10-01

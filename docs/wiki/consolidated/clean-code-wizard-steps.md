@@ -1,3 +1,11 @@
+---
+title: "Clean Code Wizard Steps"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Clean Code: Wizard Steps come Funzioni dedicate
 
 ## Regola

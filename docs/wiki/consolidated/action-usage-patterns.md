@@ -1,3 +1,11 @@
+---
+title: "Action Usage Patterns"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Action Usage Patterns - Regole Fondamentali
 
 ## 🎯 **REGOLA CRITICA: Pattern di Uso delle Action**

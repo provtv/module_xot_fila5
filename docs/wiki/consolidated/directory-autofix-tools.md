@@ -1,3 +1,11 @@
+---
+title: "Directory Autofix Tools"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Strumenti di Correzione Automatica della Struttura delle Directory
 
 ## Introduzione

@@ -48,3 +48,42 @@ Modules/[Nome]/
 * [documentation.md](../../../Xot/docs/documentation.md)
 * [documentation.md](../../../Xot/docs/guidelines/documentation.md)
 * [documentation.md](../../../Cms/docs/roadmap/features/documentation.md)
+
+---
+
+## Appendice — contenuto migrato da `documentation.txt`
+
+> Il file `.txt` gemello conteneva materiale che questo documento non riportava.
+> È stato accodato qui invariato: va riletto e integrato nelle sezioni sopra.
+
+# documentation
+
+<!-- Contenuto migrato da _docs/documentation.txt -->
+
+https://github.com/mpociot/laravel-apidoc-generator
+
+https://github.com/knuckleswtf/scribe
+https://scribe.readthedocs.io/_/downloads/en/latest/pdf/
+
+https://www.sitepoint.com/generating-php-documentation-sami/
+
+http://phpxref.sourceforge.net/
+
+https://www.peej.co.uk/phpdoctor/
+
+https://www.sitepoint.com/automatic-php-code-generation-memio/
+
+https://crestapps.com/laravel-code-generator/project_docs/1.1#demo
+
+https://whoisryosuke.com/blog/2018/adding-auto-generated-docs-to-laravel-api-kushy/
+
+//--- clean code
+http://www.phpspec.net/en/stable/manual/introduction.html
+
+--- API ----
+https://blog.quickadminpanel.com/laravel-api-documentation-with-openapiswagger/
+
+https://beyondco.de/project_docs/laravel-apidoc-generator/getting-started/documenting-your-api
+
+//-- forum un po' diverso
+https://flarum.org/

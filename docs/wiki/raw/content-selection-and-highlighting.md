@@ -1,3 +1,11 @@
+---
+title: "Content Selection And Highlighting"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 https://javascript.plainenglish.io/medium-like-text-highlighting-in-react-afa35a29a81a
 
 

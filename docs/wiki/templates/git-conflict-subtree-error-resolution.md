@@ -1,3 +1,11 @@
+---
+title: "Git Conflict Subtree Error Resolution"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Template Gestione Conflitti Git - git_subtree_error_resolution.md
 
 ## File: bashscripts/git_subtree_error_resolution.md

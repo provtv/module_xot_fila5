@@ -1,3 +1,11 @@
+---
+title: "Filament Tables"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Gestione delle Tabelle in Filament
 
 Questo documento definisce le linee guida per l'implementazione delle tabelle Filament nel progetto <nome progetto>, utilizzando il trait `HasXotTable`.

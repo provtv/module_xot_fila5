@@ -1,3 +1,11 @@
+---
+title: "Filament Resource Guidelines"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Linee Guida per le Risorse Filament nel Progetto
 # Linee Guida per le Risorse Filament nel Progetto <nome progetto>
 # Linee Guida per le Risorse Filament nel Progetto <nome progetto>

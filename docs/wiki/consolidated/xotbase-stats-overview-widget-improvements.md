@@ -1,3 +1,11 @@
+---
+title: "Xotbase Stats Overview Widget Improvements"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # XotBaseStatsOverviewWidget - Miglioramenti Implementati
 
 ## Panoramica

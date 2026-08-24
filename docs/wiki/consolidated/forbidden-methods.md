@@ -1,3 +1,11 @@
+---
+title: "Forbidden Methods"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Metodi da NON implementare in classi che estendono XotBaseResource
 
 ## Regola fondamentale

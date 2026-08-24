@@ -1,3 +1,11 @@
+---
+title: "Model Classification"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Xot Module - Model Classification
 
 ## Business-Relevant Models (Require Factories/Seeders)

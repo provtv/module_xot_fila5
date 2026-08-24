@@ -1,3 +1,11 @@
+---
+title: "Project Best Practices"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Best Practices Progetto Laraxot PTVX - 2025
 
 > **Documento Master** - Regole fondamentali aggiornate dopo risoluzione massiva merge conflicts

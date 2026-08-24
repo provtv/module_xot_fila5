@@ -1,3 +1,11 @@
+---
+title: "Has Dynamic Fillable"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # HasDynamicFillable
 
 `Modules\Xot\Models\Traits\HasDynamicFillable`

@@ -1,3 +1,11 @@
+---
+title: "Filament Best Practices Uppercase"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Best Practices per Filament Resources in Laraxot
 
 Questo documento definisce le linee guida ufficiali e le best practices per l'implementazione delle risorse Filament all'interno del framework Laraxot.

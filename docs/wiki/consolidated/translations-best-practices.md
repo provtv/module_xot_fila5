@@ -1,3 +1,11 @@
+---
+title: "Translations Best Practices"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Traduzioni: Best Practices in Laraxot
 
 Questo documento definisce le linee guida ufficiali e le best practices per la gestione delle traduzioni all'interno del framework Laraxot.

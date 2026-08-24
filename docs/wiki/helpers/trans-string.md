@@ -1,3 +1,11 @@
+---
+title: "Trans String"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # trans_string() - Helper Translation Type-Safe
 
 ## Scopo (Purpose)

@@ -138,3 +138,24 @@ Tracker gathers a lot of information from your requests to identify and store:
 https://github.com/antonioribeiro/tracker
 
 ---
+
+---
+
+## Appendice — contenuto migrato da `repositories.txt`
+
+> Il file `.txt` gemello conteneva materiale che questo documento non riportava.
+> È stato accodato qui invariato: va riletto e integrato nelle sezioni sopra.
+
+# repositories
+
+<!-- Contenuto migrato da _docs/repositories.txt -->
+
+//-- cosa vecchia ma spiega i criteria
+https://bosnadev.com/2015/03/07/using-repository-pattern-in-laravel-5/
+
+//--- repository torann, torann ha sempre buoni spunti
+https://lyften.com/projects/laravel-repository/
+
+//-- prettus -- la piu' completa
+http://andersonandra.de/l5-repository/
+https://www.programmersought.com/article/8489242324/

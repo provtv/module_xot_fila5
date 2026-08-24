@@ -1,3 +1,11 @@
+---
+title: "Current Progress"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Stato Attuale del Progetto (15 marzo 2024)
 
 ## Correzioni PHPStan Completate

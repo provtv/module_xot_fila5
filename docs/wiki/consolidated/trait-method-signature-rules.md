@@ -1,3 +1,11 @@
+---
+title: "Trait Method Signature Rules"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Trait Method Signature Rules
 
 ## 🚨 Critical Rule: Static vs Non-Static Methods

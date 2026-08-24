@@ -1,3 +1,11 @@
+---
+title: "Readme"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Xot Module Documentation - Consolidated
 
 This directory contains consolidated and organized documentation for the Xot module, which serves as the core foundation of the Laravel modular monolith application.

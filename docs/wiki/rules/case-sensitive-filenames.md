@@ -1,3 +1,11 @@
+---
+title: "Case Sensitive Filenames"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # 📋 **Regola: Nomi File Case-Sensitive**
 
 **Data**: 11 Novembre 2025

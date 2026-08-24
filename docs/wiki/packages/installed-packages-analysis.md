@@ -1,3 +1,11 @@
+---
+title: "Installed Packages Analysis"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Analisi Pacchetti Installati - <nome progetto> Fila5 Mono
 
 Documentazione generata il 2026-02-26 basata su `composer show`.

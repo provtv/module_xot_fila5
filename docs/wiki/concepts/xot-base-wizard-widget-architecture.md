@@ -1,3 +1,11 @@
+---
+title: "Xot Base Wizard Widget Architecture"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # XotBaseWizardWidget — Architettura, bellezza e bug del primo step sempre visibile
 
 > **⚠️ Aggiornamento 2026-05-22** — contesto HasWizard + `getWizardComponent()` aggiornato in [`filament-wizard-refactoring.md`](../filament-wizard-refactoring.md). **`normalizeWizardFormState()` non esiste più sulla base**: il submit dominio usa **`$this->form->getState()`**; eventuale trait **`DelegatesFilamentWizardSchemaMethods`** solo dove serve Blade.

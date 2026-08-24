@@ -1,3 +1,11 @@
+---
+title: "Zsh"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 link: https://www.reddit.com/r/bash/comments/12lz3kb/is_it_possible_to_make_zsh_look_like_gitbash/
 
 touch ~/.zshrc

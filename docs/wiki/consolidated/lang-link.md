@@ -1,3 +1,11 @@
+---
+title: "Lang Link"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Collegamento alle Traduzioni del Modulo Xot
 
 Questo modulo utilizza le traduzioni centralizzate nella cartella [Lang](../../Lang/project_docs/).

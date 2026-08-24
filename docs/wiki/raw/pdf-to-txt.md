@@ -1,3 +1,11 @@
+---
+title: "Pdf To Txt"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 https://dev.to/snehalk/how-to-read-content-from-pdf-document-in-laravel-8-4f6d
 
 

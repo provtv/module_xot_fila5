@@ -1,3 +1,11 @@
+---
+title: "Index"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Raw Sources — Xot
 
 Questo layer contiene le fonti grezze: documenti immutabili che l'LLM legge ma non modifica.

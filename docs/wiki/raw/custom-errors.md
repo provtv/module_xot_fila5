@@ -1,3 +1,11 @@
+---
+title: "Custom Errors"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 https://tutsforweb.com/how-to-create-custom-404-page-laravel/
 
 

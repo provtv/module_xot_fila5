@@ -311,3 +311,13 @@ class Comment extends Model
     }
 }
 ```
+
+---
+
+## Appendice — contenuto migrato da `models.txt`
+
+> Il file `.txt` gemello conteneva materiale che questo documento non riportava.
+> È stato accodato qui invariato: va riletto e integrato nelle sezioni sopra.
+
+multi key, fixing lazy loading
+https://github.com/topclaudy/compoships
