@@ -1,3 +1,11 @@
+---
+title: "Phpstan Journey"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # 🌟 Il Viaggio verso l'Illuminazione PHPStan
 
 ## La Via dei Nove Moduli Perfetti

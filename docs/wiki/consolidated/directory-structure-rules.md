@@ -1,3 +1,11 @@
+---
+title: "Directory Structure Rules"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Regole Struttura Directory
 
 ## Struttura Base del Progetto

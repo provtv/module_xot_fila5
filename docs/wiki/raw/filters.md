@@ -1,3 +1,11 @@
+---
+title: "Filters"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 <?php
 //https://itnext.io/how-i-designed-and-built-lumenos-recruitment-search-engine-d8918b3500
 namespace App\Search\Filters;

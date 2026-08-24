@@ -1,3 +1,11 @@
+---
+title: "Service Provider Best Practices"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Best Practices nei Service Provider
 
 ## Decisione Architetturale (2025-05-13)

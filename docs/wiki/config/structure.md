@@ -1,3 +1,11 @@
+---
+title: "Structure"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Struttura delle Configurazioni
 
 Questo documento definisce la struttura standard delle configurazioni per tutti i moduli.

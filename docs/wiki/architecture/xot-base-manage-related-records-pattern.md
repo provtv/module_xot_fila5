@@ -1,3 +1,11 @@
+---
+title: "Xot Base Manage Related Records Pattern"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Pattern XotBaseManageRelatedRecords - Laraxot PTVX
 
 Questa guida definisce come implementare correttamente le pagine di gestione dei record correlati (ManageRelatedRecords) evitando ridondanze e sfruttando l'architettura XotBase.

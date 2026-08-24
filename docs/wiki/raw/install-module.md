@@ -1,3 +1,11 @@
+---
+title: "Install Module"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
  public function test(){
 
         $vendor_name='laraxot/module_formx';

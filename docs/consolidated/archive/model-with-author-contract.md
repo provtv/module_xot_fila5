@@ -61,6 +61,8 @@ interface ModelWithAuthorContract extends ModelContract
 
 ## Esempio di Utilizzo
 
+```
+
 ```php
 class Article extends Model implements ModelWithAuthorContract
 {

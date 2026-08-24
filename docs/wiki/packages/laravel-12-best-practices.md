@@ -1,3 +1,11 @@
+---
+title: "Laravel 12 Best Practices"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Laravel 12 Best Practices - Laraxot PTVX
 
 Aggiornamento delle pratiche consigliate basate sulle nuove funzionalità di Laravel 12.

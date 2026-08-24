@@ -1,3 +1,11 @@
+---
+title: "Docs Structure Correction Summary"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Correzione Struttura Cartelle Docs - Riepilogo Completo
 
 ## Contesto e Problema Identificato

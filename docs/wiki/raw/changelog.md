@@ -1,3 +1,11 @@
+---
+title: "Changelog"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Changelog - Modulo Xot
 
 Tutte le modifiche significative al modulo Xot sono documentate in questo file.

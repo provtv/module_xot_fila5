@@ -1,3 +1,11 @@
+---
+title: "Xot Filament V5"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Task: Xot Filament v5 Alignment (Clusters)
 
 ## 📋 Obiettivo

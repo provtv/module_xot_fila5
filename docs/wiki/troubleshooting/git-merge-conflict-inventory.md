@@ -1,3 +1,11 @@
+---
+title: "Git Merge Conflict Inventory"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Git Conflict Inventory
 
 - Date: 2026-04-28

@@ -1,3 +1,11 @@
+---
+title: "Xot Base Translation Update"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Aggiornamento File di Traduzione xot_base.php
 
 ## Data Aggiornamento

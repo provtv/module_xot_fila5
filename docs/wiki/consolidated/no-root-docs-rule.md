@@ -1,3 +1,11 @@
+---
+title: "No Root Docs Rule"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # REGOLA CRITICA: Cartelle docs root VIETATE
 
 ## CARTELLE CHE NON DEVONO MAI ESISTERE:

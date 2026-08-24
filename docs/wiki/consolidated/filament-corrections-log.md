@@ -1,3 +1,11 @@
+---
+title: "Filament Corrections Log"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Log delle Correzioni Filament
 
 ## Data: 2024-12-19

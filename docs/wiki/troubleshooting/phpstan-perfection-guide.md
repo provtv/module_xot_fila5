@@ -1,3 +1,11 @@
+---
+title: "Phpstan Perfection Guide"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # PHPStan Perfection Guide
 
 This guide documents the patterns and strategies used to achieve 100% PHPStan (Level Max) compliance across all Laraxot modules.

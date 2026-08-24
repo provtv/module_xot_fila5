@@ -1,3 +1,11 @@
+---
+title: "Git Conflicts Resolution"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 
 # Risoluzione Conflitti Git - 6 Gennaio 2025
 
@@ -95,3 +103,5 @@ $res=Locality::query()
 
 ### 1. Controllo Conflitti
 ```bash
+
+```

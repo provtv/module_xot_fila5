@@ -34,3 +34,5 @@ The `XotBaseViewRecord` base class provides a standardized structure for view pa
 
 As a general rule, always use `Modules\Xot\Filament\Schemas\Components\XotBaseSection` instead of the standard `Filament\Infolists\Components\Section`.
 Also, the top-level array returned by `getInfolistSchema()` MUST always use string keys for its elements, typically matching the name of the `Section` or a logical identifier. Numeric keys are forbidden.
+
+```

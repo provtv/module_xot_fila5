@@ -1,3 +1,11 @@
+---
+title: "Conflitti Merge Risolti"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Risoluzione Conflitti di Merge
 
 # Risoluzione Conflitti di Merge in <nome progetto>

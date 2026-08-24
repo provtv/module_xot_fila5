@@ -1,3 +1,11 @@
+---
+title: "Regex Replace Patterns"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 -------------------------
 relatedUrl\(\['related_name'[ ]?=>[ ]?'([^ ]*)',[ ]?'act'[ ]?=>[ ]?'([a-zA-Z_]*)'\]\)
 relatedUrl('$1','$2')

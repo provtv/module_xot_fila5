@@ -1,3 +1,11 @@
+---
+title: "Php Strict Types"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # PHP Strict Types in Laravel Modules
 
 ## Overview

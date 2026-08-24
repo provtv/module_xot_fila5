@@ -1,3 +1,11 @@
+---
+title: "Naming Conventions"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Convenzioni di Nomenclatura in Laravel Modules
 
 Questo documento definisce le convenzioni ufficiali di nomenclatura da utilizzare in tutto il progetto Laravel Modules.

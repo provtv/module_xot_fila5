@@ -3681,6 +3681,8 @@ yarn run build && yarn run copy
 ## Setup Corretto
 
 ### 1. vite.config.js
+```
+
 ```javascript
 import { defineConfig } from 'vite';
 import laravel from 'laravel-vite-plugin';
@@ -3820,6 +3822,8 @@ ls public_html/themes/Sixteen/dist
 ## Setup Colori
 
 ### 1. tailwind.config.js
+```
+
 ```javascript
 import colors from 'tailwindcss/colors';
 
@@ -3959,6 +3963,8 @@ laravel/Modules/[ModuleName]/
 
 ### 1. XotBaseServiceProvider
 Il `XotBaseServiceProvider` si occupa di registrare automaticamente le icone:
+
+```
 
 ```php
 namespace Modules\Xot\Providers;
@@ -4560,6 +4566,8 @@ Quando si estende una classe base, i metodi sovrascritti devono mantenere lo ste
 ## Esempi
 
 ### 1. Metodi della Tabella
+```
+
 ```php
 // ❌ ERRATO: Livello di accesso più restrittivo
 public function getListTableColumns(): array
@@ -4673,6 +4681,8 @@ public function getListTableColumns(): array
 ## Struttura dei Namespace
 
 ### 1. Resources e Pages
+```
+
 ```php
 // Resources
 use Modules\Xot\Filament\Resources\XotBaseResource;
@@ -4785,6 +4795,8 @@ class CommentsRelationManager extends XotBaseRelationManager
 ## Importante Nota sui Namespace
 
 ### ❌ Namespace Errati da Non Usare
+```
+
 ```php
 // ❌ ERRATO: Questi namespace non esistono
 use Modules\Xot\Filament\RelationManagers\XotBaseRelationManager;
@@ -5200,6 +5212,8 @@ Modules/YourModule/
 ## Namespace Corretto
 
 ### ✅ CORRETTO: Include il Resource nel namespace
+```
+
 ```php
 namespace Modules\Application\Filament\Resources\TicketResource\RelationManagers;
 ```
@@ -5660,6 +5674,8 @@ Notification::make()
 ## Navigazione e Configurazione
 
 ### ❌ Modo Errato (Filament Standard)
+```
+
 ```php
 class TicketResource extends XotBaseResource
 {
@@ -5778,6 +5794,8 @@ Modules/YourModule/
 ## Best Practices
 
 1. **Namespace**:
+```
+
 ```php
 // ❌ ERRATO
 namespace Modules\YourModule\Filament\Resources\YourResource\Actions;
@@ -5849,6 +5867,8 @@ Questo errore si verifica quando:
 #### Soluzione
 
 1. **Definizione Corretta della Relazione**:
+```
+
 ```php
 // Nel modello
 public function category(): BelongsTo
@@ -5938,6 +5958,8 @@ Forms\Components\Select::make('category_id')
 
 ### 1. Problema Comune
 Quando due trait definiscono lo stesso metodo, si verifica un conflitto:
+
+```
 
 ```php
 // ❌ ERRATO: Conflitto tra metodi notifications()
@@ -6385,6 +6407,8 @@ yarn run build && yarn run copy
 ## Setup Corretto
 
 ### 1. vite.config.js
+```
+
 ```javascript
 import { defineConfig } from 'vite';
 import laravel from 'laravel-vite-plugin';
@@ -6524,6 +6548,8 @@ ls public_html/themes/Sixteen/dist
 ## Setup Colori
 
 ### 1. tailwind.config.js
+```
+
 ```javascript
 import colors from 'tailwindcss/colors';
 
@@ -6663,6 +6689,8 @@ laravel/Modules/[ModuleName]/
 
 ### 1. XotBaseServiceProvider
 Il `XotBaseServiceProvider` si occupa di registrare automaticamente le icone:
+
+```
 
 ```php
 namespace Modules\Xot\Providers;
@@ -7264,6 +7292,8 @@ Quando si estende una classe base, i metodi sovrascritti devono mantenere lo ste
 ## Esempi
 
 ### 1. Metodi della Tabella
+```
+
 ```php
 // ❌ ERRATO: Livello di accesso più restrittivo
 public function getListTableColumns(): array
@@ -7377,6 +7407,8 @@ public function getListTableColumns(): array
 ## Struttura dei Namespace
 
 ### 1. Resources e Pages
+```
+
 ```php
 // Resources
 use Modules\Xot\Filament\Resources\XotBaseResource;
@@ -7489,6 +7521,8 @@ class CommentsRelationManager extends XotBaseRelationManager
 ## Importante Nota sui Namespace
 
 ### ❌ Namespace Errati da Non Usare
+```
+
 ```php
 // ❌ ERRATO: Questi namespace non esistono
 use Modules\Xot\Filament\RelationManagers\XotBaseRelationManager;
@@ -7803,6 +7837,8 @@ class Ticket extends BaseTicket
 In Laraxot, i componenti Livewire vengono autoregistrati grazie a XotBaseServiceProvider, eliminando la necessità di registrarli manualmente.
 
 ### ❌ ERRATO: Registrazione Manuale
+```
+
 ```php
 // ❌ Non necessario in Laraxot
 class TicketServiceProvider extends ServiceProvider
@@ -8167,6 +8203,8 @@ Prima di utilizzare un'icona Heroicon, verificare sempre la sua esistenza:
 
 ### 2. Fallback e Gestione Errori
 
+```
+
 ```php
 class ModuleServiceProvider extends ServiceProvider
 {
@@ -8440,6 +8478,8 @@ public static function form(Form $form): Form
 ## Namespace e Classi Base
 
 ### Resources e RelationManager
+```
+
 ```php
 // Resources
 use Modules\Xot\Filament\Resources\XotBaseResource;
@@ -8492,6 +8532,8 @@ Framework based on Laravel for building modular applications.
 ## Implementazione Corretta dei Widget
 
 ### 1. Registrazione del Widget nella Pagina
+```
+
 ```php
 protected function getHeaderWidgets(): array
 {
@@ -8592,6 +8634,8 @@ class ClientMapWidget extends Widget
 ## Implementazione Widget
 
 ### 1. Registrazione Widget
+```
+
 ```php
 // In ListClients.php o qualsiasi altra pagina Filament
 protected function getHeaderWidgets(): array
@@ -8716,6 +8760,8 @@ class ClientMapWidget extends Widget
 ## Implementazione Widget
 
 ### 1. Widget Reattivo
+```
+
 ```php
 use Livewire\Attributes\Reactive;
 use Filament\Widgets\Widget;

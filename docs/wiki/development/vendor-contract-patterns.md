@@ -1,3 +1,11 @@
+---
+title: "Vendor Contract Patterns"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Vendor Contract Patterns - Critical Rule
 
 ## Date Created

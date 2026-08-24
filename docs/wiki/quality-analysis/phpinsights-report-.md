@@ -1,3 +1,11 @@
+---
+title: "Phpinsights Report"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # PHP Insights Analysis Report - Xot Module
 
 **Date:** 2025-11-12

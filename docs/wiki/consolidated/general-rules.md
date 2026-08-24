@@ -1,3 +1,11 @@
+---
+title: "General Rules"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Regole Generali del Progetto <nome progetto>
 
 Questo documento contiene le regole generali che devono essere seguite in tutto il progetto <nome progetto> per garantire coerenza e qualità del codice.

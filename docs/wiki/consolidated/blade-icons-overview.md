@@ -1,3 +1,11 @@
+---
+title: "Blade Icons Overview"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Panoramica delle Blade Icons in Xot
 
 ## Introduzione

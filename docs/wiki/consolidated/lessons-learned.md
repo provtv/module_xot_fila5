@@ -1,3 +1,11 @@
+---
+title: "Lessons Learned"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Lessons Learned – Consolidated Rules (2025-08-25)
 
 This document consolidates recurring fixes and rules applied across modules. Keep files lowercase (README.md excepted).

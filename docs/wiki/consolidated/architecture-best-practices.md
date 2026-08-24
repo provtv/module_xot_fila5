@@ -1,3 +1,11 @@
+---
+title: "Architecture Best Practices"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 ## Convenzioni di naming per le azioni (Actions)
 
 Per tutte le azioni che operano su chiavi di aggregazione specifiche (es. stabi, valutatore_id, ecc.), si raccomanda l'uso esplicito del suffisso `By<Chiave>` nel nome della classe. Esempio:

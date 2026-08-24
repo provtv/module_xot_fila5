@@ -119,6 +119,8 @@ abstract class XotBaseClass extends BaseClass
 ## Best Practice Implementate
 
 ### Metodi Overridabili
+```
+
 ```php
 // ✅ CORRETTO - Metodo overridabile
 public function form(Form $form): Form

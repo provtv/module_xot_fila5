@@ -1,3 +1,11 @@
+---
+title: "Optimization Analysis"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Analisi di Ottimizzazione - Modulo Xot (Framework Base)
 
 ## 🎯 Principi Applicati: DRY + KISS + SOLID + ROBUST + Laraxot

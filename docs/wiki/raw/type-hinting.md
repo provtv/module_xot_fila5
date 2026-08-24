@@ -1,3 +1,11 @@
+---
+title: "Type Hinting"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 https://mlocati.github.io/articles/php-type-hinting.html
 https://howto.webarea.it/php/type-hinting-php-e-controllo-wake-strict-mode_170
 https://wiki.php.net/rfc/scalar_type_hints

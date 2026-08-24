@@ -1,3 +1,11 @@
+---
+title: "Naming Conventions Docs"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Convenzioni di Naming nella Documentazione
 
 ## Regola: Nome del Progetto nei Moduli

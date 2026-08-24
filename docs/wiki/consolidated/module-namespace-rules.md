@@ -1,3 +1,11 @@
+---
+title: "Module Namespace Rules"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Regola generale: Label e traduzioni in Filament
 
 ## Regola

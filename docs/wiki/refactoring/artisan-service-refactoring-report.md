@@ -1,3 +1,11 @@
+---
+title: "Artisan Service Refactoring Report"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # ArtisanService Refactoring Report
 
 **Date:** 2025-10-01

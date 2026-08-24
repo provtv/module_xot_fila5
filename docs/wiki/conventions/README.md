@@ -1,3 +1,11 @@
+---
+title: "Readme"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Convenzioni
 
 Questa cartella contiene le convenzioni di nomenclatura e le regole di stile utilizzate nel progetto.

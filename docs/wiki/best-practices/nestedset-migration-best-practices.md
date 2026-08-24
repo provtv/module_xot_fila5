@@ -1,3 +1,11 @@
+---
+title: "Nestedset Migration Best Practices"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # NestedSet Migration Best Practices - XOT Module
 
 ## Overview

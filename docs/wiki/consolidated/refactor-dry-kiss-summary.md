@@ -1,3 +1,11 @@
+---
+title: "Refactor Dry Kiss Summary"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Refactor Radicale DRY + KISS - Riepilogo Completo
 
 > **🎯 Obiettivo Raggiunto**: Eliminazione massiva duplicazioni documentali

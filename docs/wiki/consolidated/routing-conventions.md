@@ -1,3 +1,11 @@
+---
+title: "Routing Conventions"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Convenzioni di Routing
 
 ## Struttura Base

@@ -1,3 +1,11 @@
+---
+title: "Filament Components Methods"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Metodi dei Componenti Filament
 
 ## Tabs e Tab Components

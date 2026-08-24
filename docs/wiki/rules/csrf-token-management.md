@@ -1,3 +1,11 @@
+---
+title: "Csrf Token Management"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Gestione Token CSRF nei Widget XotBase
 
 ## Descrizione

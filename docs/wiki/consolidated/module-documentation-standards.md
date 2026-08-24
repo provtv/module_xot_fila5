@@ -1,3 +1,11 @@
+---
+title: "Module Documentation Standards"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Standard di Documentazione dei Moduli
 
 ## Regola: Nessun Riferimento al Progetto Specifico

@@ -1,3 +1,11 @@
+---
+title: "Htaccess"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 https://frostbutter.com/articles/htaccess-cache-control-for-a-faster-website/
 
 # Start Cache control

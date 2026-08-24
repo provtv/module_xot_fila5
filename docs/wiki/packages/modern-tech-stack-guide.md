@@ -1,3 +1,11 @@
+---
+title: "Modern Tech Stack Guide"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Guida al Modern Tech Stack - Laraxot PTVX
 
 Questa guida delinea come utilizzare al meglio i pacchetti installati per mantenere l'architettura pulita e performante.

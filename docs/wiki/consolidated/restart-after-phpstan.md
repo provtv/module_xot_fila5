@@ -1,3 +1,11 @@
+---
+title: "Restart After Phpstan"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Guida al Riavvio del Sistema Dopo Validazione PHPStan
 
 ## Introduzione

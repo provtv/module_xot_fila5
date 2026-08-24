@@ -1,3 +1,11 @@
+---
+title: "Auto Routes"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 /it/tests
 va a prendere il modello "home" e vede se esiste la relazione "tests" se esiste usa quelle, altrimenti
 va a prendere il "singolar" di tests e va nel solito file xra.php

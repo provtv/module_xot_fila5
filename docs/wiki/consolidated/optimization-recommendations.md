@@ -1,3 +1,11 @@
+---
+title: "Optimization Recommendations"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Raccomandazioni di Ottimizzazione - Modulo Xot
 
 ## 🎯 Stato Attuale e Problemi Critici

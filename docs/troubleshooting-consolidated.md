@@ -460,6 +460,8 @@ Class not found: Modules\ModuleName\NewClass
 ```
 
 **Soluzione**
+```
+
 ```bash
 composer dump-autoload
 ```

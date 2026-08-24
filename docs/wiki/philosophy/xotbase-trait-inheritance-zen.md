@@ -1,3 +1,11 @@
+---
+title: "Xotbase Trait Inheritance Zen"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Lo Zen dell'Ereditarietà XotBase: Filosofia Anti-Ridondanza
 
 ## La Storia

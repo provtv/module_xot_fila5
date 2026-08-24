@@ -1,3 +1,11 @@
+---
+title: "Actions Standardization"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Standardizzazione Actions - Rimozione Duplicazioni
 
 ## Problema Identificato (2025-01-06)

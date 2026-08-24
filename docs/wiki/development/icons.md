@@ -1,3 +1,11 @@
+---
+title: "Icons"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Icone e SVG nei Moduli
 
 ## Configurazione delle Icone di Navigazione

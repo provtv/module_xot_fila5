@@ -1,3 +1,11 @@
+---
+title: "Modules Path Structure"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Regola struttura path per i moduli Laravel
 
 Tutti i file di risorsa (Resource), enum e pages dei moduli Laravel devono essere posizionati in `Modules/<NomeModulo>/app/` e **mai** direttamente nella root del modulo o in sottocartelle come `Filament/Resources/` o `Enums/` fuori da `app/`.

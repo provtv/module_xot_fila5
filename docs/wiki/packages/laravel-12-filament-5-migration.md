@@ -1,3 +1,11 @@
+---
+title: "Laravel 12 Filament 5 Migration"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Migrazione a Laravel 12 e Filament 5
 
 Linee guida critiche per l'aggiornamento e la manutenzione dei moduli.

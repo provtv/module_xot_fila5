@@ -1,3 +1,11 @@
+---
+title: "Model Casting Rules"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Regole per Model Casting in Laraxot - CRITICO
 
 ## ERRORE ARCHITETTURALE GRAVE: Proprietà $casts Deprecata

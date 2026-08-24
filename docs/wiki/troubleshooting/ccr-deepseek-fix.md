@@ -1,3 +1,11 @@
+---
+title: "Ccr Deepseek Fix"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # CCR DeepSeek 400 Error Fix: Missing reasoning_content
 
 ## Problem

@@ -1,3 +1,11 @@
+---
+title: "Translation Structure Expanded"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 - [Geo Module Translations](/Modules/Geo/project_docs/translation-structure-expanded.md)
 - [User Module Translations](/Modules/User/project_docs/translation-guidelines.md)
 

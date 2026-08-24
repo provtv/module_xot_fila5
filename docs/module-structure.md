@@ -56,6 +56,8 @@ Per dettagli implementativi e best practice vedi:
 
 Ogni modulo deve avere un ServiceProvider che estende `XotBaseServiceProvider`. Questo provider è responsabile della registrazione delle risorse del modulo (routes, views, translations, etc.) nell'applicazione.
 
+```
+
 ```php
 <?php
 

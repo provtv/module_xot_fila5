@@ -1,3 +1,11 @@
+---
+title: "Module Namespace Path Convention"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # convenzioni per namespace e percorsi dei moduli
 
 ## struttura corretta del percorso

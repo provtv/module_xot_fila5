@@ -1,3 +1,11 @@
+---
+title: "Certificate"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 https://www.studysection.com/Tests/StartTest/laravel-5.x-advanced
 
 https://github.com/TBlindaruk/laravel-certification-preparing

@@ -1,3 +1,11 @@
+---
+title: "Phpstan Fixes Log"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 ## [2026-07-06] membershipTeams non appartiene a UserContract
 
 - `membershipTeams()` e un alias concreto di `HasTeams::teams()` su `BaseUser`, non una capability cross-module richiesta da `Modules\Xot\Contracts\UserContract`.

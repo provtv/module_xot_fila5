@@ -1,3 +1,11 @@
+---
+title: "View Models"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 
 https://qiita.com/nunulk/items/4c491634ad843c7a138e
 

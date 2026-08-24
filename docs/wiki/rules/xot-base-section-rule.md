@@ -1,3 +1,11 @@
+---
+title: "Xot Base Section Rule"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Regola XotBaseSection - Politica, Filosofia, Religione, Zen
 
 ## Scopo (Purpose)

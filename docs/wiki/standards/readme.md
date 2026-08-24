@@ -1,3 +1,11 @@
+---
+title: "Readme"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Standard di Codice
 
 Questa cartella contiene gli standard di codice e le convenzioni utilizzate nel progetto.

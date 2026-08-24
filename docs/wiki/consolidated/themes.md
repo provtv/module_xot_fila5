@@ -1,3 +1,11 @@
+---
+title: "Themes"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Temi in il progetto
 
 il progetto utilizza un sistema di temi basato su Filament 3.3. Ogni tema è un pacchetto Laravel indipendente che può essere installato e configurato separatamente.

@@ -1,3 +1,11 @@
+---
+title: "Model States Best Practices"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Best Practices per Model States e Transizioni Custom
 
 ## Parametri aggiuntivi nelle transizioni custom

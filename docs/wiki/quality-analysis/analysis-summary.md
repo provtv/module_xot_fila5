@@ -1,3 +1,11 @@
+---
+title: "Analysis Summary"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Riepilogo Analisi Qualità Codice - 2025-01-22
 
 ## 🎯 Obiettivo

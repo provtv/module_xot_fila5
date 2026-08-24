@@ -1,3 +1,11 @@
+---
+title: "Getter Zen"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 
 # La Filosofia Zen dei Getter Semantici
 

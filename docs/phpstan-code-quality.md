@@ -437,6 +437,8 @@ Dopo aver corretto un batch:
 ## 🔍 Errori Più Comuni
 
 ### 1. Property Access su Mixed
+```
+
 ```php
 // ERRORE: Cannot access property $state on mixed
 $record->state->transitionTo($newState);

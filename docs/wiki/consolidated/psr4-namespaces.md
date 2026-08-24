@@ -1,3 +1,11 @@
+---
+title: "Psr4 Namespaces"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Regola PSR-4 Namespace per Moduli Laravel
 
 ## Quando

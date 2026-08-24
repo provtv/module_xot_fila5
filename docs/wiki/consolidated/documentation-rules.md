@@ -1,3 +1,11 @@
+---
+title: "Documentation Rules"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Regole di Documentazione
 
 ## Panoramica
@@ -23,6 +31,8 @@ Questo documento descrive le regole fondamentali per la creazione e la manutenzi
 ```
 
 ### Formato Non Corretto
+```
+
 ```markdown
 
 # Collegamenti Non Corretti
@@ -52,6 +62,8 @@ Questo documento descrive le regole fondamentali per la creazione e la manutenzi
 ```
 
 ### Formato Non Corretto
+```
+
 ```markdown
 
 # Collegamenti Non Corretti
@@ -81,6 +93,8 @@ Questo documento descrive le regole fondamentali per la creazione e la manutenzi
 ```
 
 ### Formato Non Corretto
+```
+
 ```markdown
 
 # Collegamenti Non Corretti

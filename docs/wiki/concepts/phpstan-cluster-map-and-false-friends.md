@@ -1,3 +1,11 @@
+---
+title: "Phpstan Cluster Map And False Friends"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # PHPStan Cluster Map And False Friends
 
 ## Contesto

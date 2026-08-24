@@ -1,3 +1,11 @@
+---
+title: "Fluent Livewire Integration"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Integrazione Livewire 4, Volt e Flux UI
 
 Con il passaggio a Laravel 12 e Filament 5, l'integrazione del frontend segue il paradigma "Functional & Component-First".

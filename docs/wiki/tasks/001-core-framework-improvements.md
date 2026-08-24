@@ -1,3 +1,11 @@
+---
+title: "001 Core Framework Improvements"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Task 001: Improve Core Framework and Base Classes
 
 ## Description

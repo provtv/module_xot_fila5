@@ -1,3 +1,11 @@
+---
+title: "Xotbasefield Calculated View Rule"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # XotBaseField Calculated View Rule
 
 ## Context

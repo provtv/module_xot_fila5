@@ -1,3 +1,11 @@
+---
+title: "Struttura Percorsi"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Struttura dei percorsi nel progetto <nome progetto>
 
 ## Regola fondamentale

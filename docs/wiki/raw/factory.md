@@ -1,3 +1,11 @@
+---
+title: "Factory"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 Make Factory More Organized - laravel
 https://dev.to/marcosgad/make-factory-more-organized-laravel-3c19
 

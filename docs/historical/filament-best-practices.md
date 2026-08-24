@@ -181,6 +181,8 @@ Best practice generiche per l'utilizzo di Filament in moduli Laravel riutilizzab
 - Non usare ->label() direttamente nei form: usare sempre i file di traduzione
 
 ## Esempi
+```
+
 ```php
 // ❌ Anti-pattern
 class MyResource extends \Filament\Resources\Resource {}

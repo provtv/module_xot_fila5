@@ -1,3 +1,11 @@
+---
+title: "Architecture Complete"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Xot Module - Complete Architecture Guide (2025)
 
 > **Last Updated:** 2025-11-19

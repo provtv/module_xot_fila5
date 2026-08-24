@@ -1,3 +1,11 @@
+---
+title: "Install Module"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # install_module
 
 <!-- Contenuto migrato da _docs/install_module.txt -->

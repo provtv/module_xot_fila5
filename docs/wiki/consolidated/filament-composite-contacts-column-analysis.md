@@ -1,3 +1,11 @@
+---
+title: "Filament Composite Contacts Column Analysis"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Analisi e Implementazione Colonna Composita "Contatti" - PlanningModule
 
 ## Richiesta Utente

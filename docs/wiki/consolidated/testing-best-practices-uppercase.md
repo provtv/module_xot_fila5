@@ -1,3 +1,11 @@
+---
+title: "Testing Best Practices Uppercase"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Testing Best Practices - Laraxot Framework
 
 ## 🏆 **Gold Standard Pattern**

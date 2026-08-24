@@ -1,3 +1,11 @@
+---
+title: "General Rules"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Regole Generali di Comportamento
 
 ## 1. Struttura del Codice

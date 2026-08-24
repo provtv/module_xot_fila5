@@ -1,3 +1,11 @@
+---
+title: "Langserviceprovider Labels"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # LangServiceProvider: Gestione automatica delle label nei Filament Forms
 
 ## Regola

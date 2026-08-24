@@ -1,3 +1,11 @@
+---
+title: "Final Method Override Fix"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Correzione Errori Override Metodi Final
 
 ## Problema Identificato (2025-01-06)
@@ -119,6 +127,8 @@ abstract class XotBaseClass extends BaseClass
 ## Best Practice Implementate
 
 ### Metodi Overridabili
+```
+
 ```php
 // ✅ CORRETTO - Metodo overridabile
 public function form(Form $form): Form

@@ -1,3 +1,11 @@
+---
+title: "Psr4 Compliance"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Conformità PSR-4 nel Progetto
 
 ## Introduzione

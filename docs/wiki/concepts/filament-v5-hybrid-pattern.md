@@ -1,3 +1,11 @@
+---
+title: "Filament V5 Hybrid Pattern"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Filament v5 Hybrid Pattern (XotBase + configure())
 
 **Status**: 🟡 Draft (Pending Story 8-91 Implementation)  

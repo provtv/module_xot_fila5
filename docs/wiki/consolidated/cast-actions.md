@@ -1,3 +1,11 @@
+---
+title: "Cast Actions"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Azioni di Cast Sicure - Sostituzione di property_exists
 
 ## Panoramica

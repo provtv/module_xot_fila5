@@ -1,3 +1,11 @@
+---
+title: "Translation System"
+type: reference
+tags: [wiki, no-frontmatter-fix]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Sistema di Traduzione
 
 ## Regola Fondamentale: NO ->label()
