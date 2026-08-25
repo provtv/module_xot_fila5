@@ -19,4 +19,8 @@ https://laravelpackages.net/academe/laravel-queue-monitor
 https://pusher.com/tutorials/monitoring-laravel-background-queues/
 
 
+<<<<<<< HEAD
 https://github.com/f9webltd/laravel-queue-check/blob/master/src/Console/Commands/CheckQueueIsRunning.php
+=======
+https://github.com/f9webltd/laravel-queue-check/blob/master/src/Console/Commands/CheckQueueIsRunning.php
+>>>>>>> laraxot/dev

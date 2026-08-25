@@ -8,4 +8,8 @@ updated: 2026-05-21
 
 Contenuto in wiki di progetto — non duplicare nei moduli ([#124](https://github.com/provtv/base_ptv_fila5_mono/issues/124)).
 
+<<<<<<< HEAD
 → [docs/wiki/rules/00-TRIGGER_MAP.md](../../../../../docs/wiki/rules/00-TRIGGER_MAP.md)
+=======
+→ [docs/wiki/rules/00-TRIGGER_MAP.md](../../../../../docs/wiki/rules/00-TRIGGER_MAP.md)
+>>>>>>> laraxot/dev

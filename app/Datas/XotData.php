@@ -88,7 +88,11 @@ class XotData extends Data implements Wireable
     public static function make(): self
     {
         if (! self::$instance) {
+<<<<<<< HEAD
            $data = app(GetTenantConfigArrayAction::class)->execute('xra');
+=======
+            $data = app(GetTenantConfigArrayAction::class)->execute('xra');
+>>>>>>> laraxot/dev
 
             self::$instance = self::from($data);
         }
@@ -121,7 +125,11 @@ class XotData extends Data implements Wireable
         );
         Assert::isAOf($class, Model::class, '['.__LINE__.']['.class_basename($this).']['.$class.']');
 
+<<<<<<< HEAD
        /* @var class-string<Model&UserContract> $class */
+=======
+        /* @var class-string<Model&UserContract> $class */
+>>>>>>> laraxot/dev
         return $class;
     }
 
@@ -132,6 +140,10 @@ class XotData extends Data implements Wireable
         if (! in_array('email', $userInstance->getFillable(), true)) {
             throw new \Exception("Attribute 'email' not found in model ".$userInstance::class);
         }
+<<<<<<< HEAD
+=======
+
+>>>>>>> laraxot/dev
         /** @var (Model&UserContract)|null $user */
         $user = $user_class::query()->where('email', $email)->first();
 
@@ -144,7 +156,11 @@ class XotData extends Data implements Wireable
         return $user;
     }
 
+<<<<<<< HEAD
    public function findUserByEmail(string $email): ?UserContract
+=======
+    public function findUserByEmail(string $email): ?UserContract
+>>>>>>> laraxot/dev
     {
         $userClass = $this->getUserClass();
 
@@ -172,7 +188,11 @@ class XotData extends Data implements Wireable
             '['.$this->team_class.']['.__LINE__.']['.class_basename($this).']',
         );
 
+<<<<<<< HEAD
        /** @var class-string<Model&TeamContract> $teamClass */
+=======
+        /** @var class-string<Model&TeamContract> $teamClass */
+>>>>>>> laraxot/dev
         $teamClass = $this->team_class;
 
         return $teamClass;
@@ -202,7 +222,11 @@ class XotData extends Data implements Wireable
             '['.__LINE__.']['.class_basename($this).']['.$this->tenant_class.']',
         );
 
+<<<<<<< HEAD
        /** @var class-string<Model&TenantContract> $tenantClass */
+=======
+        /** @var class-string<Model&TenantContract> $tenantClass */
+>>>>>>> laraxot/dev
         $tenantClass = $this->tenant_class;
 
         return $tenantClass;
@@ -264,7 +288,11 @@ class XotData extends Data implements Wireable
             '['.__LINE__.']['.class_basename($this).']['.$class.']',
         );
 
+<<<<<<< HEAD
        /* @var class-string<Model&ProfileContract> $class */
+=======
+        /* @var class-string<Model&ProfileContract> $class */
+>>>>>>> laraxot/dev
         return $class;
     }
 
@@ -357,7 +385,11 @@ class XotData extends Data implements Wireable
         dddx('wip');
     }
 
+<<<<<<< HEAD
    /**
+=======
+    /**
+>>>>>>> laraxot/dev
      * Path to pub theme Blade views. Missing dirs (incomplete theme / tests) return
      * the unresolved path; callers must check File::exists() (see FolioVoltServiceProvider).
      */
@@ -365,7 +397,11 @@ class XotData extends Data implements Wireable
     {
         $path0 = base_path('Themes/'.$this->pub_theme.'/resources/views/'.$key);
 
+<<<<<<< HEAD
        if (! is_dir($path0)) {
+=======
+        if (! is_dir($path0)) {
+>>>>>>> laraxot/dev
             return $path0;
         }
 
@@ -420,7 +456,11 @@ class XotData extends Data implements Wireable
             '['.__LINE__.']['.class_basename($this).']['.$class.']',
         );
 
+<<<<<<< HEAD
        /* @var class-string<Model&UserContract> $class */
+=======
+        /* @var class-string<Model&UserContract> $class */
+>>>>>>> laraxot/dev
         return $class;
     }
 
@@ -437,7 +477,11 @@ class XotData extends Data implements Wireable
             ->append('Resource')
             ->toString();
 
+<<<<<<< HEAD
        // If missing, fallback (still PSR-4: NEVER put literal "app\" in the PHP namespace segment)
+=======
+        // If missing, fallback (still PSR-4: NEVER put literal "app\" in the PHP namespace segment)
+>>>>>>> laraxot/dev
         if (! class_exists($resourceClass)) {
             $resourceClass =
                 'Modules\\'.$moduleName.'\\Filament\\Resources\\'.class_basename($class).'Resource';

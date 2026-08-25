@@ -15,7 +15,11 @@ it('extracts module name from class and model class', function (): void {
     $byClass = app(GetModuleNameByClassAction::class)->execute('Modules\\Cms\\Models\\Page');
     $byModelClass = app(GetModuleNameByModelClassAction::class)->execute('Modules\\Xot\\Models\\Module');
 
+<<<<<<< HEAD
    Assert::assertSame('Cms', $byClass);
+=======
+    Assert::assertSame('Cms', $byClass);
+>>>>>>> laraxot/dev
     Assert::assertSame('Xot', $byModelClass);
 });
 
@@ -23,7 +27,11 @@ it('returns extracted fragment for non-module class signatures', function (): vo
     $byClass = app(GetModuleNameByClassAction::class)->execute('App\\Models\\User');
     $byModelClass = app(GetModuleNameByModelClassAction::class)->execute('App\\Models\\User');
 
+<<<<<<< HEAD
    Assert::assertSame('App', $byClass);
+=======
+    Assert::assertSame('App', $byClass);
+>>>>>>> laraxot/dev
     Assert::assertSame('App', $byModelClass);
 });
 
@@ -37,5 +45,9 @@ it('delegates model instance class to model class action', function (): void {
 
     $result = app(GetModuleNameByModelAction::class)->execute($model);
 
+<<<<<<< HEAD
    Assert::assertSame('Delegated', $result);
+=======
+    Assert::assertSame('Delegated', $result);
+>>>>>>> laraxot/dev
 });

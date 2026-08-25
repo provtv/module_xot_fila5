@@ -13,7 +13,11 @@ use Webmozart\Assert\Assert;
 
 trait TransTrait
 {
+<<<<<<< HEAD
    use TransFuncTrait;
+=======
+    use TransFuncTrait;
+>>>>>>> laraxot/dev
     use TransKeyTrait;
 
     /**
@@ -27,7 +31,11 @@ trait TransTrait
     {
         $tmp = static::getKeyTrans($key);
         /** @var array<string, mixed>|Translator|string $res */
+<<<<<<< HEAD
        // @phpstan-ignore argument.type (trans() $replace param: already typed correctly at method signature)
+=======
+        // @phpstan-ignore argument.type (trans() $replace param: already typed correctly at method signature)
+>>>>>>> laraxot/dev
         $res = trans($tmp, $params);
 
         if (is_string($res)) {
@@ -79,14 +87,22 @@ trait TransTrait
         /** @var array<string, mixed>|Translator|string $result */
         $result = trans($key_full);
 
+<<<<<<< HEAD
        if ($key_full === $result) {
+=======
+        if ($key_full === $result) {
+>>>>>>> laraxot/dev
             $group = Str::of($key_full)->before('.')->toString();
             $item = Str::of($key_full)->after($group.'.')->toString();
             /** @var array<string, mixed>|Translator|string $group_arr */
             $group_arr = trans($group);
             if (is_array($group_arr)) {
                 $transValue = Arr::get($group_arr, $item);
+<<<<<<< HEAD
                if (is_string($transValue) || is_numeric($transValue)) {
+=======
+                if (is_string($transValue) || is_numeric($transValue)) {
+>>>>>>> laraxot/dev
                     return is_string($transValue) ? $transValue : (string) $transValue;
                 }
             }
@@ -101,7 +117,11 @@ trait TransTrait
      * Ottiene la chiave di traduzione per un dato key.
      * Genera un percorso di traduzione standardizzato basato sul modulo e sul nome della classe.
      *
+<<<<<<< HEAD
     * @param string                                    $key         La chiave di traduzione specifica
+=======
+     * @param string                                    $key         La chiave di traduzione specifica
+>>>>>>> laraxot/dev
      * @param array<string, bool|float|int|string|null> $replace     Parametri di sostituzione per la traduzione
      * @param string|null                               $locale      Locale da utilizzare (null = locale corrente)
      * @param bool                                      $useFallback Se true, utilizza la chiave come fallback se la traduzione non esiste
@@ -121,7 +141,11 @@ trait TransTrait
         $slug = collect($p_arr)->map(Str::kebab(...))->implode('.');
 
         $translationKey = $moduleNameLow.'::'.$slug.'.'.$key;
+<<<<<<< HEAD
        // @phpstan-ignore argument.type (__() $replace param: already typed correctly at method signature)
+=======
+        // @phpstan-ignore argument.type (__() $replace param: already typed correctly at method signature)
+>>>>>>> laraxot/dev
         $translation = __($translationKey, $replace, $locale);
 
         if ($translation === $translationKey && App::environment('local', 'development', 'testing')) {
@@ -141,7 +165,11 @@ trait TransTrait
      * Ottiene la chiave di traduzione per un dato key (alias per getTranslatedString).
      * Genera un percorso di traduzione standardizzato basato sul modulo e sul nome della classe.
      *
+<<<<<<< HEAD
     * @param string                                    $key         La chiave di traduzione specifica
+=======
+     * @param string                                    $key         La chiave di traduzione specifica
+>>>>>>> laraxot/dev
      * @param array<string, bool|float|int|string|null> $replace     Parametri di sostituzione per la traduzione
      * @param string|null                               $locale      Locale da utilizzare (null = locale corrente)
      * @param bool                                      $useFallback Se true, utilizza la chiave come fallback se la traduzione non esiste

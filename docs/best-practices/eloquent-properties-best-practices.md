@@ -245,4 +245,8 @@ Questa regola si applica a tutti i moduli che estendono Xot:
 - [PHPStan Eloquent Analysis](https://phpstan.org/user-guide/rule-levels)
 
 *Ultimo aggiornamento: Giugno 2025*
+<<<<<<< HEAD
 *Regola applicabile a tutti i moduli*
+=======
+*Regola applicabile a tutti i moduli*
+>>>>>>> laraxot/dev

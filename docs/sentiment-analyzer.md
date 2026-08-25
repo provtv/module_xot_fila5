@@ -3,4 +3,8 @@ PHP Sentiment Analyzer is a lexicon and rule-based sentiment analysis tool that 
 https://github.com/davmixcool/php-sentiment-analyzer
 
 
+<<<<<<< HEAD
 -------------------------------------------------------------
+=======
+-------------------------------------------------------------
+>>>>>>> laraxot/dev

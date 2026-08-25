@@ -19,7 +19,11 @@ class UpdateAction
 
     /**
      * @param array<string, mixed> $data
+<<<<<<< HEAD
     * @param array<string, mixed> $rules
+=======
+     * @param array<string, mixed> $rules
+>>>>>>> laraxot/dev
      */
     public function execute(Model $model, array $data, array $rules): Model
     {
@@ -41,7 +45,11 @@ class UpdateAction
             $model = $model->firstOrCreate($where, $data);
         }
 
+<<<<<<< HEAD
        $model->update($data);
+=======
+        $model->update($data);
+>>>>>>> laraxot/dev
 
         app(__NAMESPACE__.'\\Update\RelationAction')->execute($model, $data);
 

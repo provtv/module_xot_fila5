@@ -32,7 +32,11 @@ class SecurityMiddleware
         // 2. Headers di sicurezza
         $response = $next($request);
         Assert::isInstanceOf($response, Response::class);
+<<<<<<< HEAD
        $this->addSecurityHeaders($response);
+=======
+        $this->addSecurityHeaders($response);
+>>>>>>> laraxot/dev
 
         // 3. Logging sicurezza
         $this->logSecurityEvents($request, $response);
@@ -54,7 +58,11 @@ class SecurityMiddleware
         $ip = $request->ip() ?? 'unknown';
         $userAgent = $request->userAgent() ?? 'unknown';
         $endpoint = $request->path();
+<<<<<<< HEAD
        $limit = $this->getRateLimitForEndpoint($endpoint);
+=======
+        $limit = $this->getRateLimitForEndpoint($endpoint);
+>>>>>>> laraxot/dev
 
         $this->enforceRateLimit("rate_limit:ip:{$ip}", $limit, 'IP', [
             'ip' => $ip,
@@ -352,7 +360,11 @@ class SecurityMiddleware
 
     /**
      * Valida input array.
+<<<<<<< HEAD
     *
+=======
+     *
+>>>>>>> laraxot/dev
      * @param array<array-key, mixed> $value
      */
     private function validateArrayInput(string $key, array $value): void
@@ -378,7 +390,11 @@ class SecurityMiddleware
 
     /**
      * Ottieni profondità array.
+<<<<<<< HEAD
     *
+=======
+     *
+>>>>>>> laraxot/dev
      * @param array<array-key, mixed> $array
      */
     private function getArrayDepth(array $array): int
@@ -406,7 +422,11 @@ class SecurityMiddleware
         if (in_array($request->method(), ['POST', 'PUT', 'DELETE', 'PATCH'])) {
             $token = $request->header('X-CSRF-TOKEN') ?: $request->input('_token');
 
+<<<<<<< HEAD
            if (! \is_string($token) || '' === $token || ! hash_equals(session()->token(), $token)) {
+=======
+            if (! \is_string($token) || '' === $token || ! hash_equals(session()->token(), $token)) {
+>>>>>>> laraxot/dev
                 Log::warning('CSRF token mismatch', [
                     'ip' => $request->ip(),
                     'method' => $request->method(),

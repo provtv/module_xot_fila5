@@ -15,7 +15,11 @@ use Modules\Xot\Filament\Traits\TransTrait;
 
 abstract class XotBaseTableWidget extends FilamentTableWidget
 {
+<<<<<<< HEAD
    use HasXotTable;
+=======
+    use HasXotTable;
+>>>>>>> laraxot/dev
     use InteractsWithPageFilters;
     use TransTrait;
 
@@ -31,7 +35,11 @@ abstract class XotBaseTableWidget extends FilamentTableWidget
         $this->resetTable();
     }
 
+<<<<<<< HEAD
    /*
+=======
+    /*
+>>>>>>> laraxot/dev
      * `tableOLD()` rimossa il 2026-08-25 (story 16.12).
      *
      * Era dichiarata qui e in due Resource di Quaeris, e non la chiamava nessuno:
@@ -51,7 +59,11 @@ abstract class XotBaseTableWidget extends FilamentTableWidget
     public function getTableRecordKey(Model|array $record): string
     {
         if (\is_array($record)) {
+<<<<<<< HEAD
            return SafeStringCastAction::cast($record['_id'] ?? $record['id'] ?? '');
+=======
+            return SafeStringCastAction::cast($record['_id'] ?? $record['id'] ?? '');
+>>>>>>> laraxot/dev
         }
 
         return SafeStringCastAction::cast($record->_id ?? $record->id ?? '');

@@ -5,7 +5,11 @@ declare(strict_types=1);
 use Modules\Xot\Tests\TestCase;
 
 /*
+<<<<<<< HEAD
 * Bootstrap Pest — modulo Xot.
+=======
+ * Bootstrap Pest — modulo Xot.
+>>>>>>> laraxot/dev
  *
  * Configurazione idiomatica secondo https://pestphp.com/docs/configuring-tests:
  * il TestCase si dichiara una volta qui, non in ogni file. I file esistenti

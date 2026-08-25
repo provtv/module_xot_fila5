@@ -211,4 +211,8 @@ assert($action->executeWithRange(-10.0, 0.0, 100.0) === 0.0);
 
 ---
 
+<<<<<<< HEAD
 *Ultimo aggiornamento: 31 luglio 2025*
+=======
+*Ultimo aggiornamento: 31 luglio 2025*
+>>>>>>> laraxot/dev

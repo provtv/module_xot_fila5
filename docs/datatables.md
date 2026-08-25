@@ -4,4 +4,8 @@ topic: datatables
 canonical: ../../../Themes/docs/shared-components/DataTables.txt
 ---
 
+<<<<<<< HEAD
 See canonical documentation: ../../../Themes/docs/shared-components/DataTables.txt
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/DataTables.txt
+>>>>>>> laraxot/dev

@@ -34,7 +34,11 @@ test('safe object cast action works', function (): void {
         }
     };
 
+<<<<<<< HEAD
    Assert::assertTrue($action->hasProperty($obj, 'str'));
+=======
+    Assert::assertTrue($action->hasProperty($obj, 'str'));
+>>>>>>> laraxot/dev
     Assert::assertFalse($action->hasProperty($obj, 'invalid'));
     Assert::assertTrue($action->hasNonNullProperty($obj, 'str'));
     Assert::assertFalse($action->hasNonNullProperty($obj, 'null_val'));
@@ -77,7 +81,11 @@ test('safe eloquent cast action works', function (): void {
         protected $casts = ['arr' => 'array'];
     };
 
+<<<<<<< HEAD
    Assert::assertTrue($action->hasAttribute($model, 'str'));
+=======
+    Assert::assertTrue($action->hasAttribute($model, 'str'));
+>>>>>>> laraxot/dev
     Assert::assertFalse($action->hasAttribute($model, 'invalid'));
     Assert::assertTrue($action->hasNonEmptyAttribute($model, 'str'));
     Assert::assertFalse($action->hasNonEmptyAttribute($model, 'null_val'));

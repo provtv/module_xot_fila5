@@ -68,4 +68,8 @@ User::all()->modelKeys();
 
 //---------------------------------------------------
 https://tomgrohl.medium.com/using-php-traits-for-laravel-eloquent-relationships-7357901a01a4
+<<<<<<< HEAD
 //-- usa set e get
+=======
+//-- usa set e get
+>>>>>>> laraxot/dev

@@ -12,7 +12,11 @@ class FakeQueryableModel extends Model
 {
     public static ?Model $findResult = null;
 
+<<<<<<< HEAD
    /**
+=======
+    /**
+>>>>>>> laraxot/dev
      * @return Builder<static>
      */
     public static function query(): Builder

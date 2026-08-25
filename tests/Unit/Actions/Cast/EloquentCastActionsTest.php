@@ -21,7 +21,11 @@ test('safe array by model cast action works', function () {
     $action = app(SafeArrayByModelCastAction::class);
     $result = $action->execute($model);
 
+<<<<<<< HEAD
    Assert::assertArrayHasKey('id', $result);
+=======
+    Assert::assertArrayHasKey('id', $result);
+>>>>>>> laraxot/dev
     Assert::assertArrayHasKey('name', $result);
     Assert::assertSame('Test', $result['name']);
 });
@@ -42,7 +46,11 @@ test('safe attribute cast action works', function () {
 
     $action = app(SafeAttributeCastAction::class);
 
+<<<<<<< HEAD
    Assert::assertSame(123, $action->getIntAttribute($model, 'int'));
+=======
+    Assert::assertSame(123, $action->getIntAttribute($model, 'int'));
+>>>>>>> laraxot/dev
     Assert::assertSame(12.3, $action->getFloatAttribute($model, 'float'));
     Assert::assertTrue($action->getBooleanAttribute($model, 'bool'));
     Assert::assertSame(['a' => 1], $action->getArrayAttribute($model, 'arr'));

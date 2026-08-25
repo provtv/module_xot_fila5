@@ -31,7 +31,11 @@ class MainDashboard extends XotBaseDashboard
      */
     public static function getSlug(?Panel $panel = null): string
     {
+<<<<<<< HEAD
        unset($panel);
+=======
+        unset($panel);
+>>>>>>> laraxot/dev
 
         return 'dashboard';
     }
@@ -66,7 +70,11 @@ class MainDashboard extends XotBaseDashboard
     /**
      * Ottiene i widget da visualizzare nella dashboard.
      *
+<<<<<<< HEAD
     * @return array<string, mixed>
+=======
+     * @return array<string, mixed>
+>>>>>>> laraxot/dev
      */
     public function getWidgets(): array
     {

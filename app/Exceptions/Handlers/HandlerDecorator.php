@@ -9,7 +9,11 @@ use Symfony\Component\HttpFoundation\Response as SymfonyResponse;
 
 class HandlerDecorator implements ExceptionHandler
 {
+<<<<<<< HEAD
    /**
+=======
+    /**
+>>>>>>> laraxot/dev
      * The custom handlers reporting exceptions.
      *
      * @var array<int, callable>
@@ -48,7 +52,11 @@ class HandlerDecorator implements ExceptionHandler
 
     public function report(\Throwable $e): void
     {
+<<<<<<< HEAD
        foreach ($this->getReportersByException($e) as $reporter) {
+=======
+        foreach ($this->getReportersByException($e) as $reporter) {
+>>>>>>> laraxot/dev
             if (is_callable($reporter)) {
                 $reporter($e);
             }
@@ -59,7 +67,11 @@ class HandlerDecorator implements ExceptionHandler
 
     public function render($request, \Throwable $e): SymfonyResponse
     {
+<<<<<<< HEAD
        foreach ($this->getRenderersByException($e) as $renderer) {
+=======
+        foreach ($this->getRenderersByException($e) as $renderer) {
+>>>>>>> laraxot/dev
             if (is_callable($renderer)) {
                 $response = $renderer($e, $request);
                 if ($response instanceof SymfonyResponse) {
@@ -71,7 +83,11 @@ class HandlerDecorator implements ExceptionHandler
         return $this->defaultHandler->render($request, $e);
     }
 
+<<<<<<< HEAD
    public function renderForConsole($output, \Throwable $e): void
+=======
+    public function renderForConsole($output, \Throwable $e): void
+>>>>>>> laraxot/dev
     {
         foreach ($this->getConsoleRenderersByException($e) as $renderer) {
             if (is_callable($renderer)) {
@@ -79,22 +95,38 @@ class HandlerDecorator implements ExceptionHandler
             }
         }
 
+<<<<<<< HEAD
        $this->__call('renderForConsole', [$output, $e]);
+=======
+        $this->__call('renderForConsole', [$output, $e]);
+>>>>>>> laraxot/dev
     }
 
     public function reporter(callable $reporter): int
     {
+<<<<<<< HEAD
        return $this->addReporter($reporter);
+=======
+        return $this->addReporter($reporter);
+>>>>>>> laraxot/dev
     }
 
     public function renderer(callable $renderer): int
     {
+<<<<<<< HEAD
        return $this->addRenderer($renderer);
+=======
+        return $this->addRenderer($renderer);
+>>>>>>> laraxot/dev
     }
 
     public function consoleRenderer(callable $renderer): int
     {
+<<<<<<< HEAD
        return $this->addConsoleRenderer($renderer);
+=======
+        return $this->addConsoleRenderer($renderer);
+>>>>>>> laraxot/dev
     }
 
     /**
@@ -164,6 +196,10 @@ class HandlerDecorator implements ExceptionHandler
     {
         return $this->defaultHandler->shouldReport($e);
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> laraxot/dev
     /**
      * Determine whether the given handler can handle the provided exception.
      */

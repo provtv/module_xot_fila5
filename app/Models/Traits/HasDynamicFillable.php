@@ -21,7 +21,11 @@ trait HasDynamicFillable
     {
         $fillable = array_values(parent::getFillable());
 
+<<<<<<< HEAD
        $dynamicFillableEnums = $this->getDynamicFillableEnums();
+=======
+        $dynamicFillableEnums = $this->getDynamicFillableEnums();
+>>>>>>> laraxot/dev
 
         foreach ($dynamicFillableEnums as $enumClass) {
             if (! is_string($enumClass) || '' === $enumClass) {
@@ -52,6 +56,10 @@ trait HasDynamicFillable
         // Ensure unique values and reset keys for cleanliness
         return array_values(array_unique($fillable));
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> laraxot/dev
     /**
      * Models using this trait may override this to list Enum classes whose
      * cases should be merged into `$fillable`.

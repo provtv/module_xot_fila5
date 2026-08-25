@@ -28,7 +28,11 @@ class TestComp {}";
     $action = app(GetComponentsAction::class);
     $result = $action->execute($tempDir, 'My/Test/Comps', 'prefix-');
 
+<<<<<<< HEAD
    Assert::assertInstanceOf(DataCollection::class, $result);
+=======
+    Assert::assertInstanceOf(DataCollection::class, $result);
+>>>>>>> laraxot/dev
     Assert::assertSame(1, $result->count());
     $first = $result->toCollection()->first();
     Assert::assertNotNull($first);
@@ -54,6 +58,10 @@ it('skips abstract classes', function (): void {
     $action = app(GetComponentsAction::class);
     $result = $action->execute($tempDir, 'My/Test/Comps', 'prefix-');
 
+<<<<<<< HEAD
    Assert::assertSame(0, $result->count());
+=======
+    Assert::assertSame(0, $result->count());
+>>>>>>> laraxot/dev
     File::deleteDirectory($tempDir);
 });

@@ -66,7 +66,11 @@ class AutoLabelAction
         $label_key = $trans_key.'.fields.'.$componentName.'.label';
         $label = trans($label_key);
 
+<<<<<<< HEAD
        /** @var string $label */
+=======
+        /** @var string $label */
+>>>>>>> laraxot/dev
         if ($label !== $label_key) {
             if ($label_key === $label) {
                 // Se la traduzione non esiste, creiamone una utilizzando il nome del componente
@@ -76,7 +80,11 @@ class AutoLabelAction
                 $label_key1 = $trans_key.'.fields.'.$componentName;
                 $label1 = trans($label_key1);
 
+<<<<<<< HEAD
                if ($label_key1 !== $label1) {
+=======
+                if ($label_key1 !== $label1) {
+>>>>>>> laraxot/dev
                     $label_value = $label1;
                 }
 
@@ -105,7 +113,11 @@ class AutoLabelAction
     private function getComponentName(Field|Component $component): string
     {
         // Per i componenti Field di Filament
+<<<<<<< HEAD
        if ($component instanceof Field) {
+=======
+        if ($component instanceof Field) {
+>>>>>>> laraxot/dev
             $name = $component->getName();
 
             return (string) $name;

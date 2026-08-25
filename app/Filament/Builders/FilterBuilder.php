@@ -23,7 +23,11 @@ use function Safe\strtotime;
  * across List pages in all modules.
  *
  * Usage:
+<<<<<<< HEAD
 *
+=======
+ *
+>>>>>>> laraxot/dev
  * Use this builder from resource table filter methods to compose common
  * Filament filters without duplicating filter callbacks.
  */
@@ -94,7 +98,11 @@ class FilterBuilder
                     ->label('Until'),
             ])
             ->query(function (Builder $query, array $data) use ($column): Builder {
+<<<<<<< HEAD
                $from = self::toDateString($data['from'] ?? null);
+=======
+                $from = self::toDateString($data['from'] ?? null);
+>>>>>>> laraxot/dev
                 $until = self::toDateString($data['until'] ?? null);
 
                 if (null !== $from) {
@@ -128,7 +136,11 @@ class FilterBuilder
     }
 
     /**
+<<<<<<< HEAD
     * Stato di un `DatePicker`: `string` (input utente) o `DateTimeInterface`
+=======
+     * Stato di un `DatePicker`: `string` (input utente) o `DateTimeInterface`
+>>>>>>> laraxot/dev
      * (`->default(now())`). Altro non è una data e si scarta, invece di forzarlo
      * con un cast che darebbe una stringa senza senso o un `Error`.
      */
@@ -275,7 +287,11 @@ class FilterBuilder
             ->trueLabel('Only trashed')
             ->falseLabel('Without trashed')
             ->queries(
+<<<<<<< HEAD
                true: fn (Builder $query): Builder => self::applyTrashedQuery($query, 'only'),
+=======
+                true: fn (Builder $query): Builder => self::applyTrashedQuery($query, 'only'),
+>>>>>>> laraxot/dev
                 false: fn (Builder $query): Builder => self::applyTrashedQuery($query, 'without'),
                 blank: fn (Builder $query): Builder => self::applyTrashedQuery($query, 'with'),
             );

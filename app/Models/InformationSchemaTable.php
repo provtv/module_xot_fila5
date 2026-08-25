@@ -26,9 +26,6 @@ use Modules\Xot\Database\Factories\InformationSchemaTableFactory;
  * @property ProfileContract|null $updater
  *
  * @method static InformationSchemaTableFactory          factory($count = null, $state = [])
- * @method static Builder<static>|InformationSchemaTable newModelQuery()
- * @method static Builder<static>|InformationSchemaTable newQuery()
- * @method static Builder<static>|InformationSchemaTable query()
  * @method static Builder<static>|InformationSchemaTable whereCreatedAt($value)
  * @method static Builder<static>|InformationSchemaTable whereCreatedBy($value)
  * @method static Builder<static>|InformationSchemaTable whereId($value)
@@ -93,7 +90,11 @@ class InformationSchemaTable extends BaseModel
      */
     public function getRows(): array
     {
+<<<<<<< HEAD
        /** @var array<int, array<string, mixed>> $rows */
+=======
+        /** @var array<int, array<string, mixed>> $rows */
+>>>>>>> laraxot/dev
         $rows = $this->getSushiRows();
 
         return $rows;

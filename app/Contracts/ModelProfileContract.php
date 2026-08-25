@@ -69,7 +69,11 @@ interface ModelProfileContract extends ModelContract
     /**
      * Create a new Eloquent query builder for the model.
      *
+<<<<<<< HEAD
     * @param Builder<Model> $query
+=======
+     * @param Builder<Model> $query
+>>>>>>> laraxot/dev
      *
      * @return Builder<Model>
      */

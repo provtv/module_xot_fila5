@@ -97,4 +97,8 @@ must be public (as in class HasXotTable)
 - [Widget Table Configuration](../../../Modules/Xot/docs/filament/widget-table-configuration.md)
 
 *Ultimo aggiornamento: 2025-01-27*
+<<<<<<< HEAD
 - [Widget Table Configuration](../../../modules/xot/docs/filament/widget-table-configuration.md)
+=======
+- [Widget Table Configuration](../../../modules/xot/docs/filament/widget-table-configuration.md)
+>>>>>>> laraxot/dev

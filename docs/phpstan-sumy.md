@@ -170,4 +170,8 @@ if (null !== $value) {
 - [UI Corrections](../ui/docs/phpstan-corrections-january-2026.md)
 - [healthcare_app Corrections](../healthcare_app/docs/phpstan-corrections-january-2026.md)
 - [PHPStan Code Quality Guide](../phpstan-code-quality-guide.md)
+<<<<<<< HEAD
 - [Geo Corrections](../geo/docs/phpstan-corrections-january-2026.md)
+=======
+- [Geo Corrections](../geo/docs/phpstan-corrections-january-2026.md)
+>>>>>>> laraxot/dev

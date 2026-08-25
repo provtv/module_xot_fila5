@@ -19,7 +19,11 @@ class ExportXlsByQuery
     /**
      * Esporta i risultati di una query in Excel.
      *
+<<<<<<< HEAD
     * @param Builder<Model>     $query    Query da esportare
+=======
+     * @param Builder<Model>     $query    Query da esportare
+>>>>>>> laraxot/dev
      * @param string             $filename Nome del file Excel
      * @param array<int, string> $fields   Campi da includere nell'export
      * @param int|null           $limit    Limite di righe da esportare

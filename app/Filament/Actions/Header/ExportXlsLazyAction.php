@@ -84,7 +84,11 @@ class ExportXlsLazyAction extends XotBaseAction
                 }
 
                 $lazyCursor = $lazy->cursor();
+<<<<<<< HEAD
                /** @var LazyCollection<int, mixed> $exportCollection */
+=======
+                /** @var LazyCollection<int, mixed> $exportCollection */
+>>>>>>> laraxot/dev
                 $exportCollection = $lazyCursor->map(static fn (mixed $row): mixed => $row);
 
                 if ($lazyCursor->count() > 3000) {

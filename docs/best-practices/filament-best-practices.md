@@ -1012,4 +1012,8 @@ Appointment::where('doctor_id', $doctorId)
 ### Motivazione filosofica, politica, zen
 - Un solo punto di verità: nessuna duplicazione, nessun lock-in
 - DRY, KISS, serenità del codice
+<<<<<<< HEAD
 - Refactoring sicuro, massima estendibilità
+=======
+- Refactoring sicuro, massima estendibilità
+>>>>>>> laraxot/dev

@@ -11,7 +11,11 @@ class GetTenantConfigArrayAction
 {
     use QueueableAction;
 
+<<<<<<< HEAD
    /**
+=======
+    /**
+>>>>>>> laraxot/dev
      * @return array<string, mixed>
      */
     public function execute(string $name): array
@@ -28,7 +32,11 @@ class GetTenantConfigArrayAction
             return [];
         }
 
+<<<<<<< HEAD
        $result = [];
+=======
+        $result = [];
+>>>>>>> laraxot/dev
         foreach ($content as $key => $value) {
             if (is_string($key)) {
                 $result[$key] = $value;

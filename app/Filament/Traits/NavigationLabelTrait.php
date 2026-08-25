@@ -9,7 +9,11 @@ use Modules\Xot\Actions\File\SvgExistsAction;
 
 trait NavigationLabelTrait
 {
+<<<<<<< HEAD
    use TransFuncTrait;
+=======
+    use TransFuncTrait;
+>>>>>>> laraxot/dev
 
     // public function getModelLabel(): string
     // {

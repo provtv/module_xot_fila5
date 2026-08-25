@@ -21,9 +21,6 @@ use Spatie\SchemalessAttributes\SchemalessAttributesTrait;
  *
  * @method static Builder<static>|static disableCache()
  * @method static ExtraFactory      factory($count = null, $state = [])
- * @method static Builder<static>|static newModelQuery()
- * @method static Builder<static>|static newQuery()
- * @method static Builder<static>|static query()
  * @method static Builder<static>|static withCacheCooldownSeconds(?int $seconds = null)
  * @method static Builder<static>|static withExtraAttributes()
  *

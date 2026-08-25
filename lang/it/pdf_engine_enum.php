@@ -3,7 +3,11 @@
 declare(strict_types=1);
 
 return [
+<<<<<<< HEAD
    'values' => [
+=======
+    'values' => [
+>>>>>>> laraxot/dev
         'spipu' => [
             'label' => 'Spipu',
             'icon' => 'heroicon-o-table-cells',
@@ -32,7 +36,11 @@ return [
         ],
         'label' => 'Pdf Engine Enum',
         'sort' => 1,
+<<<<<<< HEAD
        'icon' => 'heroicon-o-rectangle-stack',
+=======
+        'icon' => 'heroicon-o-rectangle-stack',
+>>>>>>> laraxot/dev
     ],
     'fields' => [
         'id' => [

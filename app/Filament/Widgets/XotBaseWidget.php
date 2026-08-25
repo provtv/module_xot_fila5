@@ -62,7 +62,11 @@ abstract class XotBaseWidget extends FilamentWidget implements HasActions, HasFo
     }
 
     /**
+<<<<<<< HEAD
     * Schema del form del widget. Vuoto di default per i widget senza form
+=======
+     * Schema del form del widget. Vuoto di default per i widget senza form
+>>>>>>> laraxot/dev
      * (es. widget di sola visualizzazione); i widget con form lo sovrascrivono.
      *
      * @return array<Htmlable|string>
@@ -81,7 +85,11 @@ abstract class XotBaseWidget extends FilamentWidget implements HasActions, HasFo
      */
     public function form(Schema $schema): Schema
     {
+<<<<<<< HEAD
        $schema = $schema->components($this->getFormSchemaOld());
+=======
+        $schema = $schema->components($this->getFormSchemaOld());
+>>>>>>> laraxot/dev
         $schema->statePath('data');
 
         $model = $this->getFormModel();
@@ -101,7 +109,11 @@ abstract class XotBaseWidget extends FilamentWidget implements HasActions, HasFo
         return $schema;
     }
 
+<<<<<<< HEAD
    /** @return array<string, mixed> */
+=======
+    /** @return array<string, mixed> */
+>>>>>>> laraxot/dev
     public function getFormFill(): array
     {
         $model = $this->getFormModel();
@@ -128,7 +140,11 @@ abstract class XotBaseWidget extends FilamentWidget implements HasActions, HasFo
 
                         return $value;
                     });
+<<<<<<< HEAD
                    $res = [];
+=======
+                    $res = [];
+>>>>>>> laraxot/dev
                     foreach ($merge1 as $key => $value) {
                         $res[(string) $key] = $value;
                     }
@@ -147,7 +163,11 @@ abstract class XotBaseWidget extends FilamentWidget implements HasActions, HasFo
         $attributes = $model->attributesToArray();
 
         $fields = array_merge($fillable, $appends);
+<<<<<<< HEAD
        $fields = array_fill_keys(array_map(static fn (mixed $f): string => SafeStringCastAction::cast($f), $fields), null);
+=======
+        $fields = array_fill_keys(array_map(static fn (mixed $f): string => SafeStringCastAction::cast($f), $fields), null);
+>>>>>>> laraxot/dev
         $fields = array_merge($fields, $attributes);
         if (method_exists($model, 'getDataDefaults')) {
             /** @var array<string, mixed> $defaults */
@@ -155,7 +175,11 @@ abstract class XotBaseWidget extends FilamentWidget implements HasActions, HasFo
             $fields = array_merge($fields, $defaults);
         }
 
+<<<<<<< HEAD
        return self::normalizeFormFill($fields);
+=======
+        return self::normalizeFormFill($fields);
+>>>>>>> laraxot/dev
     }
 
     /**
@@ -239,11 +263,19 @@ abstract class XotBaseWidget extends FilamentWidget implements HasActions, HasFo
                 $this->view = $view;
             }
         } catch (\Exception $e) {
+<<<<<<< HEAD
            if (! view()->exists($this->view)) {
+=======
+            if (! view()->exists($this->view)) {
+>>>>>>> laraxot/dev
                 throw $e;
             }
         }
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> laraxot/dev
     /**
      * @param array<int|string, mixed> $data
      *

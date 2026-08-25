@@ -4,4 +4,8 @@ topic: filament-actions
 canonical: ../../../../Themes/docs/shared-components/filament-actions.md
 ---
 
+<<<<<<< HEAD
 See canonical documentation: ../../../../Themes/docs/shared-components/filament-actions.md
+=======
+See canonical documentation: ../../../../Themes/docs/shared-components/filament-actions.md
+>>>>>>> laraxot/dev

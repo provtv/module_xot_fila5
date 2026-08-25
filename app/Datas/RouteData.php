@@ -8,7 +8,11 @@ use Spatie\LaravelData\Data;
 
 /**
  * Class RouteData - Gestisce la configurazione delle rotte per il framework Laraxot.
+<<<<<<< HEAD
 *
+=======
+ *
+>>>>>>> laraxot/dev
  * @phpstan-consistent-constructor
  */
 class RouteData extends Data
@@ -34,7 +38,11 @@ class RouteData extends Data
     /**
      * Create a new instance of RouteData with default values.
      */
+<<<<<<< HEAD
    public static function make(): self
+=======
+    public static function make(): self
+>>>>>>> laraxot/dev
     {
         return new self();
     }

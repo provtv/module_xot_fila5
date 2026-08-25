@@ -31,7 +31,11 @@ class MetatagPage extends XotBasePage
 
     public function mount(): void
     {
+<<<<<<< HEAD
        $config = config('metatag');
+=======
+        $config = config('metatag');
+>>>>>>> laraxot/dev
         if (! is_array($config)) {
             $config = [];
         }
@@ -83,7 +87,11 @@ class MetatagPage extends XotBasePage
 
     public function save(): void
     {
+<<<<<<< HEAD
        /** @var array<string, mixed> $data */
+=======
+        /** @var array<string, mixed> $data */
+>>>>>>> laraxot/dev
         $data = $this->form->getState();
         app(SaveTenantConfigAction::class)->execute('metatag', $data);
 
@@ -93,7 +101,11 @@ class MetatagPage extends XotBasePage
             ->send();
     }
 
+<<<<<<< HEAD
    /** @return list<Action> */
+=======
+    /** @return list<Action> */
+>>>>>>> laraxot/dev
     protected function getFormActions(): array
     {
         return [

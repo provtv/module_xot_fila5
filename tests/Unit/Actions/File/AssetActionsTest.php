@@ -18,11 +18,19 @@ uses(TestCase::class);
 it('handles absolute urls in AssetAction', function (): void {
     $action = app(AssetAction::class);
     $url = 'https://example.com/asset.js';
+<<<<<<< HEAD
    Assert::assertSame($url, $action->execute($url));
+=======
+    Assert::assertSame($url, $action->execute($url));
+>>>>>>> laraxot/dev
 });
 
 it('returns path if asset already exists in public folder', function (): void {
     $path = 'css/app.css';
+<<<<<<< HEAD
+=======
+
+>>>>>>> laraxot/dev
     // Spy on File facade to simulate existing file
     File::partialMock()->allows([
         'exists' => true,
@@ -38,7 +46,11 @@ it('resolves module assets correctly in AssetAction', function (): void {
     $from = $modulePath.'/resources/css/style.css';
     $to = public_path('assets/Xot/css/style.css');
 
+<<<<<<< HEAD
    // Replace GetModulePathAction with a spy
+=======
+    // Replace GetModulePathAction with a spy
+>>>>>>> laraxot/dev
     $getModulePathAction = new class($modulePath) extends GetModulePathAction {
         public function __construct(private string $modulePath)
         {
@@ -78,7 +90,11 @@ it('resolves module assets correctly in AssetAction', function (): void {
     $action = app(AssetAction::class);
     $result = $action->execute($path);
 
+<<<<<<< HEAD
    Assert::assertStringContainsString('assets/Xot/css/style.css', $result);
+=======
+    Assert::assertStringContainsString('assets/Xot/css/style.css', $result);
+>>>>>>> laraxot/dev
 });
 
 it('calculates asset path correctly in AssetPathAction', function (): void {
@@ -92,5 +108,9 @@ it('calculates asset path correctly in AssetPathAction', function (): void {
     $action = app(AssetPathAction::class);
     $result = $action->execute('User::js/app.js');
 
+<<<<<<< HEAD
    Assert::assertSame('/path/to/User/resources/js/app.js', $result);
+=======
+    Assert::assertSame('/path/to/User/resources/js/app.js', $result);
+>>>>>>> laraxot/dev
 });

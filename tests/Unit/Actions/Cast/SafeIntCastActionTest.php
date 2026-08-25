@@ -12,7 +12,11 @@ it('casts various values to integer correctly', function (): void {
     $action = app(SafeIntCastAction::class);
 
     // Integers
+<<<<<<< HEAD
    Assert::assertSame(123, $action->execute(123));
+=======
+    Assert::assertSame(123, $action->execute(123));
+>>>>>>> laraxot/dev
     // Floats
     Assert::assertSame(123, $action->execute(123.9));
     Assert::assertSame(5, $action->execute(INF, 5));
@@ -37,13 +41,21 @@ it('casts various values to integer correctly', function (): void {
             return '20';
         }
     };
+<<<<<<< HEAD
    Assert::assertSame(20, $action->execute($obj));
+=======
+    Assert::assertSame(20, $action->execute($obj));
+>>>>>>> laraxot/dev
 });
 
 it('clams integer within range correctly', function (): void {
     $action = app(SafeIntCastAction::class);
 
+<<<<<<< HEAD
    Assert::assertSame(50, $action->executeWithRange(50, 0, 100));
+=======
+    Assert::assertSame(50, $action->executeWithRange(50, 0, 100));
+>>>>>>> laraxot/dev
     Assert::assertSame(0, $action->executeWithRange(-10, 0, 100));
     Assert::assertSame(100, $action->executeWithRange(150, 0, 100));
 });
@@ -51,7 +63,11 @@ it('clams integer within range correctly', function (): void {
 it('casts as id correctly', function (): void {
     $action = app(SafeIntCastAction::class);
 
+<<<<<<< HEAD
    Assert::assertSame(10, $action->executeAsId(10));
+=======
+    Assert::assertSame(10, $action->executeAsId(10));
+>>>>>>> laraxot/dev
     Assert::assertSame(1, $action->executeAsId(0));
     Assert::assertSame(1, $action->executeAsId(-5));
 });

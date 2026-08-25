@@ -19,7 +19,11 @@ trait HasXotFactory
     /**
      * Create a new factory instance for the model.
      *
+<<<<<<< HEAD
     * @return TFactory
+=======
+     * @return TFactory
+>>>>>>> laraxot/dev
      */
     protected static function newFactory()
     {

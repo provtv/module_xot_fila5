@@ -26,13 +26,21 @@ test('get module config action works', function (): void {
     mkdir($path);
     File::put($path.'/test.php', "return ['a' => 1]);");
 
+<<<<<<< HEAD
    $pathAction = Mockery::mock(GetModulePathByGeneratorAction::class);
+=======
+    $pathAction = Mockery::mock(GetModulePathByGeneratorAction::class);
+>>>>>>> laraxot/dev
     $pathAction->allows(['execute' => $path]);
     app()->instance(GetModulePathByGeneratorAction::class, $pathAction);
 
     $action = app(GetModuleConfigAction::class);
     $result = $action->execute('TestModule', 'test');
 
+<<<<<<< HEAD
    Assert::assertSame(['a' => 1], $result);
+=======
+    Assert::assertSame(['a' => 1], $result);
+>>>>>>> laraxot/dev
     File::deleteDirectory($path);
 });

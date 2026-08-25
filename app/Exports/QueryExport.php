@@ -25,7 +25,11 @@ class QueryExport implements FromQuery, ShouldQueue, WithChunkReading, WithHeadi
 {
     use Exportable;
 
+<<<<<<< HEAD
    /** @var array<int, string> */
+=======
+    /** @var array<int, string> */
+>>>>>>> laraxot/dev
     public array $headings = [];
 
     /** @var array<int, int|string> */
@@ -33,7 +37,11 @@ class QueryExport implements FromQuery, ShouldQueue, WithChunkReading, WithHeadi
 
     public ?string $transKey = null;
 
+<<<<<<< HEAD
    /** @var QueryBuilder|EloquentBuilder<Model> */
+=======
+    /** @var QueryBuilder|EloquentBuilder<Model> */
+>>>>>>> laraxot/dev
     /** @var QueryBuilder|EloquentBuilder<Model> */
     public QueryBuilder|EloquentBuilder $query;
 
@@ -59,6 +67,10 @@ class QueryExport implements FromQuery, ShouldQueue, WithChunkReading, WithHeadi
                     static fn (mixed $heading): int|string => \is_int($heading) ? $heading : (string) $heading
                 );
         }
+<<<<<<< HEAD
+=======
+
+>>>>>>> laraxot/dev
         $first = $this->query->first();
         if (null === $first) {
             /** @var Collection<int, int|string> $emptyCollection */
@@ -76,7 +88,11 @@ class QueryExport implements FromQuery, ShouldQueue, WithChunkReading, WithHeadi
         return $result;
     }
 
+<<<<<<< HEAD
    /**
+=======
+    /**
+>>>>>>> laraxot/dev
      * @return array<int|string, string>
      */
     public function headings(): array
@@ -94,7 +110,11 @@ class QueryExport implements FromQuery, ShouldQueue, WithChunkReading, WithHeadi
 
         $translated = app(TransCollectionAction::class)->execute($headingsWithKeys, $this->transKey);
 
+<<<<<<< HEAD
        $result = [];
+=======
+        $result = [];
+>>>>>>> laraxot/dev
         foreach ($translated->all() as $key => $value) {
             if (! is_string($value)) {
                 continue;

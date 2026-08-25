@@ -4,4 +4,8 @@ topic: access-level-parameter
 canonical: ../../../Themes/docs/shared-components/access-level-parameter-fix.md
 ---
 
+<<<<<<< HEAD
 See canonical documentation: ../../../Themes/docs/shared-components/access-level-parameter-fix.md
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/access-level-parameter-fix.md
+>>>>>>> laraxot/dev

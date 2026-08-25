@@ -21,7 +21,11 @@ class SafeArrayByModelCastAction
             $res = $model->attributesToArray();
 
             return $res;
+<<<<<<< HEAD
        } catch (\ValueError|\Error $e) {
+=======
+        } catch (\ValueError|\Error $e) {
+>>>>>>> laraxot/dev
             return $this->safeExecute($model);
         }
     }
@@ -34,7 +38,11 @@ class SafeArrayByModelCastAction
         $data = [];
         foreach ($model->getAttributes() as $key => $value) {
             try {
+<<<<<<< HEAD
                $data[$key] = $model->getAttribute($key);
+=======
+                $data[$key] = $model->getAttribute($key);
+>>>>>>> laraxot/dev
             } catch (\ValueError|\Error) {
             }
         }

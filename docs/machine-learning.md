@@ -118,4 +118,8 @@ https://cloud.google.com/natural-language/docs/analyzing-entities  !!!!!!!!!!!!!
 
 ----------------------------------------------------------
 
+<<<<<<< HEAD
 https://accidentalfactors.com/part-of-speech-tagging/
+=======
+https://accidentalfactors.com/part-of-speech-tagging/
+>>>>>>> laraxot/dev

@@ -11,7 +11,11 @@ uses(TestCase::class);
 it('casts nullable string values consistently', function (): void {
     $action = app(SafeNullableStringCastAction::class);
 
+<<<<<<< HEAD
    Assert::assertSame('test', $action->execute('test'));
+=======
+    Assert::assertSame('test', $action->execute('test'));
+>>>>>>> laraxot/dev
     Assert::assertSame('123', $action->execute(123));
     Assert::assertSame('1', $action->execute(true));
     Assert::assertNull($action->execute(null));

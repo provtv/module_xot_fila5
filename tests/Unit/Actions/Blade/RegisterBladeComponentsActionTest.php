@@ -23,7 +23,11 @@ it('registers blade components correctly', function (): void {
     $namespace = 'Some\\Namespace';
     $prefix = 'prefix';
 
+<<<<<<< HEAD
    /** @var DataCollection<int, ComponentFileData> $mockComps */
+=======
+    /** @var DataCollection<int, ComponentFileData> $mockComps */
+>>>>>>> laraxot/dev
     $mockComps = ComponentFileData::collection([
         [
             'name' => 'test-comp',
@@ -48,7 +52,11 @@ it('does nothing if no components found', function (): void {
     $path = 'empty/path';
     $namespace = 'Empty\\Namespace';
 
+<<<<<<< HEAD
    /** @var DataCollection<int, ComponentFileData> $mockComps */
+=======
+    /** @var DataCollection<int, ComponentFileData> $mockComps */
+>>>>>>> laraxot/dev
     $mockComps = ComponentFileData::collection([]);
 
     /** @var GetComponentsAction&MockInterface $getComponents */

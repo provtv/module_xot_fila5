@@ -20,7 +20,11 @@ class GetTableIndexesByModelClassAction
     {
         Assert::isInstanceOf($model = app($modelClass), Model::class);
         $table = $model->getTable();
+<<<<<<< HEAD
        Assert::notEmpty($table);
+=======
+        Assert::notEmpty($table);
+>>>>>>> laraxot/dev
         $formManager = app(GetSchemaManagerByModelClassAction::class)->execute($modelClass);
 
         return $formManager->introspectTableIndexesByUnquotedName($table);

@@ -43,4 +43,8 @@ https://jsfiddle.net/BlackLabel/uwg6c3yh/
 https://www.facebook.com/groups/laravel.italia.devs/posts/4497992223656063/?comment_id=4498550843600201&notif_id=1642420303428495&notif_t=group_comment&ref=notif
 Giobi Fasoli
 Browseless o urlbox. Entrambi esterni e a pagamento ma ti risparmiano mesi di sviluppo
+<<<<<<< HEAD
 ---------------------------------------------------
+=======
+---------------------------------------------------
+>>>>>>> laraxot/dev

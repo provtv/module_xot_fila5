@@ -22,14 +22,22 @@ interface PassportHasApiTokensContract
     /**
      * Get all of the user's registered OAuth clients.
      *
+<<<<<<< HEAD
     * @return HasMany<Model, Model>
+=======
+     * @return HasMany<Model, Model>
+>>>>>>> laraxot/dev
      */
     public function clients(): HasMany;
 
     /**
      * Get all of the access tokens for the user.
      *
+<<<<<<< HEAD
     * @return HasMany<Model, Model>
+=======
+     * @return HasMany<Model, Model>
+>>>>>>> laraxot/dev
      */
     public function tokens(): HasMany;
 
@@ -49,7 +57,11 @@ interface PassportHasApiTokensContract
      * Create a new personal access token for the user.
      *
      * @param array<int, string> $scopes
+<<<<<<< HEAD
     *
+=======
+     *
+>>>>>>> laraxot/dev
      * @return PersonalAccessTokenResult<Token>
      */
     public function createToken(string $name, array $scopes = []): PersonalAccessTokenResult;

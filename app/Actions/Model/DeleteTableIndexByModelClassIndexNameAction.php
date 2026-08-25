@@ -16,7 +16,11 @@ class DeleteTableIndexByModelClassIndexNameAction
     {
         Assert::isInstanceOf($model = app($modelClass), EloquentModel::class);
         $table = $model->getTable();
+<<<<<<< HEAD
        Assert::notEmpty($table);
+=======
+        Assert::notEmpty($table);
+>>>>>>> laraxot/dev
         $formManager = app(GetSchemaManagerByModelClassAction::class)->execute($modelClass);
         $doctrineTable = $formManager->introspectTableByUnquotedName($table);
         // $doctrineTable=$formManager->listTableDetails($table);

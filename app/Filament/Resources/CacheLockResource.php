@@ -17,7 +17,11 @@ class CacheLockResource extends XotBaseResource
     /**
      * Get the form schema for the resource.
      *
+<<<<<<< HEAD
     * @return array<string, mixed>
+=======
+     * @return array<string, mixed>
+>>>>>>> laraxot/dev
      */
     // #[\Override]
     public static function getFormSchemaOld(): array

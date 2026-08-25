@@ -16,7 +16,11 @@ class SafeStringCastAction
      * Converte in modo sicuro un valore mixed in string.
      * impostare delle eccezzioni ?
      *
+<<<<<<< HEAD
     * @param  mixed  $value  Il valore da convertire
+=======
+     * @param  mixed  $value  Il valore da convertire
+>>>>>>> laraxot/dev
      * @return string Il valore convertito in string
      */
     public function execute(mixed $value): string
@@ -42,7 +46,11 @@ class SafeStringCastAction
             return (string) $value;
         }
 
+<<<<<<< HEAD
        // Oggetti convertibili in stringa (Stringable, Carbon, HtmlString, ...):
+=======
+        // Oggetti convertibili in stringa (Stringable, Carbon, HtmlString, ...):
+>>>>>>> laraxot/dev
         // il cast nativo `(string) $value` qui produce la rappresentazione testuale,
         // quindi va preservata invece di appiattirla a stringa vuota.
         if ($value instanceof \Stringable || (is_object($value) && method_exists($value, '__toString'))) {
@@ -57,7 +65,11 @@ class SafeStringCastAction
     /**
      * Metodo statico di convenienza per chiamate dirette.
      *
+<<<<<<< HEAD
     * @param  mixed  $value  Il valore da convertire
+=======
+     * @param  mixed  $value  Il valore da convertire
+>>>>>>> laraxot/dev
      * @return string Il valore convertito in string
      */
     public static function cast(mixed $value): string

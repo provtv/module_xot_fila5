@@ -22,7 +22,11 @@ class GetComponentsAction
     /**
      * Undocumented function.
      *
+<<<<<<< HEAD
     * @return DataCollection<int, ComponentFileData>
+=======
+     * @return DataCollection<int, ComponentFileData>
+>>>>>>> laraxot/dev
      */
     public function execute(
         string $path,
@@ -52,7 +56,11 @@ class GetComponentsAction
                 $content = File::get($components_json),
                 '['.__LINE__.']['.class_basename(static::class).']',
             );
+<<<<<<< HEAD
            $decoded = json_decode($content, true);
+=======
+            $decoded = json_decode($content, true);
+>>>>>>> laraxot/dev
             /** @var array<int, array<string, mixed>> $comps */
             $comps = is_array($decoded) ? array_values($decoded) : [];
 

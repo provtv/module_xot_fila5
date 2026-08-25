@@ -4,4 +4,8 @@ topic: translation-system
 canonical: ../../../../Themes/docs/shared-components/translation-system.md
 ---
 
+<<<<<<< HEAD
 See canonical documentation: ../../../../Themes/docs/shared-components/translation-system.md
+=======
+See canonical documentation: ../../../../Themes/docs/shared-components/translation-system.md
+>>>>>>> laraxot/dev

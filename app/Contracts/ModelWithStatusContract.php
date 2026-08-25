@@ -13,7 +13,11 @@ use Spatie\ModelStatus\Status;
 /**
  * Modules\Xot\Contracts\ModelWithStatusContract.
  *
+<<<<<<< HEAD
 * @property int                     $id
+=======
+ * @property int                     $id
+>>>>>>> laraxot/dev
  * @property int|null                $user_id
  * @property string|null             $post_type
  * @property Carbon|null             $created_at
@@ -52,7 +56,11 @@ use Spatie\ModelStatus\Status;
  */
 interface ModelWithStatusContract
 {
+<<<<<<< HEAD
    /** @return MorphMany<Model, Model> */
+=======
+    /** @return MorphMany<Model, Model> */
+>>>>>>> laraxot/dev
     public function statuses(): MorphMany;
 
     public function status(): ?Status;

@@ -30,7 +30,11 @@ class BelongsToManyAction
         ) {
             // $this->saveMultiselectTwoSides($row, $relation->name, $relation->data);
             Assert::isArray($to = $relationDTO->data['to'] ?? []);
+<<<<<<< HEAD
            $to = array_map(static fn (mixed $id): string => SafeStringCastAction::cast($id), $to);
+=======
+            $to = array_map(static fn (mixed $id): string => SafeStringCastAction::cast($id), $to);
+>>>>>>> laraxot/dev
             $rows->sync($to);
             $status = 'collegati ['.implode(', ', $to).'] ';
             Session::flash('status', $status);

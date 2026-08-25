@@ -22,7 +22,11 @@ beforeEach(function (): void {
 });
 
 afterEach(function (): void {
+<<<<<<< HEAD
    /* @var \Modules\Xot\Tests\TestCase $this */
+=======
+    /* @var \Modules\Xot\Tests\TestCase $this */
+>>>>>>> laraxot/dev
     assert(is_string($this->workDir));
     if (File::isDirectory($this->workDir)) {
         File::deleteDirectory($this->workDir);

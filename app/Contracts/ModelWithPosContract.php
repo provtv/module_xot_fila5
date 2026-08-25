@@ -12,7 +12,11 @@ use Spatie\ModelStatus\Status;
 /**
  * Modules\Xot\Contracts\ModelWithPosContract.
  *
+<<<<<<< HEAD
 * @property int                     $id
+=======
+ * @property int                     $id
+>>>>>>> laraxot/dev
  * @property int|null                $user_id
  * @property string|null             $post_type
  * @property Carbon|null             $created_at

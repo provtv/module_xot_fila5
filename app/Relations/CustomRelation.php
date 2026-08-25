@@ -20,7 +20,11 @@ use Webmozart\Assert\Assert;
 /**
  * Class CustomRelation.
  *
+<<<<<<< HEAD
 * @extends Relation<Model, Model, Collection<int, Model>>
+=======
+ * @extends Relation<Model, Model, Collection<int, Model>>
+>>>>>>> laraxot/dev
  *
  * @method Builder<Model> when(mixed $value = null, ?callable $callback = null, ?callable $default = null)
  * @method Builder<Model> whereBetween(string $column, iterable<int, mixed> $values, string $boolean = 'and', bool $not = false)
@@ -63,7 +67,11 @@ class CustomRelation extends Relation
     /**
      * Set the constraints for an eager load of the relation.
      */
+<<<<<<< HEAD
    /**
+=======
+    /**
+>>>>>>> laraxot/dev
      * @param array<int, Model> $models
      */
     public function addEagerConstraints(array $models): void
@@ -79,7 +87,11 @@ class CustomRelation extends Relation
     /**
      * Initialize the relation on a set of models.
      */
+<<<<<<< HEAD
    /**
+=======
+    /**
+>>>>>>> laraxot/dev
      * @param array<int, Model> $models
      *
      * @return array<int, Model>
@@ -102,7 +114,11 @@ class CustomRelation extends Relation
      *
      * @return array<int, Model>
      */
+<<<<<<< HEAD
    /**
+=======
+    /**
+>>>>>>> laraxot/dev
      * @param array<int, Model>      $models
      * @param Collection<int, Model> $collection
      *
@@ -138,7 +154,11 @@ class CustomRelation extends Relation
     /**
      * Execute the query as a "select" statement.
      */
+<<<<<<< HEAD
    /**
+=======
+    /**
+>>>>>>> laraxot/dev
      * @param array<int, string>|string $columns
      *
      * @return Collection<int, Model>

@@ -16,7 +16,11 @@ it('resolves model types correctly', function (): void {
     Config::set('morph_map', ['log' => Log::class]);
 
     $classAction = app(GetModelClassByModelTypeAction::class);
+<<<<<<< HEAD
    Assert::assertSame(Log::class, $classAction->execute('log'));
+=======
+    Assert::assertSame(Log::class, $classAction->execute('log'));
+>>>>>>> laraxot/dev
 
     $typeAction = app(GetModelTypeByModelAction::class);
     $result = $typeAction->execute(new class extends Log implements ModelContract {

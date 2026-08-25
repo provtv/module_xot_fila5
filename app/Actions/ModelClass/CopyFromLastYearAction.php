@@ -21,7 +21,11 @@ class CopyFromLastYearAction
         $currentYear = (int) $year;
         $lastYear = $currentYear - 1;
 
+<<<<<<< HEAD
        /** @var Collection<int, Model> $rows_year */
+=======
+        /** @var Collection<int, Model> $rows_year */
+>>>>>>> laraxot/dev
         $rows_year = $modelClass::where($fieldName, $currentYear)->get();
 
         /** @var Collection<int, Model> $rows_last_year */

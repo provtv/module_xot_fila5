@@ -33,7 +33,11 @@ trait EnumTrait
         return $this->transClass(static::class, 'values.'.$this->value.'.description');
     }
 
+<<<<<<< HEAD
    public function getTooltip(): string
+=======
+    public function getTooltip(): string
+>>>>>>> laraxot/dev
     {
         return $this->transClass(self::class, 'values.'.$this->value.'.tooltip');
     }
@@ -121,7 +125,11 @@ trait EnumTrait
 
         foreach (static::getColumnDefinitions() as $name => $definition) {
             if (null === $migration || ! $migration->hasColumn($name)) {
+<<<<<<< HEAD
                $definition($table); // @phpstan-ignore callable.nonCallable
+=======
+                $definition($table); // @phpstan-ignore callable.nonCallable
+>>>>>>> laraxot/dev
             }
         }
     }
@@ -149,7 +157,11 @@ trait EnumTrait
      */
     public static function getColumnNames(): array
     {
+<<<<<<< HEAD
        return array_values(array_map(fn ($case): string => (string) $case->value, static::cases()));
+=======
+        return array_values(array_map(fn ($case): string => (string) $case->value, static::cases()));
+>>>>>>> laraxot/dev
     }
 
     /**
@@ -163,13 +175,21 @@ trait EnumTrait
         return [];
     }
 
+<<<<<<< HEAD
    /** @return array<int|string, string> */
+=======
+    /** @return array<int|string, string> */
+>>>>>>> laraxot/dev
     public static function toArray(): array
     {
         $cases = static::cases();
         $result = [];
         foreach ($cases as $item) {
+<<<<<<< HEAD
            $result[(string) $item->value] = (string) $item->getLabel();
+=======
+            $result[(string) $item->value] = (string) $item->getLabel();
+>>>>>>> laraxot/dev
         }
 
         return $result;

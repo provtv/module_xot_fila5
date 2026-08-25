@@ -23,7 +23,11 @@ use function Safe\unlink;
  * All module connections are mapped by TenantServiceProvider.
  * Migrations must be run ONCE externally: php artisan migrate --env=testing
  * DatabaseTransactions handles rollback between tests.
+<<<<<<< HEAD
 *
+=======
+ *
+>>>>>>> laraxot/dev
  * @property object|null $action
  * @property Model|null  $model
  * @property object|null $service

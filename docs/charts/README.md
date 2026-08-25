@@ -711,4 +711,8 @@ it('exports chart to SVG successfully', function () {
 ---
 
 **Autore**: PTVX Development Team
+<<<<<<< HEAD
 **Ultimo Aggiornamento**: 2025-12-09
+=======
+**Ultimo Aggiornamento**: 2025-12-09
+>>>>>>> laraxot/dev

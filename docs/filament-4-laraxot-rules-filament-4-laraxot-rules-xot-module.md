@@ -1,3 +1,23 @@
+---
+title: "Filament 4 + Laraxot Rules — Xot Module (variante legacy da rivedere)"
+type: rule
+tags: [xot, filament, laraxot, rules, legacy]
+module: Xot
+created: 2026-07-20
+updated: 2026-07-20
+qmd: "regole filament 4 laraxot modulo xot variante legacy contenuto differente da consolidare"
+issues:
+  - "https://github.com/laraxot/module_xot_fila5/issues/28"
+discussions:
+  - "https://github.com/laraxot/module_xot_fila5/discussions/29"
+related:
+  - ./00-index.md
+  - ./00-index.md
+  - ./index.md
+  - ./code-quality-standards.md
+  - ./code-quality-standards-legacy.md
+---
+
 # Filament 4 + Laraxot Rules - Xot Module
 
 ## 🎯 Regole Fondamentali

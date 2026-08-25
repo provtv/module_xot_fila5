@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <|?|p|h|p|
+=======
+|<|?|p|h|p|
+>>>>>>> laraxot/dev
 |
 |d|e|c|l|a|r|e|(|s|t|r|i|c|t|_|t|y|p|e|s|=|1|)|;|
 |
@@ -132,4 +136,8 @@
 | | | | |/|/| |A|s|s|e|r|t| |c|o|m|m|a|n|d| |w|a|s| |s|u|c|c|e|s|s|f|u|l| |a|n|d| |c|r|e|a|t|e|d| |t|h|e| |o|u|t|p|u|t| |d|i|r|e|c|t|o|r|y|
 | | | | |e|x|p|e|c|t|(|$|e|x|i|t|C|o|d|e|)|-|>|t|o|B|e|(|0|)|-|>|a|n|d|(|F|i|l|e|:|:|i|s|D|i|r|e|c|t|o|r|y|(|$|t|h|i|s|-|>|t|e|s|t|O|u|t|p|u|t|D|i|r|)|)|-|>|t|o|B|e|T|r|u|e|(|)|;|
 |}|)|;|
+<<<<<<< HEAD
 |
+=======
+|
+>>>>>>> laraxot/dev

@@ -20,12 +20,20 @@ class ListSessions extends XotBaseListRecords
     public function getGridTableColumns(): array
     {
         return [
+<<<<<<< HEAD
            Stack::make($this->getTableColumns()), // @phpstan-ignore method.deprecated (hook di progetto: la deprecazione e ereditata per nome dal prototipo Filament 5, il codice eseguito e il nostro — story 16.12)
+=======
+            Stack::make($this->getTableColumns()), // @phpstan-ignore method.deprecated (hook di progetto: la deprecazione e ereditata per nome dal prototipo Filament 5, il codice eseguito e il nostro — story 16.12)
+>>>>>>> laraxot/dev
         ];
     }
 
     #[\Override]
+<<<<<<< HEAD
    /**
+=======
+    /**
+>>>>>>> laraxot/dev
      * @return array<string, mixed>
      */
     public function getTableColumns(): array

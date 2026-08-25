@@ -1,3 +1,14 @@
+---
+title: "_inodes"
+module: "Xot"
+type: concept
+tags: [, 18]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: " 18"
+related:
+  - "./eloquent-magic-properties-rule.md"
+---
 # _inodes
 
 <!-- Contenuto migrato da _docs/_inodes.txt -->

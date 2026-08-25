@@ -30,7 +30,11 @@ abstract class XotBaseState implements StateContract
 
     public static function getName(): string
     {
+<<<<<<< HEAD
        return static::$name ?? Str::of(class_basename(static::class))->snake()->toString();
+=======
+        return static::$name ?? Str::of(class_basename(static::class))->snake()->toString();
+>>>>>>> laraxot/dev
     }
 
     public function label(): string
@@ -75,7 +79,11 @@ abstract class XotBaseState implements StateContract
         // return 'Sei sicuro di voler annullare questo appuntamento?';
     }
 
+<<<<<<< HEAD
    /**
+=======
+    /**
+>>>>>>> laraxot/dev
      * @return array<string, Component>
      */
     public function modalFormSchema(): array
@@ -136,7 +144,11 @@ abstract class XotBaseState implements StateContract
          *
          * $appointment?->state->transitionTo($stateClass,$message);
          */
+<<<<<<< HEAD
        // Fallback safe-mode when model-states package is not available.
+=======
+        // Fallback safe-mode when model-states package is not available.
+>>>>>>> laraxot/dev
         // Transition by generic arguments is intentionally a no-op.
     }
 
@@ -166,7 +178,11 @@ abstract class XotBaseState implements StateContract
          *
          * $appointment?->state->transitionTo($stateClass,$message);
          */
+<<<<<<< HEAD
        if (isset($record->state) && \is_object($record->state) && method_exists($record->state, 'transitionTo')) {
+=======
+        if (isset($record->state) && \is_object($record->state) && method_exists($record->state, 'transitionTo')) {
+>>>>>>> laraxot/dev
             $record->state->transitionTo($stateClass, $message);
         }
     }
@@ -176,7 +192,11 @@ abstract class XotBaseState implements StateContract
         return false;
     }
 
+<<<<<<< HEAD
    /**
+=======
+    /**
+>>>>>>> laraxot/dev
      * @return array<string, mixed>
      */
     public static function getOptions(): array

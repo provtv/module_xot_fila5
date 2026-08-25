@@ -50,7 +50,11 @@ abstract class XotBasePage extends FilamentPage implements HasForms
      */
     public function getView(): string
     {
+<<<<<<< HEAD
        if ('filament-panels::pages.page' !== $this->view) {
+=======
+        if ('filament-panels::pages.page' !== $this->view) {
+>>>>>>> laraxot/dev
             return $this->view;
         }
 
@@ -119,7 +123,11 @@ abstract class XotBasePage extends FilamentPage implements HasForms
      */
     public function schema(Schema $schema): Schema
     {
+<<<<<<< HEAD
        return $schema->components($this->getFormSchemaOld())
+=======
+        return $schema->components($this->getFormSchemaOld())
+>>>>>>> laraxot/dev
             ->statePath('data')
             ->columns(2);
     }
@@ -132,7 +140,11 @@ abstract class XotBasePage extends FilamentPage implements HasForms
     final public function form(Schema $schema): Schema
     {
         return $schema
+<<<<<<< HEAD
            ->components($this->getFormSchemaOld())
+=======
+            ->components($this->getFormSchemaOld())
+>>>>>>> laraxot/dev
             ->model($this->getFormModel())
             ->statePath($this->getFormStatePath())
             ->operation($this->getFormContext())
@@ -198,7 +210,11 @@ abstract class XotBasePage extends FilamentPage implements HasForms
      *
      * @return array<int|string, Component>
      */
+<<<<<<< HEAD
    protected function getFormSchemaOld(): array
+=======
+    protected function getFormSchemaOld(): array
+>>>>>>> laraxot/dev
     {
         return [];
     }

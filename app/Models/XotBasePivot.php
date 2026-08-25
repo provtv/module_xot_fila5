@@ -28,7 +28,11 @@ use function Safe\preg_match;
  */
 abstract class XotBasePivot extends EloquentPivot
 {
+<<<<<<< HEAD
    /** @use HasXotFactory<Factory<static>> */
+=======
+    /** @use HasXotFactory<Factory<static>> */
+>>>>>>> laraxot/dev
     use HasXotFactory;
 
     use Updater;

@@ -27,7 +27,11 @@ use PHPUnit\Framework\MockObject\MockObject;
 /**
  * Class XotBaseTestCase.
  *
+<<<<<<< HEAD
 * Shared bootstrap base test case for module tests.
+=======
+ * Shared bootstrap base test case for module tests.
+>>>>>>> laraxot/dev
  * DatabaseTransactions belongs in each module TestCase when that module needs transactional isolation.
  *
  * @property object|null $action
@@ -50,7 +54,11 @@ abstract class XotBaseTestCase extends BaseTestCase
 {
     use CreatesApplication;
 
+<<<<<<< HEAD
    public mixed $action = null;
+=======
+    public mixed $action = null;
+>>>>>>> laraxot/dev
 
     public mixed $model = null;
 
@@ -171,7 +179,11 @@ abstract class XotBaseTestCase extends BaseTestCase
 
     protected function tearDown(): void
     {
+<<<<<<< HEAD
        try {
+=======
+        try {
+>>>>>>> laraxot/dev
             if ($this->app instanceof Application) {
                 /** @var DatabaseManager $db */
                 $db = $this->app->make('db');
@@ -210,7 +222,11 @@ abstract class XotBaseTestCase extends BaseTestCase
      */
     protected static function createTestUser(array $attributes = []): UserContract
     {
+<<<<<<< HEAD
        /** @var Factory<Model&UserContract> $factory */
+=======
+        /** @var Factory<Model&UserContract> $factory */
+>>>>>>> laraxot/dev
         $factory = UserFactory::new();
         /** @var UserContract $user */
         $user = $factory->create($attributes);
@@ -223,7 +239,11 @@ abstract class XotBaseTestCase extends BaseTestCase
      */
     protected static function createTestTenant(array $attributes = []): Tenant
     {
+<<<<<<< HEAD
        /** @var Tenant $tenant */
+=======
+        /** @var Tenant $tenant */
+>>>>>>> laraxot/dev
         $tenant = TenantFactory::new()->createOne($attributes);
 
         return $tenant;
@@ -234,7 +254,11 @@ abstract class XotBaseTestCase extends BaseTestCase
      */
     protected static function createTestModule(array $attributes = []): Module
     {
+<<<<<<< HEAD
        return ModuleFactory::new()->createOne($attributes);
+=======
+        return ModuleFactory::new()->createOne($attributes);
+>>>>>>> laraxot/dev
     }
 
     /**

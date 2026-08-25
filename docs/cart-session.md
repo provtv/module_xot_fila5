@@ -69,4 +69,8 @@ https://meritocracy.is/blog/2021/06/08/laravel-implementing-a-shopping-cart-for-
 https://github.com/Tefoh/Cart
 
 
+<<<<<<< HEAD
 https://github.com/Codexshaper/laravel-woocommerce
+=======
+https://github.com/Codexshaper/laravel-woocommerce
+>>>>>>> laraxot/dev

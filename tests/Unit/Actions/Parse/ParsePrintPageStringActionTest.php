@@ -12,7 +12,11 @@ it('parses single pages and ranges', function (): void {
     $str = '1-4,6,7,8,11-14';
     $expected = [1, 2, 3, 4, 6, 7, 8, 11, 12, 13, 14];
 
+<<<<<<< HEAD
    Assert::assertSame($expected, ParsePrintPageStringAction::execute($str));
+=======
+    Assert::assertSame($expected, ParsePrintPageStringAction::execute($str));
+>>>>>>> laraxot/dev
     Assert::assertSame([5], ParsePrintPageStringAction::execute('5'));
     Assert::assertSame([1, 2, 3], ParsePrintPageStringAction::execute('1-3'));
 });

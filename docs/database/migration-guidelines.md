@@ -44,4 +44,8 @@ return new class extends XotBaseMigration
 - [Xot Base Classes](../XOT_BASE_CLASSES.md)
 - [Code Quality](code_quality.md)
 - [Root Documentation](../../../../project_docs/collegamenti-documentazione.md)
+<<<<<<< HEAD
 - [Database Guidelines](database_guidelines.md)
+=======
+- [Database Guidelines](database_guidelines.md)
+>>>>>>> laraxot/dev

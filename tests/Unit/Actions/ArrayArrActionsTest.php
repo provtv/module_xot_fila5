@@ -72,7 +72,11 @@ it('writes JSON and PHP arrays', function (): void {
     $jsonFile = $tmpDir.'/data.json';
     $phpFile = $tmpDir.'/data.php';
 
+<<<<<<< HEAD
    $jsonAction = new SaveJsonArrayAction();
+=======
+    $jsonAction = new SaveJsonArrayAction();
+>>>>>>> laraxot/dev
     $phpAction = new SavePhpArrayAction();
 
     Assert::assertTrue($phpAction->execute(['b' => 2], $phpFile));
@@ -87,7 +91,11 @@ it('dispatches save strategy by format in SaveArrayAction', function (): void {
     $tmpDir = sys_get_temp_dir().'/xot-save-array-action-'.uniqid('', true);
     mkdir($tmpDir, 0777, true);
 
+<<<<<<< HEAD
    $action = new SaveArrayAction();
+=======
+    $action = new SaveArrayAction();
+>>>>>>> laraxot/dev
     $jsonFile = $tmpDir.'/one.json';
     $phpFile = $tmpDir.'/one.php';
 

@@ -89,7 +89,11 @@ class SafeBooleanCastAction
     /**
      * Converte un valore in boolean con validazione di valori specifici.
      *
+<<<<<<< HEAD
     * @param mixed        $value       Il valore da convertire
+=======
+     * @param mixed        $value       Il valore da convertire
+>>>>>>> laraxot/dev
      * @param array<mixed> $trueValues  Array di valori che rappresentano true
      * @param array<mixed> $falseValues Array di valori che rappresentano false
      * @param bool|null    $default     Valore di default se la conversione fallisce
@@ -188,7 +192,11 @@ class SafeBooleanCastAction
     /**
      * Metodo statico per cast con valori personalizzati.
      *
+<<<<<<< HEAD
     * @param mixed        $value       Il valore da convertire
+=======
+     * @param mixed        $value       Il valore da convertire
+>>>>>>> laraxot/dev
      * @param array<mixed> $trueValues  Array di valori che rappresentano true
      * @param array<mixed> $falseValues Array di valori che rappresentano false
      * @param bool|null    $default     Valore di default se la conversione fallisce

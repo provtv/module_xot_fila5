@@ -19,7 +19,11 @@ class GetSchemaManagerByModelClassAction
      *
      * @param string $modelClass La classe del modello
      *
+<<<<<<< HEAD
     * @return AbstractSchemaManager<AbstractPlatform> Lo schema manager di Doctrine
+=======
+     * @return AbstractSchemaManager<AbstractPlatform> Lo schema manager di Doctrine
+>>>>>>> laraxot/dev
      */
     public function execute(string $modelClass): AbstractSchemaManager
     {

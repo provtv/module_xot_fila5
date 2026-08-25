@@ -46,7 +46,11 @@ test('getThemeColors gestisce correttamente i colori personalizzati', function (
         ],
     ];
 
+<<<<<<< HEAD
    $colors = $metatagData->getThemeColors();
+=======
+    $colors = $metatagData->getThemeColors();
+>>>>>>> laraxot/dev
 
     Assert::assertSame('custom', $colors['custom_color']);
     Assert::assertSame('amber', $colors['primary']);
