@@ -122,7 +122,7 @@ class LazyCollectionExport implements FromIterator, ShouldQueue, WithHeadings, W
     /**
      * @return array<int|string, mixed>
      */
-    private function normalizeRow(\Illuminate\Contracts\Support\Arrayable|array|\Traversable|object|null $row): array
+    private function normalizeRow(mixed $row): array
     {
         if (null === $row) {
             return [];
