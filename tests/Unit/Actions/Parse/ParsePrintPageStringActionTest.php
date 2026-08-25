@@ -18,6 +18,8 @@ it('parses single pages and ranges', function (): void {
 });
 
 it('throws when no valid page number exists', function (): void {
+    expect(static fn (): array => ParsePrintPageStringAction::execute('nessuna cifra'))
+        ->toThrow(InvalidArgumentException::class, 'No valid page numbers found');
 });
 
 it('builds inclusive ranges from fromTo helper', function (): void {
@@ -26,4 +28,7 @@ it('builds inclusive ranges from fromTo helper', function (): void {
 });
 
 it('throws when fromTo end is lower than start', function (): void {
+    // `Assert::greaterThanEq` di Webmozart solleva la propria eccezione, non quella di PHP.
+    expect(static fn (): array => ParsePrintPageStringAction::fromTo(9, 3))
+        ->toThrow(Webmozart\Assert\InvalidArgumentException::class);
 });

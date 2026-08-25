@@ -28,7 +28,11 @@ test('getFilamentColors restituisce i colori Filament corretti', function (): vo
     Assert::assertEquals(app(PaDesignColorsAction::class)->filamentPalette(), $colors);
 });
 
-test('getColors gestisce correttamente i colori personalizzati', function () {
+// `getColors()` e `getLogoHeight()` sono deprecati sui gemelli `getThemeColors()` e
+// `getBrandLogoHeight()`: i test seguono l'API che sopravvive, altrimenti restano a
+// coprire un metodo che sparira'. `getThemeColors()` appiattisce l'array annidato di
+// `colors` in `array<string, string>`, quindi le chiavi restano ma i valori sono stringhe.
+test('getThemeColors gestisce correttamente i colori personalizzati', function () {
     $metatagData = new MetatagData();
     $metatagData->colors = [
         'custom_color' => [
@@ -42,17 +46,17 @@ test('getColors gestisce correttamente i colori personalizzati', function () {
         ],
     ];
 
-    $colors = $metatagData->getColors();
+    $colors = $metatagData->getThemeColors();
 
-    Assert::assertArrayHasKey('custom_color', $colors);
-    Assert::assertArrayHasKey('primary', $colors);
+    Assert::assertSame('custom', $colors['custom_color']);
+    Assert::assertSame('amber', $colors['primary']);
 });
 
-test('getLogoHeight restituisce il valore corretto', function () {
+test('getBrandLogoHeight restituisce il valore corretto', function () {
     $metatagData = new MetatagData();
     $metatagData->logo_height = '3em';
 
-    Assert::assertSame('3em', $metatagData->getLogoHeight());
+    Assert::assertSame('3em', $metatagData->getBrandLogoHeight());
 });
 
 test('Le proprieta hanno i valori di default corretti', function () {

@@ -3,14 +3,11 @@
 declare(strict_types=1);
 
 use Filament\Facades\Filament;
-use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Http\Response;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Str;
-use Illuminate\Testing\TestResponse;
 use Modules\Xot\Actions\Cast\SafeStringCastAction;
 use Modules\Xot\Actions\Factory\GetFactoryAction;
 use Modules\Xot\Actions\File\FixPathAction;
@@ -163,126 +160,6 @@ if (! function_exists('isJson')) {
     function isJson(string $string): bool
     {
         return json_validate($string);
-    }
-}
-
-/*
-|--------------------------------------------------------------------------
-| Pest Laravel Helper Stubs
-|--------------------------------------------------------------------------
-|
-| Stubs for Pest global testing functions.
-| These eliminate 'function not found' errors from PHPStan.
-|
-*/
-
-if (! function_exists('actingAs')) {
-    /**
-     * @return TestResponse<Response>
-     */
-    function actingAs(Authenticatable|int|string|null $user = null, ?string $driver = null): TestResponse
-    {
-        throw new RuntimeException('Stub: This function is meant for static analysis only.');
-    }
-}
-
-if (! function_exists('get')) {
-    /**
-     * @param array<string, mixed> $options
-     *
-     * @return TestResponse<Response>
-     */
-    function get(string $uri = '', array $options = []): TestResponse
-    {
-        throw new RuntimeException('Stub: This function is meant for static analysis only.');
-    }
-}
-
-if (! function_exists('post')) {
-    /**
-     * @param array<string, mixed> $options
-     *
-     * @return TestResponse<Response>
-     */
-    function post(string $uri, mixed $data = [], array $options = []): TestResponse
-    {
-        throw new RuntimeException('Stub: This function is meant for static analysis only.');
-    }
-}
-
-if (! function_exists('put')) {
-    /**
-     * @return TestResponse<Response>
-     */
-    function put(string $uri, mixed $data = []): TestResponse
-    {
-        throw new RuntimeException('Stub: This function is meant for static analysis only.');
-    }
-}
-
-if (! function_exists('patch')) {
-    /**
-     * @return TestResponse<Response>
-     */
-    function patch(string $uri, mixed $data = []): TestResponse
-    {
-        throw new RuntimeException('Stub: This function is meant for static analysis only.');
-    }
-}
-
-if (! function_exists('delete')) {
-    /**
-     * @return TestResponse<Response>
-     */
-    function delete(string $uri): TestResponse
-    {
-        throw new RuntimeException('Stub: This function is meant for static analysis only.');
-    }
-}
-
-if (! function_exists('head')) {
-    /**
-     * @return TestResponse<Response>
-     */
-    function head(string $uri): TestResponse
-    {
-        throw new RuntimeException('Stub: This function is meant for static analysis only.');
-    }
-}
-
-if (! function_exists('options')) {
-    /**
-     * @return TestResponse<Response>
-     */
-    function options(string $uri): TestResponse
-    {
-        throw new RuntimeException('Stub: This function is meant for static analysis only.');
-    }
-}
-
-if (! function_exists('followingRedirects')) {
-    /**
-     * @return TestResponse<Response>
-     */
-    function followingRedirects(int $number = 5): TestResponse
-    {
-        throw new RuntimeException('Stub: This function is meant for static analysis only.');
-    }
-}
-
-if (! function_exists('test')) {
-    /** @param  string  $title  @param  \Closure  $callback  @return void */
-    function test(string $title, Closure $callback): void
-    {
-        throw new RuntimeException('Stub: This function is meant for static analysis only.');
-    }
-}
-
-if (! function_exists('describe')) {
-    /** @param  string  $title  @param  \Closure  $callback  @return void */
-    function describe(string $title, Closure $callback): void
-    {
-        throw new RuntimeException('Stub: This function is meant for static analysis only.');
     }
 }
 

@@ -11,6 +11,7 @@ use Modules\Xot\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
 use function Safe\tempnam;
+use Mockery;
 
 uses(TestCase::class);
 
@@ -22,10 +23,10 @@ describe('Get Tenant Config Actions', function (): void {
 
         File::put($tempPath, 'return '.var_export($configData, true).';');
 
-        $mock = $this->createUnitMock(GetTenantFilePathAction::class);
-        $mock->method('execute')
+        $mock = Mockery::mock(GetTenantFilePathAction::class);
+        $mock->shouldReceive('execute')
             ->with($configName.'.php')
-            ->willReturn($tempPath);
+            ->andReturn($tempPath);
 
         app()->instance(GetTenantFilePathAction::class, $mock);
 
@@ -39,9 +40,9 @@ describe('Get Tenant Config Actions', function (): void {
     test('returns empty array if tenant config file does not exist', function (): void {
         $configName = 'non_existent';
 
-        $mock = $this->createUnitMock(GetTenantFilePathAction::class);
-        $mock->method('execute')
-            ->willReturn('/path/to/nothing.php');
+        $mock = Mockery::mock(GetTenantFilePathAction::class);
+        $mock->shouldReceive('execute')
+            ->andReturn('/path/to/nothing.php');
 
         app()->instance(GetTenantFilePathAction::class, $mock);
 

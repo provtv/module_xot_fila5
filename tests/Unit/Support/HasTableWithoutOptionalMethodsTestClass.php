@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Tests\Unit\Support;
 
+use Filament\Tables\Columns\Column;
+use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Mockery\MockInterface;
 use Modules\Xot\Filament\Traits\HasXotTable;
@@ -24,11 +26,17 @@ class HasTableWithoutOptionalMethodsTestClass
         return $mock;
     }
 
+    /**
+     * La fixture serve a coprire i metodi *opzionali* assenti, non la tabella vuota:
+     * quella ha un guardiano dedicato in `HasXotTable::resolveTableColumns()` e un test
+     * suo. Senza almeno una colonna qui, ogni test di questa classe morirebbe li'.
+     *
+     * @return array<string, Column>
+     */
     #[\Override]
-    /** @return array<int, mixed> */
     public function getTableColumns(): array
     {
-        return [];
+        return ['name' => TextColumn::make('name')];
     }
 
     /**
@@ -228,42 +236,26 @@ class HasTableWithoutOptionalMethodsTestClass
         return null;
     }
 
-    public function deselectAllTableRecords(): void
-    {
-    }
+    public function deselectAllTableRecords(): void {}
 
-    public function mountTableAction(): void
-    {
-    }
+    public function mountTableAction(): void {}
 
-    public function mountTableBulkAction(): void
-    {
-    }
+    public function mountTableBulkAction(): void {}
 
     public function mountedTableActionRecord(): mixed
     {
         return null;
     }
 
-    public function replaceMountedTableAction(): void
-    {
-    }
+    public function replaceMountedTableAction(): void {}
 
-    public function replaceMountedTableBulkAction(): void
-    {
-    }
+    public function replaceMountedTableBulkAction(): void {}
 
-    public function resetTableSearch(): void
-    {
-    }
+    public function resetTableSearch(): void {}
 
-    public function resetTableColumnSearch(): void
-    {
-    }
+    public function resetTableColumnSearch(): void {}
 
-    public function toggleTableReordering(): void
-    {
-    }
+    public function toggleTableReordering(): void {}
 
     public function parseTableFilterName(): string
     {

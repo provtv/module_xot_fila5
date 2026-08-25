@@ -157,7 +157,7 @@ abstract class XotBasePage extends Page implements HasForms
      */
     public function schema(Schema $schema): Schema
     {
-        $schema = $schema->components($this->getFormSchema());
+        $schema = $schema->components($this->getFormSchema()); // @phpstan-ignore method.deprecated (hook di progetto: la deprecazione e ereditata per nome dal prototipo Filament 5, il codice eseguito e il nostro — story 16.12)
 
         $schema->statePath('data');
 

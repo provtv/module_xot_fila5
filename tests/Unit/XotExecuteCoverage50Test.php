@@ -4,28 +4,91 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Tests\Unit;
 
+use Carbon\Carbon;
+use Illuminate\Contracts\Debug\ExceptionHandler;
+use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Filesystem\Filesystem;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Facades\View;
+use Illuminate\Support\LazyCollection;
 use Mockery;
+use Modules\Xot\Actions\ArtisanAction;
+use Modules\Xot\Actions\Export\ExportXlsStreamByLazyCollection;
+use Modules\Xot\Actions\Factory\GetPropertiesFromMethodsByModelAction;
+use Modules\Xot\Actions\Filament\GenerateTableColumnsByFileAction;
+use Modules\Xot\Actions\Filament\GetModulesNavigationItems;
 use Modules\Xot\Actions\File\FileAction;
 use Modules\Xot\Actions\RouteDynAction;
+use Modules\Xot\Console\Commands\AddStrictTypesDeclarationCommand;
+use Modules\Xot\Console\Commands\CheckAccessorTwinsCommand;
 use Modules\Xot\Console\Commands\OptimizeFilamentMemoryCommand;
+use Modules\Xot\Console\Commands\SearchTextInDbCommand;
 use Modules\Xot\Database\Migrations\XotBaseMigration;
 use Modules\Xot\Datas\MetatagData;
 use Modules\Xot\Datas\XotData;
+use Modules\Xot\Enums\DayOfWeek;
+use Modules\Xot\Enums\GenderEnum;
+use Modules\Xot\Enums\PdfEngineEnum;
+use Modules\Xot\Enums\YesNoEnum;
+use Modules\Xot\Exceptions\Handlers\HandlerDecorator;
+use Modules\Xot\Filament\Actions\Header\ExportXlsAction;
+use Modules\Xot\Filament\Actions\Header\ExportXlsLazyAction;
 use Modules\Xot\Filament\Builders\ColumnBuilder;
-use Modules\Xot\Filament\Builders\FilterBuilder;
+use Modules\Xot\Filament\Pages\ArtisanCommandsManager;
+use Modules\Xot\Filament\Pages\EnvPage;
+use Modules\Xot\Filament\Pages\HealthPage;
+use Modules\Xot\Filament\Pages\MainDashboard;
+use Modules\Xot\Filament\Pages\Test;
+use Modules\Xot\Filament\Pages\XotBasePage;
+use Modules\Xot\Filament\Resources\CacheLockResource;
+use Modules\Xot\Filament\Resources\CacheLockResource\Pages\ListCacheLocks;
+use Modules\Xot\Filament\Resources\CacheResource;
+use Modules\Xot\Filament\Resources\CacheResource\Pages\ListCaches;
+use Modules\Xot\Filament\Resources\ExtraResource;
+use Modules\Xot\Filament\Resources\ExtraResource\Pages\ListExtras;
+use Modules\Xot\Filament\Resources\LogResource;
+use Modules\Xot\Filament\Resources\LogResource\Pages\ListLogs;
+use Modules\Xot\Filament\Resources\ModuleResource;
+use Modules\Xot\Filament\Resources\ModuleResource\Pages\ListModules;
+use Modules\Xot\Filament\Resources\SessionResource;
+use Modules\Xot\Filament\Resources\SessionResource\Pages\ListSessions;
+use Modules\Xot\Filament\Support\RecordAnchor;
+use Modules\Xot\Filament\Widgets\Clock;
+use Modules\Xot\Filament\Widgets\EnvWidget;
+use Modules\Xot\Filament\Widgets\FilterFormWidget;
+use Modules\Xot\Filament\Widgets\HealthOverviewWidget;
+use Modules\Xot\Filament\Widgets\ModelTrendChartWidget;
+use Modules\Xot\Filament\Widgets\ModulesOverviewWidget;
+use Modules\Xot\Filament\Widgets\StateOverviewWidget;
+use Modules\Xot\Filament\Widgets\StatesChartWidget;
+use Modules\Xot\Filament\Widgets\TestWidget;
+use Modules\Xot\Filament\Widgets\XotBaseChartWidget;
+use Modules\Xot\Helpers\ResourceFormSchemaGenerator;
+use Modules\Xot\Http\Middleware\FilamentMemoryMonitorMiddleware;
 use Modules\Xot\Http\Middleware\SecurityMiddleware;
 use Modules\Xot\Models\Cache as CacheModel;
+use Modules\Xot\Models\XotBaseMorphPivot;
+use Modules\Xot\Models\XotBasePivot;
+use Modules\Xot\Models\XotBaseUuidModel;
+use Modules\Xot\Providers\FilamentOptimizationServiceProvider;
+use Modules\Xot\QueryBuilders\BaseQueryBuilder;
+use Modules\Xot\Services\RouteService;
+use Modules\Xot\States\XotBaseState;
 use Modules\Xot\Tests\FilamentSchemaCoverage;
 use Modules\Xot\Tests\ModuleExecuteCoverage;
 use Modules\Xot\Tests\TestCase;
+use Modules\Xot\Traits\HasCsrfToken;
 use PHPUnit\Framework\Assert;
 use Symfony\Component\Console\Input\ArrayInput;
 use Symfony\Component\Console\Output\NullOutput;
+use Symfony\Component\Finder\SplFileInfo;
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\StreamedResponse;
 
 use function Safe\ob_get_clean;
 use function Safe\ob_start;
@@ -43,9 +106,6 @@ function xotExecuteContext(): array
     return [dirname(__DIR__, 2).'/app', 'Modules\\Xot\\'];
 }
 
-/**
- * @return mixed
- */
 function xotInvoke(object $target, string $method, mixed ...$args): mixed
 {
     $reflection = new \ReflectionMethod($target, $method);
@@ -55,12 +115,18 @@ function xotInvoke(object $target, string $method, mixed ...$args): mixed
 }
 
 /**
- * @param  list<\Illuminate\Database\Eloquent\Model>  $models
- * @return \Illuminate\Support\LazyCollection<int, \Illuminate\Database\Eloquent\Model>
+ * @param  list<Model>  $models
+ *                               `ExportXlsStreamByLazyCollection` dichiara `LazyCollection<int, mixed>` e PHPStan
+ *                               tratta il tipo del valore come invariante: una `LazyCollection<int, Model>` non e'
+ *                               accettata al suo posto. L'helper dichiara quindi il tipo che il consumatore chiede.
+ * @return LazyCollection<int, mixed>
  */
-function xotModelRows(array $models): \Illuminate\Support\LazyCollection
+function xotModelRows(array $models): LazyCollection
 {
-    return \Illuminate\Support\LazyCollection::make($models);
+    /** @var LazyCollection<int, mixed> $rows */
+    $rows = LazyCollection::make($models);
+
+    return $rows;
 }
 
 describe('Xot execute coverage floor 50', function (): void {
@@ -91,7 +157,10 @@ describe('Xot execute coverage floor 50', function (): void {
         View::addNamespace('demo_ns', $viewRoot);
 
         try {
+            // `viewNamespaceToDir()` dichiara `string|array`: il cast a stringa su un
+            // array sarebbe un errore, quindi il tipo si restringe prima di asserire.
             $dir = FileAction::viewNamespaceToDir('demo_ns::demo.test');
+            Assert::assertIsString($dir);
             Assert::assertStringContainsString('demo/test', $dir);
         } catch (\Throwable $e) {
             Assert::assertStringContainsString('Expected a string', $e->getMessage());
@@ -225,7 +294,7 @@ describe('Xot execute coverage floor 50', function (): void {
         config(['cache.default' => 'array']);
         Cache::store('array')->flush();
 
-        $middleware = new SecurityMiddleware();
+        $middleware = new SecurityMiddleware;
         $request = Request::create('/dashboard', 'GET', [], [], [], [
             'HTTP_USER_AGENT' => 'PHPUnit/SecurityMiddleware',
             'REMOTE_ADDR' => '127.0.0.'.random_int(10, 200),
@@ -254,9 +323,9 @@ describe('Xot execute coverage floor 50', function (): void {
         File::put($tmp.'/Resources/Form.php', "<?php\ngetFormSchema(); \$x->whereNull('x')->update([]);\n");
         File::put($tmp.'/Pages/ListItems.php', "<?php\nclass ListItems {}\n");
 
-        $splFiles = (new \Illuminate\Filesystem\Filesystem())->allFiles($tmp);
+        $splFiles = (new Filesystem)->allFiles($tmp);
         $original = File::getFacadeRoot();
-        $mockFs = Mockery::mock(\Illuminate\Filesystem\Filesystem::class)->makePartial();
+        $mockFs = Mockery::mock(Filesystem::class)->makePartial();
         $mockFs->shouldReceive('allFiles')->andReturn($splFiles);
         File::swap($mockFs);
 
@@ -269,7 +338,7 @@ describe('Xot execute coverage floor 50', function (): void {
 
             $exitCode = $command->run(
                 new ArrayInput(['--analyze' => true, '--verbose' => true]),
-                new NullOutput()
+                new NullOutput
             );
             Assert::assertSame(0, $exitCode);
         } finally {
@@ -283,9 +352,7 @@ describe('Xot execute coverage floor 50', function (): void {
         {
             protected ?string $model_class = CacheModel::class;
 
-            public function up(): void
-            {
-            }
+            public function up(): void {}
         };
 
         Assert::assertSame(CacheModel::class, $migration->getModelClass());
@@ -323,7 +390,7 @@ describe('Xot execute coverage floor 50', function (): void {
 
     test('SecurityMiddleware copre path sospetti e rate limit endpoint', function (): void {
         config(['cache.default' => 'array']);
-        $middleware = new SecurityMiddleware();
+        $middleware = new SecurityMiddleware;
 
         $suspicious = Request::create('/search', 'GET', [
             'q' => 'safe-query',
@@ -346,10 +413,10 @@ describe('Xot execute coverage floor 50', function (): void {
 
     test('enums Xot eseguono EnumTrait label color icon e form schema', function (): void {
         foreach ([
-            \Modules\Xot\Enums\YesNoEnum::class,
-            \Modules\Xot\Enums\GenderEnum::class,
-            \Modules\Xot\Enums\DayOfWeek::class,
-            \Modules\Xot\Enums\PdfEngineEnum::class,
+            YesNoEnum::class,
+            GenderEnum::class,
+            DayOfWeek::class,
+            PdfEngineEnum::class,
         ] as $enumClass) {
             Assert::assertNotEmpty($enumClass::cases());
             foreach ($enumClass::cases() as $case) {
@@ -369,10 +436,10 @@ describe('Xot execute coverage floor 50', function (): void {
     });
 
     test('RouteService inAdmin e helper statici', function (): void {
-        Assert::assertTrue(\Modules\Xot\Services\RouteService::inAdmin(['in_admin' => '1']));
-        Assert::assertFalse(\Modules\Xot\Services\RouteService::inAdmin(['in_admin' => '0']));
+        Assert::assertTrue(RouteService::inAdmin(['in_admin' => '1']));
+        Assert::assertFalse(RouteService::inAdmin(['in_admin' => '0']));
 
-        $ref = new \ReflectionClass(\Modules\Xot\Services\RouteService::class);
+        $ref = new \ReflectionClass(RouteService::class);
         foreach ($ref->getMethods(\ReflectionMethod::IS_PUBLIC | \ReflectionMethod::IS_STATIC) as $method) {
             if (! $method->isStatic() || str_starts_with($method->getName(), '__')) {
                 continue;
@@ -400,11 +467,11 @@ describe('Xot execute coverage floor 50', function (): void {
         ModuleExecuteCoverage::testFilamentBuilders();
 
         foreach ([
-            \Modules\Xot\Filament\Pages\EnvPage::class,
-            \Modules\Xot\Filament\Pages\Test::class,
-            \Modules\Xot\Filament\Widgets\Clock::class,
-            \Modules\Xot\Filament\Widgets\EnvWidget::class,
-            \Modules\Xot\Filament\Widgets\TestWidget::class,
+            EnvPage::class,
+            Test::class,
+            Clock::class,
+            EnvWidget::class,
+            TestWidget::class,
         ] as $class) {
             try {
                 $ref = new \ReflectionClass($class);
@@ -428,9 +495,7 @@ describe('Xot execute coverage floor 50', function (): void {
         {
             protected ?string $model_class = CacheModel::class;
 
-            public function up(): void
-            {
-            }
+            public function up(): void {}
         };
 
         try {
@@ -482,12 +547,12 @@ describe('Xot execute coverage floor 50', function (): void {
 
     test('XotBaseResource concrete e HasXotTable list pages', function (): void {
         foreach ([
-            \Modules\Xot\Filament\Resources\CacheResource::class,
-            \Modules\Xot\Filament\Resources\CacheLockResource::class,
-            \Modules\Xot\Filament\Resources\LogResource::class,
-            \Modules\Xot\Filament\Resources\ModuleResource::class,
-            \Modules\Xot\Filament\Resources\SessionResource::class,
-            \Modules\Xot\Filament\Resources\ExtraResource::class,
+            CacheResource::class,
+            CacheLockResource::class,
+            LogResource::class,
+            ModuleResource::class,
+            SessionResource::class,
+            ExtraResource::class,
         ] as $resource) {
             Assert::assertTrue(class_exists($resource::getModel()));
             Assert::assertNotEmpty($resource::getModuleName());
@@ -508,12 +573,12 @@ describe('Xot execute coverage floor 50', function (): void {
         }
 
         foreach ([
-            \Modules\Xot\Filament\Resources\CacheResource\Pages\ListCaches::class,
-            \Modules\Xot\Filament\Resources\LogResource\Pages\ListLogs::class,
-            \Modules\Xot\Filament\Resources\ModuleResource\Pages\ListModules::class,
-            \Modules\Xot\Filament\Resources\SessionResource\Pages\ListSessions::class,
-            \Modules\Xot\Filament\Resources\ExtraResource\Pages\ListExtras::class,
-            \Modules\Xot\Filament\Resources\CacheLockResource\Pages\ListCacheLocks::class,
+            ListCaches::class,
+            ListLogs::class,
+            ListModules::class,
+            ListSessions::class,
+            ListExtras::class,
+            ListCacheLocks::class,
         ] as $pageClass) {
             try {
                 $ref = new \ReflectionClass($pageClass);
@@ -570,7 +635,7 @@ describe('Xot execute coverage floor 50', function (): void {
             'filament_optimization.monitoring.log_slow_queries' => true,
         ]);
 
-        $provider = new \Modules\Xot\Providers\FilamentOptimizationServiceProvider(app());
+        $provider = new FilamentOptimizationServiceProvider(app());
         try {
             if (is_file(base_path('config/filament_optimization.php'))) {
                 $provider->register();
@@ -586,14 +651,12 @@ describe('Xot execute coverage floor 50', function (): void {
         {
             protected ?string $model_class = CacheModel::class;
 
-            public function up(): void
-            {
-            }
+            public function up(): void {}
         };
 
         try {
-            $blueprint = new \Illuminate\Database\Schema\Blueprint(
-                \Illuminate\Support\Facades\Schema::getConnection(),
+            $blueprint = new Blueprint(
+                Schema::getConnection(),
                 'cache'
             );
         } catch (\Throwable) {
@@ -641,30 +704,29 @@ describe('Xot execute coverage floor 50', function (): void {
         } catch (\Throwable) {
         }
         try {
-            $migration->tableCreate(static function (\Illuminate\Database\Schema\Blueprint $table): void {
+            $migration->tableCreate(static function (Blueprint $table): void {
                 $table->string('demo')->nullable();
             }, 'xot_cov_tmp_'.uniqid());
         } catch (\Throwable) {
         }
         try {
-            $migration->tableUpdate(static function ($table): void {
-            });
+            $migration->tableUpdate(static function ($table): void {});
         } catch (\Throwable) {
         }
     });
 
     test('XotBasePage e widget base metodi pubblici', function (): void {
         foreach ([
-            \Modules\Xot\Filament\Pages\EnvPage::class,
-            \Modules\Xot\Filament\Pages\HealthPage::class,
-            \Modules\Xot\Filament\Pages\MainDashboard::class,
-            \Modules\Xot\Filament\Pages\ArtisanCommandsManager::class,
-            \Modules\Xot\Filament\Widgets\Clock::class,
-            \Modules\Xot\Filament\Widgets\EnvWidget::class,
-            \Modules\Xot\Filament\Widgets\TestWidget::class,
-            \Modules\Xot\Filament\Widgets\ModulesOverviewWidget::class,
-            \Modules\Xot\Filament\Widgets\HealthOverviewWidget::class,
-            \Modules\Xot\Filament\Widgets\FilterFormWidget::class,
+            EnvPage::class,
+            HealthPage::class,
+            MainDashboard::class,
+            ArtisanCommandsManager::class,
+            Clock::class,
+            EnvWidget::class,
+            TestWidget::class,
+            ModulesOverviewWidget::class,
+            HealthOverviewWidget::class,
+            FilterFormWidget::class,
         ] as $class) {
             try {
                 $ref = new \ReflectionClass($class);
@@ -691,27 +753,27 @@ describe('Xot execute coverage floor 50', function (): void {
             }
         }
 
-        Assert::assertSame('Xot', \Modules\Xot\Filament\Pages\XotBasePage::getModuleName());
+        Assert::assertSame('Xot', XotBasePage::getModuleName());
     });
 
     test('CheckAccessorTwins SearchText middleware navigation e ArtisanAction', function (): void {
-        $twins = app(\Modules\Xot\Console\Commands\CheckAccessorTwinsCommand::class);
+        $twins = app(CheckAccessorTwinsCommand::class);
         $twins->setLaravel(app());
         try {
-            $twins->run(new ArrayInput(['--module' => 'Xot']), new NullOutput());
+            $twins->run(new ArrayInput(['--module' => 'Xot']), new NullOutput);
         } catch (\Throwable) {
         }
         try {
-            $twins->run(new ArrayInput(['--module' => 'Xot', '--orphans' => true]), new NullOutput());
+            $twins->run(new ArrayInput(['--module' => 'Xot', '--orphans' => true]), new NullOutput);
         } catch (\Throwable) {
         }
 
-        $search = app(\Modules\Xot\Console\Commands\SearchTextInDbCommand::class);
+        $search = app(SearchTextInDbCommand::class);
         $search->setLaravel(app());
         try {
             $search->run(
                 new ArrayInput(['search' => 'xot-coverage-needle-impossible', '--tables' => ['cache']]),
-                new NullOutput()
+                new NullOutput
             );
         } catch (\Throwable) {
         }
@@ -722,7 +784,7 @@ describe('Xot execute coverage floor 50', function (): void {
             'filament_optimization.monitoring.memory_threshold_mb' => 0.0001,
             'filament_optimization.monitoring.time_threshold_ms' => 0.0001,
         ]);
-        $memMw = new \Modules\Xot\Http\Middleware\FilamentMemoryMonitorMiddleware();
+        $memMw = new FilamentMemoryMonitorMiddleware;
         $adminReq = Request::create('/admin/xot/resources', 'GET', [], [], [], [
             'HTTP_USER_AGENT' => 'PHPUnit',
             'REMOTE_ADDR' => '10.9.9.'.random_int(1, 200),
@@ -734,16 +796,16 @@ describe('Xot execute coverage floor 50', function (): void {
         }
 
         try {
-            Assert::assertNotEmpty(app(\Modules\Xot\Actions\Filament\GetModulesNavigationItems::class)->execute());
+            Assert::assertNotEmpty(app(GetModulesNavigationItems::class)->execute());
         } catch (\Throwable) {
         }
 
         try {
-            \Modules\Xot\Actions\ArtisanAction::act('route-list');
+            ArtisanAction::act('route-list');
         } catch (\Throwable) {
         }
         try {
-            \Modules\Xot\Actions\ArtisanAction::act('migrate');
+            ArtisanAction::act('migrate');
         } catch (\Throwable) {
         }
 
@@ -775,7 +837,7 @@ describe('Xot execute coverage floor 50', function (): void {
         }
 
         // Extra ~80 lines: provider reflection + widget stubs + factory action
-        $provider = new \Modules\Xot\Providers\FilamentOptimizationServiceProvider(app());
+        $provider = new FilamentOptimizationServiceProvider(app());
         $pref = new \ReflectionClass($provider);
         foreach (['optimizeEloquentConfiguration', 'configureAggressiveCaching', 'limitQueriesInDevelopment', 'isFilamentAdminRequest'] as $method) {
             if (! $pref->hasMethod($method)) {
@@ -790,14 +852,14 @@ describe('Xot execute coverage floor 50', function (): void {
         }
 
         try {
-            app(\Modules\Xot\Actions\Factory\GetPropertiesFromMethodsByModelAction::class)->execute(new CacheModel);
+            app(GetPropertiesFromMethodsByModelAction::class)->execute(new CacheModel);
         } catch (\Throwable) {
         }
 
         foreach ([
-            \Modules\Xot\Filament\Widgets\StatesChartWidget::class,
-            \Modules\Xot\Filament\Widgets\StateOverviewWidget::class,
-            \Modules\Xot\Filament\Widgets\ModelTrendChartWidget::class,
+            StatesChartWidget::class,
+            StateOverviewWidget::class,
+            ModelTrendChartWidget::class,
         ] as $widgetClass) {
             try {
                 $wref = new \ReflectionClass($widgetClass);
@@ -848,7 +910,7 @@ describe('Xot execute coverage floor 50', function (): void {
         $record = (object) [
             'title' => 'Hello',
             'description' => 'World',
-            'published_at' => \Carbon\Carbon::now()->subDay(),
+            'published_at' => Carbon::now()->subDay(),
         ];
         foreach ([$titleCol, $descCol, $statusCol, $pubCol] as $col) {
             try {
@@ -882,19 +944,19 @@ describe('Xot execute coverage floor 50', function (): void {
         } catch (\Throwable) {
         }
 
-        Assert::assertSame('record-7', \Modules\Xot\Filament\Support\RecordAnchor::id(7));
-        Assert::assertSame('#record-7', \Modules\Xot\Filament\Support\RecordAnchor::fragment(7));
-        Assert::assertStringEndsWith('#record-7', \Modules\Xot\Filament\Support\RecordAnchor::appendTo('/list', 7));
-        Assert::assertSame('/list#x', \Modules\Xot\Filament\Support\RecordAnchor::appendTo('/list#x', 7));
+        Assert::assertSame('record-7', RecordAnchor::id(7));
+        Assert::assertSame('#record-7', RecordAnchor::fragment(7));
+        Assert::assertStringEndsWith('#record-7', RecordAnchor::appendTo('/list', 7));
+        Assert::assertSame('/list#x', RecordAnchor::appendTo('/list#x', 7));
 
-        $qb = new class extends \Modules\Xot\QueryBuilders\BaseQueryBuilder
+        $qb = new class extends BaseQueryBuilder
         {
             protected function getModel(): string
             {
                 return CacheModel::class;
             }
         };
-        Assert::assertInstanceOf(\Illuminate\Database\Eloquent\Builder::class, $qb->getQuery());
+        Assert::assertInstanceOf(Builder::class, $qb->getQuery());
         $qb->where('key', 'k')
             ->whereOperator('key', '!=', 'x')
             ->whereIn('key', ['a', 'b'])
@@ -934,23 +996,22 @@ describe('Xot execute coverage floor 50', function (): void {
         } catch (\Throwable) {
         }
 
-        $defaultHandler = app(\Illuminate\Contracts\Debug\ExceptionHandler::class);
-        $decorator = new \Modules\Xot\Exceptions\Handlers\HandlerDecorator($defaultHandler);
+        $defaultHandler = app(ExceptionHandler::class);
+        $decorator = new HandlerDecorator($defaultHandler);
         $reported = false;
         $decorator->reporter(static function (\Throwable $e) use (&$reported): void {
             $reported = true;
         });
-        $decorator->renderer(static function (\Throwable $e, $request): \Symfony\Component\HttpFoundation\Response {
+        $decorator->renderer(static function (\Throwable $e, $request): Response {
             return response('handled', 200);
         });
-        $decorator->consoleRenderer(static function (\Throwable $e, $output): void {
-        });
+        $decorator->consoleRenderer(static function (\Throwable $e, $output): void {});
         $decorator->report(new \RuntimeException('cov'));
         Assert::assertTrue($reported);
         Assert::assertSame(200, $decorator->render(Request::create('/'), new \RuntimeException('r'))->getStatusCode());
         Assert::assertTrue($decorator->shouldReport(new \RuntimeException('s')));
         try {
-            $decorator->renderForConsole(new \Symfony\Component\Console\Output\NullOutput(), new \RuntimeException('c'));
+            $decorator->renderForConsole(new NullOutput, new \RuntimeException('c'));
         } catch (\Throwable) {
         }
         try {
@@ -958,42 +1019,40 @@ describe('Xot execute coverage floor 50', function (): void {
         } catch (\Throwable) {
         }
 
-        $export = new \Modules\Xot\Actions\Export\ExportXlsStreamByLazyCollection();
+        $export = new ExportXlsStreamByLazyCollection;
         $rowExport = new CacheModel;
         $rowExport->setRawAttributes(['id' => 3, 'name' => 'B']);
         $lazy2 = xotModelRows([$rowExport]);
-        Assert::assertSame([], $export->headings(\Illuminate\Support\LazyCollection::make([])));
+        Assert::assertSame([], $export->headings(LazyCollection::make([])));
         Assert::assertNotEmpty($export->headings($lazy2, 'xot::cache'));
         Assert::assertNotEmpty($export->headings($lazy2, null));
         $stream = $export->execute($lazy2, 'cov.csv', 'xot::cache');
-        Assert::assertInstanceOf(\Symfony\Component\HttpFoundation\StreamedResponse::class, $stream);
+        Assert::assertInstanceOf(StreamedResponse::class, $stream);
         ob_start();
         $stream->sendContent();
         $out = (string) ob_get_clean();
         Assert::assertStringContainsString('id', $out);
 
-        $cmd = app(\Modules\Xot\Console\Commands\AddStrictTypesDeclarationCommand::class);
+        $cmd = app(AddStrictTypesDeclarationCommand::class);
         $cmd->setLaravel(app());
         try {
             Assert::assertSame(0, $cmd->run(
                 new ArrayInput(['--module' => 'Xot', '--dry-run' => true]),
-                new NullOutput()
+                new NullOutput
             ));
         } catch (\Throwable) {
         }
         try {
-            $cmd->run(new ArrayInput(['--module' => 'MissingModuleXYZ', '--dry-run' => true]), new NullOutput());
+            $cmd->run(new ArrayInput(['--module' => 'MissingModuleXYZ', '--dry-run' => true]), new NullOutput);
         } catch (\Throwable) {
         }
 
         try {
-            \Modules\Xot\Helpers\ResourceFormSchemaGenerator::generateForAllResources();
+            ResourceFormSchemaGenerator::generateForAllResources();
         } catch (\Throwable) {
         }
 
-        $chart = new class extends \Modules\Xot\Filament\Widgets\XotBaseChartWidget
-        {
-        };
+        $chart = new class extends XotBaseChartWidget {};
         $cref = new \ReflectionClass($chart);
         foreach (['getHeading', 'getData', 'getType', 'getOptionsArray', 'getHeight'] as $method) {
             if (! $cref->hasMethod($method)) {
@@ -1007,7 +1066,7 @@ describe('Xot execute coverage floor 50', function (): void {
             }
         }
 
-        $state = new class extends \Modules\Xot\States\XotBaseState
+        $state = new class extends XotBaseState
         {
             public static string $name = 'cov_state';
         };
@@ -1031,47 +1090,38 @@ describe('Xot execute coverage floor 50', function (): void {
             Assert::assertNotEmpty($e->getMessage());
         }
 
-        $cache = new CacheModel;
-        try {
-            $cache->guessPivotFullClass('CacheSession', CacheModel::class);
-        } catch (\Throwable) {
-        }
-        try {
-            $cache->guessPivot(CacheModel::class);
-        } catch (\Throwable) {
-        }
-        try {
-            $cache->guessMorphPivot(CacheModel::class);
-        } catch (\Throwable) {
-        }
+        // Rimossi tre blocchi che chiamavano `guessPivotFullClass()`, `guessPivot()` e
+        // `guessMorphPivot()` dentro un try/catch su Throwable: quei metodi non esistono
+        // ne' su Cache ne' su Eloquent, quindi l'unica cosa che eseguivano era l'Error
+        // di metodo indefinito, subito ingoiato. Zero righe coperte, tre segnalazioni.
 
-        $gen = new \Modules\Xot\Actions\Filament\GenerateTableColumnsByFileAction();
+        $gen = new GenerateTableColumnsByFileAction;
         $tmpTxt = sys_get_temp_dir().'/xot-not-php-'.uniqid('', true).'.txt';
         File::put($tmpTxt, 'nope');
         try {
-            $gen->execute(new \Symfony\Component\Finder\SplFileInfo($tmpTxt, dirname($tmpTxt), basename($tmpTxt)));
+            $gen->execute(new SplFileInfo($tmpTxt, dirname($tmpTxt), basename($tmpTxt)));
         } catch (\Throwable) {
         }
 
         try {
-            $pivot = new class extends \Modules\Xot\Models\XotBasePivot
+            $pivot = new class extends XotBasePivot
             {
                 protected $table = 'cache';
             };
-            Assert::assertInstanceOf(\Modules\Xot\Models\XotBasePivot::class, $pivot);
+            Assert::assertInstanceOf(XotBasePivot::class, $pivot);
         } catch (\Throwable) {
         }
         try {
-            $morph = new class extends \Modules\Xot\Models\XotBaseMorphPivot
+            $morph = new class extends XotBaseMorphPivot
             {
                 protected $table = 'cache';
             };
-            Assert::assertInstanceOf(\Modules\Xot\Models\XotBaseMorphPivot::class, $morph);
+            Assert::assertInstanceOf(XotBaseMorphPivot::class, $morph);
         } catch (\Throwable) {
         }
 
         try {
-            $uuid = new class extends \Modules\Xot\Models\XotBaseUuidModel
+            $uuid = new class extends XotBaseUuidModel
             {
                 protected $table = 'cache';
             };
@@ -1081,7 +1131,7 @@ describe('Xot execute coverage floor 50', function (): void {
 
         $csrf = new class
         {
-            use \Modules\Xot\Traits\HasCsrfToken;
+            use HasCsrfToken;
         };
         try {
             $csrf->mount();
@@ -1089,12 +1139,12 @@ describe('Xot execute coverage floor 50', function (): void {
         }
 
         try {
-            $lazyAction = \Modules\Xot\Filament\Actions\Header\ExportXlsLazyAction::make('export_xls_lazy_cov');
+            $lazyAction = ExportXlsLazyAction::make('export_xls_lazy_cov');
             Assert::assertNotNull($lazyAction);
         } catch (\Throwable) {
         }
         try {
-            $xlsAction = \Modules\Xot\Filament\Actions\Header\ExportXlsAction::make('export_xls_cov');
+            $xlsAction = ExportXlsAction::make('export_xls_cov');
             Assert::assertNotNull($xlsAction);
         } catch (\Throwable) {
         }

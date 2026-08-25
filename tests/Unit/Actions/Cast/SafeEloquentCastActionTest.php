@@ -6,11 +6,12 @@ use Modules\Xot\Actions\Cast\SafeEloquentCastAction;
 use Modules\Xot\Actions\Cast\SafeStringCastAction;
 use Modules\Xot\Tests\TestCase;
 use PHPUnit\Framework\Assert;
+use Modules\Xot\Tests\Fixtures\SafeEloquentCastFixture;
 
 uses(TestCase::class);
 
 it('checks attribute presence and emptiness', function (): void {
-    [$action, $model] = safeEloquentCastFixture();
+    [$action, $model] = SafeEloquentCastFixture::make();
 
     Assert::assertTrue($action->hasAttribute($model, 'name'));
     Assert::assertFalse($action->hasAttribute($model, 'missing'));
@@ -19,7 +20,7 @@ it('checks attribute presence and emptiness', function (): void {
 });
 
 it('casts typed attribute getters', function (): void {
-    [$action, $model] = safeEloquentCastFixture();
+    [$action, $model] = SafeEloquentCastFixture::make();
 
     Assert::assertSame('Mario', $action->getStringAttribute($model, 'name'));
     Assert::assertSame(42, $action->getIntAttribute($model, 'age'));
@@ -29,7 +30,7 @@ it('casts typed attribute getters', function (): void {
 });
 
 it('returns defaults for missing attributes by type', function (): void {
-    [$action, $model] = safeEloquentCastFixture();
+    [$action, $model] = SafeEloquentCastFixture::make();
 
     Assert::assertSame('', $action->getStringAttribute($model, 'missing'));
     Assert::assertSame(0, $action->getIntAttribute($model, 'missing'));
@@ -39,7 +40,7 @@ it('returns defaults for missing attributes by type', function (): void {
 });
 
 it('casts generic typed getter and validation helpers', function (): void {
-    [$action, $model] = safeEloquentCastFixture();
+    [$action, $model] = SafeEloquentCastFixture::make();
 
     Assert::assertSame('Mario', $action->getTypedAttribute($model, 'name', 'string'));
     Assert::assertSame(42, $action->getTypedAttribute($model, 'age', 'int'));
@@ -52,7 +53,7 @@ it('casts generic typed getter and validation helpers', function (): void {
 });
 
 it('checks condition and fallback helpers', function (): void {
-    [$action, $model] = safeEloquentCastFixture();
+    [$action, $model] = SafeEloquentCastFixture::make();
     $model->setAttribute('nickname', 'SuperMario');
 
     Assert::assertTrue($action->hasAttributeCondition($model, 'age', fn (mixed $v): bool => '42' === SafeStringCastAction::cast($v)));
@@ -61,7 +62,7 @@ it('checks condition and fallback helpers', function (): void {
 });
 
 it('exposes static helper methods', function (): void {
-    [, $model] = safeEloquentCastFixture();
+    [, $model] = SafeEloquentCastFixture::make();
 
     Assert::assertTrue(SafeEloquentCastAction::has($model, 'name'));
     Assert::assertSame(42, SafeEloquentCastAction::get($model, 'age', 'int'));

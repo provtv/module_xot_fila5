@@ -15,4 +15,6 @@ it('accepts valid email', function (): void {
 });
 
 it('throws on invalid email', function (): void {
+    expect(static fn (): EmailValueObject => new EmailValueObject('non-e-una-email'))
+        ->toThrow(InvalidArgumentException::class);
 });

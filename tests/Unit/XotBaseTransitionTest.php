@@ -7,24 +7,25 @@ use Modules\User\Database\Factories\UserFactory;
 use Modules\Xot\States\Transitions\XotBaseTransition;
 use Modules\Xot\Tests\TestCase;
 use PHPUnit\Framework\Assert;
+use Modules\Xot\Tests\Fixtures\XotBaseTransitionFixture;
 
 uses(TestCase::class);
 
 describe('XotBaseTransition', function (): void {
     it('can be instantiated', function (): void {
-        [, $transition] = xotBaseTransitionFixture();
+        [, $transition] = XotBaseTransitionFixture::make();
 
         Assert::assertInstanceOf(XotBaseTransition::class, $transition);
     });
 
     it('has static name property', function (): void {
-        [, $transition] = xotBaseTransitionFixture();
+        [, $transition] = XotBaseTransitionFixture::make();
 
         Assert::assertTrue(property_exists($transition, 'name'));
     });
 
     it('can get record', function (): void {
-        [$record, $transition] = xotBaseTransitionFixture();
+        [$record, $transition] = XotBaseTransitionFixture::make();
 
         Assert::assertSame($record, $transition->record);
     });

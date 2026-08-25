@@ -41,6 +41,7 @@ use Modules\UI\Filament\Traits\HasTableLayoutPage;
 use Modules\Xot\Actions\Cast\SafeStringCastAction;
 use Modules\Xot\Actions\Filament\PlainTextFromFilamentValueAction;
 use Modules\Xot\Actions\GetTransKeyAction;
+use RuntimeException;
 use Webmozart\Assert\Assert;
 
 /**
@@ -49,7 +50,7 @@ use Webmozart\Assert\Assert;
  * Provides enhanced table functionality with translations and optimized structure.
  *
  * @property TableLayoutEnum $layoutView
- * @property string|null     $tableSearch
+ * @property string|null $tableSearch
  *
  * @SuppressWarnings("PHPMD.StaticAccess")
  * @SuppressWarnings("PHPMD.CyclomaticComplexity")
@@ -119,6 +120,40 @@ trait HasXotTable
     }
 
     /**
+     * Colonne dell'elenco, con il guardiano che rende rumorosa la tabella vuota.
+     *
+     * `getTableColumns()` e' dichiarato astratto in questo trait, ma Filament 5 ne
+     * dichiara uno proprio — deprecato — che ritorna array vuoto. Quella dichiarazione
+     * **soddisfa** l'astratto: una classe che non implementa il metodo non fallisce, e
+     * mostra una tabella senza colonne, senza errori e senza log.
+     *
+     * Un elenco senza colonne non e' mai una scelta: qui diventa rumoroso, e la
+     * segnalazione dice quale classe deve implementare cosa. Vedi story 16.12.
+     *
+     * Il tipo include `LayoutComponent` perche' `getTableColumns()` puo' restituire
+     * anche componenti di layout — `Split`, `Stack`, `Grid` — che `Table::columns()`
+     * accetta insieme alle colonne. Dichiarare solo `Column` descriveva un
+     * sottoinsieme di cio' che le classi concrete gia' ritornano.
+     *
+     * @return array<int|string, Column|LayoutComponent>
+     */
+    protected function resolveTableColumns(): array
+    {
+        $columns = $this->getTableColumns(); // @phpstan-ignore method.deprecated (hook di Xot, non di Filament: la deprecazione e ereditata per nome dal prototipo Filament 5 — story 16.12)
+
+        if ($columns === []) {
+            throw new RuntimeException(sprintf(
+                '[%s] non dichiara colonne di tabella. Implementa getTableColumns() sulla classe: '
+                .'senza, a soddisfare il metodo astratto di HasXotTable e\' lo stub deprecato di '
+                .'Filament, che ritorna array vuoto e produce un elenco muto.',
+                static::class,
+            ));
+        }
+
+        return $columns;
+    }
+
+    /**
      * Get grid table columns.
      *
      * In content-grid ogni riga mostra label e valore sulla stessa linea (es. «Ente: 123»).
@@ -129,7 +164,7 @@ trait HasXotTable
     {
         $columns = [];
 
-        foreach (array_values($this->getTableColumns()) as $column) {
+        foreach (array_values($this->resolveTableColumns()) as $column) {
             $gridColumn = clone $column;
 
             if ($gridColumn instanceof TextColumn) {
@@ -137,7 +172,7 @@ trait HasXotTable
 
                 $gridColumn->formatStateUsing(
                     static function (mixed $state) use ($labelText): string {
-                        if (null === $state || '' === $state) {
+                        if ($state === null || $state === '') {
                             return $labelText.': —';
                         }
 
@@ -159,7 +194,7 @@ trait HasXotTable
      */
     public function getTableFiltersFormColumns(): int
     {
-        $count = count($this->getTableFilters()) + 1;
+        $count = count($this->getTableFilters()) + 1; // @phpstan-ignore method.deprecated (hook di Xot, non di Filament: la deprecazione e ereditata per nome dal prototipo Filament 5 — story 16.12)
 
         return min($count, 6);
     }
@@ -206,10 +241,10 @@ trait HasXotTable
         // Configurazione base della tabella
         $table = $table
             ->recordTitleAttribute($this->getTableRecordTitleAttribute())
-            ->heading($this->getTableHeading())
-            ->columns($this->layoutView->getTableColumns(array_values($this->getTableColumns()), $this->getGridTableColumns()))
+            ->heading($this->getTableHeading()) // @phpstan-ignore method.deprecated (hook di Xot, non di Filament: la deprecazione e ereditata per nome dal prototipo Filament 5 — story 16.12)
+            ->columns($this->layoutView->getTableColumns(array_values($this->resolveTableColumns()), $this->getGridTableColumns()))
             ->contentGrid($this->layoutView->getTableContentGrid())
-            ->filters($this->getTableFilters()) // @phpstan-ignore argument.type
+            ->filters($this->getTableFilters()) // @phpstan-ignore argument.type, method.deprecated
             ->filtersLayout(FiltersLayout::AboveContent)
             ->filtersFormColumns($this->getTableFiltersFormColumns())
             // Stato di lettura della tabella conservato in sessione: chi torna a un elenco
@@ -218,23 +253,23 @@ trait HasXotTable
             ->persistSortInSession()
             ->persistSearchInSession()
             ->persistColumnSearchesInSession()
-            ->headerActions(array_values($this->getTableHeaderActions()))
-            ->recordActions(array_values($this->getTableActions()))
-            ->bulkActions(array_values($this->getTableBulkActions()))
+            ->headerActions(array_values($this->getTableHeaderActions())) // @phpstan-ignore method.deprecated (hook di Xot, non di Filament: la deprecazione e ereditata per nome dal prototipo Filament 5 — story 16.12)
+            ->recordActions(array_values($this->getTableActions())) // @phpstan-ignore method.deprecated (hook di Xot, non di Filament: la deprecazione e ereditata per nome dal prototipo Filament 5 — story 16.12)
+            ->toolbarActions(array_values($this->getTableBulkActions())) // @phpstan-ignore method.deprecated (hook di Xot, non di Filament: la deprecazione e ereditata per nome dal prototipo Filament 5 — story 16.12)
             ->recordActionsPosition(RecordActionsPosition::BeforeColumns)
-            ->emptyStateActions(array_values($this->getTableEmptyStateActions()))
+            ->emptyStateActions(array_values($this->getTableEmptyStateActions())) // @phpstan-ignore method.deprecated (hook di Xot, non di Filament: la deprecazione e ereditata per nome dal prototipo Filament 5 — story 16.12)
             ->striped()
             ->paginated($this->getTablePaginated());
 
         // Configurazioni opzionali personalizzabili
-        $sortColumn = $this->getDefaultTableSortColumn();
-        $sortDirection = $this->getDefaultTableSortDirection();
-        if (null !== $sortColumn && null !== $sortDirection) {
+        $sortColumn = $this->getDefaultTableSortColumn(); // @phpstan-ignore method.deprecated (hook di Xot, non di Filament: la deprecazione e ereditata per nome dal prototipo Filament 5 — story 16.12)
+        $sortDirection = $this->getDefaultTableSortDirection(); // @phpstan-ignore method.deprecated (hook di Xot, non di Filament: la deprecazione e ereditata per nome dal prototipo Filament 5 — story 16.12)
+        if ($sortColumn !== null && $sortDirection !== null) {
             $table = $table->defaultSort($sortColumn, $sortDirection);
         }
 
         $pollInterval = $this->getTablePollInterval();
-        if (null !== $pollInterval) {
+        if ($pollInterval !== null) {
             $table = $table->poll($pollInterval);
         }
 
@@ -351,9 +386,10 @@ trait HasXotTable
     /**
      * Get model class.
      *
-     * @throws \Exception Se non viene trovata una classe modello valida
      *
      * @return class-string<Model>
+     *
+     * @throws \Exception Se non viene trovata una classe modello valida
      */
     public function getModelClass(): string
     {
@@ -367,7 +403,7 @@ trait HasXotTable
             return $model;
         }
 
-        throw new \RuntimeException('No model found in '.class_basename(self::class).'::'.__FUNCTION__);
+        throw new RuntimeException('No model found in '.class_basename(self::class).'::'.__FUNCTION__);
     }
 
     /**
@@ -389,7 +425,7 @@ trait HasXotTable
 
         $trimmed = Str::trim(SafeStringCastAction::cast($tableSearch));
 
-        return '' !== $trimmed ? $trimmed : null;
+        return $trimmed !== '' ? $trimmed : null;
     }
 
     /**

@@ -15,4 +15,7 @@ it('accepts valid phone', function (): void {
 });
 
 it('throws on invalid phone', function (): void {
+    // Il formato accettato e' `+1` seguito da dieci cifre: qui ne mancano.
+    expect(static fn (): PhoneValueObject => PhoneValueObject::fromString('+1123'))
+        ->toThrow(InvalidArgumentException::class, 'It is not valid phone value');
 });

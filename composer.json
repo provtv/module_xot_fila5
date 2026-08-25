@@ -70,18 +70,17 @@
         "laravel/sail": "^1.41",
         "mockery/mockery": "^1.6",
         "nunomaduro/collision": "^8.6",
-        
         "orchestra/testbench": "*",
-        "pestphp/pest": "^5.0",
-        "pestphp/pest-plugin-faker": "^5.0",
-        "pestphp/pest-plugin-laravel": "^5.0",
-        "pestphp/pest-plugin-livewire": "^5.0",
-        "pestphp/pest-plugin-phpstan": "^5.0",
-        "pestphp/pest-plugin-profanity": "^5.0",
-        "pestphp/pest-plugin-rector": "^5.0",
-        "pestphp/pest-plugin-type-coverage": "^5.0",
-        "phpstan/extension-installer": "^1.4",
-        "phpstan/phpstan-mockery": "^2.0",
+        "pestphp/pest": "*",
+        "pestphp/pest-plugin-faker": "*",
+        "pestphp/pest-plugin-laravel": "*",
+        "pestphp/pest-plugin-livewire": "*",
+        "pestphp/pest-plugin-profanity": "*",
+        "pestphp/pest-plugin-type-coverage": "*",
+        "pestphp/pest-plugin-rector": "*",
+        "pestphp/pest-plugin-phpstan": "*",
+        "phpstan/extension-installer": "*",
+        "phpstan/phpstan-mockery": "*",
         "thecodingmachine/phpstan-safe-rule": "*"
     },
     "require-dev_comment": {
@@ -114,11 +113,6 @@
         },
         "files": [
             "helpers/Helper.php"
-        ]
-    },
-    "autoload-dev": {
-        "files": [
-            "tests/Support/helpers.php"
         ]
     },
     "scripts": {
