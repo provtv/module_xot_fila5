@@ -120,7 +120,7 @@ class InformationSchemaTable extends BaseModel
         $database = $connection->getDatabaseName();
         $table = $model->getTable();
 
-        static::updateOrCreate([
+        static::query()->updateOrCreate([
             'table_schema' => $database,
             'model_class' => $modelClass,
             'table_name' => $table,
@@ -150,14 +150,14 @@ class InformationSchemaTable extends BaseModel
         $database = $connection->getDatabaseName();
         $table = $model->getTable();
 
-        $record = static::firstOrCreate([
+        $record = static::query()->firstOrCreate([
             'table_schema' => $database,
             'model_class' => $modelClass,
             'table_name' => $table,
         ]);
 
         if (null === $record->table_rows) {
-            $record->update(['table_rows' => $model->count()]);
+            $record->update(['table_rows' => $model->newQuery()->count()]);
         }
 
         return (int) $record->table_rows;
