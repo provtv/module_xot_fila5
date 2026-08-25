@@ -1,3 +1,12 @@
+---
+title: "Safe Casting Actions - DRY & KISS Implementation"
+module: xot
+type: integration
+tags: [integrations, modules, xot]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
 # Safe Casting Actions - DRY & KISS Implementation
 
 ## Overview
@@ -198,4 +207,4 @@ $percentage = SafeFloatCastAction::castAsPercentage(($completed / $total) * 100)
 
 - [PHPStan Level 10 Guidelines](phpstan_level10_guidelines.md)
 - [Type Safety Best Practices](type_safety_best_practices.md)
-- [Laraxot Coding Standards](../../../project_docs/coding_standards.md)
+- [Laraxot Coding Standards](../../../../docs/project/coding_standards.md)
