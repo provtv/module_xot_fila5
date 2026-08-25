@@ -123,7 +123,7 @@ class QueryExport implements FromQuery, ShouldQueue, WithChunkReading, WithHeadi
     /**
      * @return array<int|string, mixed>
      */
-    private function normalizeRow(\Illuminate\Contracts\Support\Arrayable|array|\Traversable|object|null $row): array
+    private function normalizeRow(mixed $row): array
     {
         if (null === $row) {
             return [];
