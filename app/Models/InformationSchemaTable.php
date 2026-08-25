@@ -90,11 +90,7 @@ class InformationSchemaTable extends BaseModel
      */
     public function getRows(): array
     {
-<<<<<<< HEAD
-       /** @var array<int, array<string, mixed>> $rows */
-=======
         /** @var array<int, array<string, mixed>> $rows */
->>>>>>> laraxot/dev
         $rows = $this->getSushiRows();
 
         return $rows;

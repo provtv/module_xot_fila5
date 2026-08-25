@@ -12,7 +12,7 @@ use Modules\Xot\Filament\Traits\HasXotFormAction;
 /**
  * Base per widget Filament che espongono un {@see Wizard} nello schema.
  *
- * **Perche esiste (visione / filosofia / religione / zen)**:
+ * Perche esiste (visione / filosofia / religione / zen)**:
  *
  * ## Separazione delle Responsabilita
 <<<<<<< HEAD
