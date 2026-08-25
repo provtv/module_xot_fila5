@@ -15,11 +15,7 @@ use Modules\Xot\Filament\Traits\HasXotFormAction;
  * Perche esiste (visione / filosofia / religione / zen)**:
  *
  * ## Separazione delle Responsabilita
-<<<<<<< HEAD
-* - `XotBaseWidget` = contratto generico (senza schema: azioni, viste, traduzioni)
-=======
  * - `XotBaseWidget` = contratto generico (senza schema: azioni, viste, traduzioni)
->>>>>>> laraxot/dev
  * - `XotBaseSchemaWidget` = contratto con schema (form lineare, getFormSchema)
  * - `XotBaseWizardWidget` = specializzazione per wizard multi-step
  *   - Gestisce: navigazione step, persistenza `?step=`, submit/render coerenti col vendor
@@ -27,11 +23,7 @@ use Modules\Xot\Filament\Traits\HasXotFormAction;
  *
  * ## DRY + KISS
  * - UNA sola implementazione del protocollo wizard:
-<<<<<<< HEAD
-*   - `?step=` risolto una sola volta al mount, memorizzato in `$wizardStartStep`
-=======
  *   - `?step=` risolto una sola volta al mount, memorizzato in `$wizardStartStep`
->>>>>>> laraxot/dev
  *   - Persistenza step in query string (solo se consentito)
  *   - Nessun helper che riscrive l'intero payload dopo `$this->form->getState()` — la forma
  *     è schema/dehydrate + merge espliciti nel widget dominio
@@ -39,11 +31,7 @@ use Modules\Xot\Filament\Traits\HasXotFormAction;
  *
  * ## Allineamento Filament
  * - Navigazione delegata a `Wizard` / `Step` (documentazione ufficiale v5)
-<<<<<<< HEAD
-* - Stesso componente `Wizard`, contesto Livewire widget (frontoffice/CMS)
-=======
  * - Stesso componente `Wizard`, contesto Livewire widget (frontoffice/CMS)
->>>>>>> laraxot/dev
  * - Questa classe NON sostituisce Filament, incornicia solo gli hook Laraxot comuni
  * - Hook disponibili per override dominio-specifici:
  *   - `configureWizardNextAction()` → label, tooltip, icon del pulsante Avanti
@@ -51,21 +39,13 @@ use Modules\Xot\Filament\Traits\HasXotFormAction;
  *   - `getWizardSubmitAction()` → rendering pulsante Submit centralizzato in classe base
  *
  * ## Politica Sicurezza
-<<<<<<< HEAD
-* - Override `?step=` NON è mai implicito in produzione
-=======
  * - Override `?step=` NON è mai implicito in produzione
->>>>>>> laraxot/dev
  * - Consentito SOLO se:
  *   - `app()->isLocal()` → true
  *   - `config('app.debug')` → true
  *   - `wizardAllowStepQueryExtra()` → override modulo-specifico (default false)
  *
-<<<<<<< HEAD
-* @see Wizard
-=======
  * @see Wizard
->>>>>>> laraxot/dev
  * @see HasWizard
  * @see \Filament\Resources\Pages\CreateRecord\Concerns\HasWizard
  * @see LangServiceProvider
@@ -84,11 +64,7 @@ abstract class XotBaseWizardWidget extends XotBaseSchemaWidget
     protected int|string|array $columnSpan = 'full';
 
     /**
-<<<<<<< HEAD
-    * @return array<int, Wizard>
-=======
      * @return array<int, Wizard>
->>>>>>> laraxot/dev
      */
     public function getFormSchema(): array
     {
@@ -115,11 +91,7 @@ abstract class XotBaseWizardWidget extends XotBaseSchemaWidget
         return $wizard;
     }
 
-<<<<<<< HEAD
-   protected function hasSkippableSteps(): bool
-=======
     protected function hasSkippableSteps(): bool
->>>>>>> laraxot/dev
     {
         return true;
     }

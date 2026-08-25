@@ -13,20 +13,12 @@ class ProbeResource extends XotBaseResource
 
     protected static ?string $model = null;
 
-<<<<<<< HEAD
-   public static function getFormSchemaOld(): array
-=======
     public static function getFormSchemaOld(): array
->>>>>>> laraxot/dev
     {
         return [];
     }
 
-<<<<<<< HEAD
-   /**
-=======
     /**
->>>>>>> laraxot/dev
      * @return array<int, string>
      */
     public static function getCustomStepSchema(): array

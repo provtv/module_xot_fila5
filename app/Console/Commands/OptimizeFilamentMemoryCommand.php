@@ -102,11 +102,7 @@ class OptimizeFilamentMemoryCommand extends Command
     /**
      * Analizza i problemi di memoria.
      *
-<<<<<<< HEAD
-    * @return array<string, array<int, string>>
-=======
      * @return array<string, array<int, string>>
->>>>>>> laraxot/dev
      */
     private function analyzeMemoryIssues(bool $verbose = false): array
     {
@@ -130,11 +126,7 @@ class OptimizeFilamentMemoryCommand extends Command
     /**
      * Trova modelli con eager loading eccessivo.
      *
-<<<<<<< HEAD
-    * @return array<int, string>
-=======
      * @return array<int, string>
->>>>>>> laraxot/dev
      */
     private function findModelsWithEagerLoading(): array
     {
@@ -164,11 +156,7 @@ class OptimizeFilamentMemoryCommand extends Command
     /**
      * Trova widget pesanti.
      *
-<<<<<<< HEAD
-    * @return array<int, string>
-=======
      * @return array<int, string>
->>>>>>> laraxot/dev
      */
     private function findHeavyWidgets(): array
     {
@@ -194,11 +182,7 @@ class OptimizeFilamentMemoryCommand extends Command
     /**
      * Trova risorse non ottimizzate.
      *
-<<<<<<< HEAD
-    * @return array<int, string>
-=======
      * @return array<int, string>
->>>>>>> laraxot/dev
      */
     private function findUnoptimizedResources(): array
     {
@@ -222,11 +206,7 @@ class OptimizeFilamentMemoryCommand extends Command
     /**
      * Trova codice di migrazione nei form.
      *
-<<<<<<< HEAD
-    * @return array<int, string>
-=======
      * @return array<int, string>
->>>>>>> laraxot/dev
      */
     private function findMigrationCodeInForms(): array
     {
@@ -240,11 +220,7 @@ class OptimizeFilamentMemoryCommand extends Command
                 // Cerca query di migrazione nei form
                 if (str_contains($content, '->whereNull(')
                     && str_contains($content, '->update(')
-<<<<<<< HEAD
-                   && str_contains($content, 'getFormSchemaOld')) {
-=======
                     && str_contains($content, 'getFormSchemaOld')) {
->>>>>>> laraxot/dev
                     $forms[] = $file->getPathname();
                 }
             }
@@ -256,11 +232,7 @@ class OptimizeFilamentMemoryCommand extends Command
     /**
      * Trova risorse senza paginazione.
      *
-<<<<<<< HEAD
-    * @return array<int, string>
-=======
      * @return array<int, string>
->>>>>>> laraxot/dev
      */
     private function findMissingPagination(): array
     {
@@ -284,11 +256,7 @@ class OptimizeFilamentMemoryCommand extends Command
     /**
      * Mostra i risultati dell'analisi.
      *
-<<<<<<< HEAD
-    * @param array<string, array<int, string>> $issues
-=======
      * @param array<string, array<int, string>> $issues
->>>>>>> laraxot/dev
      */
     private function displayAnalysisResults(array $issues): void
     {
@@ -330,11 +298,7 @@ class OptimizeFilamentMemoryCommand extends Command
     /**
      * Mostra dettagli sui problemi trovati.
      *
-<<<<<<< HEAD
-    * @param array<string, array<int, string>> $issues
-=======
      * @param array<string, array<int, string>> $issues
->>>>>>> laraxot/dev
      */
     private function displayDetailedIssues(array $issues): void
     {
@@ -343,11 +307,7 @@ class OptimizeFilamentMemoryCommand extends Command
                 $this->newLine();
                 $this->warn("Dettagli {$type}:");
                 foreach ($items as $item) {
-<<<<<<< HEAD
-                   $itemString = SafeStringCastAction::cast($item);
-=======
                     $itemString = SafeStringCastAction::cast($item);
->>>>>>> laraxot/dev
                     $this->line('  - '.str_replace(base_path(), '', $itemString));
                 }
             }
@@ -357,11 +317,7 @@ class OptimizeFilamentMemoryCommand extends Command
     /**
      * Applica le ottimizzazioni.
      *
-<<<<<<< HEAD
-    * @param array<string, array<int, string>> $issues
-=======
      * @param array<string, array<int, string>> $issues
->>>>>>> laraxot/dev
      */
     private function applyOptimizations(array $issues, bool $verbose = false): void
     {

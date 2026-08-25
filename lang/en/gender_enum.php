@@ -3,11 +3,7 @@
 declare(strict_types=1);
 
 return [
-<<<<<<< HEAD
-   'values' => [
-=======
     'values' => [
->>>>>>> laraxot/dev
         'f' => [
             'label' => 'Female',
             'icon' => 'heroicon-o-user',

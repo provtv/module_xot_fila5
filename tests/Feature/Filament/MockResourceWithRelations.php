@@ -11,11 +11,7 @@ class MockResourceWithRelations extends XotBaseResource
 {
     protected static ?string $model = Cache::class;
 
-<<<<<<< HEAD
-   public static function getFormSchemaOld(): array
-=======
     public static function getFormSchemaOld(): array
->>>>>>> laraxot/dev
     {
         return [];
     }

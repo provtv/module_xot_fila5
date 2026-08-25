@@ -84,11 +84,7 @@ class SafeEloquentCastAction
             return $default ?? '';
         }
 
-<<<<<<< HEAD
-       return SafeStringCastAction::cast($value);
-=======
         return SafeStringCastAction::cast($value);
->>>>>>> laraxot/dev
     }
 
     /**
@@ -160,11 +156,7 @@ class SafeEloquentCastAction
     /**
      * Ottiene un attributo con cast sicuro a array.
      *
-<<<<<<< HEAD
-    * @param Model                         $model     Il modello Eloquent
-=======
      * @param Model                         $model     Il modello Eloquent
->>>>>>> laraxot/dev
      * @param string                        $attribute Il nome dell'attributo
      * @param array<int|string, mixed>|null $default   Valore di default se l'attributo non esiste o è null
      *
@@ -177,11 +169,7 @@ class SafeEloquentCastAction
         $value = $model->getAttribute($attribute);
 
         if (null === $value) {
-<<<<<<< HEAD
-           return app(SafeArrayCastAction::class)->execute([], $default);
-=======
             return app(SafeArrayCastAction::class)->execute([], $default);
->>>>>>> laraxot/dev
         }
 
         return app(SafeArrayCastAction::class)->execute($value, $default);
@@ -207,11 +195,7 @@ class SafeEloquentCastAction
             'int' => $this->getIntAttribute($model, $attribute, is_int($default) ? $default : 0),
             'float' => $this->getFloatAttribute($model, $attribute, is_float($default) ? $default : 0.0),
             'bool' => $this->getBooleanAttribute($model, $attribute, is_bool($default) ? $default : false),
-<<<<<<< HEAD
-           'array' => $this->getArrayAttribute(
-=======
             'array' => $this->getArrayAttribute(
->>>>>>> laraxot/dev
                 $model,
                 $attribute,
                 is_array($default) ? app(SafeArrayCastAction::class)->execute($default) : null,

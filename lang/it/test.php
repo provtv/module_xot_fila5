@@ -3,11 +3,7 @@
 declare(strict_types=1);
 
 return [
-<<<<<<< HEAD
-   'navigation' => ['label' => 'Test', 'group' => 'Sviluppo', 'icon' => 'heroicon-o-beaker', 'sort' => 999],
-=======
     'navigation' => ['label' => 'Test', 'group' => 'Sviluppo', 'icon' => 'heroicon-o-beaker', 'sort' => 999],
->>>>>>> laraxot/dev
     'label' => 'Test',
     'plural_label' => 'Test (Plurale)',
     'fields' => [

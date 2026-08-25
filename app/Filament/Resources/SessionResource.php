@@ -13,11 +13,7 @@ class SessionResource extends XotBaseResource
     protected static ?string $model = Session::class;
 
     /**
-<<<<<<< HEAD
-    * @return array<int|string, \Filament\Schemas\Components\Component>
-=======
      * @return array<int|string, \Filament\Schemas\Components\Component>
->>>>>>> laraxot/dev
      */
     public static function getFormSchemaOld(): array
     {

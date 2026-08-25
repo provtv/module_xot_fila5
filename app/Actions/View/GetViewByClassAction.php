@@ -25,11 +25,7 @@ class GetViewByClassAction
      *
      * @throws \Exception Se la vista non esiste
      *
-<<<<<<< HEAD
-    * @return view-string
-=======
      * @return view-string
->>>>>>> laraxot/dev
      */
     public function execute(string $class, string $suffix = ''): string
     {
@@ -43,21 +39,13 @@ class GetViewByClassAction
         $mapped = Arr::map($after, function (string $value, int $key) use ($after) {
             if ($key > 0 && isset($after[$key - 1])) {
                 $prevValue = $after[$key - 1];
-<<<<<<< HEAD
-               $prevValueStr = SafeStringCastAction::cast($prevValue);
-=======
                 $prevValueStr = SafeStringCastAction::cast($prevValue);
->>>>>>> laraxot/dev
 
                 $value = $this->checkPrev($value, $prevValueStr);
             }
             if ($key > 0 && isset($after[$key - 2])) {
                 $prevValue = $after[$key - 2];
-<<<<<<< HEAD
-               $prevValueStr = SafeStringCastAction::cast($prevValue);
-=======
                 $prevValueStr = SafeStringCastAction::cast($prevValue);
->>>>>>> laraxot/dev
 
                 $value = $this->checkPrev($value, $prevValueStr);
             }
@@ -65,11 +53,7 @@ class GetViewByClassAction
             return Str::of($value)->kebab()->slug()->toString();
         });
 
-<<<<<<< HEAD
-       $implode = Arr::join(array_values($mapped), '.');
-=======
         $implode = Arr::join(array_values($mapped), '.');
->>>>>>> laraxot/dev
         $views = [
             'pub_theme::'.$implode.$suffix,
             $module_low.'::'.$implode.$suffix,
@@ -80,11 +64,7 @@ class GetViewByClassAction
         }
 
         if (view()->exists($view)) {
-<<<<<<< HEAD
-           /* @var view-string $view */
-=======
             /* @var view-string $view */
->>>>>>> laraxot/dev
             return $view;
         }
         throw new \Exception('View not found: '.$view);

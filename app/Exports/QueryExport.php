@@ -25,11 +25,7 @@ class QueryExport implements FromQuery, ShouldQueue, WithChunkReading, WithHeadi
 {
     use Exportable;
 
-<<<<<<< HEAD
-   /** @var array<int, string> */
-=======
     /** @var array<int, string> */
->>>>>>> laraxot/dev
     public array $headings = [];
 
     /** @var array<int, int|string> */
@@ -37,11 +33,6 @@ class QueryExport implements FromQuery, ShouldQueue, WithChunkReading, WithHeadi
 
     public ?string $transKey = null;
 
-<<<<<<< HEAD
-   /** @var QueryBuilder|EloquentBuilder<Model> */
-=======
-    /** @var QueryBuilder|EloquentBuilder<Model> */
->>>>>>> laraxot/dev
     /** @var QueryBuilder|EloquentBuilder<Model> */
     public QueryBuilder|EloquentBuilder $query;
 
@@ -61,38 +52,13 @@ class QueryExport implements FromQuery, ShouldQueue, WithChunkReading, WithHeadi
      */
     public function getHead(): Collection
     {
-        if (! empty($this->fields)) {
-            return collect(array_values($this->fields))
-                ->map(
-                    static fn (mixed $heading): int|string => \is_int($heading) ? $heading : (string) $heading
-                );
-        }
-<<<<<<< HEAD
-=======
+        /** @var array<int, int|string> $values */
+        $values = array_values($this->fields);
 
->>>>>>> laraxot/dev
-        $first = $this->query->first();
-        if (null === $first) {
-            /** @var Collection<int, int|string> $emptyCollection */
-            $emptyCollection = collect([]);
-
-            return $emptyCollection;
-        }
-
-        /** @var Collection<int, int|string> $result */
-        $result = collect(array_keys($this->normalizeRow($first)))
-            ->map(
-                static fn (mixed $heading): int|string => \is_int($heading) ? $heading : (string) $heading
-            );
-
-        return $result;
+        return new Collection($values);
     }
 
-<<<<<<< HEAD
-   /**
-=======
     /**
->>>>>>> laraxot/dev
      * @return array<int|string, string>
      */
     public function headings(): array
@@ -110,11 +76,7 @@ class QueryExport implements FromQuery, ShouldQueue, WithChunkReading, WithHeadi
 
         $translated = app(TransCollectionAction::class)->execute($headingsWithKeys, $this->transKey);
 
-<<<<<<< HEAD
-       $result = [];
-=======
         $result = [];
->>>>>>> laraxot/dev
         foreach ($translated->all() as $key => $value) {
             if (! is_string($value)) {
                 continue;
@@ -161,7 +123,7 @@ class QueryExport implements FromQuery, ShouldQueue, WithChunkReading, WithHeadi
     /**
      * @return array<int|string, mixed>
      */
-    private function normalizeRow(mixed $row): array
+    private function normalizeRow(\Illuminate\Contracts\Support\Arrayable|array|\Traversable|object|null $row): array
     {
         if (null === $row) {
             return [];

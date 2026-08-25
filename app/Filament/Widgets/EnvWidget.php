@@ -53,11 +53,7 @@ class EnvWidget extends XotBaseSchemaWidget
     /**
      * @return array<Component>
      */
-<<<<<<< HEAD
-   public function getFormSchemaOld(): array
-=======
     public function getFormSchemaOld(): array
->>>>>>> laraxot/dev
     {
         $all = [
             'app_url' => TextInput::make('app_url')

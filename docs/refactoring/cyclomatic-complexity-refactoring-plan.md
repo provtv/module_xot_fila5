@@ -207,8 +207,4 @@ For each refactored method:
 
 *Document maintained by: Development Team*
 *Last Updated: 2025-10-01*
-<<<<<<< HEAD
 *
-=======
-*
->>>>>>> laraxot/dev

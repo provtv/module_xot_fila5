@@ -3,6 +3,23 @@
 ## Best Practices
 Per le best practices complete, consultare il file [best_practices.md](conflicts/best_practices.md).
 
+Regola di progetto (zero marker): [docs/rules/no-conflict-markers-anywhere.md](../../../../docs/rules/no-conflict-markers-anywhere.md) · story [XOT-5.37](./stories/5.37.zero-conflict-markers-repo-wide.story.md).
+
+## Sessione 2026-08-25 (BMAD / XOT-5.37)
+
+**Sintomo:** marker di conflitto già *committati* (non un merge in corso). Molti erano orfani: `<<<<<<<` già rimosso, restavano `=======` / `>>>>>>>`.
+
+**Perché conta:** i `.md` con marker doppi avvelenano il second brain; i `composer.json` e i config PHP diventano invalidi.
+
+**Cosa è stato fatto:**
+1. Rimossi marker residui da 9 `composer.json` (validati JSON).
+2. Bonificati ~17 docs UI + Media/Xot con `>>>>>>>` orfani.
+3. Ricostruiti config PHP corrotti in `bashscripts/` (`.php-cs-fixer*`, `rector.php`, `.php_cs.dist.php`) a una sola versione `php -l` clean.
+4. `cacert.pem`: `=======` sotto `Juur-SK` è underline del certificato (7 caratteri), non conflitto — in allowlist del gate.
+5. Gate: `bash bashscripts/quality-gates/verify-no-conflict-markers.sh` → PASS (scoped); censimento `/bin/grep` escluso cacert → 0.
+
+**Non usare** rewrite automatiche di massa sulle docs (lezione 2026-08-05).
+
 ## Casi Risolti Recentemente
 
 ### 1. Namespace e Convenzioni

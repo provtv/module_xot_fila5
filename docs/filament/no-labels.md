@@ -111,8 +111,4 @@ Se trovi codice che viola questa regola:
 - [Esempio pratico nel TeamsRelationManager](/laravel/Modules/User/docs/filament/teams_relation_manager.md)
 - [Regole per RelationManager](/docs/filament/relation_managers.md)
 
-<<<<<<< HEAD
 *Ultimo aggiornamento: 3 Giugno 2025*
-=======
-*Ultimo aggiornamento: 3 Giugno 2025*
->>>>>>> laraxot/dev

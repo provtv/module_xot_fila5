@@ -1,5 +1,3 @@
-<<<<<<<< HEAD:docs/root-txt-files/filters.txt
-========
 ---
 title: "_filters"
 module: "Xot"
@@ -15,7 +13,6 @@ related:
 
 <!-- Contenuto migrato da _docs/_filters.txt -->
 
->>>>>>>> laraxot/dev:docs/consolidated/archive/filters-2.md
 https://www.algolia.com/blog/engineering/implementing-faceted-search-with-dynamic-faceting-with-code/  !!!
 
 

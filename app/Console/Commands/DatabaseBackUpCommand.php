@@ -38,11 +38,7 @@ class DatabaseBackUpCommand extends Command
     public function handle(): void
     {
         $filename = 'backup-'.Carbon::now()->format('Y-m-d').'.gz';
-<<<<<<< HEAD
-       $backupPath = storage_path('app/backup/'.$filename);
-=======
         $backupPath = storage_path('app/backup/'.$filename);
->>>>>>> laraxot/dev
         Assert::string(
             $backupPath = Str::replace(['/', '\\'], [\DIRECTORY_SEPARATOR, \DIRECTORY_SEPARATOR], $backupPath),
             'wip',
@@ -61,11 +57,7 @@ class DatabaseBackUpCommand extends Command
             ' '.
             $database.
             '  | gzip > '.
-<<<<<<< HEAD
-           $backupPath;
-=======
             $backupPath;
->>>>>>> laraxot/dev
 
         $returnVar = null;
         $output = null;

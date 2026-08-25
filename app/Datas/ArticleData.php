@@ -7,11 +7,7 @@ namespace Modules\Xot\Datas;
 use Spatie\LaravelData\Data;
 
 /**
-<<<<<<< HEAD
-* Class ArticleData - Gestisce la configurazione degli articoli.
-=======
  * Class ArticleData - Gestisce la configurazione degli articoli.
->>>>>>> laraxot/dev
  * Utilizzato esclusivamente nell'ambito dell'architettura Filament-first.
  *
  * @phpstan-consistent-constructor
@@ -27,21 +23,13 @@ final class ArticleData extends Data
     public function __construct(
         public readonly array $types = ['post', 'page', 'news'],
         public readonly array $categories = [],
-<<<<<<< HEAD
-       public readonly string $editor = 'markdown',
-=======
         public readonly string $editor = 'markdown',
->>>>>>> laraxot/dev
         public readonly array $defaultMeta = [
             'title' => '',
             'description' => '',
             'keywords' => '',
         ],
-<<<<<<< HEAD
-       public readonly array $features = [
-=======
         public readonly array $features = [
->>>>>>> laraxot/dev
             'enable_comments' => true,
             'moderate_comments' => true,
             'enable_rating' => false,
@@ -55,11 +43,7 @@ final class ArticleData extends Data
     /**
      * Create a new instance of ArticleData with default values.
      */
-<<<<<<< HEAD
-   public static function make(): self
-=======
     public static function make(): self
->>>>>>> laraxot/dev
     {
         return new self();
     }

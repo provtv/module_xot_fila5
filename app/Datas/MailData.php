@@ -7,11 +7,7 @@ namespace Modules\Xot\Datas;
 use Spatie\LaravelData\Data;
 
 /**
-<<<<<<< HEAD
-* Class MailData - Gestisce la configurazione delle email.
-=======
  * Class MailData - Gestisce la configurazione delle email.
->>>>>>> laraxot/dev
  * Utilizzato nel contesto dell'architettura Filament-first.
  *
  * @phpstan-consistent-constructor
@@ -43,11 +39,7 @@ final class MailData extends Data
     /**
      * Create a new instance of MailData with default values.
      */
-<<<<<<< HEAD
-   public static function make(): self
-=======
     public static function make(): self
->>>>>>> laraxot/dev
     {
         return new self();
     }

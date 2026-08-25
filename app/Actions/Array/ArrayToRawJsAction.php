@@ -25,11 +25,7 @@ class ArrayToRawJsAction
     /**
      * Converte l'array in una stringa JavaScript (oggetto letterale) e restituisce RawJs.
      *
-<<<<<<< HEAD
-    * @param array<int|string, mixed> $array Array associativo (anche annidato); valori RawJs restano raw
-=======
      * @param array<int|string, mixed> $array Array associativo (anche annidato); valori RawJs restano raw
->>>>>>> laraxot/dev
      */
     public function execute(array $array): RawJs
     {
@@ -41,7 +37,10 @@ class ArrayToRawJsAction
             } elseif (is_array($value)) {
                 $parts[] = $k.': '.$this->execute($value)->toHtml();
             } else {
-                $parts[] = $k.': '.$this->jsValue($value);
+                $scalar = \is_scalar($value) || null === $value
+                    ? $value
+                    : SafeStringCastAction::cast($value);
+                $parts[] = $k.': '.$this->jsValue($scalar);
             }
         }
 
@@ -55,7 +54,7 @@ class ArrayToRawJsAction
     }
 
     /** Valore JS sicuro per attributo HTML: niente virgolette doppie. */
-    private function jsValue(mixed $value): string
+    private function jsValue(bool|int|float|string|null $value): string
     {
         if (is_bool($value)) {
             return $value ? 'true' : 'false';
@@ -67,10 +66,6 @@ class ArrayToRawJsAction
             return (string) $value;
         }
 
-<<<<<<< HEAD
-       return "'".str_replace(['\\', "'"], ['\\\\', "\\'"], SafeStringCastAction::cast($value))."'";
-=======
         return "'".str_replace(['\\', "'"], ['\\\\', "\\'"], SafeStringCastAction::cast($value))."'";
->>>>>>> laraxot/dev
     }
 }

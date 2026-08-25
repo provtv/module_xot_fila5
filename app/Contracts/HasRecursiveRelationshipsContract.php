@@ -20,11 +20,7 @@ use Staudenmeir\LaravelAdjacencyList\Eloquent\Relations\Siblings;
 /**
  * Modules\Xot\Contracts\HasRecursiveRelationshipsContract.
  *
-<<<<<<< HEAD
-* @property int                    $id
-=======
  * @property int                    $id
->>>>>>> laraxot/dev
  * @property string                 $name
  * @property int                    $depth
  * @property Collection<int, Model> $children
@@ -118,11 +114,7 @@ interface HasRecursiveRelationshipsContract
      */
     public function getExpressionName();
 
-<<<<<<< HEAD
-   /** @return Ancestors<Model, Model> */
-=======
     /** @return Ancestors<Model, Model> */
->>>>>>> laraxot/dev
     public function ancestors();
 
     /** @return Ancestors<Model, Model> */
@@ -183,22 +175,14 @@ interface HasRecursiveRelationshipsContract
     public function isIntegerAttribute(string $attribute);
 
     /**
-<<<<<<< HEAD
-    * @param Builder $query
-=======
      * @param Builder $query
->>>>>>> laraxot/dev
      *
      * @return AdjacencyBuilder<Model>
      */
     public function newEloquentBuilder($query);
 
     /**
-<<<<<<< HEAD
-    * @param list<Model> $models
-=======
      * @param list<Model> $models
->>>>>>> laraxot/dev
      *
      * @return Collection<int, Model>
      */

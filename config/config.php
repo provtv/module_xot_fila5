@@ -5,11 +5,7 @@ declare(strict_types=1);
 return [
     'name' => 'Xot',
     'description' => 'Modulo base con funzionalità core e utilities',
-<<<<<<< HEAD
-   'icon' => 'xot-icon',
-=======
     'icon' => 'xot-icon',
->>>>>>> laraxot/dev
     'navigation' => [
         'enabled' => true,
         'sort' => 110,

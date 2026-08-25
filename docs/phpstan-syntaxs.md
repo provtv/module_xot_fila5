@@ -4,8 +4,4 @@ topic: phpstan-syntaxs
 canonical: ../../../Themes/docs/shared-components/phpstan-syntax-errors-fix.md
 ---
 
-<<<<<<< HEAD
 See canonical documentation: ../../../Themes/docs/shared-components/phpstan-syntax-errors-fix.md
-=======
-See canonical documentation: ../../../Themes/docs/shared-components/phpstan-syntax-errors-fix.md
->>>>>>> laraxot/dev

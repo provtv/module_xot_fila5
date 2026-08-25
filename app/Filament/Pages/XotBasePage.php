@@ -113,11 +113,7 @@ abstract class XotBasePage extends Page implements HasForms
      */
     public function getModel(): string
     {
-<<<<<<< HEAD
-       if (null !== static::$model) {
-=======
         if (null !== static::$model) {
->>>>>>> laraxot/dev
             /** @var class-string<Model> $modelValue */
             $modelValue = static::$model;
 
@@ -161,11 +157,7 @@ abstract class XotBasePage extends Page implements HasForms
      */
     public function schema(Schema $schema): Schema
     {
-<<<<<<< HEAD
-       $schema = $schema->components($this->getFormSchema()); // @phpstan-ignore method.deprecated (hook di progetto: la deprecazione e ereditata per nome dal prototipo Filament 5, il codice eseguito e il nostro — story 16.12)
-=======
         $schema = $schema->components($this->getFormSchema()); // @phpstan-ignore method.deprecated (hook di progetto: la deprecazione e ereditata per nome dal prototipo Filament 5, il codice eseguito e il nostro — story 16.12)
->>>>>>> laraxot/dev
 
         $schema->statePath('data');
 
@@ -255,11 +247,7 @@ abstract class XotBasePage extends Page implements HasForms
     {
         $user = $this->getUser();
 
-<<<<<<< HEAD
-       // ponytail: $user is Authenticatable&Model, hasPermissionTo is always available via Spatie traits
-=======
         // ponytail: $user is Authenticatable&Model, hasPermissionTo is always available via Spatie traits
->>>>>>> laraxot/dev
         return $user->hasPermissionTo($permission);
     }
 
@@ -315,11 +303,7 @@ abstract class XotBasePage extends Page implements HasForms
         // Per ora lasciamo vuoto, può essere implementato nelle classi figlie
     }
 
-<<<<<<< HEAD
-   /** @return list<Action> */
-=======
     /** @return list<Action> */
->>>>>>> laraxot/dev
     protected function getFormActions(): array
     {
         return [

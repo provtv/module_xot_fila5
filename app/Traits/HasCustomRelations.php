@@ -17,14 +17,8 @@ use Webmozart\Assert\Assert;
 
 /**
  * Trait HasCustomRelations.
-<<<<<<< HEAD
- *
- * @phpstan-ignore trait.unused
-*/
-=======
  */
 // @phpstan-ignore trait.unused
->>>>>>> laraxot/dev
 trait HasCustomRelations
 {
     public function customRelation(

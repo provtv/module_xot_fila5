@@ -28,11 +28,7 @@ trait CreatesApplication
         // Explicitly set the base path before requiring bootstrap/app.php
         $_ENV['APP_BASE_PATH'] = $basePath;
 
-<<<<<<< HEAD
-       $appEnv = $_ENV['APP_ENV'] ?? getenv('APP_ENV') ?: 'local';
-=======
         $appEnv = $_ENV['APP_ENV'] ?? getenv('APP_ENV') ?: 'local';
->>>>>>> laraxot/dev
         $envFile = $this->resolveTestingEnvFile($basePath);
 
         if ($appEnv === 'testing' && $envFile === null) {
@@ -54,11 +50,7 @@ trait CreatesApplication
         $app->bind('path.storage', fn () => $basePath.'/storage');
 
         // Bootstrap kernel to ensure all service providers and aliases are registered
-<<<<<<< HEAD
-       $kernel = $app->make(Kernel::class);
-=======
         $kernel = $app->make(Kernel::class);
->>>>>>> laraxot/dev
         if (! $kernel instanceof Kernel) {
             throw new \RuntimeException('Console kernel must implement Illuminate\Contracts\Console\Kernel.');
         }
@@ -73,10 +65,7 @@ trait CreatesApplication
 
         return $app;
     }
-<<<<<<< HEAD
-=======
 
->>>>>>> laraxot/dev
     private function loadLaravelApplication(string $bootstrapPath): Application
     {
         $app = require $bootstrapPath;

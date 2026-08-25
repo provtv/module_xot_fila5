@@ -23,11 +23,7 @@ use Webmozart\Assert\Assert;
 /**
  * Base class for list records pages.
  *
-<<<<<<< HEAD
-* @property ?string $model
-=======
  * @property ?string $model
->>>>>>> laraxot/dev
  * @property ?string $resource
  * @property ?string $slug
  * @property TableLayoutEnum $layoutView
@@ -36,11 +32,7 @@ abstract class XotBaseListRecords extends FilamentListRecords
 {
     use HasXotTable;
 
-<<<<<<< HEAD
-   /**
-=======
     /**
->>>>>>> laraxot/dev
      * @param  array<string, bool|float|int|string|null>  $params
      */
     public static function trans(string $key, array $params = []): string
@@ -53,30 +45,18 @@ abstract class XotBaseListRecords extends FilamentListRecords
     /**
      * Get the resource class name.
      *
-<<<<<<< HEAD
-    * @return class-string<XotBaseResource>
-=======
      * @return class-string<XotBaseResource>
->>>>>>> laraxot/dev
      */
     public static function getResource(): string
     {
         $resource = Str::of(static::class)->before('\\Pages\\')->toString();
         Assert::classExists($resource);
-<<<<<<< HEAD
-       Assert::subclassOf($resource, XotBaseResource::class);
-=======
         Assert::subclassOf($resource, XotBaseResource::class);
->>>>>>> laraxot/dev
 
         return $resource;
     }
 
-<<<<<<< HEAD
-   /**
-=======
     /**
->>>>>>> laraxot/dev
      * Colonne dell'elenco.
      *
      * Filament 5 dichiara `getTableColumns()` deprecato in `HasColumns` e lo fa
@@ -119,11 +99,7 @@ abstract class XotBaseListRecords extends FilamentListRecords
 
     /**
      * Paginate the table query.
-<<<<<<< HEAD
-    *
-=======
      *
->>>>>>> laraxot/dev
      * @param  Builder<Model>  $query
      * @return Paginator<int, Model>
      */

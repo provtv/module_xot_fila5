@@ -10,11 +10,7 @@ class SaveArrayAction
 {
     use QueueableAction;
 
-<<<<<<< HEAD
-   /**
-=======
     /**
->>>>>>> laraxot/dev
      * @param array<int|string, mixed> $data
      */
     public function execute(array $data, string $filename, string $format = 'php'): bool

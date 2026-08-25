@@ -35,11 +35,7 @@ class CommandOutputEvent implements ShouldBroadcast
         return 'CommandOutput';
     }
 
-<<<<<<< HEAD
-   /** @return array<string, string> */
-=======
     /** @return array<string, string> */
->>>>>>> laraxot/dev
     public function broadcastWith(): array
     {
         return [

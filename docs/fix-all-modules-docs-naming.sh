@@ -85,8 +85,4 @@ for module in */docs; do
     fi
 done
 echo ""
-<<<<<<< HEAD
 echo "🎯 Next: Verificare manualmente alcuni file e testare link"
-=======
-echo "🎯 Next: Verificare manualmente alcuni file e testare link"
->>>>>>> laraxot/dev

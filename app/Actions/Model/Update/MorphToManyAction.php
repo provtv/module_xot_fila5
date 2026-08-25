@@ -21,11 +21,7 @@ class MorphToManyAction
 {
     use QueueableAction;
 
-<<<<<<< HEAD
-   /** @var Collection<int, mixed> */
-=======
     /** @var Collection<int, mixed> */
->>>>>>> laraxot/dev
     public Collection $res;
 
     /**

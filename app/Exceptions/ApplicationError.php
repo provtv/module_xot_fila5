@@ -24,11 +24,7 @@ readonly class ApplicationError implements \JsonSerializable, Arrayable, Jsonabl
     ) {
     }
 
-<<<<<<< HEAD
-   /** @return array<string, string> */
-=======
     /** @return array<string, string> */
->>>>>>> laraxot/dev
     public function toArray(): array
     {
         return [
@@ -37,11 +33,7 @@ readonly class ApplicationError implements \JsonSerializable, Arrayable, Jsonabl
         ];
     }
 
-<<<<<<< HEAD
-   /** @return array<string, string> */
-=======
     /** @return array<string, string> */
->>>>>>> laraxot/dev
     #[\Override]
     public function jsonSerialize(): array
     {

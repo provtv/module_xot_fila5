@@ -31,11 +31,7 @@ class MorphToOneAction
      */
     public function execute(Model $model, RelationDTO $relationDTO): void
     {
-<<<<<<< HEAD
-       $relation = $model->{$relationDTO->name}();
-=======
         $relation = $model->{$relationDTO->name}();
->>>>>>> laraxot/dev
         if (! is_object($relation)) {
             throw new \InvalidArgumentException('Relation must be an object.');
         }

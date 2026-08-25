@@ -39,13 +39,8 @@ function mockXotData(): void
     $mockXotData = \Mockery::mock(\Modules\Xot\Datas\XotData::class)->makePartial();
 
     $mockXotData->shouldReceive('getUserClass')
-<<<<<<<< HEAD:docs/testing_best_practices_uppercase.md
-        ->andReturn(\Modules\SaluteOra\Models\User::class);
-        
-========
         ->andReturn(\Modules\<nome progetto>\Models\User::class);
 
->>>>>>>> laraxot/dev:docs/testing-best-practices-testing-best-practices-laraxot-framewo.md
     $mockXotData->shouldReceive('make')
         ->andReturn($mockXotData);
 
@@ -218,8 +213,4 @@ app()->instance(\Modules\Xot\Datas\XotData::class, $mock);
 **Status**: ✅ Best Practices Validate
 **Enforcement**: Obbligatorio per tutti i test
 **Version**: 1.0 - Gold Standard
-<<<<<<<< HEAD:docs/testing_best_practices_uppercase.md
-**Last Update**: Dicembre 2024 
-========
 **Last Update**: Dicembre 2024
->>>>>>>> laraxot/dev:docs/testing-best-practices-testing-best-practices-laraxot-framewo.md

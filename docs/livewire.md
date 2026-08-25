@@ -77,8 +77,4 @@ https://github.com/rappasoft/laravel-livewire-tables
 https://laracasts.com/series/guest-spotlight/episodes/3
 
 
-<<<<<<< HEAD
 https://hdtuto.com/article/livewire-crud-laravel-7-example
-=======
-https://hdtuto.com/article/livewire-crud-laravel-7-example
->>>>>>> laraxot/dev

@@ -13,11 +13,7 @@ it('generates translation keys correctly', function (): void {
 
     // Test with Action suffix
     $key = $action->execute('Modules\Activity\Actions\LogActivityAction');
-<<<<<<< HEAD
-   Assert::assertSame('activity::log_activity', $key);
-=======
     Assert::assertSame('activity::log_activity', $key);
->>>>>>> laraxot/dev
     // Test with RelationManager
     $key = $action->execute('Modules\User\Filament\Resources\UserResource\RelationManagers\ProfilesRelationManager');
     Assert::assertSame('user::profile', $key);

@@ -17,11 +17,7 @@ use Spatie\QueueableAction\QueueableAction;
  */
 class RouteService
 {
-<<<<<<< HEAD
-   use QueueableAction;
-=======
     use QueueableAction;
->>>>>>> laraxot/dev
 
     /**
      * Verifica se l'utente è in modalità amministrazione.
@@ -343,11 +339,7 @@ class RouteService
         $params = $routeCurrent instanceof \Illuminate\Routing\Route ? $routeCurrent->parameters() : [];
         [$containers] = params2ContainerItem($params);
 
-<<<<<<< HEAD
-       $params['containers'] = implode('.', array_map(
-=======
         $params['containers'] = implode('.', array_map(
->>>>>>> laraxot/dev
             static fn (mixed $value): string => is_scalar($value) ? (string) $value : '',
             array_values($containers),
         ));
@@ -361,10 +353,7 @@ class RouteService
             })
             ->implode('.');
     }
-<<<<<<< HEAD
-=======
 
->>>>>>> laraxot/dev
     public function execute(): void
     {
     }

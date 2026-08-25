@@ -34,8 +34,4 @@ https://bestofphp.com/repo/babenkoivan-elastic-scout-driver
 
 
 
-<<<<<<< HEAD
 meilisearch
-=======
-meilisearch
->>>>>>> laraxot/dev

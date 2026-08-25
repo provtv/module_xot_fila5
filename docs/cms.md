@@ -16,8 +16,4 @@ https://lean-admin.dev/
 
 
 in nodejs ma sembra carino
-<<<<<<< HEAD
 https://ghost.org/
-=======
-https://ghost.org/
->>>>>>> laraxot/dev

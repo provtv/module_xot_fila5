@@ -13,11 +13,7 @@ it('returns path using module_path helper in happy path', function (): void {
 
     $result = app(GetModulePathByGeneratorAction::class)->execute('Xot', 'config');
 
-<<<<<<< HEAD
-   Assert::assertStringContainsString((string) '/Modules/Xot/config', (string) $result);
-=======
     Assert::assertStringContainsString((string) '/Modules/Xot/config', (string) $result);
->>>>>>> laraxot/dev
 });
 
 it('returns module path for another existing generator directory', function (): void {
@@ -25,9 +21,5 @@ it('returns module path for another existing generator directory', function (): 
 
     $result = app(GetModulePathByGeneratorAction::class)->execute('Xot', 'lang');
 
-<<<<<<< HEAD
-   Assert::assertStringContainsString((string) '/Modules/Xot/lang', (string) $result);
-=======
     Assert::assertStringContainsString((string) '/Modules/Xot/lang', (string) $result);
->>>>>>> laraxot/dev
 });

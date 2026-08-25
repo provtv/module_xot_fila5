@@ -21,11 +21,7 @@ describe('ModuleAction Integration', function () {
 
     it('can find existing modules', function () {
         // Test with known existing modules
-<<<<<<< HEAD
-       $chartService = new ModuleAction('Chart');
-=======
         $chartService = new ModuleAction('Chart');
->>>>>>> laraxot/dev
         $userService = new ModuleAction('User');
         $xotService = new ModuleAction('Xot');
 
@@ -42,11 +38,7 @@ describe('ModuleAction Integration', function () {
 
     it('returns models from existing modules', function () {
         // Test with Chart module (we know it exists)
-<<<<<<< HEAD
-       $chartService = new ModuleAction('Chart');
-=======
         $chartService = new ModuleAction('Chart');
->>>>>>> laraxot/dev
         /** @var array<int|string, class-string> $models */
         $models = $chartService->getModels();
 
@@ -59,11 +51,7 @@ describe('ModuleAction Integration', function () {
             }
         }
 
-<<<<<<< HEAD
-       Assert::assertTrue($hasChartModel);
-=======
         Assert::assertTrue($hasChartModel);
->>>>>>> laraxot/dev
     });
 
     it('handles User module models correctly', function () {
@@ -76,21 +64,13 @@ describe('ModuleAction Integration', function () {
         $hasUserModels = false;
 
         foreach ($modelClasses as $modelClass) {
-<<<<<<< HEAD
-           if (is_string($modelClass) && str_contains($modelClass, 'User\\Models\\')) {
-=======
             if (is_string($modelClass) && str_contains($modelClass, 'User\\Models\\')) {
->>>>>>> laraxot/dev
                 $hasUserModels = true;
                 break;
             }
         }
 
-<<<<<<< HEAD
-       Assert::assertTrue($hasUserModels);
-=======
         Assert::assertTrue($hasUserModels);
->>>>>>> laraxot/dev
     });
 
     it('filters abstract models correctly', function () {
@@ -115,11 +95,7 @@ describe('ModuleAction Integration', function () {
 
     it('handles reflection operations safely', function () {
         // Test that reflection operations don't cause crashes
-<<<<<<< HEAD
-       $xotService = new ModuleAction('Xot');
-=======
         $xotService = new ModuleAction('Xot');
->>>>>>> laraxot/dev
         $models = $xotService->getModels();
 
         // Test each returned model class
@@ -130,11 +106,7 @@ describe('ModuleAction Integration', function () {
 
     it('processes module directory structure', function () {
         // Test that the service can process module directories
-<<<<<<< HEAD
-       $xotService = new ModuleAction('Xot');
-=======
         $xotService = new ModuleAction('Xot');
->>>>>>> laraxot/dev
         $models = $xotService->getModels();
     });
 
@@ -143,29 +115,17 @@ describe('ModuleAction Integration', function () {
         $testString = 'TestModelName';
         $snakeCase = Str::snake($testString);
 
-<<<<<<< HEAD
-       Assert::assertSame('test_model_name', $snakeCase);
-=======
         Assert::assertSame('test_model_name', $snakeCase);
->>>>>>> laraxot/dev
     });
 
     it('integrates with Laravel filesystem', function () {
         // Test filesystem operations
-<<<<<<< HEAD
-       Assert::assertTrue(class_exists('Illuminate\Support\Facades\File'));
-=======
         Assert::assertTrue(class_exists('Illuminate\Support\Facades\File'));
->>>>>>> laraxot/dev
     });
 
     it('can handle multiple module instances', function () {
         $services = [
-<<<<<<< HEAD
-           new ModuleAction('Chart'),
-=======
             new ModuleAction('Chart'),
->>>>>>> laraxot/dev
             new ModuleAction('User'),
             new ModuleAction('Xot'),
             new ModuleAction('Job'),
@@ -179,11 +139,7 @@ describe('ModuleAction Integration', function () {
 
     it('validates module existence checking', function () {
         // Test with non-existent module
-<<<<<<< HEAD
-       $nonExistentService = new ModuleAction('NonExistentModule');
-=======
         $nonExistentService = new ModuleAction('NonExistentModule');
->>>>>>> laraxot/dev
         $models = $nonExistentService->getModels();
 
         Assert::assertEmpty($models);
@@ -191,11 +147,7 @@ describe('ModuleAction Integration', function () {
 
     it('handles namespace construction correctly', function () {
         // Test namespace building logic
-<<<<<<< HEAD
-       $chartService = new ModuleAction('Chart');
-=======
         $chartService = new ModuleAction('Chart');
->>>>>>> laraxot/dev
         $models = $chartService->getModels();
 
         foreach ($models as $modelClass) {
@@ -205,11 +157,7 @@ describe('ModuleAction Integration', function () {
 
     it('processes file extensions correctly', function () {
         // Test that only .php files are processed
-<<<<<<< HEAD
-       $xotService = new ModuleAction('Xot');
-=======
         $xotService = new ModuleAction('Xot');
->>>>>>> laraxot/dev
         $models = $xotService->getModels();
 
         // All returned classes should be valid PHP classes
@@ -222,11 +170,7 @@ describe('ModuleAction Integration', function () {
     it('handles exception scenarios gracefully', function () {
         // Test various edge cases that might cause exceptions
         $edgeCaseServices = [
-<<<<<<< HEAD
-           new ModuleAction(''),
-=======
             new ModuleAction(''),
->>>>>>> laraxot/dev
             new ModuleAction('InvalidModule'),
             new ModuleAction('Test123'),
         ];
@@ -236,11 +180,7 @@ describe('ModuleAction Integration', function () {
     });
 
     it('validates return type consistency', function () {
-<<<<<<< HEAD
-       $xotService = new ModuleAction('Xot');
-=======
         $xotService = new ModuleAction('Xot');
->>>>>>> laraxot/dev
         $models = $xotService->getModels();
 
         // Validate that all keys are strings and all values are class strings
@@ -254,11 +194,7 @@ describe('ModuleAction Integration', function () {
 
     it('can work with Laravel service container', function () {
         // Test service container integration
-<<<<<<< HEAD
-       $serviceFromContainer = app(ModuleAction::class, ['name' => 'TestModule']);
-=======
         $serviceFromContainer = app(ModuleAction::class, ['name' => 'TestModule']);
->>>>>>> laraxot/dev
 
         Assert::assertInstanceOf(ModuleAction::class, $serviceFromContainer);
     });
@@ -267,30 +203,18 @@ describe('ModuleAction Integration', function () {
         // Test multiple simultaneous calls
         $results = [];
         for ($i = 0; $i < 3; ++$i) {
-<<<<<<< HEAD
-           $service = new ModuleAction('Xot');
-=======
             $service = new ModuleAction('Xot');
->>>>>>> laraxot/dev
             $results[] = $service->getModels();
         }
 
         // All results should be consistent
-<<<<<<< HEAD
-       Assert::assertSame($results[0], $results[1]);
-=======
         Assert::assertSame($results[0], $results[1]);
->>>>>>> laraxot/dev
         Assert::assertSame($results[0], $results[2]);
     });
 
     it('validates module path resolution', function () {
         // Test that module paths are resolved correctly
-<<<<<<< HEAD
-       $xotService = new ModuleAction('Xot');
-=======
         $xotService = new ModuleAction('Xot');
->>>>>>> laraxot/dev
         $models = $xotService->getModels();
 
         foreach ($models as $modelClass) {
@@ -301,32 +225,20 @@ describe('ModuleAction Integration', function () {
 
     it('handles file system operations safely', function () {
         // Test file system operations
-<<<<<<< HEAD
-       $xotService = new ModuleAction('Xot');
-=======
         $xotService = new ModuleAction('Xot');
->>>>>>> laraxot/dev
         $models = $xotService->getModels();
     });
 
     it('integrates with Laravel string helpers', function () {
         // Test string helper integration
-<<<<<<< HEAD
-       Assert::assertTrue(class_exists('Illuminate\Support\Str'));
-=======
         Assert::assertTrue(class_exists('Illuminate\Support\Str'));
->>>>>>> laraxot/dev
         $testStudly = Str::studly('test_string');
         Assert::assertSame('TestString', $testStudly);
     });
 
     it('validates class instantiation patterns', function () {
         // Test that the service follows proper instantiation patterns
-<<<<<<< HEAD
-       $xotService = new ModuleAction('Xot');
-=======
         $xotService = new ModuleAction('Xot');
->>>>>>> laraxot/dev
         $reflection = new ReflectionClass($xotService);
         $constructor = $reflection->getConstructor();
 
@@ -336,11 +248,7 @@ describe('ModuleAction Integration', function () {
 
     it('can handle model discovery efficiently', function () {
         // Test performance of model discovery
-<<<<<<< HEAD
-       $xotService = new ModuleAction('Xot');
-=======
         $xotService = new ModuleAction('Xot');
->>>>>>> laraxot/dev
         $startTime = microtime(true);
 
         $models = $xotService->getModels();
@@ -348,10 +256,6 @@ describe('ModuleAction Integration', function () {
         $endTime = microtime(true);
         $executionTime = $endTime - $startTime;
 
-<<<<<<< HEAD
-       Assert::assertLessThan(5.0, $executionTime); // Should complete within 5 seconds
-=======
         Assert::assertLessThan(5.0, $executionTime); // Should complete within 5 seconds
->>>>>>> laraxot/dev
     });
 });

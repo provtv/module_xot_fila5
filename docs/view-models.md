@@ -35,8 +35,4 @@ http://www.javaear.com/question/21542893.html
 
 
 
-<<<<<<< HEAD
 https://gitee.com/gordensong/view-model
-=======
-https://gitee.com/gordensong/view-model
->>>>>>> laraxot/dev

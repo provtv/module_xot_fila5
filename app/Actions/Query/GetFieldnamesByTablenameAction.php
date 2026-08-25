@@ -21,11 +21,7 @@ final class GetFieldnamesByTablenameAction
      *
      * @throws \InvalidArgumentException
      *
-<<<<<<< HEAD
-    * @return list<string>
-=======
      * @return list<string>
->>>>>>> laraxot/dev
      */
     public function execute(string $table, ?string $connectionName = null): array
     {

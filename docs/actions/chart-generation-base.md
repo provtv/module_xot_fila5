@@ -715,8 +715,4 @@ Modules/Xot/
 ```
 
 *Last updated: December 2025*
-<<<<<<< HEAD
 *
-=======
-*
->>>>>>> laraxot/dev

@@ -20,8 +20,4 @@ Il file `AutoLabelAction.php` presentava marker di conflitto (``) e duplicazioni
 
 ---
 
-<<<<<<< HEAD
 *Ultimo aggiornamento: 2025-04-16*
-=======
-*Ultimo aggiornamento: 2025-04-16*
->>>>>>> laraxot/dev

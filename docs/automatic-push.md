@@ -13,8 +13,4 @@ aggiungere i Webhooks dentro https://github.com/laraxot/Nome_Modulo/settings/hoo
 Esempio:
 https://nome_dominio/deploy/index.php
 
-<<<<<<< HEAD
 tutto deploy è una cartella caricata dentro la cartella public_html del dominio interessato.
-=======
-tutto deploy è una cartella caricata dentro la cartella public_html del dominio interessato.
->>>>>>> laraxot/dev

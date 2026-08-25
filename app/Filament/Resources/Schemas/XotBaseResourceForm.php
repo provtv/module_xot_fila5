@@ -29,11 +29,7 @@ class XotBaseResourceForm
         return 1;
     }
 
-<<<<<<< HEAD
-   /**
-=======
     /**
->>>>>>> laraxot/dev
      * Schema del form. In migrazione può delegare a {@see static::getFormSchemaOld()}.
      *
      * @return array<string, Component>
@@ -54,11 +50,7 @@ class XotBaseResourceForm
         ];
     }
 
-<<<<<<< HEAD
-   /**
-=======
     /**
->>>>>>> laraxot/dev
      * Select su relazione con etichette sempre valorizzate e ordinate.
      *
      * `Select::relationship()` legge le opzioni con `pluck()`: se la colonna
@@ -129,11 +121,7 @@ class XotBaseResourceForm
             /** @var array<Htmlable|string> $schemaComponents */
             $schemaComponents = \is_array($schemaResult) ? array_values($schemaResult) : [];
 
-<<<<<<< HEAD
-           return Step::make($name)->schema($schemaComponents);
-=======
             return Step::make($name)->schema($schemaComponents);
->>>>>>> laraxot/dev
         }
         dddx($methodName);
 

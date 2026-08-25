@@ -26,8 +26,4 @@ https://frostbutter.com/articles/redirect-http-to-https-force-https-with-htacces
 
 # redirect all http to https
 RewriteCond %{HTTPS} off 
-<<<<<<< HEAD
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-=======
-RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
->>>>>>> laraxot/dev

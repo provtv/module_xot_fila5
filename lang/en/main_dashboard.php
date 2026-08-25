@@ -5,11 +5,7 @@ declare(strict_types=1);
 return [
     'sections' => [
         'empty' => [
-<<<<<<< HEAD
-           'label' => '',
-=======
             'label' => '',
->>>>>>> laraxot/dev
             'heading' => '',
         ],
     ],

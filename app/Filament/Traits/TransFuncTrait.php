@@ -11,11 +11,7 @@ use Modules\Lang\Actions\SaveTransAction;
 use Modules\Xot\Actions\GetTransKeyAction;
 
 /**
-<<<<<<< HEAD
-* Subset of TransTrait for navigation labels — avoids trans() collisions when composed with HasXotTable.
-=======
  * Subset of TransTrait for navigation labels — avoids trans() collisions when composed with HasXotTable.
->>>>>>> laraxot/dev
  */
 trait TransFuncTrait
 {
@@ -26,11 +22,7 @@ trait TransFuncTrait
             ->snake()
             ->replace('_', '.')
             ->toString();
-<<<<<<< HEAD
-       /** @var string $transKey */
-=======
         /** @var string $transKey */
->>>>>>> laraxot/dev
         $transKey = app(GetTransKeyAction::class)->execute(static::class);
 
         $key = $transKey.'.'.$key;
@@ -40,11 +32,7 @@ trait TransFuncTrait
         return $key;
     }
 
-<<<<<<< HEAD
-   public static function transFunc(string $func): string
-=======
     public static function transFunc(string $func): string
->>>>>>> laraxot/dev
     {
         $key = static::getKeyTransFunc($func);
         $trans = static::resolveTransFuncValue($key);
@@ -61,20 +49,12 @@ trait TransFuncTrait
             /** @var array<string, mixed>|Translator|string $trans */
             $trans = trans($key);
         } catch (\TypeError $e) {
-<<<<<<< HEAD
-           /*
-=======
             /*
->>>>>>> laraxot/dev
             dddx([
                 'e' => $e,
                 'key' => $key,
             ]);
-<<<<<<< HEAD
-           */
-=======
             */
->>>>>>> laraxot/dev
             return 'fix:'.$key;
 
             // return null;
@@ -122,30 +102,19 @@ trait TransFuncTrait
 
         if (is_string($trans)) {
             if ($trans === $key) {
-<<<<<<< HEAD
-               return static::persistGeneratedTransFuncLabel($key);
-=======
                 return static::persistGeneratedTransFuncLabel($key);
->>>>>>> laraxot/dev
             }
 
             return $trans;
         }
 
         if (null === $trans) {
-<<<<<<< HEAD
-           return static::persistGeneratedTransFuncLabel($key);
-=======
             return static::persistGeneratedTransFuncLabel($key);
->>>>>>> laraxot/dev
         }
 
         return 'fix:'.$key;
     }
-<<<<<<< HEAD
-=======
 
->>>>>>> laraxot/dev
     protected static function persistGeneratedTransFuncLabel(string $key): string
     {
         $newTrans = Str::of($key)

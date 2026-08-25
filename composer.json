@@ -1,8 +1,4 @@
 {
-<<<<<<< HEAD
-
-=======
->>>>>>> laraxot/dev
     "name": "laraxot/module_xot_fila5",
     "description": "xot module, heart of the laraxot repository",
     "keywords": [
@@ -112,12 +108,16 @@
             "Modules\\Xot\\": "app/",
             "Modules\\Xot\\Database\\Factories\\": "database/factories/",
             "Modules\\Xot\\Database\\Seeders\\": "database/seeders/",
-            "Modules\\Xot\\Tests\\": "tests/",
             "Coolsam\\FilamentModules\\": "packages/coolsam/panel-modules/src/"
         },
         "files": [
             "helpers/Helper.php"
         ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Modules\\Xot\\Tests\\": "tests/"
+        }
     },
     "scripts": {
         "analyse": "vendor/bin/phpstan analyse",

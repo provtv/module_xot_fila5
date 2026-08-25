@@ -14,9 +14,5 @@ it('measures performance', function (): void {
         return 'done';
     }, 'Test Measurement');
 
-<<<<<<< HEAD
-   Assert::assertSame('done', $result);
-=======
     Assert::assertSame('done', $result);
->>>>>>> laraxot/dev
 });

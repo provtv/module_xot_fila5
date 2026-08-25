@@ -67,8 +67,4 @@ For polymorphic pivot tables.
 
 ---
 
-<<<<<<< HEAD
 **Last Updated**: 2025-11-15
-=======
-**Last Updated**: 2025-11-15
->>>>>>> laraxot/dev

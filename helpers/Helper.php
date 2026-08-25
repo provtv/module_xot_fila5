@@ -61,11 +61,7 @@ if (! function_exists('in_admin')) {
 }
 
 if (! function_exists('inAdmin')) {
-<<<<<<< HEAD
-   /** @param array<string, mixed> $params */
-=======
     /** @param array<string, mixed> $params */
->>>>>>> laraxot/dev
     function inAdmin(array $params = []): bool
     {
         if (isset($params['in_admin'])) {
@@ -103,11 +99,7 @@ if (! function_exists('params2ContainerItem')) {
         foreach ($params as $k => $v) {
             $pattern = '/(container|item)(\d+)/';
             preg_match($pattern, $k, $matches);
-<<<<<<< HEAD
-           if (count($matches) >= 3) {
-=======
             if (count($matches) >= 3) {
->>>>>>> laraxot/dev
                 $sk = $matches[1];
                 $sv = $matches[2];
                 ${$sk}[$sv] = $v;
@@ -146,11 +138,7 @@ if (! function_exists('authId')) {
 }
 
 if (! function_exists('trans_string')) {
-<<<<<<< HEAD
-   /** @param array<string, mixed> $replace */
-=======
     /** @param array<string, mixed> $replace */
->>>>>>> laraxot/dev
     function trans_string(string $key, array $replace = [], ?string $locale = null): string
     {
         $safeReplace = [];
@@ -159,11 +147,7 @@ if (! function_exists('trans_string')) {
                 continue;
             }
 
-<<<<<<< HEAD
-           $safeReplace[$k] = (is_scalar($v) || null === $v) ? $v : SafeStringCastAction::cast($v);
-=======
             $safeReplace[$k] = (is_scalar($v) || null === $v) ? $v : SafeStringCastAction::cast($v);
->>>>>>> laraxot/dev
         }
 
         $result = __($key, $safeReplace, $locale);
@@ -171,10 +155,7 @@ if (! function_exists('trans_string')) {
         return is_string($result) ? $result : $key;
     }
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> laraxot/dev
 if (! function_exists('isJson')) {
     function isJson(string $string): bool
     {

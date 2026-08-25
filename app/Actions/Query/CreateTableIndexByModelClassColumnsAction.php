@@ -107,11 +107,7 @@ class CreateTableIndexByModelClassColumnsAction
         $formName = $connection->getDatabaseName();
         $result = $connection->selectOne($query, [$formName, $tableName, $indexName]);
 
-<<<<<<< HEAD
-       $count = is_object($result) && isset($result->{'COUNT(*)'}) ? SafeIntCastAction::cast($result->{'COUNT(*)'}) : 0;
-=======
         $count = is_object($result) && isset($result->{'COUNT(*)'}) ? SafeIntCastAction::cast($result->{'COUNT(*)'}) : 0;
->>>>>>> laraxot/dev
 
         return $count > 0;
     }

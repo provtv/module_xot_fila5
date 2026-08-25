@@ -13,8 +13,4 @@ Pacchetto utilizzato per la gestione delle relazioni padre/figlio
 
 ## https://github.com/spatie/laravel-event-sourcing/tree/main
 
-<<<<<<< HEAD
 Pacchetto per gestire e tener traccia degli eventi
-=======
-Pacchetto per gestire e tener traccia degli eventi
->>>>>>> laraxot/dev

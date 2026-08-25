@@ -22,21 +22,13 @@ it('returns config array from module config file', function (): void {
     file_put_contents($file, "<?php\nreturn ['driver' => 'smtp', 'port' => 25];\n");
 
     $pathAction = Mockery::mock(GetModulePathByGeneratorAction::class);
-<<<<<<< HEAD
-   $pathAction->allows(['execute' => $tempDir]);
-=======
     $pathAction->allows(['execute' => $tempDir]);
->>>>>>> laraxot/dev
 
     app()->instance(GetModulePathByGeneratorAction::class, $pathAction);
 
     try {
         $result = app(GetModuleConfigAction::class)->execute('Xot', 'mail');
-<<<<<<< HEAD
-       Assert::assertSame(['driver' => 'smtp', 'port' => 25], $result);
-=======
         Assert::assertSame(['driver' => 'smtp', 'port' => 25], $result);
->>>>>>> laraxot/dev
     } finally {
         unlink($file);
         rmdir($tempDir);
@@ -45,11 +37,7 @@ it('returns config array from module config file', function (): void {
 
 it('throws when config file is missing', function (): void {
     $pathAction = Mockery::mock(GetModulePathByGeneratorAction::class);
-<<<<<<< HEAD
-   $pathAction->allows(['execute' => sys_get_temp_dir().'/xot_modcfg_missing_'.uniqid('', true)]);
-=======
     $pathAction->allows(['execute' => sys_get_temp_dir().'/xot_modcfg_missing_'.uniqid('', true)]);
->>>>>>> laraxot/dev
 
     app()->instance(GetModulePathByGeneratorAction::class, $pathAction);
 
@@ -69,20 +57,12 @@ it('throws when config file does not return array', function (): void {
     file_put_contents($file, "<?php\nreturn 'invalid';\n");
 
     $pathAction = Mockery::mock(GetModulePathByGeneratorAction::class);
-<<<<<<< HEAD
-   $pathAction->allows(['execute' => $tempDir]);
-=======
     $pathAction->allows(['execute' => $tempDir]);
->>>>>>> laraxot/dev
 
     app()->instance(GetModulePathByGeneratorAction::class, $pathAction);
 
     try {
-<<<<<<< HEAD
-       app(GetModuleConfigAction::class)->execute('Xot', 'mail');
-=======
         app(GetModuleConfigAction::class)->execute('Xot', 'mail');
->>>>>>> laraxot/dev
         Assert::fail('Expected exception was not thrown');
     } finally {
         unlink($file);

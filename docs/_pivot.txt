@@ -1,5 +1,3 @@
-<<<<<<<< HEAD:docs/_pivot.txt
-========
 ---
 title: "_pivot"
 module: "Xot"
@@ -15,7 +13,6 @@ related:
 
 <!-- Contenuto migrato da _docs/_pivot.txt -->
 
->>>>>>>> laraxot/dev:docs/consolidated/archive/pivot-2.md
 https://github.com/larastan/larastan/issues/515
 
 **

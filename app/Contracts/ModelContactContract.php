@@ -29,26 +29,10 @@ use Illuminate\Support\Carbon;
  * @property string             $sms_body
  * @property string             $sms_count
  *
-<<<<<<< HEAD
-* @method mixed                                                           getKey()
-=======
- * @method mixed                                                           getKey()
->>>>>>> laraxot/dev
- * @method string                                                          getRouteKey()
- * @method string                                                          getRouteKeyName()
- * @method string                                                          getTable()
- * @method mixed                                                           with($array)
- * @method array<string, mixed>                                            getFillable()
- * @method mixed                                                           fill($array)
- * @method mixed                                                           getConnection()
- * @method mixed                                                           update($params)
- * @method mixed                                                           delete()
- * @method mixed                                                           detach($params)
- * @method mixed                                                           attach($params)
- * @method mixed                                                           save($params)
- * @method array<string, mixed>                                            treeLabel()
- * @method array<string, mixed>                                            treeSons()
- * @method array<string, mixed>                                            toArray()
+ * @method void detach(Model $model)
+ * @method void attach(Model $model)
+ * @method string treeLabel()
+ * @method \Illuminate\Support\Collection<int, Model> treeSons()
  * @method \Illuminate\Database\Eloquent\Relations\BelongsTo<Model, Model> user()
  *
  * @phpstan-require-extends Model
@@ -57,22 +41,14 @@ use Illuminate\Support\Carbon;
  */
 interface ModelContactContract
 {
-<<<<<<< HEAD
-   /**
-=======
     /**
->>>>>>> laraxot/dev
      * @return array<int, string>
      */
     public function getNotifyVia(): array;
 
     public function sendEmailCallback(): void;
 
-<<<<<<< HEAD
-   /**
-=======
     /**
->>>>>>> laraxot/dev
      * @param array<string, mixed> $data
      */
     public function increase(string $what, array $data): void;

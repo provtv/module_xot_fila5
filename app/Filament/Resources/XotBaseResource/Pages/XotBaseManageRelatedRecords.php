@@ -28,11 +28,7 @@ use Override;
  */
 abstract class XotBaseManageRelatedRecords extends FilamentManageRelatedRecords
 {
-<<<<<<< HEAD
-   use HasRelationshipModelClass;
-=======
     use HasRelationshipModelClass;
->>>>>>> laraxot/dev
     use HasXotTable {
         HasRelationshipModelClass::getModelClass insteadof HasXotTable;
     }
@@ -52,22 +48,14 @@ abstract class XotBaseManageRelatedRecords extends FilamentManageRelatedRecords
      *
      * @return array<Component>
      */
-<<<<<<< HEAD
-   // abstract public static function getFormSchemaOld(): array;
-=======
     // abstract public static function getFormSchemaOld(): array;
->>>>>>> laraxot/dev
 
     /**
      * Configura lo schema per i record correlati.
      */
     public function schema(Schema $schema): Schema
     {
-<<<<<<< HEAD
-       // getFormSchemaOld() sempre ritorna array per definizione
-=======
         // getFormSchemaOld() sempre ritorna array per definizione
->>>>>>> laraxot/dev
         $formSchema = $this->getFormSchemaOld();
 
         return $schema->components($formSchema);
@@ -78,11 +66,7 @@ abstract class XotBaseManageRelatedRecords extends FilamentManageRelatedRecords
      *
      * @return array<Component>
      */
-<<<<<<< HEAD
-   protected function getFormSchemaOld(): array
-=======
     protected function getFormSchemaOld(): array
->>>>>>> laraxot/dev
     {
         return [];
     }
@@ -148,11 +132,7 @@ abstract class XotBaseManageRelatedRecords extends FilamentManageRelatedRecords
                         $url = $resource::getUrl('view', ['record' => $record], shouldGuessMissingParameters: false);
                     }
 
-<<<<<<< HEAD
-                   return SafeStringCastAction::cast($url);
-=======
                     return SafeStringCastAction::cast($url);
->>>>>>> laraxot/dev
                 }),
             'edit' => Action::make('edit')
                 ->label('Modifica')
@@ -165,11 +145,7 @@ abstract class XotBaseManageRelatedRecords extends FilamentManageRelatedRecords
                         $url = $resource::getUrl('edit', ['record' => $record], shouldGuessMissingParameters: false);
                     }
 
-<<<<<<< HEAD
-                   return SafeStringCastAction::cast($url);
-=======
                     return SafeStringCastAction::cast($url);
->>>>>>> laraxot/dev
                 }),
             // 'view' => Action::make('view')
             //     ->label('Visualizza')

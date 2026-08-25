@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Filament\Resources\SessionResource\Pages;
 
+use Filament\Tables\Columns\Column;
 use Filament\Tables\Columns\Layout\Stack;
 use Filament\Tables\Columns\TextColumn;
 use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
@@ -20,22 +21,14 @@ class ListSessions extends XotBaseListRecords
     public function getGridTableColumns(): array
     {
         return [
-<<<<<<< HEAD
-           Stack::make($this->getTableColumns()), // @phpstan-ignore method.deprecated (hook di progetto: la deprecazione e ereditata per nome dal prototipo Filament 5, il codice eseguito e il nostro — story 16.12)
-=======
             Stack::make($this->getTableColumns()), // @phpstan-ignore method.deprecated (hook di progetto: la deprecazione e ereditata per nome dal prototipo Filament 5, il codice eseguito e il nostro — story 16.12)
->>>>>>> laraxot/dev
         ];
     }
 
-    #[\Override]
-<<<<<<< HEAD
-   /**
-=======
     /**
->>>>>>> laraxot/dev
-     * @return array<string, mixed>
+     * @return array<string, Column>
      */
+    #[\Override]
     public function getTableColumns(): array
     {
         return [

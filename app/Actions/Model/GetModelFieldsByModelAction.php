@@ -16,11 +16,7 @@ class GetModelFieldsByModelAction
     use QueueableAction;
 
     /**
-<<<<<<< HEAD
-    * @return list<string>
-=======
      * @return list<string>
->>>>>>> laraxot/dev
      */
     public function execute(Model $model): array
     {

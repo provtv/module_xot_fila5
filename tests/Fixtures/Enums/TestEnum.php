@@ -14,11 +14,7 @@ enum TestEnum: string
     case ALPHA = 'alpha';
     case BETA = 'beta';
 
-<<<<<<< HEAD
-   /**
-=======
     /**
->>>>>>> laraxot/dev
      * @return array<string, \Closure>
      */
     public static function getColumnDefinitions(): array

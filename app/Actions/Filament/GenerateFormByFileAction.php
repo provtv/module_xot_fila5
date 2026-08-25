@@ -87,11 +87,7 @@ class GenerateFormByFileAction
         Assert::string($file_name = $form_method->getFileName(), '['.__LINE__.']['.class_basename($this).']');
         // $contents= $file->getContents();
         $source = file($file_name);
-<<<<<<< HEAD
-       Assert::isArray($source);
-=======
         Assert::isArray($source);
->>>>>>> laraxot/dev
         $body = '';
         foreach (\array_slice($source, $start_line, $length) as $line) {
             $body .= SafeStringCastAction::cast($line);

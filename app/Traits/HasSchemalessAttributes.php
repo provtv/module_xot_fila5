@@ -5,10 +5,7 @@ declare(strict_types=1);
 namespace Modules\Xot\Traits;
 
 use Illuminate\Database\Eloquent\Builder;
-<<<<<<< HEAD
-=======
 
->>>>>>> laraxot/dev
 use function Safe\json_encode;
 
 use Spatie\SchemalessAttributes\SchemalessAttributes;
@@ -19,11 +16,7 @@ use Spatie\SchemalessAttributes\SchemalessAttributes;
  * Fornisce metodi standard per lavorare con extra_attributes
  * seguendo le best practices di Spatie.
  *
-<<<<<<< HEAD
-* @property SchemalessAttributes|null $extra_attributes
-=======
  * @property SchemalessAttributes|null $extra_attributes
->>>>>>> laraxot/dev
  *
  * @see https://github.com/spatie/laravel-schemaless-attributes
  *
@@ -50,11 +43,7 @@ trait HasSchemalessAttributes
      */
     protected function schemalessCasts(): array
     {
-<<<<<<< HEAD
-       /** @var array<string, string> $casts */
-=======
         /** @var array<string, string> $casts */
->>>>>>> laraxot/dev
         $casts = $this->casts;
 
         return array_merge($casts, [
@@ -64,11 +53,7 @@ trait HasSchemalessAttributes
 
     /**
      * Scope per filtrare per attributi schemaless.
-<<<<<<< HEAD
-    *
-=======
      *
->>>>>>> laraxot/dev
      * @param Builder<static> $query
      *
      * @return Builder<static>
@@ -84,11 +69,7 @@ trait HasSchemalessAttributes
 
     /**
      * Scope per query specifiche su extra_attributes.
-<<<<<<< HEAD
-    *
-=======
      *
->>>>>>> laraxot/dev
      * @param Builder<static> $query
      *
      * @return Builder<static>
@@ -99,11 +80,7 @@ trait HasSchemalessAttributes
     }
 
     /**
-<<<<<<< HEAD
-    * Spatie persiste extra_attributes come array sul modello dopo set/forget.
-=======
      * Spatie persiste extra_attributes come array sul modello dopo set/forget.
->>>>>>> laraxot/dev
      * Re-idratare sempre il wrapper prima di leggere o scrivere.
      */
     protected function extraAttributesWrapper(): SchemalessAttributes
@@ -128,11 +105,7 @@ trait HasSchemalessAttributes
      */
     public function getExtraAttribute(string $key, mixed $default = null): mixed
     {
-<<<<<<< HEAD
-       return $this->extraAttributesWrapper()->get($key, $default);
-=======
         return $this->extraAttributesWrapper()->get($key, $default);
->>>>>>> laraxot/dev
     }
 
     /**
@@ -140,11 +113,7 @@ trait HasSchemalessAttributes
      */
     public function setExtraAttribute(string $key, mixed $value): void
     {
-<<<<<<< HEAD
-       $this->extraAttributesWrapper()->set($key, $value);
-=======
         $this->extraAttributesWrapper()->set($key, $value);
->>>>>>> laraxot/dev
         $this->syncExtraAttributesWrapper();
     }
 
@@ -155,11 +124,7 @@ trait HasSchemalessAttributes
      */
     public function getExtraAttributes(): array
     {
-<<<<<<< HEAD
-       $raw = $this->extraAttributesWrapper()->all();
-=======
         $raw = $this->extraAttributesWrapper()->all();
->>>>>>> laraxot/dev
         $result = [];
 
         foreach ($raw as $key => $value) {
@@ -176,11 +141,7 @@ trait HasSchemalessAttributes
      */
     public function hasExtraAttribute(string $key): bool
     {
-<<<<<<< HEAD
-       return $this->extraAttributesWrapper()->has($key);
-=======
         return $this->extraAttributesWrapper()->has($key);
->>>>>>> laraxot/dev
     }
 
     /**
@@ -188,11 +149,7 @@ trait HasSchemalessAttributes
      */
     public function removeExtraAttribute(string $key): void
     {
-<<<<<<< HEAD
-       $this->extraAttributesWrapper()->forget($key);
-=======
         $this->extraAttributesWrapper()->forget($key);
->>>>>>> laraxot/dev
         $this->syncExtraAttributesWrapper();
     }
 

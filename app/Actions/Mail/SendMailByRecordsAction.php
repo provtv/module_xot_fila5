@@ -13,11 +13,7 @@ class SendMailByRecordsAction
     use QueueableAction;
 
     /**
-<<<<<<< HEAD
-    * @param Collection<int, Model> $records
-=======
      * @param Collection<int, Model> $records
->>>>>>> laraxot/dev
      */
     public function execute(Collection $records, string $mail_class): bool
     {

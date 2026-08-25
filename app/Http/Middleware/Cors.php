@@ -14,11 +14,7 @@ class Cors
      */
     public function handle(Request $request, \Closure $next): Response
     {
-<<<<<<< HEAD
-       /** @var Response $response */
-=======
         /** @var Response $response */
->>>>>>> laraxot/dev
         $response = $next($request);
 
         $response->headers->set('Access-Control-Allow-Origin', '*');

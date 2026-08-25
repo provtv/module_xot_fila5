@@ -16,11 +16,7 @@ class ExtraModelTest extends Model implements ExtraContract
 {
     protected $table = 'test_extras';
 
-<<<<<<< HEAD
-   /** @var list<string> */
-=======
     /** @var list<string> */
->>>>>>> laraxot/dev
     protected $fillable = ['model_id', 'model_type', 'extra_attributes'];
 
     /**

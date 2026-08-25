@@ -28,11 +28,7 @@ class ExportXlsTableAction extends XotBaseAction
             ->icon('heroicon-o-arrow-down-tray')
             ->action(static function (RelationManager $livewire) {
                 $livewire_class = $livewire::class;
-<<<<<<< HEAD
-               $filterParts = array_map(
-=======
                 $filterParts = array_map(
->>>>>>> laraxot/dev
                     static fn ($value): string => is_scalar($value) ? (string) $value : '',
                     Arr::flatten($livewire->tableFilters ?? []),
                 );
@@ -48,11 +44,7 @@ class ExportXlsTableAction extends XotBaseAction
                     throw new \Exception('Query is null');
                 }
                 // ->getQuery(); // Staudenmeir\LaravelCte\Query\Builder
-<<<<<<< HEAD
-               /** @var Builder<Model> $eloquentQuery */
-=======
                 /** @var Builder<Model> $eloquentQuery */
->>>>>>> laraxot/dev
                 $eloquentQuery = $query;
                 $rows = $eloquentQuery->get();
                 /** @var array<int, string> $fields */
@@ -61,11 +53,7 @@ class ExportXlsTableAction extends XotBaseAction
                     $rawFields = $livewire_class::getXlsFields($livewire->tableFilters);
                     Assert::isArray($rawFields);
 
-<<<<<<< HEAD
-                   // Ensure fields are properly formatted as array
-=======
                     // Ensure fields are properly formatted as array
->>>>>>> laraxot/dev
                     $fields = [];
                     foreach ($rawFields as $key => $field) {
                         if (is_string($field)) {

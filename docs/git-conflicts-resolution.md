@@ -294,8 +294,4 @@ php artisan lang:check
 
 **Ultimo aggiornamento**: [DATE]
 **Autore**: Sistema di correzione automatica
-<<<<<<< HEAD
 **Stato**: ✅ Completato
-=======
-**Stato**: ✅ Completato
->>>>>>> laraxot/dev

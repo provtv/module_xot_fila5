@@ -24,11 +24,7 @@ use Modules\Xot\Filament\Traits\NavigationLabelTrait;
  */
 abstract class XotBaseManageRelatedRecords extends FilamentManageRelatedRecords
 {
-<<<<<<< HEAD
-   use HasRelationshipModelClass;
-=======
     use HasRelationshipModelClass;
->>>>>>> laraxot/dev
     use HasXotForm;
     use HasXotTable {
         HasRelationshipModelClass::getModelClass insteadof HasXotTable;
@@ -51,11 +47,7 @@ abstract class XotBaseManageRelatedRecords extends FilamentManageRelatedRecords
     {
         $value = $this->record->{static::$recordTitleAttribute};
 
-<<<<<<< HEAD
-       return SafeStringCastAction::cast($value);
-=======
         return SafeStringCastAction::cast($value);
->>>>>>> laraxot/dev
     }
 
     public function schema(Schema $schema): Schema
@@ -105,11 +97,7 @@ abstract class XotBaseManageRelatedRecords extends FilamentManageRelatedRecords
      */
     protected function getTableActions(): array
     {
-<<<<<<< HEAD
-       return [
-=======
         return [
->>>>>>> laraxot/dev
             'view' => ViewAction::make(),
             'edit' => EditAction::make(),
             'delete' => DeleteAction::make(),

@@ -16,11 +16,7 @@ it('executes without errors', function () use ($action): void {
         protected $table = 'users';
     };
 
-<<<<<<< HEAD
-   try {
-=======
     try {
->>>>>>> laraxot/dev
         $result = $action->execute($model, 'id');
         Assert::assertIsBool($result);
     } catch (Exception $e) {
@@ -35,11 +31,7 @@ it('handles different tables', function () use ($action): void {
 
     try {
         $result = $action->execute($model, 'id');
-<<<<<<< HEAD
-       Assert::assertIsBool($result);
-=======
         Assert::assertIsBool($result);
->>>>>>> laraxot/dev
     } catch (Exception $e) {
         Assert::assertStringContainsString('table', $e->getMessage());
     }
@@ -52,11 +44,7 @@ it('returns boolean result', function () use ($action): void {
 
     try {
         $result = $action->execute($model, 'nonexistent_xyz_123');
-<<<<<<< HEAD
-       Assert::assertIsBool($result);
-=======
         Assert::assertIsBool($result);
->>>>>>> laraxot/dev
     } catch (Exception $e) {
         Assert::assertStringContainsString('table', $e->getMessage());
     }

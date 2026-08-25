@@ -4,8 +4,4 @@ topic: file-locking
 canonical: ../../../Themes/docs/shared-components/file-locking-pattern.md
 ---
 
-<<<<<<< HEAD
 See canonical documentation: ../../../Themes/docs/shared-components/file-locking-pattern.md
-=======
-See canonical documentation: ../../../Themes/docs/shared-components/file-locking-pattern.md
->>>>>>> laraxot/dev

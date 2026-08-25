@@ -25,11 +25,7 @@ trait Updater
 {
     /**
      * Get the user who created the model.
-<<<<<<< HEAD
-    *
-=======
      *
->>>>>>> laraxot/dev
      * @return BelongsTo<Model&ProfileContract, $this>
      *
      * @phpstan-return BelongsTo<Model&ProfileContract, $this>
@@ -44,11 +40,7 @@ trait Updater
 
     /**
      * Get the last user who updated the model.
-<<<<<<< HEAD
-    *
-=======
      *
->>>>>>> laraxot/dev
      * @return BelongsTo<Model&ProfileContract, $this>
      *
      * @phpstan-return BelongsTo<Model&ProfileContract, $this>
@@ -63,11 +55,7 @@ trait Updater
 
     /**
      * Get the user who deleted the model.
-<<<<<<< HEAD
-    *
-=======
      *
->>>>>>> laraxot/dev
      * @return BelongsTo<Model&ProfileContract, $this>
      *
      * @phpstan-return BelongsTo<Model&ProfileContract, $this>

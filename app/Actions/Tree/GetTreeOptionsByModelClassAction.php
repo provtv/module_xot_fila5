@@ -28,20 +28,12 @@ class GetTreeOptionsByModelClassAction
         /** @var HasRecursiveRelationshipsContract $model */
         $model = new $class();
 
-<<<<<<< HEAD
-       /** @var TreeCollection<int, Model&HasRecursiveRelationshipsContract> $collection */
-=======
         /** @var TreeCollection<int, Model&HasRecursiveRelationshipsContract> $collection */
->>>>>>> laraxot/dev
         $collection = $model->newQuery()->get();
         $rows = $collection->toTree();
 
         foreach ($rows as $row) {
-<<<<<<< HEAD
-           if (! $row instanceof HasRecursiveRelationshipsContract) {
-=======
             if (! $row instanceof HasRecursiveRelationshipsContract) {
->>>>>>> laraxot/dev
                 continue;
             }
             $key = $row->getKey();
@@ -57,11 +49,7 @@ class GetTreeOptionsByModelClassAction
         foreach ($model->children as $child) {
             /** @var HasRecursiveRelationshipsContract $child */
             $key = $child->getKey();
-<<<<<<< HEAD
-           $this->options[SafeStringCastAction::cast($key)] =
-=======
             $this->options[SafeStringCastAction::cast($key)] =
->>>>>>> laraxot/dev
                 Str::repeat('---', $child->depth).'   '.$child->getLabel();
         }
     }

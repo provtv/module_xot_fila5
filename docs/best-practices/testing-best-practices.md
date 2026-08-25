@@ -287,8 +287,4 @@ function mockXotData(): void
 - Architecture Separation Rules (Cms)
 - XotData Testing Strategy (XOTDATA_TESTING.md)
 
-<<<<<<< HEAD
 Status: Best Practices consolidate — Last Update: Dicembre 2024
-=======
-Status: Best Practices consolidate — Last Update: Dicembre 2024
->>>>>>> laraxot/dev

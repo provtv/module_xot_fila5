@@ -21,11 +21,7 @@ it('gets module path from facade correctly', function (): void {
     $action = app(GetModulePathAction::class);
     $result = $action->execute('Xot');
 
-<<<<<<< HEAD
-   Assert::assertSame('/path/to/Xot/', $result);
-=======
     Assert::assertSame('/path/to/Xot/', $result);
->>>>>>> laraxot/dev
 });
 
 it('gets module path from fallback correctly', function (): void {
@@ -41,11 +37,7 @@ it('gets module path from fallback correctly', function (): void {
         File::makeDirectory($dummyModule);
     }
 
-<<<<<<< HEAD
-   // Spy on Module facade to throw exception, forcing fallback
-=======
     // Spy on Module facade to throw exception, forcing fallback
->>>>>>> laraxot/dev
     Module::partialMock()->allows([
         'getModulePath' => function (string $module): string {
             throw new Exception('Module not found');
@@ -56,10 +48,6 @@ it('gets module path from fallback correctly', function (): void {
     // Case-insensitive search
     $result = $action->execute('testmodule');
 
-<<<<<<< HEAD
-   Assert::assertSame($dummyModule, $result);
-=======
     Assert::assertSame($dummyModule, $result);
->>>>>>> laraxot/dev
     File::deleteDirectory($dummyModule);
 });

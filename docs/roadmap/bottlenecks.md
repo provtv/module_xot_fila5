@@ -229,8 +229,4 @@
 * [bottlenecks.md](../../../Lang/docs/performance/bottlenecks.md)
 * [bottlenecks.md](../../../Job/docs/performance/bottlenecks.md)
 * [bottlenecks.md](../../../Media/docs/performance/bottlenecks.md)
-<<<<<<< HEAD
 * [bottlenecks.md](../../../Patient/docs/roadmap/bottlenecks.md)
-=======
-* [bottlenecks.md](../../../Patient/docs/roadmap/bottlenecks.md)
->>>>>>> laraxot/dev

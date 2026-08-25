@@ -21,29 +21,17 @@ it('gets label via translation', function (): void {
 
 it('gets color via translation', function (): void {
     $color = TestEnum::ALPHA->getColor();
-<<<<<<< HEAD
-   Assert::assertSame('string', gettype($color));
-=======
     Assert::assertSame('string', gettype($color));
->>>>>>> laraxot/dev
 });
 
 it('gets icon via translation', function (): void {
     $icon = TestEnum::ALPHA->getIcon();
-<<<<<<< HEAD
-   Assert::assertSame('string', gettype($icon));
-=======
     Assert::assertSame('string', gettype($icon));
->>>>>>> laraxot/dev
 });
 
 it('gets description via translation', function (): void {
     $description = TestEnum::ALPHA->getDescription();
-<<<<<<< HEAD
-   Assert::assertSame('string', gettype($description));
-=======
     Assert::assertSame('string', gettype($description));
->>>>>>> laraxot/dev
 });
 
 it('gets searchable values', function (): void {
@@ -52,11 +40,7 @@ it('gets searchable values', function (): void {
 
 it('gets form schema', function (): void {
     $schema = TestEnum::getFormSchema();
-<<<<<<< HEAD
-   Assert::assertInstanceOf(TextInput::class, $schema);
-=======
     Assert::assertInstanceOf(TextInput::class, $schema);
->>>>>>> laraxot/dev
     Assert::assertCount(2, $schema);
 });
 

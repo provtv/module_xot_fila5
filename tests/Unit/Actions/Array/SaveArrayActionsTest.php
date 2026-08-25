@@ -20,11 +20,7 @@ test('save json array action works', function () {
     $action = app(SaveJsonArrayAction::class);
     $result = $action->execute($data, $filename);
 
-<<<<<<< HEAD
-   Assert::assertTrue($result);
-=======
     Assert::assertTrue($result);
->>>>>>> laraxot/dev
     $savedData = json_decode(File::get($filename), true);
     Assert::assertSame($data, $savedData);
     File::delete($filename);
@@ -37,11 +33,7 @@ test('save php array action works', function () {
     $action = app(SavePhpArrayAction::class);
     $result = $action->execute($data, $filename);
 
-<<<<<<< HEAD
-   Assert::assertTrue($result);
-=======
     Assert::assertTrue($result);
->>>>>>> laraxot/dev
     $savedData = include $filename;
     Assert::assertSame($data, $savedData);
     File::delete($filename);

@@ -18,8 +18,4 @@ https://github.com/codemastersolucoes/laravel-visitor-tracker
 https://beyondco.de/docs/laravel-websockets/debugging/dashboard   !!
 
 
-<<<<<<< HEAD
 https://arslantariq.com/build-ui-dashboards-for-your-laravel-application/
-=======
-https://arslantariq.com/build-ui-dashboards-for-your-laravel-application/
->>>>>>> laraxot/dev

@@ -242,8 +242,4 @@ https://github.com/overtrue/laravel-shopping-cart
 
 https://github.com/wowpowhub/shopping-cart-php/tree/main/app/Models/Cart   !!!! CON ADDON !!!!
 
-<<<<<<< HEAD
 https://git.tibidono.com/package/laravelshoppingcart
-=======
-https://git.tibidono.com/package/laravelshoppingcart
->>>>>>> laraxot/dev

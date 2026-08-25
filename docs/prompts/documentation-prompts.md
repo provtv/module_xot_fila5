@@ -136,8 +136,4 @@ con collegamenti bidirezionali...
 3. **Documentazione**
    - Mantenere aggiornate le regole
    - Documentare le correzioni
-<<<<<<< HEAD
    - Aggiornare gli esempi
-=======
-   - Aggiornare gli esempi
->>>>>>> laraxot/dev

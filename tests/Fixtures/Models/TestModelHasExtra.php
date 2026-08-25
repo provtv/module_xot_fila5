@@ -17,10 +17,6 @@ class TestModelHasExtra extends Model
 
     public function getExtraClass(): string
     {
-<<<<<<< HEAD
-       return ExtraModelFixture::class;
-=======
         return ExtraModelFixture::class;
->>>>>>> laraxot/dev
     }
 }

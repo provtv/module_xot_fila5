@@ -3,11 +3,7 @@
 declare(strict_types=1);
 
 return [
-<<<<<<< HEAD
-   'values' => [
-=======
     'values' => [
->>>>>>> laraxot/dev
         'yes' => [
             'label' => 'Sì',
             'icon' => 'heroicon-o-check-circle',
@@ -36,11 +32,7 @@ return [
         ],
         'label' => 'Yes No Enum',
         'sort' => 1,
-<<<<<<< HEAD
-       'icon' => 'heroicon-o-rectangle-stack',
-=======
         'icon' => 'heroicon-o-rectangle-stack',
->>>>>>> laraxot/dev
     ],
     'fields' => [
         'id' => [

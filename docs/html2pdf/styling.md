@@ -4,8 +4,4 @@ topic: styling
 canonical: ../../../../Themes/docs/shared-components/styling.md
 ---
 
-<<<<<<< HEAD
 See canonical documentation: ../../../../Themes/docs/shared-components/styling.md
-=======
-See canonical documentation: ../../../../Themes/docs/shared-components/styling.md
->>>>>>> laraxot/dev
