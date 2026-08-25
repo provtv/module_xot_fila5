@@ -119,7 +119,7 @@ class RouteServiceProvider extends ServiceProvider
 
         $models_collect = collect(array_keys($models));
         $models_collect->implode('|');
-        $models_collect->map(fn ($item) => Str::plural(is_string($item) ? $item : ((string) $item)))->implode('|');
+        $models_collect->map(fn (mixed $item) => Str::plural(is_string($item) ? $item : ((string) $item)))->implode('|');
     }
 
     /**

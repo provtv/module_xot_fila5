@@ -158,7 +158,7 @@ abstract class XotBaseTestCase extends BaseTestCase
         parent::setUp();
 
         if (! $this->app->bound('translator')) {
-            $this->app->singleton('translator', function ($app) {
+            $this->app->singleton('translator', function (mixed $app) {
                 return new Translator(
                     new ArrayLoader(),
                     'en'

@@ -21,8 +21,8 @@ it('creates custom relation', function (): void {
         protected $table = 'parent';
     };
 
-    $baseConstraints = fn ($relation) => null;
-    $eagerConstraints = fn ($relation, $models) => null;
+    $baseConstraints = fn (mixed $relation) => null;
+    $eagerConstraints = fn (mixed $relation, int|string $models) => null;
     $eagerMatcher = fn ($models, $results, $relation) => [];
 
     $relation = $parentModel->customRelation(

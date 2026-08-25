@@ -710,7 +710,7 @@ describe('Xot execute coverage floor 50', function (): void {
         } catch (\Throwable) {
         }
         try {
-            $migration->tableUpdate(static function ($table): void {});
+            $migration->tableUpdate(static function (mixed $table): void {});
         } catch (\Throwable) {
         }
     });

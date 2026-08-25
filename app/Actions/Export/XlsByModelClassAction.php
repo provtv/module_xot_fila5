@@ -57,7 +57,7 @@ class XlsByModelClassAction
 
         // Filtriamo i campi se sono specificati gli includes
         if ([] !== $includes) {
-            $rows = $rows->map(static function ($item) use ($includes) {
+            $rows = $rows->map(static function (mixed $item) use ($includes) {
                 $data = [];
                 foreach ($includes as $include) {
                     $data[$include] = data_get($item, $include);
@@ -68,7 +68,7 @@ class XlsByModelClassAction
         }
 
         if ([] !== $excludes) {
-            $rows = $rows->map(function ($item) use ($excludes) {
+            $rows = $rows->map(function (mixed $item) use ($excludes) {
                 if ($item instanceof Model) {
                     return $item->makeHidden($excludes);
                 }

@@ -185,7 +185,7 @@ class ColumnBuilder
             ->dateTime()
             ->sortable()
             ->badge()
-            ->color(static function ($record) {
+            ->color(static function (mixed $record) {
                 if (! \is_object($record) || ! isset($record->published_at)) {
                     return 'warning';
                 }
@@ -318,7 +318,7 @@ class ColumnBuilder
      */
     private static function attributeTooltip(string $attribute): \Closure
     {
-        return static function ($record) use ($attribute): string {
+        return static function (mixed $record) use ($attribute): string {
             if (! \is_object($record) || ! isset($record->{$attribute})) {
                 return '';
             }

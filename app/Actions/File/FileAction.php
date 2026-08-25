@@ -981,7 +981,7 @@ class FileAction
                     $tmp->comp_name = '';
                     $piece = collect(explode('\\', $relative_path))
                         ->map(
-                            static fn ($item) => Str::slug(Str::snake($item))
+                            static fn (mixed $item) => Str::slug(Str::snake($item))
                         )
                         ->implode('.');
                     $tmp->comp_name .= $piece;
