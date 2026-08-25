@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Modules\Xot\Filament\Support;
 
 use Carbon\Carbon;
-use Filament\Tables\Columns\BooleanColumn;
+use Filament\Tables\Columns\IconColumn;
 use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Columns\TextColumn;
 
@@ -204,9 +204,11 @@ class ColumnBuilder
     /**
      * Standard is_active boolean column (sortable).
      */
-    public static function isActive(): BooleanColumn
+    public static function isActive(): IconColumn
     {
-        return BooleanColumn::make('is_active')
+        // `BooleanColumn` e' deprecata: e' una `IconColumn` con `boolean()` gia' attivo.
+        return IconColumn::make('is_active')
+            ->boolean()
             ->label(__('xot::fields.is_active.label'))
             ->sortable()
             ->toggleable();

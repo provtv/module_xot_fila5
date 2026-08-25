@@ -30,7 +30,7 @@ class TestComp {}";
 
     Assert::assertInstanceOf(DataCollection::class, $result);
     Assert::assertSame(1, $result->count());
-    $first = $result->first();
+    $first = $result->toCollection()->first();
     Assert::assertNotNull($first);
     Assert::assertSame('prefix-test-comp', $first->name);
     $jsonCache = $tempDir.'/_components.json';

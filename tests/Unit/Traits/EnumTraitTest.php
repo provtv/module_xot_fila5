@@ -63,7 +63,8 @@ it('adds columns to blueprint in update context with hasColumn check', function 
     $columnBeta->method('nullable')->willReturnSelf();
 
     $table = $this->createUnitMock(Blueprint::class);
-    $table->method('string')
+    $table->expects($this->once())
+        ->method('string')
         ->with('beta')
         ->willReturn($columnBeta);
 
@@ -85,7 +86,8 @@ it('updates columns calls columns', function (): void {
 
 it('drops columns', function (): void {
     $table = $this->createUnitMock(Blueprint::class);
-    $table->method('dropColumn')
+    $table->expects($this->once())
+        ->method('dropColumn')
         ->with(['alpha', 'beta']);
 
     TestEnum::dropColumns($table);

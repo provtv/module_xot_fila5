@@ -13,8 +13,7 @@ use PHPUnit\Framework\Assert;
 uses(TestCase::class);
 
 /**
- * @param MockInterface&Table $tableMock
- *
+ * @param  MockInterface&Table  $tableMock
  * @return MockInterface&Table
  */
 function stubTableChain(MockInterface $tableMock): MockInterface
@@ -63,8 +62,7 @@ it('tests table method with all methods implemented', function (): void {
     /** @var HasTableWithXotTestClass&MockInterface $mock */
     $mock = Mockery::mock(HasTableWithXotTestClass::class)
         ->makePartial()
-        ->shouldAllowMockingProtectedMethods()
-        ->shouldDeferMissing();
+        ->shouldAllowMockingProtectedMethods();
     $mock->allows([
         'getTableHeaderActions' => [],
         'getTableActions' => [],
@@ -96,8 +94,7 @@ it('tests table method with no optional methods implemented', function (): void 
     /** @var HasTableWithoutOptionalMethodsTestClass&MockInterface $mock */
     $mock = Mockery::mock(HasTableWithoutOptionalMethodsTestClass::class)
         ->makePartial()
-        ->shouldAllowMockingProtectedMethods()
-        ->shouldDeferMissing();
+        ->shouldAllowMockingProtectedMethods();
     $mock->allows([
         'getModelClass' => DummyTestModel::class,
         'getTableRecordTitleAttribute' => 'name',
@@ -120,4 +117,18 @@ it('tests table method with no optional methods implemented', function (): void 
     $result = $mock->table($tableMock);
 
     Assert::assertSame($tableMock, $result);
+});
+
+it('fa rumore quando una classe non dichiara colonne', function (): void {
+    // Filament 5 dichiara un `getTableColumns()` deprecato che ritorna array vuoto, e
+    // quella dichiarazione soddisfa il metodo astratto di HasXotTable: senza guardiano
+    // una classe che non implementa l'hook mostrerebbe un elenco muto, senza errori.
+    /** @var HasTableWithoutOptionalMethodsTestClass&MockInterface $mock */
+    $mock = Mockery::mock(HasTableWithoutOptionalMethodsTestClass::class)
+        ->makePartial()
+        ->shouldAllowMockingProtectedMethods();
+    $mock->allows(['getTableColumns' => []]);
+
+    expect(static fn (): array => $mock->getGridTableColumns())
+        ->toThrow(RuntimeException::class, 'non dichiara colonne di tabella');
 });

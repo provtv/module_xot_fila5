@@ -148,7 +148,7 @@ describe('Xot HasMany and Widget form coverage', function (): void {
         Process::fake();
         try {
             $w = new XotWidgetFormHost;
-            Assert::assertNotEmpty($w->getFormSchema());
+            Assert::assertNotEmpty($w->getFormSchema()); // @phpstan-ignore method.deprecated (hook di progetto: la deprecazione e ereditata per nome dal prototipo Filament 5, il codice eseguito e il nostro — story 16.12)
             Assert::assertNotEmpty($w->getFormFill());
             $ref = new ReflectionClass(XotBaseWidget::class);
             foreach ($ref->getMethods(ReflectionMethod::IS_PUBLIC | ReflectionMethod::IS_PROTECTED | ReflectionMethod::IS_PRIVATE) as $method) {

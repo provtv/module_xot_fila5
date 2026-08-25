@@ -141,7 +141,7 @@ abstract class XotBaseTestCase extends BaseTestCase
     {
         $this->expectException($exceptionClass);
         if (null !== $message) {
-            $this->expectExceptionMessage($message);
+            $this->expectExceptionMessageIsOrContains($message);
         }
     }
 
@@ -238,7 +238,20 @@ abstract class XotBaseTestCase extends BaseTestCase
     }
 
     /**
-     * Point every sqlite connection at fixcity_data.sqlite and share one PDO.
+     * Percorso del file SQLite condiviso da tutte le suite dei moduli.
+     *
+     * Unica fonte di verita': il nome del file era ripetuto in ogni `TestCase` di modulo
+     * e in `BuildTestSqliteCommand`, che lo chiamava qui prima che il metodo esistesse.
+     * Chi deve costruirlo o puntarci una connessione chiede a questo metodo, non a
+     * `database_path()` con la stringa in chiaro.
+     */
+    public static function sharedSqlitePath(): string
+    {
+        return database_path('fixcity_data.sqlite');
+    }
+
+    /**
+     * Point every sqlite connection at the shared sqlite file and share one PDO.
      *
      * Multiple named connections (activity, user, gdpr, …) on the same SQLite file
      * each opening their own transaction causes "database is locked". Sharing the
@@ -252,7 +265,7 @@ abstract class XotBaseTestCase extends BaseTestCase
             $this->refreshApplication();
         }
 
-        $database = database_path('fixcity_data.sqlite');
+        $database = self::sharedSqlitePath();
 
         /** @var array<string, array<string, mixed>> $connections */
         $connections = config('database.connections', []);
@@ -325,7 +338,7 @@ abstract class XotBaseTestCase extends BaseTestCase
 
     public function expectThrowableMessage(string $message): void
     {
-        $this->expectExceptionMessage($message);
+        $this->expectExceptionMessageIsOrContains($message);
     }
 
     public function expectThrowableMessageMatches(string $pattern): void

@@ -8,16 +8,17 @@ use Modules\Tenant\Actions\Config\GetTenantFilePathAction;
 use Modules\Xot\Actions\Config\GetTenantConfigPathAction;
 use Modules\Xot\Tests\TestCase;
 use PHPUnit\Framework\Assert;
+use Mockery;
 
 uses(TestCase::class);
 
 describe('Get Tenant Config Path Action', function (): void {
     test('delegates to tenant file path action with php filename', function (): void {
         /** @var TestCase $this */
-        $tenantPathAction = $this->createUnitMock(GetTenantFilePathAction::class);
-        $tenantPathAction->method('execute')
+        $tenantPathAction = Mockery::mock(GetTenantFilePathAction::class);
+        $tenantPathAction->shouldReceive('execute')
             ->with('mail.php')
-            ->willReturn('/tmp/tenant/mail.php');
+            ->andReturn('/tmp/tenant/mail.php');
 
         app()->instance(GetTenantFilePathAction::class, $tenantPathAction);
 

@@ -4,51 +4,48 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Rules;
 
-use Illuminate\Contracts\Validation\Rule;
+use Closure;
+use Illuminate\Contracts\Validation\ValidationRule;
 use Illuminate\Support\Carbon;
-
-use function Safe\preg_replace;
+use Illuminate\Translation\PotentiallyTranslatedString;
 
 /**
  * Class DateTimeRule.
+ *
+ * Accetta soltanto il formato documentato `d/m/Y H:i` (es. `10/10/2019 13:43`).
  */
-class DateTimeRule implements Rule
+class DateTimeRule implements ValidationRule
 {
+    private const FORMAT = 'd/m/Y H:i';
+
     /**
-     * Determine if the validation rule passes.
+     * Run the validation rule.
      *
-     * @param string $attribute The attribute name being validated
-     * @param mixed  $value     The value being validated
+     * @param  string  $attribute  The attribute name being validated
+     * @param  mixed  $value  The value being validated
+     * @param  Closure(string, ?string=): PotentiallyTranslatedString  $fail
      */
-    public function passes(mixed $attribute, mixed $value): bool
+    public function validate(string $attribute, mixed $value, Closure $fail): void
     {
-        // dddx($attribute); //published_at
-        // dddx($value); //10/10/2019 13:43
-        // return 5 === strlen($value);
-
         if (! is_string($value)) {
-            return false;
+            $fail($this->message());
+
+            return;
         }
 
-        $format = 'd/m/Y H:i';
+        // `createFromFormat` solleva InvalidFormatException sui valori che non
+        // rispettano il formato: e' quella eccezione, non un valore di ritorno,
+        // a distinguere una data valida da una non valida.
         try {
-            $value_new = Carbon::createFromFormat($format, $value);
+            Carbon::createFromFormat(self::FORMAT, $value);
         } catch (\Exception) {
-            return false;
+            $fail($this->message());
         }
-
-        /* -- non fa il suo dovere --
-         * request()->replace([$attribute=>$value_new]);
-         */
-
-        return true;
     }
 
     public function message(): string
     {
         return 'The :attribute is not a valid datetime';
-
-        //    return trans('validation.only_uppercase');
     }
 }
 
