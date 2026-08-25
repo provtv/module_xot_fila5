@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Filament\Resources\SessionResource\Pages;
 
+use Filament\Tables\Columns\Column;
 use Filament\Tables\Columns\Layout\Stack;
 use Filament\Tables\Columns\TextColumn;
 use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
@@ -24,10 +25,10 @@ class ListSessions extends XotBaseListRecords
         ];
     }
 
-    #[\Override]
     /**
-     * @return array<string, mixed>
+     * @return array<string, Column>
      */
+    #[\Override]
     public function getTableColumns(): array
     {
         return [

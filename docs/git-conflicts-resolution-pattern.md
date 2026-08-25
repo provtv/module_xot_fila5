@@ -24,7 +24,7 @@ For `composer.json` files across modules, prioritize the incoming version which 
 ### 3. Critical Source Files
 
 For PHP source files in `app/` directories:
-1. Check for conflict markers with: `grep -n "^<<< HEAD\|^=======\|^>>>>>>>" $file`
+1. Check for conflict markers with: `grep -n "^\|^=======\|^>>>>>>>" $file`
 2. If clean, mark as resolved with: `git add $file`
 3. If conflicts exist, resolve manually preserving both changes where appropriate
 

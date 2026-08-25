@@ -13,7 +13,8 @@ https://faun.pub/dynamic-filters-with-laravel-eloquent-2dad9d9ff7c2
 
 ///--------------------------------------------------------------------
 
-https://orchid.software/en/docs/filters/
+https://orchid.software/en/project_docs/filters/
+
 
 
 https://github.com/pricecurrent/laravel-eloquent-filters

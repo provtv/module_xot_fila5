@@ -19,13 +19,10 @@ use Spatie\SchemalessAttributes\SchemalessAttributesTrait;
  * @property string|null                                       $model_type
  * @property \Spatie\SchemalessAttributes\SchemalessAttributes $extra_attributes
  *
- * @method static Builder|BaseModel disableCache()
+ * @method static Builder<static>|static disableCache()
  * @method static ExtraFactory      factory($count = null, $state = [])
- * @method static Builder|Extra     newModelQuery()
- * @method static Builder|Extra     newQuery()
- * @method static Builder|Extra     query()
- * @method static Builder|BaseModel withCacheCooldownSeconds(?int $seconds = null)
- * @method static Builder|Extra     withExtraAttributes()
+ * @method static Builder<static>|static withCacheCooldownSeconds(?int $seconds = null)
+ * @method static Builder<static>|static withExtraAttributes()
  *
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
@@ -34,18 +31,18 @@ use Spatie\SchemalessAttributes\SchemalessAttributesTrait;
  * @property Carbon|null $deleted_at
  * @property string|null $deleted_by
  *
- * @method static Builder|Extra whereCreatedAt($value)
- * @method static Builder|Extra whereCreatedBy($value)
- * @method static Builder|Extra whereDeletedAt($value)
- * @method static Builder|Extra whereDeletedBy($value)
- * @method static Builder|Extra whereExtraAttributes($value)
- * @method static Builder|Extra whereId($value)
- * @method static Builder|Extra whereModelId($value)
- * @method static Builder|Extra whereModelType($value)
- * @method static Builder|Extra whereUpdatedAt($value)
- * @method static Builder|Extra whereUpdatedBy($value)
+ * @method static Builder<static>|static whereCreatedAt($value)
+ * @method static Builder<static>|static whereCreatedBy($value)
+ * @method static Builder<static>|static whereDeletedAt($value)
+ * @method static Builder<static>|static whereDeletedBy($value)
+ * @method static Builder<static>|static whereExtraAttributes($value)
+ * @method static Builder<static>|static whereId($value)
+ * @method static Builder<static>|static whereModelId($value)
+ * @method static Builder<static>|static whereModelType($value)
+ * @method static Builder<static>|static whereUpdatedAt($value)
+ * @method static Builder<static>|static whereUpdatedBy($value)
  *
- * @mixin \Eloquent
+ * @mixin \Illuminate\Database\Eloquent\Model
  */
 abstract class BaseExtra extends BaseModel implements ExtraContract
 {

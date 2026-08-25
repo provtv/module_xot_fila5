@@ -28,27 +28,15 @@ use Spatie\ModelStatus\Status;
  * @property int|null                $statuses_count
  * @property int|null                $pos
  *
- * @method mixed                                                           getKey()
- * @method string                                                          getRouteKey()
- * @method string                                                          getRouteKeyName()
- * @method string                                                          getTable()
- * @method mixed                                                           with($array)
- * @method array<string, mixed>                                            getFillable()
- * @method mixed                                                           fill($array)
- * @method mixed                                                           getConnection()
- * @method mixed                                                           update($params)
- * @method mixed                                                           delete()
- * @method mixed                                                           detach($params)
- * @method mixed                                                           attach($params)
- * @method mixed                                                           save($params)
- * @method array<string, mixed>                                            treeLabel()
- * @method array<string, mixed>                                            treeSons()
- * @method array<string, mixed>                                            toArray()
+ * @method void detach(Model $model)
+ * @method void attach(Model $model)
+ * @method string treeLabel()
+ * @method \Illuminate\Support\Collection<int, Model> treeSons()
  * @method \Illuminate\Database\Eloquent\Relations\BelongsTo<Model, Model> user()
  *
  * @phpstan-require-extends Model
  *
- * @mixin \Eloquent
+ * @mixin \Illuminate\Database\Eloquent\Model
  */
 interface ModelWithPosContract
 {

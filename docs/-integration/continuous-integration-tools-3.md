@@ -1,7 +1,3 @@
-# _continuous_integration_tools
-
-<!-- Contenuto migrato da _docs/_continuous_integration_tools.txt -->
-
 //----------
 PHP Mess Detector
 
@@ -30,3 +26,5 @@ https://grafikart.fr/tutoriels/grumphp-836
 ----------------------------------------------------------------------
 
 https://jakzal.github.io/toolbox/
+
+

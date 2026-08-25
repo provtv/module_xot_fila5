@@ -32,7 +32,7 @@ use Modules\Xot\Database\Factories\FeedFactory;
  * @property ProfileContract|null $deleter
  * @property ProfileContract|null $updater
  *
- * @mixin \Eloquent
+ * @mixin \Illuminate\Database\Eloquent\Model
  */
 class Feed extends BaseModel
 {

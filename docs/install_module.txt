@@ -1,7 +1,3 @@
-# install_module
-
-<!-- Contenuto migrato da _docs/install_module.txt -->
-
  public function test(){
 
         $vendor_name='laraxot/module_formx';

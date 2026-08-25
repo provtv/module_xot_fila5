@@ -46,7 +46,7 @@ use Modules\Xot\Database\Factories\SessionFactory;
  *
  * @property ProfileContract|null $deleter
  *
- * @mixin \Eloquent
+ * @mixin \Illuminate\Database\Eloquent\Model
  */
 class Session extends BaseModel
 {

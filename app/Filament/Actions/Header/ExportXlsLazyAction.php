@@ -23,14 +23,14 @@ class ExportXlsLazyAction extends XotBaseAction
     {
         parent::setUp();
 
-        $this->label((string) __('xot::actions.export_xls.label'))
-            ->tooltip((string) __('xot::actions.export_xls.tooltip'))
-            ->icon((string) __('xot::actions.export_xls.icon'))
-            ->modalHeading((string) __('xot::actions.export_xls.modal.heading'))
-            ->modalDescription((string) __('xot::actions.export_xls.modal.description'))
-            ->modalSubmitActionLabel((string) __('xot::actions.export_xls.modal.confirm'))
-            ->modalCancelActionLabel((string) __('xot::actions.export_xls.modal.cancel'))
-            ->successNotificationTitle((string) __('xot::actions.export_xls.success'))
+        $this->label(__('xot::actions.export_xls.label'))
+            ->tooltip(__('xot::actions.export_xls.tooltip'))
+            ->icon(__('xot::actions.export_xls.icon'))
+            ->modalHeading(__('xot::actions.export_xls.modal.heading'))
+            ->modalDescription(__('xot::actions.export_xls.modal.description'))
+            ->modalSubmitActionLabel(__('xot::actions.export_xls.modal.confirm'))
+            ->modalCancelActionLabel(__('xot::actions.export_xls.modal.cancel'))
+            ->successNotificationTitle(__('xot::actions.export_xls.success'))
             ->requiresConfirmation()
             ->action(static function (ListRecords $livewire) {
                 $filename =

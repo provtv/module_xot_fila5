@@ -50,7 +50,7 @@ class ArtisanCommandsManager extends XotBasePage
             app(ExecuteArtisanCommandAction::class)->execute($command);
         } catch (\Exception $e) {
             Notification::make()
-                ->title((string) __('xot::artisan-commands-manager.notifications.error'))
+                ->title(__('xot::artisan-commands-manager.notifications.error'))
                 ->body($e->getMessage())
                 ->danger()
                 ->send();

@@ -54,7 +54,7 @@ use Sushi\Sushi;
  *
  * @method static ModuleFactory factory($count = null, $state = [])
  *
- * @mixin \Eloquent
+ * @mixin \Illuminate\Database\Eloquent\Model
  */
 final class Module extends BaseModel
 {

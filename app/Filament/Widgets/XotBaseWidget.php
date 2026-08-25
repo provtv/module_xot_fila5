@@ -172,7 +172,7 @@ abstract class XotBaseWidget extends FilamentWidget implements HasActions, HasFo
         return static::transFunc(__FUNCTION__);
     }
 
-    public function getWizardSubmitAction(): Action
+   public function getWizardSubmitAction(): Action
     {
         /** @var view-string $submit_view */
         $submit_view = 'pub_theme::filament.wizard.submit-button';
@@ -210,7 +210,7 @@ abstract class XotBaseWidget extends FilamentWidget implements HasActions, HasFo
         return null;
     }
 
-    protected function getStepByName(string $name): Step
+   protected function getStepByName(string $name): Step
     {
         $schema = Str::of($name)
             ->snake()

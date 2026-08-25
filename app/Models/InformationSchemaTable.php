@@ -26,9 +26,6 @@ use Modules\Xot\Database\Factories\InformationSchemaTableFactory;
  * @property ProfileContract|null $updater
  *
  * @method static InformationSchemaTableFactory          factory($count = null, $state = [])
- * @method static Builder<static>|InformationSchemaTable newModelQuery()
- * @method static Builder<static>|InformationSchemaTable newQuery()
- * @method static Builder<static>|InformationSchemaTable query()
  * @method static Builder<static>|InformationSchemaTable whereCreatedAt($value)
  * @method static Builder<static>|InformationSchemaTable whereCreatedBy($value)
  * @method static Builder<static>|InformationSchemaTable whereId($value)
@@ -39,7 +36,7 @@ use Modules\Xot\Database\Factories\InformationSchemaTableFactory;
  * @method static Builder<static>|InformationSchemaTable whereUpdatedAt($value)
  * @method static Builder<static>|InformationSchemaTable whereUpdatedBy($value)
  *
- * @mixin \Eloquent
+ * @mixin \Illuminate\Database\Eloquent\Model
  */
 class InformationSchemaTable extends BaseModel
 {
@@ -120,7 +117,7 @@ class InformationSchemaTable extends BaseModel
         $database = $connection->getDatabaseName();
         $table = $model->getTable();
 
-        static::updateOrCreate([
+        static::query()->updateOrCreate([
             'table_schema' => $database,
             'model_class' => $modelClass,
             'table_name' => $table,
@@ -150,14 +147,14 @@ class InformationSchemaTable extends BaseModel
         $database = $connection->getDatabaseName();
         $table = $model->getTable();
 
-        $record = static::firstOrCreate([
+        $record = static::query()->firstOrCreate([
             'table_schema' => $database,
             'model_class' => $modelClass,
             'table_name' => $table,
         ]);
 
         if (null === $record->table_rows) {
-            $record->update(['table_rows' => $model->count()]);
+            $record->update(['table_rows' => $model->newQuery()->count()]);
         }
 
         return (int) $record->table_rows;
