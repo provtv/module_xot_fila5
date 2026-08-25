@@ -15,9 +15,9 @@ class FakeSeederAction
 {
     use QueueableAction;
 
-    private const MAX_RECORDS = 200;
+    private const int MAX_RECORDS = 200;
 
-    private const CHUNK_SIZE = 50;
+    private const int CHUNK_SIZE = 50;
 
     /**
      * Execute the fake data seeding process.

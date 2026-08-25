@@ -30,6 +30,10 @@ Ordine di escalation:
 
 `@property mixed` nudi: **38 → 5** — i 5 residui sono documentati come non restringibili o codice morto ([handoff](../../../../../../docs/chat/narrow-mixed-remaining-properties.md)).
 
+Censimento app 2026-08-25: ~1851 `array<*,mixed>` (spesso OK), 354 `mixed $param`, 35 `: mixed`.
+Indagine: [investigation-mixed-inventory-2026-08-25](../../../../../../docs/investigation-mixed-inventory-2026-08-25.md).
+Story attiva: [5.42](../../stories/5.42.eliminazione-mixed-contratti-modelli.story.md).
+
 ## Anti-pattern
 
 - `@return T|mixed` su helper config — PHPStan normalizza a `mixed`

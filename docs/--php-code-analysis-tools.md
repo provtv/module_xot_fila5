@@ -1,3 +1,14 @@
+---
+title: "__php-code-analysis-tools"
+module: "Xot"
+type: concept
+tags: [, 3]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: " 3"
+related:
+  - "./eloquent-magic-properties-rule.md"
+---
 # __php-code-analysis-tools
 
 <!-- Contenuto migrato da _docs/__php-code-analysis-tools.txt -->

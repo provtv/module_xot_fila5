@@ -194,6 +194,7 @@ $res=Locality::query()
 
 ## Verifiche Post-Correzione
 
+
 ### 2. Validazione PHPStan
 ```bash
 cd laravel
@@ -227,20 +228,13 @@ php artisan lang:check
 ## Documentazione Aggiornata
 
 ### Modulo Geo
-- [Conflict Resolution](laravel/modules/geo/docs/conflict-resolution.md)
-
-### Modulo User
-- [Theme Translation Conflicts](laravel/modules/user/docs/theme-translation-conflicts-resolution.md)
-
-### Modulo Xot
-- [Git Conflicts Resolution](laravel/modules/xot/docs/git-conflicts-resolution-[date].md)
 - [Conflict Resolution](laravel/Modules/Geo/docs/conflict-resolution.md)
 
 ### Modulo User
 - [Theme Translation Conflicts](laravel/Modules/User/docs/theme-translation-conflicts-resolution.md)
 
 ### Modulo Xot
-- [Git Conflicts Resolution](laravel/Modules/Xot/docs/git-conflicts-resolution-2025-01-06.md)
+- [Git Conflicts Resolution](laravel/Modules/Xot/docs/git-conflicts-resolution.md)
 
 ## Best Practices Applicate
 
@@ -302,17 +296,6 @@ php artisan lang:check
 - [Translation Standards](../../docs/translation-standards.md)
 - [PHPStan Guidelines](../../docs/phpstan-usage.md)
 - [Git Best Practices](../../docs/git-best-practices.md)
-
----
-
-**Ultimo aggiornamento**: 2025-01-06
-- [Geo Conflict Resolution](laravel/modules/geo/docs/conflict-resolution.md)
-- [User Theme Conflicts](laravel/modules/user/docs/theme-translation-conflicts-resolution.md)
-
-### Documentazione Generale
-- [Translation Standards](../../../docs/translation-standards.md)
-- [PHPStan Guidelines](../../../docs/phpstan-usage.md)
-- [Git Best Practices](../../../docs/git-best-practices.md)
 
 ---
 

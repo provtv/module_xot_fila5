@@ -44,7 +44,7 @@ use Spatie\SchemalessAttributes\SchemalessAttributes;
  * @property ProfileContract|null $deleter
  * @property ProfileContract|null $updater
  *
- * @mixin \Eloquent
+ * @mixin \Illuminate\Database\Eloquent\Model
  */
 final class Extra extends BaseExtra
 {

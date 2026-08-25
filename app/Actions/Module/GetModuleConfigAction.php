@@ -11,7 +11,7 @@ class GetModuleConfigAction
 {
     use QueueableAction;
 
-    /**
+/**
      * @return array<string, mixed>
      */
     public function execute(string $moduleName, string $config): array
@@ -21,12 +21,10 @@ class GetModuleConfigAction
         if (! file_exists($configFile)) {
             throw new \Exception('Config file not found: '.$configFile);
         }
-
-        $loaded = File::getRequire($configFile);
+$loaded = File::getRequire($configFile);
         if (! is_array($loaded)) {
             throw new \Exception('Config file must return array: '.$configFile);
         }
-
         /** @var array<string, mixed> $normalized */
         $normalized = [];
 

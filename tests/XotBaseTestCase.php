@@ -43,8 +43,6 @@ use PHPUnit\Framework\MockObject\MockObject;
  * @property Model|null  $baseModel
  * @property string|null $testDir
  * @property string|null $workDir
- * @property mixed       $saved
- * @property mixed       $extra_attributes
  */
 abstract class XotBaseTestCase extends BaseTestCase
 {

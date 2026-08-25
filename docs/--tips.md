@@ -1,3 +1,14 @@
+---
+title: "__tips"
+module: "Xot"
+type: concept
+tags: [, 9]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: " 9"
+related:
+  - "./eloquent-magic-properties-rule.md"
+---
 # __tips
 
 <!-- Contenuto migrato da _docs/__tips.txt -->

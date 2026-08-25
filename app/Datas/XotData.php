@@ -133,16 +133,7 @@ class XotData extends Data implements Wireable
             throw new \Exception("Attribute 'email' not found in model ".$userInstance::class);
         }
 
-        /** @var (Model&UserContract)|null $user */
-        $user = $user_class::query()->where('email', $email)->first();
-
-        if (null === $user) {
-            throw new \Exception('user not found for email '.$email);
-        }
-
-        Assert::implementsInterface($user, UserContract::class, '['.__LINE__.']['.class_basename($this).']');
-
-        return $user;
+        return $userInstance;
     }
 
     public function findUserByEmail(string $email): ?UserContract

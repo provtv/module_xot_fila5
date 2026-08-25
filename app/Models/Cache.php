@@ -27,7 +27,7 @@ use Modules\Xot\Database\Factories\CacheFactory;
  * @property ProfileContract|null $deleter
  * @property ProfileContract|null $updater
  *
- * @mixin \Eloquent
+ * @mixin \Illuminate\Database\Eloquent\Model
  */
 class Cache extends BaseModel
 {

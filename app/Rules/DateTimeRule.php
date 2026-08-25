@@ -16,7 +16,7 @@ use Illuminate\Translation\PotentiallyTranslatedString;
  */
 class DateTimeRule implements ValidationRule
 {
-    private const FORMAT = 'd/m/Y H:i';
+    private const string FORMAT = 'd/m/Y H:i';
 
     /**
      * Run the validation rule.

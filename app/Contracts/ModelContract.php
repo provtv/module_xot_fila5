@@ -28,26 +28,15 @@ use Illuminate\Support\Carbon;
  * @property Pivot|null  $pivot
  * @property string      $tennant_name
  *
- * @method string                                                          getRouteKey()
- * @method string                                                          getRouteKeyName()
- * @method string                                                          getTable()
- * @method mixed                                                           with(array<int, string> $array)
- * @method list<string>                                                    getFillable()
- * @method mixed                                                           fill(array<string, mixed> $array)
- * @method mixed                                                           getConnection()
- * @method mixed                                                           update(array<string, mixed> $params)
- * @method mixed                                                           delete()
- * @method mixed                                                           detach(mixed $params)
- * @method mixed                                                           attach(mixed $params)
- * @method array<string, mixed>                                            treeLabel()
- * @method array<string, mixed>                                            treeSons()
- * @method array<string, mixed>                                            toArray()
+ * @method void detach(Model $model)
+ * @method void attach(Model $model)
+ * @method string treeLabel()
+ * @method \Illuminate\Support\Collection<int, Model> treeSons()
  * @method \Illuminate\Database\Eloquent\Relations\BelongsTo<Model, Model> user()
- * @method mixed                                                           getAttributeValue(string $key)
  *
  * @phpstan-require-extends Model
  *
- * @mixin \Eloquent
+ * @mixin \Illuminate\Database\Eloquent\Model
  */
 interface ModelContract
 {

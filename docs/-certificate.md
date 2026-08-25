@@ -1,3 +1,14 @@
+---
+title: "_certificate"
+module: "Xot"
+type: concept
+tags: [, 4]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: " 4"
+related:
+  - "./eloquent-magic-properties-rule.md"
+---
 # _certificate
 
 <!-- Contenuto migrato da _docs/_certificate.txt -->

@@ -37,7 +37,7 @@ use Modules\Xot\Database\Factories\PulseAggregateFactory;
  * @property ProfileContract|null $deleter
  * @property ProfileContract|null $updater
  *
- * @mixin \Eloquent
+ * @mixin \Illuminate\Database\Eloquent\Model
  */
 class PulseAggregate extends BaseModel
 {
