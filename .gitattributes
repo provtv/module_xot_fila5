@@ -10,6 +10,9 @@
 *.scss linguist-vendored
 *.js linguist-vendored
 CHANGELOG.md export-ignore
+<<<<<<< .merge_file_UDvgyl
+=======
+>>>>>>> .merge_file_koLvEP
 # Binary files (regular git blobs — NO git-lfs)
 # `binary` + `!filter` azzera eventuali filtri LFS ereditati
 *.png binary !filter
