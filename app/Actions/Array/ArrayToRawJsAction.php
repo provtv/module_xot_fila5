@@ -25,7 +25,11 @@ class ArrayToRawJsAction
     /**
      * Converte l'array in una stringa JavaScript (oggetto letterale) e restituisce RawJs.
      *
+<<<<<<< HEAD
     * @param array<int|string, mixed> $array Array associativo (anche annidato); valori RawJs restano raw
+=======
+     * @param array<int|string, mixed> $array Array associativo (anche annidato); valori RawJs restano raw
+>>>>>>> laraxot/dev
      */
     public function execute(array $array): RawJs
     {
@@ -63,6 +67,10 @@ class ArrayToRawJsAction
             return (string) $value;
         }
 
+<<<<<<< HEAD
        return "'".str_replace(['\\', "'"], ['\\\\', "\\'"], SafeStringCastAction::cast($value))."'";
+=======
+        return "'".str_replace(['\\', "'"], ['\\\\', "\\'"], SafeStringCastAction::cast($value))."'";
+>>>>>>> laraxot/dev
     }
 }

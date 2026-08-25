@@ -47,7 +47,11 @@ abstract class XotBaseResource extends FilamentResource
     protected static ?SubNavigationPosition $subNavigationPosition = SubNavigationPosition::Top;
 
     /**
+<<<<<<< HEAD
     * @param  array<string, bool|float|int|string|null>  $params
+=======
+     * @param  array<string, bool|float|int|string|null>  $params
+>>>>>>> laraxot/dev
      */
     public static function trans(string $key, bool $exceptionIfNotExist = false, array $params = []): string
     {
@@ -56,7 +60,11 @@ abstract class XotBaseResource extends FilamentResource
 
         if (is_string($res)) {
             if ($exceptionIfNotExist && $res === $tmp) {
+<<<<<<< HEAD
                throw new Exception('['.__LINE__.']['.class_basename(self::class).']');
+=======
+                throw new Exception('['.__LINE__.']['.class_basename(self::class).']');
+>>>>>>> laraxot/dev
             }
 
             return $res;
@@ -87,7 +95,11 @@ abstract class XotBaseResource extends FilamentResource
      */
     public static function getModel(): string
     {
+<<<<<<< HEAD
        if (static::$model !== null) {
+=======
+        if (static::$model !== null) {
+>>>>>>> laraxot/dev
             $res = static::$model;
             Assert::subclassOf(
                 $res,
@@ -112,7 +124,11 @@ abstract class XotBaseResource extends FilamentResource
     }
 
     /**
+<<<<<<< HEAD
     * Non `final`: 74 Resource dei moduli lo sovrascrivono ancora, e `final` su una classe
+=======
+     * Non `final`: 74 Resource dei moduli lo sovrascrivono ancora, e `final` su una classe
+>>>>>>> laraxot/dev
      * base Laraxot produce un errore fatale al primo autoload della sottoclasse — non un
      * avviso dell'analizzatore, la pagina bianca. Chi migra sposta lo schema in
      * `Schemas\{Model}Form`; finche' non l'ha fatto, l'override deve restare possibile.
@@ -205,7 +221,11 @@ abstract class XotBaseResource extends FilamentResource
     }
 
     /**
+<<<<<<< HEAD
     * Bridge di migrazione — schema infolist ancora sulla Resource.
+=======
+     * Bridge di migrazione — schema infolist ancora sulla Resource.
+>>>>>>> laraxot/dev
      * La classe `{Model}Infolist` è **obbligatoria** ({@see static::getInfolistClass()}).
      *
      * @return array<string, \Filament\Schemas\Components\Component>
@@ -216,7 +236,11 @@ abstract class XotBaseResource extends FilamentResource
     }
 
     /**
+<<<<<<< HEAD
     * Classe Infolist dedicata: `{Resource}\Schemas\{Model}Infolist`.
+=======
+     * Classe Infolist dedicata: `{Resource}\Schemas\{Model}Infolist`.
+>>>>>>> laraxot/dev
      *
      * Obbligatoria. Nessun soft-skip: se non esiste → LogicException.
      *
@@ -271,7 +295,11 @@ abstract class XotBaseResource extends FilamentResource
             $count = app(CountAction::class)->execute(static::getModel());
 
             return number_format($count, 0).'';
+<<<<<<< HEAD
        } catch (Exception $e) {
+=======
+        } catch (Exception $e) {
+>>>>>>> laraxot/dev
             return '--';
         }
     }
@@ -298,7 +326,11 @@ abstract class XotBaseResource extends FilamentResource
         /** @var class-string<Page> $view */
         $view = $view;
 
+<<<<<<< HEAD
        $pages = [];
+=======
+        $pages = [];
+>>>>>>> laraxot/dev
         $pages['index'] = $index::route('/');
         $pages['create'] = $create::route('/create');
         $pages['edit'] = $edit::route('/{record}/edit');
@@ -315,7 +347,11 @@ abstract class XotBaseResource extends FilamentResource
      */
     public static function getRelations(): array
     {
+<<<<<<< HEAD
        $reflector = new ReflectionClass(static::class);
+=======
+        $reflector = new ReflectionClass(static::class);
+>>>>>>> laraxot/dev
         $filename = $reflector->getFileName();
         Assert::string($filename, __FILE__.':'.__LINE__.' - '.class_basename(self::class));
 
@@ -328,7 +364,11 @@ abstract class XotBaseResource extends FilamentResource
         $filesResult = glob($path.\DIRECTORY_SEPARATOR.'*RelationManager.php');
 
         // PHPStan: glob() with valid pattern returns array
+<<<<<<< HEAD
        if ($filesResult === []) {
+=======
+        if ($filesResult === []) {
+>>>>>>> laraxot/dev
             return [];
         }
 
@@ -355,7 +395,11 @@ abstract class XotBaseResource extends FilamentResource
 
     public static function getWizardSubmitAction(): Htmlable
     {
+<<<<<<< HEAD
        $submitView = 'pub_theme::filament.wizard.submit-button';
+=======
+        $submitView = 'pub_theme::filament.wizard.submit-button';
+>>>>>>> laraxot/dev
         if (! View::exists($submitView)) {
             throw new Exception("View {$submitView} does not exist");
         }
@@ -369,7 +413,11 @@ abstract class XotBaseResource extends FilamentResource
      *
      * @return array<int, Component>
      */
+<<<<<<< HEAD
    public static function getAttachmentsSchema(): array
+=======
+    public static function getAttachmentsSchema(): array
+>>>>>>> laraxot/dev
     {
         $model = static::getModel();
         if (! method_exists($model, 'getAttachments')) {

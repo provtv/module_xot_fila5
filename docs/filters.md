@@ -53,4 +53,8 @@ class RequirementSorter implements Clause
 //----------------------------------------------------------------------
 
 
+<<<<<<< HEAD
 https://chasingcode.dev/blog/refactor-laravel-eloquent-conditions-to-trait/
+=======
+https://chasingcode.dev/blog/refactor-laravel-eloquent-conditions-to-trait/
+>>>>>>> laraxot/dev

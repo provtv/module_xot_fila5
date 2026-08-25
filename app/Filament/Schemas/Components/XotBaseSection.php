@@ -14,7 +14,11 @@ use Filament\Schemas\Components\Section;
  * This ensures consistency with the framework's architecture and provides
  * a foundation for common Section functionality across the application.
  *
+<<<<<<< HEAD
 * @method static static make(string|array<string, mixed>|null $name = null) Create a new instance of the component
+=======
+ * @method static static make(string|array<string, mixed>|null $name = null) Create a new instance of the component
+>>>>>>> laraxot/dev
  */
 abstract class XotBaseSection extends Section
 {

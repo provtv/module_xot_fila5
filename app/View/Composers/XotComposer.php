@@ -98,7 +98,11 @@ class XotComposer
         $metatag = MetatagData::make();
         $fun = 'get'.Str::studly($str);
         if (method_exists($metatag, $fun)) {
+<<<<<<< HEAD
            $value = $metatag->{$fun}();
+=======
+            $value = $metatag->{$fun}();
+>>>>>>> laraxot/dev
 
             return is_string($value) || is_bool($value) ? $value : null;
         }

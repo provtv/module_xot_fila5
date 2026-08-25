@@ -11,7 +11,11 @@ uses(TestCase::class);
 it('accepts valid phone', function (): void {
     $phone = '+11234567890';
     $vo = PhoneValueObject::fromString($phone);
+<<<<<<< HEAD
    Assert::assertSame($phone, $vo->toString());
+=======
+    Assert::assertSame($phone, $vo->toString());
+>>>>>>> laraxot/dev
 });
 
 it('throws on invalid phone', function (): void {

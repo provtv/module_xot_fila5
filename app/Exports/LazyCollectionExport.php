@@ -21,7 +21,11 @@ class LazyCollectionExport implements FromIterator, ShouldQueue, WithHeadings, W
 {
     use Exportable;
 
+<<<<<<< HEAD
    /** @var array<int, string> */
+=======
+    /** @var array<int, string> */
+>>>>>>> laraxot/dev
     public array $headings = [];
 
     public ?string $transKey;
@@ -30,7 +34,11 @@ class LazyCollectionExport implements FromIterator, ShouldQueue, WithHeadings, W
     public array $fields = [];
 
     /**
+<<<<<<< HEAD
     * @param LazyCollection<int, mixed> $collection
+=======
+     * @param LazyCollection<int, mixed> $collection
+>>>>>>> laraxot/dev
      * @param array<int, string>         $fields
      */
     public function __construct(
@@ -38,7 +46,11 @@ class LazyCollectionExport implements FromIterator, ShouldQueue, WithHeadings, W
         ?string $transKey = null,
         array $fields = [],
     ) {
+<<<<<<< HEAD
        $this->transKey = $transKey;
+=======
+        $this->transKey = $transKey;
+>>>>>>> laraxot/dev
         $this->fields = $fields;
     }
 
@@ -58,7 +70,11 @@ class LazyCollectionExport implements FromIterator, ShouldQueue, WithHeadings, W
                 return [$key => $rowArray[$key] ?? null];
             })
             ->toArray();
+<<<<<<< HEAD
    }
+=======
+    }
+>>>>>>> laraxot/dev
 
     /**
      * @return Collection<int, string>
@@ -72,7 +88,11 @@ class LazyCollectionExport implements FromIterator, ShouldQueue, WithHeadings, W
         $head = $this->collection->first();
         $headArray = $this->normalizeRow($head);
 
+<<<<<<< HEAD
        return collect(array_keys($headArray))
+=======
+        return collect(array_keys($headArray))
+>>>>>>> laraxot/dev
             ->map(static fn (int|string $key): string => (string) $key)
             ->values();
     }
@@ -84,7 +104,11 @@ class LazyCollectionExport implements FromIterator, ShouldQueue, WithHeadings, W
     {
         $headings = $this->getHead();
         $transKey = $this->transKey;
+<<<<<<< HEAD
        $headingCollection = collect();
+=======
+        $headingCollection = collect();
+>>>>>>> laraxot/dev
 
         foreach ($headings as $heading) {
             $headingCollection->put((string) $heading, $heading);
@@ -112,7 +136,11 @@ class LazyCollectionExport implements FromIterator, ShouldQueue, WithHeadings, W
     }
 
     /**
+<<<<<<< HEAD
     * @return \Iterator<int, mixed>
+=======
+     * @return \Iterator<int, mixed>
+>>>>>>> laraxot/dev
      */
     public function iterator(): \Iterator
     {

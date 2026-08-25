@@ -123,4 +123,8 @@ use TransTrait;
 ## Riferimenti
 
 - Regola root: `docs/wiki/rules/enum-trait-required.md`
+<<<<<<< HEAD
 - Regola storica: `docs/wiki/rules/enum-trait-standard.md`
+=======
+- Regola storica: `docs/wiki/rules/enum-trait-standard.md`
+>>>>>>> laraxot/dev

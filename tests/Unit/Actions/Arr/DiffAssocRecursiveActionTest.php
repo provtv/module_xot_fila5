@@ -20,7 +20,11 @@ it('calculates recursive diff correctly', function (): void {
     $action = app(DiffAssocRecursiveAction::class);
     $result = $action->execute($arr1, $arr2);
 
+<<<<<<< HEAD
    Assert::assertSame(['id' => 2, 'name' => 'Test 2'], $result['b']);
+=======
+    Assert::assertSame(['id' => 2, 'name' => 'Test 2'], $result['b']);
+>>>>>>> laraxot/dev
     Assert::assertArrayHasKey('b', $result);
 });
 
@@ -35,7 +39,11 @@ it('handles numeric strings in diff', function (): void {
     $action = app(DiffAssocRecursiveAction::class);
     $result = $action->execute($arr1, $arr2);
 
+<<<<<<< HEAD
    Assert::assertEmpty($result);
+=======
+    Assert::assertEmpty($result);
+>>>>>>> laraxot/dev
 });
 
 it('throws exception for non-array items in fixType', function (): void {

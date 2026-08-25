@@ -46,7 +46,11 @@ class SafeArrayCastAction
     /**
      * Converte in modo sicuro un valore mixed in array.
      *
+<<<<<<< HEAD
     * @param mixed                         $value   Il valore da convertire
+=======
+     * @param mixed                         $value   Il valore da convertire
+>>>>>>> laraxot/dev
      * @param array<int|string, mixed>|null $default Valore di default se la conversione fallisce (default: [])
      *
      * @return array<int|string, mixed> Il valore convertito
@@ -55,7 +59,11 @@ class SafeArrayCastAction
     {
         // Se è già un array, restituiscilo direttamente
         if (is_array($value)) {
+<<<<<<< HEAD
            return $this->normalizeArray($value);
+=======
+            return $this->normalizeArray($value);
+>>>>>>> laraxot/dev
         }
 
         // Se è null, restituisci il default
@@ -67,29 +75,49 @@ class SafeArrayCastAction
         if (is_object($value) && method_exists($value, 'toArray')) {
             $result = $value->toArray();
 
+<<<<<<< HEAD
            return is_array($result) ? $this->normalizeArray($result) : ($default ?? []);
+=======
+            return is_array($result) ? $this->normalizeArray($result) : ($default ?? []);
+>>>>>>> laraxot/dev
         }
 
         // Se è un oggetto stdClass, convertilo in array
         if (is_object($value) && 'stdClass' === $value::class) {
+<<<<<<< HEAD
            return $this->normalizeArray((array) $value);
+=======
+            return $this->normalizeArray((array) $value);
+>>>>>>> laraxot/dev
         }
 
         // Se è un oggetto con metodo __toArray, usalo
         if (is_object($value) && method_exists($value, '__toArray')) {
             $result = $value->__toArray();
 
+<<<<<<< HEAD
            return is_array($result) ? $this->normalizeArray($result) : ($default ?? []);
+=======
+            return is_array($result) ? $this->normalizeArray($result) : ($default ?? []);
+>>>>>>> laraxot/dev
         }
 
         // Se è un oggetto con proprietà pubbliche, convertilo in array
         if (is_object($value)) {
+<<<<<<< HEAD
            return $this->normalizeArray(get_object_vars($value));
+=======
+            return $this->normalizeArray(get_object_vars($value));
+>>>>>>> laraxot/dev
         }
 
         // Se è uno scalare, avvolgilo in un array
         if (is_scalar($value)) {
+<<<<<<< HEAD
            return $this->normalizeArray([$value]);
+=======
+            return $this->normalizeArray([$value]);
+>>>>>>> laraxot/dev
         }
 
         // Per tutti gli altri tipi, restituisci il default
@@ -97,7 +125,11 @@ class SafeArrayCastAction
     }
 
     /**
+<<<<<<< HEAD
     * @param array<int|string, mixed> $array
+=======
+     * @param array<int|string, mixed> $array
+>>>>>>> laraxot/dev
      *
      * @return array<string, mixed>
      */
@@ -138,7 +170,11 @@ class SafeArrayCastAction
     /**
      * Converte un valore in array con filtro di chiavi.
      *
+<<<<<<< HEAD
     * @param mixed                         $value       Il valore da convertire
+=======
+     * @param mixed                         $value       Il valore da convertire
+>>>>>>> laraxot/dev
      * @param array<int|string>             $allowedKeys Solo queste chiavi saranno mantenute
      * @param array<int|string, mixed>|null $default     Valore di default se la conversione fallisce
      *
@@ -149,7 +185,11 @@ class SafeArrayCastAction
         $array = $this->execute($value, $default);
 
         // Filtra solo le chiavi permesse
+<<<<<<< HEAD
        $flippedKeys = array_flip($allowedKeys);
+=======
+        $flippedKeys = array_flip($allowedKeys);
+>>>>>>> laraxot/dev
 
         return array_intersect_key($array, $flippedKeys);
     }
@@ -157,7 +197,11 @@ class SafeArrayCastAction
     /**
      * Converte un valore in array con validazione di tipo per i valori.
      *
+<<<<<<< HEAD
     * @param mixed                         $value     Il valore da convertire
+=======
+     * @param mixed                         $value     Il valore da convertire
+>>>>>>> laraxot/dev
      * @param string                        $valueType Tipo richiesto per i valori ('string', 'int', 'float', 'bool')
      * @param array<int|string, mixed>|null $default   Valore di default se la conversione fallisce
      *
@@ -197,7 +241,11 @@ class SafeArrayCastAction
     /**
      * Metodo statico di convenienza per chiamate dirette.
      *
+<<<<<<< HEAD
     * @param mixed                         $value   Il valore da convertire
+=======
+     * @param mixed                         $value   Il valore da convertire
+>>>>>>> laraxot/dev
      * @param array<int|string, mixed>|null $default Valore di default se la conversione fallisce (default: [])
      *
      * @return array<int|string, mixed> Il valore convertito in array
@@ -210,7 +258,11 @@ class SafeArrayCastAction
     /**
      * Metodo statico per cast con chiavi richieste.
      *
+<<<<<<< HEAD
     * @param mixed                         $value        Il valore da convertire
+=======
+     * @param mixed                         $value        Il valore da convertire
+>>>>>>> laraxot/dev
      * @param array<int|string>             $requiredKeys Chiavi che devono essere presenti
      * @param array<int|string, mixed>|null $default      Valore di default se la conversione fallisce
      *
@@ -224,7 +276,11 @@ class SafeArrayCastAction
     /**
      * Metodo statico per cast con filtro di chiavi.
      *
+<<<<<<< HEAD
     * @param mixed                         $value       Il valore da convertire
+=======
+     * @param mixed                         $value       Il valore da convertire
+>>>>>>> laraxot/dev
      * @param array<int|string>             $allowedKeys Solo queste chiavi saranno mantenute
      * @param array<int|string, mixed>|null $default     Valore di default se la conversione fallisce
      *
@@ -238,7 +294,11 @@ class SafeArrayCastAction
     /**
      * Metodo statico per cast con tipo di valore specifico.
      *
+<<<<<<< HEAD
     * @param mixed                         $value     Il valore da convertire
+=======
+     * @param mixed                         $value     Il valore da convertire
+>>>>>>> laraxot/dev
      * @param string                        $valueType Tipo richiesto per i valori
      * @param array<int|string, mixed>|null $default   Valore di default se la conversione fallisce
      *

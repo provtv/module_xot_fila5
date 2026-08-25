@@ -4,4 +4,8 @@ topic: laravel
 canonical: ../../../Themes/docs/shared-components/laravel.md
 ---
 
+<<<<<<< HEAD
 See canonical documentation: ../../../Themes/docs/shared-components/laravel.md
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/laravel.md
+>>>>>>> laraxot/dev

@@ -16,5 +16,9 @@ it('normalizes path slashes correctly', function (): void {
     $path = 'some/path\with/mixed\\slashes';
     $expected = str_replace(['/', '\\'], [DIRECTORY_SEPARATOR, DIRECTORY_SEPARATOR], $path);
 
+<<<<<<< HEAD
    Assert::assertSame($expected, $action->execute($path));
+=======
+    Assert::assertSame($expected, $action->execute($path));
+>>>>>>> laraxot/dev
 });

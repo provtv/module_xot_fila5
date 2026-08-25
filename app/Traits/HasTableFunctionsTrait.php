@@ -44,7 +44,11 @@ trait HasTableFunctionsTrait
                 ])),
             'delete' => Action::make('delete')
                 ->label('Elimina')
+<<<<<<< HEAD
                ->action(fn (Model $record) => $record->delete())
+=======
+                ->action(fn (Model $record) => $record->delete())
+>>>>>>> laraxot/dev
                 ->requiresConfirmation(),
         ];
     }
@@ -59,7 +63,11 @@ trait HasTableFunctionsTrait
         return [
             'delete' => BulkAction::make('delete')
                 ->label('Elimina selezionati')
+<<<<<<< HEAD
                ->action(fn (Collection $records) => $records->each->delete())
+=======
+                ->action(fn (Collection $records) => $records->each->delete())
+>>>>>>> laraxot/dev
                 ->requiresConfirmation(),
         ];
     }

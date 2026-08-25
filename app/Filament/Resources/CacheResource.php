@@ -15,7 +15,11 @@ class CacheResource extends XotBaseResource
 {
     protected static ?string $model = Cache::class;
 
+<<<<<<< HEAD
    // #[\Override]
+=======
+    // #[\Override]
+>>>>>>> laraxot/dev
     /**
      * @return array<string, mixed>
      */

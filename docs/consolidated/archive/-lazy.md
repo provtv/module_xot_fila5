@@ -1,0 +1,27 @@
+---
+title: "_lazy"
+module: "Xot"
+type: concept
+tags: [, lazy]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: " lazy"
+related:
+  - "./eloquent-magic-properties-rule.md"
+---
+# _lazy
+
+<!-- Contenuto migrato da _docs/_lazy.txt -->
+
+https://github.com/verlok/vanilla-lazyload   
+https://github.com/ApoorvSaxena/lozad.js
+https://github.com/malchata/yall.js
+https://github.com/ressio/lazy-load-xt
+https://github.com/aFarkas/lazysizes
+
+https://lazy-loading.firebaseapp.com/lazy_loading_lib.html
+
+
+
+
+

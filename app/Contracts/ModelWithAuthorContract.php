@@ -24,7 +24,11 @@ use Illuminate\Support\Carbon;
  * @property UserContract|null  $user
  * @property UserContract|null  $author
  *
+<<<<<<< HEAD
 * @method mixed                                                           getKey()
+=======
+ * @method mixed                                                           getKey()
+>>>>>>> laraxot/dev
  * @method string                                                          getRouteKey()
  * @method string                                                          getRouteKeyName()
  * @method string                                                          getTable()

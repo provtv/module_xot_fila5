@@ -145,7 +145,11 @@ class GetPdfContentByRecordAction
     {
         $modelName = class_basename($record::class);
         $recordKey = $record->getKey();
+<<<<<<< HEAD
        $baseFilename = mb_strtolower($modelName).'_'.SafeStringCastAction::cast($recordKey ?? 'unknown');
+=======
+        $baseFilename = mb_strtolower($modelName).'_'.SafeStringCastAction::cast($recordKey ?? 'unknown');
+>>>>>>> laraxot/dev
 
         // Enhanced filename for records with identification fields
         if (isset($record->matr, $record->cognome, $record->nome)) {
@@ -153,7 +157,11 @@ class GetPdfContentByRecordAction
             $cognome = is_string($record->cognome) ? $record->cognome : 'unknown';
             $nome = is_string($record->nome) ? $record->nome : 'unknown';
 
+<<<<<<< HEAD
            return 'scheda_'.SafeStringCastAction::cast($recordKey ?? 'unknown').'_'.$matr.'_'.$cognome.'_'.$nome.'.pdf';
+=======
+            return 'scheda_'.SafeStringCastAction::cast($recordKey ?? 'unknown').'_'.$matr.'_'.$cognome.'_'.$nome.'.pdf';
+>>>>>>> laraxot/dev
         }
 
         // Enhanced filename for records with name field
@@ -197,7 +205,11 @@ class GetPdfContentByRecordAction
             // Generate and return PDF content as binary string
             return $html2pdf->output('', 'S'); // 'S' returns string content
         } catch (\Exception $e) {
+<<<<<<< HEAD
            Log::error('PDF generation failed in GetPdfContentByRecordAction', [
+=======
+            Log::error('PDF generation failed in GetPdfContentByRecordAction', [
+>>>>>>> laraxot/dev
                 'filename' => $filename,
                 'error' => $e->getMessage(),
                 'trace' => $e->getTraceAsString(),

@@ -2,7 +2,11 @@
 
 ## 🚨 REGOLA CRITICA RISPETTATA 🚨
 
+<<<<<<<< HEAD:docs/phpstan-analysis_2.md
 **NON è stato modificato** `/var/www/html/_bases/<directory progetto>/laravel/phpstan.neon`
+========
+**NON è stato modificato** `phpstan.neon`
+>>>>>>>> laraxot/dev:docs/phpstan-phpstan-analysis-report-18-agosto.md
 
 ## Analisi Completa
 

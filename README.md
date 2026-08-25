@@ -505,4 +505,8 @@ Stack frontoffice: **Tailwind · Alpine · Lit · DaisyUI · Flowbite · Filamen
 
 ---
 
+<<<<<<< HEAD
 **Modulo** `xot` · **Laraxot** · **FixCity Platform** · PHPStan 10 · Filament 5
+=======
+**Modulo** `xot` · **Laraxot** · **FixCity Platform** · PHPStan 10 · Filament 5
+>>>>>>> laraxot/dev

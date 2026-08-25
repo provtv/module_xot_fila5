@@ -28,7 +28,11 @@ describe('Get Pdf Content By Record Action', function (): void {
         view()->addNamespace('user', resource_path('views'));
 
         // Act & Assert
+<<<<<<< HEAD
        $this->expectThrowable(\Exception::class);
+=======
+        $this->expectThrowable(\Exception::class);
+>>>>>>> laraxot/dev
         $this->expectThrowableMessage("View 'user::user.show.pdf' not found");
 
         app(GetPdfContentByRecordAction::class)->execute($user);
@@ -49,7 +53,11 @@ describe('Get Pdf Content By Record Action', function (): void {
         $viewName = $method->invoke($action, $user);
 
         // Assert
+<<<<<<< HEAD
        Assert::assertEquals('user::user.show.pdf', $viewName);
+=======
+        Assert::assertEquals('user::user.show.pdf', $viewName);
+>>>>>>> laraxot/dev
     });
 
     test('it generates correct filename for basic model', function (): void {
@@ -67,7 +75,11 @@ describe('Get Pdf Content By Record Action', function (): void {
         $filename = $method->invoke($action, $user);
 
         // Assert
+<<<<<<< HEAD
        Assert::assertEquals('user_123_test-user.pdf', $filename);
+=======
+        Assert::assertEquals('user_123_test-user.pdf', $filename);
+>>>>>>> laraxot/dev
     });
 
     test('it generates enhanced filename for performance models', function (): void {
@@ -77,13 +89,21 @@ describe('Get Pdf Content By Record Action', function (): void {
 
             protected $fillable = ['id', 'matr', 'cognome', 'nome'];
 
+<<<<<<< HEAD
            public function testGetKey(): int
+=======
+            public function testGetKey(): int
+>>>>>>> laraxot/dev
             {
                 return 456;
             }
         };
 
+<<<<<<< HEAD
        $record->setAttribute('matr', 'ABC123');
+=======
+        $record->setAttribute('matr', 'ABC123');
+>>>>>>> laraxot/dev
         $record->setAttribute('cognome', 'Rossi');
         $record->setAttribute('nome', 'Mario');
 
@@ -98,7 +118,11 @@ describe('Get Pdf Content By Record Action', function (): void {
         $filename = $method->invoke($action, $record);
 
         // Assert
+<<<<<<< HEAD
        Assert::assertEquals('scheda_456_ABC123_Rossi_Mario.pdf', $filename);
+=======
+        Assert::assertEquals('scheda_456_ABC123_Rossi_Mario.pdf', $filename);
+>>>>>>> laraxot/dev
     });
 
     test('it prepares correct view parameters', function (): void {
@@ -116,7 +140,11 @@ describe('Get Pdf Content By Record Action', function (): void {
         $params = $method->invoke($action, $user, 'user::user.show.pdf');
 
         // Assert
+<<<<<<< HEAD
        Assert::assertIsArray($params);
+=======
+        Assert::assertIsArray($params);
+>>>>>>> laraxot/dev
         Assert::assertArrayHasKey('view', $params);
         Assert::assertArrayHasKey('row', $params);
         Assert::assertArrayHasKey('transKey', $params);

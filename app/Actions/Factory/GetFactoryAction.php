@@ -31,7 +31,11 @@ class GetFactoryAction
      *
      * @param string $model_class the class name of the model
      *
+<<<<<<< HEAD
     * @throws \Exception when the factory file cannot be loaded or generated
+=======
+     * @throws \Exception when the factory file cannot be loaded or generated
+>>>>>>> laraxot/dev
      *
      * @return Factory<covariant Model>
      */
@@ -42,7 +46,11 @@ class GetFactoryAction
 
         $factory_class = $this->getFactoryClass($model_class);
 
+<<<<<<< HEAD
        if (! class_exists($factory_class)) {
+=======
+        if (! class_exists($factory_class)) {
+>>>>>>> laraxot/dev
             $this->loadFactoryFromDisk($model_class);
         }
 
@@ -102,7 +110,11 @@ class GetFactoryAction
         Assert::stringNotEmpty($model_class, 'Model class non può essere vuota');
         Assert::classExists($model_class, "La classe del modello {$model_class} non esiste");
 
+<<<<<<< HEAD
        $factory_class = $this->getFactoryClass($model_class);
+=======
+        $factory_class = $this->getFactoryClass($model_class);
+>>>>>>> laraxot/dev
 
         if (class_exists($factory_class)) {
             return;
@@ -130,6 +142,10 @@ class GetFactoryAction
         $artisan_params = ['name' => $model_name, 'module' => $module_name];
 
         Artisan::call($artisan_cmd, $artisan_params);
+<<<<<<< HEAD
+=======
+
+>>>>>>> laraxot/dev
         $this->loadFactoryFromDisk($model_class);
     }
 

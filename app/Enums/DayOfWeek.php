@@ -24,7 +24,11 @@ use Modules\Xot\Traits\EnumIntegerTrait;
  */
 enum DayOfWeek: int implements HasColor, HasDescription, HasIcon, HasLabel
 {
+<<<<<<< HEAD
    use EnumIntegerTrait;
+=======
+    use EnumIntegerTrait;
+>>>>>>> laraxot/dev
 
     case MONDAY = 1;
     case TUESDAY = 2;
@@ -81,7 +85,11 @@ enum DayOfWeek: int implements HasColor, HasDescription, HasIcon, HasLabel
 
     /**
      * Ottiene il giorno successivo della settimana.
+<<<<<<< HEAD
     *
+=======
+     *
+>>>>>>> laraxot/dev
      * Sovrascrive di proposito `EnumIntegerTrait::next()`: la settimana è ciclica,
      * quindi da `SUNDAY` si torna a `MONDAY` e il ritorno è `self`, mai `null`.
      * La versione del trait è lineare e restituisce `null` sull'ultimo case.

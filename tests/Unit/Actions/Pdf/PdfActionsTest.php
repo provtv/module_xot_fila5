@@ -14,7 +14,11 @@ it('executes pdf by html action correctly', function (): void {
     $html = '<h1>Test</h1>';
     $filename = 'test.pdf';
 
+<<<<<<< HEAD
    try {
+=======
+    try {
+>>>>>>> laraxot/dev
         $result = $action->execute($html, $filename, 'local', 'path', 'P', PdfEngineEnum::SPIPU);
         Assert::assertStringContainsString('.pdf', (string) $result);
     } catch (Throwable $e) {

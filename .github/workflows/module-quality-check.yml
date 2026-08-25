@@ -132,4 +132,8 @@ jobs:
         echo "✅ Code Style: COMPLIANT"
         echo "✅ Architecture: COMPLIANT"
         echo ""
+<<<<<<< HEAD
         echo "🚀 Xot Module: QUALITY CHECK PASSED!"
+=======
+        echo "🚀 Xot Module: QUALITY CHECK PASSED!"
+>>>>>>> laraxot/dev

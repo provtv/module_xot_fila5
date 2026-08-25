@@ -62,7 +62,11 @@ abstract class XotBasePanelProvider extends PanelProvider
             ->path($moduleLow.'/admin')
             // Configure Filament discovery for module components (unconditional; dirs are expected to exist)
             ->discoverResources(
+<<<<<<< HEAD
                base_path('Modules/'.$this->module.'/app/Filament/Resources'),
+=======
+                base_path('Modules/'.$this->module.'/app/Filament/Resources'),
+>>>>>>> laraxot/dev
                 sprintf('%s\\Filament\\Resources', $moduleNamespace),
             )
             ->discoverPages(
@@ -83,7 +87,11 @@ abstract class XotBasePanelProvider extends PanelProvider
                 StartSession::class,
                 AuthenticateSession::class,
                 ShareErrorsFromSession::class,
+<<<<<<< HEAD
                PreventRequestForgery::class,
+=======
+                PreventRequestForgery::class,
+>>>>>>> laraxot/dev
                 SubstituteBindings::class,
                 DisableBladeIconComponents::class,
                 DispatchServingFilamentEvent::class,

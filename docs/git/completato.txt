@@ -4,4 +4,8 @@ topic: completato
 canonical: ../../../../Themes/docs/shared-components/completato.md
 ---
 
+<<<<<<< HEAD
 See canonical documentation: ../../../../Themes/docs/shared-components/completato.md
+=======
+See canonical documentation: ../../../../Themes/docs/shared-components/completato.md
+>>>>>>> laraxot/dev

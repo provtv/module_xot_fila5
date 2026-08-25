@@ -3,7 +3,11 @@
 declare(strict_types=1);
 
 return [
+<<<<<<< HEAD
    'values' => [
+=======
+    'values' => [
+>>>>>>> laraxot/dev
         'f' => [
             'label' => 'Femmina',
             'icon' => 'heroicon-o-user',
@@ -32,7 +36,11 @@ return [
         ],
         'label' => 'Gender Enum',
         'sort' => 1,
+<<<<<<< HEAD
        'icon' => 'heroicon-o-rectangle-stack',
+=======
+        'icon' => 'heroicon-o-rectangle-stack',
+>>>>>>> laraxot/dev
     ],
     'fields' => [
         'id' => [

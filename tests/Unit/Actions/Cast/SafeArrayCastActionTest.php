@@ -15,7 +15,11 @@ it('casts various values to array correctly', function (): void {
     $action = app(SafeArrayCastAction::class);
 
     // Already array
+<<<<<<< HEAD
    Assert::assertSame(['a' => 1], $action->execute(['a' => 1]));
+=======
+    Assert::assertSame(['a' => 1], $action->execute(['a' => 1]));
+>>>>>>> laraxot/dev
     // Null
     Assert::assertSame(['default'], $action->execute(null, ['default']));
     // Collection
@@ -32,7 +36,11 @@ it('casts various values to array correctly', function (): void {
             return ['d' => 4];
         }
     };
+<<<<<<< HEAD
    Assert::assertSame(['d' => 4], $action->execute($objToArray));
+=======
+    Assert::assertSame(['d' => 4], $action->execute($objToArray));
+>>>>>>> laraxot/dev
     // Object with __toArray
     $objUnderscoreToArray = new class {
         /** @return array<string, int> */
@@ -41,7 +49,11 @@ it('casts various values to array correctly', function (): void {
             return ['e' => 5];
         }
     };
+<<<<<<< HEAD
    Assert::assertSame(['e' => 5], $action->execute($objUnderscoreToArray));
+=======
+    Assert::assertSame(['e' => 5], $action->execute($objUnderscoreToArray));
+>>>>>>> laraxot/dev
     // Regular object (public properties)
     $regObj = new class {
         public int $f = 6;
@@ -58,7 +70,11 @@ it('validates required keys correctly', function (): void {
     $action = app(SafeArrayCastAction::class);
     $data = ['a' => 1, 'b' => 2];
 
+<<<<<<< HEAD
    Assert::assertSame($data, $action->executeWithKeys($data, ['a', 'b']));
+=======
+    Assert::assertSame($data, $action->executeWithKeys($data, ['a', 'b']));
+>>>>>>> laraxot/dev
     Assert::assertSame(['error' => true], $action->executeWithKeys($data, ['a', 'c'], ['error' => true]));
 });
 
@@ -66,14 +82,22 @@ it('filters keys correctly', function (): void {
     $action = app(SafeArrayCastAction::class);
     $data = ['a' => 1, 'b' => 2, 'c' => 3];
 
+<<<<<<< HEAD
    Assert::assertSame(['a' => 1, 'c' => 3], $action->executeWithFilter($data, ['a', 'c']));
+=======
+    Assert::assertSame(['a' => 1, 'c' => 3], $action->executeWithFilter($data, ['a', 'c']));
+>>>>>>> laraxot/dev
 });
 
 it('casts values to specific type correctly', function (): void {
     $action = app(SafeArrayCastAction::class);
     $data = ['1', '2', '3'];
 
+<<<<<<< HEAD
    Assert::assertSame([1, 2, 3], $action->executeWithValueType($data, 'int'));
+=======
+    Assert::assertSame([1, 2, 3], $action->executeWithValueType($data, 'int'));
+>>>>>>> laraxot/dev
     Assert::assertSame([true, false, true], $action->executeWithValueType([1, 0, true], 'bool'));
     Assert::assertSame(['1.1', '2.2'], $action->executeWithValueType([1.1, 2.2], 'string'));
     Assert::assertSame([1.1, 2.2], $action->executeWithValueType(['1.1', '2.2'], 'float'));
@@ -82,7 +106,11 @@ it('casts values to specific type correctly', function (): void {
 
 it('checks if value can be cast', function (): void {
     $action = app(SafeArrayCastAction::class);
+<<<<<<< HEAD
    Assert::assertTrue($action->canCast([]));
+=======
+    Assert::assertTrue($action->canCast([]));
+>>>>>>> laraxot/dev
     Assert::assertTrue($action->canCast(null));
     Assert::assertTrue($action->canCast('str'));
     Assert::assertTrue($action->canCast(new stdClass()));

@@ -23,7 +23,11 @@ it('translates collection items correctly', function (): void {
     app()->setLocale('it');
 
     $action = app(TransCollectionAction::class);
+<<<<<<< HEAD
    /** @var Collection<int|string, mixed> $collection */
+=======
+    /** @var Collection<int|string, mixed> $collection */
+>>>>>>> laraxot/dev
     $result = $action->execute($collection, $transKey);
 
     Assert::assertSame([
@@ -39,7 +43,11 @@ it('returns original items if transKey is null', function (): void {
     $action = app(TransCollectionAction::class);
     $result = $action->execute($collection, null);
 
+<<<<<<< HEAD
    Assert::assertSame(['a', '1', ''], $result->all());
+=======
+    Assert::assertSame(['a', '1', ''], $result->all());
+>>>>>>> laraxot/dev
 });
 
 it('returns original item if translation not found', function (): void {
@@ -48,5 +56,9 @@ it('returns original item if translation not found', function (): void {
     $action = app(TransCollectionAction::class);
     $result = $action->execute($collection, 'missing');
 
+<<<<<<< HEAD
    Assert::assertSame(['unknown'], $result->all());
+=======
+    Assert::assertSame(['unknown'], $result->all());
+>>>>>>> laraxot/dev
 });

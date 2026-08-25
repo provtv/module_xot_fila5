@@ -126,6 +126,7 @@ php artisan lang:check
 ## Documentazione Aggiornata
 
 ### Modulo Geo
+<<<<<<<< HEAD:docs/git-conflicts-resolution-jan-archive.md
 - [Conflict Resolution](laravel/Modules/Geo/docs/conflict-resolution.md)
 
 ### Modulo User
@@ -133,6 +134,22 @@ php artisan lang:check
 
 ### Modulo Xot
 - [Git Conflicts Resolution](laravel/Modules/Xot/docs/git-conflicts-resolution.md)
+========
+- [Conflict Resolution](laravel/modules/geo/project_docs/conflict-resolution.md)
+
+### Modulo User
+- [Theme Translation Conflicts](laravel/modules/user/project_docs/theme-translation-conflicts-resolution.md)
+
+### Modulo Xot
+- [Git Conflicts Resolution](laravel/modules/xot/project_docs/git-conflicts-resolution-2025-01-06.md)
+- [Conflict Resolution](laravel/Modules/Geo/project_docs/conflict-resolution.md)
+
+### Modulo User
+- [Theme Translation Conflicts](laravel/Modules/User/project_docs/theme-translation-conflicts-resolution.md)
+
+### Modulo Xot
+- [Git Conflicts Resolution](laravel/Modules/Xot/project_docs/git-conflicts-resolution-2025-01-06.md)
+>>>>>>>> laraxot/dev:docs/git-conflicts-resolution-jan-risoluzione-conflitti-git-6-gennaio.md
 
 ## Best Practices Applicate
 
@@ -187,6 +204,7 @@ php artisan lang:check
 ## Collegamenti Correlati
 
 ### Documentazione Moduli
+<<<<<<<< HEAD:docs/git-conflicts-resolution-jan-archive.md
 - [Geo Conflict Resolution](laravel/Modules/Geo/docs/conflict-resolution.md)
 - [User Theme Conflicts](laravel/Modules/User/docs/theme-translation-conflicts-resolution.md)
 
@@ -194,6 +212,17 @@ php artisan lang:check
 - [Translation Standards](../../docs/translation-standards.md)
 - [PHPStan Guidelines](../../docs/phpstan-usage.md)
 - [Git Best Practices](../../docs/git-best-practices.md)
+========
+- [Geo Conflict Resolution](laravel/Modules/Geo/project_docs/conflict-resolution.md)
+- [User Theme Conflicts](laravel/Modules/User/project_docs/theme-translation-conflicts-resolution.md)
+- [Geo Conflict Resolution](laravel/modules/geo/project_docs/conflict-resolution.md)
+- [User Theme Conflicts](laravel/modules/user/project_docs/theme-translation-conflicts-resolution.md)
+
+### Documentazione Generale
+- [Translation Standards](../../project_docs/translation-standards.md)
+- [PHPStan Guidelines](../../project_docs/phpstan-usage.md)
+- [Git Best Practices](../../project_docs/git-best-practices.md)
+>>>>>>>> laraxot/dev:docs/git-conflicts-resolution-jan-risoluzione-conflitti-git-6-gennaio.md
 
 ---
 

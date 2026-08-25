@@ -33,7 +33,11 @@ use Spatie\Permission\Traits\HasRoles;
  *
  * @property string|null               $id
  * @property string|null               $email
+<<<<<<< HEAD
 * @property Carbon|null               $email_verified_at
+=======
+ * @property Carbon|null               $email_verified_at
+>>>>>>> laraxot/dev
  * @property string|null               $first_name
  * @property string|null               $last_name
  * @property string|null               $full_name
@@ -44,7 +48,11 @@ use Spatie\Permission\Traits\HasRoles;
  * @property TeamContract              $currentTeam
  * @property ProfileContract|null      $profile
  * @property Collection<int, UserRole> $roles
+<<<<<<< HEAD
 * @property Collection<int, Team>     $membershipTeams
+=======
+ * @property Collection<int, Team>     $membershipTeams
+>>>>>>> laraxot/dev
  * @property Collection<int, Team>     $teams
  * @property Collection<int, Tenant>   $tenants
  *
@@ -60,7 +68,11 @@ interface UserContract extends Authenticatable, HasMedia, HasName, HasTenants, M
      * public function areas();
      * public function avatar();
      */
+<<<<<<< HEAD
    /**
+=======
+    /**
+>>>>>>> laraxot/dev
      * @return HasOne<Model&ProfileContract, Model&static>
      */
     public function profile(): HasOne;
@@ -76,7 +88,11 @@ interface UserContract extends Authenticatable, HasMedia, HasName, HasTenants, M
      * Create a new personal access token for the user.
      *
      * @param array<int, string> $scopes
+<<<<<<< HEAD
     *
+=======
+     *
+>>>>>>> laraxot/dev
      * @return PersonalAccessTokenResult<Token>
      */
     public function createToken(string $name, array $scopes = []): PersonalAccessTokenResult;
@@ -84,7 +100,11 @@ interface UserContract extends Authenticatable, HasMedia, HasName, HasTenants, M
     /**
      * Passport API tokens support.
      */
+<<<<<<< HEAD
    /**
+=======
+    /**
+>>>>>>> laraxot/dev
      * Determine if the model has (one of) the given role(s).
      */
     /**
@@ -98,7 +118,11 @@ interface UserContract extends Authenticatable, HasMedia, HasName, HasTenants, M
     /**
      * Assign the given role to the model.
      *
+<<<<<<< HEAD
     * @param array<int|string>|string|int|UserRole|Collection<int, UserRole> $roles
+=======
+     * @param array<int|string>|string|int|UserRole|Collection<int, UserRole> $roles
+>>>>>>> laraxot/dev
      *
      * @return $this
      */
@@ -107,7 +131,11 @@ interface UserContract extends Authenticatable, HasMedia, HasName, HasTenants, M
     /**
      * Remove all current roles and set the given ones.
      *
+<<<<<<< HEAD
     * @param array<int|string>|string|int|UserRole|Collection<int, UserRole> $roles
+=======
+     * @param array<int|string>|string|int|UserRole|Collection<int, UserRole> $roles
+>>>>>>> laraxot/dev
      *
      * @return $this
      */
@@ -128,7 +156,11 @@ interface UserContract extends Authenticatable, HasMedia, HasName, HasTenants, M
     /**
      * Get the user's roles.
      */
+<<<<<<< HEAD
    /** @return BelongsToMany<Model, Model> */
+=======
+    /** @return BelongsToMany<Model, Model> */
+>>>>>>> laraxot/dev
     public function roles(): BelongsToMany;
 
     /**
@@ -139,7 +171,11 @@ interface UserContract extends Authenticatable, HasMedia, HasName, HasTenants, M
     public function teams(): BelongsToMany;
 
     /**
+<<<<<<< HEAD
     * Laraxot team membership (Jetstream-style pivot).
+=======
+     * Laraxot team membership (Jetstream-style pivot).
+>>>>>>> laraxot/dev
      *
      * @return BelongsToMany<Model&TeamContract, Model&static, Pivot, 'pivot'>
      */
@@ -155,7 +191,11 @@ interface UserContract extends Authenticatable, HasMedia, HasName, HasTenants, M
     /**
      * Revoke the given role from the model.
      *
+<<<<<<< HEAD
     * @param string|int|array<int|string>|UserRole|Collection<int, UserRole>|\BackedEnum ...$role
+=======
+     * @param string|int|array<int|string>|UserRole|Collection<int, UserRole>|\BackedEnum ...$role
+>>>>>>> laraxot/dev
      *
      * @return $this
      */

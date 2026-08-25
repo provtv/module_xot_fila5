@@ -17,7 +17,11 @@ use Modules\Xot\Filament\Traits\HasXotTable;
  */
 abstract class XotBaseRelationManager extends RelationManager
 {
+<<<<<<< HEAD
    use HasRelationshipModelClass;
+=======
+    use HasRelationshipModelClass;
+>>>>>>> laraxot/dev
     use HasXotTable {
         HasRelationshipModelClass::getModelClass insteadof HasXotTable;
     }
@@ -46,14 +50,22 @@ abstract class XotBaseRelationManager extends RelationManager
 
     // final public function form(Schema $schema): Schema
     // {
+<<<<<<< HEAD
    //     return $schema->components($this->getFormSchemaOld());
+=======
+    //     return $schema->components($this->getFormSchemaOld());
+>>>>>>> laraxot/dev
     // }
     /**
      * Get form schema.
      *
      * @return array<string|int, Component>
      */
+<<<<<<< HEAD
    final public function getFormSchemaOld(): array
+=======
+    final public function getFormSchemaOld(): array
+>>>>>>> laraxot/dev
     {
         return $this->getResource()::getFormSchemaOld();
     }

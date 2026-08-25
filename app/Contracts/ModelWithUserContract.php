@@ -22,7 +22,11 @@ use Illuminate\Support\Carbon;
  * @property string             $tennant_name
  * @property UserContract|null  $user
  *
+<<<<<<< HEAD
 * @method mixed                                                           getKey()
+=======
+ * @method mixed                                                           getKey()
+>>>>>>> laraxot/dev
  * @method string                                                          getRouteKey()
  * @method string                                                          getRouteKeyName()
  * @method string                                                          getTable()

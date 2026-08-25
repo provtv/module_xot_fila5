@@ -88,7 +88,11 @@ Per questo Le chiediamo il permesso di trasmettere i Suoi dati e le Sue risposte
         ],
         'label' => 'Xot Base Panel',
         'sort' => 1,
+<<<<<<< HEAD
        'icon' => 'heroicon-o-rectangle-stack',
+=======
+        'icon' => 'heroicon-o-rectangle-stack',
+>>>>>>> laraxot/dev
     ],
     'fields' => [
         'id' => [

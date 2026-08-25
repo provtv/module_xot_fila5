@@ -16,7 +16,11 @@ use function Safe\json_encode;
 use Sushi\Sushi;
 
 /**
+<<<<<<< HEAD
 * @property int                             $id
+=======
+ * @property int                             $id
+>>>>>>> laraxot/dev
  * @property string|null                     $name
  * @property string|null                     $slug
  * @property string|null                     $version
@@ -62,7 +66,11 @@ final class Module extends BaseModel
 
     protected $fillable = [
         'name',
+<<<<<<< HEAD
        'slug',
+=======
+        'slug',
+>>>>>>> laraxot/dev
         'version',
         'description',
         'status',
@@ -72,7 +80,11 @@ final class Module extends BaseModel
         'path',
         'icon',
         'colors',
+<<<<<<< HEAD
        'dependencies',
+=======
+        'dependencies',
+>>>>>>> laraxot/dev
         'config',
         'metadata',
         'activation_date',
@@ -123,13 +135,21 @@ final class Module extends BaseModel
             'name' => 'string',
             'description' => 'string',
             'status' => 'boolean',
+<<<<<<< HEAD
            'enabled' => 'boolean',
+=======
+            'enabled' => 'boolean',
+>>>>>>> laraxot/dev
             'priority' => 'integer',
             'path' => 'string',
             'icon' => 'string',
             'colors' => 'array',
         ];
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> laraxot/dev
     public function isEnabled(): bool
     {
         if (null !== $this->enabled) {

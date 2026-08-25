@@ -244,4 +244,8 @@ Per documentazione completa, vedere:
 
 *Ultimo aggiornamento: 2025-01-27*
 - [Widget Table Method Final Analysis](../../../modules/healthcare_app/docs/widget-table-method-final-analysis.md)
+<<<<<<< HEAD
 - [Widget Property Initialization Pattern](../../../modules/healthcare_app/docs/widget-property-initialization-pattern.md)
+=======
+- [Widget Property Initialization Pattern](../../../modules/healthcare_app/docs/widget-property-initialization-pattern.md)
+>>>>>>> laraxot/dev

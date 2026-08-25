@@ -3,7 +3,11 @@
 declare(strict_types=1);
 
 return [
+<<<<<<< HEAD
    'values' => [
+=======
+    'values' => [
+>>>>>>> laraxot/dev
         'yes' => [
             'label' => 'Yes',
             'icon' => 'heroicon-o-check-circle',

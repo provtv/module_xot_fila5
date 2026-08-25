@@ -43,7 +43,11 @@ class FakeSeederAction
         /** @var Collection<int, Model> $rows */
         $rows = $factory->count($qtyToDo)->make();
 
+<<<<<<< HEAD
        /** @var Collection<int, Collection<int, Model>> $chunks */
+=======
+        /** @var Collection<int, Collection<int, Model>> $chunks */
+>>>>>>> laraxot/dev
         $chunks = $rows->chunk(self::CHUNK_SIZE);
 
         $chunks->each(function (Collection $chunk) use ($modelClass): void {
@@ -64,14 +68,22 @@ class FakeSeederAction
      * @param class-string<Model> $modelClass
      *
      * @throws \RuntimeException
+<<<<<<< HEAD
     *
+=======
+     *
+>>>>>>> laraxot/dev
      * @return Factory<Model>
      * @return Factory<Model>
      */
     private function getModelFactory(string $modelClass): Factory
     {
         if (method_exists($modelClass, 'factory')) {
+<<<<<<< HEAD
            /** @var Factory<Model> $factory */
+=======
+            /** @var Factory<Model> $factory */
+>>>>>>> laraxot/dev
             $factory = $modelClass::factory();
 
             return $factory;

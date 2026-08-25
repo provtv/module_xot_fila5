@@ -25,7 +25,11 @@ class CollectionExport implements FromCollection, ShouldQueue, WithHeadings, Wit
 {
     use Exportable;
 
+<<<<<<< HEAD
    /** @var SupportCollection<int, mixed>|EloquentCollection<int, Model> */
+=======
+    /** @var SupportCollection<int, mixed>|EloquentCollection<int, Model> */
+>>>>>>> laraxot/dev
     public SupportCollection|EloquentCollection $collection;
 
     /** @var array<int, string> */
@@ -33,7 +37,11 @@ class CollectionExport implements FromCollection, ShouldQueue, WithHeadings, Wit
 
     public ?string $transKey;
 
+<<<<<<< HEAD
    /** @var array<int, string>|null */
+=======
+    /** @var array<int, string>|null */
+>>>>>>> laraxot/dev
     public ?array $fields = null;
 
     /**
@@ -45,7 +53,11 @@ class CollectionExport implements FromCollection, ShouldQueue, WithHeadings, Wit
         $this->collection = $collection;
         $this->transKey = $transKey;
         $this->fields = $fields;
+<<<<<<< HEAD
        $this->headings = [];
+=======
+        $this->headings = [];
+>>>>>>> laraxot/dev
     }
 
     /**
@@ -63,7 +75,11 @@ class CollectionExport implements FromCollection, ShouldQueue, WithHeadings, Wit
         return array_keys($head->getAttributes());
     }
 
+<<<<<<< HEAD
    /**
+=======
+    /**
+>>>>>>> laraxot/dev
      * @return array<int|string, string>
      */
     public function headings(): array
@@ -74,7 +90,11 @@ class CollectionExport implements FromCollection, ShouldQueue, WithHeadings, Wit
         return app(TransArrayAction::class)->execute($headings, $transKey);
     }
 
+<<<<<<< HEAD
    /**
+=======
+    /**
+>>>>>>> laraxot/dev
      * @return SupportCollection<int, mixed>|EloquentCollection<int, Model>
      */
     public function collection(): SupportCollection|EloquentCollection
@@ -82,7 +102,11 @@ class CollectionExport implements FromCollection, ShouldQueue, WithHeadings, Wit
         return $this->collection;
     }
 
+<<<<<<< HEAD
    /**
+=======
+    /**
+>>>>>>> laraxot/dev
      * @return array<int|string, mixed>
      */
     public function map(mixed $row): array
@@ -91,7 +115,11 @@ class CollectionExport implements FromCollection, ShouldQueue, WithHeadings, Wit
             Assert::isInstanceOf($row, Model::class);
             $res = app(SafeArrayByModelCastAction::class)->execute($row);
 
+<<<<<<< HEAD
            return array_values(Arr::map($res, function ($value, $_key): string {
+=======
+            return array_values(Arr::map($res, function ($value, $_key): string {
+>>>>>>> laraxot/dev
                 if ($value instanceof \BackedEnum) {
                     if (method_exists($value, 'getLabel')) {
                         return SafeStringCastAction::cast($value->getLabel());
@@ -113,7 +141,11 @@ class CollectionExport implements FromCollection, ShouldQueue, WithHeadings, Wit
                     $value = $value->getLabel();
                 }
             }
+<<<<<<< HEAD
            $data[] = SafeStringCastAction::cast($value);
+=======
+            $data[] = SafeStringCastAction::cast($value);
+>>>>>>> laraxot/dev
         }
 
         return $data;

@@ -22,7 +22,11 @@ class XlsByModelClassAction
     /**
      * Esporta i dati di un modello in Excel.
      *
+<<<<<<< HEAD
     * @param class-string<Model>                                   $modelClass Classe del modello da esportare
+=======
+     * @param class-string<Model>                                   $modelClass Classe del modello da esportare
+>>>>>>> laraxot/dev
      * @param array<string, mixed>                                  $where      Condizioni where per la query
      * @param array<int, string>                                    $includes   Relazioni o campi da includere
      * @param array<int, string>                                    $excludes   Campi da escludere
@@ -52,7 +56,11 @@ class XlsByModelClassAction
         }
 
         // Otteniamo i risultati
+<<<<<<< HEAD
        /** @var \Illuminate\Database\Eloquent\Collection<int, Model> $rows */
+=======
+        /** @var \Illuminate\Database\Eloquent\Collection<int, Model> $rows */
+>>>>>>> laraxot/dev
         $rows = $query->get();
 
         // Filtriamo i campi se sono specificati gli includes
@@ -67,7 +75,11 @@ class XlsByModelClassAction
             });
         }
 
+<<<<<<< HEAD
        if ([] !== $excludes) {
+=======
+        if ([] !== $excludes) {
+>>>>>>> laraxot/dev
             $rows = $rows->map(function ($item) use ($excludes) {
                 if ($item instanceof Model) {
                     return $item->makeHidden($excludes);
@@ -84,7 +96,11 @@ class XlsByModelClassAction
 
         // Otteniamo la chiave di traduzione e creiamo l'export
         $transKey = app(GetTransKeyByModelClassAction::class)->execute($modelClass);
+<<<<<<< HEAD
        /** @var Collection<int, mixed> $exportRows */
+=======
+        /** @var Collection<int, mixed> $exportRows */
+>>>>>>> laraxot/dev
         $exportRows = $rows;
         $collectionExport = new CollectionExport($exportRows, $transKey);
         $filename = $this->getExportName($modelClass);

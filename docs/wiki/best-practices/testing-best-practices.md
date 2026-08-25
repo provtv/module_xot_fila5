@@ -223,9 +223,12 @@ app()->instance(\Modules\Xot\Datas\XotData::class, $mock);
 - [Widget Test Patterns](../Cms/docs/tests/widget-test-patterns.md)
 - [Architecture Separation Rules](../Cms/docs/tests/architecture-separation-rules.md)
 - [XotData Testing Strategy](XOTDATA_TESTING.md)
+<<<<<<<< HEAD:docs/wiki/best-practices/testing-best-practices.md
 - [Widget Test Patterns](../cms/docs/tests/widget-test-patterns.md)
 - [Architecture Separation Rules](../cms/docs/tests/architecture-separation-rules.md)
 - [XotData Testing Strategy](xotdata_testing.md)
+========
+>>>>>>>> laraxot/dev:docs/historical/testing-best-practices-uppercase-testing-best-practices-laraxot-framewo.md
 
 ---
 

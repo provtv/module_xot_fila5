@@ -93,17 +93,29 @@ it('casts with range and default', function (): void {
 
 it('has static cast method', function (): void {
     $result = SafeFloatCastAction::cast('123.45');
+<<<<<<< HEAD
    Assert::assertSame(123.45, $result);
+=======
+    Assert::assertSame(123.45, $result);
+>>>>>>> laraxot/dev
 });
 
 it('has static cast method with default', function (): void {
     $result = SafeFloatCastAction::cast(null, 10.0);
+<<<<<<< HEAD
    Assert::assertSame(10.0, $result);
+=======
+    Assert::assertSame(10.0, $result);
+>>>>>>> laraxot/dev
 });
 
 it('has static castWithRange method', function (): void {
     $result = SafeFloatCastAction::castWithRange('150.0', 0.0, 100.0);
+<<<<<<< HEAD
    Assert::assertSame(100.0, $result);
+=======
+    Assert::assertSame(100.0, $result);
+>>>>>>> laraxot/dev
 });
 
 it('handles infinite values', function (): void {

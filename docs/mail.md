@@ -122,4 +122,8 @@ https://stackoverflow.com/questions/46141652/running-laravel-queuework-on-a-shar
 
 
 //--- extra
+<<<<<<< HEAD
 https://codegits.com/how-to-use-multiple-databases-in-laravel/
+=======
+https://codegits.com/how-to-use-multiple-databases-in-laravel/
+>>>>>>> laraxot/dev

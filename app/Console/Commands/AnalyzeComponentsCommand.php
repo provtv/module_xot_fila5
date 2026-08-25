@@ -47,7 +47,11 @@ class AnalyzeComponentsCommand extends Command
 
         $this->table(
             ['Componente', 'Tipo', 'Modulo', 'Path'],
+<<<<<<< HEAD
            collect($components)->map(static function (ComponentFileData $component): array {
+=======
+            collect($components)->map(static function (ComponentFileData $component): array {
+>>>>>>> laraxot/dev
                 return [
                     $component->name,
                     $component->class,

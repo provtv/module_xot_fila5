@@ -17,7 +17,11 @@ use Modules\Xot\Models\Log;
 class LogResource extends XotBaseResource
 {
     use NavigationLabelTrait;
+<<<<<<< HEAD
    protected static ?string $model = Log::class;
+=======
+    protected static ?string $model = Log::class;
+>>>>>>> laraxot/dev
 
     /**
      * @return array<string, mixed>

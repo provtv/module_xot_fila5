@@ -19,7 +19,11 @@ class ApplyMetatagToPanelAction
             $metatag = MetatagData::make();
 
             return $panel
+<<<<<<< HEAD
                ->colors($metatag->getFilamentColors())
+=======
+                ->colors($metatag->getFilamentColors())
+>>>>>>> laraxot/dev
                 ->brandLogo($metatag->getBrandLogo())
                 ->brandName($metatag->getBrandName())
                 ->darkModeBrandLogo($metatag->getDarkModeBrandLogo())

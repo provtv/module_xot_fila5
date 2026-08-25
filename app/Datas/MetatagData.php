@@ -141,7 +141,11 @@ class MetatagData extends Data implements Wireable
     {
         if (! self::$instance) {
             /** @var array<string, mixed> $data */
+<<<<<<< HEAD
            $data = app(GetTenantConfigArrayAction::class)->execute('metatag');
+=======
+            $data = app(GetTenantConfigArrayAction::class)->execute('metatag');
+>>>>>>> laraxot/dev
             $data['description'] = app(TranslateTenantKeyAction::class)->execute('metatag.description');
             self::$instance = self::from($data);
         }
@@ -381,7 +385,11 @@ class MetatagData extends Data implements Wireable
 
     /**
      * @deprecated Use getThemeColors() instead as it better reflects the semantic purpose
+<<<<<<< HEAD
     *
+=======
+     *
+>>>>>>> laraxot/dev
      * @return array<string, array{key?: string, color: string, hex?: string}>
      */
     public function getColors(): array
@@ -394,7 +402,11 @@ class MetatagData extends Data implements Wireable
     /**
      * Get the default Filament colors configuration.
      *
+<<<<<<< HEAD
     * @return array<string, array<int, string>|string>
+=======
+     * @return array<string, array<int, string>|string>
+>>>>>>> laraxot/dev
      */
     public function getFilamentColors(): array
     {
@@ -411,7 +423,11 @@ class MetatagData extends Data implements Wireable
     {
         $filamentColors = $this->getFilamentColors();
         $customColors = [];
+<<<<<<< HEAD
        $normalizedFilamentColors = [];
+=======
+        $normalizedFilamentColors = [];
+>>>>>>> laraxot/dev
 
         foreach ($filamentColors as $key => $value) {
             if (is_array($value)) {
@@ -435,7 +451,11 @@ class MetatagData extends Data implements Wireable
             }
         }
 
+<<<<<<< HEAD
        return array_merge($normalizedFilamentColors, $customColors);
+=======
+        return array_merge($normalizedFilamentColors, $customColors);
+>>>>>>> laraxot/dev
     }
 
     /**
@@ -589,17 +609,29 @@ class MetatagData extends Data implements Wireable
 
     public function getKeywords(): string
     {
+<<<<<<< HEAD
        return app(TranslateTenantKeyAction::class)->execute('metatag.keywords');
+=======
+        return app(TranslateTenantKeyAction::class)->execute('metatag.keywords');
+>>>>>>> laraxot/dev
     }
 
     public function getAuthor(): string
     {
+<<<<<<< HEAD
        return app(TranslateTenantKeyAction::class)->execute('metatag.author');
+=======
+        return app(TranslateTenantKeyAction::class)->execute('metatag.author');
+>>>>>>> laraxot/dev
     }
 
     public function getSitename(): string
     {
+<<<<<<< HEAD
        return app(TranslateTenantKeyAction::class)->execute('metatag.sitename');
+=======
+        return app(TranslateTenantKeyAction::class)->execute('metatag.sitename');
+>>>>>>> laraxot/dev
     }
 
     public function getRobots(): string

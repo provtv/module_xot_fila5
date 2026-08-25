@@ -5,7 +5,11 @@ declare(strict_types=1);
 return [
     'sections' => [
         'empty' => [
+<<<<<<< HEAD
            'label' => '',
+=======
+            'label' => '',
+>>>>>>> laraxot/dev
             'heading' => '',
         ],
     ],
@@ -20,7 +24,11 @@ return [
         ],
         'label' => 'Health Overview',
         'sort' => 1,
+<<<<<<< HEAD
        'icon' => 'heroicon-o-rectangle-stack',
+=======
+        'icon' => 'heroicon-o-rectangle-stack',
+>>>>>>> laraxot/dev
     ],
     'fields' => [
         'id' => [

@@ -14,7 +14,11 @@ class DiffAssocRecursiveAction
     use QueueableAction;
 
     /**
+<<<<<<< HEAD
     * @param array<int|string, mixed> $data
+=======
+     * @param array<int|string, mixed> $data
+>>>>>>> laraxot/dev
      *
      * @return array<int|string, array<int|string, mixed>>
      */
@@ -38,7 +42,11 @@ class DiffAssocRecursiveAction
     }
 
     /**
+<<<<<<< HEAD
     * @param array<int|string, mixed> $arr_1
+=======
+     * @param array<int|string, mixed> $arr_1
+>>>>>>> laraxot/dev
      * @param array<int|string, mixed> $arr_2
      *
      * @return array<int|string, array<int|string, mixed>>
@@ -52,7 +60,11 @@ class DiffAssocRecursiveAction
             try {
                 return ! \in_array($value, $arr_2, false);
             } catch (\Exception $exception) {
+<<<<<<< HEAD
                throw $exception;
+=======
+                throw $exception;
+>>>>>>> laraxot/dev
             }
         });
 

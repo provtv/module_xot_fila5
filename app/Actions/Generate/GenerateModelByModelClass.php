@@ -15,7 +15,11 @@ class GenerateModelByModelClass
 {
     use QueueableAction;
 
+<<<<<<< HEAD
    /** @var array<string, string> */
+=======
+    /** @var array<string, string> */
+>>>>>>> laraxot/dev
     public array $replaces = [];
 
     /**
@@ -99,7 +103,11 @@ class GenerateModelByModelClass
          */
     }
 
+<<<<<<< HEAD
    /**
+=======
+    /**
+>>>>>>> laraxot/dev
      * @param array<string, string> $replaces
      */
     public function setCustomReplaces(array $replaces): self

@@ -30,7 +30,11 @@ it('creates table index correctly', function (): void {
 
     // First creation
     $result = $action->execute($modelClassName, ['test_col']);
+<<<<<<< HEAD
    Assert::assertTrue($result);
+=======
+    Assert::assertTrue($result);
+>>>>>>> laraxot/dev
     // Duplicate creation should skip
     $result2 = $action->execute($modelClassName, ['test_col']);
     Assert::assertFalse($result2);

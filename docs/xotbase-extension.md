@@ -4,4 +4,8 @@ topic: xotbase-extension
 canonical: ../../../Themes/docs/shared-components/xotbase-extension-rules-conflict.md
 ---
 
+<<<<<<< HEAD
 See canonical documentation: ../../../Themes/docs/shared-components/xotbase-extension-rules-conflict.md
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/xotbase-extension-rules-conflict.md
+>>>>>>> laraxot/dev

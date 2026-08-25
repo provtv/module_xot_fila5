@@ -15,7 +15,11 @@ it('gets view namespace path from theme fallback correctly', function (): void {
     $ns = 'pub_theme';
     $themeName = 'TestTheme';
 
+<<<<<<< HEAD
    $xotData = XotData::from(['pub_theme' => $themeName]);
+=======
+    $xotData = XotData::from(['pub_theme' => $themeName]);
+>>>>>>> laraxot/dev
 
     $reflection = new \ReflectionClass(XotData::class);
     $instanceProperty = $reflection->getProperty('instance');
@@ -25,6 +29,10 @@ it('gets view namespace path from theme fallback correctly', function (): void {
     $action = app(GetViewNameSpacePathAction::class);
     $result = $action->execute($ns);
 
+<<<<<<< HEAD
    Assert::assertSame(base_path('Themes/'.$themeName), $result);
+=======
+    Assert::assertSame(base_path('Themes/'.$themeName), $result);
+>>>>>>> laraxot/dev
     $instanceProperty->setValue(null, null);
 });

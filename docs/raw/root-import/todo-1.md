@@ -1,3 +1,4 @@
+<<<<<<<< HEAD:docs/raw/root-import/todo-1.md
 ---
 title: "_todo"
 module: "Xot"
@@ -9,6 +10,8 @@ qmd: "todo 1"
 related:
   - "./eloquent-magic-properties-rule.md"
 ---
+========
+>>>>>>>> laraxot/dev:docs/todo-todo.md
 # _todo
 
 <!-- Contenuto migrato da _docs/_todo.txt -->

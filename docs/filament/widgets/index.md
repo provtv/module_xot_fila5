@@ -233,4 +233,8 @@ Prima di committare un wizard widget, verifica TUTTI i punti:
 
 ---
 
+<<<<<<< HEAD
 *Ultimo aggiornamento: 2026-04-14*
+=======
+*Ultimo aggiornamento: 2026-04-14*
+>>>>>>> laraxot/dev

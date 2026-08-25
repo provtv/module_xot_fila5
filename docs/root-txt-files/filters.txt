@@ -1,3 +1,21 @@
+<<<<<<<< HEAD:docs/root-txt-files/filters.txt
+========
+---
+title: "_filters"
+module: "Xot"
+type: concept
+tags: [filters, 2]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "filters 2"
+related:
+  - "./eloquent-magic-properties-rule.md"
+---
+# _filters
+
+<!-- Contenuto migrato da _docs/_filters.txt -->
+
+>>>>>>>> laraxot/dev:docs/consolidated/archive/filters-2.md
 https://www.algolia.com/blog/engineering/implementing-faceted-search-with-dynamic-faceting-with-code/  !!!
 
 

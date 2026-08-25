@@ -31,7 +31,11 @@ use Illuminate\Support\Carbon;
  * @property string             $sms_body
  * @property string             $sms_count
  *
+<<<<<<< HEAD
 * @method mixed                                                           getKey()
+=======
+ * @method mixed                                                           getKey()
+>>>>>>> laraxot/dev
  * @method string                                                          getRouteKey()
  * @method string                                                          getRouteKeyName()
  * @method string                                                          getTable()

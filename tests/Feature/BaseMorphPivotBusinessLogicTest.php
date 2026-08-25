@@ -75,7 +75,11 @@ describe('Base Morph Pivot Business Logic', function (): void {
         $pivot->setAttribute('numeric_field', 42);
 
         // Act
+<<<<<<< HEAD
        /** @var string $customField */
+=======
+        /** @var string $customField */
+>>>>>>> laraxot/dev
         $customField = $pivot->getAttribute('custom_field');
         /** @var int $numericField */
         $numericField = $pivot->getAttribute('numeric_field');
@@ -147,7 +151,11 @@ describe('Base Morph Pivot Business Logic', function (): void {
             'session_id' => 'session123',
         ];
 
+<<<<<<< HEAD
        $pivot = new TestConcreteMorphPivot();
+=======
+        $pivot = new TestConcreteMorphPivot();
+>>>>>>> laraxot/dev
         $pivot->setAttribute('metadata', $metadata);
 
         // Act
@@ -172,7 +180,11 @@ describe('Base Morph Pivot Business Logic', function (): void {
             ],
         ];
 
+<<<<<<< HEAD
        $pivot = new TestConcreteMorphPivot();
+=======
+        $pivot = new TestConcreteMorphPivot();
+>>>>>>> laraxot/dev
         $pivot->setAttribute('extra_data', $extraData);
 
         // Act
@@ -365,7 +377,11 @@ describe('Base Morph Pivot Business Logic', function (): void {
             'delete' => false,
         ];
 
+<<<<<<< HEAD
        $pivot = new TestConcreteMorphPivot();
+=======
+        $pivot = new TestConcreteMorphPivot();
+>>>>>>> laraxot/dev
         $pivot->setAttribute('permissions', $permissions);
 
         // Act
@@ -387,7 +403,11 @@ describe('Base Morph Pivot Business Logic', function (): void {
             'timeout' => 30,
         ];
 
+<<<<<<< HEAD
        $pivot = new TestConcreteMorphPivot();
+=======
+        $pivot = new TestConcreteMorphPivot();
+>>>>>>> laraxot/dev
         $pivot->setAttribute('settings', $settings);
 
         // Act

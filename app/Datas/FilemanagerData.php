@@ -7,7 +7,11 @@ namespace Modules\Xot\Datas;
 use Spatie\LaravelData\Data;
 
 /**
+<<<<<<< HEAD
 * Class FilemanagerData - Gestisce la configurazione del file manager.
+=======
+ * Class FilemanagerData - Gestisce la configurazione del file manager.
+>>>>>>> laraxot/dev
  * Utilizzato esclusivamente nell'ambito dell'architettura Filament-first.
  *
  * @phpstan-consistent-constructor
@@ -21,7 +25,11 @@ final class FilemanagerData extends Data
     public function __construct(
         public readonly string $disk = 'public',
         public readonly array $disks = ['public'],
+<<<<<<< HEAD
        public readonly array $allowedExt = [
+=======
+        public readonly array $allowedExt = [
+>>>>>>> laraxot/dev
             'jpg', 'jpeg', 'png', 'gif', 'pdf', 'doc',
             'docx', 'xls', 'xlsx', 'zip',
         ],
@@ -34,7 +42,11 @@ final class FilemanagerData extends Data
     /**
      * Create a new instance of FilemanagerData with default values.
      */
+<<<<<<< HEAD
    public static function make(): self
+=======
+    public static function make(): self
+>>>>>>> laraxot/dev
     {
         return new self();
     }

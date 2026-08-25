@@ -25,7 +25,11 @@ beforeEach(function (): void {
 
 afterEach(function (): void {
     if (isset($this->tempDir) && is_dir($this->tempDir)) {
+<<<<<<< HEAD
        $dir = $this->tempDir;
+=======
+        $dir = $this->tempDir;
+>>>>>>> laraxot/dev
         $files = glob($dir.'/*');
         foreach ($files as $file) {
             $this->assertIsString($file);

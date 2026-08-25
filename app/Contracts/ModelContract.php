@@ -28,7 +28,11 @@ use Illuminate\Support\Carbon;
  * @property Pivot|null  $pivot
  * @property string      $tennant_name
  *
+<<<<<<< HEAD
 * @method string                                                          getRouteKey()
+=======
+ * @method string                                                          getRouteKey()
+>>>>>>> laraxot/dev
  * @method string                                                          getRouteKeyName()
  * @method string                                                          getTable()
  * @method mixed                                                           with(array<int, string> $array)

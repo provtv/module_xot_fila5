@@ -19,7 +19,11 @@ test('save array action saves as php by default', function () {
     $action = app(SaveArrayAction::class);
     $result = $action->execute($data, $filename);
 
+<<<<<<< HEAD
    Assert::assertTrue($result);
+=======
+    Assert::assertTrue($result);
+>>>>>>> laraxot/dev
     $savedData = include $filename;
     Assert::assertSame($data, $savedData);
     File::delete($filename);
@@ -32,7 +36,11 @@ test('save array action saves as json', function () {
     $action = app(SaveArrayAction::class);
     $result = $action->execute($data, $filename, 'json');
 
+<<<<<<< HEAD
    Assert::assertTrue($result);
+=======
+    Assert::assertTrue($result);
+>>>>>>> laraxot/dev
     $savedData = json_decode(File::get($filename), true);
     Assert::assertSame($data, $savedData);
     File::delete($filename);

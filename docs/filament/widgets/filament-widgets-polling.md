@@ -142,4 +142,8 @@ Questa funzionalità è compatibile con:
 - [xot-base-widget.md](./xot-base-widget.md) - Documentazione su XotBaseWidget
 - [FOLIO_VOLT_FILAMENT_INTEGRATION.md](../../FOLIO_VOLT_FILAMENT_INTEGRATION.md) - Integrazione Folio, Volt e Filament
 - [MODULE_STRUCTURE.md](../../MODULE_STRUCTURE.md) - Struttura standard dei moduli
+<<<<<<< HEAD
 - [Documentazione Filament](https://filamentphp.com/docs/3.x/widgets/installation)
+=======
+- [Documentazione Filament](https://filamentphp.com/docs/3.x/widgets/installation)
+>>>>>>> laraxot/dev

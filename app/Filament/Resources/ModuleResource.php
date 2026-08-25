@@ -15,7 +15,11 @@ class ModuleResource extends XotBaseResource
 {
     protected static ?string $model = Module::class;
 
+<<<<<<< HEAD
    // #[\Override]
+=======
+    // #[\Override]
+>>>>>>> laraxot/dev
     /**
      * @return array<string, mixed>
      */

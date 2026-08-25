@@ -54,4 +54,8 @@ echo "🎯 NEXT STEPS:"
 echo "1. Verificare manualmente alcuni file campione"
 echo "2. Testare conversione su singolo file"
 echo "3. Solo dopo, applicare a tutti i file"
+<<<<<<< HEAD
 echo "4. Verificare che link funzionino dopo conversione"
+=======
+echo "4. Verificare che link funzionino dopo conversione"
+>>>>>>> laraxot/dev

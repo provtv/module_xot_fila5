@@ -67,7 +67,11 @@ class ExportXlsAction extends XotBaseAction
                         );
                     }
                     Assert::isArray($fields);
+<<<<<<< HEAD
                } else {
+=======
+                } else {
+>>>>>>> laraxot/dev
                     dddx('method xotFields does not exist in '.$resource);
                 }
 

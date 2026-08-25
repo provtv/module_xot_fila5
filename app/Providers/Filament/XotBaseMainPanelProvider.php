@@ -89,7 +89,11 @@ abstract class XotBaseMainPanelProvider extends PanelProvider
                 StartSession::class,
                 AuthenticateSession::class,
                 ShareErrorsFromSession::class,
+<<<<<<< HEAD
                PreventRequestForgery::class,
+=======
+                PreventRequestForgery::class,
+>>>>>>> laraxot/dev
                 SubstituteBindings::class,
                 DisableBladeIconComponents::class,
                 DispatchServingFilamentEvent::class,
@@ -108,7 +112,11 @@ abstract class XotBaseMainPanelProvider extends PanelProvider
         $profileLabel = is_string($profileLabelRaw) ? $profileLabelRaw : null;
 
         $panel->userMenuItems([
+<<<<<<< HEAD
            // `MenuItem` e' deprecata in favore di `Filament\Actions\Action`, che
+=======
+            // `MenuItem` e' deprecata in favore di `Filament\Actions\Action`, che
+>>>>>>> laraxot/dev
             // pero' pretende un nome: `userMenuItems()` accetta entrambi.
             Action::make('profile')
                 ->label($profileLabel)

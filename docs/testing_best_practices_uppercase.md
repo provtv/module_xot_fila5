@@ -37,13 +37,18 @@ test('widget can be rendered', function () {
 function mockXotData(): void
 {
     $mockXotData = \Mockery::mock(\Modules\Xot\Datas\XotData::class)->makePartial();
-    
+
     $mockXotData->shouldReceive('getUserClass')
+<<<<<<<< HEAD:docs/testing_best_practices_uppercase.md
         ->andReturn(\Modules\SaluteOra\Models\User::class);
         
+========
+        ->andReturn(\Modules\<nome progetto>\Models\User::class);
+
+>>>>>>>> laraxot/dev:docs/testing-best-practices-testing-best-practices-laraxot-framewo.md
     $mockXotData->shouldReceive('make')
         ->andReturn($mockXotData);
-    
+
     // ✅ CRITICO: Bind nel container
     app()->instance(\Modules\Xot\Datas\XotData::class, $mockXotData);
 }
@@ -127,7 +132,7 @@ app()->instance(\Modules\Xot\Datas\XotData::class, $mock);
    - Content presence
    - Layout structure
 
-2. **Middleware** (Raccomandato) 
+2. **Middleware** (Raccomandato)
    - Authentication flow
    - Authorization checks
    - Redirect behavior
@@ -162,7 +167,7 @@ app()->instance(\Modules\Xot\Datas\XotData::class, $mock);
 - ✅ **Performance**: < 5 secondi per test suite
 - ✅ **Architecture**: Separazione rispettata
 
-### Gold Standard Criteria  
+### Gold Standard Criteria
 - ✅ **Success Rate**: > 90% test passati
 - ✅ **Zero Warnings**: Nessun warning PHP/Pest
 - ✅ **Performance**: < 3 secondi per test suite
@@ -181,7 +186,7 @@ app()->instance(\Modules\Xot\Datas\XotData::class, $mock);
 # Execution time monitoring
 ./vendor/bin/pest -v {TestFile} | grep -E "(seconds|ms)"
 
-# Success rate calculation  
+# Success rate calculation
 ./vendor/bin/pest {TestFile} --compact
 
 # Memory usage monitoring
@@ -210,7 +215,11 @@ app()->instance(\Modules\Xot\Datas\XotData::class, $mock);
 
 ---
 
-**Status**: ✅ Best Practices Validate  
-**Enforcement**: Obbligatorio per tutti i test  
+**Status**: ✅ Best Practices Validate
+**Enforcement**: Obbligatorio per tutti i test
 **Version**: 1.0 - Gold Standard
+<<<<<<<< HEAD:docs/testing_best_practices_uppercase.md
 **Last Update**: Dicembre 2024 
+========
+**Last Update**: Dicembre 2024
+>>>>>>>> laraxot/dev:docs/testing-best-practices-testing-best-practices-laraxot-framewo.md

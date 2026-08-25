@@ -52,7 +52,11 @@ class XotServiceProvider extends XotBaseServiceProvider
         // $this->registerExceptionHandler(); // guardare come fa sentry
         $this->registerTimezone();
         $this->registerFilamentMacros();
+<<<<<<< HEAD
        $this->registerPaFilamentColors();
+=======
+        $this->registerPaFilamentColors();
+>>>>>>> laraxot/dev
         $this->registerXotLivewireComponents();
         $this->registerProviders();
     }
@@ -60,7 +64,11 @@ class XotServiceProvider extends XotBaseServiceProvider
     #[\Override]
     public function register(): void
     {
+<<<<<<< HEAD
        $this->registerRuntimePsr4Autoload();
+=======
+        $this->registerRuntimePsr4Autoload();
+>>>>>>> laraxot/dev
         parent::register();
         $this->registerConfig();
 
@@ -74,7 +82,11 @@ class XotServiceProvider extends XotBaseServiceProvider
         // $this->app->register(Filament\ModulesServiceProvider::class);
     }
 
+<<<<<<< HEAD
    private function registerRuntimePsr4Autoload(): void
+=======
+    private function registerRuntimePsr4Autoload(): void
+>>>>>>> laraxot/dev
     {
         $autoloadPath = base_path('vendor/autoload.php');
 
@@ -115,7 +127,11 @@ class XotServiceProvider extends XotBaseServiceProvider
         TextColumn::configureUsing(fn (TextColumn $column) => $column->timezone($timezone));
     }
 
+<<<<<<< HEAD
    /**
+=======
+    /**
+>>>>>>> laraxot/dev
      * Palette PA su widget FO (login, wizard) senza panel attivo — allineata ai panel admin.
      */
     public function registerPaFilamentColors(): void
@@ -204,7 +220,11 @@ class XotServiceProvider extends XotBaseServiceProvider
 
     protected function translatableComponents(): void
     {
+<<<<<<< HEAD
        // `Placeholder` e' deprecata in favore di `TextEntry`, che estende `Entry`:
+=======
+        // `Placeholder` e' deprecata in favore di `TextEntry`, che estende `Entry`:
+>>>>>>> laraxot/dev
         // la voce era anche ridondante, non solo deprecata.
         $components = [Field::class, BaseFilter::class, Column::class, Entry::class];
         foreach ($components as $component) {

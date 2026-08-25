@@ -31,7 +31,11 @@ class SanitizeFieldsHeaderAction extends XotBaseAction
             ->action(function (ListRecords $livewire): void {
                 $resource = $livewire->getResource();
                 $modelClass = $resource::getModel();
+<<<<<<< HEAD
                Assert::subclassOf($modelClass, Model::class);
+=======
+                Assert::subclassOf($modelClass, Model::class);
+>>>>>>> laraxot/dev
                 /** @var class-string<Model> $modelClass */
                 $rows = $modelClass::query()->get();
                 if (! is_iterable($rows)) {
@@ -63,7 +67,11 @@ class SanitizeFieldsHeaderAction extends XotBaseAction
             });
     }
 
+<<<<<<< HEAD
    /**
+=======
+    /**
+>>>>>>> laraxot/dev
      * @param list<string> $fields
      */
     public function setFields(array $fields): self

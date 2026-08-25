@@ -1,6 +1,10 @@
 <?php
 
 declare(strict_types=1);
+<<<<<<< HEAD
+=======
+
+>>>>>>> laraxot/dev
 namespace Modules\Xot\Actions\Array;
 
 use Spatie\QueueableAction\QueueableAction;

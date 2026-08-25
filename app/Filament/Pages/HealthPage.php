@@ -77,7 +77,11 @@ class HealthPage extends XotBasePage
             $checks[] = SmtpCheck::new();
         }
 
+<<<<<<< HEAD
        // CpuLoadCheck, SecurityAdvisoriesCheck, and SmtpCheck are optional packages;
+=======
+        // CpuLoadCheck, SecurityAdvisoriesCheck, and SmtpCheck are optional packages;
+>>>>>>> laraxot/dev
         // filter to only actual Check instances so the array type is guaranteed.
         /** @var array<int, Check> $filteredChecks */
         $filteredChecks = [];

@@ -174,4 +174,8 @@ trait SushiToJsons
 
 - [Documento principale risoluzione conflitti](risoluzione_conflitti.md)
 - [Documentazione modulo Tenant](../../Tenant/docs/risoluzione_conflitti.md)
+<<<<<<< HEAD
 - [Documentazione modulo Tenant](../../tenant/docs/risoluzione_conflitti.md)
+=======
+- [Documentazione modulo Tenant](../../tenant/docs/risoluzione_conflitti.md)
+>>>>>>> laraxot/dev

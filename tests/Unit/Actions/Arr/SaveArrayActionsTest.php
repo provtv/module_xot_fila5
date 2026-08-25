@@ -21,7 +21,11 @@ it('saves array as php file', function (): void {
     $action = app(SavePhpArrayAction::class);
     $result = $action->execute($data, $filename);
 
+<<<<<<< HEAD
    Assert::assertTrue($result);
+=======
+    Assert::assertTrue($result);
+>>>>>>> laraxot/dev
     Assert::assertTrue(File::exists($filename));
     $savedData = include $filename;
     Assert::assertSame($data, $savedData);
@@ -35,7 +39,11 @@ it('saves array as json file', function (): void {
     $action = app(SaveJsonArrayAction::class);
     $result = $action->execute($data, $filename);
 
+<<<<<<< HEAD
    Assert::assertTrue($result);
+=======
+    Assert::assertTrue($result);
+>>>>>>> laraxot/dev
     Assert::assertTrue(File::exists($filename));
     $savedData = json_decode(File::get($filename), true);
     Assert::assertSame($data, $savedData);
@@ -49,7 +57,11 @@ it('saves array via SaveArrayAction dispatcher', function (): void {
 
     $action = app(SaveArrayAction::class);
 
+<<<<<<< HEAD
    Assert::assertTrue($action->execute($data, $filenamePhp, 'php'));
+=======
+    Assert::assertTrue($action->execute($data, $filenamePhp, 'php'));
+>>>>>>> laraxot/dev
     Assert::assertTrue($action->execute($data, $filenameJson, 'json'));
 
     File::delete($filenamePhp);

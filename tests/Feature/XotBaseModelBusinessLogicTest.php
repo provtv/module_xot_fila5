@@ -56,7 +56,11 @@ describe('Xot Base Model Business Logic', function (): void {
         $tableName = $baseModel->getTable();
 
         // Assert
+<<<<<<< HEAD
        Assert::assertIsString($tableName);
+=======
+        Assert::assertIsString($tableName);
+>>>>>>> laraxot/dev
         Assert::assertNotEmpty($tableName);
     });
 
@@ -68,7 +72,11 @@ describe('Xot Base Model Business Logic', function (): void {
         $connection = $baseModel->getConnection();
 
         // Assert
+<<<<<<< HEAD
        Assert::assertNotNull($connection);
+=======
+        Assert::assertNotNull($connection);
+>>>>>>> laraxot/dev
         Assert::assertInstanceOf(ConnectionInterface::class, $connection);
     });
 
@@ -80,7 +88,11 @@ describe('Xot Base Model Business Logic', function (): void {
         $keyName = $baseModel->getKeyName();
 
         // Assert
+<<<<<<< HEAD
        Assert::assertIsString($keyName);
+=======
+        Assert::assertIsString($keyName);
+>>>>>>> laraxot/dev
         Assert::assertEquals('id', $keyName);
     });
 
@@ -89,7 +101,11 @@ describe('Xot Base Model Business Logic', function (): void {
         $module = new Module();
 
         // Act & Assert
+<<<<<<< HEAD
        Assert::assertInstanceOf(XotBaseModel::class, $module);
+=======
+        Assert::assertInstanceOf(XotBaseModel::class, $module);
+>>>>>>> laraxot/dev
         Assert::assertInstanceOf(Model::class, $module);
     });
 
@@ -103,7 +119,11 @@ describe('Xot Base Model Business Logic', function (): void {
         $casts = $baseModel->getCasts();
 
         // Assert
+<<<<<<< HEAD
        Assert::assertIsArray($fillable);
+=======
+        Assert::assertIsArray($fillable);
+>>>>>>> laraxot/dev
         Assert::assertIsArray($hidden);
         Assert::assertIsArray($casts);
     });
@@ -124,7 +144,11 @@ describe('Xot Base Model Business Logic', function (): void {
 
         // Assert
         // Nota: I modelli base possono avere configurazioni diverse
+<<<<<<< HEAD
        Assert::assertIsBool($usesTimestamps);
+=======
+        Assert::assertIsBool($usesTimestamps);
+>>>>>>> laraxot/dev
     });
 
     test('it supports tenant isolation when configured', function (): void {
@@ -149,7 +173,11 @@ describe('Xot Base Model Business Logic', function (): void {
         $serialized = serialize($baseModel);
 
         // Assert
+<<<<<<< HEAD
        Assert::assertNotEmpty($serialized);
+=======
+        Assert::assertNotEmpty($serialized);
+>>>>>>> laraxot/dev
     });
 
     test('it can be unserialized', function (): void {
@@ -161,7 +189,11 @@ describe('Xot Base Model Business Logic', function (): void {
         $unserialized = unserialize($serialized);
 
         // Assert
+<<<<<<< HEAD
        Assert::assertInstanceOf(BaseModel::class, $unserialized);
+=======
+        Assert::assertInstanceOf(BaseModel::class, $unserialized);
+>>>>>>> laraxot/dev
     });
 
     test('it supports json serialization', function (): void {
@@ -172,7 +204,11 @@ describe('Xot Base Model Business Logic', function (): void {
         $json = json_encode($baseModel);
 
         // Assert
+<<<<<<< HEAD
        Assert::assertNotEmpty($json);
+=======
+        Assert::assertNotEmpty($json);
+>>>>>>> laraxot/dev
         Assert::assertNotFalse($json);
     });
 
@@ -184,7 +220,11 @@ describe('Xot Base Model Business Logic', function (): void {
         $array = $baseModel->toArray();
 
         // Assert
+<<<<<<< HEAD
        Assert::assertIsArray($array);
+=======
+        Assert::assertIsArray($array);
+>>>>>>> laraxot/dev
         Assert::assertNotEmpty($array);
     });
 
@@ -196,7 +236,11 @@ describe('Xot Base Model Business Logic', function (): void {
         $json = $baseModel->toJson();
 
         // Assert
+<<<<<<< HEAD
        Assert::assertIsString($json);
+=======
+        Assert::assertIsString($json);
+>>>>>>> laraxot/dev
         Assert::assertNotEmpty($json);
     });
 
@@ -223,7 +267,11 @@ describe('Xot Base Model Business Logic', function (): void {
         $guarded = $baseModel->getGuarded();
 
         // Assert
+<<<<<<< HEAD
        Assert::assertIsArray($fillable);
+=======
+        Assert::assertIsArray($fillable);
+>>>>>>> laraxot/dev
         Assert::assertIsArray($guarded);
     });
 
@@ -263,7 +311,11 @@ describe('Xot Base Model Business Logic', function (): void {
         $casts = $baseModel->getCasts();
 
         // Assert
+<<<<<<< HEAD
        Assert::assertIsArray($casts);
+=======
+        Assert::assertIsArray($casts);
+>>>>>>> laraxot/dev
     });
 
     test('it supports dates', function (): void {
@@ -274,7 +326,11 @@ describe('Xot Base Model Business Logic', function (): void {
         $dates = $baseModel->getDates();
 
         // Assert
+<<<<<<< HEAD
        Assert::assertIsArray($dates);
+=======
+        Assert::assertIsArray($dates);
+>>>>>>> laraxot/dev
     });
 
     test('it supports hidden attributes', function (): void {
@@ -285,7 +341,11 @@ describe('Xot Base Model Business Logic', function (): void {
         $hidden = $baseModel->getHidden();
 
         // Assert
+<<<<<<< HEAD
        Assert::assertIsArray($hidden);
+=======
+        Assert::assertIsArray($hidden);
+>>>>>>> laraxot/dev
     });
 
     test('it supports visible attributes', function (): void {
@@ -296,7 +356,11 @@ describe('Xot Base Model Business Logic', function (): void {
         $visible = $baseModel->getVisible();
 
         // Assert
+<<<<<<< HEAD
        Assert::assertIsArray($visible);
+=======
+        Assert::assertIsArray($visible);
+>>>>>>> laraxot/dev
     });
 
     test('it supports appends', function (): void {
@@ -307,7 +371,11 @@ describe('Xot Base Model Business Logic', function (): void {
         $appends = $baseModel->getAppends();
 
         // Assert
+<<<<<<< HEAD
        Assert::assertIsArray($appends);
+=======
+        Assert::assertIsArray($appends);
+>>>>>>> laraxot/dev
     });
 
     test('it supports with relationships', function (): void {

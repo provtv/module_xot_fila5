@@ -19,7 +19,11 @@ it('builds a streamed pdf download response for the generic test view', function
         'generated_for' => 'unit-test',
     ]);
 
+<<<<<<< HEAD
    Assert::assertInstanceOf(StreamedResponse::class, $response);
+=======
+    Assert::assertInstanceOf(StreamedResponse::class, $response);
+>>>>>>> laraxot/dev
     Assert::assertSame('application/pdf', $response->headers->get('Content-Type'));
     Assert::assertStringContainsString('spatie-pdf-test.pdf', (string) $response->headers->get('content-disposition'));
 });

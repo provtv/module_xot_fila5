@@ -4,4 +4,8 @@ topic: syntaxs-mass
 canonical: ../../../Themes/docs/shared-components/syntax-errors-mass-fix.md
 ---
 
+<<<<<<< HEAD
 See canonical documentation: ../../../Themes/docs/shared-components/syntax-errors-mass-fix.md
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/syntax-errors-mass-fix.md
+>>>>>>> laraxot/dev

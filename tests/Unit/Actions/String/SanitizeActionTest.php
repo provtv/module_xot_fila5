@@ -14,5 +14,9 @@ it('sanitizes strings correctly', function (): void {
     $input = " <script>alert('xss')</script> <b>Hello</b> &amp; Welcome! ";
     $expected = "alert('xss') Hello & Welcome!";
 
+<<<<<<< HEAD
    Assert::assertSame($expected, $action->execute($input));
+=======
+    Assert::assertSame($expected, $action->execute($input));
+>>>>>>> laraxot/dev
 });

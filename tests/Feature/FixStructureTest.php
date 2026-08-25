@@ -51,7 +51,11 @@ describe('Fix Structure', function (): void {
         exec('cd '.$this->testDir.' && ./fix_structure.sh');
 
         // Verifichiamo che la cartella Actions sia stata spostata in app/
+<<<<<<< HEAD
        Assert::assertDirectoryExists($this->testDir.'/app/Actions');
+=======
+        Assert::assertDirectoryExists($this->testDir.'/app/Actions');
+>>>>>>> laraxot/dev
         Assert::assertFileExists($this->testDir.'/app/Actions/test.php');
         Assert::assertDirectoryDoesNotExist($this->testDir.'/Actions');
     });
@@ -72,7 +76,11 @@ describe('Fix Structure', function (): void {
         exec('cd '.$this->testDir.' && ./fix_structure.sh');
 
         // Verifichiamo che la cartella Config sia stata rinominata in config
+<<<<<<< HEAD
        Assert::assertDirectoryExists($this->testDir.'/config');
+=======
+        Assert::assertDirectoryExists($this->testDir.'/config');
+>>>>>>> laraxot/dev
         Assert::assertFileExists($this->testDir.'/config/test.php');
         Assert::assertDirectoryDoesNotExist($this->testDir.'/Config');
     });
@@ -96,7 +104,11 @@ describe('Fix Structure', function (): void {
         exec('cd '.$this->testDir.' && ./fix_structure.sh');
 
         // Verifichiamo che i contenuti siano stati uniti e che la cartella minuscola contenga tutto
+<<<<<<< HEAD
        Assert::assertDirectoryExists($this->testDir.'/config');
+=======
+        Assert::assertDirectoryExists($this->testDir.'/config');
+>>>>>>> laraxot/dev
         Assert::assertFileExists($this->testDir.'/config/main.php');
         Assert::assertFileExists($this->testDir.'/config/secondary.php');
         Assert::assertDirectoryDoesNotExist($this->testDir.'/Config');

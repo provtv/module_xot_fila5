@@ -72,7 +72,11 @@ class ImportCsvAction
     /**
      * Get table columns excluding certain fields.
      *
+<<<<<<< HEAD
     * @return array<int, ColumnData>
+=======
+     * @return array<int, ColumnData>
+>>>>>>> laraxot/dev
      */
     private function getTableColumns(Builder $conn, string $tbl): array
     {
@@ -96,7 +100,11 @@ class ImportCsvAction
     /**
      * Prepare fields for the SQL query.
      *
+<<<<<<< HEAD
     * @param array<int, ColumnData> $columns
+=======
+     * @param array<int, ColumnData> $columns
+>>>>>>> laraxot/dev
      *
      * @return array<string>
      */
@@ -111,7 +119,11 @@ class ImportCsvAction
     /**
      * Build the SQL query for importing data.
      *
+<<<<<<< HEAD
     * @param array<int, ColumnData> $columns
+=======
+     * @param array<int, ColumnData> $columns
+>>>>>>> laraxot/dev
      */
     private function buildSql(string $path, string $db, string $tbl, string $fieldsUpList, array $columns): string
     {

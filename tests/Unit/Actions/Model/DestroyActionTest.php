@@ -18,13 +18,21 @@ it('deletes model and returns it', function (): void {
 
         public function delete(): bool
         {
+<<<<<<< HEAD
            $this->deleted = true;
+=======
+            $this->deleted = true;
+>>>>>>> laraxot/dev
 
             return true;
         }
     };
 
+<<<<<<< HEAD
    $result = app(DestroyAction::class)->execute($mockModel, [], []);
+=======
+    $result = app(DestroyAction::class)->execute($mockModel, [], []);
+>>>>>>> laraxot/dev
 
     Assert::assertSame($mockModel, $result);
     Assert::assertTrue($mockModel->deleted);
@@ -38,7 +46,11 @@ it('flashes status message on successful delete', function (): void {
         }
     };
 
+<<<<<<< HEAD
    app(DestroyAction::class)->execute($mockModel, [], []);
+=======
+    app(DestroyAction::class)->execute($mockModel, [], []);
+>>>>>>> laraxot/dev
 
     Assert::assertSame('eliminato', Session::get('status'));
 });
@@ -51,7 +63,11 @@ it('flashes failure message when delete returns false', function (): void {
         }
     };
 
+<<<<<<< HEAD
    app(DestroyAction::class)->execute($mockModel, [], []);
+=======
+    app(DestroyAction::class)->execute($mockModel, [], []);
+>>>>>>> laraxot/dev
 
     Assert::assertSame('NON eliminato', Session::get('status'));
 });

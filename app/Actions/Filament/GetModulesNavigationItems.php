@@ -37,7 +37,11 @@ class GetModulesNavigationItems
     {
         $navs = [];
 
+<<<<<<< HEAD
        $modules = app(GetTenantModulesAction::class)->execute();
+=======
+        $modules = app(GetTenantModulesAction::class)->execute();
+>>>>>>> laraxot/dev
         // Pre-load user roles to avoid N+1 queries
         /** @var Authenticatable|null $user */
         $user = Auth::user();
@@ -140,7 +144,11 @@ class GetModulesNavigationItems
      */
     public function getCachedModuleConfigs(): array
     {
+<<<<<<< HEAD
        $modules = app(GetTenantModulesAction::class)->execute();
+=======
+        $modules = app(GetTenantModulesAction::class)->execute();
+>>>>>>> laraxot/dev
 
         $cacheKey = 'xot:navigation:modules:'.md5((string) json_encode($modules));
 
@@ -171,7 +179,11 @@ class GetModulesNavigationItems
                     continue;
                 }
                 $icon = $config['icon'] ?? 'heroicon-o-cube';
+<<<<<<< HEAD
                $navigation_sort = SafeIntCastAction::cast($config['navigation_sort'] ?? 1);
+=======
+                $navigation_sort = SafeIntCastAction::cast($config['navigation_sort'] ?? 1);
+>>>>>>> laraxot/dev
                 $out[] = [
                     'module' => $module,
                     'module_low' => $module_low,
