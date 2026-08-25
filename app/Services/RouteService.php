@@ -345,8 +345,8 @@ class RouteService
         ));
 
         return collect($tmp_arr)
-            ->filter(static fn ($item): bool => ! \in_array($item, ['Module', 'Item'], false))
-            ->map(static function ($item) use ($params): mixed {
+            ->filter(static fn (mixed $item): bool => ! \in_array($item, ['Module', 'Item'], false))
+            ->map(static function (mixed $item) use ($params): mixed {
                 $item = Str::snake($item);
 
                 return $params[$item] ?? $item;

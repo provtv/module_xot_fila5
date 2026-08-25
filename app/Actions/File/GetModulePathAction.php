@@ -36,7 +36,7 @@ class GetModulePathAction
             $files = scandir($modulesPath);
             $moduleNameLower = Str::lower($moduleName);
 
-            $foundModule = collect($files)->filter(static function ($item) use ($moduleNameLower): bool {
+            $foundModule = collect($files)->filter(static function (mixed $item) use ($moduleNameLower): bool {
                 if (! is_string($item)) {
                     return false;
                 }

@@ -50,7 +50,7 @@ class GetViewBlocksOptionsByTypeAction
         $fixPathAction = app(FixPathAction::class);
         Assert::isCallable([$fixPathAction, 'execute'], 'FixPathAction::execute deve essere chiamabile');
 
-        $opts = Arr::mapWithKeys($files, function ($path) use ($img, $type, $fixPathAction): array {
+        $opts = Arr::mapWithKeys($files, function (mixed $path) use ($img, $type, $fixPathAction): array {
             // Verifichiamo che il percorso sia una stringa
             Assert::string($path, 'Il percorso del file deve essere una stringa');
 

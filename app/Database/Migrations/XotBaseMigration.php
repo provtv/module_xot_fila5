@@ -524,7 +524,7 @@ abstract class XotBaseMigration extends LaravelMigration
         $table = $this->getTable();
         $conn = DB::connection($this->model->getConnectionName());
 
-        $conn->table($table)->orderBy('id')->chunk(100, function ($rows) use ($table, $conn): void {
+        $conn->table($table)->orderBy('id')->chunk(100, function (mixed $rows) use ($table, $conn): void {
             foreach ($rows as $row) {
                 $row = (object) $row;
                 if (! empty($row->uuid)) {

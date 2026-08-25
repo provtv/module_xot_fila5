@@ -29,7 +29,7 @@ class ExportXlsTableAction extends XotBaseAction
             ->action(static function (RelationManager $livewire) {
                 $livewire_class = $livewire::class;
                 $filterParts = array_map(
-                    static fn ($value): string => is_scalar($value) ? (string) $value : '',
+                    static fn (mixed $value): string => is_scalar($value) ? (string) $value : '',
                     Arr::flatten($livewire->tableFilters ?? []),
                 );
                 $filename =

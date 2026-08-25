@@ -80,7 +80,7 @@ class ImportCsvAction
         $excludedColumns = ['id'];
 
         return array_map(
-            function ($column) use ($conn, $tbl) {
+            function (mixed $column) use ($conn, $tbl) {
                 /** @var string $column */
                 $type = $conn->getColumnType($tbl, $column);
 

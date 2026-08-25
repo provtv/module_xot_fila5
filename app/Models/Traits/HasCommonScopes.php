@@ -84,7 +84,7 @@ trait HasCommonScopes
      */
     public function scopeDraft(Builder $query): Builder
     {
-        return $query->where(function ($q): void {
+        return $query->where(function (Builder $q): void {
             $q->whereNull('published_at')
                 ->orWhere('published_at', '>', now());
         });

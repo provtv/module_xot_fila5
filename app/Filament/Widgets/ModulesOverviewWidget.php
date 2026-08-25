@@ -34,7 +34,7 @@ class ModulesOverviewWidget extends XotBaseWidget
             $configs = app(GetModulesNavigationItems::class)->getCachedModuleConfigs();
 
             // Ordina per sort
-            usort($configs, static fn ($a, $b) => ($a['sort'] <=> $b['sort']));
+            usort($configs, static fn (array $a, array $b): int => $a['sort'] <=> $b['sort']);
 
             $user = Auth::user();
             $hasRoleFn = static function (string $role) use ($user): bool {
