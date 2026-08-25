@@ -31,11 +31,7 @@ abstract class XotBaseTransition
         $stateClassName = Str::of($class)->afterLast('To')->toString();
         $newStateClass = $stateNamespace.'\\'.$stateClassName;
 
-<<<<<<< HEAD
-       $this->record->setAttribute('state', new $newStateClass($this->record));
-=======
         $this->record->setAttribute('state', new $newStateClass($this->record));
->>>>>>> laraxot/dev
         $this->record->save();
 
         return $this->record;
@@ -68,11 +64,7 @@ abstract class XotBaseTransition
     /**
      * Get notification attachments.
      *
-<<<<<<< HEAD
-    * @return array<int, array{path?: string, data?: mixed, as?: string|null, mime?: string|null}>
-=======
      * @return array<int, array{path?: string, data?: mixed, as?: string|null, mime?: string|null}>
->>>>>>> laraxot/dev
      */
     public function getNotificationAttachments(): array
     {
@@ -82,11 +74,7 @@ abstract class XotBaseTransition
     public function getNotificationSlug(UserContract $recipient): string
     {
         $typeEnum = $recipient->type;
-<<<<<<< HEAD
-       $type = $typeEnum instanceof \BackedEnum ? SafeStringCastAction::cast($typeEnum->value) : 'unknown';
-=======
         $type = $typeEnum instanceof \BackedEnum ? SafeStringCastAction::cast($typeEnum->value) : 'unknown';
->>>>>>> laraxot/dev
 
         $slug =
             class_basename($this->record).

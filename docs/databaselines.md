@@ -4,8 +4,4 @@ topic: databaselines
 canonical: ../../../Themes/docs/shared-components/database-guidelines.md
 ---
 
-<<<<<<< HEAD
 See canonical documentation: ../../../Themes/docs/shared-components/database-guidelines.md
-=======
-See canonical documentation: ../../../Themes/docs/shared-components/database-guidelines.md
->>>>>>> laraxot/dev

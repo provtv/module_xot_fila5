@@ -11,33 +11,21 @@ class HandlersRepository
 {
     /**
      * The custom handlers reporting exceptions.
-<<<<<<< HEAD
-    *
-=======
      *
->>>>>>> laraxot/dev
      * @var array<int, callable>
      */
     protected array $reporters = [];
 
     /**
      * The custom handlers rendering exceptions.
-<<<<<<< HEAD
-    *
-=======
      *
->>>>>>> laraxot/dev
      * @var array<int, callable>
      */
     protected array $renderers = [];
 
     /**
      * The custom handlers rendering exceptions in console.
-<<<<<<< HEAD
-    *
-=======
      *
->>>>>>> laraxot/dev
      * @var array<int, callable>
      */
     protected array $consoleRenderers = [];
@@ -68,64 +56,40 @@ class HandlersRepository
 
     /**
      * Retrieve all reporters handling the given exception.
-<<<<<<< HEAD
-    *
-=======
      *
->>>>>>> laraxot/dev
      * @return array<int, callable>
      */
     public function getReportersByException(\Throwable $e): array
     {
         return array_filter(
             $this->reporters,
-<<<<<<< HEAD
-           fn (callable $handler): bool => $this->handlesException($handler, $e),
-=======
             fn (callable $handler): bool => $this->handlesException($handler, $e),
->>>>>>> laraxot/dev
         );
     }
 
     /**
      * Retrieve all renderers handling the given exception.
-<<<<<<< HEAD
-    *
-=======
      *
->>>>>>> laraxot/dev
      * @return array<int, callable>
      */
     public function getRenderersByException(\Throwable $e): array
     {
         return array_filter(
             $this->renderers,
-<<<<<<< HEAD
-           fn (callable $handler): bool => $this->handlesException($handler, $e),
-=======
             fn (callable $handler): bool => $this->handlesException($handler, $e),
->>>>>>> laraxot/dev
         );
     }
 
     /**
      * Retrieve all console renderers handling the given exception.
-<<<<<<< HEAD
-    *
-=======
      *
->>>>>>> laraxot/dev
      * @return array<int, callable>
      */
     public function getConsoleRenderersByException(\Throwable $e): array
     {
         return array_filter(
             $this->consoleRenderers,
-<<<<<<< HEAD
-           fn (callable $handler): bool => $this->handlesException($handler, $e),
-=======
             fn (callable $handler): bool => $this->handlesException($handler, $e),
->>>>>>> laraxot/dev
         );
     }
 
@@ -144,11 +108,7 @@ class HandlersRepository
             return false;
         }
 
-<<<<<<< HEAD
-       $type = $params[0]->getType();
-=======
         $type = $params[0]->getType();
->>>>>>> laraxot/dev
 
         if (! $type instanceof \ReflectionNamedType || $type->isBuiltin()) {
             return true;

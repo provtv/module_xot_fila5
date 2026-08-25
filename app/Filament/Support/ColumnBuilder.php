@@ -71,11 +71,7 @@ class ColumnBuilder
             ->sortable()
             ->searchable()
             ->limit(50)
-<<<<<<< HEAD
-           ->tooltip(self::attributeTooltip('title'))
-=======
             ->tooltip(self::attributeTooltip('title'))
->>>>>>> laraxot/dev
             ->toggleable();
     }
 
@@ -114,11 +110,7 @@ class ColumnBuilder
         return TextColumn::make('description')
             ->label(__('xot::fields.description.label'))
             ->limit($limit)
-<<<<<<< HEAD
-           ->tooltip(self::attributeTooltip('description'))
-=======
             ->tooltip(self::attributeTooltip('description'))
->>>>>>> laraxot/dev
             ->toggleable();
     }
 
@@ -212,11 +204,7 @@ class ColumnBuilder
     /**
      * Standard is_active boolean column (sortable).
      */
-<<<<<<< HEAD
-   public static function isActive(): IconColumn
-=======
     public static function isActive(): IconColumn
->>>>>>> laraxot/dev
     {
         // `BooleanColumn` e' deprecata: e' una `IconColumn` con `boolean()` gia' attivo.
         return IconColumn::make('is_active')
@@ -319,10 +307,7 @@ class ColumnBuilder
             'deleted_at' => self::deletedAt(),
         ];
     }
-<<<<<<< HEAD
-=======
 
->>>>>>> laraxot/dev
     /**
      * Tooltip col valore intero di un attributo troncato da `limit()`.
      *

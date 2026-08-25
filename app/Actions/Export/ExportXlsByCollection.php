@@ -40,11 +40,7 @@ class ExportXlsByCollection
         // Assicuriamo che $fields sia un array di stringhe
         $stringFields = array_map(fn (mixed $field): string => (string) $field, array_values($fields));
 
-<<<<<<< HEAD
-       /** @var Collection<int, mixed> $supportCollection */
-=======
         /** @var Collection<int, mixed> $supportCollection */
->>>>>>> laraxot/dev
         $supportCollection = $collection instanceof EloquentCollection
             ? Collection::make($collection->values()->all())
             : Collection::make($collection->values()->all());
@@ -95,11 +91,7 @@ class ExportXlsByCollection
     protected function writeHeader(Worksheet $sheet, array $fields): void
     {
         foreach ($fields as $col => $field) {
-<<<<<<< HEAD
-           $sheet->setCellValue(Coordinate::stringFromColumnIndex($col + 1).'1', $field);
-=======
             $sheet->setCellValue(Coordinate::stringFromColumnIndex($col + 1).'1', $field);
->>>>>>> laraxot/dev
         }
     }
 
@@ -116,11 +108,7 @@ class ExportXlsByCollection
         foreach ($rows as $data) {
             foreach ($fields as $col => $field) {
                 $value = $this->extractValue($data, $field);
-<<<<<<< HEAD
-               $sheet->setCellValue(Coordinate::stringFromColumnIndex($col + 1).(string) $row, $value);
-=======
                 $sheet->setCellValue(Coordinate::stringFromColumnIndex($col + 1).(string) $row, $value);
->>>>>>> laraxot/dev
             }
             ++$row;
         }

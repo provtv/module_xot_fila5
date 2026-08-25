@@ -30,11 +30,7 @@ it('maps only expected keys for each product', function (): void {
 
     $result = app(GetProductsArrayDummyAction::class)->execute();
 
-<<<<<<< HEAD
-   Assert::assertSame([
-=======
     Assert::assertSame([
->>>>>>> laraxot/dev
         [
             'id' => 1,
             'title' => 'Phone',
@@ -45,11 +41,7 @@ it('maps only expected keys for each product', function (): void {
             'category' => 'tech',
             'thumbnail' => 'thumb.jpg',
         ],
-<<<<<<< HEAD
-   ], $result);
-=======
     ], $result);
->>>>>>> laraxot/dev
 });
 
 it('returns empty item when product entry is not an array', function (): void {
@@ -63,9 +55,5 @@ it('returns empty item when product entry is not an array', function (): void {
 
     $result = app(GetProductsArrayDummyAction::class)->execute();
 
-<<<<<<< HEAD
-   Assert::assertSame([[]], $result);
-=======
     Assert::assertSame([[]], $result);
->>>>>>> laraxot/dev
 });

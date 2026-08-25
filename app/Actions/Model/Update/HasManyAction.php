@@ -49,11 +49,7 @@ class HasManyAction
 
     private function handleDirectUpdate(RelationData $relationDTO, HasManyUpdateData $updateData): void
     {
-<<<<<<< HEAD
-       /** @var Builder<Model> $query */
-=======
         /** @var Builder<Model> $query */
->>>>>>> laraxot/dev
         $query = $relationDTO->related->newQuery();
 
         $query->where($updateData->foreignKey, $updateData->parentKey)->update([$updateData->foreignKey => null]);
@@ -98,11 +94,7 @@ class HasManyAction
     /**
      * Clean up orphaned records after batch update.
      *
-<<<<<<< HEAD
-    * @param array<int, int|string> $updatedIds
-=======
      * @param array<int, int|string> $updatedIds
->>>>>>> laraxot/dev
      */
     private function cleanupOrphanedRecords(
         RelationData $relationDTO,

@@ -7,11 +7,7 @@ namespace Modules\Xot\Datas;
 use Spatie\LaravelData\Data;
 
 /**
-<<<<<<< HEAD
-* Class SubscriptionData - Gestisce la configurazione degli abbonamenti.
-=======
  * Class SubscriptionData - Gestisce la configurazione degli abbonamenti.
->>>>>>> laraxot/dev
  * Utilizzato esclusivamente nell'ambito dell'architettura Filament-first.
  *
  * @phpstan-consistent-constructor
@@ -27,11 +23,7 @@ final class SubscriptionData extends Data
         public readonly string $driver = 'stripe',
         public readonly array $plans = [],
         public readonly string $currency = 'EUR',
-<<<<<<< HEAD
-       public readonly array $allowedModels = [],
-=======
         public readonly array $allowedModels = [],
->>>>>>> laraxot/dev
         public readonly bool $trialEnabled = true,
         public readonly int $trialDays = 14,
     ) {
@@ -40,11 +32,7 @@ final class SubscriptionData extends Data
     /**
      * Create a new instance of SubscriptionData with default values.
      */
-<<<<<<< HEAD
-   public static function make(): self
-=======
     public static function make(): self
->>>>>>> laraxot/dev
     {
         return new self();
     }

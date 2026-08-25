@@ -16,11 +16,7 @@ test('count actions work', function (): void {
 
     $modelClass = XotBaseModel::class;
 
-<<<<<<< HEAD
-   try {
-=======
     try {
->>>>>>> laraxot/dev
         $count = $action->execute($modelClass);
         Assert::assertIsInt($count);
         $updateAction->execute($modelClass, 10);

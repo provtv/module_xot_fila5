@@ -4,8 +4,4 @@ topic: nested-resource
 canonical: ../../../Themes/docs/shared-components/nested-resource.md
 ---
 
-<<<<<<< HEAD
 See canonical documentation: ../../../Themes/docs/shared-components/nested-resource.md
-=======
-See canonical documentation: ../../../Themes/docs/shared-components/nested-resource.md
->>>>>>> laraxot/dev

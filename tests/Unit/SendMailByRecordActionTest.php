@@ -17,11 +17,7 @@ it('throws if record has no email', function (): void {
             return null;
         }
 
-<<<<<<< HEAD
-       public function myLogs(): object
-=======
         public function myLogs(): object
->>>>>>> laraxot/dev
         {
             return new class {
                 /** @param array<mixed> $data */
@@ -32,11 +28,7 @@ it('throws if record has no email', function (): void {
         }
     };
 
-<<<<<<< HEAD
-   $this->expectThrowable(\InvalidArgumentException::class);
-=======
     $this->expectThrowable(\InvalidArgumentException::class);
->>>>>>> laraxot/dev
 
     app(SendMailByRecordAction::class)->execute($record, \stdClass::class);
 });

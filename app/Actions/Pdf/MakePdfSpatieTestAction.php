@@ -26,11 +26,7 @@ class MakePdfSpatieTestAction
         string $filename = 'spatie-pdf-test.pdf',
         string $view = 'xot::pdf.spatie-test',
     ): StreamedResponse {
-<<<<<<< HEAD
-       $pdf = $this->makePdfBuilder($view, $data, $filename);
-=======
         $pdf = $this->makePdfBuilder($view, $data, $filename);
->>>>>>> laraxot/dev
 
         return new StreamedResponse(
             static function () use ($pdf): void {
@@ -43,10 +39,7 @@ class MakePdfSpatieTestAction
             ],
         );
     }
-<<<<<<< HEAD
-=======
 
->>>>>>> laraxot/dev
     /**
      * @param array<string, mixed> $data
      */

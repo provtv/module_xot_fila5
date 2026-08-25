@@ -12,11 +12,7 @@ uses(TestCase::class);
 it('casts various values to string correctly', function (): void {
     $action = app(SafeStringCastAction::class);
 
-<<<<<<< HEAD
-   Assert::assertSame('test', $action->execute('test'));
-=======
     Assert::assertSame('test', $action->execute('test'));
->>>>>>> laraxot/dev
     Assert::assertSame('', $action->execute(null));
     Assert::assertSame('1', $action->execute(true));
     Assert::assertSame('0', $action->execute(false));

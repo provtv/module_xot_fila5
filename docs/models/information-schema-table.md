@@ -48,8 +48,4 @@ class InformationSchemaTable extends Model
 - [Database Guidelines](database-guidelines.md)
 - [Schema Documentation](directory-structure-guide.md)
 - [PHPStan Level 9 Guide](phpstan-level9-guide.md)
-<<<<<<< HEAD
 - [Model Best Practices](../models/README.md)
-=======
-- [Model Best Practices](../models/README.md)
->>>>>>> laraxot/dev

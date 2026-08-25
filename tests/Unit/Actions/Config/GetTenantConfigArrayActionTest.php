@@ -27,11 +27,7 @@ it('returns config array when file exists and contains array', function (): void
     $path = sys_get_temp_dir().'/xot_tenant_config_'.uniqid('', true).'.php';
     file_put_contents($path, "<?php\nreturn ['driver' => 'smtp', 'port' => 25];\n");
 
-<<<<<<< HEAD
-   /** @var GetTenantConfigPathAction&MockInterface $pathAction */
-=======
     /** @var GetTenantConfigPathAction&MockInterface $pathAction */
->>>>>>> laraxot/dev
     $pathAction = \Mockery::mock(GetTenantConfigPathAction::class);
     $pathAction->allows(['execute' => $path]);
 
@@ -41,11 +37,7 @@ it('returns config array when file exists and contains array', function (): void
         $result = app(GetTenantConfigArrayAction::class)->execute('mail');
         expect($result)->toBe(['driver' => 'smtp', 'port' => 25]);
     } finally {
-<<<<<<< HEAD
-       unlink($path);
-=======
         unlink($path);
->>>>>>> laraxot/dev
     }
 });
 
@@ -53,11 +45,7 @@ it('returns empty array when required file does not return an array', function (
     $path = sys_get_temp_dir().'/xot_tenant_config_scalar_'.uniqid('', true).'.php';
     file_put_contents($path, "<?php\nreturn 'not-array';\n");
 
-<<<<<<< HEAD
-   /** @var GetTenantConfigPathAction&MockInterface $pathAction */
-=======
     /** @var GetTenantConfigPathAction&MockInterface $pathAction */
->>>>>>> laraxot/dev
     $pathAction = \Mockery::mock(GetTenantConfigPathAction::class);
     $pathAction->allows(['execute' => $path]);
 
@@ -67,10 +55,6 @@ it('returns empty array when required file does not return an array', function (
         $result = app(GetTenantConfigArrayAction::class)->execute('scalar');
         expect($result)->toBe([]);
     } finally {
-<<<<<<< HEAD
-       unlink($path);
-=======
         unlink($path);
->>>>>>> laraxot/dev
     }
 });

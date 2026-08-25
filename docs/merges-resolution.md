@@ -4,8 +4,4 @@ topic: merges-resolution
 canonical: ../../../Themes/docs/shared-components/merge-conflicts-resolution-roadmap.md
 ---
 
-<<<<<<< HEAD
 See canonical documentation: ../../../Themes/docs/shared-components/merge-conflicts-resolution-roadmap.md
-=======
-See canonical documentation: ../../../Themes/docs/shared-components/merge-conflicts-resolution-roadmap.md
->>>>>>> laraxot/dev

@@ -12,11 +12,7 @@ it('casts various values to boolean correctly', function (): void {
     $action = app(SafeBooleanCastAction::class);
 
     // Booleans
-<<<<<<< HEAD
-   Assert::assertTrue($action->execute(true));
-=======
     Assert::assertTrue($action->execute(true));
->>>>>>> laraxot/dev
     Assert::assertFalse($action->execute(false));
     // Null
     Assert::assertTrue($action->execute(null, true));

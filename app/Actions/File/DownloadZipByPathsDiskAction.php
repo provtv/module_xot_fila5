@@ -15,11 +15,7 @@ class DownloadZipByPathsDiskAction
     /**
      * Crea un file ZIP dai percorsi forniti e lo restituisce come download.
      *
-<<<<<<< HEAD
-    * @param array<int, string> $attachments Array di percorsi file
-=======
      * @param array<int, string> $attachments Array di percorsi file
->>>>>>> laraxot/dev
      * @param string             $disk        Nome del disco di storage
      *
      * @return BinaryFileResponse|null Risposta di download o null se fallisce

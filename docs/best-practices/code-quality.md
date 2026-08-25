@@ -72,8 +72,4 @@ This document outlines the best practices for maintaining high code quality with
 - [PHPStan Implementation Guide](./PHPSTAN-IMPLEMENTATION-GUIDE.md)
 - [Naming Conventions](./NAMING-CONVENTIONS.md)
 - [Service Provider Best Practices](service-provider-best-practices.md)
-<<<<<<< HEAD
 - [Filament Best Practices](filament-best-practices.md)
-=======
-- [Filament Best Practices](filament-best-practices.md)
->>>>>>> laraxot/dev

@@ -73,8 +73,4 @@ Esempio dominio: `Modules\Fixcity\Filament\Widgets\CreateTicketWizardWidget`
 - [Indice widget Filament](./index.md)
 - [Ticket wizard Fixcity](../../../Fixcity/docs/ticket-wizard-frontoffice.md)
 - [Pattern wizard Fixcity](../../../Fixcity/docs/filament-wizard-pattern.md)
-<<<<<<< HEAD
 - [Regole di qualità](../../../../../../docs/wiki/rules/quality-gate-after-edit.md)
-=======
-- [Regole di qualità](../../../../../../docs/wiki/rules/quality-gate-after-edit.md)
->>>>>>> laraxot/dev

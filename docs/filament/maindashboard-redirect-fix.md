@@ -173,8 +173,4 @@ performance::admin
 - ✅ **Multi-Ruolo**: Supporto mantenuto
 - ✅ **Performance**: Nessun impatto negativo
 
-<<<<<<< HEAD
 *Ultimo aggiornamento: 2025-01-27*
-=======
-*Ultimo aggiornamento: 2025-01-27*
->>>>>>> laraxot/dev

@@ -3,11 +3,7 @@
 declare(strict_types=1);
 
 return [
-<<<<<<< HEAD
-   'values' => [
-=======
     'values' => [
->>>>>>> laraxot/dev
         'spipu' => [
             'label' => 'Spipu',
             'icon' => 'heroicon-o-table-cells',

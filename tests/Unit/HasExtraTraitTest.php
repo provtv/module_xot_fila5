@@ -144,11 +144,7 @@ describe('HasExtraTrait', function (): void {
         $getExtraMethod = $reflection->getMethod('getExtra');
 
         $docComment = $getExtraMethod->getDocComment();
-<<<<<<< HEAD
-       Assert::assertIsString($docComment);
-=======
         Assert::assertIsString($docComment);
->>>>>>> laraxot/dev
         Assert::assertStringContainsString('@return', $docComment);
     });
 });

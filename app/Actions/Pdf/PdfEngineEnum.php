@@ -11,11 +11,7 @@ use Modules\Xot\Traits\EnumTrait;
  */
 enum PdfEngineEnum: string
 {
-<<<<<<< HEAD
-   use EnumTrait;
-=======
     use EnumTrait;
->>>>>>> laraxot/dev
 
     case SPIPU = 'spipu';
 

@@ -108,8 +108,4 @@ public static function getModel(): null|string
 - **Data correzione**: Gennaio 2025
 - **Versione Filament**: 3.x
 - **PHP Version**: 8.3+
-<<<<<<< HEAD
 - **Livello PHPStan**: 9+
-=======
-- **Livello PHPStan**: 9+
->>>>>>> laraxot/dev

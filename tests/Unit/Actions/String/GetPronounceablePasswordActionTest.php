@@ -13,11 +13,7 @@ it('generates pronounceable password correctly', function (): void {
 
     $password = $action->execute(12);
 
-<<<<<<< HEAD
-   Assert::assertGreaterThanOrEqual(8, strlen($password)); // min length logic inside
-=======
     Assert::assertGreaterThanOrEqual(8, strlen($password)); // min length logic inside
->>>>>>> laraxot/dev
     Assert::assertMatchesRegularExpression('/[0-9]/', (string) $password); // contains digit
     Assert::assertMatchesRegularExpression('/[!#*-_=+:?]/', (string) $password); // contains special
     Assert::assertMatchesRegularExpression('/[A-Z]/', (string) $password); // contains uppercase
@@ -26,9 +22,5 @@ it('generates pronounceable password correctly', function (): void {
 it('handles small length correctly', function (): void {
     $action = app(GetPronounceablePasswordAction::class);
     $password = $action->execute(2);
-<<<<<<< HEAD
-   Assert::assertGreaterThanOrEqual(4, strlen($password));
-=======
     Assert::assertGreaterThanOrEqual(4, strlen($password));
->>>>>>> laraxot/dev
 });

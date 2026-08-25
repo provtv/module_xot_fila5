@@ -27,11 +27,7 @@ it('converts array to raw js string correctly', function (): void {
     $result = $action->execute($data);
     $html = $result->toHtml();
 
-<<<<<<< HEAD
-   Assert::assertStringContainsString('simpleKey: \'value\'', $html);
-=======
     Assert::assertStringContainsString('simpleKey: \'value\'', $html);
->>>>>>> laraxot/dev
     Assert::assertStringContainsString('\'complex-key\': \'it\\\'s simple\'', $html);
     Assert::assertStringContainsString('number: 123', $html);
     Assert::assertStringContainsString('boolean: true', $html);

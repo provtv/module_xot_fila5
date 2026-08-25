@@ -16,11 +16,7 @@ it('can create a test module', function () {
         'enabled' => true,
     ]);
 
-<<<<<<< HEAD
-   Assert::assertInstanceOf(Module::class, $module);
-=======
     Assert::assertInstanceOf(Module::class, $module);
->>>>>>> laraxot/dev
     Assert::assertSame('TestModule', $module->name);
     Assert::assertTrue((bool) $module->enabled);
 });

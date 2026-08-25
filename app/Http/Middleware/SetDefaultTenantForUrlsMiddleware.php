@@ -30,11 +30,7 @@ class SetDefaultTenantForUrlsMiddleware
             // 'referrer' => url()->previous(),
         ]);
 
-<<<<<<< HEAD
-       /** @var Response|JsonResponse|\Symfony\Component\HttpFoundation\Response $response */
-=======
         /** @var Response|JsonResponse|\Symfony\Component\HttpFoundation\Response $response */
->>>>>>> laraxot/dev
         $response = $next($request);
 
         return $response;

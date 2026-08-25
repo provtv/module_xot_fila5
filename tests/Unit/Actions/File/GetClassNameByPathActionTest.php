@@ -21,20 +21,12 @@ it('gets class name from path correctly', function (): void {
     $action = app(GetClassNameByPathAction::class);
     $result = $action->execute($tempPath);
 
-<<<<<<< HEAD
-   Assert::assertSame('My\\Test\\Namespace\\MyTestClass', $result);
-=======
     Assert::assertSame('My\\Test\\Namespace\\MyTestClass', $result);
->>>>>>> laraxot/dev
     File::delete($tempPath);
 });
 
 it('gets class name from path without namespace correctly', function (): void {
-<<<<<<< HEAD
-   $tempFile = tempnam(sys_get_temp_dir(), 'test_class_no_ns_');
-=======
     $tempFile = tempnam(sys_get_temp_dir(), 'test_class_no_ns_');
->>>>>>> laraxot/dev
     $tempPath = $tempFile.'.php';
     $content = "<?php\n\nclass MyNoNsClass {}\n";
     File::put($tempPath, $content);
@@ -42,10 +34,6 @@ it('gets class name from path without namespace correctly', function (): void {
     $action = app(GetClassNameByPathAction::class);
     $result = $action->execute($tempPath);
 
-<<<<<<< HEAD
-   Assert::assertSame('MyNoNsClass', $result);
-=======
     Assert::assertSame('MyNoNsClass', $result);
->>>>>>> laraxot/dev
     File::delete($tempPath);
 });

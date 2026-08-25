@@ -14,11 +14,7 @@ it('extracts string between markers correctly', function (): void {
     $body = 'prefix { content { inner } } suffix';
     $result = $action->execute($body, 'content', '{', '}');
 
-<<<<<<< HEAD
-   Assert::assertSame('content { inner }', $result);
-=======
     Assert::assertSame('content { inner }', $result);
->>>>>>> laraxot/dev
 });
 
 it('throws exception when start marker is missing', function (): void {

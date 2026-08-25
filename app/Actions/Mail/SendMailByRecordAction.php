@@ -63,11 +63,7 @@ class SendMailByRecordAction
             $bodyHtml = '';
         }
 
-<<<<<<< HEAD
-       $pdfPath = app(PdfByModelAction::class)->execute(
-=======
         $pdfPath = app(PdfByModelAction::class)->execute(
->>>>>>> laraxot/dev
             model: $record,
             out: 'path',
         );
@@ -79,20 +75,12 @@ class SendMailByRecordAction
             recipient: $to,
             subject: $subject,
             body_html: $bodyHtml,
-<<<<<<< HEAD
-           attachments: [$pdfPath],
-=======
             attachments: [$pdfPath],
->>>>>>> laraxot/dev
         );
         SmtpData::make()->send($emailData);
 
         // myLogs è sempre disponibile su BaseModel
-<<<<<<< HEAD
-       $logs = $record->myLogs();
-=======
         $logs = $record->myLogs();
->>>>>>> laraxot/dev
         if (! is_object($logs) || ! method_exists($logs, 'create')) {
             throw new \InvalidArgumentException('Model ['.$record::class.'] myLogs relation is invalid');
         }

@@ -4,8 +4,4 @@ topic: phpstanes-progress
 canonical: ../../../Themes/docs/shared-components/phpstan-fixes-progress.md
 ---
 
-<<<<<<< HEAD
 See canonical documentation: ../../../Themes/docs/shared-components/phpstan-fixes-progress.md
-=======
-See canonical documentation: ../../../Themes/docs/shared-components/phpstan-fixes-progress.md
->>>>>>> laraxot/dev

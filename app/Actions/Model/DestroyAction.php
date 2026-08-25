@@ -12,11 +12,7 @@ class DestroyAction
 {
     use QueueableAction;
 
-<<<<<<< HEAD
-   /**
-=======
     /**
->>>>>>> laraxot/dev
      * @param array<string, mixed> $_data
      * @param array<string, mixed> $_rules
      */

@@ -862,8 +862,4 @@ The Xot module is a comprehensive foundation providing:
 
 **Document Version:** 1.0
 **Generated:** 2025-11-19
-<<<<<<< HEAD
 **Author:** Claude Code Analysis
-=======
-**Author:** Claude Code Analysis
->>>>>>> laraxot/dev

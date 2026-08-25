@@ -12,11 +12,7 @@ test('range intersect action handles basic intersection', function () {
     $action = app(RangeIntersectAction::class);
 
     // Case 1: a1 >= a0 && a1 <= b0 && b0 <= b1
-<<<<<<< HEAD
-   Assert::assertSame([15, 20], $action->execute(10, 20, 15, 25));
-=======
     Assert::assertSame([15, 20], $action->execute(10, 20, 15, 25));
->>>>>>> laraxot/dev
     // Case 2: a0 >= a1 && a0 <= b0 && b0 <= b1
     Assert::assertSame([15, 25], $action->execute(15, 25, 10, 30));
     // Case 3: a1 >= a0 && a1 <= b1 && b1 <= b0

@@ -952,8 +952,4 @@ Pattern:
 2.  Iniettare gli stessi dati del Dashboard (usando Actions).
 3.  Impostare `animation: false` nelle opzioni Chart.js per la stampa.
 
-<<<<<<< HEAD
 Vedi: **[Dashboard Best Practices](../../../limesurvey/docs/dashboard-best-practices.md)**.
-=======
-Vedi: **[Dashboard Best Practices](../../../limesurvey/docs/dashboard-best-practices.md)**.
->>>>>>> laraxot/dev

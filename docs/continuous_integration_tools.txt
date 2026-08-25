@@ -1,5 +1,3 @@
-<<<<<<<< HEAD:docs/continuous_integration_tools.txt
-========
 ---
 title: "continuous_integration_tools"
 module: "Xot"
@@ -15,7 +13,6 @@ related:
 
 <!-- Contenuto migrato da _docs/continuous_integration_tools.txt -->
 
->>>>>>>> laraxot/dev:docs/consolidated/archive/continuous-integration-tools-2.md
 //----------
 PHP Mess Detector
 

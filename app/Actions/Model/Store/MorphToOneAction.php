@@ -20,21 +20,13 @@ class MorphToOneAction
         //    return;
         // }
 
-<<<<<<< HEAD
-       $rows = $relationDTO->rows;
-=======
         $rows = $relationDTO->rows;
->>>>>>> laraxot/dev
 
         if (! isset($relationDTO->data['lang'])) {
             $relationDTO->data['lang'] = App::getLocale();
         }
 
-<<<<<<< HEAD
-       app(CreateMorphToOneRelatedModelAction::class)->execute($rows, $relationDTO->data);
-=======
         app(CreateMorphToOneRelatedModelAction::class)->execute($rows, $relationDTO->data);
->>>>>>> laraxot/dev
 
         // }
         // } else {

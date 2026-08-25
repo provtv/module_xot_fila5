@@ -11,11 +11,7 @@ use Symfony\Component\HttpFoundation\Response;
 /**
  * Middleware per monitorare l'uso della memoria nei pannelli Filament.
  * SuperMucca Memory Monitor 🐄.
-<<<<<<< HEAD
-*
-=======
  *
->>>>>>> laraxot/dev
  * @phpstan-type MemoryMetrics array{
  *     memory_used_mb: float,
  *     memory_peak_mb: float,
@@ -128,11 +124,7 @@ class FilamentMemoryMonitorMiddleware
     /**
      * Logga l'uso della memoria.
      *
-<<<<<<< HEAD
-    * @param MemoryMetrics $metrics
-=======
      * @param MemoryMetrics $metrics
->>>>>>> laraxot/dev
      */
     private function logMemoryUsage(Request $request, array $metrics): void
     {
@@ -140,11 +132,7 @@ class FilamentMemoryMonitorMiddleware
 
         $message = sprintf(
             'Filament Memory Usage: %sMB used, %sMB peak, %sms execution time - %s %s',
-<<<<<<< HEAD
-           $metrics['memory_used_mb'],
-=======
             $metrics['memory_used_mb'],
->>>>>>> laraxot/dev
             $metrics['memory_peak_mb'],
             $metrics['execution_time_ms'],
             $metrics['method'],
@@ -170,11 +158,7 @@ class FilamentMemoryMonitorMiddleware
     /**
      * Determina il livello di log basato sulle metriche.
      *
-<<<<<<< HEAD
-    * @param MemoryMetrics $metrics
-=======
      * @param MemoryMetrics $metrics
->>>>>>> laraxot/dev
      */
     private function determineLogLevel(array $metrics): string
     {

@@ -229,8 +229,4 @@ LEFT JOIN (
 WHERE s.active = 'Y';
 ```
 
-<<<<<<< HEAD
 These commands and tools provide comprehensive access to analyze, maintain, and optimize the quaeris_survey database used by the Limesurvey integration.
-=======
-These commands and tools provide comprehensive access to analyze, maintain, and optimize the quaeris_survey database used by the Limesurvey integration.
->>>>>>> laraxot/dev

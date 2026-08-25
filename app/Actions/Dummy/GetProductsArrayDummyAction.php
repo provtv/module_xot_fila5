@@ -19,11 +19,7 @@ class GetProductsArrayDummyAction
      *
      * @throws \Exception Generating Factory [factory_class] press [F5] to refresh page [__LINE__][__FILE__]
      */
-<<<<<<< HEAD
-   /**
-=======
     /**
->>>>>>> laraxot/dev
      * @return array<int, array<string, mixed>>
      */
     public function execute(): array
@@ -36,11 +32,7 @@ class GetProductsArrayDummyAction
         Assert::isArray($products['products']);
 
         // filtering some attributes
-<<<<<<< HEAD
-       /** @var array<int, array<string, mixed>> $mapped */
-=======
         /** @var array<int, array<string, mixed>> $mapped */
->>>>>>> laraxot/dev
         $mapped = array_values(Arr::map($products['products'], function ($item) {
             // Verifichiamo che $item sia un array prima di usare Arr::only
             if (! is_array($item)) {
@@ -57,11 +49,7 @@ class GetProductsArrayDummyAction
                 'category',
                 'thumbnail',
             ]);
-<<<<<<< HEAD
-       }));
-=======
         }));
->>>>>>> laraxot/dev
 
         return $mapped;
     }

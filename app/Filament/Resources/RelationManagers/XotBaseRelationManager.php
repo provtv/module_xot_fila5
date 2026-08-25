@@ -32,11 +32,7 @@ use Webmozart\Assert\Assert;
  */
 abstract class XotBaseRelationManager extends FilamentRelationManager
 {
-<<<<<<< HEAD
-   use HasRelationshipModelClass;
-=======
     use HasRelationshipModelClass;
->>>>>>> laraxot/dev
     use HasXotTable {
         HasRelationshipModelClass::getModelClass insteadof HasXotTable;
     }
@@ -63,11 +59,7 @@ abstract class XotBaseRelationManager extends FilamentRelationManager
      *
      * @return class-string<XotBaseResource>
      */
-<<<<<<< HEAD
-   public static function getResource(): string
-=======
     public static function getResource(): string
->>>>>>> laraxot/dev
     {
         if (isset(static::$resource) && \is_string(static::$resource) && static::$resource !== '') {
             return static::$resource;
@@ -105,11 +97,7 @@ abstract class XotBaseRelationManager extends FilamentRelationManager
     final public function form(Schema $schema): Schema
     {
         /** @var array<string, Component> $formSchema */
-<<<<<<< HEAD
-       $formSchema = $this->getFormSchemaOld();
-=======
         $formSchema = $this->getFormSchemaOld();
->>>>>>> laraxot/dev
 
         // Cast to Htmlable|string to match Schema::components() signature
         // Component implements Htmlable, so this is type-safe
@@ -119,11 +107,7 @@ abstract class XotBaseRelationManager extends FilamentRelationManager
         return $schema->components($components);
     }
 
-<<<<<<< HEAD
-   /** @return array<int|string, Component> */
-=======
     /** @return array<int|string, Component> */
->>>>>>> laraxot/dev
     public function getFormSchemaOld(): array
     {
         return $this->getResource()::getFormSchemaOld();
@@ -184,11 +168,7 @@ abstract class XotBaseRelationManager extends FilamentRelationManager
 
             // $column è già verificato come instance di Column|LayoutComponent sopra
             $name = method_exists($column, 'getName') ? $column->getName() : (string) spl_object_hash($column);
-<<<<<<< HEAD
-           $nameStr = SafeStringCastAction::cast($name);
-=======
             $nameStr = SafeStringCastAction::cast($name);
->>>>>>> laraxot/dev
             $assoc[$nameStr] = $column;
         }
 
@@ -211,11 +191,7 @@ abstract class XotBaseRelationManager extends FilamentRelationManager
         $actions['edit'] = EditAction::make()
             ->iconButton()
             ->visible(static function (?Model $record) use ($me): bool {
-<<<<<<< HEAD
-               if ($record === null) {
-=======
                 if ($record === null) {
->>>>>>> laraxot/dev
                     return false;
                 }
 
@@ -225,11 +201,7 @@ abstract class XotBaseRelationManager extends FilamentRelationManager
         $actions['detach'] = DetachAction::make()
             ->iconButton()
             ->visible(static function (?Model $record) use ($me): bool {
-<<<<<<< HEAD
-               if ($record === null) {
-=======
                 if ($record === null) {
->>>>>>> laraxot/dev
                     return false;
                 }
 
@@ -272,11 +244,7 @@ abstract class XotBaseRelationManager extends FilamentRelationManager
     {
         $actions = [];
         $me = $this;
-<<<<<<< HEAD
-       $actions['attach'] = AttachAction::make()
-=======
         $actions['attach'] = AttachAction::make()
->>>>>>> laraxot/dev
             ->icon('heroicon-o-link')
             ->iconButton()
             ->tooltip(__('user::actions.attach.label'))
@@ -303,11 +271,7 @@ abstract class XotBaseRelationManager extends FilamentRelationManager
     /**
      * Determine if the bulk delete action can be performed on the given record.
      */
-<<<<<<< HEAD
-   public function canDeleteBulk(Model|stdClass|null $record): bool
-=======
     public function canDeleteBulk(Model|stdClass|null $record): bool
->>>>>>> laraxot/dev
     {
         if ($record instanceof stdClass) {
             // For stdClass records (lightweight bulk operations), allow by default
@@ -320,11 +284,7 @@ abstract class XotBaseRelationManager extends FilamentRelationManager
     /**
      * Determine if the bulk detach action can be performed on the given record.
      */
-<<<<<<< HEAD
-   public function canDetachBulk(Model|stdClass|null $record): bool
-=======
     public function canDetachBulk(Model|stdClass|null $record): bool
->>>>>>> laraxot/dev
     {
         if ($record instanceof stdClass) {
             // For stdClass records (lightweight bulk operations), allow by default

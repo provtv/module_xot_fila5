@@ -37,11 +37,7 @@ trait HasCommonScopes
      *
      * Found 100% identical in: Activity, Blog, Cms, User, Fixcity modules.
      *
-<<<<<<< HEAD
-    * @param Builder<static> $query
-=======
      * @param Builder<static> $query
->>>>>>> laraxot/dev
      *
      * @return Builder<static>
      */
@@ -53,11 +49,7 @@ trait HasCommonScopes
     /**
      * Scope query to only inactive records.
      *
-<<<<<<< HEAD
-    * @param Builder<static> $query
-=======
      * @param Builder<static> $query
->>>>>>> laraxot/dev
      *
      * @return Builder<static>
      */
@@ -71,11 +63,7 @@ trait HasCommonScopes
      *
      * Records with published_at <= now().
      *
-<<<<<<< HEAD
-    * @param Builder<static> $query
-=======
      * @param Builder<static> $query
->>>>>>> laraxot/dev
      *
      * @return Builder<static>
      */
@@ -90,11 +78,7 @@ trait HasCommonScopes
      *
      * Records with published_at = null or > now().
      *
-<<<<<<< HEAD
-    * @param Builder<static> $query
-=======
      * @param Builder<static> $query
->>>>>>> laraxot/dev
      *
      * @return Builder<static>
      */
@@ -159,11 +143,7 @@ trait HasCommonScopes
      */
     public function isPublished(): bool
     {
-<<<<<<< HEAD
-       $publishedAt = $this->getAttribute('published_at');
-=======
         $publishedAt = $this->getAttribute('published_at');
->>>>>>> laraxot/dev
 
         if (! $publishedAt instanceof Carbon) {
             return false;
@@ -185,10 +165,6 @@ trait HasCommonScopes
      */
     public function isActive(): bool
     {
-<<<<<<< HEAD
-       return true === $this->getAttribute('is_active');
-=======
         return true === $this->getAttribute('is_active');
->>>>>>> laraxot/dev
     }
 }

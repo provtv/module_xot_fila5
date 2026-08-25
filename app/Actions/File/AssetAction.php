@@ -8,10 +8,7 @@ use Exception;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
 use Modules\Xot\Datas\XotData;
-<<<<<<< HEAD
-=======
 
->>>>>>> laraxot/dev
 use function Safe\copy;
 
 use Spatie\QueueableAction\QueueableAction as QueueableActionTrait;
@@ -19,11 +16,7 @@ use Webmozart\Assert\Assert;
 
 class AssetAction
 {
-<<<<<<< HEAD
-   use QueueableActionTrait;
-=======
     use QueueableActionTrait;
->>>>>>> laraxot/dev
 
     private XotData $xot;
 

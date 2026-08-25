@@ -33,11 +33,7 @@ class BelongsToAction
          */
 
         if (! Arr::isAssoc($relationDTO->data) && 1 === \count($relationDTO->data)) {
-<<<<<<< HEAD
-           $related_id = reset($relationDTO->data);
-=======
             $related_id = reset($relationDTO->data);
->>>>>>> laraxot/dev
             if (null === $related_id) {
                 return;
             }

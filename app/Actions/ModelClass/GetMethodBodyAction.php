@@ -26,11 +26,7 @@ class GetMethodBodyAction
         Assert::string($file_name = $table_method->getFileName());
         $source = file($file_name);
 
-<<<<<<< HEAD
-       $body = '';
-=======
         $body = '';
->>>>>>> laraxot/dev
         foreach (\array_slice($source, $start_line, $length) as $line) {
             $body .= SafeStringCastAction::cast($line);
         }

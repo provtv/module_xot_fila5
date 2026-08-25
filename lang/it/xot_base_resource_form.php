@@ -3,11 +3,7 @@
 declare(strict_types=1);
 
 return [
-<<<<<<< HEAD
-   'steps' => [
-=======
     'steps' => [
->>>>>>> laraxot/dev
         'privacy' => ['label' => 'privacy'],
         'data' => ['label' => 'data'],
         'summary' => ['label' => 'summary'],

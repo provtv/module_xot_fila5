@@ -19,11 +19,7 @@ it('executes allowed artisan command correctly', function (): void {
     $action = app(ExecuteArtisanCommandAction::class);
     $result = $action->execute('migrate');
 
-<<<<<<< HEAD
-   Assert::assertSame('completed', $result['status']);
-=======
     Assert::assertSame('completed', $result['status']);
->>>>>>> laraxot/dev
     Assert::assertSame(0, $result['exitCode']);
     /** @var array<int, string> $output */
     $output = $result['output'];
@@ -41,11 +37,7 @@ it('handles failed artisan command correctly', function (): void {
     $action = app(ExecuteArtisanCommandAction::class);
     $result = $action->execute('migrate');
 
-<<<<<<< HEAD
-   Assert::assertSame('failed', $result['status']);
-=======
     Assert::assertSame('failed', $result['status']);
->>>>>>> laraxot/dev
     Assert::assertSame(1, $result['exitCode']);
     /** @var array<int, string> $output */
     $output = $result['output'];

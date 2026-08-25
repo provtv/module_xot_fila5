@@ -54,8 +54,4 @@
         "args": ["-y", "@assistant-ui/mcp-docs-server"]
     }
   }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> laraxot/dev

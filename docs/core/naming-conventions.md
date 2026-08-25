@@ -321,8 +321,4 @@ parameters:
 ---
 
 **Ultimo aggiornamento:** Gennaio 2025
-<<<<<<< HEAD
 **Versione:** 2.0 - Consolidata DRY + KISS
-=======
-**Versione:** 2.0 - Consolidata DRY + KISS
->>>>>>> laraxot/dev

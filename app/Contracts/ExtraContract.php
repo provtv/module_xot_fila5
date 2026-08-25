@@ -18,11 +18,7 @@ use Spatie\SchemalessAttributes\SchemalessAttributes;
  *
  * @property SchemalessAttributes $extra_attributes
  *
-<<<<<<< HEAD
-* @method static Builder<Model> newModelQuery()
-=======
  * @method static Builder<Model> newModelQuery()
->>>>>>> laraxot/dev
  * @method static Builder<Model> newQuery()
  * @method static Builder<Model> query()
  * @method static Builder<Model> withExtraAttributes()
@@ -37,11 +33,7 @@ use Spatie\SchemalessAttributes\SchemalessAttributes;
  * @property Carbon|null $deleted_at
  * @property string|null $deleted_by
  *
-<<<<<<< HEAD
-* @method static Builder<Model> whereCreatedAt($value)
-=======
  * @method static Builder<Model> whereCreatedAt($value)
->>>>>>> laraxot/dev
  * @method static Builder<Model> whereCreatedBy($value)
  * @method static Builder<Model> whereDeletedAt($value)
  * @method static Builder<Model> whereDeletedBy($value)

@@ -7,11 +7,7 @@ namespace Modules\Xot\Datas;
 use Spatie\LaravelData\Data;
 
 /**
-<<<<<<< HEAD
-* Class AuthData - Gestisce la configurazione dell'autenticazione.
-=======
  * Class AuthData - Gestisce la configurazione dell'autenticazione.
->>>>>>> laraxot/dev
  * Utilizzato esclusivamente nell'ambito dell'architettura Filament-first.
  *
  * @phpstan-consistent-constructor
@@ -27,11 +23,7 @@ final class AuthData extends Data
     public function __construct(
         public readonly string $guard = 'web',
         public readonly array $guards = ['web', 'api'],
-<<<<<<< HEAD
-       public readonly array $providers = [
-=======
         public readonly array $providers = [
->>>>>>> laraxot/dev
             'users' => ['driver' => 'eloquent', 'model' => ''],
         ],
         public readonly bool $verifyEmail = true,
@@ -53,11 +45,7 @@ final class AuthData extends Data
     /**
      * Create a new instance of AuthData with default values.
      */
-<<<<<<< HEAD
-   public static function make(): self
-=======
     public static function make(): self
->>>>>>> laraxot/dev
     {
         return new self();
     }

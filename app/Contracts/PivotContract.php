@@ -13,8 +13,6 @@ use Illuminate\Database\Eloquent\Model;
  * @property string|null $subtitle
  * @property int|null    $status
  *
- * @method mixed update($params)
- *
  * @phpstan-require-extends Model
  *
  * @mixin \Illuminate\Database\Eloquent\Model

@@ -14,10 +14,6 @@ it('gets filename from classname correctly', function (): void {
 
     $filename = $action->execute(Log::class);
 
-<<<<<<< HEAD
-   Assert::assertNotEmpty($filename);
-=======
     Assert::assertNotEmpty($filename);
->>>>>>> laraxot/dev
     Assert::assertStringContainsString((string) 'Log.php', (string) $filename);
 });

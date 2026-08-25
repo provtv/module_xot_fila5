@@ -44,11 +44,7 @@ abstract class XotBaseServiceProvider extends ServiceProvider
         $this->registerLivewireComponents();
         $this->registerBladeComponents();
         $this->registerCommands();
-<<<<<<< HEAD
-       $this->registerPublicAssets();
-=======
         $this->registerPublicAssets();
->>>>>>> laraxot/dev
     }
 
     public function register(): void
@@ -95,10 +91,7 @@ abstract class XotBaseServiceProvider extends ServiceProvider
         }
 
         $viewPath = module_path($this->name, 'resources/views');
-<<<<<<< HEAD
-=======
 
->>>>>>> laraxot/dev
         if (! is_dir($viewPath)) {
             return;
         }
@@ -128,11 +121,7 @@ abstract class XotBaseServiceProvider extends ServiceProvider
     {
         $componentViewPath = app(GetModulePathByGeneratorAction::class)->execute($this->name, 'component-view');
 
-<<<<<<< HEAD
-       if (is_dir($componentViewPath)) {
-=======
         if (is_dir($componentViewPath)) {
->>>>>>> laraxot/dev
             try {
                 Blade::anonymousComponentPath($componentViewPath);
             } catch (\Exception $e) {
@@ -180,11 +169,7 @@ abstract class XotBaseServiceProvider extends ServiceProvider
         $this->commands($commands);
     }
 
-<<<<<<< HEAD
-   /** @return array<int, string> */
-=======
     /** @return array<int, string> */
->>>>>>> laraxot/dev
     public function provides(): array
     {
         return [];
@@ -217,10 +202,7 @@ abstract class XotBaseServiceProvider extends ServiceProvider
             // Ignore config registration failures for optional module config.
         }
     }
-<<<<<<< HEAD
-=======
 
->>>>>>> laraxot/dev
     protected function registerPublicAssets(): void
     {
         if ('' === $this->name) {

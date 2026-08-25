@@ -32,11 +32,7 @@ it('can create a test tenant', function () {
         'domain' => 'test.example.com',
     ]);
 
-<<<<<<< HEAD
-   Assert::assertInstanceOf(Tenant::class, $tenant);
-=======
     Assert::assertInstanceOf(Tenant::class, $tenant);
->>>>>>> laraxot/dev
     Assert::assertSame('Test Tenant', $tenant->name);
     Assert::assertSame('test.example.com', $tenant->domain);
 });

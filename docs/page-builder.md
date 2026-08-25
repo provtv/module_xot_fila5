@@ -20,8 +20,4 @@ https://codecanyon.net/item/drag-drop-email-builder/19423355
 
 
 
-<<<<<<< HEAD
 https://github.com/HansSchouten/Laravel-Pagebuilder
-=======
-https://github.com/HansSchouten/Laravel-Pagebuilder
->>>>>>> laraxot/dev

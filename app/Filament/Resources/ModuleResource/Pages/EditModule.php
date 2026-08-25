@@ -38,11 +38,7 @@ class EditModule extends XotBaseEditRecord
         }
 
         $config_path = $module->path.'/config/config.php';
-<<<<<<< HEAD
-       $loaded = File::getRequire($config_path);
-=======
         $loaded = File::getRequire($config_path);
->>>>>>> laraxot/dev
         $data = $this->normalizeConfigArray(
             array_merge(
                 is_array($loaded) ? $this->normalizeConfigArray($loaded) : [],
@@ -76,10 +72,7 @@ class EditModule extends XotBaseEditRecord
          * Config::set('modules.colors', $colorsConfig);
          */
     }
-<<<<<<< HEAD
-=======
 
->>>>>>> laraxot/dev
     /**
      * @param array<array-key, mixed> $config
      *

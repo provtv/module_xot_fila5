@@ -18,11 +18,7 @@ use Webmozart\Assert\Assert;
  */
 abstract class XotBaseModel extends EloquentModel
 {
-<<<<<<< HEAD
-   /** @use HasXotFactory<Factory<static>> */
-=======
     /** @use HasXotFactory<Factory<static>> */
->>>>>>> laraxot/dev
     use HasXotFactory;
 
     use RelationX;
@@ -51,11 +47,7 @@ abstract class XotBaseModel extends EloquentModel
         // 'password'
     ];
 
-<<<<<<< HEAD
-   /**
-=======
     /**
->>>>>>> laraxot/dev
      * Risolve il concreto del **modulo chiamante** mantenendo il basename di `static`.
      *
      * Il namespace non viene dedotto da `static` (che resta sul prototype del modulo

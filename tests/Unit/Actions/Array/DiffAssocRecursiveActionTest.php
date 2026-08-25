@@ -20,11 +20,7 @@ test('diff assoc recursive action works correctly', function () {
     $action = app(DiffAssocRecursiveAction::class);
     $result = $action->execute($arr1, $arr2);
 
-<<<<<<< HEAD
-   Assert::assertSame(['id' => 2, 'name' => 'Test 2'], $result);
-=======
     Assert::assertSame(['id' => 2, 'name' => 'Test 2'], $result);
->>>>>>> laraxot/dev
 
     Assert::assertArrayHasKey('b', $result);
 });
@@ -41,9 +37,5 @@ test('diff assoc recursive action handles numeric strings', function () {
     $result = $action->execute($arr1, $arr2);
 
     // fixType converts '1' to 1, so they should be equal and diff should be empty
-<<<<<<< HEAD
-   Assert::assertEmpty($result);
-=======
     Assert::assertEmpty($result);
->>>>>>> laraxot/dev
 });

@@ -12,11 +12,7 @@ uses(TestCase::class);
 it('sets csrf token on mount', function (): void {
     $token = 'test-token-123';
 
-<<<<<<< HEAD
-   $session = Mockery::mock();
-=======
     $session = Mockery::mock();
->>>>>>> laraxot/dev
     $session->allows(['token' => $token]);
     App::instance('session', $session);
 
@@ -36,11 +32,7 @@ it('sets csrf token on mount', function (): void {
 
     $class->mount();
 
-<<<<<<< HEAD
-   Assert::assertSame($token, $class->getCsrfToken());
-=======
     Assert::assertSame($token, $class->getCsrfToken());
->>>>>>> laraxot/dev
     Mockery::close();
 });
 
@@ -48,11 +40,7 @@ it('verifies csrf token', function (): void {
     $token = 'secret-token';
 
     $class = new class {
-<<<<<<< HEAD
-       public string $_token = '';
-=======
         public string $_token = '';
->>>>>>> laraxot/dev
 
         public function verifyCsrfToken(): bool
         {

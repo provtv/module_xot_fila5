@@ -45,11 +45,7 @@ class ExportTreeXlsAction extends XotBaseAction
                 // $query = $livewire->getFilteredTableQuery(); // ->getQuery(); // Staudenmeir\LaravelCte\Query\Builder
                 // $rows = $query->get();
                 Assert::implementsInterface($record, HasRecursiveRelationshipsContract::class);
-<<<<<<< HEAD
-               /** @var Model&HasRecursiveRelationshipsContract $treeRecord */
-=======
                 /** @var Model&HasRecursiveRelationshipsContract $treeRecord */
->>>>>>> laraxot/dev
                 $treeRecord = $record;
                 $rows = $treeRecord->descendantsAndSelf;
                 Assert::isInstanceOf($rows, Collection::class);
@@ -59,11 +55,7 @@ class ExportTreeXlsAction extends XotBaseAction
                     $fields = $resource::getXlsFields($tableFilters);
                     // Convertiamo tutti i valori a stringhe
                     $fields = array_values(array_map(
-<<<<<<< HEAD
-                       static fn (mixed $field): string => SafeStringCastAction::cast($field),
-=======
                         static fn (mixed $field): string => SafeStringCastAction::cast($field),
->>>>>>> laraxot/dev
                         (array) $fields,
                     ));
                 }

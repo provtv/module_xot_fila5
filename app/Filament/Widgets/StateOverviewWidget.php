@@ -32,11 +32,7 @@ class StateOverviewWidget extends XotBaseSchemaWidget
     /**
      * Vista del widget.
      */
-<<<<<<< HEAD
-   /** @var view-string */
-=======
     /** @var view-string */
->>>>>>> laraxot/dev
     protected string $view = 'xot::filament.widgets.state-overview';
 
     /**
@@ -54,11 +50,7 @@ class StateOverviewWidget extends XotBaseSchemaWidget
      *
      * @return array<int|string, Component>
      */
-<<<<<<< HEAD
-   public function getFormSchemaOld(): array
-=======
     public function getFormSchemaOld(): array
->>>>>>> laraxot/dev
     {
         return [];
     }

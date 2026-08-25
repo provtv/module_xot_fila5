@@ -29,11 +29,7 @@ trait HasExtraTrait
     /**
      * Retrieves the morphed one-to-one relationship between the current model and the Extra model.
      *
-<<<<<<< HEAD
-    * @return MorphOne<Model, $this>
-=======
-     * @return MorphOne<Model, $this>
->>>>>>> laraxot/dev
+* @return MorphOne<Model, $this>
      */
     public function extra(): MorphOne
     {
@@ -47,16 +43,8 @@ trait HasExtraTrait
             Model::class,
             '['.__LINE__.']['.class_basename($this).']['.$extra_class.']',
         );
-<<<<<<< HEAD
-        /** @var class-string<Model> $extraClass */
+/** @var class-string<Model> $extraClass */
         $extraClass = $extra_class;
-
-=======
-
-        /** @var class-string<Model> $extraClass */
-        $extraClass = $extra_class;
-
->>>>>>> laraxot/dev
         return $this->morphOne($extraClass, 'model');
     }
 
@@ -76,11 +64,7 @@ trait HasExtraTrait
         $value = $attributes->get($name);
 
         if (\is_array($value)) {
-<<<<<<< HEAD
-           $result = [];
-=======
-            $result = [];
->>>>>>> laraxot/dev
+$result = [];
             foreach ($value as $key => $item) {
                 if (! \is_string($key)) {
                     continue;

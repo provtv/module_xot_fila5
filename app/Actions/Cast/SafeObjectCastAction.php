@@ -110,11 +110,7 @@ class SafeObjectCastAction
 
         $value = $object->{$property};
 
-<<<<<<< HEAD
-       return SafeStringCastAction::cast($value);
-=======
         return SafeStringCastAction::cast($value);
->>>>>>> laraxot/dev
     }
 
     /**
@@ -186,11 +182,7 @@ class SafeObjectCastAction
     /**
      * Ottiene una proprietà con cast sicuro a array.
      *
-<<<<<<< HEAD
-    * @param object                        $object   L'oggetto da cui ottenere la proprietà
-=======
      * @param object                        $object   L'oggetto da cui ottenere la proprietà
->>>>>>> laraxot/dev
      * @param string                        $property Il nome della proprietà
      * @param array<int|string, mixed>|null $default  Valore di default se la proprietà non esiste o è null
      *
@@ -201,11 +193,7 @@ class SafeObjectCastAction
         Assert::stringNotEmpty($property);
 
         if (! isset($object->{$property})) {
-<<<<<<< HEAD
-           return app(SafeArrayCastAction::class)->execute([], $default);
-=======
             return app(SafeArrayCastAction::class)->execute([], $default);
->>>>>>> laraxot/dev
         }
 
         $value = $object->{$property};
@@ -233,11 +221,7 @@ class SafeObjectCastAction
             'int' => $this->getIntProperty($object, $property, is_int($default) ? $default : null),
             'float' => $this->getFloatProperty($object, $property, is_float($default) ? $default : null),
             'bool' => $this->getBooleanProperty($object, $property, is_bool($default) ? $default : null),
-<<<<<<< HEAD
-           'array' => $this->getArrayProperty(
-=======
             'array' => $this->getArrayProperty(
->>>>>>> laraxot/dev
                 $object,
                 $property,
                 is_array($default) ? app(SafeArrayCastAction::class)->execute($default) : null,
@@ -316,11 +300,7 @@ class SafeObjectCastAction
     /**
      * Esegue un metodo su un oggetto in modo sicuro.
      *
-<<<<<<< HEAD
-    * @param object       $object     L'oggetto su cui eseguire il metodo
-=======
      * @param object       $object     L'oggetto su cui eseguire il metodo
->>>>>>> laraxot/dev
      * @param string       $method     Il nome del metodo
      * @param array<mixed> $parameters I parametri del metodo
      * @param mixed        $default    Valore di default se il metodo non esiste o fallisce

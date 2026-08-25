@@ -21,11 +21,7 @@ it('manages object properties safely', function (): void {
     $action = app(SafeObjectCastAction::class);
 
     // hasProperty
-<<<<<<< HEAD
-   Assert::assertTrue($action->hasProperty($obj, 'name'));
-=======
     Assert::assertTrue($action->hasProperty($obj, 'name'));
->>>>>>> laraxot/dev
     Assert::assertFalse($action->hasProperty($obj, 'missing'));
     // hasNonNullProperty
     Assert::assertTrue($action->hasNonNullProperty($obj, 'name'));
@@ -64,11 +60,7 @@ it('manages object properties safely', function (): void {
             return $p;
         }
 
-<<<<<<< HEAD
-       public function fail(): never
-=======
         public function fail(): never
->>>>>>> laraxot/dev
         {
             throw new Exception('fail');
         }

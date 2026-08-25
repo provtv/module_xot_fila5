@@ -74,11 +74,7 @@ class GetTransKeyAction
         $arr = explode('_', $class_snake);
         $first = $arr[0];
         $last = $arr[count($arr) - 1];
-<<<<<<< HEAD
-       // Il prefisso di azione si toglie solo se resta qualcosa dopo: una classe che si
-=======
         // Il prefisso di azione si toglie solo se resta qualcosa dopo: una classe che si
->>>>>>> laraxot/dev
         // chiama esattamente `Dashboard` (o `List`, `View`, ...) ha quel prefisso come nome
         // intero, e toglierlo produrrebbe la chiave vuota `modulo::`, che non risolve
         // nessuna traduzione e fa stampare le chiavi grezze in interfaccia.

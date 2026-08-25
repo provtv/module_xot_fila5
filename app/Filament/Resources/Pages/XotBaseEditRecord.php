@@ -17,11 +17,7 @@ abstract class XotBaseEditRecord extends FilamentEditRecord
 {
     use TransTrait;
 
-<<<<<<< HEAD
-   /**
-=======
     /**
->>>>>>> laraxot/dev
      * Il breadcrumb verso l'elenco punta alla riga del record aperto.
      *
      * Senza frammento si torna in cima alla lista e la riga appena modificata va
@@ -95,11 +91,7 @@ abstract class XotBaseEditRecord extends FilamentEditRecord
      *
      * @return array<int, Component>
      */
-<<<<<<< HEAD
-   protected function getFormSchemaOld(): array
-=======
     protected function getFormSchemaOld(): array
->>>>>>> laraxot/dev
     {
         return [];
     }

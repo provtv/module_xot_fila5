@@ -30,11 +30,7 @@ abstract class XotBaseChartWidget extends FilamentChartWidget
     /**
      * Restituisce il titolo del widget.
      *
-<<<<<<< HEAD
-    * CRITICO: Deve essere public per rispettare il contratto ChartWidget.
-=======
      * CRITICO: Deve essere public per rispettare il contratto ChartWidget.
->>>>>>> laraxot/dev
      *
      * `$heading` ha la precedenza: i widget che calcolano il titolo a runtime
      * (dal record, dalla domanda del questionario, dai filtri) lo valorizzano

@@ -3,11 +3,7 @@
 declare(strict_types=1);
 
 return [
-<<<<<<< HEAD
-   'values' => [
-=======
     'values' => [
->>>>>>> laraxot/dev
         1 => [
             'label' => 'Monday',
             'icon' => 'heroicon-o-calendar-days',

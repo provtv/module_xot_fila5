@@ -37,11 +37,7 @@ test('view path action works', function (): void {
     $expected = '/view/path/folder/view.blade.php';
     $expected = str_replace(['/', '\\'], [DIRECTORY_SEPARATOR, DIRECTORY_SEPARATOR], $expected);
 
-<<<<<<< HEAD
-   Assert::assertSame($expected, $result);
-=======
     Assert::assertSame($expected, $result);
->>>>>>> laraxot/dev
 });
 
 test('asset path action works', function (): void {

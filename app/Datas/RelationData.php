@@ -15,11 +15,7 @@ use Spatie\LaravelData\Data;
  */
 class RelationData extends Data
 {
-<<<<<<< HEAD
-   /** @var Relation<Model, Model, mixed> */
-=======
     /** @var Relation<Model, Model, mixed> */
->>>>>>> laraxot/dev
     public Relation $rows;
 
     /** @var array<string, mixed> */

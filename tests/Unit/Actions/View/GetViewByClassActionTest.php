@@ -13,11 +13,7 @@ it('converts class names to view names correctly', function (): void {
     $action = app(GetViewByClassAction::class);
 
     // Mock view existence for any call
-<<<<<<< HEAD
-   View::partialMock()->allows(['exists' => true]);
-=======
     View::partialMock()->allows(['exists' => true]);
->>>>>>> laraxot/dev
 
     $class = 'Modules\\User\\Filament\\Resources\\UserResource';
     $result = $action->execute($class);
@@ -28,20 +24,12 @@ it('converts class names to view names correctly', function (): void {
     // -> explode -> ['Filament', 'Resources', 'UserResource']
     // mapped -> ['filament', 'resources', 'user'] (singular check)
     // -> pub_theme::filament.resources.user
-<<<<<<< HEAD
-   Assert::assertIsString($result);
-=======
     Assert::assertIsString($result);
->>>>>>> laraxot/dev
 });
 
 it('handles singular previous parts correctly', function (): void {
     $action = app(GetViewByClassAction::class);
 
     // Test checkPrev logic directly
-<<<<<<< HEAD
-   Assert::assertSame('User', $action->checkPrev('UserResource', 'Resources'));
-=======
     Assert::assertSame('User', $action->checkPrev('UserResource', 'Resources'));
->>>>>>> laraxot/dev
 });

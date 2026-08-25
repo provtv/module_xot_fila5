@@ -31,11 +31,7 @@ class ViewCopyAction extends XotBaseAction
             ->action(static function (array $arguments, array $data) use ($actionClass): void {
                 /** @var self $service */
                 $service = app($actionClass);
-<<<<<<< HEAD
-               $service->execute(
-=======
                 $service->execute(
->>>>>>> laraxot/dev
                     array_filter($arguments, 'is_string', ARRAY_FILTER_USE_KEY),
                     array_filter($data, 'is_string', ARRAY_FILTER_USE_KEY),
                 );

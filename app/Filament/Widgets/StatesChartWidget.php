@@ -32,11 +32,7 @@ class StatesChartWidget extends XotBaseChartWidget
         try {
             /** @var class-string<Model> $modelClass */
             $modelClass = $this->model;
-<<<<<<< HEAD
-           $instance = new $modelClass();
-=======
             $instance = new $modelClass();
->>>>>>> laraxot/dev
 
             /** @var array<string, string> $colors */
             $colors = [
@@ -45,11 +41,7 @@ class StatesChartWidget extends XotBaseChartWidget
                 'integration_requested' => 'rgb(107, 114, 128)',
             ];
 
-<<<<<<< HEAD
-           /** @var array<string, int> $states */
-=======
             /** @var array<string, int> $states */
->>>>>>> laraxot/dev
             $states = [];
             $rows = DB::connection($instance->getConnectionName())
                 ->table($instance->getTable())
@@ -81,11 +73,7 @@ class StatesChartWidget extends XotBaseChartWidget
                 'datasets' => [
                     [
                         'label' => $label,
-<<<<<<< HEAD
-                       'data' => $data,
-=======
                         'data' => $data,
->>>>>>> laraxot/dev
                         'backgroundColor' => $backgroundColor,
                         'borderColor' => $backgroundColor,
                         'borderWidth' => 1,

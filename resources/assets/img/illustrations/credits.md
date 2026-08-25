@@ -25,8 +25,4 @@ can view them all here:
 
 Make sure to view their licensing terms to make
 sure you are attributing the image authors
-<<<<<<< HEAD
 correctly when using their assets.
-=======
-correctly when using their assets.
->>>>>>> laraxot/dev

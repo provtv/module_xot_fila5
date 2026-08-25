@@ -4,8 +4,4 @@ topic: forbidden-properties-removal
 canonical: ../../../Themes/docs/shared-components/forbidden-properties-removal-complete.md
 ---
 
-<<<<<<< HEAD
 See canonical documentation: ../../../Themes/docs/shared-components/forbidden-properties-removal-complete.md
-=======
-See canonical documentation: ../../../Themes/docs/shared-components/forbidden-properties-removal-complete.md
->>>>>>> laraxot/dev

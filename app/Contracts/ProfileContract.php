@@ -35,11 +35,7 @@ interface ProfileContract extends HasMedia
     /**
      * Grant the given permission(s) to a role.
      *
-<<<<<<< HEAD
-    * @param string|int|array<int|string>|Permission|SupportCollection<int, Permission> $permissions
-=======
      * @param string|int|array<int|string>|Permission|SupportCollection<int, Permission> $permissions
->>>>>>> laraxot/dev
      *
      * @return $this
      */
@@ -48,11 +44,7 @@ interface ProfileContract extends HasMedia
     /**
      * Assign the given role to the model.
      *
-<<<<<<< HEAD
-    * @param array<int|string>|string|int|RoleContract|SupportCollection<int, RoleContract> $roles
-=======
      * @param array<int|string>|string|int|RoleContract|SupportCollection<int, RoleContract> $roles
->>>>>>> laraxot/dev
      *
      * @return $this
      */
@@ -72,11 +64,7 @@ interface ProfileContract extends HasMedia
      * Determine if the model has any of the given role(s).
      *
      * Alias to hasRole() but without Guard controls
-<<<<<<< HEAD
-    *
-=======
      *
->>>>>>> laraxot/dev
      * @param string|int|array<int|string>|RoleContract|SupportCollection<int, RoleContract> $roles
      */
     public function hasAnyRole(string|int|array|RoleContract|SupportCollection $roles = []): bool;
@@ -88,11 +76,7 @@ interface ProfileContract extends HasMedia
      */
     public function hasPermissionTo(string|int|Permission $permission, ?string $guardName = null): bool;
 
-<<<<<<< HEAD
-   public function toggleSuperAdmin(): void;
-=======
     public function toggleSuperAdmin(): void;
->>>>>>> laraxot/dev
 
     /**
      * @return BelongsTo<Model&UserContract, Model>

@@ -11,6 +11,7 @@ updated: 2026-06-10
 > Regole critiche Xot/Laraxot. Load on-demand.
 
 ## Available Rules
+- [no-conflict-markers-anywhere](./no-conflict-markers-anywhere.md) — ✅ ENFORCED — zero `<<<<<<<`/`=======`/`>>>>>>>` orfani; gate `verify-no-conflict-markers.sh`; allowlist `cacert.pem` (2026-08-25)
 - [module-testcase-xotbase-hierarchy](./module-testcase-xotbase-hierarchy.md) — ✅ ENFORCED — `Modules/<Module>/tests/TestCase.php` estende `XotBaseTestCase`; `Nwidart\Modules\Tests\BaseTestCase` NON disponibile in v13.0.0; 16/16 moduli migrati (2026-06-10)
 - [context-overflow-prevention](../../../../../docs/wiki/rules/context-overflow-prevention.md) — prevenzione 262K token overflow; file vietati; tool output compression
 

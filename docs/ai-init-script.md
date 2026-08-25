@@ -4,8 +4,4 @@ topic: ai-init-script
 canonical: ../../../Themes/docs/shared-components/ai-init-script-fix.md
 ---
 
-<<<<<<< HEAD
 See canonical documentation: ../../../Themes/docs/shared-components/ai-init-script-fix.md
-=======
-See canonical documentation: ../../../Themes/docs/shared-components/ai-init-script-fix.md
->>>>>>> laraxot/dev
