@@ -1,6 +1,6 @@
 # Xot - Filosofia Completa: Logica, Religione, Politica, Zen
 
-**Data Creazione**: [DATE]
+**Data Creazione**: 2025-01-18
 **Status**: Documentazione Filosofica Completa
 **Versione**: 1.0.0
 
@@ -315,11 +315,11 @@ TextInput::make('name')
     ->placeholder('Inserisci nome'); // Hardcoded!
 ```
 
-#### 5. Mai Creare Services
+#### 5. Mai Creare Services / Support — Solo QueueableActions
 
-**Comandamento**: Mai creare Services. Sempre QueueableActions.
+**Comandamento**: Mai creare file in `app/Services/` o `app/Support/`. Usare sempre `app/Actions/` con Spatie QueueableAction. Multi-metodo su contratti/framework → `app/Adapters/`.
 
-**Violazione**: Creare Services è eresia.
+**Violazione**: Creare Services o Support è eresia architetturale.
 
 **Manifestazione**:
 ```php
@@ -342,7 +342,26 @@ class UserService
         // Services sono deprecati!
     }
 }
+
+// ❌ ERESIA: Support helper statico
+class UserSupport
+{
+    public static function formatName(string $name): string
+    {
+        // Logica di dominio NON in Support!
+    }
+}
 ```
+
+**Dettaglio motivi**:
+- **Actions** sono single-purpose: un use case = una Action
+- **QueueableAction** abilita coda asincrona senza cambiare firma
+- **execute()** è l'unico entrypoint pubblico — niente facade multi-metodo
+- `app(FooAction::class)->execute(...)` risolve dipendenze senza injection nel costruttore
+- **Sottocartelle** per contesto/attore (`Actions/Otp/`, `Actions/Mail/Engines/`)  
+- **Adapters** per binding multi-metodo (`PdfBuilderAdapter`, `PanelModuleAdapter`)
+- **No `app/Support/`**: helper statici di dominio violano il pattern Action
+- **Migrazione 2026-07-12/13**: tutti i moduli e Sixteen hanno eliminato Services/Support
 
 #### 6. Mai Usare `property_exists()` nei Modelli
 
@@ -482,21 +501,24 @@ Modules/MyModule/database/MyModel.php // SBAGLIATO!
 - File traduzioni strutturati
 - Auto-discovery traduzioni
 
-#### 6. Actions Over Services
+#### 6. Actions Over Services / Support
 
-**Decisione**: QueueableActions invece di Services.
+**Decisione**: QueueableActions invece di Services o Support.
 
 **Motivazione**:
 - Actions sono single-purpose
 - Actions sono queueable
 - Actions sono testabili
 - Actions seguono SOLID
+- `app/Support/` incoraggia helper statici che violano SRP
+- `app/Services/` diventa facade multi-metodo non referenziabili
 
 **Manifestazione**:
 - Tutte le operazioni business sono Actions
 - Actions usano Spatie QueueableActions
-- Services sono deprecati
-- Migrazione da Services a Actions
+- `app/Services/` e `app/Support/` sono eliminati monorepo (2026-07-13)
+- Migrazione da Services/Support a Actions completata in tutti i moduli
+- `app(ClasseAction::class)->execute()` è l'unico modo per chiamare logica di dominio
 
 ### Governance
 

@@ -42,7 +42,7 @@ Laravel IDE Helper genera PHPDoc automatici per migliorare l'autocomplete e il t
 ### 1. Generate Models PHPDoc
 
 ```bash
-cd . progetto>/laravel
+cd /var/www/_bases/base_<nome progetto>/laravel
 php artisan ide-helper:models --write
 ```
 

@@ -1,71 +1,82 @@
+# Data Objects
 
-# Data Objects in Laraxot
+## Principi Fondamentali
 
-I Data Objects sono classi che incapsulano dati strutturati utilizzati in tutto il framework Laraxot. Utilizzano la libreria `spatie/laravel-data` e sono progettati per essere immutabili e facilmente trasferibili tra i vari componenti dell'applicazione.
+1. **Struttura**:
+   - I Data Objects sono in `Modules\{Module}\Datas`
+   - I namespace sono `Modules\{Module}\Datas`
+   - Estendono `Spatie\LaravelData\Data`
 
-## Struttura Tipica di un Data Object
+2. **Scopo**:
+   - Validazione dei dati
+   - Trasporto dei dati tra layer
+   - Type safety
+   - Immutabilità
 
-```php
-<?php
+## Implementazione
 
-declare(strict_types=1);
+1. **Struttura Base**:
+   ```php
+   <?php
 
-namespace Modules\Xot\Datas;
+   declare(strict_types=1);
 
-use Spatie\LaravelData\Data;
+   namespace Modules\Module\Datas;
 
-class EsempioData extends Data
-{
-    public function __construct(
-        public readonly string $proprieta1,
-        public readonly int $proprieta2,
-        public readonly array $proprieta3 = []
-    ) {
-    }
+   use Spatie\LaravelData\Data;
 
-    /**
-     * Create a new instance of this Data object.
-     *
-     * @return static
-     */
-    public static function make(): static
-    {
-        return new static();
-    }
-}
-```
+   class ExampleData extends Data
+   {
+       public function __construct(
+           public ?string $field,
+       ) {
+       }
+   }
+   ```
+
+2. **Validazione**:
+   ```php
+   public static function rules(): array
+   {
+       return [
+           'field' => ['required', 'string'],
+       ];
+   }
+   ```
 
 ## Best Practices
 
-1. **Immutabilità**: Usare `readonly` per le proprietà quando possibile per garantire l'immutabilità.
-2. **Tipizzazione**: Specificare sempre i tipi delle proprietà e dei valori di ritorno dei metodi.
-3. **Costruttore**: Definire tutte le proprietà nel costruttore, con valori predefiniti quando appropriato.
-4. **Metodo `make()`**: Implementare un metodo `make()` che restituisca un'istanza della classe.
+1. **Validazione**:
+   - Implementare sempre `rules()`
+   - Usare tipi di ritorno stretti
+   - Documentare le regole di business
 
-## Correzioni comuni per PHPStan
+2. **Tipizzazione**:
+   - Usare tipi di ritorno PHP 8
+   - Usare nullable quando appropriato
+   - Documentare i tipi complessi
 
-### Correzione per il metodo `make()`
+3. **Documentazione**:
+   - Aggiungere docblock per la classe
+   - Documentare le proprietà
+   - Aggiungere esempi di utilizzo
 
-Un errore comune segnalato da PHPStan è il tipo di ritorno del metodo `make()`. La correzione consiste nel sostituire `self` con `static`:
+## Errori Comuni
 
-```php
-// Errore: PHPStan segnala che il metodo dovrebbe restituire "static" ma restituisce "self"
-public static function make(): self
-{
-    return new self();
-}
+1. **Errore**: Directory errata
+   - ❌ `Modules/Module/Datas/`
+   - ✅ `Modules/Module/Datas/`
 
-// Correzione
-public static function make(): static
-{
-    return new static();
-}
-```
+2. **Errore**: Namespace errato
+   - ❌ `namespace Modules\Module\App\Datas;`
+   - ✅ `namespace Modules\Module\Datas;`
 
-Questa correzione garantisce che quando il metodo viene ereditato da classi figlie, restituisca il tipo corretto della classe figlia.
+3. **Errore**: Validazione mancante
+   - ❌ Manca `rules()`
+   - ✅ Implementare `rules()`
 
-### Altri errori comuni
+## Collegamenti
 
-- **PHPDoc incompleto per le relazioni Eloquent**: Aggiungere tutti i tipi di template nella documentazione PHPDoc.
-- **Accesso a proprietà inesistenti**: Verificare l'esistenza delle proprietà prima dell'accesso.
-- **Tipo di ritorno `class-string`**: Usare asserzioni o casting appropriati quando si restituiscono stringhe che rappresentano classi.
+- [Data Objects Patient](../Patient/docs/data-objects.md)
+- [Best Practices](./best-practices.md)
+- [Convenzioni di Codice](./coding-standards.md)

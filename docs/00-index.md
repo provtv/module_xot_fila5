@@ -1,53 +1,108 @@
-# 📚 Xot Module - Documentation Index
-
-**Path**: `Modules/Xot/docs/`
-**Modulo**: @Modules/Xot
-**Last Updated**: 2026-03-26
-**Status**: ✅ COMPLETE
-
+---
+title: "Xot — indice della documentazione"
+description: "Documentazione del modulo Xot: framework base Laraxot."
+module: Xot
+tags: [xot, documentazione, modulo, laraxot]
+status: active
+repository: https://github.com/laraxot/module_xot_fila5
+related:
+  - ./00-index.md
+  - ./index.md
+  - ../../../../docs/wiki/audits/docs-redundancy-audit.md
+issues: https://github.com/laraxot/module_xot_fila5/issues
+discussions: https://github.com/laraxot/module_xot_fila5/discussions
 ---
 
-## 🎯 Scopo
+## 🏛️ Architettura Core
+- 📐 [Architecture Complete Guide](./architecture-complete.md) - Deep dive nel sistema modulare.
+- 🧬 [Base Classes (XotBase)](./xot-base-classes.md) - Regole per estendere Resource, Page e Widget.
+- ⚙️ [Action Architecture](./action-service-provider-architecture.md) - Pattern per Actions atomiche e testabili.
+- 🧩 [Service Providers](./service-provider-architecture.md) - Ciclo di vita e boot dei moduli.
+- 🔢 [EnumTrait Pattern](./enum-trait-pattern.md) - Standard per Enums con traduzioni e UI Filament.
 
-Documentazione completa per il modulo **Xot** - Core architecture del progetto Laraxot.
+## 🏷️ Naming & Quality Standards
+- 📜 [PHPStan Code Quality Guide](./phpstan-code-quality-guide.md) - La bibbia del Livello 10.
+- 🚫 [No Services Rule](./critical-no-services-rule.md) - Perché usiamo Actions invece dei Service.
+- 🗂️ [Filament Class Extension Rules](./filament-class-extension-rules.md) - Regole obbligatorie per Filament.
 
-**Visione**: Fornire le fondamenta architetturali per tutti i moduli (Predict, Blog, User, etc.).
+## 🛠️ Utility & Trait
+- 🧬 [Trait Patterns](./traits-complete-guide.md) - HasTeams, HasXotTable e altri trait core.
+- 🐚 [Bashscripts Organization](./bashscripts-organization.md) - Strumenti CLI per la manutenzione.
+- 🚀 [Safe Casting Actions](./safe-casting-actions.md) - Gestione type-safe dei dati.
+
+## 🧪 Qualità e Testing
+- ✅ [PHPStan Level 10 Status](./phpstan-level10-xot-fixes.md) - Conformità e report.
+- 🔬 [Pest Testing Philosophy](./testing-philosophy-unified.md) - Approccio al testing del core.
+
+## 🧹 Manutenzione
+- 🗑️ [Cleanup Plan](./cleanup-action-plan.md) - Strategia per consolidare documenti accumulati.
+
+## 🔗 Moduli Dipendenti
+- Tutti i moduli del sistema dipendono da **Xot**.
 
 ---
+*Documentazione conforme agli standard Laraxot - DRY + KISS + SOLID*
+# Xot Module Documentation Index
+
+## Core Architecture
+- [Architecture Complete Guide](./architecture-complete-2025.md)
+- [PHPStan Code Quality Guide](./phpstan-code-quality-guide.md)
+- [Filament Class Extension Rules](./filament-class-extension-rules.md)
+- [Filament Extension Rules Implementation Report](./filament-extension-rules-implementation-report.md) - Report implementazione regole
+- [Array Keys Filament Methods](./array-keys-filament-methods.md) - Regole obbligatorie chiavi array
+- [Implementation Summary: Filament & PHPStan Fixes](./implementation_summary_filament_phpstan_fixes.md)
+- [Filament Extension Violations Report](./filament_extension_violations.md)
+- [Project Philosophy, Religion, Politics, Zen](./project-philosophy-religion-politics-zen.md)
+- [Autonomous Priority Rule](./autonomous-priority-rule.md)
+
+## Configuration & Services
+- [MCP Configuration Optimized](./mcp-configuration-optimized.md)
+- [Model Casting Rules](./model-casting-rules.md)
+- [ServiceProvider Best Practices](./serviceprovider-best-practices.md)
+
+## Development Guidelines
+- [Super Cow Methodology](./super-cow-methodology.md)
+- [PHP Quality Guide](./php-quality-guide.md)
+- [GitHub Workflows Standard](./github-workflows-standard.md)
+
+## Quality Analysis
+- [Module Quality Analysis Summary](./module-quality-analysis-summary.md) - Cross-module quality metrics
+- [PHPStan Analysis 2025-01-27](./phpstan-analysis-2025-01-27.md)
+- [PHPStan Analysis 2025-12-17](./phpstan-analysis-2025-12-17.md)
+- [PHPStan Analysis 2025-12-18](./phpstan-analysis-2025-12-18.md)
+- [PHPStan Specific Patterns](./phpstan-specific-patterns.md)
+
+## Quality & Improvement
+- [Quality Improvements Summary 2025-11-18](./quality-improvements-summary-2025-11-18.md)
+- [Laraxot Meetup Service Provider Refactor](./laraxot-meetup-service-provider-refactor.md)
+- [PHPStan Fix Meetup Service Provider](./phpstan-fix-meetup-service-provider.md)
+
+## Archives & References
+- [Archive Directory](./archive/)
+- [Consolidated Directory](./consolidated/)
+- [Roadmap Directory](./roadmap/)
+
+## Helper Documentation
+- [Helpers Directory](./helpers/)
+
+## Filament v4 Migration
+- [Filament V4 Upgrade Notes](./filament-v4-upgrade-notes.md)
+- [Widget Initialization Guide](./widgets-initialization.md)
+- [Panel Provider Patterns](./panel-provider-patterns.md) - Pattern e best practices per Panel Providers
+
+## Architectural Rules
+- [Architectural Rules Directory](./architectural_rules/)
+- [Laravel Modules Namespace Critical Rule](./laravel-modules-namespace-critical-rule.md) - ⚠️ REGOLA CRITICA: Namespace senza "app"
+
+---
+*Last updated: 2025-12-18*
+# Xot Module Documentation Index
+
+> **Core Framework Module** - Provides base classes and shared functionality for all modules
 
 ## Roadmap
 
 - [Roadmap Xot](roadmap/00-index.md) - Visione, fasi, qualità
-
----
-
-## 📦 Struttura
-
-```
-docs/
-├── 00-index.md                    ← Questo file
-├── README.md                      ← Panoramica modulo
-├── ARCHITECTURE.md                ← Architettura tecnica
-├── XOTBASE_ARCHITECTURE_PHILOSOPHY.md ← Filosofia XotBase (CRITICAL!)
-│
-├── 01-architecture/
-│   ├── 00-index.md
-│   ├── base-class-hierarchy.md
-│   └── traits-composable-pattern.md
-│
-├── 02-filament/
-│   ├── 00-index.md
-│   ├── xotbase-table-widget.md
-│   ├── xotbase-widget.md
-│   └── xotbase-resource.md
-│
-└── 03-traits/
-    ├── 00-index.md
-    ├── HasXotTable.md
-    └── TransTrait.md
-```
-
----
 
 ## 📚 Documentation Sections
 
@@ -55,10 +110,9 @@ docs/
 - [XotBase Classes & Inheritance Patterns](./xotbase-extension.md)
 - [Service Provider Architecture](./service-provider-architecture.md)
 - [Module Dependency Management](./composer-module-dependency-management.md)
-- [Composer Packages Reference](../../../../docs/composer-packages-reference.md) - Mappatura pacchetti per modulo
-- [Inventario completo 312 pacchetti](../../../../docs/architecture/composer-packages-full-inventory.md) - Tutti i pacchetti con versione e descrizione
-- [Composer Packages Deep Study (2026-03-02)](./composer-packages-deep-study-2026-03-02.md)
-- [Composer Packages Full Catalog (2026-03-02)](./composer-packages-full-catalog-2026-03-02.md) - Studio completo package-by-package da `composer show`
+- [Composer Packages Reference](../../../../bashscripts/ai/wiki/memories/composer-packages-reference.md) - Mappatura pacchetti per modulo
+- [Composer Packages Deep Study (2026-03-02)](./composer-packages-deep-study.md)
+- [Composer Packages Full Catalog (2026-03-02)](./composer-packages-full-catalog.md) - Studio completo package-by-package da `composer show`
 - [Database Connection Configuration](./database-configuration-critical-rules.md)
 
 ### Development Standards
@@ -88,168 +142,18 @@ docs/
 - [Safe Cast Actions](./safe-casting-actions.md)
 - [Translation Management](./translation-system-standardization.md)
 
----
+## 🚀 Quick Start
 
-## 📄 Documenti Principali
-
-### Architettura
-| File | Descrizione | Link |
-|------|-------------|------|
-| XOTBASE_ARCHITECTURE_PHILOSOPHY.md | **FILOSOFIA PROFONDA**: Perché estendere XotBase | [Link](./XOTBASE_ARCHITECTURE_PHILOSOPHY.md) |
-| ARCHITECTURE.md | Architettura tecnica del modulo | [Link](./ARCHITECTURE.md) |
-
-### XotBase Rules (CRITICAL!)
-| File | Descrizione | Link |
-|------|-------------|------|
-| XotBase NO table() Method | CHI ESTENDE XotBaseTableWidget NON DEVE AVERE table() | [Link](../../.qwen/rules/xotbase-no-table-method.mdc) |
-| XotBase Architecture | Tutti i widget DEVONO estendere XotBase | [Link](../../.qwen/rules/xotbase-architecture.mdc) |
-
-### Filament Widgets
-| File | Descrizione | Link |
-|------|-------------|------|
-| XotBaseTableWidget | Table widget base per TUTTI i moduli | [Source](../app/Filament/Widgets/XotBaseTableWidget.php) |
-| XotBaseWidget | Widget base per tutti i moduli | [Source](../app/Filament/Widgets/XotBaseWidget.php) |
-
-### Traits
-| File | Descrizione | Link |
-|------|-------------|------|
-| HasXotTable | Trait per tabelle Laraxot | [Source](../Filament/Traits/HasXotTable.php) |
-| TransTrait | Trait per i18n | [Source](../Filament/Traits/TransTrait.php) |
-
----
-
-## 🔗 Link Bidirezionali
-
-### Dal Modulo Xot verso Esterno
-
-| Da | A | Tipo |
-|----|---|------|
-| Xot Module | [Predict Module](../../Modules/Predict/docs/00-index.md) | Consumer |
-| Xot Module | [Blog Module](../../Modules/Blog/docs/00-index.md) | Consumer |
-| Xot Module | [User Module](../../Modules/User/docs/00-index.md) | Consumer |
-| Xot Module | [Theme TwentyOne](../../Themes/TwentyOne/docs/00-index.md) | Integration |
-
-### Dall'Esterno verso Xot Module
-
-| Da | A | Tipo |
-|----|---|------|
-| [Predict Module Index](../../Modules/Predict/docs/00-index.md) | XotBase Philosophy | Dependency |
-| [Architecture Index](../../Modules/Predict/docs/01-architecture/00-index.md) | XotBase Architecture | Reference |
-| [Filament Widgets Rule](../../docs/project/FILAMENT_WIDGETS_FOR_LISTS_RULE.md) | XotBaseTableWidget | Implementation |
-| [AGENTS.md](../../AGENTS.md) | XotBase Philosophy | Critical Rule |
-| [QWEN.md](../../QWEN.md) | XotBase Philosophy | Critical Rule |
-
----
-
-## 🧘 XotBase Philosophy (CRITICAL!)
-
-### Il Pattern
-
-```
-Filament\Widgets\TableWidget (Vendor)
-    ↑
-Modules\Xot\Filament\Widgets\XotBaseTableWidget (Laraxot)
-    ↑
-Modules\Predict\Filament\Widgets\OutcomesTableWidget (Business Logic)
-```
-
-### Perché Estendere XotBaseTableWidget?
-
-1. **DRY** (Don't Repeat Yourself)
-   - Codice scritto UNA volta, ereditato ovunque
-   - Modifichi XotBase → tutti i widget aggiornati
-
-2. **KISS** (Keep It Simple, Stupid)
-   - API semplice, chiara, consistente
-   - Nuovo developer capisce subito pattern
-
-3. **Zen** (Composable Architecture)
-   - Traits come mattoncini LEGO
-   - XotBase "vuoto" → riempibile con business logic
-
-4. **Technical Excellence**
-   - Livewire keys gestite centralmente (PREVIENE BUG!)
-   - Filters integration standardizzata
-   - i18n con TransTrait
-
-### I 10 Comandamenti
-
-1. ✅ Thou shalt extend XotBase
-2. ✅ Thou shalt NOT duplicate
-3. ✅ Thou shalt use traits
-4. ✅ Thou shalt implement getTableQuery
-5. ✅ Thou shalt implement getTableColumns
-6. ✅ Thou shalt respect Livewire keys
-7. ✅ Thou shalt type hint
-8. ✅ Thou shalt use i18n
-9. ✅ Thou shalt document
-10. ✅ Thou shalt test
-
-**Documentazione Completa**: [XOTBASE_ARCHITECTURE_PHILOSOPHY.md](./XOTBASE_ARCHITECTURE_PHILOSOPHY.md)
-
----
-
-## 🎯 Quick Start
-
-### Per Sviluppatori
-
-```bash
-# 1. Leggi la filosofia
-cat Modules/Xot/docs/XOTBASE_ARCHITECTURE_PHILOSOPHY.md
-
-# 2. Studia XotBaseTableWidget
-cat Modules/Xot/app/Filament/Widgets/XotBaseTableWidget.php
-
-# 3. Vedi esempio Predict
-cat Modules/Predict/Filament/Widgets/OutcomesTableWidget.php
-
-# 4. Crea il tuo widget
-php artisan make:filament-widget MyWidget
-# Poi: class MyWidget extends XotBaseTableWidget
-```
-
-### Per AI Agents
-
-1. **Prima di creare widget**: Leggi [XOTBASE_ARCHITECTURE_PHILOSOPHY.md](./XOTBASE_ARCHITECTURE_PHILOSOPHY.md)
-2. **Controlla source**: [XotBaseTableWidget.php](../app/Filament/Widgets/XotBaseTableWidget.php)
-3. **Vedi esempi**: [OutcomesTableWidget.php](../../Modules/Predict/Filament/Widgets/OutcomesTableWidget.php)
-4. **Rules**: [.qwen/rules/](../../.qwen/rules/)
-
----
+1. **Understand XotBase Pattern**: All modules must extend XotBase classes
+2. **Follow TDD**: Use Red-Green-Refactor cycle with Pest (see TDD guide)
+3. **Maintain Quality**: Run PHPStan Level 10 after every change
+4. **Document Everything**: Update docs before and after implementation
 
 ## 📖 Recently Updated
 
 - ✅ **2026-02-23**: Added complete TDD guide with Pest integration
 - ✅ **2026-02-23**: Updated OAuth testing patterns
 - ✅ **2026-02-23**: Added QueueableAction testing standards
-
----
-
-## 📊 Stato Documentazione
-
-| Categoria | Completeness | Last Review |
-|-----------|-------------|-------------|
-| Philosophy | ✅ 100% | 2026-03-26 |
-| Architecture | ✅ 100% | 2026-03-26 |
-| Filament Widgets | 🔄 80% | 2026-03-26 |
-| Traits | 🔄 70% | 2026-03-26 |
-| Testing | ⏳ 40% | TODO |
-
----
-
-## 🎓 Learning Resources
-
-### Esempi nei Moduli
-- [Predict Module Widgets](../../Modules/Predict/Filament/Widgets/)
-- [Blog Module Widgets](../../Modules/Blog/Filament/Widgets/)
-- [User Module Widgets](../../Modules/User/Filament/Widgets/)
-
-### Documentazione Esterna
-- [Filament Docs](https://filamentphp.com/docs)
-- [Livewire Docs](https://livewire.laravel.com/docs)
-- [Laravel Docs](https://laravel.com/docs)
-
----
 
 ## 🔗 Related Modules
 
@@ -259,33 +163,10 @@ php artisan make:filament-widget MyWidget
 
 ---
 
-## 🔗 Navigation
-
-### Indici Correlati
-- [Main Project Index](../../.agents/docs/00-index.md)
-- [Predict Module Index](../../Modules/Predict/docs/00-index.md)
-- [Project Docs Index](../../docs/project/00-index.md)
-
-### Prossimi Documenti
-- [XOTBASE_ARCHITECTURE_PHILOSOPHY.md](./XOTBASE_ARCHITECTURE_PHILOSOPHY.md) - Filosofia
-- [ARCHITECTURE.md](./ARCHITECTURE.md) - Architettura tecnica
-- [Filament Index](./02-filament/00-index.md) - Filament widgets
-
----
-
-**Module Version**: 1.0
-**Laravel Version**: 12.x
-**Filament Version**: 5.x
-**Livewire Version**: 4.x
-**PHP Version**: 8.3
-**Last Updated**: 2026-03-28
-
----
-
-**Maintained By**: AI Agents Team
-**Review Cycle**: Every sprint
-**Next Review**: 2026-04-02
-**Perfection Goal**: 🎯 100% complete, 0% redundancy
+**Module Version**: 1.0  
+**Laravel Version**: 12.x  
+**PHP Version**: 8.2+  
+**Last Updated**: 2026-03-02
 
 ## Dependency Intelligence
 

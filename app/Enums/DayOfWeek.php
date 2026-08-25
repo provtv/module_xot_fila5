@@ -10,7 +10,7 @@ use Filament\Support\Contracts\HasDescription;
 use Filament\Support\Contracts\HasIcon;
 use Filament\Support\Contracts\HasLabel;
 use Illuminate\Support\Collection;
-use Modules\Xot\Traits\EnumTrait;
+use Modules\Xot\Traits\EnumIntegerTrait;
 
 /**
  * Enum per la gestione dei giorni della settimana.
@@ -24,7 +24,7 @@ use Modules\Xot\Traits\EnumTrait;
  */
 enum DayOfWeek: int implements HasColor, HasDescription, HasIcon, HasLabel
 {
-    use EnumTrait;
+   use EnumIntegerTrait;
 
     case MONDAY = 1;
     case TUESDAY = 2;
@@ -81,6 +81,10 @@ enum DayOfWeek: int implements HasColor, HasDescription, HasIcon, HasLabel
 
     /**
      * Ottiene il giorno successivo della settimana.
+    *
+     * Sovrascrive di proposito `EnumIntegerTrait::next()`: la settimana è ciclica,
+     * quindi da `SUNDAY` si torna a `MONDAY` e il ritorno è `self`, mai `null`.
+     * La versione del trait è lineare e restituisce `null` sull'ultimo case.
      */
     public function next(): self
     {

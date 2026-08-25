@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Modules\Xot\Filament\Support;
 
 use Carbon\Carbon;
-use Filament\Tables\Columns\BooleanColumn;
+use Filament\Tables\Columns\IconColumn;
 use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Columns\TextColumn;
 
@@ -71,7 +71,7 @@ class ColumnBuilder
             ->sortable()
             ->searchable()
             ->limit(50)
-            ->tooltip(static fn ($record) => \is_object($record) && isset($record->title) ? (string) $record->title : '')
+           ->tooltip(self::attributeTooltip('title'))
             ->toggleable();
     }
 
@@ -110,7 +110,7 @@ class ColumnBuilder
         return TextColumn::make('description')
             ->label(__('xot::fields.description.label'))
             ->limit($limit)
-            ->tooltip(static fn ($record) => \is_object($record) && isset($record->description) ? (string) $record->description : '')
+           ->tooltip(self::attributeTooltip('description'))
             ->toggleable();
     }
 
@@ -204,9 +204,11 @@ class ColumnBuilder
     /**
      * Standard is_active boolean column (sortable).
      */
-    public static function isActive(): BooleanColumn
+   public static function isActive(): IconColumn
     {
-        return BooleanColumn::make('is_active')
+        // `BooleanColumn` e' deprecata: e' una `IconColumn` con `boolean()` gia' attivo.
+        return IconColumn::make('is_active')
+            ->boolean()
             ->label(__('xot::fields.is_active.label'))
             ->sortable()
             ->toggleable();
@@ -304,5 +306,25 @@ class ColumnBuilder
             'updated_at' => self::updatedAt(),
             'deleted_at' => self::deletedAt(),
         ];
+    }
+    /**
+     * Tooltip col valore intero di un attributo troncato da `limit()`.
+     *
+     * Filament passa `$record` come `mixed` (anche `null` sulle righe segnaposto):
+     * il narrowing è runtime, e un attributo non stringificabile degrada a tooltip vuoto.
+     *
+     * @return \Closure(mixed): string
+     */
+    private static function attributeTooltip(string $attribute): \Closure
+    {
+        return static function ($record) use ($attribute): string {
+            if (! \is_object($record) || ! isset($record->{$attribute})) {
+                return '';
+            }
+
+            $value = $record->{$attribute};
+
+            return \is_scalar($value) ? (string) $value : '';
+        };
     }
 }

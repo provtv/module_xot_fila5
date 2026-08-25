@@ -22,16 +22,16 @@ interface PassportHasApiTokensContract
     /**
      * Get all of the user's registered OAuth clients.
      *
-     * @return HasMany
+    * @return HasMany<Model, Model>
      */
-    public function clients();
+    public function clients(): HasMany;
 
     /**
      * Get all of the access tokens for the user.
      *
-     * @return HasMany
+    * @return HasMany<Model, Model>
      */
-    public function tokens();
+    public function tokens(): HasMany;
 
     /**
      * Get the current access token being used by the user.
@@ -49,6 +49,8 @@ interface PassportHasApiTokensContract
      * Create a new personal access token for the user.
      *
      * @param array<int, string> $scopes
+    *
+     * @return PersonalAccessTokenResult<Token>
      */
     public function createToken(string $name, array $scopes = []): PersonalAccessTokenResult;
 

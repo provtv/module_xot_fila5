@@ -112,7 +112,7 @@ architecture-overview.md
 # ❌ SBAGLIATO
 MY_DOCUMENT.md              # UPPERCASE
 my_document.md              # underscore
-analysis-[DATE].md      # date in name (use CHANGELOG.md)
+analysis-2025-11-04.md      # date in name (use changelog.md)
 ```
 
 ### 8. DRY Principle
@@ -386,7 +386,7 @@ git push origin feature-branch
 ### Documentazione Laravel Ecosystem
 - [Laravel 12 Docs](https://laravel.com/docs/12.x)
 - [Filament 4 Docs](https://filamentphp.com/docs/4.x)
-- [Livewire 4 Docs](https://livewire.laravel.com/docs)
+- [Livewire 3 Docs](https://livewire.laravel.com/docs/3.x)
 - [Spatie Laravel Data](https://spatie.be/docs/laravel-data)
 - [Spatie QueueableAction](https://github.com/spatie/laravel-queueable-action)
 
@@ -397,7 +397,7 @@ git push origin feature-branch
 
 ---
 
-**Creato:** [DATE]
+**Creato:** 2025-11-04
 **Versione:** 1.0
 **Autori:** Team Laraxot + AI Claude Process Filosofico
 **Prossimo Review:** Trimestrale o dopo major changes

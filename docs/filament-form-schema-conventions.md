@@ -1,13 +1,45 @@
+---
+title: "Convenzioni per Form Schema in Filament"
+slug: filament-form-schema-conventions
+module: Xot
+type: convention
+status: enforced
+language: it-IT
+updated: 2026-08-05
+tags: [filament, form, schema, xotbase, resource, migration]
+related:
+  - filament-resource-rules.md
+  - ../../../../bashscripts/ai/wiki/concepts/filament-resource-schema-tables-pattern.md
+---
+
 # Convenzioni per Form Schema in Filament
+
+## Dove vive lo schema
+
+La sorgente di verità è la classe Form dedicata della Resource:
+
+```
+Modules/<M>/app/Filament/Resources/<Name>Resource/Schemas/<Model>Form.php
+```
+
+che estende `Modules\Xot\Filament\Resources\Schemas\XotBaseResourceForm` e
+implementa `getFormSchema()`.
+
+`XotBaseResource::form()` è `final` e risolve quella classe via
+`getFormClass()`. `XotBaseResource::getFormSchema()` è a sua volta `final`:
+una Resource che prova a dichiararlo produce un fatal
+`Cannot override final method`. Lo schema legacy di una Resource si parcheggia
+in `getFormSchemaOld()` mantenendo il docblock con generics completi.
 
 ## Regola Fondamentale
 
-In <nome progetto>, il metodo `getFormSchema()` nelle risorse Filament deve **SEMPRE** restituire un array associativo con chiavi stringhe, mai un array numerico.
+`getFormSchema()` deve **SEMPRE** restituire un array associativo con chiavi
+stringhe, mai un array numerico.
 
 ## Implementazione Corretta
 
 ```php
-// ✅ CORRETTO
+// ✅ CORRETTO — nella classe Schemas\<Model>Form
 public static function getFormSchema(): array
 {
     return [
@@ -112,7 +144,10 @@ class MyResource extends XotBaseResource
 ```php
 class MyResource extends XotBaseResource
 {
-    public static function getFormSchema(): array
+    /**
+     * @return array<string, \Filament\Schemas\Components\Component>
+     */
+    public static function getFormSchemaOld(): array
     {
         return [
             'title' => Forms\Components\TextInput::make('title'),
@@ -121,6 +156,8 @@ class MyResource extends XotBaseResource
     }
 }
 ```
+
+> **Contratto 2026-08:** ogni Resource **deve** avere `{Model}Form`, `{Plural}Table`, `{Model}Infolist`. Se manca la classe → `LogicException` (no soft-skip). `getFormSchemaOld()` / `getInfolistSchema()` sulla Resource sono solo **bridge di contenuto** in migrazione: lo schema si sposta nella classe dedicata, poi si rimuove Old. Su `XotBaseRelationManager` override = `getFormSchemaOld()`. Su `XotBaseResourceForm` = `getFormSchema()` (può delegare a Old). Array sempre a chiavi stringa. Canon wiki: [xotbaseresource-formschema-old-pattern.md](../../../../docs/wiki/filament/xotbaseresource-formschema-old-pattern.md).
 
 ## Vantaggi dell'Approccio Corretto
 
@@ -131,7 +168,7 @@ class MyResource extends XotBaseResource
 
 ## Documentazione Correlata
 
-- [XotBaseResource](./xot_base_resource.md)
-- [Form Components](./form_components.md)
-- [Form Validation](./form_validation.md)
-- [Filament Best Practices](../../../docs/rules/filament_best_practices.md)
+- [XotBaseResource](./XOT_BASE_RESOURCE.md)
+- [Form Components](./FORM_COMPONENTS.md)
+- [Form Validation](./FORM_VALIDATION.md)
+- [Filament Best Practices](../../docs/rules/filament_best_practices.md)

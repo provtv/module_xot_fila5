@@ -131,6 +131,16 @@ Tutti i moduli devono avere la stessa struttura per:
 
 ---
 
+## PHPStan Memory Management
+
+Per analisi di grandi dimensioni (es. `Modules/`), utilizzare sempre il flag della memoria a livello di interprete PHP per evitare crash dei parallel workers:
+
+```bash
+php -d memory_limit=-1 ./vendor/bin/phpstan analyse [target] --memory-limit=-1
+```
+
+---
+
 ## Violazioni Comuni
 
 ### 1. Datas nella Root
@@ -165,13 +175,21 @@ Tutti i moduli devono avere la stessa struttura per:
 
 **Stato**: ✅ Risolto (2026-03-13) - entrambe le cartelle `Helpers/` e `helpers/` rimosse
 
-### 5. Actions/Models/Providers nella Root
+### 5. Actions/Application/Events/Listeners/Database nella Root
 
-**Violazione**: `Modules/{Module}/Actions/`, `Modules/{Module}/Models/`, etc.
+**Violazione**: `Modules/{Module}/Actions/`, `Application/`, `Events/`, `Listeners/`, `Database/` (PascalCase)
 
-**Fix**: Tutto deve stare in `app/`
+**Fix**:
 
-**Stato**: ✅ Nessuna violazione trovata
+| Root (vietato) | Destinazione |
+| :--- | :--- |
+| `Actions/` | `app/Actions/` |
+| `Application/` | `app/Application/` |
+| `Events/` | `app/Events/` |
+| `Listeners/` | `app/Listeners/` |
+| `Database/` | `database/` (minuscolo) |
+
+**Stato**: ✅ `Modules/User/` bonificato (2026-06-18). Tutti i moduli conformi.
 
 ---
 
@@ -230,6 +248,10 @@ laravel/Modules/Xot/
 # Trova cartelle "app-like" nella root dei moduli
 find laravel/Modules -maxdepth 2 -type d \( \
     -name "Actions" -o \
+    -name "Application" -o \
+    -name "Database" -o \
+    -name "Events" -o \
+    -name "Listeners" -o \
     -name "Datas" -o \
     -name "Filament" -o \
     -name "Helpers" -o \
@@ -237,7 +259,7 @@ find laravel/Modules -maxdepth 2 -type d \( \
     -name "Models" -o \
     -name "Providers" -o \
     -name "Services" \
-\) ! -path "*/app/*" ! -path "*/tests/*"
+\) ! -path "*/app/*" ! -path "*/tests/*" ! -path "*/database/*"
 ```
 
 **Output atteso**: (vuoto - nessuna violazione)
@@ -264,6 +286,10 @@ Non ci sono eccezioni a questa regola. Tutto il codice sorgente DEVE stare in `a
 Queste cartelle **NON** devono mai stare nella root del modulo:
 
 - `Actions/` → deve essere `app/Actions/`
+- `Application/` → deve essere `app/Application/`
+- `Database/` → deve essere `database/` (minuscolo; mai PascalCase)
+- `Events/` → deve essere `app/Events/`
+- `Listeners/` → deve essere `app/Listeners/`
 - `Datas/` → deve essere `app/Datas/`
 - `Filament/` → deve essere `app/Filament/`
 - `Helpers/` o `helpers/` → deve essere `app/Helpers/` o rimosso se legacy
@@ -299,7 +325,7 @@ Questi file devono essere:
 1. Aggiunti al `.gitignore` (root e modulo)
 2. Eliminati dal filesystem
 
-**Stato**: ✅ Pattern aggiunti ai .gitignore (2026-03-13)
+**Stato**: ✅ Pattern `*.backup` / `*.backup.*` in root, `laravel/`, ogni modulo/tema e `docs/.gitignore` (2026-05-21). Vedi anche [gitignore backup files](../../../../docs/wiki/memories/gitignore-backup-files.md).
 
 ---
 
@@ -320,4 +346,40 @@ Questi file devono essere:
 
 ---
 
-*Ultimo aggiornamento: 2026-03-13*
+## Regressione e ri-bonifica 2026-07-06
+
+Le cartelle root PascalCase erano tornate (probabile merge/copy incidentale
+di un agente in una sessione precedente): `Modules/User/{Listeners,
+Application,Events,Actions,Database}`, `Modules/Notify/Models`,
+`Modules/Cms/Actions`, oltre a `Modules/Xot/{Datas,Filament,Providers,_docs,
+claude-code-bmad-skills}` (queste ultime rimosse da un altro agente in
+parallelo nella stessa sessione). Verificato per ciascuna, prima di
+cancellare, che **non** fossero l'unica copia raggiungibile (autoload
+psr-4 di ogni modulo mappa `Modules\X\` → `app/` — root non è mai
+autoloadato) e che nessun codice di produzione le importasse per path
+diretto. `Modules/User/Database/Migrations/` non era caricata da
+`XotBaseServiceProvider::boot()` (usa `database/migrations` minuscolo
+hardcoded) — mai eseguita, sicura da rimuovere anche se il contenuto
+differiva dalle migration reali in `database/migrations/`.
+
+**Eccezione confermata**: `Modules/Xot/helpers/Helper.php` (lowercase)
+resta alla root — richiesto esplicitamente da `laravel/phpstan.neon`
+(`scanFiles`, di proprietà esclusiva dell'utente). Non spostare né
+rimuovere senza che sia l'utente a modificare prima `phpstan.neon`.
+
+Rimossi anche file spazzatura non previsti dalla checklist originale:
+`Modules/Xot/.gitattributes copy`, `Modules/Xot/_activity.code-workspace`
+(duplicato byte-identico di `_xot.code-workspace`, la regola ammette un solo
+`*.code-workspace`), `Modules/Activity/.md` (file vuoto), due varianti
+duplicate di `.docs-directory-violation-reminder.md` in `Modules/Cms`
+(contaminazione da un progetto diverso, `base_saluteora`, non pertinente a
+questo repo).
+
+**Conflitto aperto, non risolto unilateralmente**: la lista "File Consentiti
+nella Root" più sopra include esplicitamente `CHANGELOG.md`, ma un'istruzione
+successiva dell'utente (2026-07-06) dice "come file .md alla root deve
+esserci solo README.md". `CHANGELOG.md` esiste ancora alla root di
+`Activity`, `AI`, `Gdpr` — non cancellato in attesa di chiarimento esplicito
+dell'utente, per non perdere contenuto storico senza conferma.
+
+*Ultimo aggiornamento: 2026-07-06*

@@ -312,10 +312,11 @@ php artisan xot:test-framework
 
 ## Collegamenti
 
-- [Analisi Moduli Globale](../../../../docs/project/modules_analysis_and_optimization.md)
+- [Analisi Moduli Globale](../../../project_docs/modules_analysis_and_optimization.md)
 - [PathHelper Current](../Helpers/PathHelper.php)
 - [XotData Current](../Datas/XotData.php)
 
+*Ultimo aggiornamento: gennaio 2025*
 # Raccomandazioni di Ottimizzazione - Modulo Xot
 
 ## 🎯 Stato Attuale e Problemi Critici
@@ -630,7 +631,8 @@ php artisan xot:test-framework
 
 ## Collegamenti
 
-- [Analisi Moduli Globale](../../../../docs/modules_analysis_and_optimization.md)
+- [Analisi Moduli Globale](../../../docs/modules_analysis_and_optimization.md)
 - [PathHelper Current](../Helpers/PathHelper.php)
 - [XotData Current](../Datas/XotData.php)
 
+*Ultimo aggiornamento: gennaio 2025*

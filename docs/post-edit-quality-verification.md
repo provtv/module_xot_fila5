@@ -280,7 +280,7 @@ quality-check:
 
 ---
 
-**Creato**: [DATE]
+**Creato**: 2025-01-29
 **Tipo**: Regola Quality Gate Obbligatoria
 **Applicazione**: Ogni modifica file
 **Severità**: 🔴 CRITICA

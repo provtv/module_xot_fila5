@@ -10,13 +10,13 @@ namespace Modules\Xot\Filament\Actions\Header;
 
 // Header actions must be an instance of Filament\Actions\Action, or Filament\Actions\ActionGroup.
 // use Filament\Actions\Action;
-use Filament\Actions\Action;
 use Filament\Resources\Pages\ListRecords;
 use Modules\Xot\Actions\Export\ExportXlsByCollection;
 use Modules\Xot\Actions\GetTransKeyAction;
+use Modules\Xot\Filament\Actions\XotBaseAction;
 use Webmozart\Assert\Assert;
 
-class ExportXlsAction extends Action
+class ExportXlsAction extends XotBaseAction
 {
     protected function setUp(): void
     {
@@ -67,6 +67,8 @@ class ExportXlsAction extends Action
                         );
                     }
                     Assert::isArray($fields);
+               } else {
+                    dddx('method xotFields does not exist in '.$resource);
                 }
 
                 return app(ExportXlsByCollection::class)->execute($rows, $filename, $transKey, array_values($fields));

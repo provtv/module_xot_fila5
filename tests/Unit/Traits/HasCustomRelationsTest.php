@@ -2,11 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Modules\Xot\Tests\Unit\Traits;
-
 use Illuminate\Database\Eloquent\Model;
 use Modules\Xot\Relations\CustomRelation;
+use Modules\Xot\Tests\TestCase;
 use Modules\Xot\Traits\HasCustomRelations;
+use PHPUnit\Framework\Assert;
+
+uses(TestCase::class);
 
 it('creates custom relation', function (): void {
     $relatedModel = new class extends Model {
@@ -30,5 +32,5 @@ it('creates custom relation', function (): void {
         $eagerMatcher
     );
 
-    expect($relation)->toBeInstanceOf(CustomRelation::class);
+   Assert::assertInstanceOf(CustomRelation::class, $relation);
 });

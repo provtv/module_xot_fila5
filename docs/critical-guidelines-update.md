@@ -30,8 +30,8 @@ find translations.md)
 
 **DOPO (CORRETTO):**
 ```markdown
-- [Traduzioni](../../xot/docs/translations.md)
-- [Standard Traduzioni](../../xot/docs/translation-standards.md)
+- [Traduzioni](../../Xot/docs/translations.md)
+- [Standard Traduzioni](../../Xot/docs/translation-standards.md)
 ```
 
 #### C. Struttura Documentazione Corretta
@@ -162,7 +162,7 @@ find  --include="*.php" | grep -v "static" | grep -v "::"
 
 ---
 
-**DATA EFFETTIVA**: [DATE]
+**DATA EFFETTIVA**: 2025-08-20
 **PRIORITÀ**: CRITICA
 **RESPONSABILE**: Tutto il team sviluppo
 

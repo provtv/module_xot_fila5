@@ -30,10 +30,18 @@ abstract class XotBaseChartWidget extends FilamentChartWidget
     /**
      * Restituisce il titolo del widget.
      *
-     * CRITICO: Deve essere public per rispettare il contratto ChartWidget
+    * CRITICO: Deve essere public per rispettare il contratto ChartWidget.
+     *
+     * `$heading` ha la precedenza: i widget che calcolano il titolo a runtime
+     * (dal record, dalla domanda del questionario, dai filtri) lo valorizzano
+     * prima del render e si aspettano quello, non la chiave di traduzione.
      */
     public function getHeading(): ?string
     {
+        if ($this->heading !== null && $this->heading !== '') {
+            return $this->heading;
+        }
+
         return static::trans('navigation.heading');
     }
 

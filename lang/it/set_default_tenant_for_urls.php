@@ -47,11 +47,6 @@ return [
             'label' => 'showPassword',
             'tooltip' => 'showPassword',
         ],
-        'resendNotification' => [
-            'tooltip' => 'resendNotification',
-            'icon' => 'resendNotification',
-            'label' => 'resendNotification',
-        ],
     ],
     'fields' => [
         'email' => [
@@ -304,7 +299,7 @@ return [
                 'placeholder' => 'zeusData.2',
                 'label' => 'zeusData.2',
             ],
-            [
+            4 => [
                 'description' => 'zeusData.4',
                 'helper_text' => 'zeusData.4',
                 'placeholder' => 'zeusData.4',
@@ -486,6 +481,6 @@ return [
         ],
         'label' => 'Set Default Tenant For Urls',
         'sort' => 1,
-        'icon' => 'heroicon-o-collection',
+       'icon' => 'heroicon-o-rectangle-stack',
     ],
 ];

@@ -113,9 +113,7 @@ abstract class XotBasePage extends Page implements HasForms
      */
     public function getModel(): string
     {
-        /* @phpstan-ignore property.staticAccess */
-        if (null !== static::$model) {
-            /** @phpstan-ignore property.staticAccess */
+       if (null !== static::$model) {
             /** @var class-string<Model> $modelValue */
             $modelValue = static::$model;
 
@@ -159,7 +157,7 @@ abstract class XotBasePage extends Page implements HasForms
      */
     public function schema(Schema $schema): Schema
     {
-        $schema = $schema->components($this->getFormSchema());
+       $schema = $schema->components($this->getFormSchema()); // @phpstan-ignore method.deprecated (hook di progetto: la deprecazione e ereditata per nome dal prototipo Filament 5, il codice eseguito e il nostro — story 16.12)
 
         $schema->statePath('data');
 
@@ -249,12 +247,7 @@ abstract class XotBasePage extends Page implements HasForms
     {
         $user = $this->getUser();
 
-        // @phpstan-ignore-next-line
-        if (! method_exists($user, 'hasPermissionTo')) {
-            throw new \RuntimeException('Il modello utente deve implementare il metodo hasPermissionTo');
-        }
-
-        // Use method_exists to safely call hasPermissionTo
+       // ponytail: $user is Authenticatable&Model, hasPermissionTo is always available via Spatie traits
         return $user->hasPermissionTo($permission);
     }
 
@@ -310,6 +303,7 @@ abstract class XotBasePage extends Page implements HasForms
         // Per ora lasciamo vuoto, può essere implementato nelle classi figlie
     }
 
+   /** @return list<Action> */
     protected function getFormActions(): array
     {
         return [

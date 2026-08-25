@@ -10,15 +10,16 @@ namespace Modules\Xot\Filament\Actions\Header;
 
 // Header actions must be an instance of Filament\Actions\Action, or Filament\Actions\ActionGroup.
 // use Filament\Actions\Action;
-use Filament\Actions\Action;
 use Filament\Notifications\Notification;
 use Filament\Resources\Pages\ListRecords;
 use Illuminate\Database\Eloquent\Model;
 use Modules\Xot\Actions\String\SanitizeAction;
+use Modules\Xot\Filament\Actions\XotBaseAction;
 use Webmozart\Assert\Assert;
 
-class SanitizeFieldsHeaderAction extends Action
+class SanitizeFieldsHeaderAction extends XotBaseAction
 {
+    /** @var list<string> */
     public array $fields = [];
 
     protected function setUp(): void
@@ -30,8 +31,9 @@ class SanitizeFieldsHeaderAction extends Action
             ->action(function (ListRecords $livewire): void {
                 $resource = $livewire->getResource();
                 $modelClass = $resource::getModel();
-                // @phpstan-ignore staticMethod.nonObject
-                $rows = $modelClass::get();
+               Assert::subclassOf($modelClass, Model::class);
+                /** @var class-string<Model> $modelClass */
+                $rows = $modelClass::query()->get();
                 if (! is_iterable($rows)) {
                     $rows = [];
                 }
@@ -61,6 +63,9 @@ class SanitizeFieldsHeaderAction extends Action
             });
     }
 
+   /**
+     * @param list<string> $fields
+     */
     public function setFields(array $fields): self
     {
         $this->fields = $fields;

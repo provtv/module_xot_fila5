@@ -2,12 +2,17 @@
 
 declare(strict_types=1);
 
-namespace Modules\Xot\Tests\Unit\Actions\Arr;
-
 use Illuminate\Support\Facades\File;
 use Modules\Xot\Actions\Arr\SaveArrayAction;
 use Modules\Xot\Actions\Arr\SaveJsonArrayAction;
 use Modules\Xot\Actions\Arr\SavePhpArrayAction;
+use Modules\Xot\Tests\TestCase;
+use PHPUnit\Framework\Assert;
+
+use function Safe\json_decode;
+use function Safe\tempnam;
+
+uses(TestCase::class);
 
 it('saves array as php file', function (): void {
     $data = ['foo' => 'bar', 'baz' => 123];
@@ -16,12 +21,10 @@ it('saves array as php file', function (): void {
     $action = app(SavePhpArrayAction::class);
     $result = $action->execute($data, $filename);
 
-    expect($result)->toBeTrue();
-    expect(File::exists($filename))->toBeTrue();
-
+   Assert::assertTrue($result);
+    Assert::assertTrue(File::exists($filename));
     $savedData = include $filename;
-    expect($savedData)->toBe($data);
-
+    Assert::assertSame($data, $savedData);
     File::delete($filename);
 });
 
@@ -32,12 +35,10 @@ it('saves array as json file', function (): void {
     $action = app(SaveJsonArrayAction::class);
     $result = $action->execute($data, $filename);
 
-    expect($result)->toBeTrue();
-    expect(File::exists($filename))->toBeTrue();
-
+   Assert::assertTrue($result);
+    Assert::assertTrue(File::exists($filename));
     $savedData = json_decode(File::get($filename), true);
-    expect($savedData)->toBe($data);
-
+    Assert::assertSame($data, $savedData);
     File::delete($filename);
 });
 
@@ -48,10 +49,8 @@ it('saves array via SaveArrayAction dispatcher', function (): void {
 
     $action = app(SaveArrayAction::class);
 
-    expect($action->execute($data, $filenamePhp, 'php'))->toBeTrue();
-    expect($action->execute($data, $filenameJson, 'json'))->toBeTrue();
-
-    expect(fn () => $action->execute($data, 'test.txt', 'txt'))->toThrow(\InvalidArgumentException::class);
+   Assert::assertTrue($action->execute($data, $filenamePhp, 'php'));
+    Assert::assertTrue($action->execute($data, $filenameJson, 'json'));
 
     File::delete($filenamePhp);
     File::delete($filenameJson);

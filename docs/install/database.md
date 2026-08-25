@@ -86,8 +86,8 @@ return $def1;
 
 ## Collegamenti tra versioni di database.md
 * [database.md](docs/tecnico/database/database.md)
-* [database.md](../../../xot/docs/install/database.md)
-* [database.md](../../../tenant/docs/it/config/database.md)
+* [database.md](../../../xot/project_docs/install/database.md)
+* [database.md](../../../tenant/project_docs/it/config/database.md)
 
 ### Versione Incoming
 

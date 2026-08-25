@@ -1,3 +1,14 @@
+---
+title: "Skill: Troubleshooting Filament Edit Forms in XotBaseManageRelatedRecords"
+module: "Xot"
+type: concept
+tags: [troubleshooting, filament, edit, forms]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "troubleshooting filament edit forms"
+related:
+  - "./eloquent-magic-properties-rule.md"
+---
 # Skill: Troubleshooting Filament Edit Forms in XotBaseManageRelatedRecords
 
 ## Contesto del Problema

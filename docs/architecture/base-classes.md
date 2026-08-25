@@ -422,15 +422,15 @@ ImageColumn::configureUsing(fn (ImageColumn $imageColumn) => $imageColumn
 
 ### Documentation Links
 
-- [Filament 4.x Upgrade Guide](../../../docs/filament-4-upgrade.md)
-- [Module Upgrade Guide](../../../docs/upgrade-modules-to-filament-4.md)
+- [Filament 4.x Upgrade Guide](../../docs/filament-4-upgrade.md)
+- [Module Upgrade Guide](../../docs/upgrade-modules-to-filament-4.md)
 - [Breaking Changes Reference](https://filamentphp.com/docs/4.x/upgrade-guide)
 
 ## 📊 Architecture Benefits
 
 ### Consistency
 - **Uniform Interface**: Tutte le classi seguono gli stessi pattern
-- **<nome progetto>able Behavior**: Comportamento consistente across modules
+- **Predictable Behavior**: Comportamento consistente across modules
 - **Standard Conventions**: Naming e structure conventions
 
 ### Maintainability
@@ -512,4 +512,4 @@ class MyModel extends XotBaseModel
 
 ---
 
-**See Also**: [Extension Patterns](../development/extensions.md) | [Best Practices](../development/practices.md) | [Critical Filament Rules](../../../docs/AI-GUIDELINES.md#️-critical-laraxot-filament-rules)
+**See Also**: [Extension Patterns](../development/extensions.md) | [Best Practices](../development/practices.md) | [Critical Filament Rules](../../docs/AI-GUIDELINES.md#️-critical-laraxot-filament-rules)

@@ -5,35 +5,52 @@ declare(strict_types=1);
 namespace Modules\Xot\Tests\Unit\Actions\Arr;
 
 use Modules\Xot\Actions\Arr\SaveJsonArrayAction;
+use Modules\Xot\Tests\TestCase;
+use PHPUnit\Framework\Assert;
+
+use function Safe\file_get_contents;
+use function Safe\glob;
+use function Safe\json_decode;
+use function Safe\mkdir;
+use function Safe\rmdir;
+use function Safe\unlink;
+
+uses(TestCase::class);
 
 beforeEach(function (): void {
-    $action = app(SaveJsonArrayAction::class);
-    $tempDir = sys_get_temp_dir();
-    mkdir($tempDir, 0755, true);
+    $this->action = app(SaveJsonArrayAction::class);
+    $this->tempDir = sys_get_temp_dir().'/xot_arr_'.uniqid();
+    mkdir($this->tempDir, 0755, true);
 });
 
 afterEach(function (): void {
-    if (isset($tempDir))
-        array_map('unlink', glob($tempDir.'/*'));
-        rmdir($tempDir);
+    if (isset($this->tempDir) && is_dir($this->tempDir)) {
+       $dir = $this->tempDir;
+        $files = glob($dir.'/*');
+        foreach ($files as $file) {
+            $this->assertIsString($file);
+            unlink($file);
+        }
+        rmdir($dir);
     }
 });
 
-it('saves array to json file', function (): void {
-    $data = ['key' => 'value', 'nested' => ['a' => 1]];
-    $path = $tempDir.'/data.json';
+describe('Save Json Array Action', function (): void {
+    test('saves array to json file', function (): void {
+        $data = ['key' => 'value', 'nested' => ['a' => 1]];
+        $path = $this->tempDir.'/data.json';
 
-    $result = $action->execute($data, $path);
+        $result = app(SaveJsonArrayAction::class)->execute($data, $path);
+        Assert::assertSame($data, $result);
 
-    expect($result)->toBeTrue()
-        ->and(file_exists($path))->toBeTrue()
-        ->and(json_decode(file_get_contents($path), true))->toBe($data);
-});
+        Assert::assertTrue(file_exists($path));
+    });
 
-it('saves empty array', function (): void {
-    $path = $tempDir.'/empty.json';
-    $result = $action->execute([], $path);
+    test('saves empty array', function (): void {
+        $path = $this->tempDir.'/empty.json';
+        $result = app(SaveJsonArrayAction::class)->execute([], $path);
 
-    expect($result)->toBeTrue()
-        ->and(json_decode(file_get_contents($path), true))->toBe([]);
+        Assert::assertSame([], $result);
+        Assert::assertSame([], json_decode(file_get_contents($path), true));
+    });
 });

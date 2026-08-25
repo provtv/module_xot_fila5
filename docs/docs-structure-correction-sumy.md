@@ -200,7 +200,7 @@ find laravel/Themes -name "docs" -type d
 
 ### **Documentazione Correlata**:
 - [Regole Modularità](modularity-hardcoded-names.md)
-- [Struttura Progetto](project-structure.md)
+- [Struttura Progetto](PROJECT-STRUCTURE.md)
 - [Best Practices Documentazione](documentation-standards.md)
 
 ---

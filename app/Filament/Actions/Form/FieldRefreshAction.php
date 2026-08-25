@@ -8,11 +8,11 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Filament\Actions\Form;
 
-use Filament\Actions\Action;
 use Filament\Notifications\Notification;
 use Filament\Schemas\Components\Utilities\Set;
+use Modules\Xot\Filament\Actions\XotBaseAction;
 
-class FieldRefreshAction extends Action
+class FieldRefreshAction extends XotBaseAction
 {
     protected function setUp(): void
     {
@@ -20,6 +20,7 @@ class FieldRefreshAction extends Action
 
         $this->translateLabel();
         $this->icon('heroicon-o-arrow-path')
+            ->label('')
             ->tooltip('Ricalcola valore')
             ->action(function ($record, Set $set): void {
                 $name = $this->getName();

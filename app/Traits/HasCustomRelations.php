@@ -13,11 +13,13 @@ use Illuminate\Database\Eloquent\Model;
 use Modules\Xot\Relations\CustomRelation;
 use Webmozart\Assert\Assert;
 
-// use Illuminate\Database\Eloquent\Builder;
+
 
 /**
  * Trait HasCustomRelations.
- */
+ *
+ * @phpstan-ignore trait.unused
+*/
 trait HasCustomRelations
 {
     public function customRelation(

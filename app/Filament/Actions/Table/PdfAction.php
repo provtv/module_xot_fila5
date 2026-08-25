@@ -8,11 +8,11 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Filament\Actions\Table;
 
-use Filament\Actions\Action;
 use Illuminate\Database\Eloquent\Model;
 use Modules\Xot\Actions\Export\PdfByModelAction;
+use Modules\Xot\Filament\Actions\XotBaseAction;
 
-class PdfAction extends Action
+class PdfAction extends XotBaseAction
 {
     protected function setUp(): void
     {

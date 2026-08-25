@@ -5,21 +5,23 @@ declare(strict_types=1);
 namespace Modules\Xot\Datas;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\Pivot;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 use Livewire\Wireable;
-use Modules\Tenant\Services\TenantService;
+use Modules\Tenant\Actions\Config\GetTenantConfigArrayAction;
 use Modules\User\Contracts\TeamContract;
 use Modules\User\Contracts\TenantContract;
+use Modules\Xot\Actions\ModelClass\GuessPivotAction;
+use Modules\Xot\Contracts\PivotContract;
 use Modules\Xot\Contracts\ProfileContract;
 use Modules\Xot\Contracts\UserContract;
-
-use function Safe\realpath;
-
 use Spatie\LaravelData\Concerns\WireableData;
 use Spatie\LaravelData\Data;
 use Webmozart\Assert\Assert;
+
+use function Safe\realpath;
 
 /**
  * Class Modules\Xot\Datas\XotData.
@@ -86,7 +88,7 @@ class XotData extends Data implements Wireable
     public static function make(): self
     {
         if (! self::$instance) {
-            $data = TenantService::getConfig('xra');
+           $data = app(GetTenantConfigArrayAction::class)->execute('xra');
 
             self::$instance = self::from($data);
         }
@@ -119,6 +121,7 @@ class XotData extends Data implements Wireable
         );
         Assert::isAOf($class, Model::class, '['.__LINE__.']['.class_basename($this).']['.$class.']');
 
+       /* @var class-string<Model&UserContract> $class */
         return $class;
     }
 
@@ -129,13 +132,24 @@ class XotData extends Data implements Wireable
         if (! in_array('email', $userInstance->getFillable(), true)) {
             throw new \Exception("Attribute 'email' not found in model ".$userInstance::class);
         }
-        $user = $user_class::firstOrCreate(['email' => $email]);
-        /*
-         * if (! $user) {
-         * throw new \Exception('user not found for email '.$email);
-         * }
-         */
+        /** @var (Model&UserContract)|null $user */
+        $user = $user_class::query()->where('email', $email)->first();
+
+        if (null === $user) {
+            throw new \Exception('user not found for email '.$email);
+        }
+
         Assert::implementsInterface($user, UserContract::class, '['.__LINE__.']['.class_basename($this).']');
+
+        return $user;
+    }
+
+   public function findUserByEmail(string $email): ?UserContract
+    {
+        $userClass = $this->getUserClass();
+
+        /** @var (Model&UserContract)|null $user */
+        $user = $userClass::query()->where('email', $email)->first();
 
         return $user;
     }
@@ -158,7 +172,10 @@ class XotData extends Data implements Wireable
             '['.$this->team_class.']['.__LINE__.']['.class_basename($this).']',
         );
 
-        return $this->team_class;
+       /** @var class-string<Model&TeamContract> $teamClass */
+        $teamClass = $this->team_class;
+
+        return $teamClass;
     }
 
     /**
@@ -185,7 +202,20 @@ class XotData extends Data implements Wireable
             '['.__LINE__.']['.class_basename($this).']['.$this->tenant_class.']',
         );
 
-        return $this->tenant_class;
+       /** @var class-string<Model&TenantContract> $tenantClass */
+        $tenantClass = $this->tenant_class;
+
+        return $tenantClass;
+    }
+
+    /**
+     * @return class-string<Pivot>
+     */
+    public function getTenantUserClass(): string
+    {
+        $res=app(GuessPivotAction::class)->execute($this->getTenantClass(),$this->getUserClass());
+        
+        return $res::class;
     }
 
     /**
@@ -234,7 +264,7 @@ class XotData extends Data implements Wireable
             '['.__LINE__.']['.class_basename($this).']['.$class.']',
         );
 
-        /* @var class-string<Model&ProfileContract> */
+       /* @var class-string<Model&ProfileContract> $class */
         return $class;
     }
 
@@ -327,14 +357,22 @@ class XotData extends Data implements Wireable
         dddx('wip');
     }
 
+   /**
+     * Path to pub theme Blade views. Missing dirs (incomplete theme / tests) return
+     * the unresolved path; callers must check File::exists() (see FolioVoltServiceProvider).
+     */
     public function getPubThemeViewPath(string $key = ''): string
     {
         $path0 = base_path('Themes/'.$this->pub_theme.'/resources/views/'.$key);
 
+       if (! is_dir($path0)) {
+            return $path0;
+        }
+
         try {
             return realpath($path0);
-        } catch (\Exception $e) {
-            throw new \Exception('realpath not find dir['.$path0.']'.PHP_EOL.'['.$e->getMessage().']');
+        } catch (\Exception) {
+            return $path0;
         }
     }
 
@@ -382,6 +420,7 @@ class XotData extends Data implements Wireable
             '['.__LINE__.']['.class_basename($this).']['.$class.']',
         );
 
+       /* @var class-string<Model&UserContract> $class */
         return $class;
     }
 
@@ -398,10 +437,10 @@ class XotData extends Data implements Wireable
             ->append('Resource')
             ->toString();
 
-        // If the class doesn't exist, try the alternative path (app/Filament/Resources)
+       // If missing, fallback (still PSR-4: NEVER put literal "app\" in the PHP namespace segment)
         if (! class_exists($resourceClass)) {
             $resourceClass =
-                'Modules\\'.$moduleName.'\\app\\Filament\\Resources\\'.class_basename($class).'Resource';
+                'Modules\\'.$moduleName.'\\Filament\\Resources\\'.class_basename($class).'Resource';
         }
 
         if (! class_exists($resourceClass)) {

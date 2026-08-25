@@ -11,7 +11,7 @@
 - **Zen Principle**: One truth, many manifestations
 
 #### 2. **Consistency Over Flexibility**
-- **<nome progetto>able behavior > Unlimited options**
+- **Predictable behavior > Unlimited options**
 - Same patterns across all modules, same file structures
 - **Violation Example**: Different test structures across modules
 - **Zen Principle**: Harmony through uniformity
@@ -28,11 +28,7 @@
 ```
 Xot (Core Engine)
 ├── User (Authentication & Authorization)
-<<<<<<< .merge_file_N11tJ1
-├── healthcare_app (Core Business Logic - Surveys)
-=======
-├── ModuloEsempio (Core Business Logic - Surveys)
->>>>>>> .merge_file_8Z9hGv
+├── Quaeris (Core Business Logic - Surveys)
 ├── Cms (Content Management)
 ├── Media (File Management)
 ├── Geo (Location Services)
@@ -53,7 +49,7 @@ Xot (Core Engine)
 - **PHP 8.3.27** - Modern PHP with strict typing
 - **Laravel 12.38.1** - Latest Laravel framework
 - **Filament 4.2.2** - Admin panel framework
-- **Livewire 4.2.1** - Reactive UI components
+- **Livewire 3.6.4** - Reactive UI components
 - **MySQL** - Primary database
 - **TailwindCSS 3.4.17** - Utility-first CSS
 
@@ -112,11 +108,7 @@ TextInput::make('name');
 - **Power**: Controls access to all resources
 - **Responsibility**: Security and permissions
 
-<<<<<<< .merge_file_N11tJ1
-#### 3. **healthcare_app Module (The Economy)**
-=======
-#### 3. **ModuloEsempio Module (The Economy)**
->>>>>>> .merge_file_8Z9hGv
+#### 3. **Quaeris Module (The Economy)**
 - **Role**: Core business logic, surveys, reporting
 - **Power**: Main revenue-generating functionality
 - **Responsibility**: Business operations
@@ -186,7 +178,7 @@ if (isset($model->email)) { ... }
 
 #### 3. **Test Structure Consistency**
 - **Rule**: Tests in traditional Laravel structure only
-- **Reason**: <nome progetto>able autoloader behavior
+- **Reason**: Predictable autoloader behavior
 - **Location**: `Modules/{Module}/tests/`
 
 ## 🎯 Implementation Guidelines
@@ -310,6 +302,6 @@ grep -r "\.navigation" Modules/*/lang/**/*.php
 ---
 
 **Maintained by**: Xot Module (The Laraxot Government)
-**Philosophy**: Consistency, <nome progetto>ability, Simplicity
+**Philosophy**: Consistency, Predictability, Simplicity
 **Goal**: Create a harmonious, maintainable, and scalable application architecture
-
+**Last Updated**: 2025-11-17

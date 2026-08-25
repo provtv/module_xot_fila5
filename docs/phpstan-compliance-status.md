@@ -1,7 +1,12 @@
 # PHPStan Level 10 Compliance Status
 
+**Last Updated**: 2026-07-06
 
-**Status**: ✅ FULLY COMPLIANT (0 errors)
+**Status**: ✅ FULLY COMPLIANT (0 errors, level max)
+
+Baseline STORY-287: 282 errori → 0. Pattern: Contracts `Model` generics, Cast/Export/Trait PHPDoc, `HasXotFactory` covariant.
+
+Baseline sessione 2026-07-06: 1 → 0. `Modules\Xot\Contracts\UserContract::membershipTeams()` era disallineato con `HasTeams::teams()` (secondo parametro generico di `BelongsToMany` — `$this` non è un sottotipo valido di `Model` nel bound del contratto). Allineato a `Model`. `HasSchemalessAttributesTest.php` chiamava un metodo mai esistito (`getSchemalessAttributes()`) invece dell'accesso magico `$model->extra_attributes`; corretto il test.
 
 ## Summary
 The Xot module is now fully compliant with PHPStan Level 10 analysis. All static analysis errors have been resolved, ensuring type safety and code quality.
@@ -71,3 +76,19 @@ To maintain PHPStan compliance:
 - [Framework Integration Patterns](framework-integration.md)
 - [HTTP Client Best Practices](http-client-best-practices.md)
 - [Dummy Actions Pattern](dummy-actions-pattern.md)
+## Aggiornamento 2026-07-06
+
+- `app/Contracts/UserContract.php`: aggiunto `membershipTeams(): BelongsToMany`
+  (mancava, causava `method.notFound` in `AssignTeamCommand.php`).
+- `app/Traits/HasCustomRelations.php`: eliminato, `trait.unused` reale
+  (zero utilizzi in tutto `Modules/`), codice morto.
+- Rimossi tutti i probe PHPStan morti (`*PhpstanProbe*`) in Geo/Lang/Tenant e
+  aggiornata la doc `docs/wiki/concepts/phpstan-trait-probes.md` a stato
+  "pattern rimosso" — la funzione registry `xotPhpstanTraitProbeClasses()`
+  non è mai esistita nel codice.
+- Nuova nota `docs/wiki/concepts/phpstan-partial-scope-false-positives.md`:
+  analizzare un sottoinsieme di `Modules/` può generare `trait.unused` falsi
+  positivi per trait usati in un modulo diverso da quello scansionato.
+
+Ri-verificato: `./vendor/bin/phpstan analyse Modules` → `[OK] No errors`
+sull'intero progetto.

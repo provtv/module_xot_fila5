@@ -2,35 +2,28 @@
 
 declare(strict_types=1);
 
-namespace Modules\Xot\Tests\Unit;
-
-use Modules\UI\Models\Asset;
+use Illuminate\Support\Facades\Schema;
+use Modules\Xot\Database\Factories\ModuleFactory;
 use Modules\Xot\Models\Module;
+use Modules\Xot\Tests\TestCase;
+use PHPUnit\Framework\Assert;
 
-uses(TestCase::class)->in(__DIR__);
-
-it('can create a test asset', function () {
-    $asset = Asset::factory()->create([
-        'name' => 'Test Asset',
-        'path' => '/test/path',
-    ]);
-
-    expect($asset)->toBeInstanceOf(Asset::class);
-    expect($asset->name)->toBe('Test Asset');
-    expect($asset->path)->toBe('/test/path');
-});
+uses(TestCase::class);
 
 it('can create a test module', function () {
-    $module = Module::factory()->create([
+    $module = ModuleFactory::new()->createOne([
         'name' => 'TestModule',
         'enabled' => true,
     ]);
 
-    expect($module)->toBeInstanceOf(Module::class);
-    expect($module->name)->toBe('TestModule');
-    expect($module->enabled)->toBeTrue();
+   Assert::assertInstanceOf(Module::class, $module);
+    Assert::assertSame('TestModule', $module->name);
+    Assert::assertTrue((bool) $module->enabled);
 });
 
-it('can run migrations', function () {
-    $this->artisan('migrate', ['--env' => 'testing', '--force' => true]);
+it('non esegue migration dai test: i dati sono sacri', function (): void {
+    // Nessun `migrate`, `migrate:fresh`, `migrate:refresh`, `db:wipe` o RefreshDatabase
+    // dentro la suite. Le migration si lanciano fuori dai test, in avanti, a mano.
+    // Qui verifichiamo solo che lo schema atteso ci sia già.
+    Assert::assertTrue(Schema::hasTable((new Module)->getTable()));
 });

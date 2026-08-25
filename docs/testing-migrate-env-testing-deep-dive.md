@@ -23,6 +23,7 @@ php artisan migrate --env=testing
 Esito:
 - `SQLSTATE[HY000] [2002] Unknown error while connecting`
 - connessione `mysql` su `127.0.0.1:3306`
+- database target `<nome progetto>_data_test`
 - database target `<nome progetto>_data_test` (.) 9daa1718 (refactor: update project references to use `<nome progetto>` in various documentation and configuration files)- database target `<nome progetto>_data_test`
 
 Conclusione:
@@ -33,6 +34,7 @@ Conclusione:
 Comando:
 
 ```bash
+DB_CONNECTION=sqlite DB_DATABASE=/var/www/_bases/base_<nome progetto>/laravel/database/testing.sqlite php artisan migrate --env=testing
 DB_CONNECTION=sqlite DB_DATABASE=../../../database/testing.sqlite php artisan migrate --env=testing (.) 9daa1718 (refactor: update project references to use `<nome progetto>` in various documentation and configuration files)DB_CONNECTION=sqlite DB_DATABASE=../../../database/testing.sqlite php artisan migrate --env=testing
 ```
 
@@ -65,6 +67,7 @@ Conclusione:
 
 ## Riferimenti Tecnici
 
+- `config/local/<nome progetto>/database.php` (sqlite usa `database_path(env('DB_DATABASE', 'db_data').'.sqlite')`)
 - `config/local/<nome progetto>/database.php` (sqlite usa `database_path(env('DB_DATABASE', 'db_data').'.sqlite')`) (.) 9daa1718 (refactor: update project references to use `<nome progetto>` in various documentation and configuration files)- `config/local/<nome progetto>/database.php` (sqlite usa `database_path(env('DB_DATABASE', 'db_data').'.sqlite')`)
 - `Modules/Xot/app/Database/Migrations/XotBaseMigration.php` (`timestamps()` aggiunge anche `user_id`, `updated_by`, `created_by`)
 - `Modules/Meetup/database/migrations/2025_01_01_000008_create_event_user_table.php` (definisce già `user_id` prima di `timestamps()`)

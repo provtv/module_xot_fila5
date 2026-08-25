@@ -203,6 +203,7 @@ echo "✅ Validazione completata!"
 echo "🔄 Aggiornamento documentazione modulo Xot..."
 
 # Aggiorna timestamp
+find docs/ -name "*.md" -exec sed -i 's/Ultimo aggiornamento:.*/Ultimo aggiornamento: '$(date +%Y-%m-%d)'/' {} \;
 
 # Aggiorna versioni
 find docs/ -name "*.md" -exec sed -i 's/Laravel [0-9]\+/Laravel 11/' {} \;
@@ -340,15 +341,16 @@ docs/
 ## Collegamenti Bidirezionali
 
 ### Documentazione Correlata
-- [README](../readme.md) - Panoramica modulo Xot
+- [README](../README.md) - Panoramica modulo Xot
 - [Convenzioni](./core/conventions.md) - Convenzioni unificate
 - [Best Practices](./core/best-practices.md) - Best practices consolidate
 
 ### Documentazione Root
-- [docs/ottimizzazioni-sistema.md](../../../../docs/ottimizzazioni-sistema.md) - Ottimizzazioni sistema generale
-- [docs/architettura-moduli.md](../../../../docs/architettura-moduli.md) - Architettura moduli
+- [docs/ottimizzazioni-sistema.md](../../../docs/ottimizzazioni-sistema.md) - Ottimizzazioni sistema generale
+- [docs/architettura-moduli.md](../../../docs/architettura-moduli.md) - Architettura moduli
 
 ---
 
+**Ultimo aggiornamento:** 2025-01-06
 **Stato:** In implementazione
 **Responsabile:** Team Sviluppo Xot

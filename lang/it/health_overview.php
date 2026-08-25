@@ -5,8 +5,8 @@ declare(strict_types=1);
 return [
     'sections' => [
         'empty' => [
-            'label' => 'empty',
-            'heading' => 'empty',
+           'label' => '',
+            'heading' => '',
         ],
     ],
     'label' => 'Health Overview',
@@ -20,7 +20,7 @@ return [
         ],
         'label' => 'Health Overview',
         'sort' => 1,
-        'icon' => 'heroicon-o-collection',
+       'icon' => 'heroicon-o-rectangle-stack',
     ],
     'fields' => [
         'id' => [

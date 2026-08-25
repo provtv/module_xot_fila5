@@ -27,7 +27,7 @@ use Modules\Xot\Database\Factories\CacheLockFactory;
  * @property ProfileContract|null $deleter
  * @property ProfileContract|null $updater
  *
- * @mixin \Eloquent
+ * @mixin \Illuminate\Database\Eloquent\Model
  */
 class CacheLock extends BaseModel
 {

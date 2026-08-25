@@ -124,8 +124,9 @@ Codice pratico.
 
 ## Collegamenti
 - [Doc correlata](./relativa.md)
-- [Root docs](../../../../docs/correlata.md)
+- [Root docs](../../../docs/correlata.md)
 
+*Ultimo aggiornamento: [data]*
 ```
 
 ### 4. **Sistema Navigazione Centralizzato**
@@ -195,10 +196,11 @@ DOPO:
 
 - [Template Standardizzato](./template-docs.md)
 - [Guida Refactoring](./refactoring-guide.md)
-- [Root Ottimizzazioni](../../../../docs/ottimizzazioni-modulari.md)
+- [Root Ottimizzazioni](../../../docs/ottimizzazioni-modulari.md)
 
 ## 🏷️ **Tag Ottimizzazione**
 
 `#DRY` `#KISS` `#refactoring` `#documentation` `#xot-module` `#consolidation`
 
 ---
+*Ultimo aggiornamento: Gennaio 2025 - Ottimizzazione DRY + KISS*

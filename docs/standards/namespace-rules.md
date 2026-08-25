@@ -19,6 +19,57 @@ Nonostante le classi possano risiedere fisicamente nella sottodirectory `app/` d
 namespace Modules\Patient\Models;
 
 // File in: Modules/Dental/app/Services/AppointmentService.php
+// File in: Modules/Patient/app/Models/Patient.php
+namespace Modules\Patient\Models;
+
+// File in: Modules/Dental/app/Services/AppointmentService.php
+// File in: Modules/Patient/app/Models/Patient.php
+namespace Modules\Patient\Models;
+
+// File in: Modules/Dental/app/Services/AppointmentService.php
+// File in: Modules/Patient/app/Models/Patient.php
+namespace Modules\Patient\Models;
+
+// File in: Modules/Dental/app/Services/AppointmentService.php
+// File in: Modules/Patient/app/Models/Patient.php
+namespace Modules\Patient\Models;
+
+// File in: Modules/Dental/app/Services/AppointmentService.php
+// File in: Modules/Patient/app/Models/Patient.php
+// File in: Modules/Patient/app/Models/Patient.php
+namespace Modules\Patient\Models;
+namespace Modules\Patient\Models;
+
+// File in: Modules/Dental/app/Services/AppointmentService.php
+// File in: Modules/Dental/app/Services/AppointmentService.php
+// File in: Modules/Patient/app/Models/Patient.php
+// File in: Modules/Patient/app/Models/Patient.php
+namespace Modules\Patient\Models;
+namespace Modules\Patient\Models;
+
+// File in: Modules/Dental/app/Services/AppointmentService.php
+// File in: Modules/Dental/app/Services/AppointmentService.php
+// File in: Modules/Patient/app/Models/Patient.php
+// File in: Modules/Patient/app/Models/Patient.php
+namespace Modules\Patient\Models;
+namespace Modules\Patient\Models;
+
+// File in: Modules/Dental/app/Services/AppointmentService.php
+// File in: Modules/Dental/app/Services/AppointmentService.php
+// File in: Modules/Patient/app/Models/Patient.php
+// File in: Modules/Patient/app/Models/Patient.php
+namespace Modules\Patient\Models;
+namespace Modules\Patient\Models;
+
+// File in: Modules/Dental/app/Services/AppointmentService.php
+// File in: Modules/Dental/app/Services/AppointmentService.php
+// File in: Modules/Patient/app/Models/Patient.php
+// File in: Modules/Patient/app/Models/Patient.php
+namespace Modules\Patient\Models;
+namespace Modules\Patient\Models;
+
+// File in: Modules/Dental/app/Services/AppointmentService.php
+// File in: Modules/Dental/app/Services/AppointmentService.php
 namespace Modules\Dental\Services;
 ```
 

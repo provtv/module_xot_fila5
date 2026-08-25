@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Providers;
 
+use BladeUI\Icons\Exceptions\SvgNotFound;
 use BladeUI\Icons\Factory as BladeIconsFactory;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\Config;
@@ -43,6 +44,7 @@ abstract class XotBaseServiceProvider extends ServiceProvider
         $this->registerLivewireComponents();
         $this->registerBladeComponents();
         $this->registerCommands();
+       $this->registerPublicAssets();
     }
 
     public function register(): void
@@ -60,19 +62,24 @@ abstract class XotBaseServiceProvider extends ServiceProvider
             throw new \Exception('name is empty on ['.static::class.']');
         }
 
+        // Blade UI Kit default set may already contain prefixes like "geo".
+        // Skip registration if the prefix would collide with the default set.
         $this->callAfterResolving(BladeIconsFactory::class, function (BladeIconsFactory $factory): void {
             try {
                 $assetsPath = app(GetModulePathByGeneratorAction::class)->execute($this->name, 'assets');
                 $svgPath = $assetsPath.'/../svg';
-                if (File::exists($svgPath)) {
+                if (! File::exists($svgPath)) {
+                    return;
+                }
+                // Check if prefix already registered to avoid collision with default set.
+                try {
+                    $factory->svg($this->nameLower.'::non-existent-test');
+                } catch (SvgNotFound $e) {
+                    // Prefix not registered yet — safe to add.
                     $factory->add($this->nameLower, ['path' => $svgPath, 'prefix' => $this->nameLower]);
                 }
             } catch (\Throwable $e) {
-<<<<<<< HEAD
-                // Ignore - assets opzionali, modulo puo funzionare senza.
-=======
-                // Ignore - assets opzionali, modulo può funzionare senza
->>>>>>> 9506daa5 (.)
+                // Ignore missing optional assets.
             }
         });
     }
@@ -84,17 +91,13 @@ abstract class XotBaseServiceProvider extends ServiceProvider
         }
 
         $viewPath = module_path($this->name, 'resources/views');
+        if (! is_dir($viewPath)) {
+            return;
+        }
+
         $this->loadViewsFrom($viewPath, $this->nameLower);
     }
 
-<<<<<<< HEAD
-=======
-    /**
-     * Registra le traduzioni del modulo.
-     *
-     * @throws \Exception
-     */
->>>>>>> 9506daa5 (.)
     public function registerTranslations(): void
     {
         if ('' === $this->name) {
@@ -117,19 +120,12 @@ abstract class XotBaseServiceProvider extends ServiceProvider
     {
         $componentViewPath = app(GetModulePathByGeneratorAction::class)->execute($this->name, 'component-view');
 
-        try {
-            Blade::anonymousComponentPath($componentViewPath);
-        } catch (\Exception $e) {
-<<<<<<< HEAD
-            // Ignore invalid or unavailable anonymous component paths.
-=======
-            // Ignore missing component view path
-            dddx([
-                'name' => $this->name,
-                'componentViewPath' => $componentViewPath,
-                'e' => $e->getMessage(),
-            ]);
->>>>>>> 9506daa5 (.)
+       if (is_dir($componentViewPath)) {
+            try {
+                Blade::anonymousComponentPath($componentViewPath);
+            } catch (\Exception $e) {
+                // Ignore invalid or unavailable anonymous component paths.
+            }
         }
 
         $componentClassPath = app(GetModulePathByGeneratorAction::class)->execute($this->name, 'component-class');
@@ -172,6 +168,7 @@ abstract class XotBaseServiceProvider extends ServiceProvider
         $this->commands($commands);
     }
 
+   /** @return array<int, string> */
     public function provides(): array
     {
         return [];
@@ -200,14 +197,34 @@ abstract class XotBaseServiceProvider extends ServiceProvider
                 $filename = pathinfo($file, PATHINFO_FILENAME);
                 Config::set($this->nameLower.'.'.$filename, require $file);
             }
-<<<<<<< HEAD
         } catch (\Throwable $e) {
             // Ignore config registration failures for optional module config.
-=======
-        } catch (\Exception $e) {
-            // Ignore missing configuration
-            return;
->>>>>>> 9506daa5 (.)
         }
+    }
+    protected function registerPublicAssets(): void
+    {
+        if ('' === $this->name) {
+            throw new \Exception('name is empty on ['.static::class.']');
+        }
+
+        $sourcePath = module_path($this->name, 'public');
+
+        if (! File::isDirectory($sourcePath)) {
+            return;
+        }
+
+        $destinationPath = public_path(
+            'assets/'.$this->nameLower
+        );
+
+        $this->publishes(
+            [
+                $sourcePath => $destinationPath,
+            ],
+            [
+                'module-assets',
+                $this->nameLower.'-assets',
+            ],
+        );
     }
 }

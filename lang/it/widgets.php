@@ -22,7 +22,7 @@ return [
         ],
         'label' => 'Widgets',
         'sort' => 1,
-        'icon' => 'heroicon-o-collection',
+       'icon' => 'heroicon-o-rectangle-stack',
     ],
     'fields' => [
         'id' => [
@@ -42,6 +42,11 @@ return [
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
+        ],
+    ],
+   'infolist' => [
+        'record_not_available' => [
+            'label' => 'Contenuto non disponibile o non visibile.',
         ],
     ],
     'actions' => [

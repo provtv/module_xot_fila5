@@ -88,5 +88,5 @@ Dopo la modifica, verifica con:
 
 ---
 
-*Risolto: [DATE]*
+*Risolto: 2025-01-10*
 *Architecture Version: XotBase 2.1*

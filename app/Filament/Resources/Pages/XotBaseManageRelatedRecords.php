@@ -6,59 +6,38 @@ namespace Modules\Xot\Filament\Resources\Pages;
 
 use Filament\Actions\Action;
 use Filament\Actions\CreateAction;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
+use Filament\Actions\DeleteAction;
+use Filament\Actions\EditAction;
+use Filament\Actions\ViewAction;
 use Filament\Resources\Pages\ManageRelatedRecords as FilamentManageRelatedRecords;
 use Filament\Schemas\Components\Component;
 use Filament\Schemas\Schema;
 use Filament\Tables\Columns\TextColumn;
-use Illuminate\Contracts\Support\Htmlable;
+use Modules\Xot\Actions\Cast\SafeStringCastAction;
+use Modules\Xot\Filament\Traits\HasRelationshipModelClass;
 use Modules\Xot\Filament\Traits\HasXotForm;
 use Modules\Xot\Filament\Traits\HasXotTable;
-=======
-<<<<<<< HEAD
-use Filament\Forms\Concerns\InteractsWithForms;
-=======
->>>>>>> 9506daa5 (.)
-use Filament\Resources\Pages\ManageRelatedRecords as FilamentManageRelatedRecords;
-use Filament\Schemas\Components\Component;
-use Filament\Schemas\Schema;
-use Filament\Tables\Columns\TextColumn;
-use Illuminate\Contracts\Support\Htmlable;
-use Modules\Xot\Filament\Traits\HasXotForm;
-use Modules\Xot\Filament\Traits\HasXotTable;
-<<<<<<< HEAD
-=======
->>>>>>> 2253954 (.)
->>>>>>> 4ffe7f41e (.)
->>>>>>> 9506daa5 (.)
 use Modules\Xot\Filament\Traits\NavigationLabelTrait;
-use Override;
 
 /**
- * ---.
+ * Base page for Filament related-record managers.
  */
 abstract class XotBaseManageRelatedRecords extends FilamentManageRelatedRecords
 {
+   use HasRelationshipModelClass;
     use HasXotForm;
-    use HasXotTable;
+    use HasXotTable {
+        HasRelationshipModelClass::getModelClass insteadof HasXotTable;
+    }
     use NavigationLabelTrait;
 
-    // protected static string $resource;
     protected static string $recordTitleAttribute = 'name';
 
-    /**
-     * Restituisce il gruppo di navigazione (override opzionale).
-     */
     public static function getNavigationGroup(): string
     {
         return '';
     }
 
-    /**
-     * Restituisce il titolo della pagina.
-     */
     public function getTitle(): string
     {
         return static::transFunc(__FUNCTION__).' - '.$this->getRecordTitle();
@@ -68,23 +47,15 @@ abstract class XotBaseManageRelatedRecords extends FilamentManageRelatedRecords
     {
         $value = $this->record->{static::$recordTitleAttribute};
 
-        return (string) $value;
+       return SafeStringCastAction::cast($value);
     }
 
-    /**
-     * Configura lo schema per i record correlati.
-     */
     public function schema(Schema $schema): Schema
     {
-        // getFormSchema() sempre ritorna array per definizione
-        $formSchema = $this->getFormSchema();
-
-        return $schema->components($formSchema);
+        return $schema->components($this->getFormSchema());
     }
 
     /**
-     * Restituisce lo schema del form per i record correlati.
-     *
      * @return array<Component>
      */
     public function getFormSchema(): array
@@ -93,48 +64,9 @@ abstract class XotBaseManageRelatedRecords extends FilamentManageRelatedRecords
     }
 
     /**
-     * Restituisce l'heading della tabella.
-     * Override esplicito per compatibilità con Filament 5.2 (Htmlable|string|null).
-     */
-<<<<<<< HEAD
-    protected function getTableHeading(): Htmlable|string|null
-=======
-<<<<<<< HEAD
-    protected function getTableHeading(): Htmlable|string|null
-=======
-    protected function getTableHeading(): \Illuminate\Contracts\Support\Htmlable|string|null
->>>>>>> 4ffe7f41e (.)
->>>>>>> 9506daa5 (.)
-    {
-        return $this->getTableHeadingFromTrait();
-    }
-
-    /**
-     * Chiamata interna per getTableHeading (evita ricorsione con HasXotTable).
-     */
-    private function getTableHeadingFromTrait(): ?string
-    {
-        $key = static::getKeyTrans('table.heading');
-        $trans = trans($key);
-
-        return is_string($trans) && $trans !== $key ? $trans : null;
-    }
-
-    /**
-     * Definisce le colonne della tabella per la visualizzazione dei record correlati.
-     * Questo metodo può essere sovrascritto nelle classi figlie.
-     *
      * @return array<string, TextColumn>
      */
-<<<<<<< HEAD
     #[\Override]
-=======
-<<<<<<< HEAD
-    #[\Override]
-=======
-    #[Override]
->>>>>>> 4ffe7f41e (.)
->>>>>>> 9506daa5 (.)
     protected function getTableColumns(): array
     {
         return [
@@ -151,9 +83,6 @@ abstract class XotBaseManageRelatedRecords extends FilamentManageRelatedRecords
     }
 
     /**
-     * Definisce le azioni dell'intestazione della tabella.
-     * Questo metodo può essere sovrascritto nelle classi figlie.
-     *
      * @return array<string, Action>
      */
     protected function getTableHeaderActions(): array
@@ -163,35 +92,16 @@ abstract class XotBaseManageRelatedRecords extends FilamentManageRelatedRecords
         ];
     }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     /**
-     * Definisce le azioni per ogni riga della tabella.
-     * Questo metodo può essere sovrascritto nelle classi figlie.
-     *
      * @return array<string, Action>
      */
     protected function getTableActions(): array
     {
-        return [];
-    }
-
-=======
-<<<<<<< HEAD
->>>>>>> 4ffe7f41e (.)
-    public static function getNavigationLabel(): string
-=======
->>>>>>> 9506daa5 (.)
-    /**
-     * Definisce le azioni per ogni riga della tabella.
-     * Questo metodo può essere sovrascritto nelle classi figlie.
-     *
-     * @return array<string, Action>
-     */
-    protected function getTableActions(): array
-    {
-        return [];
+       return [
+            'view' => ViewAction::make(),
+            'edit' => EditAction::make(),
+            'delete' => DeleteAction::make(),
+        ];
     }
 
     public static function getNavigationLabel(): string

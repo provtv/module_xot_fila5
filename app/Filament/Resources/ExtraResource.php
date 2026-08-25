@@ -6,7 +6,6 @@ namespace Modules\Xot\Filament\Resources;
 
 use Filament\Forms\Components\KeyValue;
 use Filament\Forms\Components\TextInput;
-use Filament\Schemas\Components\Component;
 use Modules\Xot\Filament\Resources\ExtraResource\Pages\CreateExtra;
 use Modules\Xot\Filament\Resources\ExtraResource\Pages\EditExtra;
 use Modules\Xot\Filament\Resources\ExtraResource\Pages\ListExtras;
@@ -19,10 +18,10 @@ class ExtraResource extends XotBaseResource
     /**
      * Get the form schema for the resource.
      *
-     * @return array<string, Component>
+    * @return array<string, mixed>
      */
-    #[\Override]
-    public static function getFormSchema(): array
+    // #[\Override]
+    public static function getFormSchemaOld(): array
     {
         return [
             'id' => TextInput::make('id')->required()->maxLength(36),

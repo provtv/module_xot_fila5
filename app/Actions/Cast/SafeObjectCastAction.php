@@ -4,6 +4,12 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Actions\Cast;
 
+use Modules\Xot\Actions\Cast\SafeFloatCastAction;
+
+use Modules\Xot\Actions\Cast\SafeIntCastAction;
+
+use Modules\Xot\Actions\Cast\SafeStringCastAction;
+
 use Spatie\QueueableAction\QueueableAction;
 use Webmozart\Assert\Assert;
 
@@ -104,7 +110,7 @@ class SafeObjectCastAction
 
         $value = $object->{$property};
 
-        return (string) $value;
+       return SafeStringCastAction::cast($value);
     }
 
     /**
@@ -176,18 +182,18 @@ class SafeObjectCastAction
     /**
      * Ottiene una proprietà con cast sicuro a array.
      *
-     * @param object     $object   L'oggetto da cui ottenere la proprietà
-     * @param string     $property Il nome della proprietà
-     * @param array|null $default  Valore di default se la proprietà non esiste o è null
+    * @param object                        $object   L'oggetto da cui ottenere la proprietà
+     * @param string                        $property Il nome della proprietà
+     * @param array<int|string, mixed>|null $default  Valore di default se la proprietà non esiste o è null
      *
-     * @return array Il valore della proprietà convertito in array
+     * @return array<int|string, mixed> Il valore della proprietà convertito in array
      */
     public function getArrayProperty(object $object, string $property, ?array $default = []): array
     {
         Assert::stringNotEmpty($property);
 
         if (! isset($object->{$property})) {
-            return $default ?? [];
+           return app(SafeArrayCastAction::class)->execute([], $default);
         }
 
         $value = $object->{$property};
@@ -215,7 +221,11 @@ class SafeObjectCastAction
             'int' => $this->getIntProperty($object, $property, is_int($default) ? $default : null),
             'float' => $this->getFloatProperty($object, $property, is_float($default) ? $default : null),
             'bool' => $this->getBooleanProperty($object, $property, is_bool($default) ? $default : null),
-            'array' => $this->getArrayProperty($object, $property, is_array($default) ? $default : null),
+           'array' => $this->getArrayProperty(
+                $object,
+                $property,
+                is_array($default) ? app(SafeArrayCastAction::class)->execute($default) : null,
+            ),
             default => throw new \InvalidArgumentException("Tipo non supportato: {$type}"),
         };
     }
@@ -290,10 +300,10 @@ class SafeObjectCastAction
     /**
      * Esegue un metodo su un oggetto in modo sicuro.
      *
-     * @param object $object     L'oggetto su cui eseguire il metodo
-     * @param string $method     Il nome del metodo
-     * @param array  $parameters I parametri del metodo
-     * @param mixed  $default    Valore di default se il metodo non esiste o fallisce
+    * @param object       $object     L'oggetto su cui eseguire il metodo
+     * @param string       $method     Il nome del metodo
+     * @param array<mixed> $parameters I parametri del metodo
+     * @param mixed        $default    Valore di default se il metodo non esiste o fallisce
      *
      * @return mixed Il risultato del metodo o il valore di default
      */

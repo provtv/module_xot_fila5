@@ -5,18 +5,49 @@ declare(strict_types=1);
 namespace Modules\Xot\Filament\Resources\Pages;
 
 use Filament\Actions\Action;
-use Filament\Actions\ActionGroup; // Added missing use statement
+use Filament\Actions\ActionGroup;
 use Filament\Actions\DeleteAction;
-use Filament\Forms\Form; // Keep if still used elsewhere
 use Filament\Resources\Pages\EditRecord as FilamentEditRecord;
-use Filament\Schemas\Schema;
 use Filament\Support\Components\Component;
 use Illuminate\Database\Eloquent\Model;
+use Modules\Xot\Filament\Support\RecordAnchor;
 use Modules\Xot\Filament\Traits\TransTrait;
 
 abstract class XotBaseEditRecord extends FilamentEditRecord
 {
     use TransTrait;
+
+   /**
+     * Il breadcrumb verso l'elenco punta alla riga del record aperto.
+     *
+     * Senza frammento si torna in cima alla lista e la riga appena modificata va
+     * ricercata a mano. La pagina di elenco ricorda gia' filtri, ordinamento e numero
+     * di pagina, quindi qui basta l'ancora: la riga e' gia' nella pagina servita.
+     *
+     * @return array<string>
+     */
+    #[\Override]
+    public function getResourceBreadcrumbs(): array
+    {
+        $breadcrumbs = parent::getResourceBreadcrumbs();
+
+        $indexUrl = $this->getResourceUrl();
+        if (! array_key_exists($indexUrl, $breadcrumbs)) {
+            return $breadcrumbs;
+        }
+
+        $key = $this->getRecord()->getKey();
+        if (! is_int($key) && ! is_string($key)) {
+            return $breadcrumbs;
+        }
+
+        $anchored = [];
+        foreach ($breadcrumbs as $url => $label) {
+            $anchored[$url === $indexUrl ? RecordAnchor::appendTo($url, $key) : $url] = $label;
+        }
+
+        return $anchored;
+    }
 
     public static function getNavigationLabel(): string
     {
@@ -60,7 +91,7 @@ abstract class XotBaseEditRecord extends FilamentEditRecord
      *
      * @return array<int, Component>
      */
-    protected function getFormSchema(): array
+   protected function getFormSchemaOld(): array
     {
         return [];
     }

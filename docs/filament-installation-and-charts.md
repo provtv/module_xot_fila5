@@ -323,15 +323,7 @@ public function panel(Panel $panel): Panel
 
 ```php
 // ❌ ERRATO - NON registrare asset chart in altri moduli
-<<<<<<< .merge_file_yUmV6v
-// Modules/healthcare_app/app/Providers/Filament/AdminPanelProvider.php
-=======
-<<<<<<< HEAD
-// Modules/ModuloEsempio/app/Providers/Filament/AdminPanelProvider.php
-=======
-// Modules/ExternalProject/app/Providers/Filament/AdminPanelProvider.php
->>>>>>> 8116fe6a (docs: replace project-specific references with generic placeholders across documentation)
->>>>>>> .merge_file_ZGnA1X
+// Modules/Quaeris/app/Providers/Filament/AdminPanelProvider.php
 // Modules/UI/app/Providers/Filament/AdminPanelProvider.php
 // Themes/Zero/app/Providers/Filament/AdminPanelProvider.php
 
@@ -341,11 +333,7 @@ public function panel(Panel $panel): Panel
     
     // ❌ NON fare questo - causa duplicazioni e conflitti
     // FilamentAsset::register([
-<<<<<<< .merge_file_yUmV6v
-    //     Js::make('chart-js-plugins', Vite::asset('resources/js/filament-chart-js-plugins.js', 'assets/healthcare_app'))->module(),
-=======
-    //     Js::make('chart-js-plugins', Vite::asset('resources/js/filament-chart-js-plugins.js', 'assets/modulo'))->module(),
->>>>>>> .merge_file_ZGnA1X
+    //     Js::make('chart-js-plugins', Vite::asset('resources/js/filament-chart-js-plugins.js', 'assets/quaeris'))->module(),
     // ]);
     
     return $panel;
@@ -357,7 +345,7 @@ public function panel(Panel $panel): Panel
 - **KISS**: Configurazione semplice e centralizzata
 - **Coerenza**: Tutti i moduli ereditano automaticamente gli asset chart
 
-Per dettagli completi, vedere [chart-assets-centralization-rule.md](../../chart/docs/chart-assets-centralization-rule.md).
+Per dettagli completi, vedere [chart-assets-centralization-rule.md](../../Chart/docs/chart-assets-centralization-rule.md).
 
 ## Configuration Files
 
@@ -456,6 +444,6 @@ The project uses a modular architecture where:
 ## Documentazione Completa
 
 Per guide dettagliate, consultare:
-- [Chart Module Installation Guide](../../chart/docs/filament-5-installation-guide.md)
+- [Chart Module Installation Guide](../../Chart/docs/filament-5-installation-guide.md)
 - [Filament 5.x Requirements](./filament-5-requirements.md)
 - [Filament 5.x Official Docs](https://filamentphp.com/docs/5.x/introduction/installation)

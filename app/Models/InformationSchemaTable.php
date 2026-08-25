@@ -39,7 +39,7 @@ use Modules\Xot\Database\Factories\InformationSchemaTableFactory;
  * @method static Builder<static>|InformationSchemaTable whereUpdatedAt($value)
  * @method static Builder<static>|InformationSchemaTable whereUpdatedBy($value)
  *
- * @mixin \Eloquent
+ * @mixin \Illuminate\Database\Eloquent\Model
  */
 class InformationSchemaTable extends BaseModel
 {
@@ -93,7 +93,10 @@ class InformationSchemaTable extends BaseModel
      */
     public function getRows(): array
     {
-        return $this->getSushiRows();
+       /** @var array<int, array<string, mixed>> $rows */
+        $rows = $this->getSushiRows();
+
+        return $rows;
     }
 
     /**

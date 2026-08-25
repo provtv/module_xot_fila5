@@ -1,3 +1,21 @@
+---
+title: "Da Nested Set ad Adjacency List"
+type: architecture
+tags: [xot, adjacency-list, nestedset, recursive-relationships, architecture]
+module: Xot
+created: 2026-03-01
+updated: 2026-06-11
+qmd: "Xot adjacency list migration recursive relationships vendor trait direct typed wrapper removed"
+story: STORY-346
+issues:
+  - "https://github.com/laraxot/module_xot_fila5/issues/39"
+discussions:
+  - "https://github.com/laraxot/module_xot_fila5/discussions/40"
+related:
+  - recursive-relationships-vendor-direct.md
+  - recursive-relationships-contract.md
+---
+
 # Da Nested Set ad Adjacency List: Filosofia, Logica, Politica, Religione e Zen
 
 > **Data migrazione**: 2025 → completata marzo 2026
@@ -46,7 +64,7 @@ Adjacency:   id | parent_id               ← 2 colonne, integrità nativa FK
 | **Concorrenza** | Scarsa (lock tabella) | Eccellente (lock riga) |
 | **Migrazioni** | Complesse (`NestedSet::columns()`) | Semplici (`$table->parent_id`) |
 | **Debugging** | Opaco (numeri senza senso) | Trasparente (parent_id leggibile) |
-| **Type safety** | Limitata | PHPStan Level 10 con trait tipizzato |
+| **Type safety** | Limitata | PHPStan Level 10 con contratto PHPDoc |
 | **Laravel moderno** | Trait monolitico | Relazioni Eloquent native |
 
 ### Performance reali
@@ -71,7 +89,7 @@ Per alberi fino a ~10.000 nodi (il caso d'uso del 99% delle applicazioni web):
 
 - **`laravel/framework: "*"`** in `Modules/Xot/composer.json` garantisce compatibilità forward
 - `BaseTreeModel` e `XotBaseTreeModel` forniscono la base astratta tipizzata
-- `TypedHasRecursiveRelationships` wrappa il vendor con type safety PHPStan Level 10
+- I modelli usano direttamente il trait vendor `HasRecursiveRelationships`; il contratto Xot conserva i tipi in PHPDoc
 - `HasRecursiveRelationshipsContract` definisce il contratto per tutti i moduli
 
 ### Dipendenza critica
@@ -103,8 +121,8 @@ La dipendenza `"laravel/framework": "*"` è **essenziale** perché:
 > Non si torna indietro a nested set. La migrazione è irreversibile per design.
 
 ### Comandamento 3: Type Safety Assoluta
-> Ogni relazione ricorsiva passa per `TypedHasRecursiveRelationships` o
-> `HasRecursiveRelationships` — mai implementazioni custom sparse.
+> Ogni relazione ricorsiva passa per il trait vendor
+> `HasRecursiveRelationships` — mai wrapper locali o implementazioni custom sparse.
 
 ### Comandamento 4: Estendi BaseTreeModel
 > Per nuovi modelli ad albero: `extends BaseTreeModel` (o `XotBaseTreeModel`).
@@ -151,7 +169,7 @@ Modules/Xot/app/
 │   ├── BaseTreeModel.php                        ← extends BaseModel + HasRecursiveRelationships
 │   ├── XotBaseTreeModel.php                     ← extends XotBaseModel + HasRecursiveRelationships
 │   └── Traits/
-│       └── TypedHasRecursiveRelationships.php   ← Wrapper PHPStan Level 10
+│       └── (nessun wrapper ricorsivo locale; usare il trait vendor)
 ```
 
 ### Come Usare nei Moduli
@@ -207,7 +225,8 @@ return new class extends XotBaseMigration
 | Data | Azione |
 |------|--------|
 | Pre-2025 | Progetto usa `kalnoy/nestedset` con `NodeTrait` |
-| 2025 | Creazione `BaseTreeModel`, `XotBaseTreeModel`, `TypedHasRecursiveRelationships` |
+| 2025 | Creazione `BaseTreeModel`, `XotBaseTreeModel` e prima soluzione wrapper |
+| 2026-06 | STORY-346: rimosso `TypedHasRecursiveRelationships`, trait vendor diretto + PHPDoc nel contratto |
 | 2025 | Aggiunta `staudenmeir/laravel-adjacency-list` a `Xot/composer.json` |
 | 2025 | Migrazione progressiva dei modelli da `NodeTrait` a `BaseTreeModel` |
 | 2026-03 | Rimozione `kalnoy/nestedset` da `Blog/composer.json` (ultimo riferimento) |
@@ -222,10 +241,10 @@ return new class extends XotBaseMigration
 - [staudenmeir/laravel-adjacency-list](https://github.com/staudenmeir/laravel-adjacency-list)
 - [BaseTreeModel](../app/Models/BaseTreeModel.php)
 - [XotBaseTreeModel](../app/Models/XotBaseTreeModel.php)
-- [TypedHasRecursiveRelationships](../app/Models/Traits/TypedHasRecursiveRelationships.php)
+- [Recursive relationships vendor direct](recursive-relationships-vendor-direct.md)
 - [HasRecursiveRelationshipsContract](../app/Contracts/HasRecursiveRelationshipsContract.php)
 - [base-tree-model.md](models/base-tree-model.md)
 
 ---
 
-*Ultimo aggiornamento: marzo 2026*
+*Ultimo aggiornamento: 2026-06-11*

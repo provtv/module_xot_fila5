@@ -17,7 +17,7 @@ return [
         ],
         'label' => 'Array Service',
         'sort' => 1,
-        'icon' => 'heroicon-o-collection',
+       'icon' => 'heroicon-o-rectangle-stack',
     ],
     'fields' => [
         'id' => [

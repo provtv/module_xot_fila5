@@ -98,11 +98,13 @@ class XotComposer
         $metatag = MetatagData::make();
         $fun = 'get'.Str::studly($str);
         if (method_exists($metatag, $fun)) {
-            // @phpstan-ignore return.type
-            return $metatag->{$fun}();
+           $value = $metatag->{$fun}();
+
+            return is_string($value) || is_bool($value) ? $value : null;
         }
 
-        // @phpstan-ignore return.type
-        return $metatag->{$str};
+        $value = $metatag->{$str} ?? null;
+
+        return is_string($value) || is_bool($value) ? $value : null;
     }
 }

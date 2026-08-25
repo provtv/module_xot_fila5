@@ -19,6 +19,9 @@ class GetProductsArrayDummyAction
      *
      * @throws \Exception Generating Factory [factory_class] press [F5] to refresh page [__LINE__][__FILE__]
      */
+   /**
+     * @return array<int, array<string, mixed>>
+     */
     public function execute(): array
     {
         // API
@@ -29,7 +32,8 @@ class GetProductsArrayDummyAction
         Assert::isArray($products['products']);
 
         // filtering some attributes
-        return Arr::map($products['products'], function ($item) {
+       /** @var array<int, array<string, mixed>> $mapped */
+        $mapped = array_values(Arr::map($products['products'], function ($item) {
             // Verifichiamo che $item sia un array prima di usare Arr::only
             if (! is_array($item)) {
                 return []; // Restituiamo un array vuoto se $item non è un array
@@ -45,6 +49,8 @@ class GetProductsArrayDummyAction
                 'category',
                 'thumbnail',
             ]);
-        });
+       }));
+
+        return $mapped;
     }
 }

@@ -16,7 +16,7 @@ use Spatie\Permission\Exceptions\PermissionDoesNotExist;
  *
  * @phpstan-require-extends Model
  *
- * @mixin \Eloquent
+ * @mixin \Illuminate\Database\Eloquent\Model
  */
 interface ModelProfileContract extends ModelContract
 {
@@ -69,7 +69,9 @@ interface ModelProfileContract extends ModelContract
     /**
      * Create a new Eloquent query builder for the model.
      *
-     * @return Builder|static
+    * @param Builder<Model> $query
+     *
+     * @return Builder<Model>
      */
-    public function newEloquentBuilder(Builder $query);
+    public function newEloquentBuilder(Builder $query): Builder;
 }

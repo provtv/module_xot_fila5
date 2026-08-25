@@ -15,8 +15,11 @@ class CacheResource extends XotBaseResource
 {
     protected static ?string $model = Cache::class;
 
-    #[\Override]
-    public static function getFormSchema(): array
+   // #[\Override]
+    /**
+     * @return array<string, mixed>
+     */
+    public static function getFormSchemaOld(): array
     {
         return [
             'key' => TextInput::make('key')->required()->maxLength(255),

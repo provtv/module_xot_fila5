@@ -4,17 +4,17 @@
 
 ### File Eliminati (Duplicati con Date)
 
-1. ✅ **`Modules/UI/docs/bugfix-icons-missing-2025-01-27.md`**
+1. ✅ **`Modules/UI/docs/bugfix-icons-missing.md`**
    - **Motivo**: Duplicato identico di `bugfix-icons-missing.md`
    - **Stato**: Eliminato con successo
 
-2. ✅ **`Modules/UI/docs/bugfix-table-layout-action-2025-01-27.md`**
+2. ✅ **`Modules/UI/docs/bugfix-table-layout-action.md`**
    - **Motivo**: Duplicato identico di `bugfix-table-layout-action.md`
    - **Stato**: Eliminato con successo
 
 ### File Rinominati (Rimozione Date)
 
-1. ✅ **`translation-refactor-complete-summary-2025-08-08.md` → `translation-refactor-complete-summary.md`**
+1. ✅ **`translation-refactor-complete-summary.md` → `translation-refactor-complete-summary.md`**
    - **Modulo**: Lang
    - **Motivo**: File attivo con data nel nome
    - **Stato**: Rinominato con successo
@@ -54,7 +54,7 @@
 3. Aggiornare tutti i collegamenti dopo rinomina
 
 ### Fase Documentazione
-1. Aggiornare CHANGELOG.md con modifiche eseguite
+1. Aggiornare changelog.md con modifiche eseguite
 2. Verificare README.md di ogni modulo per collegamenti
 3. Creare indice documentazione consolidata
 
@@ -65,8 +65,8 @@
 - Altri file con pattern `bugfix-*-2025-*.md`
 
 ### Modulo Lang
-- `riepilogo-correzioni-traduzioni-2025.md` (verificare se esiste `riepilogo-correzioni-traduzioni.md`)
-- `translation-errors-correction-2025.md` (verificare duplicati)
+- `riepilogo-correzioni-traduzioni.md` (verificare se esiste `riepilogo-correzioni-traduzioni.md`)
+- `translation-errors-correction.md` (verificare duplicati)
 
 ### Modulo Xot
 - File in cartella `archive/` (valutare se mantenere date per storico)
