@@ -4,7 +4,7 @@
 
 set -e
 
-MODULES_DIR=". progetto>_fila5_mono/laravel/Modules"
+MODULES_DIR="/var/www/_bases/base_<nome progetto>_fila5_mono/laravel/Modules"
 
 echo "🔍 Correzione Naming Conventions - Tutti i Moduli"
 echo "================================================"
@@ -86,4 +86,3 @@ for module in */docs; do
 done
 echo ""
 echo "🎯 Next: Verificare manualmente alcuni file e testare link"
-

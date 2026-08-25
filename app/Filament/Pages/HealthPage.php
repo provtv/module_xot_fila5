@@ -77,14 +77,17 @@ class HealthPage extends XotBasePage
             $checks[] = SmtpCheck::new();
         }
 
-        /*
-         * PHPStan Level 10: CpuLoadCheck, SecurityAdvisoriesCheck, and SmtpCheck
-         * all extend Check, but their types are not recognized due to dynamic loading.
-         * We suppress this specific error as the runtime type is guaranteed to be correct.
-         *
-         * @phpstan-ignore-next-line argument.type
-         */
-        Health::checks($checks);
+       // CpuLoadCheck, SecurityAdvisoriesCheck, and SmtpCheck are optional packages;
+        // filter to only actual Check instances so the array type is guaranteed.
+        /** @var array<int, Check> $filteredChecks */
+        $filteredChecks = [];
+        foreach ($checks as $check) {
+            if ($check instanceof Check) {
+                $filteredChecks[] = $check;
+            }
+        }
+
+        Health::checks($filteredChecks);
         Artisan::call(RunHealthChecksCommand::class);
         $this->dispatch('refresh-component');
         Notification::make()

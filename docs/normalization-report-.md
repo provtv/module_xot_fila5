@@ -54,7 +54,7 @@
 3. Aggiornare tutti i collegamenti dopo rinomina
 
 ### Fase Documentazione
-1. Aggiornare CHANGELOG.md con modifiche eseguite
+1. Aggiornare changelog.md con modifiche eseguite
 2. Verificare README.md di ogni modulo per collegamenti
 3. Creare indice documentazione consolidata
 
@@ -102,6 +102,9 @@
 
 ## Riferimenti
 
+- [Processo Normalizzazione](../Xot/docs/docs-normalization-process.md)
+- [Regole Naming File](../Xot/docs/file-naming-rules.md)
+- [Filosofia DRY + KISS](../../docs/philosophy-guide.md)
 - [Processo Normalizzazione](../xot/docs/docs-normalization-process.md)
 - [Regole Naming File](../xot/docs/file-naming-rules.md)
 - [Filosofia DRY + KISS](../../../docs/philosophy-guide.md)

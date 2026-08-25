@@ -12,10 +12,9 @@ use Filament\Forms\Components\TextInput;
 use Filament\Notifications\Notification;
 use Filament\Schemas\Schema;
 use Filament\Support\Colors\Color;
-use Modules\Tenant\Services\TenantService;
+use Modules\Tenant\Actions\Config\SaveTenantConfigAction;
 use Modules\Xot\Datas\MetatagData;
 use Modules\Xot\Filament\Traits\NavigationLabelTrait;
-use Webmozart\Assert\Assert;
 
 /**
  * @property Schema $form
@@ -32,10 +31,20 @@ class MetatagPage extends XotBasePage
 
     public function mount(): void
     {
-        Assert::isArray($data = config('metatag'));
+       $config = config('metatag');
+        if (! is_array($config)) {
+            $config = [];
+        }
 
-        // @phpstan-ignore argument.type
-        $this->form->fill($data);
+        $state = [];
+        foreach ($config as $key => $value) {
+            if (! is_string($key)) {
+                continue;
+            }
+            $state[$key] = $value;
+        }
+
+        $this->form->fill($state);
     }
 
     public function schema(Schema $schema): Schema
@@ -74,8 +83,9 @@ class MetatagPage extends XotBasePage
 
     public function save(): void
     {
+       /** @var array<string, mixed> $data */
         $data = $this->form->getState();
-        TenantService::saveConfig('metatag', $data);
+        app(SaveTenantConfigAction::class)->execute('metatag', $data);
 
         Notification::make()
             ->success()
@@ -83,6 +93,7 @@ class MetatagPage extends XotBasePage
             ->send();
     }
 
+   /** @return list<Action> */
     protected function getFormActions(): array
     {
         return [

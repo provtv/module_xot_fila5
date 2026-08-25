@@ -3,6 +3,20 @@
 declare(strict_types=1);
 
 return [
+   'values' => [
+        'spipu' => [
+            'label' => 'Spipu',
+            'icon' => 'heroicon-o-table-cells',
+            'color' => 'info',
+            'description' => 'Motore PDF basato su TCPDF/mPDF per report tabellari',
+        ],
+        'spatie' => [
+            'label' => 'Spatie',
+            'icon' => 'heroicon-o-document-text',
+            'color' => 'primary',
+            'description' => 'Motore PDF basato su DomPDF per documenti HTML/CSS',
+        ],
+    ],
     'label' => 'Motore PDF',
     'options' => [
         'spipu' => 'Spipu',
@@ -18,7 +32,7 @@ return [
         ],
         'label' => 'Pdf Engine Enum',
         'sort' => 1,
-        'icon' => 'heroicon-o-collection',
+       'icon' => 'heroicon-o-rectangle-stack',
     ],
     'fields' => [
         'id' => [

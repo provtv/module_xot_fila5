@@ -16,7 +16,7 @@ return [
         ],
         'label' => 'Try Array To Xls Action',
         'sort' => 1,
-        'icon' => 'heroicon-o-collection',
+       'icon' => 'heroicon-o-rectangle-stack',
     ],
     'fields' => [
         'id' => [

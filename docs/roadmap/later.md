@@ -1,3 +1,7 @@
-# Later (Module Xot)
+---
+module: theme
+topic: later
+canonical: ../../../../Themes/docs/shared-components/03-later-Modules.md
+---
 
-## Longer-term ideas
+See canonical documentation: ../../../../Themes/docs/shared-components/03-later-Modules.md

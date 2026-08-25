@@ -4,13 +4,14 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Providers;
 
+use Composer\Autoload\ClassLoader;
 use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\DateTimePicker;
 use Filament\Forms\Components\Field;
-use Filament\Forms\Components\Placeholder;
 use Filament\Forms\Components\TimePicker;
 use Filament\Infolists\Components\Entry;
 use Filament\Support\Components\Component;
+use Filament\Support\Facades\FilamentColor;
 use Filament\Tables\Columns\Column;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Filters\BaseFilter;
@@ -20,9 +21,14 @@ use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\URL;
 use Illuminate\Support\Facades\View;
+use Modules\Xot\Actions\Composer\RegisterRuntimePsr4NamespacesAction;
+use Modules\Xot\Actions\PaDesignColorsAction;
 use Modules\Xot\Console\Commands\GenerateFilamentResources;
 use Modules\Xot\Datas\XotData;
 use Modules\Xot\View\Composers\XotComposer;
+
+use function Safe\realpath;
+
 use Webmozart\Assert\Assert;
 
 /**
@@ -46,6 +52,7 @@ class XotServiceProvider extends XotBaseServiceProvider
         // $this->registerExceptionHandler(); // guardare come fa sentry
         $this->registerTimezone();
         $this->registerFilamentMacros();
+       $this->registerPaFilamentColors();
         $this->registerXotLivewireComponents();
         $this->registerProviders();
     }
@@ -53,6 +60,7 @@ class XotServiceProvider extends XotBaseServiceProvider
     #[\Override]
     public function register(): void
     {
+       $this->registerRuntimePsr4Autoload();
         parent::register();
         $this->registerConfig();
 
@@ -64,6 +72,23 @@ class XotServiceProvider extends XotBaseServiceProvider
     public function registerProviders(): void
     {
         // $this->app->register(Filament\ModulesServiceProvider::class);
+    }
+
+   private function registerRuntimePsr4Autoload(): void
+    {
+        $autoloadPath = base_path('vendor/autoload.php');
+
+        if (! is_file($autoloadPath)) {
+            return;
+        }
+
+        $loader = require $autoloadPath;
+
+        if (! $loader instanceof ClassLoader) {
+            return;
+        }
+
+        (new RegisterRuntimePsr4NamespacesAction())->execute($loader);
     }
 
     public function registerTimezone(): void
@@ -88,6 +113,14 @@ class XotServiceProvider extends XotBaseServiceProvider
         );
         TimePicker::configureUsing(fn (TimePicker $component) => $component->timezone($timezone));
         TextColumn::configureUsing(fn (TextColumn $column) => $column->timezone($timezone));
+    }
+
+   /**
+     * Palette PA su widget FO (login, wizard) senza panel attivo — allineata ai panel admin.
+     */
+    public function registerPaFilamentColors(): void
+    {
+        FilamentColor::register(app(PaDesignColorsAction::class)->filamentPalette());
     }
 
     public function registerFilamentMacros(): void
@@ -171,11 +204,14 @@ class XotServiceProvider extends XotBaseServiceProvider
 
     protected function translatableComponents(): void
     {
-        $components = [Field::class, BaseFilter::class, Placeholder::class, Column::class, Entry::class];
+       // `Placeholder` e' deprecata in favore di `TextEntry`, che estende `Entry`:
+        // la voce era anche ridondante, non solo deprecata.
+        $components = [Field::class, BaseFilter::class, Column::class, Entry::class];
         foreach ($components as $component) {
             $component::configureUsing(function (Component $translatable): void {
-                /* @phpstan-ignore method.notFound */
-                $translatable->translateLabel();
+                if (method_exists($translatable, 'translateLabel')) {
+                    $translatable->translateLabel();
+                }
             });
         }
     }

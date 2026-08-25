@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Modules\Xot\Helpers;
 
 use Illuminate\Support\Str;
-
+use Modules\Xot\Actions\Cast\SafeStringCastAction;
 use function Safe\error_log;
 use function Safe\file_get_contents;
 use function Safe\file_put_contents;
@@ -37,8 +37,8 @@ class ResourceFormSchemaGenerator
             // Read the file contents
             $fileContents = file_get_contents($filename);
 
-            // Check if getFormSchema method already exists
-            if (str_contains($fileContents, 'public function getFormSchema')) {
+           // Check if getFormSchemaOld method already exists
+            if (str_contains($fileContents, 'public static function getFormSchemaOld')) {
                 return false;
             }
 
@@ -46,7 +46,7 @@ class ResourceFormSchemaGenerator
             $modelName = str_replace('Resource', '', $reflection->getShortName());
             $modelVariable = Str::camel($modelName);
 
-            $formSchemaMethod = "\n    public function getFormSchema(): array\n    {\n        return [\n";
+           $formSchemaMethod = "\n    public static function getFormSchemaOld(): array\n    {\n        return [\n";
             $formSchemaMethod .= "            Forms\\Components\\TextInput::make('{$modelVariable}_name')\n";
             $formSchemaMethod .= "                ->required(),\n";
             $formSchemaMethod .= "        ];\n    }\n";
@@ -99,7 +99,7 @@ class ResourceFormSchemaGenerator
                     }
                 }
             } catch (\Exception $e) {
-                $results['skipped'][] = is_string($file) ? $file : (((string) $file).': '.$e->getMessage());
+               $results['skipped'][] = is_string($file) ? $file : (SafeStringCastAction::cast($file).': '.$e->getMessage());
             }
         }
 

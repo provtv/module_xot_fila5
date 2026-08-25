@@ -17,6 +17,6 @@ class TestModelHasExtra extends Model
 
     public function getExtraClass(): string
     {
-        return ExtraModelTest::class;
+       return ExtraModelFixture::class;
     }
 }

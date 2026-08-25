@@ -414,7 +414,7 @@ return [
 
 ## 🔗 Collegamenti Correlati
 
-- [Architettura Moduli](./ARCHITECTURE.md)
+- [Architettura Moduli](architecture.md)
 - [Best Practices Laravel 12](./LARAVEL_12_GUIDE.md)
 - [Pattern Filament](./FILAMENT_PATTERNS.md)
 - [Performance Optimization](./PERFORMANCE_GUIDE.md)

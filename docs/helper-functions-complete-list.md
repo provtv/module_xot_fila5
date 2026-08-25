@@ -65,7 +65,7 @@ $json = dddx(['key' => 'value']);
 ```
 
 **Caratteristiche**:
-- Solo sviluppo: non usare in produzione (policy no-log-debug)
+- Logga sempre via `Log::debug()`
 - Usa `Safe\json_encode()` per type safety
 - Ritorna string (non void)
 
@@ -362,7 +362,7 @@ composer dump-autoload
 
 ---
 
-
+**Last Updated**: 2 Dicembre 2025
 **Total Functions**: 10
 **PHPStan Level**: 10 ✅
 **Status**: Production Ready

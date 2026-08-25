@@ -31,7 +31,7 @@ use Modules\Xot\Database\Factories\PulseValueFactory;
  *
  * @property ProfileContract|null $deleter
  *
- * @mixin \Eloquent
+ * @mixin \Illuminate\Database\Eloquent\Model
  */
 class PulseValue extends BaseModel
 {

@@ -12,7 +12,7 @@ use Filament\Panel;
 use Filament\PanelProvider;
 use Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse;
 use Illuminate\Cookie\Middleware\EncryptCookies;
-use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken;
+use Illuminate\Foundation\Http\Middleware\PreventRequestForgery;
 use Illuminate\Routing\Middleware\SubstituteBindings;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\Support\Str;
@@ -62,20 +62,20 @@ abstract class XotBasePanelProvider extends PanelProvider
             ->path($moduleLow.'/admin')
             // Configure Filament discovery for module components (unconditional; dirs are expected to exist)
             ->discoverResources(
-                in: base_path('Modules/'.$this->module.'/app/Filament/Resources'),
-                for: sprintf('%s\\Filament\\Resources', $moduleNamespace),
+               base_path('Modules/'.$this->module.'/app/Filament/Resources'),
+                sprintf('%s\\Filament\\Resources', $moduleNamespace),
             )
             ->discoverPages(
-                in: base_path('Modules/'.$this->module.'/app/Filament/Pages'),
-                for: sprintf('%s\\Filament\\Pages', $moduleNamespace),
+                base_path('Modules/'.$this->module.'/app/Filament/Pages'),
+                sprintf('%s\\Filament\\Pages', $moduleNamespace),
             )
             ->discoverWidgets(
-                in: base_path('Modules/'.$this->module.'/app/Filament/Widgets'),
-                for: sprintf('%s\\Filament\\Widgets', $moduleNamespace),
+                base_path('Modules/'.$this->module.'/app/Filament/Widgets'),
+                sprintf('%s\\Filament\\Widgets', $moduleNamespace),
             )
             ->discoverClusters(
-                in: base_path('Modules/'.$this->module.'/app/Filament/Clusters'),
-                for: sprintf('%s\\Filament\\Clusters', $moduleNamespace),
+                base_path('Modules/'.$this->module.'/app/Filament/Clusters'),
+                sprintf('%s\\Filament\\Clusters', $moduleNamespace),
             )
             ->middleware([
                 EncryptCookies::class,
@@ -83,7 +83,7 @@ abstract class XotBasePanelProvider extends PanelProvider
                 StartSession::class,
                 AuthenticateSession::class,
                 ShareErrorsFromSession::class,
-                VerifyCsrfToken::class,
+               PreventRequestForgery::class,
                 SubstituteBindings::class,
                 DisableBladeIconComponents::class,
                 DispatchServingFilamentEvent::class,

@@ -74,8 +74,8 @@ L'upgrade da Filament 4 a 5 **DEVE** seguire l'ordine seguente (per l'intero pro
 
 1. **Backup del progetto**
    ```bash
-   cp -r . progetto>/laravel \
-         . progetto>_backup_$(date +%Y%m%d)
+   cp -r /var/www/_bases/base_<nome progetto>/laravel \
+         /var/www/_bases/base_<nome progetto>_backup_$(date +%Y%m%d)
    ```
 
 2. **Risolvere conflitti git**
@@ -116,7 +116,7 @@ Vedi dettagli completi in [Guida Completa](filament-5-livewire-4-complete-guide.
    ```
 
 3. **Verifica compatibilità componenti**
-   - Segui la guida ufficiale: <https://livewire.laravel.com/docs/upgrading>
+   - Segui la guida ufficiale: <https://livewire.laravel.com/docs/4.x/upgrading>
    - Verifica che tutti i componenti Livewire custom siano compatibili
 
 ### Fase 4: Upgrade Filament a v5
@@ -279,7 +279,7 @@ La documentazione **DEVE** esplicitare cosa succede all’utente:
 
 - Guida ufficiale upgrade Filament 5: <https://filamentphp.com/docs/5.x/upgrade-guide>
 - Documentazione Filament 5: <https://filamentphp.com/docs/5.x>
-- Livewire 4 upgrade: <https://livewire.laravel.com/docs/upgrading>
+- Livewire 4 upgrade: <https://livewire.laravel.com/docs/4.x/upgrading>
 - Regole esistenti Filament 4 Laraxot (stesso modulo): `filament-4-laraxot-rules.md`
 
 ---

@@ -1,13 +1,14 @@
-# Configurazione MCP per base_ptvx_fila5_mono
+# Configurazione MCP per base_ptvx_fila4_mono
 
-**Data Creazione**: [DATE]  
+**Data Creazione**: 2026-01-12  
+**Ultimo Aggiornamento**: 2026-01-12  
 **Status**: ✅ Configurazione Completa e Ottimizzata
 
 ---
 
 ## 🎯 Scopo del Documento
 
-Questo documento descrive la configurazione MCP ottimizzata per il progetto **base_ptvx_fila5_mono**, risultato di analisi approfondita delle necessità del progetto seguendo la metodologia Super Mucca.
+Questo documento descrive la configurazione MCP ottimizzata per il progetto **base_ptvx_fila4_mono**, risultato di analisi approfondita delle necessità del progetto seguendo la metodologia Super Mucca.
 
 ---
 
@@ -32,9 +33,9 @@ File: `laravel/.mcp.json`
             "args": [
                 "-y",
                 "@modelcontextprotocol/server-filesystem",
-                "./laravel",
-                "./docs",
-                "./bashscripts"
+                "/var/www/_bases/base_ptvx_fila4_mono/laravel",
+                "/var/www/_bases/base_ptvx_fila4_mono/docs",
+                "/var/www/_bases/base_ptvx_fila4_mono/bashscripts"
             ]
         },
         "memory": {
@@ -85,7 +86,7 @@ File: `laravel/.mcp.json`
                 "-y",
                 "@modelcontextprotocol/server-git",
                 "--repository",
-                ".
+                "/var/www/_bases/base_ptvx_fila4_mono"
             ]
         }
     }
@@ -104,9 +105,9 @@ File: `laravel/.mcp.json`
 ### 2. filesystem
 - **Scopo**: Gestione file e directory del progetto
 - **Path configurati**:
-  - `./laravel` - Codice Laravel
-  - `./docs` - Documentazione
-  - `./bashscripts` - Script e tool
+  - `/var/www/_bases/base_ptvx_fila4_mono/laravel` - Codice Laravel
+  - `/var/www/_bases/base_ptvx_fila4_mono/docs` - Documentazione
+  - `/var/www/_bases/base_ptvx_fila4_mono/bashscripts` - Script e tool
 - **Uso**: Fallback quando file sono bloccati o non accessibili con tool standard
 
 ### 3. memory
@@ -132,7 +133,7 @@ File: `laravel/.mcp.json`
 
 ### 8. git
 - **Scopo**: Operazioni Git sul repository
-- **Path**: `.
+- **Path**: `/var/www/_bases/base_ptvx_fila4_mono`
 - **Uso**: Operazioni Git, analisi commit, gestione branch
 
 ---
@@ -146,11 +147,7 @@ Nei prompt è stato integrato il riferimento a MCP per aggirare ostacoli:
 ```
 Se alcuni file risultano bloccati o non accessibili con tool standard:
 - usa filesystem MCP (read/write/edit) come fallback
-<<<<<<< .merge_file_qi4PzU
-- se serve un FS alternativo: usa filesystem-healthcare_app MCP
-=======
-- se serve un FS alternativo: usa filesystem-ptvx MCP
->>>>>>> .merge_file_sfzR7P
+- se serve un FS alternativo: usa filesystem-quaeris MCP
 - per esplorazione rapida: usa code_search / grep_search
 - per analisi e ottimizzazione: usa sequential-thinking MCP
 - per interazione database: usa mysql o postgres MCP

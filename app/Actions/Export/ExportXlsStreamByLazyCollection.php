@@ -23,10 +23,10 @@ class ExportXlsStreamByLazyCollection
     /**
      * Esporta una LazyCollection in un file CSV streamed.
      *
-     * @param LazyCollection     $data     I dati da esportare
-     * @param string             $filename Nome del file CSV
-     * @param string|null        $transKey Chiave di traduzione per le intestazioni
-     * @param array<string>|null $_fields  Campi da includere nell'export (attualmente non utilizzato)
+    * @param LazyCollection<int, mixed> $data     I dati da esportare
+     * @param string                     $filename Nome del file CSV
+     * @param string|null                $transKey Chiave di traduzione per le intestazioni
+     * @param array<string>|null         $_fields  Campi da includere nell'export (attualmente non utilizzato)
      */
     public function execute(
         LazyCollection $data,
@@ -88,8 +88,8 @@ class ExportXlsStreamByLazyCollection
     /**
      * Ottiene le intestazioni per l'export.
      *
-     * @param LazyCollection $data     I dati da cui estrarre le intestazioni
-     * @param string|null    $transKey Chiave di traduzione per le intestazioni
+    * @param LazyCollection<int, mixed> $data     I dati da cui estrarre le intestazioni
+     * @param string|null                $transKey Chiave di traduzione per le intestazioni
      *
      * @return array<string>
      */
@@ -127,15 +127,9 @@ class ExportXlsStreamByLazyCollection
             });
         }
 
-<<<<<<< HEAD
         /** @var array<string> $headers */
         $headers = array_values($headings->map(strval(...))->toArray());
 
-=======
-        $headers = array_values($headings->map(strval(...))->toArray());
-
-        /* @var array<string> $headers */
->>>>>>> 9506daa5 (.)
         return $headers;
     }
 }

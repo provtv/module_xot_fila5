@@ -42,9 +42,9 @@ README.md
 
 **Prima**:
 ```
-phpstan-fixes-[DATE].md
-lessons-learned-[DATE].md
-git-conflicts-resolution-[DATE].md
+phpstan-fixes-2025-01-06.md
+lessons-learned-2025-08-25.md
+git-conflicts-resolution-2025-01-06.md
 ```
 
 **Dopo**:
@@ -107,7 +107,7 @@ docs/
 **Esempi trovati**:
 ```markdown
 [regole php](docs/standards/php-inheritance-rules.md)
-public static string $projectBasePath = '../../../docs/standards/php-inheritance-rules.md)
+public static string $projectBasePath = '../../docs/standards/php-inheritance-rules.md)
 // Path configurabili tramite env, non hardcoded
 ```
 
@@ -150,12 +150,12 @@ docs/
 
 ### Da Modules/Xot/docs/ a root docs/
 ```markdown
-[guida principale](../../../../docs/guide.md)
+[guida principale](../../../docs/guide.md)
 ```
 
 ### Tra moduli (Xot → User)
 ```markdown
-[user docs](../../user/docs/user-guide.md)
+[user docs](../../User/docs/user-guide.md)
 ```
 
 ### All'interno dello stesso modulo

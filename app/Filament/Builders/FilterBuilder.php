@@ -10,6 +10,8 @@ use Filament\Tables\Filters\SelectFilter;
 use Filament\Tables\Filters\TernaryFilter;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Modules\User\Models\User;
 
 use function Safe\strtotime;
@@ -21,15 +23,9 @@ use function Safe\strtotime;
  * across List pages in all modules.
  *
  * Usage:
- * ```php
- * public function getTableFilters(): array
- * {
- *     return [
- *         FilterBuilder::activeToggle(),
- *         FilterBuilder::selectFromModel('category', Category::class),
- *     ];
- * }
- * ```
+*
+ * Use this builder from resource table filter methods to compose common
+ * Filament filters without duplicating filter callbacks.
  */
 class FilterBuilder
 {
@@ -98,45 +94,55 @@ class FilterBuilder
                     ->label('Until'),
             ])
             ->query(function (Builder $query, array $data) use ($column): Builder {
-                return $query
-                    ->when(
-                        $data['from'] ?? null,
-                        fn (Builder $query, mixed $date): Builder => $query->whereDate($column, '>=', is_string($date) ? $date : (string) $date),
-                    )
-                    ->when(
-                        $data['until'] ?? null,
-                        fn (Builder $query, mixed $date): Builder => $query->whereDate($column, '<=', is_string($date) ? $date : (string) $date),
-                    );
+               $from = self::toDateString($data['from'] ?? null);
+                $until = self::toDateString($data['until'] ?? null);
+
+                if (null !== $from) {
+                    $query->whereDate($column, '>=', $from);
+                }
+
+                if (null !== $until) {
+                    $query->whereDate($column, '<=', $until);
+                }
+
+                return $query;
             })
             ->indicateUsing(function (array $data) use ($label): ?string {
-                $from = $data['from'] ?? null;
-                $until = $data['until'] ?? null;
+                $from = self::toDateString($data['from'] ?? null);
+                $until = self::toDateString($data['until'] ?? null);
 
-                if (! $from && ! $until) {
-                    return null;
+                if (null !== $from && null !== $until) {
+                    return $label.': '.date('d/m/Y', strtotime($from)).' - '.date('d/m/Y', strtotime($until));
                 }
 
-                if ($from && $until) {
-                    $fromStr = is_string($from) ? $from : (string) $from;
-                    $untilStr = is_string($until) ? $until : (string) $until;
-
-                    return $label.': '.date('d/m/Y', strtotime($fromStr)).' - '.date('d/m/Y', strtotime($untilStr));
+                if (null !== $from) {
+                    return $label.' from: '.date('d/m/Y', strtotime($from));
                 }
 
-                if ($from) {
-                    $fromStr = is_string($from) ? $from : (string) $from;
-
-                    return $label.' from: '.date('d/m/Y', strtotime($fromStr));
-                }
-
-                if ($until) {
-                    $untilStr = is_string($until) ? $until : (string) $until;
-
-                    return $label.' until: '.date('d/m/Y', strtotime($untilStr));
+                if (null !== $until) {
+                    return $label.' until: '.date('d/m/Y', strtotime($until));
                 }
 
                 return null;
             });
+    }
+
+    /**
+    * Stato di un `DatePicker`: `string` (input utente) o `DateTimeInterface`
+     * (`->default(now())`). Altro non è una data e si scarta, invece di forzarlo
+     * con un cast che darebbe una stringa senza senso o un `Error`.
+     */
+    private static function toDateString(mixed $value): ?string
+    {
+        if (\is_string($value)) {
+            return '' !== $value ? $value : null;
+        }
+
+        if ($value instanceof \DateTimeInterface) {
+            return $value->format('Y-m-d');
+        }
+
+        return null;
     }
 
     /**
@@ -260,11 +266,6 @@ class FilterBuilder
 
     /**
      * Trashed filter (for SoftDeletes).
-     *
-     * Note: This filter assumes the model uses SoftDeletes trait.
-     * PHPStan may not recognize withTrashed/onlyTrashed methods on base Builder.
-     *
-     * @phpstan-ignore-next-line
      */
     public static function trashedFilter(): TernaryFilter
     {
@@ -274,12 +275,38 @@ class FilterBuilder
             ->trueLabel('Only trashed')
             ->falseLabel('Without trashed')
             ->queries(
-                /* @phpstan-ignore-next-line */
-                true: fn (Builder $query) => $query->onlyTrashed(),
-                /* @phpstan-ignore-next-line */
-                false: fn (Builder $query) => $query->withoutTrashed(),
-                /* @phpstan-ignore-next-line */
-                blank: fn (Builder $query) => $query->withTrashed(),
+               true: fn (Builder $query): Builder => self::applyTrashedQuery($query, 'only'),
+                false: fn (Builder $query): Builder => self::applyTrashedQuery($query, 'without'),
+                blank: fn (Builder $query): Builder => self::applyTrashedQuery($query, 'with'),
             );
+    }
+
+    /**
+     * @param Builder<Model> $query
+     */
+    private static function modelUsesSoftDeletes(Builder $query): bool
+    {
+        return in_array(SoftDeletes::class, class_uses_recursive($query->getModel()), true);
+    }
+
+    /**
+     * @param Builder<Model> $query
+     *
+     * @return Builder<Model>
+     */
+    private static function applyTrashedQuery(Builder $query, string $mode): Builder
+    {
+        if (! self::modelUsesSoftDeletes($query)) {
+            return $query;
+        }
+
+        $column = $query->getModel()->qualifyColumn('deleted_at');
+        $query = $query->withoutGlobalScope(SoftDeletingScope::class);
+
+        return match ($mode) {
+            'only' => $query->whereNotNull($column),
+            'without' => $query->whereNull($column),
+            default => $query,
+        };
     }
 }

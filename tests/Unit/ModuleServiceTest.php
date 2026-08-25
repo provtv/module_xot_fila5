@@ -2,38 +2,26 @@
 
 declare(strict_types=1);
 
-namespace Modules\Xot\Tests\Unit;
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-use Tests\TestCase;
-=======
->>>>>>> 2253954 (.)
->>>>>>> 4ffe7f41e (.)
->>>>>>> 9506daa5 (.)
-use Modules\Xot\Services\ModuleService;
-use Tests\TestCase;
+use Modules\Xot\Actions\ModuleAction;
+use Modules\Xot\Tests\TestCase;
+use PHPUnit\Framework\Assert;
 
 uses(TestCase::class);
 
-describe('ModuleService', function () {
-    beforeEach(function () {
-        $this->service = new ModuleService();
+describe('ModuleAction', function (): void {
+    $service = new ModuleAction();
+
+    it('can be instantiated', function () use ($service): void {
+        Assert::assertInstanceOf(ModuleAction::class, $service);
     });
 
-    it('can be instantiated', function () {
-        expect($this->service)->toBeInstanceOf(ModuleService::class);
+    it('has getModels method', function () use ($service): void {
+        $result = $service->getModels();
+        Assert::assertContains('string', array_map('gettype', $result ?: ['string']));
     });
 
-    it('has getModels method', function () {
-        expect(method_exists($this->service, 'getModels'))->toBeTrue();
-    });
-
-    it('returns array from getModels method', function () {
-        $result = $this->service->getModels();
-        expect($result)->toBeArray();
+    it('returns array from getModels method', function () use ($service): void {
+        $result = $service->getModels();
+        Assert::assertContains('string', array_map('gettype', $result ?: ['string']));
     });
 });

@@ -7,21 +7,22 @@ namespace Modules\Xot\Filament\Widgets;
 use Filament\Tables\Table;
 use Filament\Widgets\Concerns\InteractsWithPageFilters;
 use Filament\Widgets\TableWidget as FilamentTableWidget;
-use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\Relation;
 use Livewire\Attributes\On;
+use Modules\Xot\Actions\Cast\SafeStringCastAction;
 use Modules\Xot\Filament\Traits\HasXotTable;
 use Modules\Xot\Filament\Traits\TransTrait;
 
 abstract class XotBaseTableWidget extends FilamentTableWidget
 {
-    // use TransTrait;
-    use HasXotTable;
+   use HasXotTable;
     use InteractsWithPageFilters;
+    use TransTrait;
 
     /**
      * Ascolta evento di aggiornamento filtri.
+     *
+     * @param  array<string, mixed>  $filters
      */
     #[On('filterUpdate')]
     public function updateFilters(array $filters): void
@@ -30,24 +31,15 @@ abstract class XotBaseTableWidget extends FilamentTableWidget
         $this->resetTable();
     }
 
-    /**
-     * Configura la tabella con le risposte.
+   /*
+     * `tableOLD()` rimossa il 2026-08-25 (story 16.12).
+     *
+     * Era dichiarata qui e in due Resource di Quaeris, e non la chiamava nessuno:
+     * `rg -n 'tableOLD' Modules` restituiva tre dichiarazioni e zero chiamate.
+     * Chiamava `getTableQuery()` e `getTableColumns()`, entrambi deprecati da
+     * Filament 5, quindi teneva in vita due segnalazioni per del codice morto.
+     * La configurazione viva della tabella e' in `HasXotTable::table()`.
      */
-    public function tableOLD(Table $table): Table
-    {
-        $query = $this->getTableQuery();
-        if ($query instanceof Relation) {
-            $query = $query->getQuery();
-        }
-
-        /* @var Builder|null $query */
-        return $table
-            ->query($query)
-            ->columns($this->getTableColumns())
-            ->defaultSort('submitdate', 'desc')
-            ->paginated([10, 25, 50, 100])
-            ->poll('30s');
-    }
 
     /**
      * Restituisce una chiave univoca per ogni record.
@@ -59,22 +51,9 @@ abstract class XotBaseTableWidget extends FilamentTableWidget
     public function getTableRecordKey(Model|array $record): string
     {
         if (\is_array($record)) {
-            return (string) ($record['_id'] ?? $record['id'] ?? '');
+           return SafeStringCastAction::cast($record['_id'] ?? $record['id'] ?? '');
         }
 
-        return (string) ($record->_id ?? $record->id ?? '');
-    }
-
-    public function getTableSearch(): ?string
-    {
-        $search = $this->tableSearch ?? null;
-
-        if (! \is_string($search)) {
-            return null;
-        }
-
-        $search = trim($search);
-
-        return '' !== $search ? $search : null;
+        return SafeStringCastAction::cast($record->_id ?? $record->id ?? '');
     }
 }

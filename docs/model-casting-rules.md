@@ -118,7 +118,7 @@ protected function casts(): array
 }
 ```
 
-## Audit Risultati ([DATE])
+## Audit Risultati (2025-08-01)
 
 ### File con Errori Trovati: 20
 

@@ -32,12 +32,7 @@ class SecurityMiddleware
         // 2. Headers di sicurezza
         $response = $next($request);
         Assert::isInstanceOf($response, Response::class);
-
-        // Skip security headers for Debugbar routes in local environment
-        // to allow Debugbar to function properly
-        if (! $this->isDebugbarRoute($request) || ! app()->environment('local')) {
-            $this->addSecurityHeaders($response);
-        }
+       $this->addSecurityHeaders($response);
 
         // 3. Logging sicurezza
         $this->logSecurityEvents($request, $response);
@@ -52,18 +47,6 @@ class SecurityMiddleware
     }
 
     /**
-     * Check if the request is for Debugbar routes.
-     */
-    private function isDebugbarRoute(Request $request): bool
-    {
-        $debugbarPrefix = config('debugbar.route_prefix', '_debugbar');
-
-        return str_starts_with($request->path(), $debugbarPrefix)
-            || str_starts_with($request->path(), 'vendor/debugbar')
-            || str_contains($request->path(), '_debugbar');
-    }
-
-    /**
      * Applica rate limiting avanzato.
      */
     private function applyAdvancedRateLimiting(Request $request): void
@@ -71,79 +54,44 @@ class SecurityMiddleware
         $ip = $request->ip() ?? 'unknown';
         $userAgent = $request->userAgent() ?? 'unknown';
         $endpoint = $request->path();
+       $limit = $this->getRateLimitForEndpoint($endpoint);
 
-        // Rate limiting per IP
-        $this->checkIPRateLimit($ip, $endpoint);
+        $this->enforceRateLimit("rate_limit:ip:{$ip}", $limit, 'IP', [
+            'ip' => $ip,
+            'endpoint' => $endpoint,
+        ]);
 
-        // Rate limiting per User Agent
-        $this->checkUserAgentRateLimit($userAgent, $endpoint);
+        $this->enforceRateLimit('rate_limit:ua:'.md5($userAgent), $limit, 'User Agent', [
+            'user_agent' => $userAgent,
+            'endpoint' => $endpoint,
+        ]);
 
-        // Rate limiting per endpoint specifici
-        $this->checkEndpointRateLimit($endpoint, $ip);
+        $this->enforceRateLimit("rate_limit:endpoint:{$endpoint}", $limit, 'endpoint', [
+            'endpoint' => $endpoint,
+            'ip' => $ip,
+        ]);
     }
 
     /**
-     * Controlla rate limit per IP.
+     * Applica una finestra di rate limit di un minuto sulla chiave indicata.
+     *
+     * Unico punto di applicazione per IP, User Agent ed endpoint: i tre controlli
+     * differivano solo per chiave di cache e campi di log, non per logica.
+     *
+     * `cache()->get()` restituisce `mixed`: un valore non intero (cache corrotta o
+     * chiave riusata da altro codice) non è un conteggio valido e riparte da zero,
+     * invece di essere forzato con un cast a un numero arbitrario.
+     *
+     * @param string                $subject etichetta del soggetto limitato, per il log
+     * @param array<string, string> $context campi aggiuntivi per il log
      */
-    private function checkIPRateLimit(string $ip, string $endpoint): void
+    private function enforceRateLimit(string $key, int $limit, string $subject, array $context): void
     {
-        $key = "rate_limit:ip:{$ip}";
-        $limit = $this->getRateLimitForEndpoint($endpoint);
-
-        $current = (int) cache()->get($key, 0);
+        $current = cache()->get($key, 0);
+        $current = \is_int($current) ? $current : 0;
 
         if ($current >= $limit) {
-            Log::warning('Rate limit exceeded for IP', [
-                'ip' => $ip,
-                'endpoint' => $endpoint,
-                'current' => $current,
-                'limit' => $limit,
-            ]);
-
-            abort(429, 'Too Many Requests');
-        }
-
-        cache()->put($key, $current + 1, 60); // 1 minuto
-    }
-
-    /**
-     * Controlla rate limit per User Agent.
-     */
-    private function checkUserAgentRateLimit(string $userAgent, string $endpoint): void
-    {
-        $key = 'rate_limit:ua:'.md5($userAgent);
-        $limit = $this->getRateLimitForEndpoint($endpoint);
-
-        $current = (int) cache()->get($key, 0);
-
-        if ($current >= $limit) {
-            Log::warning('Rate limit exceeded for User Agent', [
-                'user_agent' => $userAgent,
-                'endpoint' => $endpoint,
-                'current' => $current,
-                'limit' => $limit,
-            ]);
-
-            abort(429, 'Too Many Requests');
-        }
-
-        cache()->put($key, $current + 1, 60);
-    }
-
-    /**
-     * Controlla rate limit per endpoint.
-     */
-    private function checkEndpointRateLimit(string $endpoint, string $ip): void
-    {
-        $key = "rate_limit:endpoint:{$endpoint}";
-        $limit = $this->getRateLimitForEndpoint($endpoint);
-
-        $current = (int) cache()->get($key, 0);
-
-        if ($current >= $limit) {
-            Log::warning('Rate limit exceeded for endpoint', [
-                'endpoint' => $endpoint,
-                'ip' => $ip,
+            Log::warning('Rate limit exceeded for '.$subject, $context + [
                 'current' => $current,
                 'limit' => $limit,
             ]);
@@ -404,6 +352,8 @@ class SecurityMiddleware
 
     /**
      * Valida input array.
+    *
+     * @param array<array-key, mixed> $value
      */
     private function validateArrayInput(string $key, array $value): void
     {
@@ -428,6 +378,8 @@ class SecurityMiddleware
 
     /**
      * Ottieni profondità array.
+    *
+     * @param array<array-key, mixed> $array
      */
     private function getArrayDepth(array $array): int
     {
@@ -454,7 +406,7 @@ class SecurityMiddleware
         if (in_array($request->method(), ['POST', 'PUT', 'DELETE', 'PATCH'])) {
             $token = $request->header('X-CSRF-TOKEN') ?: $request->input('_token');
 
-            if (! $token || ! hash_equals(session()->token(), (string) $token)) {
+           if (! \is_string($token) || '' === $token || ! hash_equals(session()->token(), $token)) {
                 Log::warning('CSRF token mismatch', [
                     'ip' => $request->ip(),
                     'method' => $request->method(),

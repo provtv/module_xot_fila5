@@ -36,14 +36,14 @@ The Xot module's MCP configuration enables AI assistants to interact with:
     },
     "filesystem": {
       "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-filesystem", ". progetto>/laravel"],
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "/var/www/_bases/base_<nome progetto>/laravel"],
       "description": "Access to Xot module files"
     },
     "database": {
       "command": "npx",
       "args": ["-y", "@bytebase/dbhub"],
       "env": {
-        "DATABASE_URL": "sqlite://. progetto>/laravel/database/database.sqlite"
+        "DATABASE_URL": "sqlite:///var/www/_bases/base_<nome progetto>/laravel/database/database.sqlite"
       },
       "description": "SQLite database queries"
     }
@@ -147,11 +147,11 @@ Map Xot module roadmap tasks to Asana:
 - **Server URL**: `https://mcp.asana.com/sse`
 
 ### Cursor
-- **Config File**: `. progetto>/laravel/.cursor-mcp.json`
+- **Config File**: `/var/www/_bases/base_<nome progetto>/laravel/.cursor-mcp.json`
 - **Command**: `npx mcp-remote https://mcp.asana.com/sse`
 
 ### Windsurf
-- **Config File**: `. progetto>/laravel/.windsurf-mcp.json`
+- **Config File**: `/var/www/_bases/base_<nome progetto>/laravel/.windsurf-mcp.json`
 - **Command**: `npx mcp-remote https://mcp.asana.com/sse`
 
 ---

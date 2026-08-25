@@ -410,5 +410,5 @@ public function mount(): void
 
 ---
 
-**
+**Last Updated:** 28 January 2026
 **Maintainer:** Laraxot Team + Claude Opus 4.5

@@ -35,5 +35,5 @@ La correzione dell'errore PHPStan richiede la modifica del metodo chiamato da `g
 - [MetatagData](../../datas/MetatagData.md)
 - [Filament Best Practices](../../filament-best-practices.md)
 - [PHPStan Common Exceptions](../../PHPSTAN-COMMON-EXCEPTIONS.md)
-- [Filament Best Practices](../../FILAMENT-BEST-PRACTICES.md)
+- [Filament Best Practices](filament-best-practices.md)
 - [PHPStan Common Exceptions](../../PHPSTAN-COMMON-EXCEPTIONS.md)

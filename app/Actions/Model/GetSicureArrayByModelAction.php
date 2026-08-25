@@ -21,14 +21,12 @@ class GetSicureArrayByModelAction
             $res = $model->attributesToArray(); // "" is not a valid backing value for enum Modules\<main module>\Enums\OccurrenceFrequencyEnum
 
             return $res;
-        } catch (\ValueError $e) {
+       } catch (\ValueError|\Error $e) {
             $data = [];
             foreach ($model->getAttributes() as $key => $value) {
                 try {
-                    $data[$key] = $this->$key;
-
-                    /* @phpstan-ignore-next-line */
-                } catch (\ValueError $e) {
+                    $data[(string) $key] = $model->getAttribute((string) $key);
+                } catch (\ValueError) {
                 }
             }
 

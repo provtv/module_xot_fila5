@@ -3,6 +3,20 @@
 declare(strict_types=1);
 
 return [
+   'values' => [
+        'yes' => [
+            'label' => 'Sì',
+            'icon' => 'heroicon-o-check-circle',
+            'color' => 'success',
+            'description' => 'Valore affermativo',
+        ],
+        'no' => [
+            'label' => 'No',
+            'icon' => 'heroicon-o-x-circle',
+            'color' => 'danger',
+            'description' => 'Valore negativo',
+        ],
+    ],
     'label' => 'Sì/No',
     'options' => [
         'yes' => 'Sì',
@@ -18,7 +32,7 @@ return [
         ],
         'label' => 'Yes No Enum',
         'sort' => 1,
-        'icon' => 'heroicon-o-collection',
+       'icon' => 'heroicon-o-rectangle-stack',
     ],
     'fields' => [
         'id' => [

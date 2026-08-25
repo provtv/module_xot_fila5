@@ -7,7 +7,7 @@ namespace Modules\Xot\Actions\Generate;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
-use Modules\Xot\Actions\Class\GetFilenameByClassnameAction;
+use Modules\Xot\Actions\Classes\GetFilenameByClassnameAction;
 use Spatie\QueueableAction\QueueableAction;
 use Webmozart\Assert\Assert;
 
@@ -15,6 +15,7 @@ class GenerateModelByModelClass
 {
     use QueueableAction;
 
+   /** @var array<string, string> */
     public array $replaces = [];
 
     /**
@@ -98,6 +99,9 @@ class GenerateModelByModelClass
          */
     }
 
+   /**
+     * @param array<string, string> $replaces
+     */
     public function setCustomReplaces(array $replaces): self
     {
         $this->replaces = array_merge($this->replaces, $replaces);

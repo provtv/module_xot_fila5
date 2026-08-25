@@ -768,7 +768,7 @@ $value = $model->getExtra('custom_field');
   - LaravelPermission (authorization)
   - Tags, Status, States (model features)
 - **Doctrine DBAL**: Schema introspection
-- **Livewire v4**: Dynamic components
+- **Livewire v3**: Dynamic components
 - **Maatwebsite Excel**: Export functionality
 
 ### External Packages

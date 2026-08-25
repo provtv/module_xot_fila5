@@ -76,6 +76,6 @@
 
 ## Collegamenti
 
-- [Modelli Patient](../patient/docs/models.md)
+- [Modelli Patient](../Patient/docs/models.md)
 - [Best Practices Modelli](./models.md)
 - [Convenzioni di Codice](./coding-standards.md)

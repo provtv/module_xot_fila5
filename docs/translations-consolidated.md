@@ -404,7 +404,7 @@ rm Modules/User/docs/translation_keys_rules.md
 rm Modules/User/docs/translation_best_practices.md
 
 # Lang
-rm Modules/Lang/docs/translation_keys_best_practices.md
+rm Modules/Lang/docs/translation-keys-best-practices.md
 rm Modules/Lang/docs/translation-preservation-rules.md
 rm Modules/Lang/docs/translation_standards_links.md
 rm Modules/Lang/docs/translation_notify_conversion.md
@@ -447,7 +447,7 @@ rm Modules/User/project_docs/translation_keys_rules.md
 rm Modules/User/project_docs/translation_best_practices.md
 
 # Lang
-rm Modules/Lang/project_docs/translation_keys_best_practices.md
+rm Modules/Lang/project_docs/translation-keys-best-practices.md
 rm Modules/Lang/project_docs/translation-preservation-rules.md
 rm Modules/Lang/project_docs/translation_standards_links.md
 rm Modules/Lang/project_docs/translation_notify_conversion.md

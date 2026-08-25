@@ -15,22 +15,32 @@ trait EnumTrait
 
     public function getLabel(): string
     {
-        return $this->transClass(static::class, $this->value.'.label');
+        return $this->transClass(static::class, 'values.'.$this->value.'.label');
     }
 
     public function getColor(): string
     {
-        return $this->transClass(static::class, $this->value.'.color');
+        return $this->transClass(static::class, 'values.'.$this->value.'.color');
     }
 
     public function getIcon(): string
     {
-        return $this->transClass(static::class, $this->value.'.icon');
+        return $this->transClass(static::class, 'values.'.$this->value.'.icon');
     }
 
     public function getDescription(): string
     {
-        return $this->transClass(static::class, $this->value.'.description');
+        return $this->transClass(static::class, 'values.'.$this->value.'.description');
+    }
+
+   public function getTooltip(): string
+    {
+        return $this->transClass(self::class, 'values.'.$this->value.'.tooltip');
+    }
+
+    public function getHelperText(): string
+    {
+        return $this->transClass(self::class, 'values.'.$this->value.'.helper_text');
     }
 
     /**
@@ -111,7 +121,7 @@ trait EnumTrait
 
         foreach (static::getColumnDefinitions() as $name => $definition) {
             if (null === $migration || ! $migration->hasColumn($name)) {
-                $definition($table);
+               $definition($table); // @phpstan-ignore callable.nonCallable
             }
         }
     }
@@ -139,7 +149,7 @@ trait EnumTrait
      */
     public static function getColumnNames(): array
     {
-        return array_map(fn ($case) => (string) $case->value, static::cases());
+       return array_values(array_map(fn ($case): string => (string) $case->value, static::cases()));
     }
 
     /**
@@ -151,5 +161,17 @@ trait EnumTrait
     public static function getColumnDefinitions(): array
     {
         return [];
+    }
+
+   /** @return array<int|string, string> */
+    public static function toArray(): array
+    {
+        $cases = static::cases();
+        $result = [];
+        foreach ($cases as $item) {
+           $result[(string) $item->value] = (string) $item->getLabel();
+        }
+
+        return $result;
     }
 }

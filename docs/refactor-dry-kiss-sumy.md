@@ -23,7 +23,7 @@
 - phpstan-fixes.md (tutti i moduli)
 - phpstan_fixes.md (tutti i moduli)
 - phpstan-usage.md (tutti i moduli)
-- phpstan_usage.md (tutti i moduli)
+- phpstan-usage.md (tutti i moduli)
 - phpstan-level*-fixes.md (tutti i moduli)
 - phpstan_level*.md (tutti i moduli)
 - phpstan-corrections.md (tutti i moduli)
@@ -68,7 +68,7 @@
 - migrations.md (tutti i moduli)
 - migration-guide.md (tutti i moduli)
 - migration_best_practices.md (tutti i moduli)
-- migration_rules.md (tutti i moduli)
+- migration-rules.md (tutti i moduli)
 ```
 
 ## 📊 Statistiche Refactor

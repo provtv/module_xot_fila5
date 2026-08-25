@@ -4,19 +4,15 @@ declare(strict_types=1);
 
 use Filament\Facades\Filament;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\URL;
 use Illuminate\Support\Str;
+use Modules\Xot\Actions\Cast\SafeStringCastAction;
+use Modules\Xot\Actions\Factory\GetFactoryAction;
 use Modules\Xot\Actions\File\FixPathAction;
-use Modules\Xot\Contracts\ProfileContract;
-use Modules\Xot\Datas\XotData;
-use Nwidart\Modules\Facades\Module;
 
 use function Safe\define;
-use function Safe\glob;
 use function Safe\preg_match;
 
 use Webmozart\Assert\Assert;
@@ -28,81 +24,6 @@ if (! function_exists('isRunningTestBench')) {
         $base = app(FixPathAction::class)->execute(base_path());
 
         return Str::endsWith($base, $path);
-    }
-}
-
-if (! function_exists('snake_case')) {
-    function snake_case(string $str): string
-    {
-        return Str::snake($str);
-    }
-}
-
-if (! function_exists('str_slug')) {
-    function str_slug(string $str): string
-    {
-        return Str::slug($str);
-    }
-}
-
-if (! function_exists('str_singular')) {
-    function str_singular(string $str): string
-    {
-        return Str::singular($str);
-    }
-}
-
-if (! function_exists('starts_with')) {
-    function starts_with(string $str, string $str1): bool
-    {
-        return Str::startsWith($str, $str1);
-    }
-}
-
-if (! function_exists('ends_with')) {
-    function ends_with(string $str, string $str1): bool
-    {
-        return Str::endsWith($str, $str1);
-    }
-}
-
-if (! function_exists('str_contains')) {
-    function str_contains(string $str, string $str1): bool
-    {
-        return Str::contains($str, $str1);
-    }
-}
-
-if (! function_exists('hex2rgba')) {
-    function hex2rgba(string $color, float $opacity = -1.0): string
-    {
-        $default = 'rgb(0,0,0)';
-        if (empty($color)) {
-            return $default;
-        }
-
-        if ('#' === $color[0]) {
-            $color = mb_substr($color, 1);
-        }
-        if (6 === mb_strlen($color)) {
-            $hex = [$color[0].$color[1], $color[2].$color[3], $color[4].$color[5]];
-        } elseif (3 === mb_strlen($color)) {
-            $hex = [$color[0].$color[0], $color[1].$color[1], $color[2].$color[2]];
-        } else {
-            return $default;
-        }
-
-        $rgb = array_map('hexdec', $hex);
-        if (-1.0 !== $opacity) {
-            if ($opacity < 0 || $opacity > 1) {
-                $opacity = 1.0;
-            }
-            $output = 'rgba('.implode(',', $rgb).','.$opacity.')';
-        } else {
-            $output = 'rgb('.implode(',', $rgb).')';
-        }
-
-        return $output;
     }
 }
 
@@ -131,26 +52,8 @@ if (! function_exists('dddx')) {
     }
 }
 
-if (! function_exists('getFilename')) {
-    function getFilename(array $params): string
-    {
-        $tmp = debug_backtrace();
-        $class = class_basename($tmp[1]['class'] ?? 'class-unknown');
-        $func = $tmp[1]['function'] ?? 'function-unknown';
-        $params_list = collect($params)->except(['_token', '_method'])->implode('_');
-
-        return Str::slug(str_replace('Controller', '', $class).'_'.str_replace('do_', '', $func).'_'.$params_list);
-    }
-}
-
-if (! function_exists('req_uri')) {
-    function req_uri(): mixed
-    {
-        return $_SERVER['REQUEST_URI'] ?? '';
-    }
-}
-
 if (! function_exists('in_admin')) {
+    /** @param array<string, mixed> $params */
     function in_admin(array $params = []): bool
     {
         return inAdmin($params);
@@ -158,6 +61,7 @@ if (! function_exists('in_admin')) {
 }
 
 if (! function_exists('inAdmin')) {
+   /** @param array<string, mixed> $params */
     function inAdmin(array $params = []): bool
     {
         if (isset($params['in_admin'])) {
@@ -171,65 +75,6 @@ if (! function_exists('inAdmin')) {
         $segments = Request::segments();
 
         return (is_countable($segments) ? count($segments) : 0) > 0 && 'livewire' === $segments[0] && true === session('in_admin');
-    }
-}
-
-if (! function_exists('isHome')) {
-    function isHome(): bool
-    {
-        if (URL::current() === url('')) {
-            return true;
-        }
-
-        return Route::is('home');
-    }
-}
-
-if (! function_exists('isAdminHome')) {
-    function isAdminHome(): bool
-    {
-        return URL::current() === route('admin.index');
-    }
-}
-
-if (! function_exists('isAdmin')) {
-    function isAdmin(): bool
-    {
-        return Route::is('*admin*');
-    }
-}
-
-if (! function_exists('fullTextWildcards')) {
-    function fullTextWildcards(string $term): string
-    {
-        $reservedSymbols = ['-', '+', '<', '>', '@', '(', ')', '~'];
-        $term = str_replace($reservedSymbols, '', $term);
-        $words = explode(' ', $term);
-        foreach ($words as $key => $word) {
-            if (mb_strlen($word) >= 3) {
-                $words[$key] = '+'.$word.'*';
-            }
-        }
-
-        return implode(' ', $words);
-    }
-}
-
-if (! function_exists('isContainer')) {
-    function isContainer(): bool
-    {
-        [$containers, $items] = params2ContainerItem();
-
-        return count($containers) > count($items);
-    }
-}
-
-if (! function_exists('isItem')) {
-    function isItem(): bool
-    {
-        [$containers, $items] = params2ContainerItem();
-
-        return count($containers) === count($items);
     }
 }
 
@@ -254,7 +99,7 @@ if (! function_exists('params2ContainerItem')) {
         foreach ($params as $k => $v) {
             $pattern = '/(container|item)(\d+)/';
             preg_match($pattern, $k, $matches);
-            if (! empty($matches) && isset($matches[1], $matches[2]) && is_string($matches[1]) && is_string($matches[2])) {
+           if (count($matches) >= 3) {
                 $sk = $matches[1];
                 $sv = $matches[2];
                 ${$sk}[$sv] = $v;
@@ -262,87 +107,6 @@ if (! function_exists('params2ContainerItem')) {
         }
 
         return [$container, $item];
-    }
-}
-
-if (! function_exists('getModelFields')) {
-    function getModelFields(Model $model): array
-    {
-        return $model->getConnection()->getSchemaBuilder()->getColumnListing($model->getTable());
-    }
-}
-
-if (! function_exists('getModelByName')) {
-    function getModelByName(string $name): Model
-    {
-        $registered = config('morph_map.'.$name);
-        if (is_string($registered) && class_exists($registered)) {
-            Assert::isInstanceOf($res = app($registered), Model::class);
-
-            return $res;
-        }
-
-        $files_path = base_path('Modules').'/*/Models/*.php';
-        Assert::isArray($files = glob($files_path));
-        $path = Arr::first($files, function (string $file) use ($name): bool {
-            $info = pathinfo($file);
-
-            return Str::snake($info['filename'] ?? '') === $name;
-        });
-
-        if (null === $path) {
-            throw new Exception('['.$name.'] not in morph_map');
-        }
-
-        $path = app(FixPathAction::class)->execute($path);
-        $info = pathinfo($path);
-        $module_name = Str::between($path, 'Modules'.DIRECTORY_SEPARATOR, DIRECTORY_SEPARATOR.'Models');
-        $class = 'Modules\\'.$module_name.'\Models\\'.$info['filename'];
-        Assert::isInstanceOf($res = app($class), Model::class);
-
-        return $res;
-    }
-}
-
-if (! function_exists('getModuleFromModel')) {
-    function getModuleFromModel(object $model): Nwidart\Modules\Module
-    {
-        $class = $model::class;
-        $module_name = Str::before(Str::after($class, 'Modules\\'), '\\Models\\');
-        $moduleRepository = app(Nwidart\Modules\Contracts\RepositoryInterface::class);
-        Assert::isInstanceOf($res = $moduleRepository->find($module_name), Nwidart\Modules\Module::class);
-
-        return $res;
-    }
-}
-
-if (! function_exists('getModuleNameFromModel')) {
-    function getModuleNameFromModel(object $model): string
-    {
-        $class = $model::class;
-
-        return Str::before(Str::after($class, 'Modules\\'), '\\Models\\');
-    }
-}
-
-if (! function_exists('getModuleNameFromModelName')) {
-    function getModuleNameFromModelName(string $model_name): string
-    {
-        $model_class = config('morph_map.'.$model_name);
-        if (! is_string($model_class)) {
-            throw new Exception('['.__LINE__.']');
-        }
-
-        Assert::isInstanceOf($model = app($model_class), Model::class);
-
-        return getModuleNameFromModel($model);
-    }
-}
-
-if (! function_exists('getAllModules')) {
-    function getAllModules(): array
-    {
-        return Module::all();
     }
 }
 
@@ -360,13 +124,6 @@ if (! function_exists('xotModel')) {
     }
 }
 
-if (! function_exists('profile')) {
-    function profile(): Model|ProfileContract
-    {
-        return XotData::make()->getProfileModel();
-    }
-}
-
 if (! function_exists('authId')) {
     function authId(): ?string
     {
@@ -381,6 +138,7 @@ if (! function_exists('authId')) {
 }
 
 if (! function_exists('trans_string')) {
+   /** @param array<string, mixed> $replace */
     function trans_string(string $key, array $replace = [], ?string $locale = null): string
     {
         $safeReplace = [];
@@ -389,11 +147,31 @@ if (! function_exists('trans_string')) {
                 continue;
             }
 
-            $safeReplace[$k] = (is_scalar($v) || null === $v) ? $v : (string) $v;
+           $safeReplace[$k] = (is_scalar($v) || null === $v) ? $v : SafeStringCastAction::cast($v);
         }
 
         $result = __($key, $safeReplace, $locale);
 
         return is_string($result) ? $result : $key;
+    }
+}
+if (! function_exists('isJson')) {
+    function isJson(string $string): bool
+    {
+        return json_validate($string);
+    }
+}
+
+if (! function_exists('xotSeedModelOnce')) {
+    /**
+     * Idempotent entity seeder — PHPStan-safe factory chain via GetFactoryAction.
+     *
+     * @param class-string<Model> $modelClass
+     */
+    function xotSeedModelOnce(string $modelClass): void
+    {
+        (new GetFactoryAction())
+            ->execute($modelClass)
+            ->createOne();
     }
 }

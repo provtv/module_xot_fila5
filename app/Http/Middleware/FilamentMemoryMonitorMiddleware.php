@@ -11,6 +11,17 @@ use Symfony\Component\HttpFoundation\Response;
 /**
  * Middleware per monitorare l'uso della memoria nei pannelli Filament.
  * SuperMucca Memory Monitor 🐄.
+*
+ * @phpstan-type MemoryMetrics array{
+ *     memory_used_mb: float,
+ *     memory_peak_mb: float,
+ *     memory_total_mb: float,
+ *     execution_time_ms: float,
+ *     is_filament_admin: bool,
+ *     url: string,
+ *     method: string,
+ *     user_id: mixed,
+ * }
  */
 class FilamentMemoryMonitorMiddleware
 {
@@ -113,7 +124,7 @@ class FilamentMemoryMonitorMiddleware
     /**
      * Logga l'uso della memoria.
      *
-     * @param array<string, mixed> $metrics
+    * @param MemoryMetrics $metrics
      */
     private function logMemoryUsage(Request $request, array $metrics): void
     {
@@ -121,11 +132,11 @@ class FilamentMemoryMonitorMiddleware
 
         $message = sprintf(
             'Filament Memory Usage: %sMB used, %sMB peak, %sms execution time - %s %s',
-            (string) $metrics['memory_used_mb'],
-            (string) $metrics['memory_peak_mb'],
-            (string) $metrics['execution_time_ms'],
-            (string) $metrics['method'],
-            (string) $metrics['url']
+           $metrics['memory_used_mb'],
+            $metrics['memory_peak_mb'],
+            $metrics['execution_time_ms'],
+            $metrics['method'],
+            $metrics['url']
         );
 
         // Aggiungi contesto aggiuntivo
@@ -147,7 +158,7 @@ class FilamentMemoryMonitorMiddleware
     /**
      * Determina il livello di log basato sulle metriche.
      *
-     * @param array<string, mixed> $metrics
+    * @param MemoryMetrics $metrics
      */
     private function determineLogLevel(array $metrics): string
     {

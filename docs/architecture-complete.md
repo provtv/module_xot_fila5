@@ -1,5 +1,6 @@
 # Xot Module - Complete Architecture Guide (2025)
 
+> **Last Updated:** 2025-11-19
 > **
 > **PHPStan Level:** 10
 > **Status:** Core Foundation Module
@@ -768,7 +769,7 @@ $value = $model->getExtra('custom_field');
   - LaravelPermission (authorization)
   - Tags, Status, States (model features)
 - **Doctrine DBAL**: Schema introspection
-- **Livewire v4**: Dynamic components
+- **Livewire v3**: Dynamic components
 - **Maatwebsite Excel**: Export functionality
 
 ### External Packages
@@ -860,4 +861,5 @@ The Xot module is a comprehensive foundation providing:
 ---
 
 **Document Version:** 1.0
+**Generated:** 2025-11-19
 **Author:** Claude Code Analysis

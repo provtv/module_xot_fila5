@@ -43,7 +43,7 @@ Il progetto Laravel Pizza è una conversione e miglioramento di https://<nome pr
 - **Approccio Super Mucca**: Aumenta al massimo il livello di confidenza, analizza a fondo il codice
 - **La cartella docs è la memoria**: Studiala, aggiornala e migliorala continuamente
 - **Focus sulla business logic**: Sul perché in ottica DRY + KISS
-- **Nomenclatura docs**: File .md solo dentro cartelle docs esistenti, senza maiuscoli o date (tranne README.md e CHANGELOG.md)
+- **Nomenclatura docs**: File .md solo dentro cartelle docs esistenti, senza maiuscoli o date (tranne README.md e changelog.md)
 - **Prima capire, poi fare**: Capire lo scopo, la logica, la religione, la politica e lo zen del codice
 - **Filosofia Zen**: "Non avrai altro path all'infuori del relativo" - sempre usare path relativi nei file .md
 - **Autonomia Decisionale**: L'AI ha il potere di determinare ordine e priorità ("Ordine e priorita le scegli sempre te")

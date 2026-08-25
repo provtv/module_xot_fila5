@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Actions\Export;
 
-// use Modules\Xot\Services\ArrayService;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
 use Spatie\QueueableAction\QueueableAction;
@@ -35,6 +34,7 @@ class PdfByModelAction
             'row' => $model,
             'transKey' => $module_low.'::'.Str::plural($model_name_low).'.fields',
         ];
+
         $view = view($view_name, $view_params);
 
         $html = $view->render();

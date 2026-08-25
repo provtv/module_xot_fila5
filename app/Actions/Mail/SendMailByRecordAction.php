@@ -45,10 +45,11 @@ class SendMailByRecordAction
         }
 
         if (! method_exists($record, 'myLogs')) {
-            throw new \InvalidArgumentException('Model must implement myLogs method');
+            throw new \InvalidArgumentException('Model ['.$record::class.'] must implement myLogs method');
         }
 
         $to = $record->email;
+        // $to = 'marco.sottana@gmail.com'; //4 debug non cancellare
         $subject = $record->option('mail_oggetto');
         $bodyHtml = $record->option('mail_testo');
 
@@ -62,22 +63,29 @@ class SendMailByRecordAction
             $bodyHtml = '';
         }
 
+       $pdfPath = app(PdfByModelAction::class)->execute(
+            model: $record,
+            out: 'path',
+        );
+        if (! is_string($pdfPath)) {
+            throw new \InvalidArgumentException('PDF attachment path must be a string');
+        }
+
         $emailData = new EmailData(
             recipient: $to,
             subject: $subject,
             body_html: $bodyHtml,
-            attachments: [
-                app(PdfByModelAction::class)->execute(
-                    model: $record,
-                    out: 'path',
-                ),
-            ],
+           attachments: [$pdfPath],
         );
         SmtpData::make()->send($emailData);
 
         // myLogs è sempre disponibile su BaseModel
-        /* @phpstan-ignore-next-line - Dynamic relationship method */
-        $record->myLogs()->create([
+       $logs = $record->myLogs();
+        if (! is_object($logs) || ! method_exists($logs, 'create')) {
+            throw new \InvalidArgumentException('Model ['.$record::class.'] myLogs relation is invalid');
+        }
+
+        $logs->create([
             'act' => 'sendMail',
             'handle' => authId(),
         ]);

@@ -16,8 +16,7 @@ class SafeStringCastAction
      * Converte in modo sicuro un valore mixed in string.
      * impostare delle eccezzioni ?
      *
-     * @param mixed $value Il valore da convertire
-     *
+    * @param  mixed  $value  Il valore da convertire
      * @return string Il valore convertito in string
      */
     public function execute(mixed $value): string
@@ -43,15 +42,22 @@ class SafeStringCastAction
             return (string) $value;
         }
 
-        // Per array, oggetti e altri tipi non scalari, restituisci stringa vuota
+       // Oggetti convertibili in stringa (Stringable, Carbon, HtmlString, ...):
+        // il cast nativo `(string) $value` qui produce la rappresentazione testuale,
+        // quindi va preservata invece di appiattirla a stringa vuota.
+        if ($value instanceof \Stringable || (is_object($value) && method_exists($value, '__toString'))) {
+            return (string) $value;
+        }
+
+        // Per array e oggetti non convertibili (dove il cast nativo fallirebbe),
+        // restituisci stringa vuota.
         return '';
     }
 
     /**
      * Metodo statico di convenienza per chiamate dirette.
      *
-     * @param mixed $value Il valore da convertire
-     *
+    * @param  mixed  $value  Il valore da convertire
      * @return string Il valore convertito in string
      */
     public static function cast(mixed $value): string

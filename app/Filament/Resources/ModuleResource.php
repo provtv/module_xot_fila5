@@ -15,8 +15,11 @@ class ModuleResource extends XotBaseResource
 {
     protected static ?string $model = Module::class;
 
-    #[\Override]
-    public static function getFormSchema(): array
+   // #[\Override]
+    /**
+     * @return array<string, mixed>
+     */
+    public static function getFormSchemaOld(): array
     {
         return [
             'name' => TextInput::make('name')->required(),

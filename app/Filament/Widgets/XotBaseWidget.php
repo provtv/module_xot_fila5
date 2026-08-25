@@ -9,7 +9,6 @@ use Filament\Actions\Concerns\InteractsWithActions;
 use Filament\Actions\Contracts\HasActions;
 use Filament\Forms\Concerns\InteractsWithForms;
 use Filament\Forms\Contracts\HasForms;
-use Filament\Schemas\Components\Component;
 use Filament\Schemas\Components\Wizard\Step;
 use Filament\Schemas\Schema;
 use Filament\Widgets\Widget as FilamentWidget;
@@ -17,6 +16,7 @@ use Illuminate\Contracts\Support\Htmlable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
+use Modules\Xot\Actions\Cast\SafeStringCastAction;
 use Modules\Xot\Actions\View\GetViewByClassAction;
 use Modules\Xot\Filament\Traits\TransTrait;
 use Webmozart\Assert\Assert;
@@ -49,13 +49,6 @@ abstract class XotBaseWidget extends FilamentWidget implements HasActions, HasFo
     public array $listener = [];
 
     /**
-     * Dati del form.
-     *
-     * @var array<string, mixed>
-     */
-    public ?array $data = [];
-
-    /**
      * Vista predefinita per widget che estendono XotBaseWidget.
      * Deve essere sovrascritta nelle classi figlie.
      */
@@ -69,12 +62,15 @@ abstract class XotBaseWidget extends FilamentWidget implements HasActions, HasFo
     }
 
     /**
-     * Ottiene lo schema del form.
-     * Deve essere implementato nelle classi figlie.
+    * Schema del form del widget. Vuoto di default per i widget senza form
+     * (es. widget di sola visualizzazione); i widget con form lo sovrascrivono.
      *
-     * @return array<int|string, Component>
+     * @return array<Htmlable|string>
      */
-    abstract public function getFormSchema(): array;
+    public function getFormSchemaOld(): array
+    {
+        return [];
+    }
 
     /**
      * Configura il form del widget.
@@ -85,7 +81,7 @@ abstract class XotBaseWidget extends FilamentWidget implements HasActions, HasFo
      */
     public function form(Schema $schema): Schema
     {
-        $schema = $schema->components($this->getFormSchema());
+       $schema = $schema->components($this->getFormSchemaOld());
         $schema->statePath('data');
 
         $model = $this->getFormModel();
@@ -105,6 +101,7 @@ abstract class XotBaseWidget extends FilamentWidget implements HasActions, HasFo
         return $schema;
     }
 
+   /** @return array<string, mixed> */
     public function getFormFill(): array
     {
         $model = $this->getFormModel();
@@ -131,13 +128,16 @@ abstract class XotBaseWidget extends FilamentWidget implements HasActions, HasFo
 
                         return $value;
                     });
-                    $res = $merge1;
+                   $res = [];
+                    foreach ($merge1 as $key => $value) {
+                        $res[(string) $key] = $value;
+                    }
                 }
 
-                return $res;
+                return self::normalizeFormFill($res);
             } catch (\Exception $e) {
                 // Se toArray() fallisce (problemi con enum), usa getAttributes()
-                return $model->getAttributes();
+                return self::normalizeFormFill($model->getAttributes());
             }
         }
 
@@ -147,7 +147,7 @@ abstract class XotBaseWidget extends FilamentWidget implements HasActions, HasFo
         $attributes = $model->attributesToArray();
 
         $fields = array_merge($fillable, $appends);
-        $fields = array_fill_keys($fields, null);
+       $fields = array_fill_keys(array_map(static fn (mixed $f): string => SafeStringCastAction::cast($f), $fields), null);
         $fields = array_merge($fields, $attributes);
         if (method_exists($model, 'getDataDefaults')) {
             /** @var array<string, mixed> $defaults */
@@ -155,7 +155,7 @@ abstract class XotBaseWidget extends FilamentWidget implements HasActions, HasFo
             $fields = array_merge($fields, $defaults);
         }
 
-        return $fields;
+       return self::normalizeFormFill($fields);
     }
 
     /**
@@ -172,7 +172,7 @@ abstract class XotBaseWidget extends FilamentWidget implements HasActions, HasFo
         return static::transFunc(__FUNCTION__);
     }
 
-    public function getWizardSubmitAction(): Action
+   public function getWizardSubmitAction(): Action
     {
         /** @var view-string $submit_view */
         $submit_view = 'pub_theme::filament.wizard.submit-button';
@@ -210,7 +210,7 @@ abstract class XotBaseWidget extends FilamentWidget implements HasActions, HasFo
         return null;
     }
 
-    protected function getStepByName(string $name): Step
+   protected function getStepByName(string $name): Step
     {
         $schema = Str::of($name)
             ->snake()
@@ -239,10 +239,23 @@ abstract class XotBaseWidget extends FilamentWidget implements HasActions, HasFo
                 $this->view = $view;
             }
         } catch (\Exception $e) {
-            /* @phpstan-ignore identical.alwaysTrue */
-            if ($this->view === $defaultView) {
+           if (! view()->exists($this->view)) {
                 throw $e;
             }
         }
+    }
+    /**
+     * @param array<int|string, mixed> $data
+     *
+     * @return array<string, mixed>
+     */
+    protected static function normalizeFormFill(array $data): array
+    {
+        $normalized = [];
+        foreach ($data as $key => $value) {
+            $normalized[(string) $key] = $value;
+        }
+
+        return $normalized;
     }
 }

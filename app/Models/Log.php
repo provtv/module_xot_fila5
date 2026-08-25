@@ -32,7 +32,7 @@ use Sushi\Sushi;
  * @property string|null          $file_content
  * @property ProfileContract|null $updater
  *
- * @mixin \Eloquent
+ * @mixin \Illuminate\Database\Eloquent\Model
  */
 class Log extends BaseModel
 {

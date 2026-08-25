@@ -1971,14 +1971,14 @@ A partire dal 10 Marzo 2025, tutti i moduli devono essere validati con PHPStan a
 Per validare tutti i moduli con PHPStan a livello 7:
 
 ```bash
-cd base_orisbroker_fila5/laravel
+cd base_orisbroker_fila3/laravel
 vendor/bin/phpstan analyse Modules --configuration=phpstan.neon
 ```
 
 Per validare un singolo modulo:
 
 ```bash
-cd base_orisbroker_fila5/laravel
+cd base_orisbroker_fila3/laravel
 vendor/bin/phpstan analyse Modules/NomeModulo --configuration=phpstan.neon
 ```
 
@@ -3120,7 +3120,7 @@ Notification::make()
 @endif
 ```
 
-# Filament Forms in Livewire 4 con PHP 8 Strict Types
+# Filament Forms in Livewire 3 con PHP 8 Strict Types
 
 ## Gestione Proprietà
 
@@ -8016,7 +8016,7 @@ Le pagine di lista devono seguire questa struttura:
 La struttura base del progetto segue questo schema:
 ```
                    # Root del workspace
-└── base_orisbroker_fila5/          # Directory principale del progetto
+└── base_orisbroker_fila3/          # Directory principale del progetto
     └── laravel/                    # Applicazione Laravel
         └── Modules/               # Directory dei moduli
             └── [ModuleName]/     # Singolo modulo
@@ -8827,5 +8827,5 @@ class ClientMapWidget extends Widget
 2. `getParent()` è il metodo standard per accedere al parent
 3. Implementare sempre controlli di tipo
 4. Gestire i casi di errore in modo graceful
-5. La reattività funziona automaticamente con Livewire 4
+5. La reattività funziona automaticamente con Livewire 3
   - Contact section
