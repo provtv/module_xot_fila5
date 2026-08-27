@@ -47,7 +47,7 @@ PHPStan bootstraps the Laravel application before analysis. If any discovered fi
 
 ## Detection Command
 ```bash
-cd /var/www/_bases/base_fixcity_fila5/laravel
+cd /var/www/_bases/base_ptv_fila5/laravel
 find Modules -name "*.php" -exec php -l {} \; 2>&1 | grep -v "No syntax errors"
 ```
 

@@ -232,17 +232,17 @@ TextInput::make('address')
 
 // 2. Deriva chiave traduzione:
 //    - Classe chiamante: CreateTicketWizardWidget
-//    - Namespace: fixcity
+//    - Namespace: ptv
 //    - Widget name: create_ticket_wizard
 //    - Component type: fields
 //    - Field name: address
-//    → fixcity::create_ticket_wizard.fields.address.label
+//    → ptv::create_ticket_wizard.fields.address.label
 
 // 3. Applica traduzione automaticamente:
-//    $component->label(trans('fixcity::create_ticket_wizard.fields.address.label'))
+//    $component->label(trans('ptv::create_ticket_wizard.fields.address.label'))
 
 // 4. Se traduzione non esiste, la crea:
-//    SaveTransAction::save('fixcity::create_ticket_wizard.fields.address.label', 'Indirizzo')
+//    SaveTransAction::save('ptv::create_ticket_wizard.fields.address.label', 'Indirizzo')
 ```
 
 **Risultato**:
@@ -290,7 +290,7 @@ TextInput::make('address')  // → LangServiceProvider applica 'Indirizzo'
 // Devo cercare tutti i ->label('Indirizzo') e cambiare
 
 // ✅ DOPO: cambio label → cambio 1 file (lang)
-// Cambio solo fixcity::create_ticket_wizard.fields.address.label
+// Cambio solo ptv::create_ticket_wizard.fields.address.label
 ```
 
 ---

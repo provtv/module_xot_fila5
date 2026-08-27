@@ -2284,8 +2284,8 @@ laravel/Themes/Sixteen/dist/
 
 #### ❌ Percorsi Errati da Rimuovere
 ```
-F:\var\www\fixcity\Modules\              # ❌ ERRATO: manca laravel\
-F:\var\www\fixcity\Modules\Fixcity\     # ❌ ERRATO: manca laravel\
+F:\var\www\ptv\Modules\              # ❌ ERRATO: manca laravel\
+F:\var\www\ptv\Modules\Fixcity\     # ❌ ERRATO: manca laravel\
 ```
 
 ### Note Importanti
@@ -2438,7 +2438,7 @@ laravel/Modules/[ModuleName]/
 ### Uso dei Componenti
 ```blade
 {{-- Il componente sarà disponibile automaticamente --}}
-<x-fixcity::blocks.ticket_list.agid />
+<x-ptv::blocks.ticket_list.agid />
 ```
 
 ### ❌ Da Evitare
@@ -2448,7 +2448,7 @@ class FixcityServiceProvider extends ServiceProvider
 {
     public function boot(): void
     {
-        Blade::component('fixcity-ticket-list-agid', SomeComponent::class); // Non necessario
+        Blade::component('ptv-ticket-list-agid', SomeComponent::class); // Non necessario
     }
 }
 ```
@@ -2523,35 +2523,35 @@ class XotBaseServiceProvider extends ServiceProvider
 
 ### Percorso Base del Progetto
 ```
-F:\var\www\fixcity\              # Root del progetto
+F:\var\www\ptv\              # Root del progetto
 └── laravel\                     # ⚠️ Tutti i moduli vanno qui dentro
     └── Modules\                 # Directory corretta per i moduli
 ```
 
 ### ✅ Percorsi Corretti
 ```
-F:\var\www\fixcity\laravel\Modules\Fixcity\app\Datas\ReportData.php
-F:\var\www\fixcity\laravel\Modules\Fixcity\app\Models\Report.php
-F:\var\www\fixcity\laravel\Themes\Sixteen\dist\
+F:\var\www\ptv\laravel\Modules\Fixcity\app\Datas\ReportData.php
+F:\var\www\ptv\laravel\Modules\Fixcity\app\Models\Report.php
+F:\var\www\ptv\laravel\Themes\Sixteen\dist\
 ```
 
 ### ❌ Percorsi Errati da Rimuovere
 ```
-F:\var\www\fixcity\Modules\              # ❌ ERRATO: manca laravel\
-F:\var\www\fixcity\Modules\Fixcity\     # ❌ ERRATO: manca laravel\
+F:\var\www\ptv\Modules\              # ❌ ERRATO: manca laravel\
+F:\var\www\ptv\Modules\Fixcity\     # ❌ ERRATO: manca laravel\
 ```
 
 ### Verifica Prima di Creare Nuovi File
-1. Assicurarsi di essere in `F:\var\www\fixcity\laravel\Modules\`
+1. Assicurarsi di essere in `F:\var\www\ptv\laravel\Modules\`
 2. Controllare il composer.json del modulo
 3. Verificare il namespace corretto
-4. Mai creare file direttamente in `F:\var\www\fixcity\Modules\`
+4. Mai creare file direttamente in `F:\var\www\ptv\Modules\`
 
 # Comandi Artisan
 
 ## Posizione Corretta
 ```
-F:\var\www\fixcity\
+F:\var\www\ptv\
 └── laravel\              # ⚠️ Directory dove si trova artisan
     ├── artisan           # Eseguibile artisan
     ├── Modules\
@@ -2564,7 +2564,7 @@ F:\var\www\fixcity\
 ```bash
 
 # Posizionarsi nella directory laravel
-cd F:\var\www\fixcity\laravel
+cd F:\var\www\ptv\laravel
 
 # Eseguire i comandi da qui
 php artisan module:seed Fixcity
@@ -2576,18 +2576,18 @@ php artisan config:clear
 ```bash
 
 # ❌ ERRATO: dalla root del progetto
-cd F:\var\www\fixcity
+cd F:\var\www\ptv
 php artisan module:seed Fixcity  # Non funzionerà
 
 # ❌ ERRATO: dalla directory Modules
-cd F:\var\www\fixcity\laravel\Modules
+cd F:\var\www\ptv\laravel\Modules
 php artisan module:seed Fixcity  # Non funzionerà
 ```
 
 ## Comandi Comuni
 ```bash
 
-# Dalla directory F:\var\www\fixcity\laravel
+# Dalla directory F:\var\www\ptv\laravel
 php artisan module:seed Fixcity          # Seeding modulo
 php artisan module:make-model Report     # Creare model
 php artisan module:make-factory Report   # Creare factory
@@ -2596,12 +2596,12 @@ php artisan module:make-seeder Report    # Creare seeder
 
 ## Note Importanti
 1. **Directory di Lavoro**:
-   - Tutti i comandi artisan devono essere eseguiti da `F:\var\www\fixcity\laravel`
+   - Tutti i comandi artisan devono essere eseguiti da `F:\var\www\ptv\laravel`
    - Il file `artisan` si trova in questa directory
    - L'autoload e le configurazioni sono relative a questa directory
 
 2. **Percorsi nei Comandi**:
-   - I percorsi nei comandi sono relativi a `F:\var\www\fixcity\laravel`
+   - I percorsi nei comandi sono relativi a `F:\var\www\ptv\laravel`
    - Usare percorsi relativi quando possibile
    - Per percorsi assoluti, usare `base_path()` che punta a `laravel/`
 
@@ -3957,7 +3957,7 @@ laravel/Modules/[ModuleName]/
 
 ### 2. Convenzioni di Denominazione
 - Il file SVG deve avere lo stesso nome del modulo (lowercase)
-- Esempio: `Modules/Fixcity/resources/svg/fixcity.svg`
+- Esempio: `Modules/Fixcity/resources/svg/ptv.svg`
 
 ## Registrazione Automatica
 
@@ -4000,10 +4000,10 @@ Una volta registrata, l'icona può essere utilizzata nei template Blade:
 
 ```blade
 {{-- Uso come componente --}}
-<x-fixcity-icon class="w-6 h-6" />
+<x-ptv-icon class="w-6 h-6" />
 
 {{-- Uso come vista --}}
-@include('svg::fixcity')
+@include('svg::ptv')
 ```
 
 ## Best Practices
@@ -4042,10 +4042,10 @@ Se l'icona non viene visualizzata:
 ### 2. Problemi di Stile
 ```blade
 {{-- ❌ ERRATO: Dimensioni fisse --}}
-<x-fixcity-icon width="24" height="24" />
+<x-ptv-icon width="24" height="24" />
 
 {{-- ✅ CORRETTO: Classi Tailwind --}}
-<x-fixcity-icon class="w-6 h-6 text-gray-500" />
+<x-ptv-icon class="w-6 h-6 text-gray-500" />
 ```
 
 ### 3. Debug
@@ -6683,7 +6683,7 @@ laravel/Modules/[ModuleName]/
 
 ### 2. Convenzioni di Denominazione
 - Il file SVG deve avere lo stesso nome del modulo (lowercase)
-- Esempio: `Modules/Fixcity/resources/svg/fixcity.svg`
+- Esempio: `Modules/Fixcity/resources/svg/ptv.svg`
 
 ## Registrazione Automatica
 
@@ -6726,10 +6726,10 @@ Una volta registrata, l'icona può essere utilizzata nei template Blade:
 
 ```blade
 {{-- Uso come componente --}}
-<x-fixcity-icon class="w-6 h-6" />
+<x-ptv-icon class="w-6 h-6" />
 
 {{-- Uso come vista --}}
-@include('svg::fixcity')
+@include('svg::ptv')
 ```
 
 ## Best Practices
@@ -6768,10 +6768,10 @@ Se l'icona non viene visualizzata:
 ### 2. Problemi di Stile
 ```blade
 {{-- ❌ ERRATO: Dimensioni fisse --}}
-<x-fixcity-icon width="24" height="24" />
+<x-ptv-icon width="24" height="24" />
 
 {{-- ✅ CORRETTO: Classi Tailwind --}}
-<x-fixcity-icon class="w-6 h-6 text-gray-500" />
+<x-ptv-icon class="w-6 h-6 text-gray-500" />
 ```
 
 ### 3. Debug

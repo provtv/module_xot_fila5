@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Modules\Xot\Tests\Fixtures\Traits;
+namespace Modules\Xot\Tests\Fixtures\Stubs;
 
 use Modules\Xot\Traits\Filament\HasCustomModelLabel;
 

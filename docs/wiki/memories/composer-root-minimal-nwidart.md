@@ -8,9 +8,9 @@ updated: 2026-07-09
 qmd: "Xot composer root skeleton merge-plugin moduli owner vendor unico composer update -W"
 issues:
   - "https://github.com/laraxot/module_xot_fila5/issues/30"
-  - "https://github.com/laraxot/base_fixcity_fila5/issues/305"
+  - "https://github.com/laraxot/base_ptv_fila5/issues/305"
 discussions:
-  - "https://github.com/laraxot/base_fixcity_fila5/discussions/304"
+  - "https://github.com/laraxot/base_ptv_fila5/discussions/304"
 related:
   - ../concepts/composer-root-skeleton-modular.md
   - ../concepts/composer-merge-plugin-modules-only.md

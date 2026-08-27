@@ -9,7 +9,7 @@ qmd: "claude-audit static 80 tetto 100 AI tutti moduli audit-coverage boost"
 issues:
   - "https://github.com/laraxot/module_xot_fila5/issues/30"
 discussions:
-  - "https://github.com/laraxot/base_fixcity_fila5/discussions/304"
+  - "https://github.com/laraxot/base_ptv_fila5/discussions/304"
 related:
   - ../../../../../../bashscripts/tools/run-claude-audit-all-modules-static.sh
   - ../../../../../../bashscripts/tools/claude-audit-module-static-boost.sh

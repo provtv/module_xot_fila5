@@ -14,7 +14,7 @@ related:
   - ../../../../../Themes/Sixteen/docs/wiki/redundancy/duplicated-blade-blocks.md
   - ../../../../../Themes/Sixteen/docs/wiki/concepts/ridondanze-documentazione-wizard.md
 issues:
-  - "https://github.com/laraxot/base_fixcity_fila5/issues/90"
+  - "https://github.com/laraxot/base_ptv_fila5/issues/90"
 ---
 
 # Audit olistico ridondanze (second brain ↔ codice)
@@ -73,7 +73,7 @@ Esempi già schedulati (linkare, non ricopiare qui):
 
 | Area | Lettura canonica |
 |------|-------------------|
-| Fixcity ticket | [`fixcity-cross-module-duplicate-surfaces.md`](../../../../Fixcity/docs/wiki/redundancy/fixcity-cross-module-duplicate-surfaces.md) · [`duplicated-comments-relation-manager.md`](../../../../Fixcity/docs/wiki/redundancy/duplicated-comments-relation-manager.md) · [`Fixcity/docs/redundancy-report.md`](../../../../Fixcity/docs/redundancy-report.md) |
+| Fixcity ticket | [`ptv-cross-module-duplicate-surfaces.md`](../../../../Fixcity/docs/wiki/redundancy/ptv-cross-module-duplicate-surfaces.md) · [`duplicated-comments-relation-manager.md`](../../../../Fixcity/docs/wiki/redundancy/duplicated-comments-relation-manager.md) · [`Fixcity/docs/redundancy-report.md`](../../../../Fixcity/docs/redundancy-report.md) |
 | Block Blade cross-moduli | [`duplicated-blade-blocks.md`](../../../../../Themes/Sixteen/docs/wiki/redundancy/duplicated-blade-blocks.md) |
 | Wizard doc slice Sixteen↔Fixcity↔Xot | [`ridondanze-documentazione-wizard.md`](../../../../../Themes/Sixteen/docs/wiki/concepts/ridondanze-documentazione-wizard.md) → map [`wizard-parity-documentation-map.md`](../../../../../Themes/Sixteen/docs/wiki/concepts/wizard-parity-documentation-map.md) |
 | Passport / widget auth multipli modulo User | vedi catalogo |
@@ -102,7 +102,7 @@ Molti moduli contengono ciascuno le proprie istanze di:
 
 ### Collegamenti
 
-- Fixcity superficiali Blade + stato **BaseModel**/**BasePivot**: [`fixcity-cross-module-duplicate-surfaces.md`](../../../../Fixcity/docs/wiki/redundancy/fixcity-cross-module-duplicate-surfaces.md).
+- Fixcity superficiali Blade + stato **BaseModel**/**BasePivot**: [`ptv-cross-module-duplicate-surfaces.md`](../../../../Fixcity/docs/wiki/redundancy/ptv-cross-module-duplicate-surfaces.md).
 - Cms backlog modello/UI: **[`Modules/Cms/docs/redundancy-report.md`](../../../../Cms/docs/redundancy-report.md)**.
 
 ## 6. Principi anti-rimozione falsi positivi
@@ -112,4 +112,4 @@ Molti moduli contengono ciascuno le proprie istanze di:
 
 ## Tracker
 
-Issues principali [#89](https://github.com/laraxot/base_fixcity_fila5/issues/89) · [#90](https://github.com/laraxot/base_fixcity_fila5/issues/90) · consolidamento docs [#107](https://github.com/laraxot/base_fixcity_fila5/issues/107).
+Issues principali [#89](https://github.com/laraxot/base_ptv_fila5/issues/89) · [#90](https://github.com/laraxot/base_ptv_fila5/issues/90) · consolidamento docs [#107](https://github.com/laraxot/base_ptv_fila5/issues/107).

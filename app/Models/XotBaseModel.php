@@ -60,6 +60,11 @@ abstract class XotBaseModel extends EloquentModel
         });
 
         if (! isset($object['object'])) {
+            // Fallback to static class when called outside model/resource context (e.g. ide-helper)
+            if (class_exists(static::class) && is_subclass_of(static::class, EloquentModel::class)) {
+                /** @var class-string<EloquentModel> */
+                return static::class;
+            }
             throw new \RuntimeException('Unable to resolve caller object for getClassName()');
         }
 
@@ -71,10 +76,28 @@ abstract class XotBaseModel extends EloquentModel
         /** @var string $objectClass */
         $namespace = Str::beforeLast((string) $objectClass, '\Models\\');
         $className = Str::afterLast(static::class, '\\');
-        // dddx(['namespace'=>$namespace, 'className'=>$className,'static'=>static::class]);
+
+        // Validate namespace was properly extracted (contains module path)
+        if (! Str::contains($namespace, 'Modules\\')) {
+            // Fallback to static class when namespace resolution fails
+            if (class_exists(static::class) && is_subclass_of(static::class, EloquentModel::class)) {
+                /** @var class-string<EloquentModel> */
+                return static::class;
+            }
+        }
 
         $res = $namespace.'\\Models\\'.$className;
-        Assert::classExists($res);
+
+        // Defensive: check class exists before asserting
+        if (! class_exists($res)) {
+            // Fallback to static class
+            if (class_exists(static::class) && is_subclass_of(static::class, EloquentModel::class)) {
+                /** @var class-string<EloquentModel> */
+                return static::class;
+            }
+            throw new \RuntimeException("Resolved class {$res} does not exist");
+        }
+
         Assert::subclassOf($res, EloquentModel::class);
 
         return $res;

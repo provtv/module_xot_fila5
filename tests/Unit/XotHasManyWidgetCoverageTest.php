@@ -17,6 +17,7 @@ use Modules\Xot\Actions\Model\Update\HasManyAction;
 use Modules\Xot\Datas\RelationData;
 use Modules\Xot\Filament\Widgets\XotBaseWidget;
 use Modules\Xot\Models\Cache as CacheModel;
+use Modules\Xot\Tests\Fixtures\Stubs\XotWidgetFormHost;
 use Modules\Xot\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 use ReflectionClass;
@@ -27,21 +28,6 @@ uses(TestCase::class)->group('no-xot-db');
 afterEach(function (): void {
     Mockery::close();
 });
-
-final class XotWidgetFormHost extends XotBaseWidget
-{
-    protected string $view = 'xot::filament.widgets.base';
-
-    public function getFormSchema(): array
-    {
-        return [];
-    }
-
-    public function getFormModel(): string
-    {
-        return CacheModel::class;
-    }
-}
 
 describe('Xot HasMany and Widget form coverage', function (): void {
     test('HasManyAction execute direct e batch su sqlite', function (): void {

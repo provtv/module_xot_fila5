@@ -7,9 +7,9 @@ created: 2026-06-12
 updated: 2026-06-12
 qmd: "pest tests ReflectionClass non compound use statement warning remove global class import"
 issues:
-  - "https://github.com/laraxot/base_fixcity_fila5/issues/345"
+  - "https://github.com/laraxot/base_ptv_fila5/issues/345"
 discussions:
-  - "https://github.com/laraxot/base_fixcity_fila5/discussions/273"
+  - "https://github.com/laraxot/base_ptv_fila5/discussions/273"
 related:
   - ../../../../../docs/wiki/rules/testing-modules-pest.md
   - ./module-testcase-xotbase-hierarchy.md

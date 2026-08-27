@@ -2,14 +2,17 @@
 
 declare(strict_types=1);
 
-use Modules\Xot\Helpers\XotSeedHelper;
+use Illuminate\Database\Eloquent\Model;
+use Modules\Xot\Actions\Factory\GetFactoryAction;
 
 if (! function_exists('xotSeedModelOnce')) {
     /**
-     * @param  class-string  $modelClass
+     * @param  class-string<Model>  $modelClass
      */
     function xotSeedModelOnce(string $modelClass): void
     {
-        XotSeedHelper::seedModelOnce($modelClass);
+        (new GetFactoryAction())
+            ->execute($modelClass)
+            ->createOne();
     }
 }

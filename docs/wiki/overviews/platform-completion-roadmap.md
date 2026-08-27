@@ -6,11 +6,11 @@ created: 2026-06-13
 updated: 2026-06-17
 qmd: "completare progetto Fixcity roadmap PHPStan Pest moduli temi gate ingresso chef"
 issues:
-  - "https://github.com/laraxot/base_fixcity_fila5/issues/372"
-  - "https://github.com/laraxot/base_fixcity_fila5/issues/383"
+  - "https://github.com/laraxot/base_ptv_fila5/issues/372"
+  - "https://github.com/laraxot/base_ptv_fila5/issues/383"
 discussions:
-  - "https://github.com/laraxot/base_fixcity_fila5/discussions/353"
-  - "https://github.com/laraxot/base_fixcity_fila5/discussions/392"
+  - "https://github.com/laraxot/base_ptv_fila5/discussions/353"
+  - "https://github.com/laraxot/base_ptv_fila5/discussions/392"
 related:
   - ../../../../../docs/stories/STORY-367-platform-completion-programme.md
   - ../../../Fixcity/docs/wiki/overviews/completion-roadmap.md
@@ -33,7 +33,7 @@ Documento **hub** dopo gate ingresso chef (2026-06-13). Ogni modulo/tema ha dett
 | Pest moduli toccati | `cd laravel && ./vendor/bin/pest --filter=…` | 🔄 dopo ogni batch |
 | Naming test login | 15 file scope-distinct, zero lowercase duplicati | ✅ |
 | Test PHPUnit class-based | Vietato nei moduli | ✅ |
-| Cartella `tests/` lowercase | Namespace `Modules\*\Tests` PascalCase | 🔄 [#370](https://github.com/laraxot/base_fixcity_fila5/issues/370) |
+| Cartella `tests/` lowercase | Namespace `Modules\*\Tests` PascalCase | 🔄 [#370](https://github.com/laraxot/base_ptv_fila5/issues/370) |
 
 ## Migliorie sessione gate (codice + test)
 
@@ -86,14 +86,14 @@ Documento **hub** dopo gate ingresso chef (2026-06-13). Ogni modulo/tema ha dett
 - Pattern Pest+Assert documentati per modulo
 
 ### M2 — Test runtime 🔄
-- Pest green su tutti i moduli (`phpunit.xml` centrale [#345](https://github.com/laraxot/base_fixcity_fila5/issues/345))
-- Coverage batch [#372](https://github.com/laraxot/base_fixcity_fila5/issues/372)
+- Pest green su tutti i moduli (`phpunit.xml` centrale [#345](https://github.com/laraxot/base_ptv_fila5/issues/345))
+- Coverage batch [#372](https://github.com/laraxot/base_ptv_fila5/issues/372)
 - `APP_ENV=testing` parity: `sync-env-testing.sh`
 
 ### M3 — Core business Fixcity
 - Lista + dettaglio + wizard segnalazione su Sixteen
 - Mappe GeoJSON + popup canonico
-- Seeders demo [#368](https://github.com/laraxot/base_fixcity_fila5/issues/368)
+- Seeders demo [#368](https://github.com/laraxot/base_ptv_fila5/issues/368)
 - Migrazione `Services/` → `Actions/` in Fixcity
 
 ### M4 — Architettura Laraxot
@@ -108,14 +108,14 @@ Documento **hub** dopo gate ingresso chef (2026-06-13). Ogni modulo/tema ha dett
 - Playwright FO critico
 
 ### M6 — Prodotto PA (scopo + target) 🔄
-- SSoT scopo/target: [fixcity-scopo-e-target.md](../../../../../docs/wiki/concepts/fixcity-scopo-e-target.md)
+- SSoT scopo/target: [ptv-scopo-e-target.md](../../../../../docs/wiki/concepts/ptv-scopo-e-target.md)
 - Epic BMAD: [STORY-367](../../../../../docs/stories/STORY-367-platform-completion-programme.md) child **389–395**
-- Design Comuni parity ([#416](https://github.com/laraxot/base_fixcity_fila5/issues/416))
-- Workflow ticket + Activity ([#420](https://github.com/laraxot/base_fixcity_fila5/issues/420))
-- Filament BO ([#422](https://github.com/laraxot/base_fixcity_fila5/issues/422))
-- WCAG + i18n ([#424](https://github.com/laraxot/base_fixcity_fila5/issues/424))
-- Production readiness ([#426](https://github.com/laraxot/base_fixcity_fila5/issues/426))
-- Timeline cittadino ([#400](https://github.com/laraxot/base_fixcity_fila5/issues/400))
+- Design Comuni parity ([#416](https://github.com/laraxot/base_ptv_fila5/issues/416))
+- Workflow ticket + Activity ([#420](https://github.com/laraxot/base_ptv_fila5/issues/420))
+- Filament BO ([#422](https://github.com/laraxot/base_ptv_fila5/issues/422))
+- WCAG + i18n ([#424](https://github.com/laraxot/base_ptv_fila5/issues/424))
+- Production readiness ([#426](https://github.com/laraxot/base_ptv_fila5/issues/426))
+- Timeline cittadino ([#400](https://github.com/laraxot/base_ptv_fila5/issues/400))
 
 ## Workflow agente (gate chef)
 
@@ -130,4 +130,4 @@ Chat sessione: [docs/chat/2026-06-13-phpstan-modules-second-brain-docs.md](../..
 - [ ] Fixcity FO segnalazioni end-to-end su Sixteen
 - [ ] Zero nuovi `app/Services/` / `Modules/*/app/Services/`
 - [ ] Wiki moduli/temi con link GitHub in frontmatter
-- [ ] Issue [#372](https://github.com/laraxot/base_fixcity_fila5/issues/372) chiusa con STORY-350 completa
+- [ ] Issue [#372](https://github.com/laraxot/base_ptv_fila5/issues/372) chiusa con STORY-350 completa

@@ -14,6 +14,7 @@ use Modules\Xot\Filament\Resources\Pages\XotBasePage as ResourceXotBasePage;
 use Modules\Xot\Filament\Widgets\ModelTrendChartWidget;
 use Modules\Xot\Filament\Widgets\StatesChartWidget;
 use Modules\Xot\Models\Cache as CacheModel;
+use Modules\Xot\Tests\Fixtures\Stubs\XotResPageStub;
 use Modules\Xot\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 use ReflectionClass;
@@ -26,13 +27,6 @@ uses(TestCase::class)->group('no-xot-db');
 afterEach(function (): void {
     Mockery::close();
 });
-
-final class XotResPageStub extends ResourceXotBasePage
-{
-    protected string $view = 'xot::filament.pages.stub';
-
-    public static ?string $model = CacheModel::class;
-}
 
 describe('Xot chart widgets and resource page', function (): void {
     test('StatesChartWidget getData getHeading getType su sqlite', function (): void {

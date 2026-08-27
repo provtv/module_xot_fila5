@@ -58,7 +58,7 @@ class TicketForm extends XotBaseResourceForm {
 **Advantages:**
 
 ### 1. LangServiceProvider Integration (NO `->label()`)
-- All translations centralized in `fixcity::segnalazione.*` language files
+- All translations centralized in `ptv::segnalazione.*` language files
 - No `->label()` or `->tooltip()` in module code
 - Single source of truth for all translations
 - Easy to add new languages (it, en, etc.)
@@ -66,7 +66,7 @@ class TicketForm extends XotBaseResourceForm {
 ### 2. Wizard-Ready Architecture
 - `getSteps()` returns `array<int, Step>`
 - `getStepByName()` dynamically resolves steps via `Str::of()` transformation
-- Lang keys auto-generated: `fixcity::ticket-resource.steps.privacy.label`
+- Lang keys auto-generated: `ptv::ticket-resource.steps.privacy.label`
 - Supports multi-step flows out of the box
 
 ### 3. XotBaseResourceForm Provides Common Logic
@@ -102,8 +102,8 @@ public static function getSummarySchema(): array {
 
 ### 5. SafeStringCastAction for Translation Casting
 ```php
-Section::make(SafeStringCastAction::cast(__('fixcity::segnalazione.fields.place.section.label')))
-    ->description(SafeStringCastAction::cast(__('fixcity::segnalazione.sections.place.description')))
+Section::make(SafeStringCastAction::cast(__('ptv::segnalazione.fields.place.section.label')))
+    ->description(SafeStringCastAction::cast(__('ptv::segnalazione.sections.place.description')))
 ```
 
 ### 6. Dynamic Values with Get $get / Set $set

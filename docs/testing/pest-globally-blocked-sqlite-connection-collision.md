@@ -60,7 +60,7 @@ Verificato anche: **zero** usi di `DB::connection('sqlite')` fuori da `tests/`
 in tutto `Modules/` — la connessione `sqlite` esiste **esclusivamente** per il
 pattern "fixture condivisa" (`Rating`/`Xot`/`Cms`/`HR`/... `TestCase::setUp()`
 sovrascrive `database.connections.sqlite.database` con
-`database_path('fixcity_data.sqlite')` a runtime). Nessun rischio per codice
+`database_path('ptv_data.sqlite')` a runtime). Nessun rischio per codice
 di produzione.
 
 ### Fix
@@ -78,7 +78,7 @@ reale — ma deve esistere come file, vedi Causa 2).
 // DOPO
 // Non usare env('DB_DATABASE'): quella env var e' la connessione
 // primaria (mysql/mariadb). I test la sovrascrivono sempre a runtime
-// con la fixture condivisa (fixcity_data.sqlite).
+// con la fixture condivisa (ptv_data.sqlite).
 'database' => database_path('database.sqlite'),
 ```
 

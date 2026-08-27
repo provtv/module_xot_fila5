@@ -3,9 +3,9 @@ title: "Confronto composer root FixCity vs Predict"
 type: raw-note
 module: Xot
 created: 2026-06-30
-tags: [composer, nwidart, laravel-modules, fixcity, predict]
+tags: [composer, nwidart, laravel-modules, ptv, predict]
 source:
-  - /var/www/_bases/base_fixcity_fila5/laravel/composer.json
+  - /var/www/_bases/base_ptv_fila5/laravel/composer.json
   - /var/www/_bases/base_predict_fila5/laravel/composer.json
 ---
 
@@ -13,7 +13,7 @@ source:
 
 ## Osservazione FixCity
 
-FixCity (`base_fixcity_fila5/laravel/composer.json`) e' il riferimento storico nwidart:
+FixCity (`base_ptv_fila5/laravel/composer.json`) e' il riferimento storico nwidart:
 
 - `require`: `php`, `laravel/framework`, `nwidart/laravel-modules`
 - merge solo `Modules/*/composer.json`

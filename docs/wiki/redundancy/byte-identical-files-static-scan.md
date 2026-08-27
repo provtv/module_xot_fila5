@@ -12,8 +12,8 @@ related:
   - ./xotbase-pattern-abuse.md
   - ../../../../../../docs/wiki/concepts/code-redundancy-audit.md
 issues:
-  - "https://github.com/laraxot/base_fixcity_fila5/issues/89"
-  - "https://github.com/laraxot/base_fixcity_fila5/issues/90"
+  - "https://github.com/laraxot/base_ptv_fila5/issues/89"
+  - "https://github.com/laraxot/base_ptv_fila5/issues/90"
 ---
 
 # Ridondanza: contenuto identico (byte-equal) distribuito su più owner
@@ -67,6 +67,6 @@ Stesso contenuto tra **`Themes/Sixteen/.../components/ui/placeholder.blade.php`*
 
 ## Tracker
 
-Issue di riferimento: [#89](https://github.com/laraxot/base_fixcity_fila5/issues/89), [#90](https://github.com/laraxot/base_fixcity_fila5/issues/90).
+Issue di riferimento: [#89](https://github.com/laraxot/base_ptv_fila5/issues/89), [#90](https://github.com/laraxot/base_ptv_fila5/issues/90).
 
 Hub cross-cutting modulo: [`ridondanze-cross-cutting-codebase.md`](../concepts/ridondanze-cross-cutting-codebase.md). Glossario rumorosità / merge-marker doc: [`audit-profondo-ridondanze-holistic.md`](./audit-profondo-ridondanze-holistic.md).

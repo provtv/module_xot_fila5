@@ -19,7 +19,7 @@ class ListSessions extends XotBaseListRecords
     /**
      * @return array<int, Stack>
      */
-    #[\Override]
+    //#[\Override]
     public function getGridTableColumns(): array
     {
         return [

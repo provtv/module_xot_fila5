@@ -6,9 +6,9 @@ created: 2026-06-12
 updated: 2026-06-12
 qmd: "Xot env testing parity CreatesApplication sync-env-testing DB_DATABASE _test"
 issues:
-  - "https://github.com/laraxot/base_fixcity_fila5/issues/364"
+  - "https://github.com/laraxot/base_ptv_fila5/issues/364"
 discussions:
-  - "https://github.com/laraxot/base_fixcity_fila5/discussions/365"
+  - "https://github.com/laraxot/base_ptv_fila5/discussions/365"
 related:
   - ../../testing/mysql-only-testing-rule.md
   - ../../../../docs/TESTING-ARCHITECTURE.md
@@ -50,7 +50,7 @@ APP_ENV=testing ./vendor/bin/pest Modules/Geo/tests/Unit/Enums/EnumsTest.php
 
 | Principio | Effetto |
 |-----------|---------|
-| **Dati sacri** | I test non scrivono mai su `fixcity_data` — solo su `fixcity_data_test` |
+| **Dati sacri** | I test non scrivono mai su `ptv_data` — solo su `ptv_data_test` |
 | **Parità engine** | Stesso MySQL/MariaDB del dev — niente SQLite che maschera bug SQL |
 | **DRY** | Un `.env` da curare; `.env.testing` è derivato, non seconda fonte di verità |
 | **Tenant dinamico** | `TenantServiceProvider` legge `DB_DATABASE*` dall'env — copia totale tranne nomi DB |

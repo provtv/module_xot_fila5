@@ -167,11 +167,11 @@ public function submit(): void
         
     } catch (\Throwable $e) {
         // Gestione errore (user-friendly, NO Log::error)
-        $message = (string) __('fixcity::create_ticket_wizard.notifications.submit_failed.body');
+        $message = (string) __('ptv::create_ticket_wizard.notifications.submit_failed.body');
         $this->addError('data.submit', $message);
         
         Notification::make()
-            ->title((string) __('fixcity::create_ticket_wizard.notifications.submit_failed.title'))
+            ->title((string) __('ptv::create_ticket_wizard.notifications.submit_failed.title'))
             ->body($message)
             ->danger()
             ->send();
