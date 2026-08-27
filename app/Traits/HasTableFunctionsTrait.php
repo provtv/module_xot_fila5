@@ -11,7 +11,7 @@ use Filament\Tables\Columns\TextColumn;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Collection;
 
-/** @phpstan-ignore trait.unused */
+
 trait HasTableFunctionsTrait
 {
     /**

@@ -1,3 +1,19 @@
+---
+title: 'laravel_mix'
+module: Xot
+type: reference
+slug: laravel-mix
+description: '<!-- Contenuto migrato da _docs/laravel_mix.txt -->'
+tags: [migrato-da-txt, xot]
+converted_from: laravel_mix.txt
+created: 2026-08-24
+updated: 2026-08-24
+---
+
+# laravel_mix
+
+<!-- Contenuto migrato da _docs/laravel_mix.txt -->
+
 //-------------------------------------------------------------------------------------
 Use Laravel Mix without Laravel (using npm)
 https://dev.to/nickfrosty/use-laravel-mix-without-laravel-using-npm-m09

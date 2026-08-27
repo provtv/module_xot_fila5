@@ -153,8 +153,8 @@ Ma non ASSUMERE. VERIFICA sempre:
 ## Documentazione Futura
 
 Questo errore DEVE essere ricordato in:
-- ✅ [Questo file](ERROR-ANALYSIS-HELPERS-CAPITALIZATION.md) (LETTO SEMPRE prima di rinominare cartelle)
-- ✅ [ANALYSIS-CAPITALIZED-FOLDERS-METADATA.md](ANALYSIS-CAPITALIZED-FOLDERS-METADATA.md) - Aggiornato con warning
+- ✅ [Questo file](error-analysis-helpers-capitalization.md) (LETTO SEMPRE prima di rinominare cartelle)
+- ✅ [ANALYSIS-CAPITALIZED-FOLDERS-METADATA.md](analysis-capitalized-folders-metadata.md) - Aggiornato con warning
 - ✅ Memory system: saved `feedback_capitalized_folders_analysis.md`
 - ✅ Questo commento nei prossimi refactor
 

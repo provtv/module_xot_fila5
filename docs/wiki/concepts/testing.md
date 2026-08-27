@@ -40,4 +40,4 @@ php -d memory_limit=2048M ./vendor/bin/phpstan analyse Modules
 
 - PHPStan piattaforma: ✅ (hub owner documentazione)
 - [platform-completion-roadmap](../overviews/platform-completion-roadmap.md)
-- [PHPSTAN-BEST-PRACTICES](../PHPSTAN-BEST-PRACTICES.md)
+- [PHPSTAN-BEST-PRACTICES](../phpstan-best-practices.md)

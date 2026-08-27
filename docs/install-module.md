@@ -1,3 +1,19 @@
+---
+title: 'install_module'
+module: Xot
+type: reference
+slug: install-module
+description: '<!-- Contenuto migrato da _docs/install_module.txt -->'
+tags: [migrato-da-txt, xot]
+converted_from: install_module.txt
+created: 2026-08-24
+updated: 2026-08-24
+---
+
+# install_module
+
+<!-- Contenuto migrato da _docs/install_module.txt -->
+
  public function test(){
 
         $vendor_name='laraxot/module_formx';

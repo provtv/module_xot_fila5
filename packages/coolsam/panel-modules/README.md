@@ -610,7 +610,7 @@ composer test
 
 ## Changelog
 
-Please see [CHANGELOG](changelog.md) for more information on what has changed recently.
+Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
 
 ## Contributing
 
@@ -627,4 +627,4 @@ Please review [our security policy](../../security/policy) on how to report secu
 
 ## License
 
-The MIT License (MIT). Please see [License File](license.md) for more information.
+The MIT License (MIT). Please see [License File](LICENSE.md) for more information.

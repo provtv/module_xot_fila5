@@ -71,7 +71,7 @@ Regole anti-ridondanza Filament progetto:
 
 ### Wizard Filament dopo refactor (`HasWizard`)
 
-Wizard widget Laraxot: **SSoT contenuti** **[filament-wizard-refactoring.md](../filament-wizard-refactoring.md)** — uso di **`Filament\Resources\Pages\Concerns\HasWizard`** su `XotBaseWizardWidget`; **[XotBaseWizardWidget-HasWizard-refactor.md](../XotBaseWizardWidget-HasWizard-refactor.md)** resta puntatore storico.
+Wizard widget Laraxot: **SSoT contenuti** **[filament-wizard-refactoring.md](../filament-wizard-refactoring.md)** — uso di **`Filament\Resources\Pages\Concerns\HasWizard`** su `XotBaseWizardWidget`; **[XotBaseWizardWidget-HasWizard-refactor.md](../xotbasewizardwidget-haswizard-refactor.md)** resta puntatore storico.
 
 Argomento concettuale (studio vendor — filtrare con SSoT sopra):
 

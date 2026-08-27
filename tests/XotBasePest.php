@@ -110,11 +110,18 @@ final class XotBasePest
     /**
      * Narrowing di un `mixed` ad array tipizzato, senza cast ciechi.
      *
+     * Stesso schema di `assertString()`: `Assert::fail()` è dichiarato `never`, quindi
+     * PHPStan restringe davvero il tipo. `assertNotEmpty()` non restringe niente e in
+     * più **rifiuta un array vuoto legittimo**: un `flattenArray([])` che torna `[]` è
+     * il risultato giusto, non un fallimento.
+     *
      * @return array<string, mixed>
      */
     public static function assertArray(mixed $value): array
     {
-        Assert::assertNotEmpty($value);
+        if (! \is_array($value)) {
+            Assert::fail('Expected array, got '.get_debug_type($value).'.');
+        }
 
         /** @var array<string, mixed> $value */
         return $value;

@@ -152,7 +152,7 @@ Il modulo Xot ha raggiunto la piena conformità PHPStan Level 10 senza compromes
 4.  **Dashboard Health Check**: Introdurre una dashboard per monitorare lo stato di salute e la compliance di tutti i moduli.
 
 ## 🔗 **Link Utili**
-- [CHANGELOG](./changelog.md)
+- [CHANGELOG](./CHANGELOG.md)
 - [Guida alla Risoluzione dei Conflitti Git](../../../bashscripts/docs/git-conflict-resolution-guide.md)
 - [Convenzioni sui Namespace](./namespace_conventions.md)
 - [Linee Guida per il Testing](./testing.md)

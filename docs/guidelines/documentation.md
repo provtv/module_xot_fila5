@@ -161,7 +161,7 @@ php artisan api:generate
 
 - [Convenzioni di Codice](README.md)
 - [Architettura](../architecture/readme.md)
-- [Best Practices](../best-practices/readme.md)
+- [Best Practices](../best-practices/README.md)
 - [Markdown Guide](https://www.markdownguide.org)
 
 ## Collegamenti tra versioni di documentation.md

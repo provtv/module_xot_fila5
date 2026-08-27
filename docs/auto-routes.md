@@ -1,3 +1,19 @@
+---
+title: 'auto_routes'
+module: Xot
+type: reference
+slug: auto-routes
+description: '<!-- Contenuto migrato da _docs/auto_routes.txt -->'
+tags: [migrato-da-txt, xot]
+converted_from: auto_routes.txt
+created: 2026-08-24
+updated: 2026-08-24
+---
+
+# auto_routes
+
+<!-- Contenuto migrato da _docs/auto_routes.txt -->
+
 /it/tests
 va a prendere il modello "home" e vede se esiste la relazione "tests" se esiste usa quelle, altrimenti
 va a prendere il "singolar" di tests e va nel solito file xra.php

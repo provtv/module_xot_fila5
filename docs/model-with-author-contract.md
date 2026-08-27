@@ -47,7 +47,7 @@ interface ModelWithAuthorContract extends ModelContract
 - [PHPStan Level 9 Guide](../phpstan-level9-guide.md)
 - [PHPStan Level 9 Guide](../phpstan-level9-guide.md)
 - [PHPStan Level 9 Guide](../phpstan-level9-guide.md)
-- [Contracts Overview](./readme.md)
+- [Contracts Overview](./README.md)
 - [Documentazione root](../../../../docs/phpstan-fixes-summary.md)
 
     $table->foreign('deleter_id')->references('id')->on('users');

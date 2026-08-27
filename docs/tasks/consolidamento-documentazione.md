@@ -25,4 +25,4 @@ Nessuna.
 
 - [Roadmap Xot](roadmap.md)
 - [Lista task Xot](tasks-index.md)
-- [README Xot](../readme.md)
+- [README Xot](../README.md)

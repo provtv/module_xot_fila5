@@ -108,7 +108,7 @@ protected function getOptions(): array
 
 - [Guida Completa Chart Module](../../chart/docs/chartjs-datalabels-multiple-labels-complete-guide.md) (include riferimento ufficiale [Doughnut sample](https://github.com/chartjs/chartjs-plugin-datalabels/blob/master/docs/samples/charts/doughnut.md))
 - [Simple08ChartWidget Doughnut (healthcare_app)](../../healthcare_app/docs/simple08chartwidget-doughnut-distribution.md)
-- [XotBaseChartWidget Documentation](../readme.md)
+- [XotBaseChartWidget Documentation](../README.md)
 
 ---
 

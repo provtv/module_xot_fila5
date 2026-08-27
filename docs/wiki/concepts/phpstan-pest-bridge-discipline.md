@@ -112,7 +112,7 @@ story `4.2.xot-expect-to-assert-and-coverage`.
 - **Fixcity:** helper `ticket()`, `authUser()`, … — [phpstan-pest-testcase-helpers](../../../Fixcity/docs/wiki/concepts/phpstan-pest-testcase-helpers.md); `PestHelper.php` tipizzato
 - **Notify:** `notificationManager()` + trait doubles — [phpstan-pest-test-doubles](../../../Notify/docs/wiki/concepts/phpstan-pest-test-doubles.md)
 - **Xot:** test File — no `@var TestCase $this` se la closure non usa `$this`; no `assertIsString(tempnam())`
-- **Xot Blade:** `RegisterBladeComponentsActionTest` — `Assert::assertSame` sul count collection; Mockery `allows(['execute' => …])` + `@var Action&MockInterface`; no `expect()->toBe*` se PHPStan emette `method.internalClass` (vedi [PHPSTAN-BEST-PRACTICES](../PHPSTAN-BEST-PRACTICES.md) §7–8)
+- **Xot Blade:** `RegisterBladeComponentsActionTest` — `Assert::assertSame` sul count collection; Mockery `allows(['execute' => …])` + `@var Action&MockInterface`; no `expect()->toBe*` se PHPStan emette `method.internalClass` (vedi [PHPSTAN-BEST-PRACTICES](../phpstan-best-practices.md) §7–8)
 - **Tenant:** non ridefinire `mockService()`; non re-tipizzare `$model`/`$baseModel` se il parent ha `mixed`
 - **UI:** `createStub` + `willReturn(null)` per action mock; no `andReturnNull()` Mockery
 

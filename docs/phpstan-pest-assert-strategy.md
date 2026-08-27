@@ -83,3 +83,52 @@ Errori come `Method TestStub::foo() return type does not specify generics`:
 - Da 24,494 a **0 pure production errors**
 - 503 file convertiti su 10 moduli
 - 19 test-stub context errors residui (accettabili)
+
+## `assertNotEmpty()` non è una guardia di tipo (27 agosto 2026)
+
+`XotBasePest::assertArray()` era scritto così:
+
+```php
+public static function assertArray(mixed $value): array
+{
+    Assert::assertNotEmpty($value);
+
+    /** @var array<string, mixed> $value */
+    return $value;
+}
+```
+
+Due difetti in quattro righe:
+
+1. **Non prova che il valore sia un array.** `assertNotEmpty` passa su `'x'`, su `1`, su
+   un oggetto. Il `@var` sotto scavalca l'inferenza di PHPStan e dichiara un tipo che
+   nessuno ha verificato — esattamente ciò che la regola del progetto vieta.
+2. **Rifiuta un risultato vuoto legittimo.** `AnalyzeTranslationFilesTest`
+   (`flatten array handles empty array`) falliva con *«Failed asserting that an array is
+   not empty»* su un `flattenArray([])` che tornava correttamente `[]`.
+
+La forma corretta è quella già usata da `assertString()` nello stesso file: guardia
+esplicita più `Assert::fail()`, che ha `never` come tipo di ritorno **nativo**, quindi
+PHPStan restringe davvero.
+
+```php
+public static function assertArray(mixed $value): array
+{
+    if (! \is_array($value)) {
+        Assert::fail('Expected array, got '.get_debug_type($value).'.');
+    }
+
+    /** @var array<string, mixed> $value */
+    return $value;
+}
+```
+
+Il `@var` resta, ma ora fa solo il passo da `array` ad `array<string, mixed>`: raffina
+le chiavi, non inventa il tipo.
+
+**Quando un helper condiviso fallisce, chiedersi se sbaglia il test o l'helper.** Un test
+che verifica il caso vuoto e un helper che rifiuta il vuoto non possono avere ragione
+entrambi. E **allentare** il contratto di un helper (da «non vuoto» a «è un array») non
+rompe nessuno dei suoi 50 chiamanti; irrigidirlo li avrebbe rotti tutti.
+
+Verifica dopo la modifica: `phpstan analyse Modules/Xot Modules/Notify` → `[OK] No errors`.

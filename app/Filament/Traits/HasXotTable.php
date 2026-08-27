@@ -90,10 +90,8 @@ trait HasXotTable
     public function getXotTableHeaderActions(): array
     {
         $resource = $this;
-        /* @phpstan-ignore-next-line */
         if ($this instanceof ListRecords) {
             $resourceClass = $this->getResource();
-            // @phpstan-ignore-next-line staticMethod.alreadyNarrowedType
             Assert::string($resourceClass);
             $resource = app($resourceClass);
         }
@@ -214,7 +212,7 @@ trait HasXotTable
             ->heading($this->getXotTableHeading())
             ->columns($this->layoutView->getTableColumns(array_values($this->resolveTableColumnsForXotTable()), $this->getGridTableColumns()))
             ->contentGrid($this->layoutView->getTableContentGrid())
-            ->filters($this->getXotTableFilters()) // @phpstan-ignore argument.type
+            ->filters($this->getXotTableFilters())
             ->filtersLayout(FiltersLayout::AboveContent)
             ->filtersFormColumns($this->getTableFiltersFormColumns())
             ->persistFiltersInSession()
@@ -277,31 +275,25 @@ trait HasXotTable
 
         $actions = [];
         $resource = $this;
-        /* @phpstan-ignore-next-line */
         if ($this instanceof ListRecords) {
             $resourceClass = $this->getResource();
-            // @phpstan-ignore-next-line staticMethod.alreadyNarrowedType
             Assert::string($resourceClass);
             $resource = app($resourceClass);
         }
-        // @phpstan-ignore-next-line staticMethod.alreadyNarrowedType
         Assert::object($resource);
 
-        // @phpstan-ignore-next-line function.alreadyNarrowedType,method.notFound
         if (method_exists($resource, 'canView')) {
             $actions['view'] = ViewAction::make()
                 ->iconButton()
                 ->visible(static fn (Model $record): bool => (bool) $resource->canView($record));
         }
 
-        // @phpstan-ignore-next-line function.alreadyNarrowedType,method.notFound
         if (method_exists($resource, 'canEdit')) {
             $actions['edit'] = EditAction::make()
                 ->iconButton()
                 ->visible(static fn (Model $record): bool => (bool) $resource->canEdit($record));
         }
 
-        // @phpstan-ignore-next-line function.alreadyNarrowedType,method.notFound
         if (method_exists($resource, 'canDelete')) {
             $actions['delete'] = DeleteAction::make()
                 ->iconButton()
@@ -315,9 +307,7 @@ trait HasXotTable
 
         // Check if class has the getRelationship method
         // Note: In some contexts (ListRecords), getRelationship() may not exist
-        // @phpstan-ignore-next-line function.alreadyNarrowedType,method.notFound (needed for contexts where method doesn't exist)
         if ($this->shouldShowDetachAction() && method_exists($this, 'getRelationship')) {
-            /** @phpstan-ignore-next-line method.notFound */
             $relationship = $this->getRelationship();
 
             if ($relationship instanceof BelongsToMany) {
@@ -361,7 +351,6 @@ trait HasXotTable
      */
     public function getModelClass(): string
     {
-        /* @phpstan-ignore-next-line function.alreadyNarrowedType */
         if (method_exists($this, 'getModel')) {
             $model = $this->getModel();
             Assert::classExists($model);

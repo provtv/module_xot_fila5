@@ -229,7 +229,7 @@ discussions:
 ## [2026-06-13] docs | Hub platform-completion-roadmap + gate PHPStan zero
 
 - Creato [overviews/platform-completion-roadmap.md](overviews/platform-completion-roadmap.md) — SSoT completamento 16 moduli + 4 temi.
-- Aggiornati [PHPSTAN-BEST-PRACTICES.md](PHPSTAN-BEST-PRACTICES.md), [phpstan-pest-bridge-discipline.md](concepts/phpstan-pest-bridge-discipline.md).
+- Aggiornati [PHPSTAN-BEST-PRACTICES.md](phpstan-best-practices.md), [phpstan-pest-bridge-discipline.md](concepts/phpstan-pest-bridge-discipline.md).
 - Fix test: `FileActionsTest`, `GetClassNameByPathActionTest` (pattern `@var` / `assertIsString`).
 - Base [#372](https://github.com/laraxot/base_ptv_fila5/issues/372).
 
@@ -323,7 +323,7 @@ discussions:
 ## [2026-05-22] docs | DRY second brain + merge doc wizard HasWizard
 
 - **`second-brain-local-discipline`:** solo [`concepts/second-brain-local-discipline.md`](concepts/second-brain-local-discipline.md) mantiene il corpo; negli altri nove moduli stesso basename → stub puntatore canonica.
-- **Wizard refactor:** contenuto consolidato in [`filament-wizard-refactoring.md`](filament-wizard-refactoring.md); [`XotBaseWizardWidget-HasWizard-refactor.md`](XotBaseWizardWidget-HasWizard-refactor.md) ridotto a stub (permalink storici).
+- **Wizard refactor:** contenuto consolidato in [`filament-wizard-refactoring.md`](filament-wizard-refactoring.md); [`XotBaseWizardWidget-HasWizard-refactor.md`](xotbasewizardwidget-haswizard-refactor.md) ridotto a stub (permalink storici).
 - Hub aggiornato: [`concepts/ridondanze-cross-cutting-codebase.md`](concepts/ridondanze-cross-cutting-codebase.md).
 
 ## [2026-05-21] docs | inventario ridondanze codebase + scaffold docs

@@ -79,7 +79,7 @@ php artisan xot:status
 
 ---
 
-**📖 [Docs](docs/readme.md)** · **🏗️ [Architettura](docs/conventions/readme.md)** · **✅ [PHPStan](docs/standards/readme.md)** · **🤝 Contribuisci seguendo le [best practices](docs/best-practices/readme.md)**
+**📖 [Docs](docs/README.md)** · **🏗️ [Architettura](docs/conventions/README.md)** · **✅ [PHPStan](docs/standards/README.md)** · **🤝 Contribuisci seguendo le [best practices](docs/best-practices/README.md)**
 
 ---
 

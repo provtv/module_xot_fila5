@@ -51,4 +51,4 @@ Motivo dei doc vecchi/confusi: in passato si parlava davvero **senza `use`** (im
 
 ## Stub storico nome `HasWizard`
 
-[`XotBaseWizardWidget-HasWizard-refactor.md`](./XotBaseWizardWidget-HasWizard-refactor.md) rimane puntatore permalink esterno → questa pagina.
+[`XotBaseWizardWidget-HasWizard-refactor.md`](./xotbasewizardwidget-haswizard-refactor.md) rimane puntatore permalink esterno → questa pagina.

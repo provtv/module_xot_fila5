@@ -142,7 +142,7 @@ Il comando `GenerateFilamentResources` genera automaticamente resources per tutt
 ## Collegamenti e Riferimenti
 
 - [XotBasePage getModel() Fix](./xotbasepage-getmodel-fix.md)
-- [Architettura Laraxot](../readme.md)
+- [Architettura Laraxot](../README.md)
 - [Comando GenerateFilamentResources](../../app/Console/Commands/GenerateFilamentResources.php)
 - [Documentazione Filament](https://filamentphp.com/docs)
 

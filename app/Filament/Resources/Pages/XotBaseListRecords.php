@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Filament\Resources\Pages;
 
+use Modules\Xot\Filament\Traits\HasXotTable;
+use Webmozart\Assert\Assert;
 use Filament\Actions\Action;
 use Filament\Actions\ActionGroup;
 use Filament\Actions\CreateAction;
@@ -15,8 +17,6 @@ use Illuminate\Support\Str;
 use Modules\UI\Enums\TableLayoutEnum;
 use Modules\Xot\Actions\ModelClass\UpdateCountAction;
 use Modules\Xot\Filament\Resources\XotBaseResource;
-use Modules\Xot\Filament\Traits\HasXotTable;
-use Webmozart\Assert\Assert;
 
 /**
  * Base class for list records pages.
@@ -28,7 +28,7 @@ use Webmozart\Assert\Assert;
  */
 abstract class XotBaseListRecords extends FilamentListRecords
 {
-    // use HasXotTable;
+    use HasXotTable;
 
     /**
      * @param array<string, bool|float|int|string|null> $params

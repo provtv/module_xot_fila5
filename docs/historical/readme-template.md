@@ -256,7 +256,7 @@ php artisan test --filter=[NomeModulo]
 
 ## Changelog
 
-Consultare il [CHANGELOG](changelog.md) per informazioni sulle modifiche recenti.
+Consultare il [CHANGELOG](CHANGELOG.md) per informazioni sulle modifiche recenti.
 
 ## Licenza
 

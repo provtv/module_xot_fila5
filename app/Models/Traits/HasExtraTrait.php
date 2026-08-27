@@ -23,7 +23,7 @@ use Webmozart\Assert\Assert;
  * @property int                $qty
  * @property ExtraContract|null $extra
  */
-/** @phpstan-ignore trait.unused */
+
 trait HasExtraTrait
 {
     /**

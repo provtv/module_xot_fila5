@@ -20,7 +20,6 @@ use Spatie\SchemalessAttributes\SchemalessAttributes;
  *
  * @see https://github.com/spatie/laravel-schemaless-attributes
  *
- * @phpstan-ignore trait.unused
  */
 trait HasSchemalessAttributes
 {
