@@ -5,6 +5,7 @@ topic: merges-census
 canonical: ../../../Themes/docs/shared-components/merge-conflicts-census.md
 ---
 
+<<<<<<< .merge_file_IbcQBZ
 See canonical documentation: ../../../Themes/docs/shared-components/merge-conflicts-census.md
 =======
 # Censimento File con Marker
@@ -89,3 +90,6 @@ Aggiornare questa sezione (o il changelog del modulo) man mano che i file vengon
 - Documentare eventuali decisioni o esclusioni (es. backup da archiviare)
 - Mantenere copia “prima/dopo” se i contenuti hanno valore storico
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/merge-conflicts-census.md
+>>>>>>> .merge_file_UWBmfQ

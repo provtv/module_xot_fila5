@@ -5,6 +5,7 @@ topic: firstorcreate-race-condition
 canonical: ../../../Themes/docs/shared-components/firstorcreate-race-condition-fix.md
 ---
 
+<<<<<<< .merge_file_5IAcLt
 See canonical documentation: ../../../Themes/docs/shared-components/firstorcreate-race-condition-fix.md
 =======
 # Fix Race Condition firstOrCreate con UUID - [DATE]
@@ -179,3 +180,6 @@ expect($profileA->id)->toBe($profileB->id);
 **Ultimo aggiornamento**: [DATE]  
 **Status**: ✅ Completato
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/firstorcreate-race-condition-fix.md
+>>>>>>> .merge_file_HjPiDR

@@ -1,4 +1,7 @@
+<<<<<<< .merge_file_xnbOQb
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_qsxqCT
 ---
 title: "Convenzioni di Nomenclatura in <nome progetto>"
 module: xot
@@ -8,8 +11,11 @@ created: 2026-08-24
 updated: 2026-08-24
 ---
 
+<<<<<<< .merge_file_xnbOQb
 =======
 >>>>>>> laraxot/master
+=======
+>>>>>>> .merge_file_qsxqCT
 # Convenzioni di Nomenclatura in <nome progetto>
 
 Questo documento definisce le convenzioni ufficiali di nomenclatura da utilizzare in tutto il progetto <nome progetto>.

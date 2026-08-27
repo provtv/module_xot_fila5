@@ -5,6 +5,7 @@ topic: serviceprovider-commons
 canonical: ../../../Themes/docs/shared-components/serviceprovider-common-errors.md
 ---
 
+<<<<<<< .merge_file_RkweC5
 See canonical documentation: ../../../Themes/docs/shared-components/serviceprovider-common-errors.md
 =======
 # ServiceProvider Common Errors - Lessons Learned
@@ -212,3 +213,6 @@ Prima di creare un ServiceProvider:
 
 **Principio KISS**: Mantenere semplice, aggiungere complessità solo quando necessario.
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/serviceprovider-common-errors.md
+>>>>>>> .merge_file_6zCA09

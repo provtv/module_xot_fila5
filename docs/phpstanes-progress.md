@@ -5,6 +5,7 @@ topic: phpstanes-progress
 canonical: ../../../Themes/docs/shared-components/phpstan-fixes-progress.md
 ---
 
+<<<<<<< .merge_file_PZB0sb
 See canonical documentation: ../../../Themes/docs/shared-components/phpstan-fixes-progress.md
 =======
 # PHPStan Fixes Progress - Modulo Xot
@@ -215,3 +216,6 @@ foreach ($data as $item) { }
 **Status**: 🔄 In Progress (65.3% completato)
 **Prossimo target**: ModuleServiceIntegrationTest.php → 0 errori
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/phpstan-fixes-progress.md
+>>>>>>> .merge_file_XppvFw

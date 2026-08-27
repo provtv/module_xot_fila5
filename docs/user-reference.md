@@ -5,6 +5,7 @@ topic: user-reference
 canonical: ../../../Themes/docs/shared-components/user-reference-pattern.md
 ---
 
+<<<<<<< .merge_file_i0DJx5
 See canonical documentation: ../../../Themes/docs/shared-components/user-reference-pattern.md
 =======
 # Pattern per Riferimenti User - Laraxot
@@ -233,3 +234,6 @@ if ($user instanceof UserContract) {
 
 *Ultimo aggiornamento: [DATE]*
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/user-reference-pattern.md
+>>>>>>> .merge_file_3xLkBf

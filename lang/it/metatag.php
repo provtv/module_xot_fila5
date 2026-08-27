@@ -56,6 +56,7 @@ return [
         'first_name' => ['label' => 'Nome', 'tooltip' => '', 'helper_text' => '', 'description' => ''],
         'last_name' => ['label' => 'Cognome', 'tooltip' => '', 'helper_text' => '', 'description' => ''],
         'select_all' => ['name' => 'Seleziona Tutti', 'message' => '', 'label' => '', 'tooltip' => '', 'helper_text' => '', 'description' => ''],
+<<<<<<< .merge_file_u1BTAF
     ],
     'actions' => [
         'import' => [
@@ -272,7 +273,26 @@ return [
             'duplicate_title' => 'Meta title duplicato',
             'invalid_canonical' => 'URL canonico non valido',
             'oversized_image' => 'Immagine social troppo grande',
-        ],
+=======
     ],
+    'actions' => [
+        'import' => [
+            'fields' => ['import_file' => 'Seleziona un file XLS o CSV da caricare'],
+        ],
+        'export' => [
+            'filename_prefix' => 'Aree al',
+            'columns' => ['name' => 'Nome area', 'parent_name' => 'Nome area livello superiore'],
+>>>>>>> .merge_file_lZlYeN
+        ],
+        'save' => ['label' => 'save', 'icon' => 'save', 'tooltip' => 'save'],
+    ],
+<<<<<<< .merge_file_u1BTAF
 >>>>>>> laraxot/master
+=======
+    'label' => 'Metatag',
+    'plural_label' => 'Metatag (Plurale)',
+    'title' => 'metatag',
+    'test' => 'metatag',
+    'plural' => ['label' => 'metatag.plural'],
+>>>>>>> .merge_file_lZlYeN
 ];

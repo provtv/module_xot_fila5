@@ -5,6 +5,7 @@ topic: safe-float-cast-usage
 canonical: ../../../Themes/docs/shared-components/safe-float-cast-usage.md
 ---
 
+<<<<<<< .merge_file_cYICfc
 See canonical documentation: ../../../Themes/docs/shared-components/safe-float-cast-usage.md
 =======
 # Esempi Pratici di Utilizzo di SafeFloatCastAction
@@ -455,3 +456,6 @@ class Product extends BaseModel
 
 *Ultimo aggiornamento: [DATE]*
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/safe-float-cast-usage.md
+>>>>>>> .merge_file_bHqjXP

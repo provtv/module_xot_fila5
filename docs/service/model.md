@@ -330,9 +330,12 @@ foreach ((new ReflectionClass($model))->getMethods(ReflectionMethod::IS_PUBLIC) 
 * [model.md](../../../xot/project_docs/service/model.md)
 
 ```
+<<<<<<< .merge_file_qODvWp
 =======
 * [model.md](../../../Xot/docs/model.md)
 * [model.md](../../../Xot/docs/service/model.md)
 >>>>>>> laraxot/master
+=======
+>>>>>>> .merge_file_BOF3UL
 
 ```

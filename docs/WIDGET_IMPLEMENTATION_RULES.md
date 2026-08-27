@@ -1,8 +1,13 @@
+<<<<<<< .merge_file_mbOn4n
 <<<<<<< HEAD
 > **SSoT minuscolo:** [widget-implementation-rules.md](./widget-implementation-rules.md). Questo file viola la convenzione dei nomi (maiuscole). Non duplicare il contenuto: aggiorna solo il SSoT.
 
 =======
 >>>>>>> laraxot/master
+=======
+> **SSoT minuscolo:** [widget-implementation-rules.md](./widget-implementation-rules.md). Questo file viola la convenzione dei nomi (maiuscole). Non duplicare il contenuto: aggiorna solo il SSoT.
+
+>>>>>>> .merge_file_QkmArq
 # Widget Implementation Rules - Xot Module
 
 ## 🎯 Regole Fondamentali per Widget

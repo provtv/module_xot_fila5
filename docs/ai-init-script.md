@@ -5,6 +5,7 @@ topic: ai-init-script
 canonical: ../../../Themes/docs/shared-components/ai-init-script-fix.md
 ---
 
+<<<<<<< .merge_file_pQZhq7
 See canonical documentation: ../../../Themes/docs/shared-components/ai-init-script-fix.md
 =======
 # Aggiornamento Importante: ai_init.sh Script
@@ -43,3 +44,6 @@ file .ai .cursor .claude .windsurf .gemini
 
 Tutti dovrebbero mostrare "symbolic link to bashscripts/ai/..."
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/ai-init-script-fix.md
+>>>>>>> .merge_file_NR2oxr

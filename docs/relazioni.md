@@ -5,6 +5,7 @@ topic: relazioni
 canonical: ../../../Themes/docs/shared-components/relationships.md
 ---
 
+<<<<<<< .merge_file_iT4pP1
 See canonical documentation: ../../../Themes/docs/shared-components/relationships.md
 =======
 description:
@@ -44,3 +45,6 @@ Vedi la documentazione dettagliata in:
 - @Relazione utenti-tearelati
 - @Migrazioni del databarientadutea
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/relationships.md
+>>>>>>> .merge_file_Xl1Q0q

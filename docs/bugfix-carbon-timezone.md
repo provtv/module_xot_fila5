@@ -5,6 +5,7 @@ topic: bugfix-carbon-timezone
 canonical: ../../../Themes/docs/shared-components/bugfix-carbon-timezone-error.md
 ---
 
+<<<<<<< .merge_file_2Cn5O2
 See canonical documentation: ../../../Themes/docs/shared-components/bugfix-carbon-timezone-error.md
 =======
 # Bugfix: Carbon Timezone Error in XotServiceProvider
@@ -166,3 +167,6 @@ public function registerTimezone(): void
 *Ultimo aggiornamento: giugno 2025*
 *Risolto da: Windsurf AI Assistant*
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/bugfix-carbon-timezone-error.md
+>>>>>>> .merge_file_AcSOSQ

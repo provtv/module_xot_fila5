@@ -5,6 +5,7 @@ topic: file-locking
 canonical: ../../../Themes/docs/shared-components/file-locking-pattern.md
 ---
 
+<<<<<<< .merge_file_QGflPP
 See canonical documentation: ../../../Themes/docs/shared-components/file-locking-pattern.md
 =======
 # File Locking Pattern - Prevenzione Race Conditions
@@ -213,3 +214,6 @@ if (Redis::set("lock:$filepath", $metadata, 'EX', 3600, 'NX')) {
 - Pattern identificati e documentati
 - Script di esempio forniti
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/file-locking-pattern.md
+>>>>>>> .merge_file_5HOnRj

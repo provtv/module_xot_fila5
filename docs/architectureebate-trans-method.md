@@ -5,6 +5,7 @@ topic: architectureebate-trans-method
 canonical: ../../../Themes/docs/shared-components/architecture-debate-trans-method.md
 ---
 
+<<<<<<< .merge_file_pz5il7
 See canonical documentation: ../../../Themes/docs/shared-components/architecture-debate-trans-method.md
 =======
 # architecture debate: the trans method
@@ -66,3 +67,6 @@ related docs:
 - translation conventions remain centralized.
 - future filament upgrades are handled by adjusting xot once, not in every module.
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/architecture-debate-trans-method.md
+>>>>>>> .merge_file_iH5Gxc

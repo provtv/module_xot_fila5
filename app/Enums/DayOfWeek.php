@@ -10,10 +10,14 @@ use Filament\Support\Contracts\HasDescription;
 use Filament\Support\Contracts\HasIcon;
 use Filament\Support\Contracts\HasLabel;
 use Illuminate\Support\Collection;
+<<<<<<< .merge_file_0HEU4Y
 <<<<<<< HEAD
 use Modules\Xot\Traits\EnumTrait;
 =======
 >>>>>>> laraxot/master
+=======
+use Modules\Xot\Traits\EnumTrait;
+>>>>>>> .merge_file_cD1LPU
 
 /**
  * Enum per la gestione dei giorni della settimana.

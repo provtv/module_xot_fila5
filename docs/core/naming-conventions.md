@@ -343,8 +343,12 @@ parameters:
 
 <<<<<<< HEAD
 **Ultimo aggiornamento:** Gennaio 2025
+<<<<<<< .merge_file_iIDLCP
 **Versione:** 2.0 - Consolidata DRY + KISS
 =======
 **Ultimo aggiornamento:** Gennaio 2025  
 **Versione:** 2.0 - Consolidata DRY + KISS
 >>>>>>> laraxot/master
+=======
+**Versione:** 2.0 - Consolidata DRY + KISS
+>>>>>>> .merge_file_Q8tPPu

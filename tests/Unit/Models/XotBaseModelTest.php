@@ -10,6 +10,7 @@ use Modules\Xot\Traits\Updater;
 use PHPUnit\Framework\Assert;
 
 uses(TestCase::class)->group('no-xot-db');
+<<<<<<< .merge_file_i4D3SC
 =======
 use Tests\TestCase;
 use Illuminate\Database\Eloquent\Model;
@@ -18,6 +19,8 @@ use Modules\Xot\Traits\Updater;
 
 uses(TestCase::class);
 >>>>>>> laraxot/master
+=======
+>>>>>>> .merge_file_VMCa1e
 
 test('xot base model extends eloquent model', function (): void {
     $reflection = new ReflectionClass(XotBaseModel::class);
@@ -109,7 +112,10 @@ test('xot base model has correct property types', function (): void {
     $snakeType = $snakeAttributesProperty->getType();
     $perPageType = $perPageProperty->getType();
 
+<<<<<<< .merge_file_i4D3SC
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_VMCa1e
     if ($snakeType !== null) {
         Assert::assertInstanceOf(ReflectionNamedType::class, $snakeType);
         Assert::assertSame('bool', $snakeType->getName());

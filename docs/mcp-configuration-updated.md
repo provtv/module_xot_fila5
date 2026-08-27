@@ -181,8 +181,12 @@ The Xot module's MCP configuration enables AI assistants to interact with:
 
 **Module**: Xot (Foundation)
 **MCP Version**: 2.0.0
+<<<<<<< .merge_file_oLDEm8
 <<<<<<< HEAD
 **Last Review**: 31 Gennaio 2026
 =======
 **Last Review**: 31 Gennaio 2026
 >>>>>>> laraxot/master
+=======
+**Last Review**: 31 Gennaio 2026
+>>>>>>> .merge_file_D4FsyK

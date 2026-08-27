@@ -5,6 +5,7 @@ topic: 01-indexetails
 canonical: ../../../Themes/docs/shared-components/01-index-details.md
 ---
 
+<<<<<<< .merge_file_PevzDt
 See canonical documentation: ../../../Themes/docs/shared-components/01-index-details.md
 =======
 # Xot Module Documentation Index
@@ -50,3 +51,6 @@ See canonical documentation: ../../../Themes/docs/shared-components/01-index-det
 ---
 *
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/01-index-details.md
+>>>>>>> .merge_file_IThWtg

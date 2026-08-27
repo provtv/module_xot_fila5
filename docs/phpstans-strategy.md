@@ -5,6 +5,7 @@ topic: phpstans-strategy
 canonical: ../../../Themes/docs/shared-components/phpstan-errors-strategy.md
 ---
 
+<<<<<<< .merge_file_cY1xWm
 See canonical documentation: ../../../Themes/docs/shared-components/phpstan-errors-strategy.md
 =======
 # 🎯 **Strategia Correzione 406 Errori PHPStan Level 10**
@@ -278,3 +279,6 @@ Assert::notNull($value);
 **Ultimo aggiornamento**: 11 Novembre 2025
 **Progresso**: 9/406 errori risolti (2.2%)
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/phpstan-errors-strategy.md
+>>>>>>> .merge_file_4ZiVY4

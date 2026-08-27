@@ -272,7 +272,11 @@ WHERE s.active = 'Y';
 
 <<<<<<< HEAD
 These commands and tools provide comprehensive access to analyze, maintain, and optimize the healthcare_app_survey database used by the Limesurvey integration.
+<<<<<<< .merge_file_Mc4EoC
 These commands and tools provide comprehensive access to analyze, maintain, and optimize the app_survey database used by the Limesurvey integration.
 =======
 These commands and tools provide comprehensive access to analyze, maintain, and optimize the quaeris_survey database used by the Limesurvey integration.
 >>>>>>> laraxot/master
+=======
+These commands and tools provide comprehensive access to analyze, maintain, and optimize the app_survey database used by the Limesurvey integration.
+>>>>>>> .merge_file_8zf4NB

@@ -5,6 +5,7 @@ topic: user-reference-corrections
 canonical: ../../../Themes/docs/shared-components/user-reference-corrections-sumy.md
 ---
 
+<<<<<<< .merge_file_444Mhi
 See canonical documentation: ../../../Themes/docs/shared-components/user-reference-corrections-sumy.md
 =======
 # User Reference Corrections Summary - Gennaio 2025
@@ -157,3 +158,6 @@ $userClass = XotData::make()->getUserClass();
 
 *Ultimo aggiornamento: [DATE]*
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/user-reference-corrections-sumy.md
+>>>>>>> .merge_file_LNa5EL

@@ -4,18 +4,24 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Rules;
 
+<<<<<<< .merge_file_RU32mV
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_CxhUia
 use Illuminate\Contracts\Validation\ValidationRule;
 use Illuminate\Support\Carbon;
 use Illuminate\Translation\PotentiallyTranslatedString;
 
 use function Safe\preg_replace;
+<<<<<<< .merge_file_RU32mV
 =======
 use Exception;
 use Illuminate\Contracts\Validation\Rule;
 use Illuminate\Support\Carbon;
 use Webmozart\Assert\Assert;
 >>>>>>> laraxot/master
+=======
+>>>>>>> .merge_file_CxhUia
 
 /**
  * Class DateTimeRule.
@@ -59,6 +65,7 @@ class DateTimeRule implements ValidationRule
         try {
             Carbon::createFromFormat($format, $value);
         } catch (\Exception) {
+<<<<<<< .merge_file_RU32mV
 =======
 class DateTimeRule implements Rule
 {
@@ -91,6 +98,11 @@ class DateTimeRule implements Rule
             return false;
         }
 
+=======
+            return false;
+        }
+
+>>>>>>> .merge_file_CxhUia
         /* -- non fa il suo dovere --
          * request()->replace([$attribute=>$value_new]);
          */

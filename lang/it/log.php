@@ -48,6 +48,7 @@ return [
     'title' => 'log',
     'plural' => ['label' => 'log.plural'],
     'test' => 'log',
+<<<<<<< .merge_file_4uD9e3
 =======
     'navigation' => [
         'name' => 'Log',
@@ -215,4 +216,6 @@ return [
         ],
     ],
 >>>>>>> laraxot/master
+=======
+>>>>>>> .merge_file_TRJZUe
 ];

@@ -130,8 +130,12 @@ The system utilizes three main database connections:
 - Database connections properly separated by purpose
 - Survey-specific table access verified before queries
 - Participant data handling follows privacy guidelines
+<<<<<<< .merge_file_yVewLQ
 <<<<<<< HEAD
 - Token-based access control for survey participation
 =======
 - Token-based access control for survey participation
 >>>>>>> laraxot/master
+=======
+- Token-based access control for survey participation
+>>>>>>> .merge_file_ERDjEW

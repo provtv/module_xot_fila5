@@ -111,7 +111,10 @@ use Sushi\Sushi;
  * @method static Builder<static>|InformationSchemaTable whereTableSchema($value)
  * @method static Builder<static>|InformationSchemaTable whereUpdatedAt($value)
  * @method static Builder<static>|InformationSchemaTable whereUpdatedBy($value)
+<<<<<<< .merge_file_3olG4W
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_ZDijzg
  * @mixin \Eloquent
  */
 class InformationSchemaTable extends BaseModel

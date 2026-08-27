@@ -8,6 +8,7 @@ topic: best-practices-consolidated
 canonical: ../../../../Themes/docs/shared-components/best-practices-consolidated.md
 ---
 
+<<<<<<< .merge_file_WKCdZc
 See canonical documentation: ../../../../Themes/docs/shared-components/best-practices-consolidated.md
 =======
 # Best Practices - Documentazione Consolidata DRY + KISS
@@ -913,3 +914,6 @@ php artisan view:clear
 *Modulo: Xot*
 *Categoria: Best Practices*
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../../Themes/docs/shared-components/best-practices-consolidated.md
+>>>>>>> .merge_file_yyHUCO

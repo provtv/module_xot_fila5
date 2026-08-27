@@ -5,6 +5,7 @@ topic: php-quality
 canonical: ../../../Themes/docs/shared-components/php-quality-guide.md
 ---
 
+<<<<<<< .merge_file_6qFnzv
 See canonical documentation: ../../../Themes/docs/shared-components/php-quality-guide.md
 =======
 # PHPStan Code Quality Guide - Laraxot
@@ -1118,3 +1119,6 @@ Dopo ogni modifica file:
 
 **Ricorda**: Le cartelle docs sono la tua bibbia. Studiale, rispettale, aggiornale costantemente.
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/php-quality-guide.md
+>>>>>>> .merge_file_E4HK8O

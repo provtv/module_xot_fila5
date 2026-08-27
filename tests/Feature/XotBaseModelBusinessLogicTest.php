@@ -105,7 +105,10 @@ class XotBaseModelBusinessLogicTest extends TestCase
         $tableName = $baseModel->getTable();
 
         // Assert
+<<<<<<< .merge_file_Cm9S0M
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_ygpwon
         Assert::assertNotEmpty($tableName);
         Assert::assertNotEmpty($tableName);
     });
@@ -153,7 +156,10 @@ class XotBaseModelBusinessLogicTest extends TestCase
         $keyName = $baseModel->getKeyName();
 
         // Assert
+<<<<<<< .merge_file_Cm9S0M
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_ygpwon
         Assert::assertNotEmpty($keyName);
         Assert::assertEquals('id', $keyName);
     });
@@ -199,7 +205,10 @@ class XotBaseModelBusinessLogicTest extends TestCase
         $casts = $baseModel->getCasts();
 
         // Assert
+<<<<<<< .merge_file_Cm9S0M
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_ygpwon
         Assert::assertNotEmpty($fillable);
         Assert::assertNotEmpty($hidden);
         Assert::assertNotEmpty($casts);
@@ -385,7 +394,10 @@ class XotBaseModelBusinessLogicTest extends TestCase
         $array = $baseModel->toArray();
 
         // Assert
+<<<<<<< .merge_file_Cm9S0M
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_ygpwon
         Assert::assertNotEmpty($array);
         Assert::assertNotEmpty($array);
     });
@@ -409,7 +421,10 @@ class XotBaseModelBusinessLogicTest extends TestCase
         $json = $baseModel->toJson();
 
         // Assert
+<<<<<<< .merge_file_Cm9S0M
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_ygpwon
         Assert::assertNotEmpty($json);
         Assert::assertNotEmpty($json);
     });
@@ -476,7 +491,10 @@ class XotBaseModelBusinessLogicTest extends TestCase
         $guarded = $baseModel->getGuarded();
 
         // Assert
+<<<<<<< .merge_file_Cm9S0M
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_ygpwon
         Assert::assertNotEmpty($fillable);
         Assert::assertNotEmpty($guarded);
     });
@@ -582,7 +600,10 @@ class XotBaseModelBusinessLogicTest extends TestCase
         $casts = $baseModel->getCasts();
 
         // Assert
+<<<<<<< .merge_file_Cm9S0M
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_ygpwon
         Assert::assertNotEmpty($casts);
     });
 
@@ -604,7 +625,10 @@ class XotBaseModelBusinessLogicTest extends TestCase
         $dates = $baseModel->getDates();
 
         // Assert
+<<<<<<< .merge_file_Cm9S0M
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_ygpwon
         Assert::assertNotEmpty($dates);
     });
 
@@ -626,7 +650,10 @@ class XotBaseModelBusinessLogicTest extends TestCase
         $hidden = $baseModel->getHidden();
 
         // Assert
+<<<<<<< .merge_file_Cm9S0M
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_ygpwon
         Assert::assertNotEmpty($hidden);
     });
 
@@ -648,7 +675,10 @@ class XotBaseModelBusinessLogicTest extends TestCase
         $visible = $baseModel->getVisible();
 
         // Assert
+<<<<<<< .merge_file_Cm9S0M
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_ygpwon
         Assert::assertNotEmpty($visible);
     });
 
@@ -670,7 +700,10 @@ class XotBaseModelBusinessLogicTest extends TestCase
         $appends = $baseModel->getAppends();
 
         // Assert
+<<<<<<< .merge_file_Cm9S0M
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_ygpwon
         Assert::assertNotEmpty($appends);
     });
 

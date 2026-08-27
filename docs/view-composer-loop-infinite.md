@@ -5,6 +5,7 @@ topic: view-composer-loop-infinite
 canonical: ../../../Themes/docs/shared-components/view-composer-loop-infinite-fix.md
 ---
 
+<<<<<<< .merge_file_5qZ6hU
 See canonical documentation: ../../../Themes/docs/shared-components/view-composer-loop-infinite-fix.md
 =======
 # XotComposer - Loop Infinito Fix
@@ -612,3 +613,6 @@ grep -r "auth()->user()" Modules/*/View/Composers/
 **Tempo di risoluzione**: 15 minuti
 **Pattern**: View Composer Loop Prevention
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/view-composer-loop-infinite-fix.md
+>>>>>>> .merge_file_eDF0u5

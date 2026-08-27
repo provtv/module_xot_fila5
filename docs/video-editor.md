@@ -19,4 +19,9 @@ https://github.com/kudlav/videoeditor-doc
 
 --------------------------------------------
 
+<<<<<<< .merge_file_pNYVJ4
 composer require pbmedia/laravel-ffmpeg
+=======
+
+composer require pbmedia/laravel-ffmpeg
+>>>>>>> .merge_file_eHs1sQ

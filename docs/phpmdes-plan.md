@@ -5,6 +5,7 @@ topic: phpmdes-plan
 canonical: ../../../Themes/docs/shared-components/phpmd-fixes-plan.md
 ---
 
+<<<<<<< .merge_file_w9MPFT
 See canonical documentation: ../../../Themes/docs/shared-components/phpmd-fixes-plan.md
 =======
 # Piano Correzione Warning PHPMD - XotBaseRelationManager
@@ -81,3 +82,6 @@ $actions['edit'] = EditAction::make()
 - `$me` è necessaria per accesso a `$this` in closure (pattern standard)
 - Complexity warning accettabili per metodi con controlli runtime robusti
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/phpmd-fixes-plan.md
+>>>>>>> .merge_file_G5NgYj

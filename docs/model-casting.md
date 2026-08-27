@@ -5,6 +5,7 @@ topic: model-casting
 canonical: ../../../Themes/docs/shared-components/model-casting-rules.md
 ---
 
+<<<<<<< .merge_file_P0IUDl
 See canonical documentation: ../../../Themes/docs/shared-components/model-casting-rules.md
 =======
 # Regole per Model Casting in Laraxot - CRITICO
@@ -254,3 +255,6 @@ class User extends BaseModel
 
 agosto 2025
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/model-casting-rules.md
+>>>>>>> .merge_file_4D8kmn

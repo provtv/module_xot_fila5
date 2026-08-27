@@ -30,10 +30,18 @@ jobs:
       run: cd docs && npm run prod
 
     - name: CNAME
+<<<<<<< .merge_file_xhKZ30
       run: cd docs && echo "laraxot.github.io/module_xot_fila3" > ./build_production/CNAME
+=======
+      run: cd docs && echo "laraxot.github.io/module_xot_fila5" > ./build_production/CNAME
+>>>>>>> .merge_file_5C3XbB
 
     - name: gh-pages
       uses: JamesIves/github-pages-deploy-action@latest
       with:
         branch: gh-pages
+<<<<<<< .merge_file_xhKZ30
         folder: ./docs/build_production
+=======
+        folder: ./docs/build_production
+>>>>>>> .merge_file_5C3XbB

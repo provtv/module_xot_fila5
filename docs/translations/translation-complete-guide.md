@@ -5,6 +5,7 @@ topic: translation-complete-guide
 canonical: ../../../../Themes/docs/shared-components/translation-complete-guide.md
 ---
 
+<<<<<<< .merge_file_Fq6xw6
 See canonical documentation: ../../../../Themes/docs/shared-components/translation-complete-guide.md
 =======
 # Translation Complete Guide - Consolidated
@@ -30,3 +31,6 @@ Guida completa consolidata per le traduzioni in Laraxot.
 ## Links
 - [Original Files Backup](../../../docs-consolidation-backup-*/Xot-docs-original/)
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../../Themes/docs/shared-components/translation-complete-guide.md
+>>>>>>> .merge_file_FtQYsu

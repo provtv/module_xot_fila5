@@ -5,6 +5,7 @@ topic: filament-actions
 canonical: ../../../../Themes/docs/shared-components/filament-actions.md
 ---
 
+<<<<<<< .merge_file_7BQq5z
 See canonical documentation: ../../../../Themes/docs/shared-components/filament-actions.md
 =======
 # Azioni Filament
@@ -115,3 +116,6 @@ Le traduzioni per le azioni devono essere definite nel file di traduzione del mo
 6. Utilizzare azioni in coda per operazioni pesanti
 7. Fornire feedback appropriati all'utente 
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../../Themes/docs/shared-components/filament-actions.md
+>>>>>>> .merge_file_mseexm

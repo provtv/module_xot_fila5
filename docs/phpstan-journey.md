@@ -355,7 +355,10 @@ Grazie a:
 - **La Comunità** per la saggezza condivisa
 - **Il Codice** per insegnarci l'umiltà
 
+<<<<<<< .merge_file_nZflSu
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_jHjBnr
 ## Xot: da coverage-farming a gate statico vero
 
 Lo scopo non è «zero errori». È che un test **possa fallire** quando il comportamento è sbagliato.
@@ -366,8 +369,11 @@ La story 4.13 ha cancellato quelle tautologie, ristretto `FileAction::viewNamesp
 
 Misura `analyse Modules/Xot`, tmpDir isolata: **30 → 0**. Dettaglio ricette: [phpstan-rules.md](./quality/phpstan-rules.md).
 
+<<<<<<< .merge_file_nZflSu
 =======
 >>>>>>> laraxot/master
+=======
+>>>>>>> .merge_file_jHjBnr
 ## 🌟 Conclusione: Il Cerchio Infinito
 
 ```

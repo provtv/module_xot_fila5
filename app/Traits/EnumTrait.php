@@ -64,11 +64,15 @@ trait EnumTrait
      */
     public static function getSearchable(): array
     {
+<<<<<<< .merge_file_d3zgSR
 <<<<<<< HEAD
         return array_map(static fn (self $item): string => (string) $item->value, static::cases());
 =======
         return array_map(fn ($item) => (string) $item->value, static::cases());
 >>>>>>> laraxot/master
+=======
+        return array_map(static fn (self $item): string => (string) $item->value, static::cases());
+>>>>>>> .merge_file_l30e0g
     }
 
     /**
@@ -145,7 +149,11 @@ trait EnumTrait
 
         foreach (static::getColumnDefinitions() as $name => $definition) {
             if ($migration === null || ! $migration->hasColumn($name)) {
+<<<<<<< .merge_file_d3zgSR
                 $definition($table);
+=======
+                $definition($table); // @phpstan-ignore callable.nonCallable
+>>>>>>> .merge_file_l30e0g
             }
         }
     }
@@ -173,11 +181,15 @@ trait EnumTrait
      */
     public static function getColumnNames(): array
     {
+<<<<<<< .merge_file_d3zgSR
 <<<<<<< HEAD
         return array_values(array_map(static fn (self $case): string => (string) $case->value, static::cases()));
 =======
         return array_map(fn ($case) => (string) $case->value, static::cases());
 >>>>>>> laraxot/master
+=======
+        return array_values(array_map(static fn (self $case): string => (string) $case->value, static::cases()));
+>>>>>>> .merge_file_l30e0g
     }
 
     /**

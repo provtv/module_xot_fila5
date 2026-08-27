@@ -21,6 +21,7 @@ return [
         'create' => ['label' => 'Crea Xot Base'],
         'edit' => ['label' => 'Modifica Xot Base'],
         'delete' => ['label' => 'Elimina Xot Base'],
+<<<<<<< .merge_file_KWQ3bo
     ],
     'title' => 'xot base',
     'test' => 'xot base',
@@ -158,4 +159,12 @@ return [
         ],
     ],
 >>>>>>> laraxot/master
+=======
+    ],
+    'title' => 'xot base',
+    'test' => 'xot base',
+    'plural' => ['label' => 'xot base.plural'],
+    'id' => 'xot base',
+    'x' => 'xot base',
+>>>>>>> .merge_file_itJIzS
 ];

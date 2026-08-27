@@ -113,8 +113,12 @@ class DownloadAttachmentPlaceHolder extends XotBasePlaceholder
 <<<<<<< HEAD
 -   [DownloadAttachmentPlaceHolder Documentation](../../Cms/docs/filament/forms/components/download-attachment-placeholder.md) (da creare)
 - [Schemas Unified Religion](../../../../../../docs/schemas-unified-religion.md)
+<<<<<<< .merge_file_iXLdrw
 - [Infolists for Summary](../../widgets/infolists-for-summary.md)
 =======
 -   [Filament Class Extension Rules](../../../docs/filament-class-extension-rules.md)
 -   [DownloadAttachmentPlaceHolder Documentation](../../cms/docs/filament/forms/components/download-attachment-placeholder.md) (da creare)
 >>>>>>> laraxot/master
+=======
+- [Infolists for Summary](../../widgets/infolists-for-summary.md)
+>>>>>>> .merge_file_ZtAMrB

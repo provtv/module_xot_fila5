@@ -5,6 +5,7 @@ topic: filament-extension-violations-plan
 canonical: ../../../Themes/docs/shared-components/filament-extension-violations-fix-plan.md
 ---
 
+<<<<<<< .merge_file_o5HybR
 See canonical documentation: ../../../Themes/docs/shared-components/filament-extension-violations-fix-plan.md
 =======
 # Filament Extension Rules - Correzioni Violazioni Critiche
@@ -84,3 +85,6 @@ See canonical documentation: ../../../Themes/docs/shared-components/filament-ext
 **Metodologia**: "Super Mucca" - Livello Confidenza MASSIMO 🐄
 **Qualità**: PHPStan Level 10 Certified
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/filament-extension-violations-fix-plan.md
+>>>>>>> .merge_file_hpJD8a

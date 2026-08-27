@@ -59,6 +59,7 @@ class CustomRelation extends Relation
         /**
          * The eagerConstraints callback.
          */
+<<<<<<< .merge_file_B5dHA1
 <<<<<<< HEAD
         protected ?Closure $eagerConstraints,
         /**
@@ -72,6 +73,13 @@ class CustomRelation extends Relation
          */
         protected null|Closure $eagerMatcher,
 >>>>>>> laraxot/master
+=======
+        protected ?Closure $eagerConstraints,
+        /**
+         * The eager constraints model matcher.
+         */
+        protected ?Closure $eagerMatcher,
+>>>>>>> .merge_file_QsIoia
     ) {
         parent::__construct($query, $model);
     }

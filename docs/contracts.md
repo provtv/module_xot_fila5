@@ -121,6 +121,7 @@ public function whereHas($relation, Closure $callback = null, $operator = '>=', 
 
 //---- Illuminate\Database\Eloquent\Builder  (class Builder)
  public function getModel()
+<<<<<<< .merge_file_tZkiDj
 =======
 - [Policy PHPStan Errors](../user/project_docs/policy-phpstan-errors.md)
 - [Root PHPStan Errors](../../project_docs/troubleshooting/phpstan-errors.md)
@@ -128,3 +129,5 @@ public function whereHas($relation, Closure $callback = null, $operator = '>=', 
 
 *Ultimo aggiornamento: [DATE]*
 >>>>>>> laraxot/master
+=======
+>>>>>>> .merge_file_wA26Nr

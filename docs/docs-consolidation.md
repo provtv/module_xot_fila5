@@ -5,6 +5,7 @@ topic: docs-consolidation
 canonical: ../../../Themes/docs/shared-components/docs-consolidation-report-conflict.md
 ---
 
+<<<<<<< .merge_file_yAZxwk
 See canonical documentation: ../../../Themes/docs/shared-components/docs-consolidation-report-conflict.md
 =======
 # Report Consolidamento Documentazione - 27 Gennaio 2025
@@ -245,3 +246,6 @@ Le prossime fasi si concentreranno sul completamento del consolidamento e sul mi
 **Stato**: Consolidamento in corso
 **Prossimo Update**: Completamento consolidamento root docs
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/docs-consolidation-report-conflict.md
+>>>>>>> .merge_file_0h9rIH

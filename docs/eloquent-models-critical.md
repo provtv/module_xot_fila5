@@ -5,6 +5,7 @@ topic: eloquent-models-critical
 canonical: ../../../Themes/docs/shared-components/eloquent-models-critical-rules.md
 ---
 
+<<<<<<< .merge_file_jgqZv1
 See canonical documentation: ../../../Themes/docs/shared-components/eloquent-models-critical-rules.md
 =======
 # Eloquent Models - Regole Critiche per Laraxot PTVX
@@ -191,3 +192,6 @@ $this->assertTrue(property_exists($model, 'field_name')); // Sempre false
 
 *Ultimo aggiornamento: agosto 2025 - Regola critica per architettura Laraxot PTVX*
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/eloquent-models-critical-rules.md
+>>>>>>> .merge_file_ixVYPS

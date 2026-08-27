@@ -1,4 +1,7 @@
+<<<<<<< .merge_file_cCwx2H
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_QkQX2w
 
 !.env.example
 # --- Build & compiled ---
@@ -34,6 +37,7 @@
 *.backup_*
 *.bak
 *.bakcup
+<<<<<<< .merge_file_cCwx2H
 *.cache
 *.copy
 *.exe
@@ -215,15 +219,29 @@ storage/*.key
 # ==============================================
 # CACHE & TEMPORARY FILES
 # ==============================================
+=======
+>>>>>>> .merge_file_QkQX2w
 *.cache
-*.lock
-*.phar
+*.copy
+*.exe
+*.fila2
 *.jar
-*.tmp
-*.swp
-*.swo
+*.lock
+*.log
+*.new
+*.old
+*.old1
+*.old2
+*.orig
+*.pest.php
+*.phar
+*.rej
 *.stackdump
+*.swo
+*.swp
+*.tmp
 *:Zone.Identifier
+<<<<<<< .merge_file_cCwx2H
 v8-compile-cache-*
 .php-cs-fixer.cache
 .phpunit.result.cache
@@ -256,13 +274,46 @@ Homestead.json
 # ==============================================
 # SYSTEM FILES
 # ==============================================
+=======
+*~
+*~BASE
+*~HEAD
+*~LOCAL
+*~REMOTE
+*~head
+>>>>>>> .merge_file_QkQX2w
 .DS_Store
 .DS_Store?
-._*
 .Spotlight-V100
 .Trashes
-ehthumbs.db
+._*
+.circleci
+.claude
+.claude-audit
+.claude-audit/
+.cursor/
+.devcontainer
+.devcontainer/
+.env
+.env.*
+.git-blame-ignore-revs
+.git-rewrite/
+.kilocode
+.kiro
+.php-cs-fixer.cache
+.phpintel
+.phpstorm.meta.php
+.phpunit.result.cache
+.ralph
+.vscode/
+.windsurf/
+/.idea
+/.vagrant
+Helpers/
+Homestead.json
+Homestead.yaml
 Thumbs.db
+<<<<<<< .merge_file_cCwx2H
 *.exe
 
 # ==============================================
@@ -323,3 +374,87 @@ packages/temp/
 # END OF XOT .GITIGNORE
 # ==============================================
 >>>>>>> laraxot/master
+=======
+_bmad-output
+_docs
+agentdb.rvf
+app/storage/
+archive/
+audit-coverage/
+bashscripts
+bootstrap/compiled.php
+build/
+cache/
+composer.lock
+config/development.php
+config/local.php
+database/Factories_
+database/Factories_old/
+database/Migrations_old/
+database/Seeders_old/
+database_old/
+dist/
+docs/**/*-[0-9].md
+docs/**/*-[0-9][0-9].md
+docs/**/*-[0-9][0-9][0-9].md
+docs/**/*-[0-9][0-9][0-9][0-9].md
+docs/**/archive/
+docs/**/archived/
+docs/**/bashscripts/
+docs/**/legacy/
+docs/**/scripts/
+docs/**/workbench/
+docs/archive/
+docs/archive/**
+docs/archived
+docs/assets/
+docs/assets/images/
+docs/assets/img/
+docs/bashscripts/
+docs/cache/
+docs/legacy
+docs/phpstan/
+docs/screenshots/
+docs/scripts/
+docs/vendor/
+docs/workbench
+ehthumbs.db
+error_log
+lang/lang/
+legacy/
+lerna-debug.log*
+node_modules/
+npm-debug.log*
+package-lock.json
+packages/cache/
+packages/coolsam/panel-modules/img*.png
+packages/temp/
+phpinsights.php
+phpmd.ruleset.xml.bak
+phpstan*
+public/hot
+public/storage
+public_html/hot
+public_html/storage
+rector.php
+resources/assets/img/
+resources/img/
+resources/views/Components_old/
+ruvector.db
+scripts
+storage/*.key
+test-results
+test.txt
+testbench.yaml
+tests/.claude-audit
+tests/AuditCoverage/
+v8-compile-cache-*
+vendor/
+workbench
+yarn-error.log*
+yarn.lock
+
+# Root quality tool configs forbidden in module root
+phpmd*
+graphify-out/
+>>>>>>> .merge_file_QkQX2w

@@ -5,6 +5,7 @@ topic: nested-resource
 canonical: ../../../Themes/docs/shared-components/nested-resource.md
 ---
 
+<<<<<<< .merge_file_neANWc
 See canonical documentation: ../../../Themes/docs/shared-components/nested-resource.md
 =======
 title: Nested Resource
@@ -187,3 +188,6 @@ Assicurati semplicemente di impostare uno slug personalizzato per le risorse in 
 
 https://filamentphp.com/project_docs/2.x/admin/resources/getting-started#customizing-the-url-slug
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/nested-resource.md
+>>>>>>> .merge_file_ouY6U6

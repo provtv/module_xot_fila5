@@ -16,11 +16,16 @@ use Modules\<nome progetto>\Models\User;
 use Modules\<nome modulo>\Models\User;
 use Modules\<nome modulo>\Models\User;
 
+<<<<<<< .merge_file_pxBmbr
 <<<<<<< HEAD
 ```
 
 =======
 >>>>>>> laraxot/master
+=======
+```
+
+>>>>>>> .merge_file_H8oFT0
 ```php
 // ❌ VIOLAZIONE CRITICA
 use Modules\<nome modulo>\Models\User;

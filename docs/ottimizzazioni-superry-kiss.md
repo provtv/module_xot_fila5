@@ -5,6 +5,7 @@ topic: ottimizzazioni-superry-kiss
 canonical: ../../../Themes/docs/shared-components/ottimizzazioni-super-dry-kiss-Modules.md
 ---
 
+<<<<<<< .merge_file_gJrkzv
 See canonical documentation: ../../../Themes/docs/shared-components/ottimizzazioni-super-dry-kiss-Modules.md
 =======
 # Ottimizzazioni Super DRY + KISS - Modulo Xot
@@ -312,3 +313,6 @@ class ExampleService implements ServiceInterface
 **Stato:** In Analisi
 **Priorità:** ALTA
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/ottimizzazioni-super-dry-kiss-Modules.md
+>>>>>>> .merge_file_qGc1T7

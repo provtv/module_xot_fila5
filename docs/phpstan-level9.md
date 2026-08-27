@@ -5,6 +5,7 @@ topic: phpstan-level9
 canonical: ../../../Themes/docs/shared-components/phpstan-level9-guide.md
 ---
 
+<<<<<<< .merge_file_424Zh6
 See canonical documentation: ../../../Themes/docs/shared-components/phpstan-level9-guide.md
 =======
 # Guida alla Risoluzione degli Errori PHPStan Livello 9
@@ -181,3 +182,6 @@ Per categorie specifiche:
 $value = $data['key'];
 ```
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/phpstan-level9-guide.md
+>>>>>>> .merge_file_WwP656

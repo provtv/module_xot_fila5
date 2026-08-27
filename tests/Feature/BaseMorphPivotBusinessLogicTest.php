@@ -72,6 +72,7 @@ describe('Base Morph Pivot Business Logic', function (): void {
     test('it can manage pivot attributes', function (): void {
         // Arrange
         $pivot = new TestConcreteMorphPivot;
+<<<<<<< .merge_file_stYAIn
 =======
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Modules\Xot\Models\BaseMorphPivot;
@@ -153,6 +154,8 @@ class BaseMorphPivotBusinessLogicTest extends TestCase
         // Arrange
         $pivot = new BaseMorphPivot();
 >>>>>>> laraxot/master
+=======
+>>>>>>> .merge_file_i2nj1B
         $pivot->setAttribute('custom_field', 'custom_value');
         $pivot->setAttribute('numeric_field', 42);
 
@@ -304,7 +307,10 @@ class BaseMorphPivotBusinessLogicTest extends TestCase
             'session_id' => 'session123',
         ];
 
+<<<<<<< .merge_file_stYAIn
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_i2nj1B
         $pivot = new TestConcreteMorphPivot;
         $pivot->setAttribute('metadata', $metadata);
 
@@ -349,7 +355,10 @@ class BaseMorphPivotBusinessLogicTest extends TestCase
             ],
         ];
 
+<<<<<<< .merge_file_stYAIn
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_i2nj1B
         $pivot = new TestConcreteMorphPivot;
         $pivot->setAttribute('extra_data', $extraData);
 
@@ -747,7 +756,10 @@ class BaseMorphPivotBusinessLogicTest extends TestCase
             'delete' => false,
         ];
 
+<<<<<<< .merge_file_stYAIn
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_i2nj1B
         $pivot = new TestConcreteMorphPivot;
         $pivot->setAttribute('permissions', $permissions);
 
@@ -788,7 +800,10 @@ class BaseMorphPivotBusinessLogicTest extends TestCase
             'timeout' => 30,
         ];
 
+<<<<<<< .merge_file_stYAIn
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_i2nj1B
         $pivot = new TestConcreteMorphPivot;
         $pivot->setAttribute('settings', $settings);
 

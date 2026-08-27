@@ -5,6 +5,7 @@ topic: common-filament-traits
 canonical: ../../../Themes/docs/shared-components/common-filament-trait-conflicts.md
 ---
 
+<<<<<<< .merge_file_6Wz2JK
 See canonical documentation: ../../../Themes/docs/shared-components/common-filament-trait-conflicts.md
 =======
 # Common Filament Trait Conflicts - Xot Module
@@ -1044,3 +1045,6 @@ class MyPage extends XotBaseViewRecord
 - `/Modules/Xot/docs/FILAMENT_4_LARAXOT_RULES.md`
 - `/Modules/Quaeris/docs/PROPERTY_CONFLICT_RESOLUTION_FILAMENT_TRAITS.md`
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/common-filament-trait-conflicts.md
+>>>>>>> .merge_file_9O2H7Z

@@ -5,6 +5,7 @@ topic: phpstan-callynamic-panel-metatagdata
 canonical: ../../../Themes/docs/shared-components/phpstan-call-dynamic-panel-metatagdata.md
 ---
 
+<<<<<<< .merge_file_Sxq2Iu
 See canonical documentation: ../../../Themes/docs/shared-components/phpstan-call-dynamic-panel-metatagdata.md
 =======
 # Correzione chiamate dinamiche ApplyMetatagToPanelAction → MetatagData
@@ -72,3 +73,6 @@ Questo pattern consente:
 7. I valori null sono esplicitamente dichiarati
 8. Le strutture dati complesse sono tipizzate con array shapes
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/phpstan-call-dynamic-panel-metatagdata.md
+>>>>>>> .merge_file_jRMJVr

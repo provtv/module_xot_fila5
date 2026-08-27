@@ -5,6 +5,7 @@ topic: bottlenecksetailed
 canonical: ../../../Themes/docs/shared-components/bottlenecks-detailed.md
 ---
 
+<<<<<<< .merge_file_59V1HO
 See canonical documentation: ../../../Themes/docs/shared-components/bottlenecks-detailed.md
 =======
 # Analisi Dettagliata dei Colli di Bottiglia - Modulo Xot
@@ -302,3 +303,6 @@ trait HasXotOptimizations
 
 ---
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/bottlenecks-detailed.md
+>>>>>>> .merge_file_Z7PtLS

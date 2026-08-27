@@ -5,6 +5,7 @@ topic: lessons-learned-merges
 canonical: ../../../Themes/docs/shared-components/lessons-learned-merge-conflicts.md
 ---
 
+<<<<<<< .merge_file_iXOkAD
 See canonical documentation: ../../../Themes/docs/shared-components/lessons-learned-merge-conflicts.md
 =======
 # Lezioni Apprese - Risoluzione Massiva Merge Conflicts ([DATE])
@@ -663,3 +664,6 @@ Al processo sistematico di **comprensione → studio → dibattito → implement
 **Autore:** AI Claude + Metodologia Filosofica 10-Step
 **Status:** ✅ COMPLETATO CON SUCCESSO
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/lessons-learned-merge-conflicts.md
+>>>>>>> .merge_file_QOdTtZ

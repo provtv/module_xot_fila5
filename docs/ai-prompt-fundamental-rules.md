@@ -142,7 +142,10 @@ Model structure requirements:
 ## 📚 Riferimenti Aggiuntivi
 
 ### Documentazione Principale
+<<<<<<< .merge_file_z1hgc9
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_J9p3DD
 - [AGENTS.md](../../../../AGENTS.md) - Guida completa sviluppatori AI
 - [Database Testing Rules](../../../../docs/database-testing-rules.md) - Regole MySQL testing
 - [AI Coding Memory](../../../../AI_CODING_MEMORY.md) - Memoria completa regole

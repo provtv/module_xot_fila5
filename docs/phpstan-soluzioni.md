@@ -5,6 +5,7 @@ topic: phpstan-soluzioni
 canonical: ../../../Themes/docs/shared-components/phpstan-pattern-soluzioni.md
 ---
 
+<<<<<<< .merge_file_F0FwW9
 See canonical documentation: ../../../Themes/docs/shared-components/phpstan-pattern-soluzioni.md
 =======
 # Pattern e Soluzioni per PHPStan Livello 10 - Modulo Xot
@@ -289,3 +290,6 @@ Questi pattern rappresentano le soluzioni standard da adottare in tutto il modul
 2. Estendere questi pattern ad altri moduli del progetto
 3. Aggiornare regolarmente questo documento con nuovi pattern identificati
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/phpstan-pattern-soluzioni.md
+>>>>>>> .merge_file_P6gzNa

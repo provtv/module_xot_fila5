@@ -5,6 +5,7 @@ topic: ai-init-resolution
 canonical: ../../../Themes/docs/shared-components/ai-init-issue-resolution.md
 ---
 
+<<<<<<< .merge_file_IQGbC9
 See canonical documentation: ../../../Themes/docs/shared-components/ai-init-issue-resolution.md
 =======
 # Risoluzione Problema con ai_init.sh
@@ -41,3 +42,6 @@ La cartella `bashscripts/ai/.gemini` ora è accessibile direttamente dalla root 
 
 La documentazione del progetto è stata aggiornata per riflettere questo cambiamento.
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/ai-init-issue-resolution.md
+>>>>>>> .merge_file_XX6LS8

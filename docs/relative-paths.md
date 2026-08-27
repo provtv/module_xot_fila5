@@ -1,4 +1,7 @@
+<<<<<<< .merge_file_EYTKyY
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_EMGM61
 ---
 title: "Regole per i Percorsi Relativi nella Documentazione"
 module: xot

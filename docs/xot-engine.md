@@ -5,6 +5,7 @@ topic: xot-engine
 canonical: ../../../Themes/docs/shared-components/xot-engine-complete-guide.md
 ---
 
+<<<<<<< .merge_file_zkjp8U
 See canonical documentation: ../../../Themes/docs/shared-components/xot-engine-complete-guide.md
 =======
 # 🚀 XOT - IL MOTORE FONDAMENTALE DI LARAXOT
@@ -514,3 +515,6 @@ Xot rappresenta l'evoluzione naturale di Laravel:
 *Creato: [DATE]*
 *Autore: AI Assistant con analisi approfondita*
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/xot-engine-complete-guide.md
+>>>>>>> .merge_file_y4o9fV

@@ -407,11 +407,16 @@ This is a starter template for creating a beautiful, customizable documentation 
 
 As with all Jigsaw sites, configuration settings can be found in `config.php`; you can update the variables in that file with settings specific to your project. You can also add new configuration variables there to use across your site; take a look at the [Jigsaw documentation](http://jigsaw.tighten.co/project_docs/site-variables/) to learn more.
 
+<<<<<<< .merge_file_d2v3Xi
 <<<<<<< HEAD
 ```
 
 =======
 >>>>>>> laraxot/master
+=======
+```
+
+>>>>>>> .merge_file_cre4Lq
 ```php
 // config.php
 return [

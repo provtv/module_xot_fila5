@@ -212,7 +212,11 @@ trait HasXotTable
             ->heading($this->getXotTableHeading())
             ->columns($this->layoutView->getTableColumns(array_values($this->resolveTableColumnsForXotTable()), $this->getGridTableColumns()))
             ->contentGrid($this->layoutView->getTableContentGrid())
+<<<<<<< .merge_file_YQQJpY
             ->filters($this->getXotTableFilters())
+=======
+            ->filters($this->getXotTableFilters()) // @phpstan-ignore argument.type
+>>>>>>> .merge_file_3yvTGK
             ->filtersLayout(FiltersLayout::AboveContent)
             ->filtersFormColumns($this->getTableFiltersFormColumns())
             ->persistFiltersInSession()
@@ -282,18 +286,30 @@ trait HasXotTable
         }
         Assert::object($resource);
 
+<<<<<<< .merge_file_YQQJpY
+=======
+        // @phpstan-ignore-next-line function.alreadyNarrowedType,method.notFound
+>>>>>>> .merge_file_3yvTGK
         if (method_exists($resource, 'canView')) {
             $actions['view'] = ViewAction::make()
                 ->iconButton()
                 ->visible(static fn (Model $record): bool => (bool) $resource->canView($record));
         }
 
+<<<<<<< .merge_file_YQQJpY
+=======
+        // @phpstan-ignore-next-line function.alreadyNarrowedType,method.notFound
+>>>>>>> .merge_file_3yvTGK
         if (method_exists($resource, 'canEdit')) {
             $actions['edit'] = EditAction::make()
                 ->iconButton()
                 ->visible(static fn (Model $record): bool => (bool) $resource->canEdit($record));
         }
 
+<<<<<<< .merge_file_YQQJpY
+=======
+        // @phpstan-ignore-next-line function.alreadyNarrowedType,method.notFound
+>>>>>>> .merge_file_3yvTGK
         if (method_exists($resource, 'canDelete')) {
             $actions['delete'] = DeleteAction::make()
                 ->iconButton()
@@ -307,7 +323,12 @@ trait HasXotTable
 
         // Check if class has the getRelationship method
         // Note: In some contexts (ListRecords), getRelationship() may not exist
+<<<<<<< .merge_file_YQQJpY
+=======
+        // @phpstan-ignore-next-line function.alreadyNarrowedType,method.notFound (needed for contexts where method doesn't exist)
+>>>>>>> .merge_file_3yvTGK
         if ($this->shouldShowDetachAction() && method_exists($this, 'getRelationship')) {
+            /** @phpstan-ignore-next-line method.notFound */
             $relationship = $this->getRelationship();
 
             if ($relationship instanceof BelongsToMany) {

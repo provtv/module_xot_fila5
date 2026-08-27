@@ -1,14 +1,20 @@
 # Safe Casting Actions - DRY & KISS Implementation
 
+<<<<<<< .merge_file_RsTuXe
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_QOaa6W
 `mixed` è l'ultima spiaggia. Queste Action **non** sono il modo di “sistemare” un valore già tipizzato (es. `JobBatch::$total_jobs` dopo `casts()`). Servono solo quando la fonte è davvero opaca: JSON, `TextColumn::getState()`, `config()` senza schema.
 
 Chi lo usa: admin job (conteggi, argomenti schedule). Un cast sbagliato altera i numeri in dashboard.
 
 Dettaglio del caso Job: [typed-model-properties-over-raw-attributes.md](../../Job/docs/typed-model-properties-over-raw-attributes.md).
 
+<<<<<<< .merge_file_RsTuXe
 =======
 >>>>>>> laraxot/master
+=======
+>>>>>>> .merge_file_QOaa6W
 ## Overview
 
 The Safe Casting Actions provide a centralized, robust solution for handling PHPStan "Cannot cast mixed to X" errors throughout the codebase. These actions follow DRY (Don't Repeat Yourself) and KISS (Keep It Simple, Stupid) principles.

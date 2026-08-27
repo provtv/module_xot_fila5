@@ -253,6 +253,7 @@ Per documentazione completa, vedere:
 
 *Ultimo aggiornamento: 2025-01-27*
 - [Widget Table Method Final Analysis](../../../modules/healthcare_app/docs/widget-table-method-final-analysis.md)
+<<<<<<< .merge_file_OImOvH
 - [Widget Property Initialization Pattern](../../../modules/healthcare_app/docs/widget-property-initialization-pattern.md)
 =======
 - [Widget Table Method Final Analysis](../../../modules/quaeris/docs/widget-table-method-final-analysis.md)
@@ -260,3 +261,6 @@ Per documentazione completa, vedere:
 
 *Ultimo aggiornamento: 2025-01-27*
 >>>>>>> laraxot/master
+=======
+- [Widget Property Initialization Pattern](../../../modules/healthcare_app/docs/widget-property-initialization-pattern.md)
+>>>>>>> .merge_file_ZcA9nM

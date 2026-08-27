@@ -5,6 +5,7 @@ topic: phpstans-xotbaserelationmanager
 canonical: ../../../Themes/docs/shared-components/phpstan-errors-xotbaserelationmanager.md
 ---
 
+<<<<<<< .merge_file_W2gSvq
 See canonical documentation: ../../../Themes/docs/shared-components/phpstan-errors-xotbaserelationmanager.md
 =======
 # PHPStan Errors - XotBaseRelationManager
@@ -154,3 +155,6 @@ Illuminate\Database\Eloquent\Model|stdClass given.
 - Seguire convenzioni Filament
 - Garantire type safety
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/phpstan-errors-xotbaserelationmanager.md
+>>>>>>> .merge_file_a17YE5

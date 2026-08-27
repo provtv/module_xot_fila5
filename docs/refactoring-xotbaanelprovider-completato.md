@@ -5,6 +5,7 @@ topic: refactoring-xotbaanelprovider-completato
 canonical: ../../../Themes/docs/shared-components/refactoring-xotbaanelprovider-completato-conflict.md
 ---
 
+<<<<<<< .merge_file_rH4fm6
 See canonical documentation: ../../../Themes/docs/shared-components/refactoring-xotbaanelprovider-completato-conflict.md
 =======
 # ✅ REFACTORING XotBasePanelProvider COMPLETATO
@@ -148,3 +149,6 @@ protected function shouldDiscoverClusters(): bool
 *Principi applicati: DRY, KISS, SOLID, ROBUST*
 *Risultato: Codice pulito, manutenibile e robusto*
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/refactoring-xotbaanelprovider-completato-conflict.md
+>>>>>>> .merge_file_sDUiVA

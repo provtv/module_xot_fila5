@@ -5,6 +5,7 @@ topic: xotbase-stats-overview-widget-improvements
 canonical: ../../../../Themes/docs/shared-components/xotbase-stats-overview-widget-improvements.md
 ---
 
+<<<<<<< .merge_file_eKIZZm
 See canonical documentation: ../../../../Themes/docs/shared-components/xotbase-stats-overview-widget-improvements.md
 =======
 # XotBaseStatsOverviewWidget - Miglioramenti Implementati
@@ -320,3 +321,6 @@ La classe è ora uno strumento potente e flessibile per creare dashboard statist
 **Stato**: ✅ Completato e Testato
 **Miglioramenti**: ✅ 15 nuovi metodi implementati
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../../Themes/docs/shared-components/xotbase-stats-overview-widget-improvements.md
+>>>>>>> .merge_file_MHpUYe

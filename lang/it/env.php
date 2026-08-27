@@ -43,6 +43,7 @@ return [
             'placeholder' => 'app_url',
             'helper_text' => 'app_url',
             'description' => 'app_url',
+<<<<<<< .merge_file_g6U0LS
         ],
         'debugbar_enabled' => [
             'label' => 'debugbar_enabled',
@@ -211,8 +212,36 @@ return [
             'env_loaded' => 'File .env caricato correttamente',
             'backup_created' => 'Backup creato in :path',
             'changes_saved' => 'Modifiche salvate nel file .env',
+=======
+        ],
+        'debugbar_enabled' => [
+            'label' => 'debugbar_enabled',
+            'placeholder' => 'debugbar_enabled',
+            'helper_text' => 'debugbar_enabled',
+            'description' => 'debugbar_enabled',
+        ],
+        'google_maps_api_key' => [
+            'label' => 'google_maps_api_key',
+            'placeholder' => 'google_maps_api_key',
+            'helper_text' => 'google_maps_api_key',
+            'description' => 'google_maps_api_key',
+>>>>>>> .merge_file_XF3jG5
+        ],
+        'telegram_bot_token' => [
+            'placeholder' => 'telegram_bot_token',
         ],
     ],
+    'actions' => [
+        'create' => ['label' => 'Crea Env'],
+        'edit' => ['label' => 'Modifica Env'],
+        'delete' => ['label' => 'Elimina Env'],
+        'save' => ['label' => 'save', 'icon' => 'save', 'tooltip' => 'save'],
+    ],
+<<<<<<< .merge_file_g6U0LS
     'title' => 'env',
 >>>>>>> laraxot/master
+=======
+    'test' => 'env',
+    'plural' => ['label' => 'env.plural'],
+>>>>>>> .merge_file_XF3jG5
 ];

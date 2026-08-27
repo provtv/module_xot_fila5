@@ -5,6 +5,7 @@ topic: bugfix-hasxottableuplicate-if
 canonical: ../../../Themes/docs/shared-components/bugfix-hasxottable-duplicate-if.md
 ---
 
+<<<<<<< .merge_file_ddgFQf
 See canonical documentation: ../../../Themes/docs/shared-components/bugfix-hasxottable-duplicate-if.md
 =======
 # Bug Fix: Duplicazione If Statement in HasXotTable.php
@@ -174,3 +175,6 @@ done
 **Review**: Pending
 **Data**: Vedi [CHANGELOG.md](./changelog.md)
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/bugfix-hasxottable-duplicate-if.md
+>>>>>>> .merge_file_UbCp2x

@@ -5,6 +5,7 @@ topic: development
 canonical: ../../../Themes/docs/shared-components/development-rules-Modules.md
 ---
 
+<<<<<<< .merge_file_tXjTMI
 See canonical documentation: ../../../Themes/docs/shared-components/development-rules-Modules.md
 =======
 # Regole Generali di Sviluppo del Progetto
@@ -435,3 +436,6 @@ TextInput::make('name')
 
 **Nota**: Queste regole sono fondamentali per mantenere la qualità e la consistenza del progetto. Devono essere sempre seguite e aggiornate quando necessario.
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/development-rules-Modules.md
+>>>>>>> .merge_file_M2Zyyc

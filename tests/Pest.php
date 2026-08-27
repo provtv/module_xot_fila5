@@ -2,7 +2,10 @@
 
 declare(strict_types=1);
 
+<<<<<<< .merge_file_O9qvzo
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_cSUtky
 /*
  * Bootstrap Pest — modulo Xot.
  *
@@ -26,6 +29,7 @@ declare(strict_types=1);
  * sessioni, e senza una smentita esplicita continua a propagarsi.
  *
  * @see ../docs/wiki/concepts/pest5-configuring-tests.md
+<<<<<<< .merge_file_O9qvzo
  */
 =======
 use Modules\Xot\Tests\TestCase;
@@ -71,3 +75,6 @@ pest()->extend(TestCase::class)->in('Feature', 'Unit');
 //     // ...
 // }
 >>>>>>> laraxot/master
+=======
+ */
+>>>>>>> .merge_file_cSUtky

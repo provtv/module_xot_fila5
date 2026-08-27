@@ -5,6 +5,7 @@ topic: performancelines
 canonical: ../../../Themes/docs/shared-components/performance-guidelines.md
 ---
 
+<<<<<<< .merge_file_TjTxhq
 See canonical documentation: ../../../Themes/docs/shared-components/performance-guidelines.md
 =======
 # Performance Guidelines - Xot Module
@@ -890,3 +891,6 @@ public function processData(): void
 
 This document provides comprehensive performance guidelines for maintaining optimal performance across the Xot module and modules that extend it.
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/performance-guidelines.md
+>>>>>>> .merge_file_6LkhQv

@@ -5,12 +5,17 @@ declare(strict_types=1);
 use Illuminate\Database\Schema\Blueprint;
 use Modules\Xot\Database\Migrations\XotBaseMigration;
 
+<<<<<<< .merge_file_jJOgwV
 <<<<<<< HEAD
 return new class extends XotBaseMigration
 {
 =======
 return new class extends XotBaseMigration {
 >>>>>>> laraxot/master
+=======
+return new class extends XotBaseMigration
+{
+>>>>>>> .merge_file_dATKis
     /**
      * Run the migrations.
      */

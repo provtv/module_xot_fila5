@@ -5,6 +5,7 @@ topic: namespace
 canonical: ../../../Themes/docs/shared-components/namespace-rules.md
 ---
 
+<<<<<<< .merge_file_iFgHcF
 See canonical documentation: ../../../Themes/docs/shared-components/namespace-rules.md
 =======
 # Regole Namespace PSR-4 per Tutti i Moduli (Regola Globale)
@@ -39,3 +40,6 @@ See canonical documentation: ../../../Themes/docs/shared-components/namespace-ru
 
 **Link bidirezionale:** Aggiornare anche la root docs e la docs dei moduli coinvolti.
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/namespace-rules.md
+>>>>>>> .merge_file_H0Lw76

@@ -5,6 +5,7 @@ topic: panel-providers
 canonical: ../../../Themes/docs/shared-components/panel-provider-patterns.md
 ---
 
+<<<<<<< .merge_file_TZCAbO
 See canonical documentation: ../../../Themes/docs/shared-components/panel-provider-patterns.md
 =======
 # Panel Provider Patterns - XotBasePanelProvider e XotBaseMainPanelProvider
@@ -123,3 +124,6 @@ Prima di considerare completo un Panel Provider, verificare:
 
 *Ultimo aggiornamento: Dicembre 2024*
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/panel-provider-patterns.md
+>>>>>>> .merge_file_7itPc7

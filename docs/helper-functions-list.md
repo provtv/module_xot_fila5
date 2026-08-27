@@ -5,6 +5,7 @@ topic: helper-functions-list
 canonical: ../../../Themes/docs/shared-components/helper-functions-complete-list.md
 ---
 
+<<<<<<< .merge_file_YAuE1m
 See canonical documentation: ../../../Themes/docs/shared-components/helper-functions-complete-list.md
 =======
 # Helper Functions Complete List - Xot Module
@@ -380,3 +381,6 @@ composer dump-autoload
 
 *"Helper functions sono il vocabolario comune del framework: semplici da usare, potenti nell'implementazione."*
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/helper-functions-complete-list.md
+>>>>>>> .merge_file_G4IwII

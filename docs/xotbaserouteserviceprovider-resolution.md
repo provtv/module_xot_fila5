@@ -5,6 +5,7 @@ topic: xotbaserouteserviceprovider-resolution
 canonical: ../../../Themes/docs/shared-components/xotbaserouteserviceprovider-conflict-resolution.md
 ---
 
+<<<<<<< .merge_file_suvS7V
 See canonical documentation: ../../../Themes/docs/shared-components/xotbaserouteserviceprovider-conflict-resolution.md
 =======
 # Risoluzione conflitto XotBaseRouteServiceProvider.php
@@ -34,3 +35,6 @@ Il file conteneva marker di conflitto git  all'interno del metodo `boot()`, con 
 ## Collegamento alla doc root
 Vedi `/docs/xot_conflict_links.md` per la mappatura dei file documentati localmente e i riferimenti incrociati.
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/xotbaserouteserviceprovider-conflict-resolution.md
+>>>>>>> .merge_file_OFFWUf

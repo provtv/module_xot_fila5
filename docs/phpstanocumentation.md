@@ -5,6 +5,7 @@ topic: phpstanocumentation
 canonical: ../../../Themes/docs/shared-components/phpstan-documentation-complete.md
 ---
 
+<<<<<<< .merge_file_lwwZsy
 See canonical documentation: ../../../Themes/docs/shared-components/phpstan-documentation-complete.md
 =======
 # PHPStan Documentation - Completion Summary
@@ -236,3 +237,6 @@ Modules/
 **Date**: [DATE]
 **Status**: ✅ Documentation Complete - Ready for Development Team
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/phpstan-documentation-complete.md
+>>>>>>> .merge_file_5zOX3P

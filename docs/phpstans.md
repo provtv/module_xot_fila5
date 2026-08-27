@@ -5,6 +5,7 @@ topic: phpstans
 canonical: ../../../Themes/docs/shared-components/phpstan-patterns-dec.md
 ---
 
+<<<<<<< .merge_file_E0lVn5
 See canonical documentation: ../../../Themes/docs/shared-components/phpstan-patterns-dec.md
 =======
 # PHPStan Patterns - Dicembre 2025
@@ -111,3 +112,6 @@ Applicando questi pattern, abbiamo raggiunto:
 - **Type safety al livello massimo**
 - **Codice manutenibile e robusto**
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/phpstan-patterns-dec.md
+>>>>>>> .merge_file_qV7lIJ

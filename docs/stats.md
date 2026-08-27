@@ -19,6 +19,7 @@ https://github.com/codemastersolucoes/laravel-visitor-tracker
 https://beyondco.de/docs/laravel-websockets/debugging/dashboard   !!
 
 
+<<<<<<< .merge_file_MjILQR
 https://arslantariq.com/build-ui-dashboards-for-your-laravel-application/
 =======
 # _stats
@@ -41,3 +42,6 @@ https://beyondco.de/project_docs/laravel-websockets/debugging/dashboard   !!
 https://arslantariq.com/build-ui-dashboards-for-your-laravel-application/
 
 >>>>>>> laraxot/master
+=======
+https://arslantariq.com/build-ui-dashboards-for-your-laravel-application/
+>>>>>>> .merge_file_vjakD8

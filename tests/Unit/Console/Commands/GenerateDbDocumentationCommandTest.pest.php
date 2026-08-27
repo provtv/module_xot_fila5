@@ -133,6 +133,7 @@
 | | | | |/|/| |A|s|s|e|r|t| |c|o|m|m|a|n|d| |w|a|s| |s|u|c|c|e|s|s|f|u|l| |a|n|d| |c|r|e|a|t|e|d| |t|h|e| |o|u|t|p|u|t| |d|i|r|e|c|t|o|r|y|
 | | | | |e|x|p|e|c|t|(|$|e|x|i|t|C|o|d|e|)|-|>|t|o|B|e|(|0|)|-|>|a|n|d|(|F|i|l|e|:|:|i|s|D|i|r|e|c|t|o|r|y|(|$|t|h|i|s|-|>|t|e|s|t|O|u|t|p|u|t|D|i|r|)|)|-|>|t|o|B|e|T|r|u|e|(|)|;|
 |}|)|;|
+<<<<<<< .merge_file_QhZ6ub
 |
 =======
 <?php
@@ -269,3 +270,6 @@ test('it handles missing output directory', function () {
     expect($exitCode)->toBe(0)->and(File::isDirectory($this->testOutputDir))->toBeTrue();
 });
 >>>>>>> laraxot/master
+=======
+|
+>>>>>>> .merge_file_wbwKSb

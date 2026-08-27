@@ -5,6 +5,7 @@ topic: phpstan-level10
 canonical: ../../../Themes/docs/shared-components/phpstan-level10-complete-status.md
 ---
 
+<<<<<<< .merge_file_viQOou
 See canonical documentation: ../../../Themes/docs/shared-components/phpstan-level10-complete-status.md
 =======
 # PHPStan Level 10 - Status Completo Progetto
@@ -118,3 +119,6 @@ Moduli che richiedono questa configurazione:
 
 *Ultimo aggiornamento: gennaio 2026*
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/phpstan-level10-complete-status.md
+>>>>>>> .merge_file_CLzz6c

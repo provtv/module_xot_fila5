@@ -5,6 +5,7 @@ topic: migration-base
 canonical: ../../../Themes/docs/shared-components/migration-base-rules.md
 ---
 
+<<<<<<< .merge_file_xvj9Cu
 See canonical documentation: ../../../Themes/docs/shared-components/migration-base-rules.md
 =======
 # MIGRATION BASE RULES
@@ -85,3 +86,6 @@ Ultimo aggiornamento: [DATE]
 
 ---
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/migration-base-rules.md
+>>>>>>> .merge_file_LMO3JT

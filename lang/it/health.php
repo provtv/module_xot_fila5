@@ -15,6 +15,7 @@ return [
             'heading' => 'Application Health',
             'navigation' => ['group' => 'Settings', 'label' => 'Application Health'],
             'notifications' => ['check_results' => 'Check results from'],
+<<<<<<< .merge_file_r6boJJ
         ],
     ],
     'actions' => [
@@ -184,6 +185,21 @@ return [
             'backup_failed' => 'Backup fallito: :reason',
             'security_breach' => 'Rilevata potenziale violazione sicurezza',
         ],
+=======
+        ],
+    ],
+    'actions' => [
+        'refresh' => ['label' => 'refresh', 'tooltip' => 'refresh', 'icon' => 'refresh'],
+        'logout' => ['tooltip' => 'logout'],
+        'save' => ['label' => 'save', 'icon' => 'save', 'tooltip' => 'save'],
+    ],
+    'label' => 'Health',
+    'plural_label' => 'Health (Plurale)',
+    'fields' => [
+        'id' => ['label' => 'Identificativo', 'tooltip' => 'Identificativo univoco del record', 'helper_text' => '', 'description' => ''],
+        'created_at' => ['label' => 'Data Creazione', 'tooltip' => '', 'helper_text' => '', 'description' => ''],
+        'updated_at' => ['label' => 'Ultima Modifica', 'tooltip' => '', 'helper_text' => '', 'description' => ''],
+>>>>>>> .merge_file_4l0h7m
     ],
     'title' => 'health',
 >>>>>>> laraxot/master

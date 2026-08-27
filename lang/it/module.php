@@ -45,6 +45,7 @@ return [
         'createAnother' => ['label' => 'createAnother', 'icon' => 'createAnother', 'tooltip' => 'createAnother'],
         'save' => ['label' => 'save', 'icon' => 'save', 'tooltip' => 'save'],
         'layout' => ['label' => 'layout', 'icon' => 'layout', 'tooltip' => 'layout'],
+<<<<<<< .merge_file_QnMYkR
 =======
         'name' => 'Moduli',
         'plural' => 'Moduli',
@@ -216,5 +217,7 @@ return [
             'migrations_pending' => 'Ci sono migrazioni in sospeso',
         ],
 >>>>>>> laraxot/master
+=======
+>>>>>>> .merge_file_6wo27Z
     ],
 ];

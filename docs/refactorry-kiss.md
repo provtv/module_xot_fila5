@@ -5,6 +5,7 @@ topic: refactorry-kiss
 canonical: ../../../Themes/docs/shared-components/refactor-dry-kiss-sumy.md
 ---
 
+<<<<<<< .merge_file_YGZF3b
 See canonical documentation: ../../../Themes/docs/shared-components/refactor-dry-kiss-sumy.md
 =======
 # Refactor Radicale DRY + KISS - Riepilogo Completo
@@ -224,3 +225,6 @@ See canonical documentation: ../../../Themes/docs/shared-components/refactor-dry
 **Durata refactor**: 15 minuti
 **Impatto**: TRASFORMATIVO
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/refactor-dry-kiss-sumy.md
+>>>>>>> .merge_file_qi92sX

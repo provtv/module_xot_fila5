@@ -43,6 +43,7 @@ use Spatie\Health\Models\HealthCheckResultHistoryItem as BaseHealthCheckResultHi
  * @method static Builder<static>|HealthCheckResultHistoryItem whereStatus($value)
  * @method static Builder<static>|HealthCheckResultHistoryItem whereUpdatedAt($value)
  * @method static Builder<static>|HealthCheckResultHistoryItem whereUpdatedBy($value)
+<<<<<<< .merge_file_e5dFJj
 =======
 use Illuminate\Support\Carbon;
 use Illuminate\Database\Eloquent\Builder;
@@ -80,6 +81,8 @@ use Spatie\Health\Models\HealthCheckResultHistoryItem as BaseHealthCheckResultHi
  * @method static Builder|HealthCheckResultHistoryItem whereUpdatedBy($value)
  * @mixin IdeHelperHealthCheckResultHistoryItem
 >>>>>>> laraxot/master
+=======
+>>>>>>> .merge_file_sM6G0D
  * @mixin \Eloquent
  */
 class HealthCheckResultHistoryItem extends BaseHealthCheckResultHistoryItem

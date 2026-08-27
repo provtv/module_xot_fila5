@@ -1,4 +1,7 @@
+<<<<<<< .merge_file_2VGaET
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_jYLy5Q
 ---
 title: "Analisi e Miglioramenti del Prompt docs.txt"
 module: xot

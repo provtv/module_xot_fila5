@@ -32,6 +32,7 @@ return [
         'createAnother' => ['label' => 'createAnother', 'icon' => 'createAnother', 'tooltip' => 'createAnother'],
         'save' => ['label' => 'save', 'icon' => 'save', 'tooltip' => 'save'],
         'layout' => ['label' => 'layout', 'icon' => 'layout', 'tooltip' => 'layout'],
+<<<<<<< .merge_file_DbrI5n
 =======
         'name' => 'Lock Cache',
         'plural' => 'Lock Cache',
@@ -187,5 +188,7 @@ return [
     'model' => [
         'label' => 'cache lock.model',
 >>>>>>> laraxot/master
+=======
+>>>>>>> .merge_file_C0Wgaj
     ],
 ];

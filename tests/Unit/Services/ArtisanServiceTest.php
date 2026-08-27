@@ -16,11 +16,15 @@ use Tests\TestCase;
 use function Safe\ob_end_clean;
 use function Safe\ob_start;
 
+<<<<<<< .merge_file_3SmmHX
 <<<<<<< HEAD
 uses(TestCase::class)->group('no-xot-db');
 =======
 uses(TestCase::class);
 >>>>>>> laraxot/master
+=======
+uses(TestCase::class)->group('no-xot-db');
+>>>>>>> .merge_file_pBN0u6
 
 beforeEach(function (): void {
     // Configure mysql connection for tests (required by ArtisanService)

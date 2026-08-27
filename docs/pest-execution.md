@@ -5,6 +5,7 @@ topic: pest-execution
 canonical: ../../../Themes/docs/shared-components/pest-execution-guide.md
 ---
 
+<<<<<<< .merge_file_eW3Ox0
 See canonical documentation: ../../../Themes/docs/shared-components/pest-execution-guide.md
 =======
 # Pest Testing - Guida Esecuzione dalla Cartella Laravel
@@ -393,3 +394,6 @@ cd laravel
 **Versione Pest**: 3.8.4  
 **Status**: ✅ Documentazione Completa
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/pest-execution-guide.md
+>>>>>>> .merge_file_qxEhep

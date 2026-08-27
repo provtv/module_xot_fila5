@@ -5,6 +5,7 @@ topic: filament-composite-contacts-column
 canonical: ../../../Themes/docs/shared-components/filament-composite-contacts-column-analysis.md
 ---
 
+<<<<<<< .merge_file_MdxCxU
 See canonical documentation: ../../../Themes/docs/shared-components/filament-composite-contacts-column-analysis.md
 =======
 # Analisi e Implementazione Colonna Composita "Contatti" - TechPlanner
@@ -248,3 +249,6 @@ Questa implementazione stabilisce un precedente per:
 **Ultimo aggiornamento**: agosto 2025
 **Autore**: Cascade AI Assistant
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/filament-composite-contacts-column-analysis.md
+>>>>>>> .merge_file_WbURQh

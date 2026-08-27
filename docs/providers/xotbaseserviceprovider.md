@@ -181,6 +181,7 @@ try {
 - [PHPStan rules](../quality/phpstan-rules.md)
 - [Service provider best practices](../service-provider-best-practices.md)
 - [Mixed ultima spiaggia](../../../Notify/docs/mixed-type-ultima-spiaggia.md)
+<<<<<<< .merge_file_c6z6yX
 =======
 ---
 description:
@@ -188,3 +189,5 @@ globs:
 alwaysApply: false
 ---
 >>>>>>> laraxot/master
+=======
+>>>>>>> .merge_file_vmYbce

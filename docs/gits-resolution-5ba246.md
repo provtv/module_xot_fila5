@@ -5,6 +5,7 @@ topic: gits-resolution-5ba246
 canonical: ../../../Themes/docs/shared-components/git-conflicts-resolution-conflict-5ba246.md
 ---
 
+<<<<<<< .merge_file_NePx7w
 See canonical documentation: ../../../Themes/docs/shared-components/git-conflicts-resolution-conflict-5ba246.md
 =======
 # Risoluzione Conflitti Git - 6 Gennaio 2025
@@ -306,3 +307,6 @@ php artisan lang:check
 
 **Stato**: ✅ Completato
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/git-conflicts-resolution-conflict-5ba246.md
+>>>>>>> .merge_file_E0sefl

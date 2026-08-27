@@ -28,7 +28,7 @@ use Modules\Xot\Filament\Resources\XotBaseResource;
  */
 abstract class XotBaseListRecords extends FilamentListRecords
 {
-    use HasXotTable;
+    // use HasXotTable;
 
     /**
      * @param array<string, bool|float|int|string|null> $params

@@ -245,8 +245,12 @@ abstract class TestCase extends BaseTestCase
 
 ## Conclusione
 
+<<<<<<< .merge_file_zJ8ytU
 <<<<<<< HEAD
 L'approccio senza `RefreshDatabase` richiede una gestione più esplicita delle connessioni e delle migrazioni, ma offre maggiore controllo e compatibilità con l'architettura modulare di Laraxot.
 =======
 L'approccio senza `RefreshDatabase` richiede una gestione più esplicita delle connessioni e delle migrazioni, ma offre maggiore controllo e compatibilità con l'architettura modulare di Laraxot.
 >>>>>>> laraxot/master
+=======
+L'approccio senza `RefreshDatabase` richiede una gestione più esplicita delle connessioni e delle migrazioni, ma offre maggiore controllo e compatibilità con l'architettura modulare di Laraxot.
+>>>>>>> .merge_file_FZGi0I

@@ -5,6 +5,7 @@ topic: chart-export
 canonical: ../../../Themes/docs/shared-components/chart-export-guide.md
 ---
 
+<<<<<<< .merge_file_wiCzFa
 See canonical documentation: ../../../Themes/docs/shared-components/chart-export-guide.md
 =======
 # Chart Export Guide - PNG e SVG
@@ -1049,3 +1050,6 @@ $schedule->call(function () {
 **Chart.js:** 4.x
 **PHPStan Level:** 10
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/chart-export-guide.md
+>>>>>>> .merge_file_2gJJdx

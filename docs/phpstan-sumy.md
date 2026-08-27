@@ -184,8 +184,12 @@ if (null !== $value) {
 <<<<<<< HEAD
 - [healthcare_app Corrections](../healthcare_app/docs/phpstan-corrections-january-2026.md)
 - [PHPStan Code Quality Guide](../phpstan-code-quality-guide.md)
+<<<<<<< .merge_file_Y4tzJk
 - [Geo Corrections](../geo/docs/phpstan-corrections-january-2026.md)
 =======
 - [Quaeris Corrections](../quaeris/docs/phpstan-corrections-january-2026.md)
 - [Geo Corrections](../geo/docs/phpstan-corrections-january-2026.md)
 >>>>>>> laraxot/master
+=======
+- [Geo Corrections](../geo/docs/phpstan-corrections-january-2026.md)
+>>>>>>> .merge_file_7YEIgj

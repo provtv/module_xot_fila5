@@ -112,11 +112,15 @@ architecture-overview.md
 # ❌ SBAGLIATO
 MY_DOCUMENT.md              # UPPERCASE
 my_document.md              # underscore
+<<<<<<< .merge_file_jzcHEp
 <<<<<<< HEAD
 analysis-2025-11-04.md      # date in name (use CHANGELOG.md)
 =======
 analysis-[DATE].md      # date in name (use CHANGELOG.md)
 >>>>>>> laraxot/master
+=======
+analysis-2025-11-04.md      # date in name (use CHANGELOG.md)
+>>>>>>> .merge_file_tvYFeT
 ```
 
 ### 8. DRY Principle

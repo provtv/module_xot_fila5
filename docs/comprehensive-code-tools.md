@@ -5,6 +5,7 @@ topic: comprehensive-code-tools
 canonical: ../../../Themes/docs/shared-components/comprehensive-code-analysis-tools.md
 ---
 
+<<<<<<< .merge_file_9SKvXV
 See canonical documentation: ../../../Themes/docs/shared-components/comprehensive-code-analysis-tools.md
 =======
 # 🔍 COMPREHENSIVE CODE ANALYSIS TOOLS GUIDE
@@ -473,3 +474,6 @@ chmod +x scripts/*.sh
 
 *Questa guida fornisce tutti gli strumenti necessari per mantenere la massima qualità del codice nel progetto FixCity.*
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/comprehensive-code-analysis-tools.md
+>>>>>>> .merge_file_CWMe4C

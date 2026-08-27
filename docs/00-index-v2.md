@@ -45,8 +45,12 @@
 - Tutti i moduli del sistema dipendono da **Xot**.
 
 ---
+<<<<<<< .merge_file_4ZBf8Q
 <<<<<<< HEAD
 *Documentazione conforme agli standard Laraxot - DRY + KISS + SOLID*
 =======
 *Documentazione conforme agli standard Laraxot - DRY + KISS + SOLID*
 >>>>>>> laraxot/master
+=======
+*Documentazione conforme agli standard Laraxot - DRY + KISS + SOLID*
+>>>>>>> .merge_file_4a5wkT

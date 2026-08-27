@@ -5,6 +5,7 @@ topic: naming-conventionsocs
 canonical: ../../../Themes/docs/shared-components/naming-conventions-docs.md
 ---
 
+<<<<<<< .merge_file_cwf3oF
 See canonical documentation: ../../../Themes/docs/shared-components/naming-conventions-docs.md
 =======
 # Convenzioni di Naming nella Documentazione
@@ -230,3 +231,6 @@ Prima di committare modifiche alla documentazione di un modulo, verificare:
 - [Convenzioni Generali](conventions.md)
 - [Best Practices Documentazione](documentation-guidelines.md)
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/naming-conventions-docs.md
+>>>>>>> .merge_file_oqAN0D

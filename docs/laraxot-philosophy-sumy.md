@@ -5,6 +5,7 @@ topic: laraxot-philosophy-sumy
 canonical: ../../../Themes/docs/shared-components/laraxot-philosophy-summary.md
 ---
 
+<<<<<<< .merge_file_LMeCzt
 See canonical documentation: ../../../Themes/docs/shared-components/laraxot-philosophy-summary.md
 =======
 # Laraxot Philosophy - Complete Summary
@@ -169,3 +170,6 @@ composer dump-autoload
 
 **Philosophy Summary**: Laraxot values simplicity, consistency, and predictability above all else. Follow these principles to build maintainable, scalable applications with minimal technical debt.
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/laraxot-philosophy-summary.md
+>>>>>>> .merge_file_npWDuQ

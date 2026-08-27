@@ -15,6 +15,7 @@ return [
     ],
     'label' => 'Giorno della Settimana',
     'options' => [1 => 'Lunedì', 'Martedì', 'Mercoledì', 'Giovedì', 'Venerdì', 'Sabato', 'Domenica'],
+<<<<<<< .merge_file_8VpWYd
 =======
     'label' => 'Giorno della Settimana',
     'options' => [
@@ -27,10 +28,13 @@ return [
         7 => 'Domenica',
     ],
 >>>>>>> laraxot/master
+=======
+>>>>>>> .merge_file_4ChARC
     'plural_label' => 'Day Of Week (Plurale)',
     'navigation' => [
         'name' => 'Day Of Week',
         'plural' => 'Day Of Week',
+<<<<<<< .merge_file_8VpWYd
 <<<<<<< HEAD
         'group' => ['name' => 'General', 'description' => 'General Settings'],
 =======
@@ -39,12 +43,18 @@ return [
             'description' => 'General Settings',
         ],
 >>>>>>> laraxot/master
+=======
+        'group' => ['name' => 'General', 'description' => 'General Settings'],
+>>>>>>> .merge_file_4ChARC
         'label' => 'Day Of Week',
         'sort' => 1,
         'icon' => 'heroicon-o-collection',
     ],
     'fields' => [
+<<<<<<< .merge_file_8VpWYd
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_4ChARC
         'id' => ['label' => 'Identificativo', 'tooltip' => 'Identificativo univoco del record', 'helper_text' => '', 'description' => ''],
         'created_at' => ['label' => 'Data Creazione', 'tooltip' => '', 'helper_text' => '', 'description' => ''],
         'updated_at' => ['label' => 'Ultima Modifica', 'tooltip' => '', 'helper_text' => '', 'description' => ''],
@@ -55,6 +65,7 @@ return [
         ['label' => '5', 'placeholder' => '5', 'helper_text' => '5', 'description' => '5'],
         ['label' => '6', 'placeholder' => '6', 'helper_text' => '6', 'description' => '6'],
         ['label' => '7', 'placeholder' => '7', 'helper_text' => '7', 'description' => '7'],
+<<<<<<< .merge_file_8VpWYd
     ],
     'actions' => [
         'create' => ['label' => 'Crea Day Of Week'],
@@ -91,5 +102,12 @@ return [
             'label' => 'Elimina Day Of Week',
         ],
 >>>>>>> laraxot/master
+=======
+    ],
+    'actions' => [
+        'create' => ['label' => 'Crea Day Of Week'],
+        'edit' => ['label' => 'Modifica Day Of Week'],
+        'delete' => ['label' => 'Elimina Day Of Week'],
+>>>>>>> .merge_file_4ChARC
     ],
 ];

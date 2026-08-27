@@ -1,4 +1,7 @@
+<<<<<<< .merge_file_VBRiJJ
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_sUYnRM
 # Export XLS da LazyCollection
 
 Canonico: [../../export-xls-by-lazy-collection.md](../../export-xls-by-lazy-collection.md).
@@ -6,6 +9,7 @@ Canonico: [../../export-xls-by-lazy-collection.md](../../export-xls-by-lazy-coll
 Perché il generic sta sulla proprietà e non sulla promoted constructor property:
 `TValue` di `LazyCollection` è invariante — vedi anche
 [Ptv: pluck e template invarianti](../../../Ptv/docs/phpstan-ptv-patterns.md).
+<<<<<<< .merge_file_VBRiJJ
 =======
 # ExportXlsByLazyCollection
 
@@ -88,3 +92,5 @@ return $response; // Scarica il file Excel
 - [Actions Overview](./readme.md)
 - [PHPStan Fixes Summary](../../../../docs/phpstan-fixes-summary.md)
 >>>>>>> laraxot/master
+=======
+>>>>>>> .merge_file_sUYnRM

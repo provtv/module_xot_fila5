@@ -5,6 +5,7 @@ topic: phpmd
 canonical: ../../../Themes/docs/shared-components/phpmd-analysis-Modules.md
 ---
 
+<<<<<<< .merge_file_sw4jlW
 See canonical documentation: ../../../Themes/docs/shared-components/phpmd-analysis-Modules.md
 =======
 # Analisi PHPMD - Tutti i Moduli
@@ -42,3 +43,6 @@ I warning PHPMD sono spesso informativi e non bloccanti. Focus su:
 - Code smells che impattano manutenibilità
 - Pattern che violano principi SOLID
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/phpmd-analysis-Modules.md
+>>>>>>> .merge_file_p5G1PI

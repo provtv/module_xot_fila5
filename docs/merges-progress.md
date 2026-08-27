@@ -5,6 +5,7 @@ topic: merges-progress
 canonical: ../../../Themes/docs/shared-components/merge-conflicts-progress-sumy.md
 ---
 
+<<<<<<< .merge_file_uG04Vs
 See canonical documentation: ../../../Themes/docs/shared-components/merge-conflicts-progress-sumy.md
 =======
 # Summary Progresso Risoluzione Merge Conflicts
@@ -71,3 +72,6 @@ See canonical documentation: ../../../Themes/docs/shared-components/merge-confli
 **Ultimo aggiornamento**: [DATE]
 **Versione**: 1.0.0
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/merge-conflicts-progress-sumy.md
+>>>>>>> .merge_file_24FYvu

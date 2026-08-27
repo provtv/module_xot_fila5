@@ -46,11 +46,15 @@ trait HasTableFunctionsTrait
         return [
             'edit' => Action::make('edit')
                 ->label('Modifica')
+<<<<<<< .merge_file_0UMC7f
 <<<<<<< HEAD
                 ->url(fn (Model $record): string => route('filament.resources.'.$this->getResourceSlug().'.edit', [
 =======
                 ->url(fn($record): string => route('filament.resources.' . $this->getResourceSlug() . '.edit', [
 >>>>>>> laraxot/master
+=======
+                ->url(fn (Model $record): string => route('filament.resources.'.$this->getResourceSlug().'.edit', [
+>>>>>>> .merge_file_x1JLD5
                     'record' => $record,
                 ])),
             'delete' => Action::make('delete')

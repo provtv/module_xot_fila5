@@ -76,6 +76,10 @@ abstract class XotBaseModel extends Model
         if (! isset($object['object'])) {
             // Fallback to static class when called outside model/resource context (e.g. ide-helper)
             if (class_exists(static::class) && is_subclass_of(static::class, EloquentModel::class)) {
+<<<<<<< .merge_file_omGz3K
+=======
+                /** @var class-string<EloquentModel> */
+>>>>>>> .merge_file_2fzkFm
                 return static::class;
             }
             throw new \RuntimeException('Unable to resolve caller object for getClassName()');
@@ -94,6 +98,10 @@ abstract class XotBaseModel extends Model
         if (! Str::contains($namespace, 'Modules\\')) {
             // Fallback to static class when namespace resolution fails
             if (class_exists(static::class) && is_subclass_of(static::class, EloquentModel::class)) {
+<<<<<<< .merge_file_omGz3K
+=======
+                /** @var class-string<EloquentModel> */
+>>>>>>> .merge_file_2fzkFm
                 return static::class;
             }
         }
@@ -104,6 +112,10 @@ abstract class XotBaseModel extends Model
         if (! class_exists($res)) {
             // Fallback to static class
             if (class_exists(static::class) && is_subclass_of(static::class, EloquentModel::class)) {
+<<<<<<< .merge_file_omGz3K
+=======
+                /** @var class-string<EloquentModel> */
+>>>>>>> .merge_file_2fzkFm
                 return static::class;
             }
             throw new \RuntimeException("Resolved class {$res} does not exist");

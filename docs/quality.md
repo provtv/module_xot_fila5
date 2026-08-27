@@ -5,6 +5,7 @@ topic: quality
 canonical: ../../../Themes/docs/shared-components/quality-analysis-sumy.md
 ---
 
+<<<<<<< .merge_file_tmU6im
 See canonical documentation: ../../../Themes/docs/shared-components/quality-analysis-sumy.md
 =======
 # Riepilogo Analisi Qualità Codice Completa
@@ -88,3 +89,6 @@ See canonical documentation: ../../../Themes/docs/shared-components/quality-anal
 - **PHPInsights**: Score eccellenti, issue minori accettabili
 - **Qualità**: Codicebase in ottimo stato, qualità eccellente
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/quality-analysis-sumy.md
+>>>>>>> .merge_file_hQVpnO

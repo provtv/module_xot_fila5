@@ -69,6 +69,7 @@ describe('XotBaseTransition', function (): void {
             }
 
             public function sendRecipientNotification(RecordNotificationData $recipient, array $data): void {}
+<<<<<<< .merge_file_0nuHOZ
         };
 
         $transition->sendNotifications();
@@ -100,6 +101,8 @@ describe('XotBaseTransition', function () {
             {
                 // Mock implementation
             }
+=======
+>>>>>>> .merge_file_tUvkF5
         };
 
         // Create a test record

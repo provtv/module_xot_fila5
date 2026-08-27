@@ -5,6 +5,7 @@ topic: index
 canonical: ../../../../Themes/docs/shared-components/index.md
 ---
 
+<<<<<<< .merge_file_Mi1PNf
 See canonical documentation: ../../../../Themes/docs/shared-components/index.md
 =======
 # Html2Pdf - Panoramica e Installazione
@@ -108,3 +109,6 @@ enum PdfEngineEnum
 }
 ```
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../../Themes/docs/shared-components/index.md
+>>>>>>> .merge_file_uh6Ek8

@@ -5,6 +5,7 @@ topic: autoload
 canonical: ../../../Themes/docs/shared-components/autoload-audit-report.md
 ---
 
+<<<<<<< .merge_file_VTDBPi
 See canonical documentation: ../../../Themes/docs/shared-components/autoload-audit-report.md
 =======
 # Autoload Configuration Audit Report
@@ -61,3 +62,6 @@ All modules now follow the correct autoload configuration standard. The main dev
 - Continue to validate that all new modules follow the standard configuration
 - Implement automated checks to prevent this type of configuration issue
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/autoload-audit-report.md
+>>>>>>> .merge_file_tfHPac

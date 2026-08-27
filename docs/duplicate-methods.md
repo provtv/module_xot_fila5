@@ -5,6 +5,7 @@ topic: duplicate-methods
 canonical: ../../../Themes/docs/shared-components/duplicate-methods-analysis.md
 ---
 
+<<<<<<< .merge_file_kMuXgT
 See canonical documentation: ../../../Themes/docs/shared-components/duplicate-methods-analysis.md
 =======
 # Analisi Metodi Duplicati - Modulo Xot
@@ -595,3 +596,6 @@ Indica quanto è probabile che il refactoring sia vantaggioso:
 - **50-69%**: Valutare caso per caso
 - **< 50%**: Richiede analisi dettagliata
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/duplicate-methods-analysis.md
+>>>>>>> .merge_file_Fd2Quv

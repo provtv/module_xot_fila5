@@ -5,6 +5,7 @@ topic: pest-testing
 canonical: ../../../Themes/docs/shared-components/pest-testing-status.md
 ---
 
+<<<<<<< .merge_file_3aXbFn
 See canonical documentation: ../../../Themes/docs/shared-components/pest-testing-status.md
 =======
 # Pest Testing - Stato Attuale e Roadmap
@@ -211,3 +212,6 @@ test('user can be saved to database', function () {
 **Ultimo aggiornamento**: 9 Gennaio 2026  
 **Status**: 🔄 **IN CORREZIONE**
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/pest-testing-status.md
+>>>>>>> .merge_file_nZtYQA

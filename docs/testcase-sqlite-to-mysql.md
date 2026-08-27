@@ -5,6 +5,7 @@ topic: testcase-sqlite-to-mysql
 canonical: ../../../Themes/docs/shared-components/testcase-sqlite-to-mysql-fix-Modules.md
 ---
 
+<<<<<<< .merge_file_K2T68C
 See canonical documentation: ../../../Themes/docs/shared-components/testcase-sqlite-to-mysql-fix-Modules.md
 =======
 # TestCase SQLite to MySQL Fix - Xot Module
@@ -215,3 +216,6 @@ Questo è INUTILE perché:
 **Complessità:** ESTREMA → MINIMALE
 **Filosofia:** MySQL Production = MySQL Tests ✅
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/testcase-sqlite-to-mysql-fix-Modules.md
+>>>>>>> .merge_file_WbHN7C

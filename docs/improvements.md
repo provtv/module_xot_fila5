@@ -5,6 +5,7 @@ topic: improvements
 canonical: ../../../Themes/docs/shared-components/improvements-sumy.md
 ---
 
+<<<<<<< .merge_file_lqIma2
 See canonical documentation: ../../../Themes/docs/shared-components/improvements-sumy.md
 =======
 # Riepilogo Miglioramenti e Analisi - [DATE]
@@ -149,3 +150,6 @@ public function getUpcomingEvents(): Collection
 
 **Ultimo aggiornamento**: [DATE]
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/improvements-sumy.md
+>>>>>>> .merge_file_5kcirj

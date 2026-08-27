@@ -5,6 +5,7 @@ topic: gits-mal-risolti
 canonical: ../../../Themes/docs/shared-components/git-conflicts-mal-risolti.md
 ---
 
+<<<<<<< .merge_file_4pHAHO
 See canonical documentation: ../../../Themes/docs/shared-components/git-conflicts-mal-risolti.md
 =======
 # Conflitti Git Mal Risolti - Pattern e Fix
@@ -324,3 +325,6 @@ Il pattern lock file ha:
 **Server status**: ✅ **RUNNING**
 **Pattern lock**: ✅ **APPLICATO E FUNZIONANTE**
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/git-conflicts-mal-risolti.md
+>>>>>>> .merge_file_y0BaG7

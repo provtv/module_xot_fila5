@@ -141,6 +141,7 @@ curl http://quaeris.local/quaeris/admin/ats/survey-pdfs/16/question-charts/226
 
 1. **Principio di Liskov**: Quando si estende una classe o si usa un trait, la visibilità dei metodi non può essere ridotta
 2. **Compatibilità Filament**: I trait di Filament (`InteractsWithTable`) hanno requisiti specifici di visibilità
+<<<<<<< .merge_file_oDEiS9
 <<<<<<< HEAD
 3. **Documentazione**: La documentazione esistente (`widget-method-visibility-rules.md`) era corretta ma non era stata applicata al trait base
 =======
@@ -148,3 +149,6 @@ curl http://quaeris.local/quaeris/admin/ats/survey-pdfs/16/question-charts/226
 
 *Ultimo aggiornamento: 2026-01-27*
 >>>>>>> laraxot/master
+=======
+3. **Documentazione**: La documentazione esistente (`widget-method-visibility-rules.md`) era corretta ma non era stata applicata al trait base
+>>>>>>> .merge_file_Nz6AbP

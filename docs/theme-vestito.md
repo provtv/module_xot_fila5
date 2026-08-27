@@ -1,4 +1,7 @@
+<<<<<<< .merge_file_6jgVWx
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_QmOyNz
 ---
 title: "Theme System: The 'Vestito' (Clothing) Philosophy"
 module: xot
@@ -8,8 +11,11 @@ created: 2026-08-24
 updated: 2026-08-24
 ---
 
+<<<<<<< .merge_file_6jgVWx
 =======
 >>>>>>> laraxot/master
+=======
+>>>>>>> .merge_file_QmOyNz
 # Theme System: The "Vestito" (Clothing) Philosophy
 
 ## Core Concept: Theme as "Vestito"

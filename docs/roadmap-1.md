@@ -10,11 +10,15 @@
 
 ## 🎯 MODULE OVERVIEW
 
+<<<<<<< .merge_file_B0rCZr
 <<<<<<< HEAD
 Il modulo **Xot** è il cuore architetturale del sistema <nome progetto>, fornendo le funzionalità base, i contratti, le azioni e i servizi condivisi tra tutti i moduli. È il fondamento su cui si costruisce l'intera piattaforma.
 =======
 Il modulo **Xot** è il cuore architetturale del sistema FixCity, fornendo le funzionalità base, i contratti, le azioni e i servizi condivisi tra tutti i moduli. È il fondamento su cui si costruisce l'intera piattaforma.
 >>>>>>> laraxot/master
+=======
+Il modulo **Xot** è il cuore architetturale del sistema <nome progetto>, fornendo le funzionalità base, i contratti, le azioni e i servizi condivisi tra tutti i moduli. È il fondamento su cui si costruisce l'intera piattaforma.
+>>>>>>> .merge_file_MrYf98
 
 ### 🏗️ Architettura Modulo
 ```
@@ -431,11 +435,15 @@ Xot Module (Core Framework)
 
 ## 🔗 INTEGRATION POINTS
 
+<<<<<<< .merge_file_B0rCZr
 <<<<<<< HEAD
 ### 🎫 <nome progetto> Module
 =======
 ### 🎫 Fixcity Module
 >>>>>>> laraxot/master
+=======
+### 🎫 <nome progetto> Module
+>>>>>>> .merge_file_MrYf98
 - [ ] Base classes for ticket management
 - [ ] Workflow actions for tickets
 - [ ] Notification services

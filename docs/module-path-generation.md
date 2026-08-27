@@ -5,6 +5,7 @@ topic: module-path-generation
 canonical: ../../../Themes/docs/shared-components/module-path-generation-philosophy.md
 ---
 
+<<<<<<< .merge_file_IIRc1F
 See canonical documentation: ../../../Themes/docs/shared-components/module-path-generation-philosophy.md
 =======
 # Module Path Generation - Philosophy and Business Logic
@@ -100,3 +101,6 @@ $assetsPath = app(GetModulePathByGeneratorAction::class)->execute($this->name, '
 
 **Filosofia**: Il sistema si adatta ai moduli, non viceversa.
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/module-path-generation-philosophy.md
+>>>>>>> .merge_file_Xz3Fqu

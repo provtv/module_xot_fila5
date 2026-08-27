@@ -5,6 +5,7 @@ topic: providerocumentation-index
 canonical: ../../../Themes/docs/shared-components/provider-documentation-index.md
 ---
 
+<<<<<<< .merge_file_yV4yOr
 See canonical documentation: ../../../Themes/docs/shared-components/provider-documentation-index.md
 =======
 # Provider Documentation Index
@@ -267,3 +268,6 @@ When reviewing provider code:
 
 **Note**: Always consult this index before creating or modifying providers. Keep it updated when adding new provider documentation.
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/provider-documentation-index.md
+>>>>>>> .merge_file_MjpS94

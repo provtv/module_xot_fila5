@@ -51,6 +51,7 @@ use Modules\Xot\Contracts\ProfileContract;
  * @method static Builder<static>|Session whereUserAgent($value)
  * @method static Builder<static>|Session whereUserId($value)
  * @property ProfileContract|null $deleter
+<<<<<<< .merge_file_nOdUY7
 =======
  * @property int                             $id
  * @property int|null                        $user_id
@@ -108,6 +109,8 @@ use Modules\Xot\Contracts\ProfileContract;
  * @property ProfileContract|null $updater
  * @mixin IdeHelperSession
 >>>>>>> laraxot/master
+=======
+>>>>>>> .merge_file_vExoCb
  * @mixin \Eloquent
  */
 class Session extends BaseModel

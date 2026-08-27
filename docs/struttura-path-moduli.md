@@ -5,6 +5,7 @@ topic: struttura-path-moduli
 canonical: ../../../Themes/docs/shared-components/modules-path-structure.mdc
 ---
 
+<<<<<<< .merge_file_2ICtzA
 See canonical documentation: ../../../Themes/docs/shared-components/modules-path-structure.mdc
 =======
 # Regola struttura path per i moduli Laravel
@@ -188,3 +189,6 @@ namespace Modules\<nome progetto>\App\Actions\Patient\Calendar;
 
 Vedi anche: <nome progetto>/docs/directory-structure.md
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/modules-path-structure.mdc
+>>>>>>> .merge_file_pw4T57

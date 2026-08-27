@@ -5,6 +5,7 @@ topic: laraxot-migration
 canonical: ../../../Themes/docs/shared-components/laraxot-migration-philosophy-sumy.md
 ---
 
+<<<<<<< .merge_file_SsJiv9
 See canonical documentation: ../../../Themes/docs/shared-components/laraxot-migration-philosophy-sumy.md
 =======
 # Laraxot Migration Philosophy - Core Principles
@@ -142,3 +143,6 @@ In Laraxot, migrations are the definitive history of your database schema. Keep 
 
 **Remember**: In Laraxot philosophy, simplicity and clarity trump flexibility. One table, one migration, no exceptions.
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/laraxot-migration-philosophy-sumy.md
+>>>>>>> .merge_file_6zLRc2

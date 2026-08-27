@@ -5,6 +5,7 @@ topic: implementation-sumy-filament-phpstan-fixes
 canonical: ../../../Themes/docs/shared-components/implementation-filament-phpstanes.md
 ---
 
+<<<<<<< .merge_file_11z6zR
 See canonical documentation: ../../../Themes/docs/shared-components/implementation-filament-phpstanes.md
 =======
 # Implementation Summary: Filament Extension Rules & PHPStan Return Type Fixes
@@ -147,3 +148,6 @@ This document summarizes the successful implementation of:
 **Reviewed**: Automated checks passed
 **Compliance**: 100% architecture compliance achieved
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/implementation-filament-phpstanes.md
+>>>>>>> .merge_file_1svGzK

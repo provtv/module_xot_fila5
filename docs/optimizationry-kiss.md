@@ -5,6 +5,7 @@ topic: optimizationry-kiss
 canonical: ../../../Themes/docs/shared-components/optimization-analysis-dry-kiss-Modules.md
 ---
 
+<<<<<<< .merge_file_8uch8R
 See canonical documentation: ../../../Themes/docs/shared-components/optimization-analysis-dry-kiss-Modules.md
 =======
 # Analisi Ottimizzazioni Modulo Xot - DRY + KISS
@@ -281,3 +282,6 @@ abstract class XotBaseMigration extends Migration
 *Analisi completata con principi DRY + KISS | Data: $(date)*
 *Modulo: Xot (Core Framework) | Priorità: CRITICA per Service Providers*
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/optimization-analysis-dry-kiss-Modules.md
+>>>>>>> .merge_file_JWly2T

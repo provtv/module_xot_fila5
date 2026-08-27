@@ -2,6 +2,7 @@
 //-----------------------------------------------------------
 4 tips to improve Laravel performance
 https://medium.com/@mianhaseeb41/4-tips-to-improve-laravel-performance-caff9ff46e76
+<<<<<<< .merge_file_fY5HOZ
 //-------------------------------------------------------------
 =======
 # Modulo Performance
@@ -45,3 +46,6 @@ Il modulo implementa diverse risorse Filament per la gestione delle performance:
 - [Guide PHPStan Livello 9](laravel/modules/xot/project_docs/phpstan-level9-guide.md)
 - [QueueableActions](laravel/modules/xot/project_docs/queueable-actions.md)
 >>>>>>> laraxot/master
+=======
+//-------------------------------------------------------------
+>>>>>>> .merge_file_3a8a7K

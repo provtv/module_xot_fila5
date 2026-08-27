@@ -8,12 +8,17 @@ use Modules\Xot\Database\Migrations\XotBaseMigration;
 /*
  * Undocumented class.
  */
+<<<<<<< .merge_file_qJPQMh
 <<<<<<< HEAD
 return new class extends XotBaseMigration
 {
 =======
 return new class extends XotBaseMigration {
 >>>>>>> laraxot/master
+=======
+return new class extends XotBaseMigration
+{
+>>>>>>> .merge_file_aFIqbJ
     /**
      * Run the migrations.
      */

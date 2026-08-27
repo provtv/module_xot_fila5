@@ -34,7 +34,10 @@ Questo documento descrive le regole fondamentali per la creazione e la manutenzi
 ```
 
 ### Formato Non Corretto
+<<<<<<< .merge_file_zTV49F
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_nCnKGa
 ```
 
 ```markdown
@@ -82,7 +85,10 @@ Questo documento descrive le regole fondamentali per la creazione e la manutenzi
 ```
 
 ### Formato Non Corretto
+<<<<<<< .merge_file_zTV49F
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_nCnKGa
 ```
 
 ```markdown
@@ -130,7 +136,10 @@ Questo documento descrive le regole fondamentali per la creazione e la manutenzi
 ```
 
 ### Formato Non Corretto
+<<<<<<< .merge_file_zTV49F
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_nCnKGa
 ```
 
 ```markdown

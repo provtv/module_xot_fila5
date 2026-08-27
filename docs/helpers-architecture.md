@@ -5,6 +5,7 @@ topic: helpers-architecture
 canonical: ../../../Themes/docs/shared-components/helpers-architecture-analysis.md
 ---
 
+<<<<<<< .merge_file_ORbjub
 See canonical documentation: ../../../Themes/docs/shared-components/helpers-architecture-analysis.md
 =======
 # Architettura Helper Functions - Analisi e Fix
@@ -282,3 +283,6 @@ if (inAdmin()) {
 **Status**: Analisi completa - Ready per implementation
 **Priority**: CRITICA - Blocca composer autoload
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/helpers-architecture-analysis.md
+>>>>>>> .merge_file_vjhKqK

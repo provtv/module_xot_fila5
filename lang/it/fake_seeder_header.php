@@ -4,7 +4,10 @@ declare(strict_types=1);
 
 return [
     'fields' => [
+<<<<<<< .merge_file_croLam
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_4lpjfO
         'qty' => ['label' => 'qty', 'tooltip' => '', 'helper_text' => '', 'description' => '', 'placeholder' => 'qty'],
     ],
     'label' => 'Fake Seeder Header',
@@ -21,10 +24,13 @@ return [
         'create' => ['label' => 'Crea Fake Seeder Header'],
         'edit' => ['label' => 'Modifica Fake Seeder Header'],
         'delete' => ['label' => 'Elimina Fake Seeder Header'],
+<<<<<<< .merge_file_croLam
 =======
         'qty' => [
             'label' => 'qty',
         ],
 >>>>>>> laraxot/master
+=======
+>>>>>>> .merge_file_4lpjfO
     ],
 ];

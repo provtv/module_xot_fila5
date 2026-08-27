@@ -1,3 +1,4 @@
+<<<<<<< .merge_file_O64fUA
 ---
 title: '_todo'
 module: Xot
@@ -10,6 +11,8 @@ created: 2026-08-24
 updated: 2026-08-24
 ---
 
+=======
+>>>>>>> .merge_file_9iOEe1
 # _todo
 
 <!-- Contenuto migrato da _docs/_todo.txt -->

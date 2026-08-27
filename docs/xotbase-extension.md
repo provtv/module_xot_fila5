@@ -5,6 +5,7 @@ topic: xotbase-extension
 canonical: ../../../Themes/docs/shared-components/xotbase-extension-rules-conflict.md
 ---
 
+<<<<<<< .merge_file_2DEqx6
 See canonical documentation: ../../../Themes/docs/shared-components/xotbase-extension-rules-conflict.md
 =======
 # XotBase Extension Rules - Comprehensive Guide
@@ -207,3 +208,6 @@ Always run `php artisan optimize:clear && ./vendor/bin/phpstan analyse` after ma
 *
 *Architecture Version: XotBase 2.0*
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/xotbase-extension-rules-conflict.md
+>>>>>>> .merge_file_2o4uBK

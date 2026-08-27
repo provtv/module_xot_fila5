@@ -5,6 +5,7 @@ topic: optimization
 canonical: ../../../Themes/docs/shared-components/optimization-analysis-Modules.md
 ---
 
+<<<<<<< .merge_file_vVU0gM
 See canonical documentation: ../../../Themes/docs/shared-components/optimization-analysis-Modules.md
 =======
 # Analisi di Ottimizzazione - Modulo Xot (Framework Base)
@@ -839,3 +840,6 @@ class XotPerformanceMonitor
 *Principi: DRY + KISS + SOLID + ROBUST + Laraxot*
 *Stato: 🟠 Framework Solido ma Necessita Refactoring Architetturale*
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/optimization-analysis-Modules.md
+>>>>>>> .merge_file_MPYYnq

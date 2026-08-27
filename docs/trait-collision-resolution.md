@@ -5,6 +5,7 @@ topic: trait-collision-resolution
 canonical: ../../../Themes/docs/shared-components/trait-collision-resolution-fix.md
 ---
 
+<<<<<<< .merge_file_SOzNbO
 See canonical documentation: ../../../Themes/docs/shared-components/trait-collision-resolution-fix.md
 =======
 # Trait Collision Resolution Summary
@@ -46,3 +47,6 @@ This confirms the documented pattern from `/Modules/Xot/docs/trait-conflict-reso
 - Keep trait method signatures compatible
 - Use trait precedence rules when necessary
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/trait-collision-resolution-fix.md
+>>>>>>> .merge_file_DTircY

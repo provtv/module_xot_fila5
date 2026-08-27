@@ -5,6 +5,7 @@ topic: phpstan-resolution-strategy
 canonical: ../../../Themes/docs/shared-components/phpstan-error-resolution-strategy.md
 ---
 
+<<<<<<< .merge_file_wzA2Fj
 See canonical documentation: ../../../Themes/docs/shared-components/phpstan-error-resolution-strategy.md
 =======
 # Strategia Risoluzione Errori PHPStan - 1565 Errori
@@ -186,3 +187,6 @@ done
 **Mantenuto da**: Claude Sonnet 4.5
 **Ultimo aggiornamento**: [DATE]
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/phpstan-error-resolution-strategy.md
+>>>>>>> .merge_file_aRN2yN

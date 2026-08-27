@@ -5,6 +5,7 @@ topic: errori-gravi-xotbaanelprovider
 canonical: ../../../Themes/docs/shared-components/errori-gravi-xotbaanelprovider-conflict.md
 ---
 
+<<<<<<< .merge_file_vfzpPm
 See canonical documentation: ../../../Themes/docs/shared-components/errori-gravi-xotbaanelprovider-conflict.md
 =======
 # 🚨 ERRORI GRAVI COMMESSI IN XotBasePanelProvider.php
@@ -152,3 +153,6 @@ try {
 **NOTA**: Questo documento serve come reminder per non ripetere mai più questi errori.
 Ogni modifica futura deve rispettare DRY, KISS, SOLID e ROBUST.
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/errori-gravi-xotbaanelprovider-conflict.md
+>>>>>>> .merge_file_ynsPQ0

@@ -5,6 +5,7 @@ topic: environment-configurations
 canonical: ../../../Themes/docs/shared-components/environment-configuration-issues.md
 ---
 
+<<<<<<< .merge_file_dgBRzw
 See canonical documentation: ../../../Themes/docs/shared-components/environment-configuration-issues.md
 =======
 # Problemi di Configurazione Variabili d'Ambiente - Modulo Xot
@@ -292,3 +293,6 @@ php artisan config:cache
 
 *Ultimo aggiornamento: [DATE]*
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/environment-configuration-issues.md
+>>>>>>> .merge_file_TMbziE

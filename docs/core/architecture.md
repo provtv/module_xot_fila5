@@ -275,8 +275,12 @@ return [
 
 <<<<<<< HEAD
 **Ultimo aggiornamento:** Gennaio 2025
+<<<<<<< .merge_file_W95pXd
 **Versione:** 2.0 - Consolidata DRY + KISS
 =======
 **Ultimo aggiornamento:** Gennaio 2025  
 **Versione:** 2.0 - Consolidata DRY + KISS
 >>>>>>> laraxot/master
+=======
+**Versione:** 2.0 - Consolidata DRY + KISS
+>>>>>>> .merge_file_QDNAd7

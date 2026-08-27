@@ -722,6 +722,7 @@ test('base model supports soft delete', function () {
     expect($model->deleted_at)->not()->toBeNull();
 });
 ```
+<<<<<<< .merge_file_2Sdxv5
 =======
 # Testing Guide - Modulo Xot
 
@@ -821,3 +822,5 @@ it('can create a new model', function() {
 });
 ```
 >>>>>>> laraxot/master
+=======
+>>>>>>> .merge_file_OkUvjr

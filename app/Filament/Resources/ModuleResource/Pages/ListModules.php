@@ -21,6 +21,20 @@ class ListModules extends XotBaseListRecords
 {
     protected static string $resource = ModuleResource::class;
 
+<<<<<<< .merge_file_bIFCWY
+=======
+    /**
+     * @return array<int, Stack>
+     */
+    //#[\Override]
+    public function getGridTableColumns(): array
+    {
+        return [
+            Stack::make($this->resolveTableColumnsForXotTable()),
+        ];
+    }
+
+>>>>>>> .merge_file_9ZSXTc
     /**
      * @return array<string, Tables\Columns\Column>
      */

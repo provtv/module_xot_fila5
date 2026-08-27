@@ -206,6 +206,10 @@ topic: translation-structure-expanded
 canonical: ../../../../Themes/docs/shared-components/translation-structure-expanded-Modules.md
 ---
 
+<<<<<<< .merge_file_va9lON
 See canonical documentation: ../../../../Themes/docs/shared-components/translation-structure-expanded-Modules.md
 =======
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../../Themes/docs/shared-components/translation-structure-expanded-Modules.md
+>>>>>>> .merge_file_PNcuzq

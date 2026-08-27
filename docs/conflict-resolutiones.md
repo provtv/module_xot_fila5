@@ -5,6 +5,7 @@ topic: conflict-resolutiones
 canonical: ../../../Themes/docs/shared-components/conflict-resolution-fixes.md
 ---
 
+<<<<<<< .merge_file_EsD8U4
 See canonical documentation: ../../../Themes/docs/shared-components/conflict-resolution-fixes.md
 =======
 # Risoluzione Conflitti Git - Modulo Xot
@@ -152,3 +153,6 @@ Documentazione della risoluzione dei conflitti Git nel modulo Xot che bloccavano
 
 *Ultimo aggiornamento: Dicembre 2024*
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/conflict-resolution-fixes.md
+>>>>>>> .merge_file_NZ3OSF

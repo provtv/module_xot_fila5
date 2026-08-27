@@ -5,6 +5,7 @@ topic: ottimizzazioniry-kiss
 canonical: ../../../Themes/docs/shared-components/ottimizzazioni-dry-kiss.md
 ---
 
+<<<<<<< .merge_file_FKlmCq
 See canonical documentation: ../../../Themes/docs/shared-components/ottimizzazioni-dry-kiss.md
 =======
 # Ottimizzazioni DRY + KISS - Modulo Xot
@@ -214,3 +215,6 @@ DOPO:
 ---
 *Ultimo aggiornamento: Gennaio 2025 - Ottimizzazione DRY + KISS*
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/ottimizzazioni-dry-kiss.md
+>>>>>>> .merge_file_Xeacy8

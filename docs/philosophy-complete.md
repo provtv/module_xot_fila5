@@ -1,4 +1,7 @@
+<<<<<<< .merge_file_Yzz4OP
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_MKe0z1
 ---
 title: "Xot - Filosofia Completa: Logica, Religione, Politica, Zen"
 module: xot

@@ -20,7 +20,10 @@ use Modules\Xot\Contracts\ProfileContract;
  * @property string $key
  * @property string $value
  * @property int    $expiration
+<<<<<<< .merge_file_X2QrTE
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_oaTXqr
  * @method static CacheFactory          factory($count = null, $state = [])
  * @method static Builder<static>|Cache newModelQuery()
  * @method static Builder<static>|Cache newQuery()
@@ -31,6 +34,7 @@ use Modules\Xot\Contracts\ProfileContract;
  * @property ProfileContract|null $creator
  * @property ProfileContract|null $deleter
  * @property ProfileContract|null $updater
+<<<<<<< .merge_file_X2QrTE
 =======
  * @method static CacheFactory factory($count = null, $state = [])
  * @method static Builder|Cache newModelQuery()
@@ -51,6 +55,8 @@ use Modules\Xot\Contracts\ProfileContract;
  * @property ProfileContract|null $updater
  * @mixin IdeHelperCache
 >>>>>>> laraxot/master
+=======
+>>>>>>> .merge_file_oaTXqr
  * @mixin \Eloquent
  */
 class Cache extends BaseModel

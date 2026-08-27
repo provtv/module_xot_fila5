@@ -5,6 +5,7 @@ topic: relation-manager-typed-property
 canonical: ../../../Themes/docs/shared-components/relation-manager-typed-property-fix.md
 ---
 
+<<<<<<< .merge_file_TTBuoj
 See canonical documentation: ../../../Themes/docs/shared-components/relation-manager-typed-property-fix.md
 =======
 # XotBaseRelationManager Typed Property Fix
@@ -73,3 +74,6 @@ class MyRelationManager extends XotBaseRelationManager
 
 ✅ **RISOLTO** - La proprietà tipizzata è ora correttamente inizializzata nelle classi figlie.
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/relation-manager-typed-property-fix.md
+>>>>>>> .merge_file_2dnr0j

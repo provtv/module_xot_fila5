@@ -21,10 +21,14 @@ use Modules\Xot\Actions\Blade\RegisterBladeComponentsAction;
 use Modules\Xot\Actions\File\GetComponentsAction;
 use Modules\Xot\Actions\Livewire\RegisterLivewireComponentsAction;
 use Modules\Xot\Actions\Module\GetModulePathByGeneratorAction;
+<<<<<<< .merge_file_b3YJ1j
 <<<<<<< HEAD
 use Modules\Xot\Datas\ComponentFileData;
 use Nwidart\Modules\Traits\PathNamespace;
 =======
+=======
+use Modules\Xot\Datas\ComponentFileData;
+>>>>>>> .merge_file_XwChcu
 use Nwidart\Modules\Traits\PathNamespace;
 use Throwable;
 >>>>>>> laraxot/master
@@ -326,6 +330,7 @@ abstract class XotBaseServiceProvider extends ServiceProvider
             Assert::string($comp->ns, __FILE__.':'.__LINE__.' - '.class_basename(self::class));
             $commands[] = $comp->ns;
         }
+<<<<<<< .merge_file_b3YJ1j
         $this->commands($commands);
     }
 
@@ -343,6 +348,8 @@ abstract class XotBaseServiceProvider extends ServiceProvider
 
             return $item['ns'];
         }, $commands);
+=======
+>>>>>>> .merge_file_XwChcu
         $this->commands($commands);
     }
 

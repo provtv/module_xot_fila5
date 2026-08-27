@@ -5,6 +5,7 @@ topic: base-classes-additional
 canonical: ../../../Themes/docs/shared-components/base-classes-additional-fix.md
 ---
 
+<<<<<<< .merge_file_ZBIwfq
 See canonical documentation: ../../../Themes/docs/shared-components/base-classes-additional-fix.md
 =======
 # Correzione Classi Base Aggiuntive - Modulo Xot
@@ -140,3 +141,6 @@ XotBaseModel (Xot) - Base standard
 
 **Conclusione:** Anche le classi base specializzate ora seguono l'architettura Laraxot standard.
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/base-classes-additional-fix.md
+>>>>>>> .merge_file_bKcK64

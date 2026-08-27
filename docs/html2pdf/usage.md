@@ -5,6 +5,7 @@ topic: usage
 canonical: ../../../../Themes/docs/shared-components/usage-Modules.md
 ---
 
+<<<<<<< .merge_file_ksDgLH
 See canonical documentation: ../../../../Themes/docs/shared-components/usage-Modules.md
 =======
 # Utilizzo Base e Layout
@@ -129,3 +130,6 @@ Il contenuto all'interno di questo tag non verrà spezzato tra due pagine.
 </nobreak>
 ```
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../../Themes/docs/shared-components/usage-Modules.md
+>>>>>>> .merge_file_n9ri1M

@@ -163,6 +163,10 @@ topic: critical-resource-model-alignment
 canonical: ../../../../Themes/docs/shared-components/critical-resource-model-alignment.md
 ---
 
+<<<<<<< .merge_file_bBIOc3
 See canonical documentation: ../../../../Themes/docs/shared-components/critical-resource-model-alignment.md
 =======
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../../Themes/docs/shared-components/critical-resource-model-alignment.md
+>>>>>>> .merge_file_O6pkjk

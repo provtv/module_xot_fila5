@@ -1,4 +1,7 @@
+<<<<<<< .merge_file_Gm7zOJ
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_u2NiKA
 ---
 title: "Xot Module Rules Index"
 module: xot
@@ -8,8 +11,11 @@ created: 2026-08-24
 updated: 2026-08-24
 ---
 
+<<<<<<< .merge_file_Gm7zOJ
 =======
 >>>>>>> laraxot/master
+=======
+>>>>>>> .merge_file_u2NiKA
 # Xot Module Rules Index
 
 ## Overview

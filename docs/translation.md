@@ -5,6 +5,7 @@ topic: translation
 canonical: ../../../Themes/docs/shared-components/translation-philosophy.md
 ---
 
+<<<<<<< .merge_file_QWa2pV
 See canonical documentation: ../../../Themes/docs/shared-components/translation-philosophy.md
 =======
 # Laraxot Translation Philosophy
@@ -165,3 +166,6 @@ When creating a new module:
 **Maintained by**: Xot Module (Core Laraxot Engine)
 
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/translation-philosophy.md
+>>>>>>> .merge_file_VCTVW4

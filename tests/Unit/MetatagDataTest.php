@@ -35,6 +35,7 @@ test('getFilamentColors restituisce i colori Filament corretti', function (): vo
 
 test('getColors gestisce correttamente i colori personalizzati', function () {
     $metatagData = new MetatagData;
+<<<<<<< .merge_file_CzEwf0
 =======
 use Filament\Support\Colors\Color;
 use Modules\Xot\Datas\MetatagData;
@@ -75,6 +76,8 @@ test('getFilamentColors restituisce i colori Filament corretti', function () {
 test('getColors gestisce correttamente i colori personalizzati', function () {
     $metatagData = new MetatagData();
 >>>>>>> laraxot/master
+=======
+>>>>>>> .merge_file_ZWauLc
     $metatagData->colors = [
         'custom_color' => [
             'key' => 'custom_color',

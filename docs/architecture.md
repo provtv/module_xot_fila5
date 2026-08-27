@@ -420,7 +420,10 @@ test('all models extend base model', function () {
 ---
 
 *Ultimo aggiornamento: giugno 2025 - Versione 2.0.0*
+<<<<<<< .merge_file_X18d9G
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_KqDwLp
 
 ---
 
@@ -448,5 +451,8 @@ Foundation framework module providing base models, traits, utilities, and Filame
 ## Quality Gates
 ✅ PHPStan L10: Executed (2026-07-28)
 ✅ Merge Markers: Fixed (4 files cleaned)
+<<<<<<< .merge_file_X18d9G
 =======
 >>>>>>> laraxot/master
+=======
+>>>>>>> .merge_file_KqDwLp

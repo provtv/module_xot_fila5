@@ -84,11 +84,15 @@ use Updater;  // Presente in TUTTI
 
 ```php
 // ❌ VARIA PER MODULO
+<<<<<<< .merge_file_USYiyU
 <<<<<<< HEAD
 protected $connection = 'user';    // o 'blog', 'ptv', 'geo', ...
 =======
 protected $connection = 'user';    // o 'blog', 'fixcity', 'geo', ...
 >>>>>>> laraxot/master
+=======
+protected $connection = 'user';    // o 'blog', 'ptv', 'geo', ...
+>>>>>>> .merge_file_6OViPj
 ```
 
 ---

@@ -180,7 +180,10 @@ class RouteServiceProvider extends ServiceProvider
 
         $models_collect = collect(array_keys($models));
         $models_collect->implode('|');
+<<<<<<< .merge_file_JCrxW8
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_reg4dV
         $models_collect->map(static fn (mixed $item): string => Str::plural(is_string($item) ? $item : ((string) $item)))->implode('|');
     }
 

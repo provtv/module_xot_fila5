@@ -5,6 +5,7 @@ topic: syntaxs-mass
 canonical: ../../../Themes/docs/shared-components/syntax-errors-mass-fix.md
 ---
 
+<<<<<<< .merge_file_4LxsHA
 See canonical documentation: ../../../Themes/docs/shared-components/syntax-errors-mass-fix.md
 =======
 # Mass Fix Errori Sintassi PHP
@@ -279,3 +280,6 @@ done < /tmp/broken_files.txt
 **Filosofia**: "Ogni bug è un maestro. Ogni fix è una lezione."
 **Cronologia**: Vedi [CHANGELOG.md](./changelog.md)
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/syntax-errors-mass-fix.md
+>>>>>>> .merge_file_qCkGzT

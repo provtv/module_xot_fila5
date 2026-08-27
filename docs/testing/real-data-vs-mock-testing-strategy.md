@@ -5,6 +5,7 @@ topic: real-data-vs-mock-testing-strategy
 canonical: ../../../../Themes/docs/shared-components/realata-vs-mock-testing-strategy.md
 ---
 
+<<<<<<< .merge_file_DLewFV
 See canonical documentation: ../../../../Themes/docs/shared-components/realata-vs-mock-testing-strategy.md
 =======
 # Real Data vs Mock Testing Strategy - Xot Module
@@ -397,3 +398,6 @@ test('legacy feature with mocks', function () {
 **Decision Authority**: Technical Architecture Committee
 **Implementation Timeline**: 4-week migration
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../../Themes/docs/shared-components/realata-vs-mock-testing-strategy.md
+>>>>>>> .merge_file_BRd4sT

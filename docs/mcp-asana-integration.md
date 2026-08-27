@@ -1,4 +1,7 @@
+<<<<<<< .merge_file_rpW2uc
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_T906Z0
 ---
 title: "Xot Module - Asana MCP Integration Guide"
 module: xot
@@ -8,8 +11,11 @@ created: 2026-08-24
 updated: 2026-08-24
 ---
 
+<<<<<<< .merge_file_rpW2uc
 =======
 >>>>>>> laraxot/master
+=======
+>>>>>>> .merge_file_T906Z0
 # Xot Module - Asana MCP Integration Guide
 
 **Versione**: 1.0.0

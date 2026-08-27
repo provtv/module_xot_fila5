@@ -5,6 +5,7 @@ topic: merges-inventory
 canonical: ../../../Themes/docs/shared-components/merge-conflicts-inventory.md
 ---
 
+<<<<<<< .merge_file_Q0dMB2
 See canonical documentation: ../../../Themes/docs/shared-components/merge-conflicts-inventory.md
 =======
 # Merge Conflicts Inventory
@@ -204,3 +205,6 @@ This document catalogs all files containing merge conflict markers found through
 ---
 *This inventory will be updated as conflicts are resolved.*
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/merge-conflicts-inventory.md
+>>>>>>> .merge_file_8IcGs0

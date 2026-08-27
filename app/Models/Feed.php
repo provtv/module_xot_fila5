@@ -36,6 +36,7 @@ use Modules\Xot\Contracts\ProfileContract;
  * @property ProfileContract|null $creator
  * @property ProfileContract|null $deleter
  * @property ProfileContract|null $updater
+<<<<<<< .merge_file_bP93SW
 =======
  * @method static FeedFactory factory($count = null, $state = [])
  * @method static Builder|Feed newModelQuery()
@@ -48,6 +49,8 @@ use Modules\Xot\Contracts\ProfileContract;
  * @property ProfileContract|null $updater
  * @mixin IdeHelperFeed
 >>>>>>> laraxot/master
+=======
+>>>>>>> .merge_file_I640jz
  * @mixin \Eloquent
  */
 class Feed extends BaseModel

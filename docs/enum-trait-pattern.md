@@ -169,6 +169,7 @@ use TransTrait;
 ## Riferimenti
 
 - Regola root: `docs/wiki/rules/enum-trait-required.md`
+<<<<<<< .merge_file_uIdyKJ
 - Regola storica: `docs/wiki/rules/enum-trait-standard.md`
 =======
 ## Convenzione di Naming
@@ -218,3 +219,6 @@ enum MioEnum: string implements HasLabel
 ---
 *Documentazione conforme agli standard Laraxot - DRY + KISS + SOLID*
 >>>>>>> laraxot/master
+=======
+- Regola storica: `docs/wiki/rules/enum-trait-standard.md`
+>>>>>>> .merge_file_4LMpAZ

@@ -88,11 +88,16 @@ interface ModelWithAuthorContract extends ModelContract
 
 ## Esempio di Utilizzo
 
+<<<<<<< .merge_file_IlKwYh
 <<<<<<< HEAD
 ```
 
 =======
 >>>>>>> laraxot/master
+=======
+```
+
+>>>>>>> .merge_file_kFYyHI
 ```php
 class Article extends Model implements ModelWithAuthorContract
 {

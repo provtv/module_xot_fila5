@@ -283,7 +283,11 @@ topic: translation-standards
 canonical: ../../../../Themes/docs/shared-components/translation-standards-Modules.md
 ---
 
+<<<<<<< .merge_file_IX7lmJ
 See canonical documentation: ../../../../Themes/docs/shared-components/translation-standards-Modules.md
 =======
 *Ultimo aggiornamento: Giugno 2025* 
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../../Themes/docs/shared-components/translation-standards-Modules.md
+>>>>>>> .merge_file_ibqEhm

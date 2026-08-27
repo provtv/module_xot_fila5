@@ -5,6 +5,7 @@ topic: accessor-cross-modules
 canonical: ../../../Themes/docs/shared-components/accessor-audit-cross-modules.md
 ---
 
+<<<<<<< .merge_file_ZPYz0U
 See canonical documentation: ../../../Themes/docs/shared-components/accessor-audit-cross-modules.md
 =======
 # Audit Cross-Modules: Accessor con save() senza Guard
@@ -192,3 +193,6 @@ Ogni modulo deve avere:
 **Prossimo**: Audit IndennitaCondizioniLavoro
 **Timeline**: 3 settimane per audit completo
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/accessor-audit-cross-modules.md
+>>>>>>> .merge_file_xV6E0R

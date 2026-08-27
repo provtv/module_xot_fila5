@@ -5,6 +5,7 @@ topic: merges-resolution
 canonical: ../../../Themes/docs/shared-components/merge-conflicts-resolution-roadmap.md
 ---
 
+<<<<<<< .merge_file_mQUcNa
 See canonical documentation: ../../../Themes/docs/shared-components/merge-conflicts-resolution-roadmap.md
 =======
 # Roadmap Risoluzione Merge Conflicts - PHPStan Bloccanti
@@ -206,3 +207,6 @@ class ResourceName extends XotBaseResource
 **Versione**: 1.0.0
 **Status**: ⚠️ In Lavorazione
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/merge-conflicts-resolution-roadmap.md
+>>>>>>> .merge_file_f6v0D9

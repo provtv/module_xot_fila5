@@ -19,6 +19,7 @@ return [
         'edit' => ['label' => 'Modifica Test'],
         'delete' => ['label' => 'Elimina Test'],
         'save' => ['label' => 'save', 'icon' => 'save', 'tooltip' => 'save'],
+<<<<<<< .merge_file_mtCV9Z
 =======
     'navigation' => [
         'label' => 'Test',
@@ -59,5 +60,7 @@ return [
             'label' => 'Elimina Test',
         ],
 >>>>>>> laraxot/master
+=======
+>>>>>>> .merge_file_Tc1dSs
     ],
 ];

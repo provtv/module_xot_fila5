@@ -5,6 +5,7 @@ topic: laraxot-complete-philosophy-sumy
 canonical: ../../../Themes/docs/shared-components/laraxot-complete-philosophy-summary.md
 ---
 
+<<<<<<< .merge_file_hWpqNe
 See canonical documentation: ../../../Themes/docs/shared-components/laraxot-complete-philosophy-summary.md
 =======
 # Laraxot Complete Philosophy Summary
@@ -214,3 +215,6 @@ class Permission extends BaseModel  // ❌ Should extend SpatiePermission
 
 **Philosophy Summary**: Laraxot values simplicity, consistency, and predictability above all else. Follow these principles to build maintainable, scalable applications with minimal technical debt.
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/laraxot-complete-philosophy-summary.md
+>>>>>>> .merge_file_yYEldn

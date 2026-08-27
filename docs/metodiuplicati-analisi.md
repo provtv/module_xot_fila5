@@ -5,6 +5,7 @@ topic: metodiuplicati-analisi
 canonical: ../../../Themes/docs/shared-components/metodi-duplicati-analisi-Modules.md
 ---
 
+<<<<<<< .merge_file_TgTPma
 See canonical documentation: ../../../Themes/docs/shared-components/metodi-duplicati-analisi-Modules.md
 =======
 # 🐄⚡ ANALISI METODI DUPLICATI - SUPER MUCCA EDITION
@@ -1082,3 +1083,6 @@ public function getTableFilters(): array
 
 **Domande?** Chiedi alla Super Mucca! 🐄⚡
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/metodi-duplicati-analisi-Modules.md
+>>>>>>> .merge_file_P9sO3t

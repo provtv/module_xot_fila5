@@ -9,6 +9,7 @@ updated: 2026-05-21
 
 Contenuto in wiki di progetto — non duplicare nei moduli ([#124](https://github.com/provtv/base_ptv_fila5_mono/issues/124)).
 
+<<<<<<< .merge_file_XZbhlE
 → [docs/wiki/rules/00-TRIGGER_MAP.md](../../../../../docs/wiki/rules/00-TRIGGER_MAP.md)
 =======
 # Strategia di Testing
@@ -356,3 +357,6 @@ test:
 - Cache disabilitata
 - Logging minimo 
 >>>>>>> laraxot/master
+=======
+→ [docs/wiki/rules/00-TRIGGER_MAP.md](../../../../../docs/wiki/rules/00-TRIGGER_MAP.md)
+>>>>>>> .merge_file_L1jrDi

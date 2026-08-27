@@ -159,6 +159,7 @@ class HandlersRepository
         }
 
         return is_a($e, $type->getName(), true);
+<<<<<<< .merge_file_hV0aMb
 =======
     protected function handlesException(callable $handler, Throwable $e): bool
     {
@@ -174,5 +175,7 @@ class HandlersRepository
 
         return ($params[0]->getClass() instanceof ReflectionClass) ? $params[0]->getClass()->isInstance($e) : true;
 >>>>>>> laraxot/master
+=======
+>>>>>>> .merge_file_hYg3Kw
     }
 }

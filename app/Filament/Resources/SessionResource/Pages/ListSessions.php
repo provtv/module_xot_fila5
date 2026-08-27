@@ -4,6 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Filament\Resources\SessionResource\Pages;
 
+<<<<<<< .merge_file_Wz9LT1
+=======
+use Filament\Tables\Columns\Layout\Stack;
+>>>>>>> .merge_file_sY77NU
 use Filament\Tables\Columns\TextColumn;
 use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
 use Modules\Xot\Filament\Resources\SessionResource;
@@ -15,6 +19,20 @@ class ListSessions extends XotBaseListRecords
 {
     protected static string $resource = SessionResource::class;
 
+<<<<<<< .merge_file_Wz9LT1
+=======
+    /**
+     * @return array<int, Stack>
+     */
+    //#[\Override]
+    public function getGridTableColumns(): array
+    {
+        return [
+            Stack::make($this->resolveTableColumnsForXotTable()),
+        ];
+    }
+
+>>>>>>> .merge_file_sY77NU
     #[\Override]
     /**
      * @return array<string, mixed>

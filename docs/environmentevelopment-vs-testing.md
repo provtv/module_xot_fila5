@@ -57,8 +57,12 @@ Questa differenziazione rispetta i principi fondamentali:
 - **DRY**: Configurazioni separate per scopi diversi
 - **KISS**: Semplicità per sviluppo, completezza per test
 - **Robustezza**: Isolamento adeguato nei test
+<<<<<<< .merge_file_ioOabD
 <<<<<<< HEAD
 - **Multi-tenancy**: Supporto completo per architettura multi-database
 =======
 - **Multi-tenancy**: Supporto completo per architettura multi-database
 >>>>>>> laraxot/master
+=======
+- **Multi-tenancy**: Supporto completo per architettura multi-database
+>>>>>>> .merge_file_fg8WE6

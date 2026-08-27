@@ -5,6 +5,7 @@ topic: magic-properties
 canonical: ../../../Themes/docs/shared-components/magic-properties-sumy.md
 ---
 
+<<<<<<< .merge_file_TfvKGU
 See canonical documentation: ../../../Themes/docs/shared-components/magic-properties-sumy.md
 =======
 # Magic Properties Cleanup Report - [DATE]
@@ -72,3 +73,6 @@ Files generally have good scores with minor style issues:
 
 **Next Steps**: Continue monitoring code quality tools and update documentation as needed.
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/magic-properties-sumy.md
+>>>>>>> .merge_file_JTiW9N

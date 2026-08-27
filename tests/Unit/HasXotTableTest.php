@@ -133,6 +133,7 @@ uses(TestCase::class);
 afterEach(function () {
     Mockery::close();
 });
+<<<<<<< .merge_file_sWb9Wu
 
 it('tests table method with all methods implemented', function () {
     // Avoid DB/Schema access inside TableExistsByModelClassActions
@@ -236,3 +237,5 @@ it('tests table method with no optional methods implemented', function () {
     expect($result)->toBe($tableMock);
 >>>>>>> laraxot/master
 });
+=======
+>>>>>>> .merge_file_2TwTpm

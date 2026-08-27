@@ -5,6 +5,7 @@ topic: algoliaocsearch
 canonical: ../../../Themes/docs/shared-components/algolia-docsearch.md
 ---
 
+<<<<<<< .merge_file_JZPlf2
 See canonical documentation: ../../../Themes/docs/shared-components/algolia-docsearch.md
 =======
 title: Algolia DocSearch
@@ -90,3 +91,6 @@ For more details, visit the [official Algolia DocSearch documentation.](https://
 
 ---
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/algolia-docsearch.md
+>>>>>>> .merge_file_xlOKAA

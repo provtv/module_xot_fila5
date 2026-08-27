@@ -5,6 +5,7 @@ topic: code-optimization
 canonical: ../../../Themes/docs/shared-components/code-optimization-analysis.md
 ---
 
+<<<<<<< .merge_file_TFibQX
 See canonical documentation: ../../../Themes/docs/shared-components/code-optimization-analysis.md
 =======
 # xot module code and documentation optimization analysis
@@ -178,3 +179,6 @@ app/
 
 this comprehensive optimization will transform xot from a complex, hard-to-maintain module into a streamlined, efficient component following modern software architecture principles.
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/code-optimization-analysis.md
+>>>>>>> .merge_file_2e3xO6

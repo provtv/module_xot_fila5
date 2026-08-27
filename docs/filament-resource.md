@@ -5,6 +5,7 @@ topic: filament-resource
 canonical: ../../../Themes/docs/shared-components/filament-resource-rules.md
 ---
 
+<<<<<<< .merge_file_nd2gNA
 See canonical documentation: ../../../Themes/docs/shared-components/filament-resource-rules.md
 =======
 # Regole per le Risorse Filament in
@@ -207,3 +208,6 @@ class DoctorResource extends XotBaseResource
 - [Gestione delle Traduzioni](/docs/translation-management.md)
 - [Estensione delle Classi Filament](/docs/filament-extension-pattern.md)
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/filament-resource-rules.md
+>>>>>>> .merge_file_NRRzer

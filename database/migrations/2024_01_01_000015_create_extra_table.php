@@ -9,12 +9,17 @@ use Modules\Xot\Database\Migrations\XotBaseMigration;
 /*
  * Class CreateExtraTable.
  */
+<<<<<<< .merge_file_bdvM36
 <<<<<<< HEAD
 return new class extends XotBaseMigration
 {
 =======
 return new class extends XotBaseMigration {
 >>>>>>> laraxot/master
+=======
+return new class extends XotBaseMigration
+{
+>>>>>>> .merge_file_zT2rVq
     /**
      * Run the migrations.
      */
@@ -41,11 +46,15 @@ return new class extends XotBaseMigration {
             //    $table->unique(['model_id', 'model_type'], 'morph_unique');
             // }
 
+<<<<<<< .merge_file_bdvM36
 <<<<<<< HEAD
             if ($this->hasColumn('model_id') && $this->getColumnType('model_id') === 'bigint') {
 =======
             if ($this->hasColumn('model_id') && 'bigint' === $this->getColumnType('model_id')) {
 >>>>>>> laraxot/master
+=======
+            if ($this->hasColumn('model_id') && $this->getColumnType('model_id') === 'bigint') {
+>>>>>>> .merge_file_zT2rVq
                 $table->string('model_id', 36)->index()->change();
             }
         });

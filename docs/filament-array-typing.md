@@ -5,6 +5,7 @@ topic: filament-array-typing
 canonical: ../../../Themes/docs/shared-components/filament-array-typing-rules.md
 ---
 
+<<<<<<< .merge_file_lcNlZH
 See canonical documentation: ../../../Themes/docs/shared-components/filament-array-typing-rules.md
 =======
 # Regole Fondamentali per i Metodi Filament - Aggiornamento
@@ -96,3 +97,6 @@ if (property_exists($model, 'name')) { }
 if (isset($model->name)) { }
 ```
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/filament-array-typing-rules.md
+>>>>>>> .merge_file_ZntAz3

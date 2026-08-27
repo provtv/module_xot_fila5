@@ -5,6 +5,7 @@ topic: model-inheritance
 canonical: ../../../Themes/docs/shared-components/model-inheritance-rules.md
 ---
 
+<<<<<<< .merge_file_3CUmVc
 See canonical documentation: ../../../Themes/docs/shared-components/model-inheritance-rules.md
 =======
 # Regole di Ereditarietà dei Modelli - Laraxot PTVX
@@ -204,3 +205,6 @@ Ogni nuovo modello deve essere documentato in:
 
 *Ultimo aggiornamento: giugno 2025*
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/model-inheritance-rules.md
+>>>>>>> .merge_file_4aWODv

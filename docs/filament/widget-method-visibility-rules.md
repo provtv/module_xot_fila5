@@ -112,6 +112,7 @@ must be public (as in class HasXotTable)
 - [Widget Table Configuration](../../../Modules/Xot/docs/filament/widget-table-configuration.md)
 
 *Ultimo aggiornamento: 2025-01-27*
+<<<<<<< .merge_file_T8JMqI
 - [Widget Table Configuration](../../../modules/xot/docs/filament/widget-table-configuration.md)
 =======
 - [Widget Table Configuration](../../../modules/xot/docs/filament/widget-table-configuration.md)
@@ -122,3 +123,6 @@ must be public (as in class HasXotTable)
 *Ultimo aggiornamento: 2025-01-27*
 >>>>>>> .merge_file_46PPqg
 >>>>>>> laraxot/master
+=======
+- [Widget Table Configuration](../../../modules/xot/docs/filament/widget-table-configuration.md)
+>>>>>>> .merge_file_ZcP74O

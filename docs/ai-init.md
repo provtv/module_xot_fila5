@@ -20,6 +20,7 @@ Lo script `bashscripts/ai/ai_init.sh` e la documentazione storica sul modello **
 ## Analisi storica
 
 Per contesto sul vecchio comportamento: [ai-init-script-analysis.md](ai-init-script-analysis.md) (deprecato).
+<<<<<<< .merge_file_GvoAm5
 =======
 # Aggiornamento Documentazione - Problema con ai_init.sh
 
@@ -57,3 +58,5 @@ Lo script deve essere corretto per invertire la logica:
 - Source: `bashscripts/ai/.gemini`
 - Target symlink: `.gemini`
 >>>>>>> laraxot/master
+=======
+>>>>>>> .merge_file_IUR853

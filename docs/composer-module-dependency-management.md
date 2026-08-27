@@ -4,9 +4,12 @@
 This document outlines the best practices and mandatory rules for managing Composer dependencies within the modular Laraxot framework.
 
 **Riferimento completo pacchetti**: [composer-packages-reference.md](../../../../docs/composer-packages-reference.md) Adherence to these guidelines is crucial for maintaining project stability, respecting the modular architecture, and leveraging the `wikimedia/composer-merge-plugin` effectively.
+<<<<<<< .merge_file_GCHR6k
 =======
 This document outlines the best practices and mandatory rules for managing Composer dependencies within the modular Laraxot framework. Adherence to these guidelines is crucial for maintaining project stability, respecting the modular architecture, and leveraging the `wikimedia/composer-merge-plugin` effectively.
 >>>>>>> laraxot/master
+=======
+>>>>>>> .merge_file_kMoIQn
 
 ---
 

@@ -1,4 +1,7 @@
+<<<<<<< .merge_file_zscqjz
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_CQYJGi
 ---
 title: "Coverage dei moduli — baseline e gate floor 50%"
 module: Xot
@@ -233,6 +236,7 @@ misura onesta del perimetro Unit.
 
 MySQL locale su `127.0.0.1:3306` esiste; credenziali `.env.testing` vanno verificate per la via C
 (MySQL `*_test`, AD-3).
+<<<<<<< .merge_file_zscqjz
 =======
 # Xot Module Test Coverage
 
@@ -259,3 +263,5 @@ This module has comprehensive test coverage with various test types implemented.
 ## Status
 All tests are passing and coverage is being maintained.
 >>>>>>> laraxot/master
+=======
+>>>>>>> .merge_file_CQYJGi

@@ -29,6 +29,7 @@ test('xot base resource has navigation sort', function (): void {
 
 test('xot base resource can be instantiated', function (): void {
     Assert::assertInstanceOf(XotBaseResource::class, new NavigationProbeResource);
+<<<<<<< .merge_file_5AjzRy
 =======
 namespace Modules\Xot\Tests\Feature\Filament;
 
@@ -70,4 +71,6 @@ test('xot base resource has navigation sort', function () {
 test('xot base resource can be instantiated', function () {
     expect($this->resource)->toBeInstanceOf(XotBaseResource::class);
 >>>>>>> laraxot/master
+=======
+>>>>>>> .merge_file_RSnfLp
 });

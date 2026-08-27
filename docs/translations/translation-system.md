@@ -5,6 +5,7 @@ topic: translation-system
 canonical: ../../../../Themes/docs/shared-components/translation-system.md
 ---
 
+<<<<<<< .merge_file_DazmN6
 See canonical documentation: ../../../../Themes/docs/shared-components/translation-system.md
 =======
 # Sistema di Traduzione
@@ -461,3 +462,6 @@ php artisan view:clear
 - [Best Practices Filament](../project_docs/filament-best-practices.md)
 - [Schema Conventions](../project_docs/schema-conventions.md)
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../../Themes/docs/shared-components/translation-system.md
+>>>>>>> .merge_file_Zu178b

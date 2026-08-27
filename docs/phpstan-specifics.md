@@ -5,6 +5,7 @@ topic: phpstan-specifics
 canonical: ../../../Themes/docs/shared-components/phpstan-specific-patterns.md
 ---
 
+<<<<<<< .merge_file_zfsbTz
 See canonical documentation: ../../../Themes/docs/shared-components/phpstan-specific-patterns.md
 =======
 # Pattern Specifici PHPStan Level 10
@@ -167,3 +168,6 @@ private function applyFilters(\Illuminate\Database\Eloquent\Builder $query): voi
 $query = User::query()->where('active', true);
 ```
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/phpstan-specific-patterns.md
+>>>>>>> .merge_file_T3gX3U

@@ -506,8 +506,12 @@ WHERE active = true;
 
 **Ultimo aggiornamento**: [DATE]  
 **Module**: Xot  
+<<<<<<< .merge_file_5FYudl
 <<<<<<< HEAD
 **Versione**: 1.0.0
 =======
 **Versione**: 1.0.0
 >>>>>>> laraxot/master
+=======
+**Versione**: 1.0.0
+>>>>>>> .merge_file_fYGipl

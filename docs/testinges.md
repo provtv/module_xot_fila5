@@ -5,6 +5,7 @@ topic: testinges
 canonical: ../../../Themes/docs/shared-components/testing-fixes-roadmap.md
 ---
 
+<<<<<<< .merge_file_c84E8j
 See canonical documentation: ../../../Themes/docs/shared-components/testing-fixes-roadmap.md
 =======
 # Testing Fixes Roadmap - Correzione Test Falliti
@@ -143,3 +144,6 @@ $currentTeam = $user->currentTeam;
 **Ultimo aggiornamento**: [DATE]
 **Prossimo step**: Correggere ArtisanServiceTest.php
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/testing-fixes-roadmap.md
+>>>>>>> .merge_file_RJV1Yr

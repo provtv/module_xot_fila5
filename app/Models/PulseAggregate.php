@@ -35,6 +35,7 @@ use Modules\Xot\Database\Factories\PulseAggregateFactory;
  * @property ProfileContract|null $creator
  * @property ProfileContract|null $deleter
  * @property ProfileContract|null $updater
+<<<<<<< .merge_file_otGS1L
 =======
 use Modules\Xot\Contracts\ProfileContract;
 use Modules\Xot\Database\Factories\PulseAggregateFactory;
@@ -67,6 +68,8 @@ use Illuminate\Database\Eloquent\Builder;
  * @method static Builder|PulseAggregate whereValue($value)
  * @mixin IdeHelperPulseAggregate
 >>>>>>> laraxot/master
+=======
+>>>>>>> .merge_file_cCb7cT
  * @mixin \Eloquent
  */
 class PulseAggregate extends BaseModel

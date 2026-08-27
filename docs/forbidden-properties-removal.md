@@ -5,6 +5,7 @@ topic: forbidden-properties-removal
 canonical: ../../../Themes/docs/shared-components/forbidden-properties-removal-complete.md
 ---
 
+<<<<<<< .merge_file_MvEm3L
 See canonical documentation: ../../../Themes/docs/shared-components/forbidden-properties-removal-complete.md
 =======
 # Rimozione Completa Proprietà Vietate da XotBaseResource - Analisi e Implementazione
@@ -239,3 +240,6 @@ return [
 
 **Ultimo aggiornamento**: [DATE]
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/forbidden-properties-removal-complete.md
+>>>>>>> .merge_file_Q9xebG

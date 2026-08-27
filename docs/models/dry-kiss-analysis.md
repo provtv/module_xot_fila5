@@ -743,8 +743,11 @@ Manutenibilità: +40%
 # Analisi DRY e KISS - Architettura Modelli
 
 **Data**: 2025-10-15
+<<<<<<< .merge_file_YWjeN1
 =======
 >>>>>>> laraxot/master
+=======
+>>>>>>> .merge_file_KAZTqJ
 **Autore**: Claude Code Analysis
 **Obiettivo**: Identificare duplicazioni e complessità per rendere l'architettura più DRY (Don't Repeat Yourself) e KISS (Keep It Simple, Stupid)
 
@@ -1072,6 +1075,7 @@ Manutenibilità: +40%
 - [Laravel Model Connections](https://laravel.com/docs/12.x/eloquent#database-connections)
 - [XotBasePivot Implementation](../../app/Models/XotBasePivot.php) - Auto-discovery già implementato
 - [XotBaseMorphPivot Implementation](../../app/Models/XotBaseMorphPivot.php) - Auto-discovery già implementato
+<<<<<<< .merge_file_YWjeN1
 <<<<<<< HEAD
 - [CLAUDE.md](../../../CLAUDE.md) - Convenzioni architetturali
 =======
@@ -1419,6 +1423,9 @@ Manutenibilità: +40%
 - [XotBaseMorphPivot Implementation](../../app/Models/XotBaseMorphPivot.php) - Auto-discovery già implementato
 - [CLAUDE.md](../../../claude.md) - Convenzioni architetturali
 >>>>>>> laraxot/master
+=======
+- [CLAUDE.md](../../../CLAUDE.md) - Convenzioni architetturali
+>>>>>>> .merge_file_KAZTqJ
 
 ## 🎓 Lezioni Apprese
 

@@ -5,6 +5,7 @@ topic: comprehensiveocumentation-structure
 canonical: ../../../Themes/docs/shared-components/comprehensive-documentation-structure.md
 ---
 
+<<<<<<< .merge_file_t7VDSh
 See canonical documentation: ../../../Themes/docs/shared-components/comprehensive-documentation-structure.md
 =======
 # Comprehensive Documentation Structure
@@ -359,3 +360,6 @@ find Modules/ -name "*.md" -exec markdownlint {} \;
 **Maintenance**: Xot Module Documentation Team
 **Goal**: Create the most comprehensive and useful documentation for Laraxot architecture
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/comprehensive-documentation-structure.md
+>>>>>>> .merge_file_TwF0M3

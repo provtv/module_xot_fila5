@@ -4,7 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Models\Traits;
 
+<<<<<<< .merge_file_mFaUai
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_HriII2
 use DateTimeInterface;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Carbon;
@@ -45,10 +48,14 @@ trait HasCommonScopes
      *
      * Found 100% identical in: Activity, Blog, Cms, User, Fixcity modules.
      *
+<<<<<<< .merge_file_mFaUai
 <<<<<<< HEAD
      * @param  Builder<static>  $query
 =======
 >>>>>>> laraxot/master
+=======
+     * @param  Builder<static>  $query
+>>>>>>> .merge_file_HriII2
      * @return Builder<static>
      */
     public function scopeActive(Builder $query): Builder
@@ -59,10 +66,14 @@ trait HasCommonScopes
     /**
      * Scope query to only inactive records.
      *
+<<<<<<< .merge_file_mFaUai
 <<<<<<< HEAD
      * @param  Builder<static>  $query
 =======
 >>>>>>> laraxot/master
+=======
+     * @param  Builder<static>  $query
+>>>>>>> .merge_file_HriII2
      * @return Builder<static>
      */
     public function scopeInactive(Builder $query): Builder
@@ -75,10 +86,14 @@ trait HasCommonScopes
      *
      * Records with published_at <= now().
      *
+<<<<<<< .merge_file_mFaUai
 <<<<<<< HEAD
      * @param  Builder<static>  $query
 =======
 >>>>>>> laraxot/master
+=======
+     * @param  Builder<static>  $query
+>>>>>>> .merge_file_HriII2
      * @return Builder<static>
      */
     public function scopePublished(Builder $query): Builder
@@ -92,19 +107,27 @@ trait HasCommonScopes
      *
      * Records with published_at = null or > now().
      *
+<<<<<<< .merge_file_mFaUai
 <<<<<<< HEAD
      * @param  Builder<static>  $query
 =======
 >>>>>>> laraxot/master
+=======
+     * @param  Builder<static>  $query
+>>>>>>> .merge_file_HriII2
      * @return Builder<static>
      */
     public function scopeDraft(Builder $query): Builder
     {
+<<<<<<< .merge_file_mFaUai
 <<<<<<< HEAD
         return $query->where(static function (Builder $q): void {
 =======
         return $query->where(function ($q): void {
 >>>>>>> laraxot/master
+=======
+        return $query->where(static function (Builder $q): void {
+>>>>>>> .merge_file_HriII2
             $q->whereNull('published_at')
                 ->orWhere('published_at', '>', now());
         });
@@ -116,11 +139,15 @@ trait HasCommonScopes
      * @param  Builder<static>  $query
      * @return Builder<static>
      */
+<<<<<<< .merge_file_mFaUai
 <<<<<<< HEAD
     public function scopeCreatedAfter(Builder $query, Carbon|string|DateTimeInterface $date): Builder
 =======
     public function scopeCreatedAfter(Builder $query, mixed $date): Builder
 >>>>>>> laraxot/master
+=======
+    public function scopeCreatedAfter(Builder $query, Carbon|string|DateTimeInterface $date): Builder
+>>>>>>> .merge_file_HriII2
     {
         return $query->where('created_at', '>=', $date);
     }
@@ -131,11 +158,15 @@ trait HasCommonScopes
      * @param  Builder<static>  $query
      * @return Builder<static>
      */
+<<<<<<< .merge_file_mFaUai
 <<<<<<< HEAD
     public function scopeCreatedBefore(Builder $query, Carbon|string|DateTimeInterface $date): Builder
 =======
     public function scopeCreatedBefore(Builder $query, mixed $date): Builder
 >>>>>>> laraxot/master
+=======
+    public function scopeCreatedBefore(Builder $query, Carbon|string|DateTimeInterface $date): Builder
+>>>>>>> .merge_file_HriII2
     {
         return $query->where('created_at', '<=', $date);
     }
@@ -146,11 +177,15 @@ trait HasCommonScopes
      * @param  Builder<static>  $query
      * @return Builder<static>
      */
+<<<<<<< .merge_file_mFaUai
 <<<<<<< HEAD
     public function scopeUpdatedAfter(Builder $query, Carbon|string|DateTimeInterface $date): Builder
 =======
     public function scopeUpdatedAfter(Builder $query, mixed $date): Builder
 >>>>>>> laraxot/master
+=======
+    public function scopeUpdatedAfter(Builder $query, Carbon|string|DateTimeInterface $date): Builder
+>>>>>>> .merge_file_HriII2
     {
         return $query->where('updated_at', '>=', $date);
     }
@@ -202,10 +237,14 @@ trait HasCommonScopes
      */
     public function isActive(): bool
     {
+<<<<<<< .merge_file_mFaUai
 <<<<<<< HEAD
         return $this->getAttribute('is_active') === true;
 =======
         return isset($this->is_active) && $this->is_active === true;
 >>>>>>> laraxot/master
+=======
+        return $this->getAttribute('is_active') === true;
+>>>>>>> .merge_file_HriII2
     }
 }

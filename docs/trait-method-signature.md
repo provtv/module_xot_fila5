@@ -5,6 +5,7 @@ topic: trait-method-signature
 canonical: ../../../Themes/docs/shared-components/trait-method-signature-rules.md
 ---
 
+<<<<<<< .merge_file_epXUKy
 See canonical documentation: ../../../Themes/docs/shared-components/trait-method-signature-rules.md
 =======
 # Trait Method Signature Rules
@@ -147,3 +148,6 @@ If you encounter this error:
 *Trait Standards Version: 2.0*
 
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/trait-method-signature-rules.md
+>>>>>>> .merge_file_uggOhK

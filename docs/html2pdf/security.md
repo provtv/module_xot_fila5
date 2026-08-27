@@ -5,6 +5,7 @@ topic: security
 canonical: ../../../../Themes/docs/shared-components/security-Modules.md
 ---
 
+<<<<<<< .merge_file_EbcCM8
 See canonical documentation: ../../../../Themes/docs/shared-components/security-Modules.md
 =======
 # Configurazione della Sicurezza
@@ -163,3 +164,6 @@ public function isUriValid(string $uri): bool
 }
 ```
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../../Themes/docs/shared-components/security-Modules.md
+>>>>>>> .merge_file_5IVCao

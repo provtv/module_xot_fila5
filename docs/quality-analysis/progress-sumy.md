@@ -5,6 +5,7 @@ topic: progress-sumy
 canonical: ../../../../Themes/docs/shared-components/progress-summary.md
 ---
 
+<<<<<<< .merge_file_j6Zf9x
 See canonical documentation: ../../../../Themes/docs/shared-components/progress-summary.md
 =======
 # Quality Improvement Progress - Xot Module
@@ -175,3 +176,6 @@ vendor/bin/pint Modules/Xot/app
 **Session Status:** ✅ Complete
 **Ready for:** Next module iteration
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../../Themes/docs/shared-components/progress-summary.md
+>>>>>>> .merge_file_iENkbH

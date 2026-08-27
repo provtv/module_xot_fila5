@@ -5,6 +5,7 @@ topic: test-structure
 canonical: ../../../Themes/docs/shared-components/test-structure-philosophy.md
 ---
 
+<<<<<<< .merge_file_rTL5s6
 See canonical documentation: ../../../Themes/docs/shared-components/test-structure-philosophy.md
 =======
 # Laraxot Test Structure Philosophy
@@ -273,3 +274,6 @@ Modules/UI/tests/Unit/Widgets/
 
 **Philosophy Summary**: In Laraxot, consistent test structure ensures reliable test execution and predictable development workflow. Choose one pattern and apply it consistently across all modules.
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/test-structure-philosophy.md
+>>>>>>> .merge_file_GOiQLu

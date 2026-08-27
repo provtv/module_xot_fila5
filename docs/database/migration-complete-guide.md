@@ -5,6 +5,7 @@ topic: migration-complete-guide
 canonical: ../../../../Themes/docs/shared-components/migration-complete-guide.md
 ---
 
+<<<<<<< .merge_file_ANbsIW
 See canonical documentation: ../../../../Themes/docs/shared-components/migration-complete-guide.md
 =======
 # Migration Complete Guide - Consolidated
@@ -30,3 +31,6 @@ Guida completa consolidata per le migrazioni in Laraxot.
 ## Links
 - [Original Files Backup](../../../docs-consolidation-backup-*/Xot-docs-original/)
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../../Themes/docs/shared-components/migration-complete-guide.md
+>>>>>>> .merge_file_a4Rr19

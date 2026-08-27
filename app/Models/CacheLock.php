@@ -20,7 +20,10 @@ use Modules\Xot\Contracts\ProfileContract;
  * @property string $key
  * @property string $owner
  * @property int    $expiration
+<<<<<<< .merge_file_w56dVa
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_LFXm6n
  * @method static CacheLockFactory          factory($count = null, $state = [])
  * @method static Builder<static>|CacheLock newModelQuery()
  * @method static Builder<static>|CacheLock newQuery()
@@ -31,6 +34,7 @@ use Modules\Xot\Contracts\ProfileContract;
  * @property ProfileContract|null $creator
  * @property ProfileContract|null $deleter
  * @property ProfileContract|null $updater
+<<<<<<< .merge_file_w56dVa
 =======
  * @method static CacheLockFactory factory($count = null, $state = [])
  * @method static Builder|CacheLock newModelQuery()
@@ -51,6 +55,8 @@ use Modules\Xot\Contracts\ProfileContract;
  * @property ProfileContract|null $updater
  * @mixin IdeHelperCacheLock
 >>>>>>> laraxot/master
+=======
+>>>>>>> .merge_file_LFXm6n
  * @mixin \Eloquent
  */
 class CacheLock extends BaseModel

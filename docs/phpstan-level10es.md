@@ -5,6 +5,7 @@ topic: phpstan-level10es
 canonical: ../../../Themes/docs/shared-components/phpstan-level10-fixes-Modules.md
 ---
 
+<<<<<<< .merge_file_pKMHem
 See canonical documentation: ../../../Themes/docs/shared-components/phpstan-level10-fixes-Modules.md
 =======
 # Correzioni PHPStan Livello 10 - Modulo User
@@ -265,3 +266,6 @@ public function handle(Failed $event): void
 3. Mantieni aggiornata la documentazione quando vengono modificati metodi o proprietà.
 4. Utilizza strumenti di analisi automatica come PHPStan regolarmente per verificare che il codice rimanga conforme.
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/phpstan-level10-fixes-Modules.md
+>>>>>>> .merge_file_gQUjcN

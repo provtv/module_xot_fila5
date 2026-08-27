@@ -5,6 +5,7 @@ topic: criticallines-update
 canonical: ../../../Themes/docs/shared-components/critical-guidelines-update.md
 ---
 
+<<<<<<< .merge_file_pzFAYg
 See canonical documentation: ../../../Themes/docs/shared-components/critical-guidelines-update.md
 =======
 # Aggiornamento Linee Guida Critiche - Agosto 2025
@@ -177,3 +178,6 @@ find  --include="*.php" | grep -v "static" | grep -v "::"
 
 *Questo documento sostituisce tutte le linee guida precedenti in conflitto.*
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/critical-guidelines-update.md
+>>>>>>> .merge_file_Dii3R8

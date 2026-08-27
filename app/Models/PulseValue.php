@@ -29,6 +29,7 @@ use Modules\Xot\Database\Factories\PulseValueFactory;
  * @method static Builder<static>|PulseValue whereType($value)
  * @method static Builder<static>|PulseValue whereValue($value)
  * @property ProfileContract|null $deleter
+<<<<<<< .merge_file_JJDOfw
 =======
 use Modules\Xot\Contracts\ProfileContract;
 use Modules\Xot\Database\Factories\PulseValueFactory;
@@ -55,6 +56,8 @@ use Illuminate\Database\Eloquent\Builder;
  * @method static Builder|PulseValue whereValue($value)
  * @mixin IdeHelperPulseValue
 >>>>>>> laraxot/master
+=======
+>>>>>>> .merge_file_wGNlb7
  * @mixin \Eloquent
  */
 class PulseValue extends BaseModel

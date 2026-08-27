@@ -5,6 +5,7 @@ topic: xotbaseserviceprovider
 canonical: ../../../Themes/docs/shared-components/xotbaseserviceprovider.md
 ---
 
+<<<<<<< .merge_file_a39sm6
 See canonical documentation: ../../../Themes/docs/shared-components/xotbaseserviceprovider.md
 =======
 description:
@@ -12,3 +13,6 @@ globs:
 alwaysApply: false
 ---
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/xotbaseserviceprovider.md
+>>>>>>> .merge_file_2dVNxO

@@ -264,8 +264,12 @@ Map Xot module roadmap tasks to Asana:
 
 **Module**: Xot (Foundation)
 **MCP Version**: 2.0.0
+<<<<<<< .merge_file_Li1q0h
 <<<<<<< HEAD
 **Last Review**: 31 Gennaio 2026
 =======
 **Last Review**: 31 Gennaio 2026
 >>>>>>> laraxot/master
+=======
+**Last Review**: 31 Gennaio 2026
+>>>>>>> .merge_file_2TOadt

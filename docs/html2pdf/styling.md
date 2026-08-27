@@ -5,6 +5,7 @@ topic: styling
 canonical: ../../../../Themes/docs/shared-components/styling.md
 ---
 
+<<<<<<< .merge_file_9pjWsv
 See canonical documentation: ../../../../Themes/docs/shared-components/styling.md
 =======
 # Guida agli Stili, Tabelle e Immagini
@@ -147,3 +148,6 @@ $src = 'data:image/png;base64,' . $imageData;
 return view('pdf.template', compact('src'));
 ```
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../../Themes/docs/shared-components/styling.md
+>>>>>>> .merge_file_VyeLal

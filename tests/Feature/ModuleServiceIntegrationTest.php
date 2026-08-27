@@ -375,7 +375,10 @@ describe('ModuleService Integration', function () {
         // Test multiple simultaneous calls
         $results = [];
         for ($i = 0; $i < 3; $i++) {
+<<<<<<< .merge_file_y40kAH
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_cebWgx
             $service = new ModuleAction('Xot');
 =======
             $service = new ModuleService('Xot');

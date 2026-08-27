@@ -5,6 +5,7 @@ topic: docs-organization
 canonical: ../../../Themes/docs/shared-components/docs-organization-guide.md
 ---
 
+<<<<<<< .merge_file_62ztoW
 See canonical documentation: ../../../Themes/docs/shared-components/docs-organization-guide.md
 =======
 # Documentation Organization Guide
@@ -579,3 +580,6 @@ Per migliorare questa guida:
 **Status**: ✅ Active
 **Maintainer**: Team Laraxot
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/docs-organization-guide.md
+>>>>>>> .merge_file_SfUjeJ

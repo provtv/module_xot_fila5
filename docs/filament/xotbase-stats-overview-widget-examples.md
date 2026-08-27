@@ -5,6 +5,7 @@ topic: xotbase-stats-overview-widget-examples
 canonical: ../../../../Themes/docs/shared-components/xotbase-stats-overview-widget-examples.md
 ---
 
+<<<<<<< .merge_file_5IyHFd
 See canonical documentation: ../../../../Themes/docs/shared-components/xotbase-stats-overview-widget-examples.md
 =======
 # XotBaseStatsOverviewWidget - Esempi Pratici
@@ -628,3 +629,6 @@ La classe `XotBaseStatsOverviewWidget` migliorata fornisce un set completo di st
 **Versione**: 2.0
 **Stato**: ✅ Completato e Documentato
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../../Themes/docs/shared-components/xotbase-stats-overview-widget-examples.md
+>>>>>>> .merge_file_9UAMcF

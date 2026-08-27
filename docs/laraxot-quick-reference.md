@@ -5,6 +5,7 @@ topic: laraxot-quick-reference
 canonical: ../../../Themes/docs/shared-components/laraxot-philosophy-quick-reference.md
 ---
 
+<<<<<<< .merge_file_lH7k6s
 See canonical documentation: ../../../Themes/docs/shared-components/laraxot-philosophy-quick-reference.md
 =======
 # Laraxot Philosophy - Quick Reference
@@ -120,3 +121,6 @@ composer dump-autoload
 
 **Remember**: In Laraxot, consistency enables maintainability. Follow these patterns for reliable, scalable applications.
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/laraxot-philosophy-quick-reference.md
+>>>>>>> .merge_file_maypZt

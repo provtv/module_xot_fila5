@@ -1,4 +1,7 @@
+<<<<<<< .merge_file_vvYpw2
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_ymhFNY
 ---
 title: "payment"
 module: xot

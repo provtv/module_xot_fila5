@@ -5,6 +5,7 @@ topic: critical-architecture
 canonical: ../../../Themes/docs/shared-components/critical-architecture-rules.md
 ---
 
+<<<<<<< .merge_file_a4krIJ
 See canonical documentation: ../../../Themes/docs/shared-components/critical-architecture-rules.md
 =======
 # Regole Critiche di Architettura Laraxot
@@ -252,3 +253,6 @@ class MyModel extends BaseModel
 3. **PHPStan dovrebbe rilevare molte di queste violazioni**
 4. **Aggiornare sempre questo documento quando vengono aggiunte nuove regole**
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/critical-architecture-rules.md
+>>>>>>> .merge_file_oTLUow

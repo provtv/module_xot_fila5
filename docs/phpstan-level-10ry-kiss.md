@@ -5,6 +5,7 @@ topic: phpstan-level-10ry-kiss
 canonical: ../../../Themes/docs/shared-components/phpstan-level-10-dry-kiss-analysis.md
 ---
 
+<<<<<<< .merge_file_O6oVMz
 See canonical documentation: ../../../Themes/docs/shared-components/phpstan-level-10-dry-kiss-analysis.md
 =======
 # PHPStan Level 10 + DRY/KISS Complete Analysis - [DATE]
@@ -958,3 +959,6 @@ Con il refactoring di Contact e creazione scope traits: **→ 92% - Eccellente!*
 *Analyzed by: Claude Code*
 *Validation: ✅ PHPStan Level 10, Manual Review*
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/phpstan-level-10-dry-kiss-analysis.md
+>>>>>>> .merge_file_MAZLjb

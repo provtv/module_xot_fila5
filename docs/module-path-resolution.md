@@ -5,6 +5,7 @@ topic: module-path-resolution
 canonical: ../../../Themes/docs/shared-components/module-path-error-resolution.md
 ---
 
+<<<<<<< .merge_file_4Xl4ri
 See canonical documentation: ../../../Themes/docs/shared-components/module-path-error-resolution.md
 =======
 # Module Path Error Resolution - Activity Assets Issue
@@ -145,3 +146,6 @@ try {
 
 **Filosofia Applicata**: Graceful degradation, non-intrusive, robusto.
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/module-path-error-resolution.md
+>>>>>>> .merge_file_fSOGCR

@@ -5,6 +5,7 @@ topic: filament-5-method-visibility
 canonical: ../../../Themes/docs/shared-components/filament-5-method-visibility-rules.md
 ---
 
+<<<<<<< .merge_file_jVF9vK
 See canonical documentation: ../../../Themes/docs/shared-components/filament-5-method-visibility-rules.md
 =======
 # Filament 5 Method Visibility Rules
@@ -422,3 +423,6 @@ public function mount(): void
 **
 **Maintainer:** Laraxot Team + Claude Opus 4.5
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/filament-5-method-visibility-rules.md
+>>>>>>> .merge_file_GhMSpL

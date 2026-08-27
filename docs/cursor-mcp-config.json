@@ -47,7 +47,10 @@
         "args": ["-y", "@assistant-ui/mcp-docs-server"]
     },
     "laravel-boost": {
+<<<<<<< .merge_file_4X2Zbz
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_oNAYEX
       "command": "./bashscripts/mcp/laravel-boost-wrapper.sh",
       "args": [],
       "env": {

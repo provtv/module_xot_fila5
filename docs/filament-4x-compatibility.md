@@ -5,6 +5,7 @@ topic: filament-4x-compatibility
 canonical: ../../../Themes/docs/shared-components/filament-4x-compatibility-conflict.md
 ---
 
+<<<<<<< .merge_file_pttsBT
 See canonical documentation: ../../../Themes/docs/shared-components/filament-4x-compatibility-conflict.md
 =======
 # Compatibilità Filament 4.x - Modulo Xot
@@ -218,3 +219,6 @@ $rows = $query->get();
 
 *Ultimo aggiornamento: [DATE]*
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/filament-4x-compatibility-conflict.md
+>>>>>>> .merge_file_e2qWTY

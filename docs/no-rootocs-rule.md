@@ -5,6 +5,7 @@ topic: no-rootocs-rule
 canonical: ../../../Themes/docs/shared-components/no-root-docs-rule.md
 ---
 
+<<<<<<< .merge_file_EpPbvt
 See canonical documentation: ../../../Themes/docs/shared-components/no-root-docs-rule.md
 =======
 # REGOLA CRITICA: Cartelle docs root VIETATE
@@ -53,3 +54,6 @@ find var/www/html/_bases/base_<nome progetto>/docs$|^docs$)"
 ## RESPONSABILITÀ:
 Tutti gli sviluppatori e AI devono rispettare questa regola senza eccezioni.
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/no-root-docs-rule.md
+>>>>>>> .merge_file_8AZRBE

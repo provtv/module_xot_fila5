@@ -5,6 +5,7 @@ topic: development-workflowetailed
 canonical: ../../../Themes/docs/shared-components/development-workflow-detailed.md
 ---
 
+<<<<<<< .merge_file_FnbfoX
 See canonical documentation: ../../../Themes/docs/shared-components/development-workflow-detailed.md
 =======
 # Laraxot Development Workflow - Detailed Guide
@@ -529,3 +530,6 @@ echo "5. Run quality checks"
 
 **Maintained by**: Xot Module Development Team
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/development-workflow-detailed.md
+>>>>>>> .merge_file_kfX8Jk

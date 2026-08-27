@@ -90,6 +90,7 @@ return [
         'label' => 'Xot Base List Records',
         'sort' => 1,
         'icon' => 'heroicon-o-collection',
+<<<<<<< .merge_file_5yjce9
 =======
             'label' => 'Crea Nuovo',
             'tooltip' => 'Crea un nuovo elemento',
@@ -101,5 +102,7 @@ return [
             'description' => 'Azione per esportare i dati in un file Excel',
         ],
 >>>>>>> laraxot/master
+=======
+>>>>>>> .merge_file_VEEmkC
     ],
 ];

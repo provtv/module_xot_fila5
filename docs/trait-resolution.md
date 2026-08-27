@@ -5,6 +5,7 @@ topic: trait-resolution
 canonical: ../../../Themes/docs/shared-components/trait-conflict-resolution.md
 ---
 
+<<<<<<< .merge_file_jO8BzV
 See canonical documentation: ../../../Themes/docs/shared-components/trait-conflict-resolution.md
 =======
 # Risoluzione Conflitto Trait: NavigationLabelTrait e XotBasePage
@@ -100,3 +101,6 @@ Dopo la modifica, verifica con:
 *Risolto: [DATE]*
 *Architecture Version: XotBase 2.1*
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/trait-conflict-resolution.md
+>>>>>>> .merge_file_707pkk

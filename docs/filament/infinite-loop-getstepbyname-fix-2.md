@@ -242,6 +242,7 @@ Questo fix dimostra l'importanza di:
 *Il sistema <nome progetto> ora è resiliente a questo tipo di errori critici.* 
 *Il sistema <nome progetto> ora è resiliente a questo tipo di errori critici.* 
 *Il sistema <nome progetto> ora è resiliente a questo tipo di errori critici.* 
+<<<<<<< .merge_file_JdyavM
 *Il sistema <nome progetto> ora è resiliente a questo tipo di errori critici.* 
 =======
 ========
@@ -268,3 +269,6 @@ Questo fix dimostra l'importanza di:
 =======
 *Il sistema <nome progetto> ora è resiliente a questo tipo di errori critici.* 
 >>>>>>> laraxot/master
+=======
+*Il sistema <nome progetto> ora è resiliente a questo tipo di errori critici.* 
+>>>>>>> .merge_file_cL5qC0

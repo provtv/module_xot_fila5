@@ -50,11 +50,15 @@ trait HasExtraTrait
     /**
      * Retrieves the morphed one-to-one relationship between the current model and the Extra model.
      *
+<<<<<<< .merge_file_v6HWq1
 <<<<<<< HEAD
      * @return MorphOne<Model, $this>
 =======
      * return MorphOne<ExtraContract>
 >>>>>>> laraxot/master
+=======
+     * @return MorphOne<Model, $this>
+>>>>>>> .merge_file_RWZN4J
      */
     public function extra(): MorphOne
     {

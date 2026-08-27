@@ -256,7 +256,11 @@ Prima di committare un wizard widget, verifica TUTTI i punti:
 
 ---
 
+<<<<<<< .merge_file_3ue6qN
 *Ultimo aggiornamento: 2026-04-14*
 =======
 ``` 
 >>>>>>> laraxot/master
+=======
+*Ultimo aggiornamento: 2026-04-14*
+>>>>>>> .merge_file_ZhhZfK

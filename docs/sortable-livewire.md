@@ -20,4 +20,9 @@ https://github.com/asantibanez/laravel-blade-sortable
 
 https://opensourcelibs.com/lib/livewire-sortablejs
 
+<<<<<<< .merge_file_S9RNhX
 https://github.com/livewire/sortable
+=======
+
+https://github.com/livewire/sortable
+>>>>>>> .merge_file_SSl7bm

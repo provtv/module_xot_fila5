@@ -5,6 +5,7 @@ topic: property-exists-replacement
 canonical: ../../../Themes/docs/shared-components/property-exists-replacement-guide.md
 ---
 
+<<<<<<< .merge_file_2p9fFg
 See canonical documentation: ../../../Themes/docs/shared-components/property-exists-replacement-guide.md
 =======
 # Guida Pratica: Sostituzione di property_exists() per Eloquent
@@ -172,3 +173,6 @@ if ($model->isFillable('tenant_id')) {
 - Eloquent Model? → NO `property_exists()`, usa `isset()` o `hasAttribute()`
 - Altro object? → `property_exists()` va bene!
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/property-exists-replacement-guide.md
+>>>>>>> .merge_file_Cs2FZW

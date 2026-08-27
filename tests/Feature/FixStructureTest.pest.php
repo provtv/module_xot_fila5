@@ -105,6 +105,7 @@
 | | | | |/|/| |R|e|s|t|o|r|e| |p|e|r|m|i|s|s|i|o|n|s|
 | | | | |c|h|m|o|d|(|$|n|o|n|W|r|i|t|a|b|l|e|D|i|r|,| |0|o|7|5|5|)|;|
 |}|)|;|
+<<<<<<< .merge_file_Jz6zie
 |
 =======
 <?php
@@ -217,3 +218,6 @@ test('handles errors gracefully', function () {
     chmod($nonWritableDir, 0o755);
 });
 >>>>>>> laraxot/master
+=======
+|
+>>>>>>> .merge_file_57Zhe6

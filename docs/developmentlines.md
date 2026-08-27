@@ -5,6 +5,7 @@ topic: developmentlines
 canonical: ../../../Themes/docs/shared-components/development-guidelines.md
 ---
 
+<<<<<<< .merge_file_js9dLP
 See canonical documentation: ../../../Themes/docs/shared-components/development-guidelines.md
 =======
 # Development Guidelines - Xot Module
@@ -65,3 +66,6 @@ Questo documento fornisce linee guida generali per lo sviluppo e la qualità del
 3. **Mixed Types**: Gestire sempre i tipi `mixed` con type casting appropriato
 4. **Documentation**: Aggiornare sempre la documentazione dopo correzioni significative
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/development-guidelines.md
+>>>>>>> .merge_file_ratF0C

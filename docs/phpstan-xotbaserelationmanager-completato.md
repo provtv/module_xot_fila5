@@ -5,6 +5,7 @@ topic: phpstan-xotbaserelationmanager-completato
 canonical: ../../../Themes/docs/shared-components/phpstan-fix-xotbaserelationmanager-completato.md
 ---
 
+<<<<<<< .merge_file_pdQVGd
 See canonical documentation: ../../../Themes/docs/shared-components/phpstan-fix-xotbaserelationmanager-completato.md
 =======
 # Correzione PHPStan - XotBaseRelationManager ✅
@@ -160,3 +161,6 @@ public function canDetachBulk(\Illuminate\Database\Eloquent\Model|\stdClass $rec
 2. ⏳ Commit con messaggio descrittivo
 3. ⏳ Push
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/phpstan-fix-xotbaserelationmanager-completato.md
+>>>>>>> .merge_file_y0NvaV

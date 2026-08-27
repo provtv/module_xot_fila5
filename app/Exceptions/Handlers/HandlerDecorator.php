@@ -235,6 +235,7 @@ class HandlerDecorator implements ExceptionHandler
         }
 
         return is_a($e, $type->getName(), true);
+<<<<<<< .merge_file_kxdx8i
     }
 =======
         return $this->repository->addConsoleRenderer($renderer);
@@ -243,6 +244,8 @@ class HandlerDecorator implements ExceptionHandler
     public function shouldReport(Throwable $e): bool
     {
         return $this->defaultHandler->shouldReport($e);
+=======
+>>>>>>> .merge_file_1P2lJx
     }
 >>>>>>> laraxot/master
 }

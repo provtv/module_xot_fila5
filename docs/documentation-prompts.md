@@ -62,12 +62,15 @@ Questo documento descrive le regole e le best practices per i prompt di document
 ### Formato Non Corretto
 ```
 
+<<<<<<< .merge_file_ENPGSW
 =======
 [Documento in Root](../../../docs/documento.md)
 ```
 
 ### Formato Non Corretto
 >>>>>>> laraxot/master
+=======
+>>>>>>> .merge_file_lH0Jwe
 ```markdown
 
 # Collegamenti Non Corretti

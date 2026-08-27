@@ -5,6 +5,7 @@ topic: fix-naming-conventions
 canonical: ../../../../Themes/docs/shared-components/fix-naming-conventions.sh
 ---
 
+<<<<<<< .merge_file_h6zx3q
 See canonical documentation: ../../../../Themes/docs/shared-components/fix-naming-conventions.sh
 =======
 #!/bin/bash
@@ -46,3 +47,6 @@ else
     echo -e "${GREEN}✅ $FIXES file rinominati${NC}"
 fi
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../../Themes/docs/shared-components/fix-naming-conventions.sh
+>>>>>>> .merge_file_jCehJf

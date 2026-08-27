@@ -1,4 +1,7 @@
+<<<<<<< .merge_file_ufvEp2
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_cl5X07
 ---
 title: "PHP Strict Types in Laravel Modules"
 module: xot
@@ -8,8 +11,11 @@ created: 2026-08-24
 updated: 2026-08-24
 ---
 
+<<<<<<< .merge_file_ufvEp2
 =======
 >>>>>>> laraxot/master
+=======
+>>>>>>> .merge_file_cl5X07
 # PHP Strict Types in Laravel Modules
 
 ## Overview

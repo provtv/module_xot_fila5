@@ -12,7 +12,11 @@
   - [Errori comuni nelle transizioni custom (<nome progetto>)](../../<nome progetto>/docs/model-states-errors.md)
 <<<<<<< HEAD
   - [README.md centrale](../../../docs/README.md) 
+<<<<<<< .merge_file_qNbL9e
   - [README.md centrale](../../../../docs/readme.md) 
 =======
   - [README.md centrale](../../../docs/readme.md) 
 >>>>>>> laraxot/master
+=======
+  - [README.md centrale](../../../../docs/readme.md) 
+>>>>>>> .merge_file_DsfnXx

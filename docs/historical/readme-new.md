@@ -665,7 +665,11 @@ Located in `bashscripts/`:
 - **Fixed**: Mass syntax errors across modules
 - **Improved**: PHP Insights score (Code: 52.6%, Complexity: 93.1%)
 
+<<<<<<< .merge_file_H8jSBf
 See [CHANGELOG.md](CHANGELOG.md) for full history.
+=======
+See [CHANGELOG.md](changelog.md) for full history.
+>>>>>>> .merge_file_tEVGda
 
 ---
 

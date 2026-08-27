@@ -802,8 +802,12 @@ Il refactoring ha migliorato la qualità del codice da:
 - **Mancanza di testing** → **Coverage completo**
 - **Violazioni di principi** → **Conformità con best practices**
 
+<<<<<<< .merge_file_C0xhIM
 <<<<<<< HEAD
 Questo approccio DRY+KISS permette di mantenere un codice di alta qualità, facile da testare e manutenere nel tempo.
 =======
 Questo approccio DRY+KISS permette di mantenere un codice di alta qualità, facile da testare e manutenere nel tempo.
 >>>>>>> laraxot/master
+=======
+Questo approccio DRY+KISS permette di mantenere un codice di alta qualità, facile da testare e manutenere nel tempo.
+>>>>>>> .merge_file_3MmwDB

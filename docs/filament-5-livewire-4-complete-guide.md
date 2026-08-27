@@ -912,9 +912,13 @@ Se incontri problemi:
 ---
 
 *Documento mantenuto da: Marco Sottana*
+<<<<<<< .merge_file_arY7AR
 <<<<<<< HEAD
 *Ultimo aggiornamento: 2026-01-30*
 =======
 *Ultimo aggiornamento: [DATE]*
 >>>>>>> laraxot/master
+=======
+*Ultimo aggiornamento: 2026-01-30*
+>>>>>>> .merge_file_yZvXD2
 *Progetto: Laraxot / base_laravelpizza*

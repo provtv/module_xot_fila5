@@ -176,7 +176,10 @@ Model structure requirements:
 ## 📚 Riferimenti Aggiuntivi
 
 ### Documentazione Principale
+<<<<<<< .merge_file_ekBw2n
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_7mc93F
 - [AGENTS.md](AGENTS.md) - Guida completa sviluppatori AI
 - [Database Testing Rules](../../../../../docs/database-testing-rules.md) - Regole MySQL testing
 - [AI Coding Memory](../../../../ai_coding_memory.md) - Memoria completa regole
@@ -223,6 +226,7 @@ LimeSurvey specific rules:
 **MySQL Testing**: ✅ OBBLIGATORIO  
 **Race Conditions**: ✅ Pattern first() + try/catch  
 **PHPStan Level**: ✅ 10 obbligatorio  
+<<<<<<< .merge_file_ekBw2n
 <<<<<<< HEAD
 **Status**: Production Ready
 
@@ -230,3 +234,8 @@ LimeSurvey specific rules:
 =======
 **Status**: Production Ready
 >>>>>>> laraxot/master
+=======
+**Status**: Production Ready
+
+```
+>>>>>>> .merge_file_7mc93F

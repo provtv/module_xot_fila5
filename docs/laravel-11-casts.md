@@ -5,6 +5,7 @@ topic: laravel-11-casts
 canonical: ../../../Themes/docs/shared-components/laravel-11-casts-pattern.md
 ---
 
+<<<<<<< .merge_file_tvV1ft
 See canonical documentation: ../../../Themes/docs/shared-components/laravel-11-casts-pattern.md
 =======
 # Laravel 11+ Casts Pattern - CRITICAL UPDATE
@@ -173,3 +174,6 @@ Before committing any model:
 **Laravel Version**: 11+  
 **Status**: MANDATORY for all new code
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/laravel-11-casts-pattern.md
+>>>>>>> .merge_file_25EM7V

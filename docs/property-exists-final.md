@@ -5,6 +5,7 @@ topic: property-exists-final
 canonical: ../../../Themes/docs/shared-components/property-exists-final-report.md
 ---
 
+<<<<<<< .merge_file_g1qiEr
 See canonical documentation: ../../../Themes/docs/shared-components/property-exists-final-report.md
 =======
 # REPORT FINALE: Eliminazione property_exists() da Eloquent Models
@@ -409,3 +410,6 @@ PHPStan + PHPMD + Pint + Tests = Qualità garantita
 **Data:** [DATE]
 **Status:** COMPLETATO CON SUCCESSO ✅
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/property-exists-final-report.md
+>>>>>>> .merge_file_cpIbqS

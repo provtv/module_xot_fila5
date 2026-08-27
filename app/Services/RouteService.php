@@ -33,12 +33,15 @@ class RouteService
      * Verifica se l'utente è in modalità amministrazione.
      *
      * @param  array<string,string>  $params  Parametri aggiuntivi
+<<<<<<< .merge_file_Jd7FYw
 =======
     /**
      * Verifica se l'utente è in modalità amministrazione.
      *
      * @param array<string,string> $params Parametri aggiuntivi
 >>>>>>> laraxot/master
+=======
+>>>>>>> .merge_file_djF9p9
      * @return bool True se l'utente è in modalità amministrazione, false altrimenti
      */
     public static function inAdmin(array $params = []): bool
@@ -50,11 +53,15 @@ class RouteService
         }
 
         // Se il primo segmento dell'URL è 'admin', siamo in modalità amministrazione
+<<<<<<< .merge_file_Jd7FYw
 <<<<<<< HEAD
         if (Request::segment(1) === 'admin') {
 =======
         if ('admin' === Request::segment(1)) {
 >>>>>>> laraxot/master
+=======
+        if (Request::segment(1) === 'admin') {
+>>>>>>> .merge_file_djF9p9
             return true;
         }
 
@@ -66,6 +73,7 @@ class RouteService
         return (is_countable($segments) ? \count($segments) : 0) > 0
             && $segments[0] === 'livewire'
             && session('in_admin', false) === true;
+<<<<<<< .merge_file_Jd7FYw
     }
 
     /**
@@ -81,6 +89,12 @@ class RouteService
     /**
      * @param array<string,string> $params
 >>>>>>> laraxot/master
+=======
+    }
+
+    /**
+     * @param  array<string,string>  $params
+>>>>>>> .merge_file_djF9p9
      */
     public static function urlAct(array $params): string
     {
@@ -149,11 +163,15 @@ class RouteService
     // se n=0 => 'container0'
     // se n=1 => 'containers.container1'
     /**
+<<<<<<< .merge_file_Jd7FYw
 <<<<<<< HEAD
      * @param  array<string,string>  $params
 =======
      * @param array<string,string> $params
 >>>>>>> laraxot/master
+=======
+     * @param  array<string,string>  $params
+>>>>>>> .merge_file_djF9p9
      */
     public static function getRoutenameN(array $params): string
     {
@@ -167,7 +185,10 @@ class RouteService
             $tmp[] = 'admin';
         }
 
+<<<<<<< .merge_file_Jd7FYw
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_djF9p9
         for ($i = 0; $i <= $n; $i++) {
             $tmp[] = 'container'.$i;
 =======
@@ -264,11 +285,15 @@ class RouteService
      * }
      */
     /**
+<<<<<<< .merge_file_Jd7FYw
 <<<<<<< HEAD
      * @param  array<string,string>  $params
 =======
      * @param array<string,string> $params
 >>>>>>> laraxot/master
+=======
+     * @param  array<string,string>  $params
+>>>>>>> .merge_file_djF9p9
      */
     public static function urlLang(array $params = []): string
     {
@@ -349,7 +374,10 @@ class RouteService
     public static function getAct(): string
     {
         $route_action = Route::currentRouteAction();
+<<<<<<< .merge_file_Jd7FYw
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_djF9p9
         if ($route_action === null) {
             throw new \Exception('$route_action is null');
 =======
@@ -384,7 +412,10 @@ class RouteService
     public static function getModuleName(): string
     {
         $route_action = Route::currentRouteAction();
+<<<<<<< .merge_file_Jd7FYw
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_djF9p9
         if ($route_action === null) {
             throw new \Exception('$route_action is null');
 =======
@@ -408,7 +439,10 @@ class RouteService
     public static function getControllerName(): string
     {
         $route_action = Route::currentRouteAction();
+<<<<<<< .merge_file_Jd7FYw
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_djF9p9
         if ($route_action === null) {
             throw new \Exception('$route_action is null');
 =======
@@ -448,6 +482,7 @@ class RouteService
     }
 
     public function execute(): void {}
+<<<<<<< .merge_file_Jd7FYw
 =======
         $params = getRouteParameters();
         [$containers, $items] = params2ContainerItem($params);
@@ -464,4 +499,6 @@ class RouteService
             ->implode('.');
     }
 >>>>>>> laraxot/master
+=======
+>>>>>>> .merge_file_djF9p9
 }

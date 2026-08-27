@@ -5,6 +5,7 @@ topic: cases
 canonical: ../../../Themes/docs/shared-components/case-conflicts-Modules.md
 ---
 
+<<<<<<< .merge_file_vR5KQG
 See canonical documentation: ../../../Themes/docs/shared-components/case-conflicts-Modules.md
 =======
 # Case-Insensitive File Conflicts
@@ -32,3 +33,6 @@ Elenco dei duplicati case-insensitive nel modulo `Xot`:
 
 Intervento consigliato: mantenere una singola variante per ogni voce (es. Maiuscolo per file di documentazione principale, PascalCase per classi/azioni), eliminando la versione duplicata.
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/case-conflicts-Modules.md
+>>>>>>> .merge_file_3AXdnr

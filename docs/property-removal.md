@@ -5,6 +5,7 @@ topic: property-removal
 canonical: ../../../Themes/docs/shared-components/property-removal-philosophy.md
 ---
 
+<<<<<<< .merge_file_u5ti4L
 See canonical documentation: ../../../Themes/docs/shared-components/property-removal-philosophy.md
 =======
 # Filosofia della Rimozione Proprietà in XotBaseResource
@@ -45,3 +46,6 @@ Questi valori vengono risolti dinamicamente da `XotBaseResource` tramite i file 
 ---
 *Documentazione redatta seguendo i principi Super Mucca: DRY, KISS, Robustness.*
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/property-removal-philosophy.md
+>>>>>>> .merge_file_TGELVY

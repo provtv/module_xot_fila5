@@ -386,6 +386,7 @@ class CreateYourTable extends XotBaseMigration
 
 **Ultimo Aggiornamento**: 2026-01-23  
 **Versione**: v4.0.0-core  
+<<<<<<< .merge_file_jXNfX2
 **Stato**: Production Framework - Foundation of All Modules
 =======
 # Xot Module - Comprehensive Analysis
@@ -461,3 +462,6 @@ Xot provides the foundational architecture that enables LimeSurvey integration t
 - Advanced testing patterns
 - More comprehensive API documentation
 >>>>>>> laraxot/master
+=======
+**Stato**: Production Framework - Foundation of All Modules
+>>>>>>> .merge_file_AdMnzM

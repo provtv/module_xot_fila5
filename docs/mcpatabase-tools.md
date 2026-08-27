@@ -142,8 +142,12 @@ Current configuration includes MySQL access that automatically uses Laravel's .e
 ### MySQL MCP connection issues
 - Verify database server is running
 - Check database credentials in .env file
+<<<<<<< .merge_file_u6vSXG
 <<<<<<< HEAD
 - Ensure MySQL MCP server script exists at specified path
 =======
 - Ensure MySQL MCP server script exists at specified path
 >>>>>>> laraxot/master
+=======
+- Ensure MySQL MCP server script exists at specified path
+>>>>>>> .merge_file_mKpXSJ

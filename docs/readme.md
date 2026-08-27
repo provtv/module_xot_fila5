@@ -1,4 +1,17 @@
+<<<<<<< .merge_file_Ek16BH
 # Modulo Xot - Documentazione Consolidata
+=======
+---
+title: "Xot Module** - Il Cuore del Framework Laraxot"
+module: xot
+type: integration
+tags: [integrations, modules, xot]
+created: 2026-08-24
+updated: 2026-08-24
+---
+
+# 🏗️ **Xot Module** - Il Cuore del Framework Laraxot
+>>>>>>> .merge_file_ilV6RM
 
 ## 🎯 Panoramica
 Modulo core del sistema Laraxot che fornisce classi base e funzionalità comuni per tutti gli altri moduli.

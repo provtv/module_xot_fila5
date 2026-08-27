@@ -5,6 +5,7 @@ topic: roadmap
 canonical: ../../../../Themes/docs/shared-components/q4-roadmap-Modules.md
 ---
 
+<<<<<<< .merge_file_IDIF24
 See canonical documentation: ../../../../Themes/docs/shared-components/q4-roadmap-Modules.md
 =======
 # Xot Module Roadmap (2025 Q4)
@@ -40,3 +41,6 @@ See canonical documentation: ../../../../Themes/docs/shared-components/q4-roadma
 ## Acceptance Criteria
 - All modules compile against Xot contracts without overrides
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../../Themes/docs/shared-components/q4-roadmap-Modules.md
+>>>>>>> .merge_file_KunRpz

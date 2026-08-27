@@ -112,6 +112,7 @@ public static function getModel(): null|string
 - **Data correzione**: Gennaio 2025
 - **Versione Filament**: 3.x
 - **PHP Version**: 8.3+
+<<<<<<< .merge_file_Iox1qj
 <<<<<<< HEAD
 - **Livello PHPStan**: 9+
 =======
@@ -119,3 +120,6 @@ public static function getModel(): null|string
 
 *Ultimo aggiornamento: gennaio 2025*
 >>>>>>> laraxot/master
+=======
+- **Livello PHPStan**: 9+
+>>>>>>> .merge_file_fECqJu

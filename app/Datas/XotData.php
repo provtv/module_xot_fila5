@@ -18,6 +18,7 @@ use Modules\Xot\Contracts\UserContract;
 
 use function Safe\realpath;
 
+<<<<<<< .merge_file_LmOUCl
 =======
 use Exception;
 use Illuminate\Support\Facades\Auth;
@@ -34,15 +35,20 @@ use Modules\User\Models\Team;
 use Modules\Xot\Contracts\ProfileContract;
 use Modules\Xot\Contracts\UserContract;
 >>>>>>> laraxot/master
+=======
+>>>>>>> .merge_file_7YfvQQ
 use Spatie\LaravelData\Concerns\WireableData;
 use Spatie\LaravelData\Data;
 use Webmozart\Assert\Assert;
 
+<<<<<<< .merge_file_LmOUCl
 <<<<<<< HEAD
 =======
 use function Safe\realpath;
 
 >>>>>>> laraxot/master
+=======
+>>>>>>> .merge_file_7YfvQQ
 /**
  * Class Modules\Xot\Datas\XotData.
  * ----.
@@ -298,10 +304,13 @@ class XotData extends Data implements Wireable
             '[' . __LINE__ . '][' . class_basename($this) . '][' . $this->tenant_class . ']',
         );
 
+<<<<<<< .merge_file_LmOUCl
         return $this->tenant_class;
 >>>>>>> laraxot/master
     }
 
+=======
+>>>>>>> .merge_file_7YfvQQ
     /**
      * @return class-string
      */
@@ -510,11 +519,15 @@ class XotData extends Data implements Wireable
 
     public function save(): void
     {
+<<<<<<< .merge_file_LmOUCl
 <<<<<<< HEAD
         throw new \RuntimeException('Removed debug dddx');
 =======
         dddx('wip');
 >>>>>>> laraxot/master
+=======
+        throw new \RuntimeException('Removed debug dddx');
+>>>>>>> .merge_file_7YfvQQ
     }
 
     public function getPubThemeViewPath(string $key = ''): string
@@ -526,6 +539,7 @@ class XotData extends Data implements Wireable
             return realpath($path0);
         } catch (\Exception $e) {
             throw new \Exception('realpath not find dir['.$path0.']'.PHP_EOL.'['.$e->getMessage().']');
+<<<<<<< .merge_file_LmOUCl
 =======
         $path0 = base_path('Themes/' . $this->pub_theme . '/resources/views/' . $key);
         try {
@@ -535,6 +549,8 @@ class XotData extends Data implements Wireable
         } catch (Exception $e) {
             throw new Exception('realpath not find dir[' . $path0 . ']' . PHP_EOL . '[' . $e->getMessage() . ']');
 >>>>>>> laraxot/master
+=======
+>>>>>>> .merge_file_7YfvQQ
         }
     }
 

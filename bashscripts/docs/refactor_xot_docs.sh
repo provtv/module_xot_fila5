@@ -255,11 +255,15 @@ class MyResource extends XotBaseResource
     protected static ?string $model = MyModel::class;
     
     /**
+<<<<<<< .merge_file_CleMjN
 <<<<<<< HEAD
      * @return array<int, \Filament\Schemas\Components\Component>
 =======
      * @return array<int, \Filament\Forms\Components\Component>
 >>>>>>> laraxot/master
+=======
+     * @return array<int, \Filament\Schemas\Components\Component>
+>>>>>>> .merge_file_epoqUk
      */
     public static function getFormSchema(): array
     {

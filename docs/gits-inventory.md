@@ -5,6 +5,7 @@ topic: gits-inventory
 canonical: ../../../Themes/docs/shared-components/git-conflicts-inventory.md
 ---
 
+<<<<<<< .merge_file_YEwems
 See canonical documentation: ../../../Themes/docs/shared-components/git-conflicts-inventory.md
 =======
 # Inventario Conflitti Git - Xot Module
@@ -67,3 +68,6 @@ See canonical documentation: ../../../Themes/docs/shared-components/git-conflict
 - 📅 Data rilevamento: [DATE]
 - 🔄 Priorità: ALTA - File critici del core framework
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/git-conflicts-inventory.md
+>>>>>>> .merge_file_MlTdER

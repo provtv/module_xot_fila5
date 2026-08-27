@@ -5,6 +5,7 @@ topic: phpstan-array-typeses
 canonical: ../../../Themes/docs/shared-components/phpstan-array-types-fixes.md
 ---
 
+<<<<<<< .merge_file_izYXQQ
 See canonical documentation: ../../../Themes/docs/shared-components/phpstan-array-types-fixes.md
 =======
 # PHPStan Array Types Fixes - Patterns & Solutions
@@ -135,3 +136,6 @@ public function processData(array $data): void
 **🏆 STATUS**: PERFETTO - PHPStan Level 9 CLEAN
 **📊 QUALITÀ CODICE**: Maximum Type Safety Achieved
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/phpstan-array-types-fixes.md
+>>>>>>> .merge_file_0HFVBA

@@ -5,6 +5,7 @@ topic: migrations
 canonical: ../../../../Themes/docs/shared-components/migrations.md
 ---
 
+<<<<<<< .merge_file_aQz8kS
 See canonical documentation: ../../../../Themes/docs/shared-components/migrations.md
 =======
 # Migrazioni
@@ -309,3 +310,6 @@ return new class extends Migration
 };
 ``` 
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../../Themes/docs/shared-components/migrations.md
+>>>>>>> .merge_file_OgjNt6

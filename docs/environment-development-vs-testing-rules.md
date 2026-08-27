@@ -128,6 +128,7 @@ Questa differenziazione rispetta i principi fondamentali:
 - **DRY**: Configurazioni separate per scopi diversi
 - **KISS**: Semplicità per sviluppo, completezza per test
 - **Robustezza**: Isolamento adeguato nei test
+<<<<<<< .merge_file_LOZl19
 - **Multi-tenancy**: Supporto completo per architettura multi-database
 
 ## REGOLA CRITICA: TestCase setUp()
@@ -213,3 +214,6 @@ Il `setUp()` deve essere usato SOLO per:
 - Configurare il modulo principale (xra.main_module)
 - Eseguire migrate:fresh e module:migrate (una sola volta)
 - Non MAI per configurare connessioni database!
+=======
+- **Multi-tenancy**: Supporto completo per architettura multi-database
+>>>>>>> .merge_file_eSQmNC

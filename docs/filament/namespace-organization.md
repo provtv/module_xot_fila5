@@ -8,6 +8,7 @@ topic: namespace-organization
 canonical: ../../../../Themes/docs/shared-components/namespace-organization-1.md
 ---
 
+<<<<<<< .merge_file_qOUVzJ
 See canonical documentation: ../../../../Themes/docs/shared-components/namespace-organization-1.md
 =======
 # Organizzazione dei Namespace Filament nel Modulo Xot
@@ -79,3 +80,6 @@ Questo errore indica che un metodo è stato erroneamente definito come statico q
 - [XotBasePage](/var/www/html/base_saluteora/laravel/Modules/Xot/docs/filament/pages/xotbasepage.md)
 - [Linee Guida per l'Ereditarietà](/var/www/html/base_saluteora/laravel/Modules/Xot/docs/filament/filament_inheritance_guidelines.md)
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../../Themes/docs/shared-components/namespace-organization-1.md
+>>>>>>> .merge_file_9gzPJt

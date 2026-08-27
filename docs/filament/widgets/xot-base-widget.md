@@ -53,6 +53,7 @@ protected int|string|array $columnSpan = 'full';  // Larghezza del widget
 ## Form Schema
 
 `XotBaseWidget` espone **`getFormSchema()`** (default `[]`). **Non esiste** `getFormSchemaOld()` sui widget: quello è il ponte delle **Resource**.
+<<<<<<< .merge_file_qGB4dZ
 
 `#[Override]` su un metodo assente nel parent è fatal PHP 8.3 all'autoload e interrompe `phpstan analyse Modules`.
 
@@ -73,20 +74,28 @@ public function getFormSchema(): array
 ## Form Schema
 
 Ogni widget deve implementare il proprio schema di form:
+=======
+>>>>>>> .merge_file_kE8NHn
+
+`#[Override]` su un metodo assente nel parent è fatal PHP 8.3 all'autoload e interrompe `phpstan analyse Modules`.
+
+Chi lo usa: login `/it/auth/login`, firma valutatore, dropdown utente. Un widget con solo `getFormSchemaOld()` ha form vuoto a runtime e PHPStan non lo vede.
 
 ```php
-abstract public function getFormSchema(): array;
-
-final public function form(Form $form): Form
+public function getFormSchema(): array
 {
-    return $form
-        ->schema($this->getFormSchema())
-        ->columns(2)
-        ->statePath('data');
+    return [
+        // componenti; niente ->label()
+    ];
 }
 ```
 
+<<<<<<< .merge_file_qGB4dZ
 >>>>>>> laraxot/master
+=======
+`form()` sulla base chiama `getFormSchema()` e imposta `statePath('data')`. Non è `abstract` nel codice attuale.
+
+>>>>>>> .merge_file_kE8NHn
 ## Best Practices
 
 1. **Estensione della Classe**
@@ -207,7 +216,11 @@ Questo trait permette al widget di aggiornarsi automaticamente a intervalli rego
 - [NAMESPACE-RULES.md](namespace-rules.md) - Regole per i namespace nei moduli
 - [FOLIO_VOLT_FILAMENT_INTEGRATION.md](../../FOLIO_VOLT_FILAMENT_INTEGRATION.md) - Integrazione Folio, Volt e Filament
 - [MODULE_STRUCTURE.md](../../MODULE_STRUCTURE.md) - Struttura standard dei moduli
+<<<<<<< .merge_file_qGB4dZ
 - [Documentazione Filament](https://filamentphp.com/docs/3.x/widgets/installation)
 =======
 - [Documentazione Filament](https://filamentphp.com/docs/3.x/widgets/installation)
 >>>>>>> laraxot/master
+=======
+- [Documentazione Filament](https://filamentphp.com/docs/3.x/widgets/installation)
+>>>>>>> .merge_file_kE8NHn

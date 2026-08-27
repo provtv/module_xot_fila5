@@ -5,6 +5,7 @@ topic: cleanup-empty-files-auto
 canonical: ../../../../Themes/docs/shared-components/cleanup-empty-files-auto.sh
 ---
 
+<<<<<<< .merge_file_aYek70
 See canonical documentation: ../../../../Themes/docs/shared-components/cleanup-empty-files-auto.sh
 =======
 #!/bin/bash
@@ -45,3 +46,6 @@ else
     echo -e "${GREEN}✅ Nessun file vuoto trovato!${NC}"
 fi
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../../Themes/docs/shared-components/cleanup-empty-files-auto.sh
+>>>>>>> .merge_file_k4HpYH

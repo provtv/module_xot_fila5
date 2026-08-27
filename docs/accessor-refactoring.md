@@ -5,6 +5,7 @@ topic: accessor-refactoring
 canonical: ../../../Themes/docs/shared-components/accessor-refactoring-complete-guide.md
 ---
 
+<<<<<<< .merge_file_EXn8Sz
 See canonical documentation: ../../../Themes/docs/shared-components/accessor-refactoring-complete-guide.md
 =======
 # Guida Completa: Refactoring Accessor Pattern - Progetto PTVX
@@ -335,3 +336,6 @@ Moduli con logica inline complessa:
 **Scope**: Tutti i moduli progetto
 **Status**: 📚 Documentazione completa, 🔄 Implementazione 13% globale
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/accessor-refactoring-complete-guide.md
+>>>>>>> .merge_file_DnrOuj

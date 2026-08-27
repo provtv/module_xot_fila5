@@ -58,9 +58,13 @@ echo "🎯 NEXT STEPS:"
 echo "1. Verificare manualmente alcuni file campione"
 echo "2. Testare conversione su singolo file"
 echo "3. Solo dopo, applicare a tutti i file"
+<<<<<<< .merge_file_YX2edN
 <<<<<<< HEAD
 echo "4. Verificare che link funzionino dopo conversione"
 =======
 echo "4. Verificare che link funzionino dopo conversione"
 
 >>>>>>> laraxot/master
+=======
+echo "4. Verificare che link funzionino dopo conversione"
+>>>>>>> .merge_file_6gJwLk

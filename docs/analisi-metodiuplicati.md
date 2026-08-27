@@ -5,6 +5,7 @@ topic: analisi-metodiuplicati
 canonical: ../../../Themes/docs/shared-components/analisi-metodi-duplicati.md
 ---
 
+<<<<<<< .merge_file_OjcVR0
 See canonical documentation: ../../../Themes/docs/shared-components/analisi-metodi-duplicati.md
 =======
 # Analisi Metodi Duplicati - Modulo Xot
@@ -342,3 +343,6 @@ Se l'unificazione viene implementata correttamente:
 **Stato:** 📋 Draft per Review
 **Responsabile:** Team Xot Core
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/analisi-metodi-duplicati.md
+>>>>>>> .merge_file_e8Mx9x

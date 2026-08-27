@@ -5,6 +5,7 @@ topic: module-quality
 canonical: ../../../Themes/docs/shared-components/module-quality-analysis-sumy.md
 ---
 
+<<<<<<< .merge_file_O7jo88
 See canonical documentation: ../../../Themes/docs/shared-components/module-quality-analysis-sumy.md
 =======
 # Module Quality Analysis Summary
@@ -105,3 +106,6 @@ php phpmd.phar Modules/[ModuleName] text cleancode,codesize,controversial,design
 3. Refactor style issues in TechPlanner module
 4. Maintain high standards in User, Tenant, Activity, and Media modules
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/module-quality-analysis-sumy.md
+>>>>>>> .merge_file_mIZRkG

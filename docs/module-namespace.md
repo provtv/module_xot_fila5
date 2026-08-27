@@ -5,6 +5,7 @@ topic: module-namespace
 canonical: ../../../Themes/docs/shared-components/module-namespace-rules.md
 ---
 
+<<<<<<< .merge_file_91i1Pn
 See canonical documentation: ../../../Themes/docs/shared-components/module-namespace-rules.md
 =======
 # Regola generale: Label e traduzioni in Filament
@@ -33,3 +34,6 @@ See canonical documentation: ../../../Themes/docs/shared-components/module-names
 
 Ultimo aggiornamento: maggio 2025.
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/module-namespace-rules.md
+>>>>>>> .merge_file_Q6b0RR

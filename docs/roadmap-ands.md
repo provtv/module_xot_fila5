@@ -5,6 +5,7 @@ topic: roadmap-ands
 canonical: ../../../Themes/docs/shared-components/roadmap-and-issues.md
 ---
 
+<<<<<<< .merge_file_lArZPa
 See canonical documentation: ../../../Themes/docs/shared-components/roadmap-and-issues.md
 =======
 # Xot Module - Roadmap, Issues & Optimization
@@ -344,3 +345,6 @@ function xot_config(string $key): mixed
 **Timeline**: 2 Ottobre 2025 (domani)
 **Effort**: ~2 ore → 100% CLEAN
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/roadmap-and-issues.md
+>>>>>>> .merge_file_BrbBzm

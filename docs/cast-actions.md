@@ -91,11 +91,16 @@ $floatValue = app(SafeFloatCastAction::class)->execute($mixedValue, 0.0);
 $stringValue = app(SafeStringCastAction::class)->execute($mixedValue, '');
 ```
 
+<<<<<<< .merge_file_RC7w9A
 <<<<<<< HEAD
 `ArrayToRawJsAction::jsValue` non è bordo opaco: i caller passano solo scalari, quindi la firma è `string|int|float|bool|null`. `SafeStringCastAction` resta solo per un oggetto inatteso dopo il filtro di array e `RawJs`.
 
 =======
 >>>>>>> laraxot/master
+=======
+`ArrayToRawJsAction::jsValue` non è bordo opaco: i caller passano solo scalari, quindi la firma è `string|int|float|bool|null`. `SafeStringCastAction` resta solo per un oggetto inatteso dopo il filtro di array e `RawJs`.
+
+>>>>>>> .merge_file_MnNaAW
 ## Pattern di Utilizzo
 
 ### Pattern 1: Verifica e Accesso
@@ -213,6 +218,7 @@ class NewWidget extends Widget
 
 ## Testing
 
+<<<<<<< .merge_file_RC7w9A
 <<<<<<< HEAD
 Le azioni di cast sono testate; PHPStan usa `laravel/phpstan.neon` (mai `--level`):
 
@@ -224,6 +230,12 @@ Le azioni di cast sono completamente testate e supportano PHPStan livello 9+:
 ```bash
 ./vendor/bin/phpstan analyse Modules/Xot/app/Actions/Cast --level=9
 >>>>>>> laraxot/master
+=======
+Le azioni di cast sono testate; PHPStan usa `laravel/phpstan.neon` (mai `--level`):
+
+```bash
+./vendor/bin/phpstan analyse Modules/Xot/app/Actions/Cast --no-progress --memory-limit=-1
+>>>>>>> .merge_file_MnNaAW
 ```
 
 ## Collegamenti
@@ -235,9 +247,15 @@ Le azioni di cast sono completamente testate e supportano PHPStan livello 9+:
 - [SafeStringCastAction](../app/Actions/Cast/SafeStringCastAction.php)
 - [SafeBooleanCastAction](../app/Actions/Cast/SafeBooleanCastAction.php)
 - [SafeArrayCastAction](../app/Actions/Cast/SafeArrayCastAction.php)
+<<<<<<< .merge_file_RC7w9A
 <<<<<<< HEAD
 - [ArrayToRawJsAction](../app/Actions/Array/ArrayToRawJsAction.php) — `jsValue` scalare; SafeString solo per oggetti inattesi
 - [PHPStan rules](./quality/phpstan-rules.md)
 - [Mixed ultima spiaggia](../../Notify/docs/mixed-type-ultima-spiaggia.md)
 =======
 >>>>>>> laraxot/master
+=======
+- [ArrayToRawJsAction](../app/Actions/Array/ArrayToRawJsAction.php) — `jsValue` scalare; SafeString solo per oggetti inattesi
+- [PHPStan rules](./quality/phpstan-rules.md)
+- [Mixed ultima spiaggia](../../Notify/docs/mixed-type-ultima-spiaggia.md)
+>>>>>>> .merge_file_MnNaAW

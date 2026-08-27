@@ -610,7 +610,11 @@ composer test
 
 ## Changelog
 
+<<<<<<< .merge_file_BqESaT
 Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
+=======
+Please see [CHANGELOG](changelog.md) for more information on what has changed recently.
+>>>>>>> .merge_file_PFxBqI
 
 ## Contributing
 
@@ -627,4 +631,8 @@ Please review [our security policy](../../security/policy) on how to report secu
 
 ## License
 
+<<<<<<< .merge_file_BqESaT
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+=======
+The MIT License (MIT). Please see [License File](license.md) for more information.
+>>>>>>> .merge_file_PFxBqI

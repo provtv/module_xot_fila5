@@ -5,6 +5,7 @@ topic: advanced
 canonical: ../../../Themes/docs/shared-components/advanced-Modules.md
 ---
 
+<<<<<<< .merge_file_T3Kf7B
 See canonical documentation: ../../../Themes/docs/shared-components/advanced-Modules.md
 =======
 # Funzionalità Avanzate
@@ -124,3 +125,6 @@ Imposta il titolo visibile nelle proprietà del file PDF.
 $html2pdf->pdf->SetTitle('Il Mio Bel Documento');
 ```
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/advanced-Modules.md
+>>>>>>> .merge_file_A5E0pm

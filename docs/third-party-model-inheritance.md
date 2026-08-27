@@ -5,6 +5,7 @@ topic: third-party-model-inheritance
 canonical: ../../../Themes/docs/shared-components/third-party-model-inheritance-philosophy.md
 ---
 
+<<<<<<< .merge_file_leFoZU
 See canonical documentation: ../../../Themes/docs/shared-components/third-party-model-inheritance-philosophy.md
 =======
 # Laraxot Third-Party Model Inheritance Philosophy
@@ -285,3 +286,6 @@ Each third-party model should document:
 
 **Philosophy Summary**: In Laraxot, we respect and leverage third-party package architecture. We extend package models directly and enhance them with Laraxot-specific functionality, rather than fighting package design or creating unnecessary complexity.
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/third-party-model-inheritance-philosophy.md
+>>>>>>> .merge_file_cg0MJ7

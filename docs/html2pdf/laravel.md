@@ -5,6 +5,7 @@ topic: laravel
 canonical: ../../../../Themes/docs/shared-components/laravel-Modules.md
 ---
 
+<<<<<<< .merge_file_rR47f4
 See canonical documentation: ../../../../Themes/docs/shared-components/laravel-Modules.md
 =======
 # Integrazione con Laravel e Best Practices
@@ -157,3 +158,6 @@ Mail::to('user@example.com')->send(new ReportMail($pdfContent));
 **Causa:** Contenuto troppo grande per rimanere in una singola pagina.
 **Soluzione:** Usa il tag `<nobreak>` per forzare un blocco di contenuto a rimanere unito, oppure rivedi la struttura per renderla più flessibile.
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../../Themes/docs/shared-components/laravel-Modules.md
+>>>>>>> .merge_file_etTF1s

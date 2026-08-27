@@ -5,6 +5,7 @@ topic: prompt
 canonical: ../../../Themes/docs/shared-components/prompt-rules.md
 ---
 
+<<<<<<< .merge_file_Ot8rOS
 See canonical documentation: ../../../Themes/docs/shared-components/prompt-rules.md
 =======
 # Regole per i Prompt
@@ -56,3 +57,6 @@ La documentazione dei componenti UI deve essere sempre inserita nella cartella `
 ## Collegamenti tra versioni di prompt_rules.md
 * [prompt_rules.md](rules/prompt_rules.md)
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/prompt-rules.md
+>>>>>>> .merge_file_nN1qid

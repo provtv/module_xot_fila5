@@ -5,6 +5,7 @@ topic: final-code-quality
 canonical: ../../../Themes/docs/shared-components/final-code-quality-sumy.md
 ---
 
+<<<<<<< .merge_file_xmvCr0
 See canonical documentation: ../../../Themes/docs/shared-components/final-code-quality-sumy.md
 =======
 # Final Code Quality Summary - Laraxot Project
@@ -170,3 +171,6 @@ if (property_exists($stateObject, 'name')) {
 *
 *Status: ✅ COMPLETE - All quality improvements implemented*
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/final-code-quality-sumy.md
+>>>>>>> .merge_file_47ifC9

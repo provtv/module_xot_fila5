@@ -75,9 +75,12 @@ trait CreatesApplication
 =======
         $app = require __DIR__ . '/../../../bootstrap/app.php';
 
+<<<<<<< .merge_file_j6ZLXH
         $app->make(Kernel::class)->bootstrap();
 >>>>>>> laraxot/master
 
+=======
+>>>>>>> .merge_file_CJr6GC
         return $app;
     }
 }

@@ -5,6 +5,7 @@ topic: xotbasepanelprovider
 canonical: ../../../../Themes/docs/shared-components/xotbaanelprovider.md
 ---
 
+<<<<<<< .merge_file_AvECTN
 See canonical documentation: ../../../../Themes/docs/shared-components/xotbaanelprovider.md
 =======
 # XotBasePanelProvider Pattern
@@ -77,3 +78,6 @@ Per estendere le funzionalità base:
 - Supporta la configurazione dei metatag attraverso `MetatagData`
 - Integra con il sistema di moduli Laravel attraverso la configurazione `modules.namespace`
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../../Themes/docs/shared-components/xotbaanelprovider.md
+>>>>>>> .merge_file_2mUR2B

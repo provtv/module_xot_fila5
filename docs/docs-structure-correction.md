@@ -5,6 +5,7 @@ topic: docs-structure-correction
 canonical: ../../../Themes/docs/shared-components/docs-structure-correction-sumy.md
 ---
 
+<<<<<<< .merge_file_CZKjlP
 See canonical documentation: ../../../Themes/docs/shared-components/docs-structure-correction-sumy.md
 =======
 # Correzione Struttura Cartelle Docs - Riepilogo Completo
@@ -221,3 +222,6 @@ find laravel/Themes -name "docs" -type d
 **Responsabile**: Team di sviluppo Laraxot
 **Verificato**: ✅ Conformità completa raggiunta
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/docs-structure-correction-sumy.md
+>>>>>>> .merge_file_2SOYYh

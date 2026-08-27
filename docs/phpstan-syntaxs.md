@@ -5,6 +5,7 @@ topic: phpstan-syntaxs
 canonical: ../../../Themes/docs/shared-components/phpstan-syntax-errors-fix.md
 ---
 
+<<<<<<< .merge_file_rDID6W
 See canonical documentation: ../../../Themes/docs/shared-components/phpstan-syntax-errors-fix.md
 =======
 # PHPStan Syntax Errors Fix - Xot Module
@@ -98,3 +99,6 @@ File di traduzione incompleti spesso derivano da:
 
 **Ultimo aggiornamento**: [DATE]
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/phpstan-syntax-errors-fix.md
+>>>>>>> .merge_file_GwwZQZ

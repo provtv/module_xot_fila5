@@ -5,6 +5,7 @@ topic: directory-structure
 canonical: ../../../Themes/docs/shared-components/directory-structure-rules.md
 ---
 
+<<<<<<< .merge_file_tNzUM8
 See canonical documentation: ../../../Themes/docs/shared-components/directory-structure-rules.md
 =======
 # Regole Struttura Directory
@@ -113,3 +114,6 @@ Prima di ogni commit, verificare:
 - [Best Practices](best-practices.md)
 - [PHPStan Configuration](phpstan/configuration.md)
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/directory-structure-rules.md
+>>>>>>> .merge_file_CEu3UA

@@ -5,6 +5,7 @@ topic: phpstan-xotbasewidget-view-string
 canonical: ../../../Themes/docs/shared-components/phpstan-xotbasewidget-view-string-fix-roadmap.md
 ---
 
+<<<<<<< .merge_file_JZooNB
 See canonical documentation: ../../../Themes/docs/shared-components/phpstan-xotbasewidget-view-string-fix-roadmap.md
 =======
 # PHPStan Fix Roadmap - XotBaseWidget View-String Error
@@ -107,3 +108,6 @@ private function resolveView(): void
 **Ultimo aggiornamento**: [DATE]
 **Versione**: 1.0.0
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/phpstan-xotbasewidget-view-string-fix-roadmap.md
+>>>>>>> .merge_file_FuZRZx

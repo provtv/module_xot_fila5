@@ -5,6 +5,7 @@ topic: model-base
 canonical: ../../../Themes/docs/shared-components/model-base-rules.md
 ---
 
+<<<<<<< .merge_file_ihDZrw
 See canonical documentation: ../../../Themes/docs/shared-components/model-base-rules.md
 =======
 # Regole di Estensione dei Modelli Laraxot
@@ -102,3 +103,6 @@ abstract class BaseModel extends XotBaseModel
 
 *Ultimo aggiornamento: maggio 2025*
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/model-base-rules.md
+>>>>>>> .merge_file_eLEAor

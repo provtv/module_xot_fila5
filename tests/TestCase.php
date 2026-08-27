@@ -156,11 +156,19 @@ abstract class TestCase extends XotBaseTestCase
             }
             $isXotDbGroup = str_contains($source, "group('xot-db')");
         }
+<<<<<<< .merge_file_LfBQu1
 
         if ($isUnit && ! $isXotDbGroup) {
             return false;
         }
 
+=======
+
+        if ($isUnit && ! $isXotDbGroup) {
+            return false;
+        }
+
+>>>>>>> .merge_file_smWcNQ
         // Qui c'era uno skip incondizionato quando il driver è sqlite. La premessa —
         // «lo sqlite condiviso è scratch / incompleto» — è decaduta: lo schema si
         // costruisce con `php artisan xot:build-test-sqlite` e le suite parallele non si

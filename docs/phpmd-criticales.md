@@ -5,6 +5,7 @@ topic: phpmd-criticales
 canonical: ../../../Themes/docs/shared-components/phpmd-critical-fixes.md
 ---
 
+<<<<<<< .merge_file_GFH8Qa
 See canonical documentation: ../../../Themes/docs/shared-components/phpmd-critical-fixes.md
 =======
 # Correzioni Critiche PHPMD - Analisi e Piano
@@ -45,3 +46,6 @@ Correggiamo solo variabili che:
 - **Warning da ignorare**: (da categorizzare)
 - **PHPStan**: 0 errori (mantenuto)
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/phpmd-critical-fixes.md
+>>>>>>> .merge_file_8DJ2la

@@ -5,6 +5,7 @@ topic: analysis-sumy
 canonical: ../../../../Themes/docs/shared-components/analysis-summary.md
 ---
 
+<<<<<<< .merge_file_SwVrtX
 See canonical documentation: ../../../../Themes/docs/shared-components/analysis-summary.md
 =======
 # Riepilogo Analisi Qualità Codice - 2025-01-22
@@ -135,3 +136,6 @@ $user->authentications()
 3. **DRY violations**: Duplicazioni interfacce/trait facilmente identificabili
 4. **Architecture score**: Richiede refactoring strutturale (interfacce, final classes)
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../../Themes/docs/shared-components/analysis-summary.md
+>>>>>>> .merge_file_9EHVRN

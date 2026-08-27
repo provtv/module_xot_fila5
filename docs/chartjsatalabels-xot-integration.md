@@ -1,4 +1,7 @@
+<<<<<<< .merge_file_KgpweW
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_qVU4dI
 ---
 title: "Chart.js Datalabels Plugin Implementation in Xot Module"
 module: xot
@@ -8,8 +11,11 @@ created: 2026-08-24
 updated: 2026-08-24
 ---
 
+<<<<<<< .merge_file_KgpweW
 =======
 >>>>>>> laraxot/master
+=======
+>>>>>>> .merge_file_qVU4dI
 # Chart.js Datalabels Plugin Implementation in Xot Module
 
 ## Overview

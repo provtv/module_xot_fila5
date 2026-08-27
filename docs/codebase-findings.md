@@ -5,6 +5,7 @@ topic: codebase-findings
 canonical: ../../../Themes/docs/shared-components/codebase-analysis-findings.md
 ---
 
+<<<<<<< .merge_file_y9hOUP
 See canonical documentation: ../../../Themes/docs/shared-components/codebase-analysis-findings.md
 =======
 # Analisi Completa del Codice - Regole Filament e property_exists
@@ -78,3 +79,6 @@ Il codicebase è già ben allineato con le regole fondamentali:
 
 Non è stato necessario apportare correzioni al codice perché il progetto è già conforme alle regole fondamentali.
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/codebase-analysis-findings.md
+>>>>>>> .merge_file_AqBhtI

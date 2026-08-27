@@ -5,6 +5,7 @@ topic: phpstan-xotbaserelationmanager
 canonical: ../../../Themes/docs/shared-components/phpstan-error-analysis-xotbaserelationmanager.md
 ---
 
+<<<<<<< .merge_file_ieGHWW
 See canonical documentation: ../../../Themes/docs/shared-components/phpstan-error-analysis-xotbaserelationmanager.md
 =======
 # Analisi Errori PHPStan - XotBaseRelationManager
@@ -126,3 +127,6 @@ Stessa soluzione per `canDetachBulk()`.
 2. **Schema::components()**: Accetta union type complesso, Component è compatibile
 3. **stdClass nei bulk actions**: Filament usa stdClass per performance, gestirlo appropriatamente
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/phpstan-error-analysis-xotbaserelationmanager.md
+>>>>>>> .merge_file_QumgOT

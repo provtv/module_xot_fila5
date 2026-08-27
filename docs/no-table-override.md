@@ -1,4 +1,7 @@
+<<<<<<< .merge_file_nZlIju
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_a3lFwH
 ---
 title: "DIVIETO ASSOLUTO DI IMPLEMENTARE table()"
 module: xot
@@ -8,8 +11,11 @@ created: 2026-08-24
 updated: 2026-08-24
 ---
 
+<<<<<<< .merge_file_nZlIju
 =======
 >>>>>>> laraxot/master
+=======
+>>>>>>> .merge_file_a3lFwH
 # DIVIETO ASSOLUTO DI IMPLEMENTARE table()
 
 ## Regola Fondamentale Inviolabile

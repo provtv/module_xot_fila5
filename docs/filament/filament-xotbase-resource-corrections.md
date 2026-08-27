@@ -207,6 +207,10 @@ topic: filament-xotbase-resource-corrections
 canonical: ../../../../Themes/docs/shared-components/filament-xotbase-resource-corrections.md
 ---
 
+<<<<<<< .merge_file_wSEirr
 See canonical documentation: ../../../../Themes/docs/shared-components/filament-xotbase-resource-corrections.md
 =======
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../../Themes/docs/shared-components/filament-xotbase-resource-corrections.md
+>>>>>>> .merge_file_YeJsIo

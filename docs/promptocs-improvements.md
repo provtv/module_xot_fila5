@@ -5,6 +5,7 @@ topic: promptocs-improvements
 canonical: ../../../Themes/docs/shared-components/prompt-docs-improvements.md
 ---
 
+<<<<<<< .merge_file_48uZ7J
 See canonical documentation: ../../../Themes/docs/shared-components/prompt-docs-improvements.md
 =======
 # Miglioramenti al Prompt docs.txt
@@ -76,3 +77,6 @@ Il prompt rimane conforme alla [Regola Universale](./prompt_rules.md) per i prom
 
 Il prompt aggiornato può essere utilizzato in qualsiasi progetto modulare Laravel senza modifiche, rendendo il modulo `bashscripts` completamente riutilizzabile.
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/prompt-docs-improvements.md
+>>>>>>> .merge_file_zRJkPM

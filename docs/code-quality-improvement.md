@@ -5,6 +5,7 @@ topic: code-quality-improvement
 canonical: ../../../Themes/docs/shared-components/code-quality-improvement-guide.md
 ---
 
+<<<<<<< .merge_file_0WwUZi
 See canonical documentation: ../../../Themes/docs/shared-components/code-quality-improvement-guide.md
 =======
 # Code Quality Improvement Guide
@@ -280,3 +281,6 @@ This guide provides a comprehensive framework for improving and maintaining code
 
 **Remember**: Code quality is an ongoing process, not a one-time fix. Regular attention and continuous improvement will yield significant benefits in maintainability, reliability, and developer productivity.
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/code-quality-improvement-guide.md
+>>>>>>> .merge_file_vQ1WMJ

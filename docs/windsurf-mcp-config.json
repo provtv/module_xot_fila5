@@ -62,9 +62,13 @@
         "args": ["-y", "@assistant-ui/mcp-docs-server"]
     }
   }
+<<<<<<< .merge_file_wLsGvC
 <<<<<<< HEAD
 }
 =======
 }
 
 >>>>>>> laraxot/master
+=======
+}
+>>>>>>> .merge_file_jvjz0t

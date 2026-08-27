@@ -5,6 +5,7 @@ topic: dry-kiss
 canonical: ../../../Themes/docs/shared-components/dry-kiss-analysis-Modules.md
 ---
 
+<<<<<<< .merge_file_bCgnHb
 See canonical documentation: ../../../Themes/docs/shared-components/dry-kiss-analysis-Modules.md
 =======
 # 🐄✨ DRY & KISS Analysis - Modulo Xot
@@ -613,3 +614,6 @@ find Actions/ -name "*.php" -exec wc -l {} + | awk '$1 > 200'
 
 🐄 **MU-UU-UU!** 🐄
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/dry-kiss-analysis-Modules.md
+>>>>>>> .merge_file_YQKTMN

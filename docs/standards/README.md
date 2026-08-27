@@ -289,6 +289,7 @@ Questi standard si applicano a tutti i moduli del progetto e devono essere segui
 - [DoctorResource: Step Informazioni Personali (Patient)](../../../Patient/docs/filament/resources/doctor-resource.md)
 - [Struttura progetto e STI (Patient)](../../../Patient/docs/architecture/struttura-progetto.md)
 - [Migrazioni e database (Patient)](../../../Patient/docs/database/migrations.md)
+<<<<<<< .merge_file_WxX3c2
 =======
 - [Modello Doctor (Patient)](../../../patient/docs/models/doctor.md)
 - [Gestione campi e migrazioni con STI (README Patient)](../../../patient/docs/readme.md)
@@ -296,6 +297,8 @@ Questi standard si applicano a tutti i moduli del progetto e devono essere segui
 - [Struttura progetto e STI (Patient)](../../../patient/docs/architecture/struttura-progetto.md)
 - [Migrazioni e database (Patient)](../../../patient/docs/database/migrations.md)
 >>>>>>> laraxot/master
+=======
+>>>>>>> .merge_file_qJwyTv
 
 ## Regola generale
 
@@ -318,7 +321,11 @@ class Doctor extends User
 
 ## Moduli che applicano questa regola
 // Aggiungere qui altri moduli se necessario
+<<<<<<< .merge_file_WxX3c2
 <<<<<<< HEAD
 
 =======
 >>>>>>> laraxot/master
+=======
+
+>>>>>>> .merge_file_qJwyTv

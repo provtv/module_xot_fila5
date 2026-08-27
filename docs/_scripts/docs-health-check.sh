@@ -5,6 +5,7 @@ topic: docs-health-check
 canonical: ../../../../Themes/docs/shared-components/docs-health-check.sh
 ---
 
+<<<<<<< .merge_file_QPZ14L
 See canonical documentation: ../../../../Themes/docs/shared-components/docs-health-check.sh
 =======
 #!/bin/bash
@@ -104,3 +105,6 @@ fi
 
 echo ""
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../../Themes/docs/shared-components/docs-health-check.sh
+>>>>>>> .merge_file_VUryVh

@@ -5,6 +5,7 @@ topic: code-quality-tools
 canonical: ../../../Themes/docs/shared-components/code-quality-tools-guide.md
 ---
 
+<<<<<<< .merge_file_i6BeE1
 See canonical documentation: ../../../Themes/docs/shared-components/code-quality-tools-guide.md
 =======
 # 🔧 CODE QUALITY TOOLS GUIDE - Strumenti di Analisi Codice PHP
@@ -822,3 +823,6 @@ jobs:
 
 *Questa guida fornisce tutti gli strumenti necessari per mantenere alta la qualità del codice nel progetto FixCity.*
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/code-quality-tools-guide.md
+>>>>>>> .merge_file_wZuhSr

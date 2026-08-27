@@ -5,6 +5,7 @@ topic: filament-resource-creation
 canonical: ../../../Themes/docs/shared-components/filament-resource-creation-fix.md
 ---
 
+<<<<<<< .merge_file_aYIh6n
 See canonical documentation: ../../../Themes/docs/shared-components/filament-resource-creation-fix.md
 =======
 # Filament Resource Creation Fix - Risoluzione Errori di Compatibilità
@@ -171,3 +172,6 @@ Il macro `generateSlug` è stato disabilitato temporaneamente. Per riabilitarlo:
 
 *Ultimo aggiornamento: giugno 2025*
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/filament-resource-creation-fix.md
+>>>>>>> .merge_file_MUGCQ0

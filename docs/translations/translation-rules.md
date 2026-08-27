@@ -10,6 +10,7 @@ topic: translation-rules
 canonical: ../../../../Themes/docs/shared-components/translation-rules.md
 ---
 
+<<<<<<< .merge_file_oIClYr
 See canonical documentation: ../../../../Themes/docs/shared-components/translation-rules.md
 =======
 # Regole per i file di traduzione in Laraxot PTVX
@@ -65,3 +66,6 @@ Un altro errore frequente è l'utilizzo della sintassi vecchia degli array (`arr
 
 *Ultimo aggiornamento: 3 Giugno 2025*
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../../Themes/docs/shared-components/translation-rules.md
+>>>>>>> .merge_file_bTwaPm

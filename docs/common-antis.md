@@ -5,6 +5,7 @@ topic: common-antis
 canonical: ../../../Themes/docs/shared-components/common-anti-patterns-conflict.md
 ---
 
+<<<<<<< .merge_file_hGuoE3
 See canonical documentation: ../../../Themes/docs/shared-components/common-anti-patterns-conflict.md
 =======
 # Common Anti-Patterns - Xot Module
@@ -535,3 +536,6 @@ public function getTableActions(): array
 
 This document serves as a reference for avoiding common anti-patterns when extending Xot base classes and building modules on top of the Xot foundation.
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/common-anti-patterns-conflict.md
+>>>>>>> .merge_file_tuI3LL

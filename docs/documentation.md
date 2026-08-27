@@ -41,7 +41,7 @@ Modules/[Nome]/
    - Verificare la correttezza
 
 ## Collegamenti
-- [Indice della Documentazione](../docs/index.md)
+- [Indice della Documentazione](../docs/INDEX.md)
 - [Regole del Progetto](rules.md)
 - [Struttura dei Moduli](structure.md)
 ## Collegamenti tra versioni di documentation.md
@@ -88,6 +88,7 @@ https://beyondco.de/project_docs/laravel-apidoc-generator/getting-started/docume
 
 //-- forum un po' diverso
 https://flarum.org/
+<<<<<<< .merge_file_TwrOit
 =======
 # Regole di Documentazione
 
@@ -274,3 +275,5 @@ Questo documento descrive le regole fondamentali per la creazione e la manutenzi
 - I collegamenti bidirezionali sono essenziali per la navigabilità
 
 >>>>>>> laraxot/master
+=======
+>>>>>>> .merge_file_69fHJl

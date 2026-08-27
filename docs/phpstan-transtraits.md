@@ -5,6 +5,7 @@ topic: phpstan-transtraits
 canonical: ../../../Themes/docs/shared-components/phpstan-transtrait-errors.md
 ---
 
+<<<<<<< .merge_file_qVvptO
 See canonical documentation: ../../../Themes/docs/shared-components/phpstan-transtrait-errors.md
 =======
 # PHPStan Errors - TransTrait.php
@@ -407,3 +408,6 @@ This fix may also resolve related errors in:
 **Assigned To**: Module Owner
 
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/phpstan-transtrait-errors.md
+>>>>>>> .merge_file_zOxnv4

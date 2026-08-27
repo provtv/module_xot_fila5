@@ -5,6 +5,7 @@ topic: case-sensitivity
 canonical: ../../../Themes/docs/shared-components/case-sensitivity-rules-Modules.md
 ---
 
+<<<<<<< .merge_file_hmmZ5Z
 See canonical documentation: ../../../Themes/docs/shared-components/case-sensitivity-rules-Modules.md
 =======
 # Case Sensitivity Rules - Xot Module
@@ -206,3 +207,6 @@ EOF
   - Removed: `metatagdatatest.php`, `pest.php`, `xotbasecontroller.php`, `pt_br/`
   - Established rules and conventions
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/case-sensitivity-rules-Modules.md
+>>>>>>> .merge_file_QVAjfc

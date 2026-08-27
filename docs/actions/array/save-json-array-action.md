@@ -1,4 +1,7 @@
+<<<<<<< .merge_file_PtsBpS
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_MiGXzU
 ---
 title: "SaveJsonArrayAction"
 module: "xot"
@@ -36,6 +39,7 @@ app(\Modules\Xot\Actions\Arr\SaveArrayAction::class)->execute($data, $path, 'jso
 ```
 
 Vedi [`arr-namespace-convention.md`](../arr-namespace-convention.md).
+<<<<<<< .merge_file_PtsBpS
 =======
 # SaveJsonArrayAction
 
@@ -100,3 +104,5 @@ $result = $action->execute($data, $filename);
 - Implementa QueueableAction per supporto code
 - Supporta la validazione tramite Assert
 >>>>>>> laraxot/master
+=======
+>>>>>>> .merge_file_MiGXzU

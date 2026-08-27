@@ -5,6 +5,7 @@ topic: property-exists-removal
 canonical: ../../../Themes/docs/shared-components/property-exists-removal-report.md
 ---
 
+<<<<<<< .merge_file_hwOyVq
 See canonical documentation: ../../../Themes/docs/shared-components/property-exists-removal-report.md
 =======
 # Report Rimozione property_exists() - Modulo Xot
@@ -283,3 +284,6 @@ La rimozione di `property_exists()` dal modulo Xot rappresenta un importante pas
 
 *Report generato automaticamente - Cascade AI - [DATE]*
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/property-exists-removal-report.md
+>>>>>>> .merge_file_F4eMdM

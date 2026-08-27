@@ -5,6 +5,7 @@ topic: normalization
 canonical: ../../../Themes/docs/shared-components/normalization-report-conflict.md
 ---
 
+<<<<<<< .merge_file_aEnM5V
 See canonical documentation: ../../../Themes/docs/shared-components/normalization-report-conflict.md
 =======
 # Report Normalizzazione Documentazione - Gennaio 2025
@@ -120,3 +121,6 @@ See canonical documentation: ../../../Themes/docs/shared-components/normalizatio
 **Stato**: In corso
 **Prossima Revisione**: Dopo normalizzazione batch successivo
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/normalization-report-conflict.md
+>>>>>>> .merge_file_3YvncZ

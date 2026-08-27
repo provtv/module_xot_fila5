@@ -5,6 +5,7 @@ topic: mcp-commandseprecation
 canonical: ../../../Themes/docs/shared-components/mcp-commands-deprecation.md
 ---
 
+<<<<<<< .merge_file_k7hOLE
 See canonical documentation: ../../../Themes/docs/shared-components/mcp-commands-deprecation.md
 =======
 # Deprecazione Comandi MCP e Migrazione Azioni Database
@@ -150,3 +151,6 @@ Aggiornare la documentazione del progetto per riflettere i nuovi percorsi dei co
 
 *Ultimo aggiornamento: Giugno 2025*
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/mcp-commands-deprecation.md
+>>>>>>> .merge_file_pwTBrZ

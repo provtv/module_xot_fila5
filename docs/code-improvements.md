@@ -5,6 +5,7 @@ topic: code-improvements
 canonical: ../../../Themes/docs/shared-components/code-improvements-analysis.md
 ---
 
+<<<<<<< .merge_file_1wGOtb
 See canonical documentation: ../../../Themes/docs/shared-components/code-improvements-analysis.md
 =======
 # Analisi Miglioramenti Codice - Best Practices 2026
@@ -238,3 +239,6 @@ public function processData(array $data): string
 
 **Ultimo aggiornamento**: [DATE]
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/code-improvements-analysis.md
+>>>>>>> .merge_file_bPhyxD

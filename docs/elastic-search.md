@@ -40,4 +40,11 @@ https://github.com/babenkoivan/scout-elasticsearch-driver
 
 https://bestofphp.com/repo/babenkoivan-elastic-scout-driver
 
+<<<<<<< .merge_file_crt4It
 meilisearch
+=======
+
+
+
+meilisearch
+>>>>>>> .merge_file_PDrgEo

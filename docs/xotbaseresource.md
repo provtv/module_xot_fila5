@@ -6,6 +6,7 @@ XotBaseResource è la classe base astratta per tutte le risorse Filament nel sis
 
 ## Caratteristiche Principali
 
+<<<<<<< .merge_file_rHAFeV
 <<<<<<< HEAD
 ### Contratto reale (non questo snippet)
 
@@ -16,9 +17,13 @@ SSoT verificata sul PHP: [filament/xotbaseresource.md](./filament/xotbaseresourc
 - Se manca `{Model}Form` → `LogicException`. Nessun fallback Action cablato.
 =======
 ### Metodi Final
+=======
+### Contratto reale (non questo snippet)
+>>>>>>> .merge_file_lvcCEQ
 
-Alcuni metodi sono marcati come `final` e non possono essere sovrascritti nelle classi figlie:
+SSoT verificata sul PHP: [filament/xotbaseresource.md](./filament/xotbaseresource.md).
 
+<<<<<<< .merge_file_rHAFeV
 ```php
 final public static function form(Form $form): Form
 {
@@ -39,16 +44,25 @@ abstract public static function getFormSchema(): array;
 
 Questo metodo DEVE essere implementato nelle classi figlie e deve restituire un array di componenti del form.
 >>>>>>> laraxot/master
+=======
+- `form()` è `final` e carica `{Resource}\Schemas\{Model}Form` (non `getFormSchema()` inline).
+- `getFormSchema()` **non** è abstract né final: delega a `getFormSchemaOld()` (default `[]`).
+- Se manca `{Model}Form` → `LogicException`. Nessun fallback Action cablato.
+>>>>>>> .merge_file_lvcCEQ
 
 ## Best Practices
 
 1. **Non Sovrascrivere Metodi Final**
    - Non tentare di sovrascrivere `form()`
+<<<<<<< .merge_file_rHAFeV
 <<<<<<< HEAD
    - Schema in `{Model}Form` (ponte: `getFormSchemaOld()`). Widget: `getFormSchema()`
 =======
    - Implementare invece `getFormSchema()`
 >>>>>>> laraxot/master
+=======
+   - Schema in `{Model}Form` (ponte: `getFormSchemaOld()`). Widget: `getFormSchema()`
+>>>>>>> .merge_file_lvcCEQ
    - Rispettare la struttura definita nella classe base
 
 2. **Gestione delle Table Actions**
@@ -73,12 +87,17 @@ class NotificationResource extends XotBaseResource
 {
     protected static ?string $model = 'Modules\Notify\Models\Notification';
 
+<<<<<<< .merge_file_rHAFeV
 <<<<<<< HEAD
     // Preferire Schemas\{Model}Form; getFormSchema() qui è solo ponte verso Old
     public static function getFormSchemaOld(): array
 =======
     public static function getFormSchema(): array
 >>>>>>> laraxot/master
+=======
+    // Preferire Schemas\{Model}Form; getFormSchema() qui è solo ponte verso Old
+    public static function getFormSchemaOld(): array
+>>>>>>> .merge_file_lvcCEQ
     {
         return [
             Forms\Components\TextInput::make('title')
@@ -115,7 +134,10 @@ class NotificationResource extends XotBaseResource
 3. Utilizzare i file di traduzione per le label
 4. Evitare override non necessari di metodi
 5. Seguire le convenzioni di Filament
+<<<<<<< .merge_file_rHAFeV
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_lvcCEQ
 
 ## Form/Table class e fallback sul model
 
@@ -124,5 +146,8 @@ class NotificationResource extends XotBaseResource
 `getFormClass()` / `getTableClass()` / `getInfolistClass()` cercano le classi nested su `static::class`. Se mancano, `GetResourceClassNameByModelClassAction` risolve la Resource del model nel pannello (Performance/IR su model Ptv). `LogicException` solo se manca anche quella. Dettaglio e lezione: [get-resource-class-name-by-model-class-action.md](./get-resource-class-name-by-model-class-action.md).
 
 `getFormSchemaOld()` resta solo come ponte di migrazione sulle Resource, **non** sui Widget (`XotBaseWidget::getFormSchema()`).
+<<<<<<< .merge_file_rHAFeV
 =======
 >>>>>>> laraxot/master
+=======
+>>>>>>> .merge_file_lvcCEQ

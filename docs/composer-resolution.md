@@ -5,6 +5,7 @@ topic: composer-resolution
 canonical: ../../../Themes/docs/shared-components/composer-conflict-resolution.md
 ---
 
+<<<<<<< .merge_file_0EdR7w
 See canonical documentation: ../../../Themes/docs/shared-components/composer-conflict-resolution.md
 =======
 # Risoluzione conflitti Composer (Xot)
@@ -20,3 +21,6 @@ See canonical documentation: ../../../Themes/docs/shared-components/composer-con
 ## Collegamenti
 - [Gestione dipendenze Composer](../../../../docs/composer.md)
 >>>>>>> laraxot/master
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/composer-conflict-resolution.md
+>>>>>>> .merge_file_juBv1Z

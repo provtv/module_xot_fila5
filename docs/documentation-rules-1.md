@@ -34,7 +34,10 @@ Questo documento descrive le regole fondamentali per la creazione e la manutenzi
 ```
 
 ### Formato Non Corretto
+<<<<<<< .merge_file_48b2g3
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_1i8YvG
 ```
 
 ```markdown
@@ -106,7 +109,10 @@ Questo documento descrive le regole fondamentali per la creazione e la manutenzi
 ```
 
 ### Formato Non Corretto
+<<<<<<< .merge_file_48b2g3
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_1i8YvG
 ```
 
 ```markdown
@@ -178,7 +184,10 @@ Questo documento descrive le regole fondamentali per la creazione e la manutenzi
 ```
 
 ### Formato Non Corretto
+<<<<<<< .merge_file_48b2g3
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_1i8YvG
 ```
 
 ```markdown

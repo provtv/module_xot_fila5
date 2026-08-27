@@ -2,11 +2,15 @@
 
 ## Regola Fondamentale
 
+<<<<<<< .merge_file_JvqAO7
 <<<<<<< HEAD
 In <nome progetto>, il metodo `getFormSchema()` nelle risorse Filament deve **SEMPRE** restituire un array associativo con chiavi stringhe, mai un array numerico.
 =======
 In SaluteOra, il metodo `getFormSchema()` nelle risorse Filament deve **SEMPRE** restituire un array associativo con chiavi stringhe, mai un array numerico.
 >>>>>>> laraxot/master
+=======
+In <nome progetto>, il metodo `getFormSchema()` nelle risorse Filament deve **SEMPRE** restituire un array associativo con chiavi stringhe, mai un array numerico.
+>>>>>>> .merge_file_hKiqvs
 
 ## Implementazione Corretta
 

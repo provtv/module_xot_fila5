@@ -39,6 +39,7 @@ use Illuminate\Support\Facades\File;
  * @property ProfileContract|null $deleter
  * @property string|null          $file_content
  * @property ProfileContract|null $updater
+<<<<<<< .merge_file_fpdDU0
 =======
  * @method static FeedFactory factory($count = null, $state = [])
  * @method static Builder|Feed newModelQuery()
@@ -58,6 +59,8 @@ use Illuminate\Support\Facades\File;
  * @property ProfileContract|null $updater
  * @mixin IdeHelperLog
 >>>>>>> laraxot/master
+=======
+>>>>>>> .merge_file_acKfHZ
  * @mixin \Eloquent
  */
 class Log extends BaseModel

@@ -35,6 +35,7 @@ return [
         'save' => ['label' => 'save', 'icon' => 'save', 'tooltip' => 'save'],
         'layout' => ['label' => 'layout', 'icon' => 'layout', 'tooltip' => 'layout'],
         'view' => ['label' => 'view', 'icon' => 'view', 'tooltip' => 'view'],
+<<<<<<< .merge_file_j4YGk1
 =======
         'name' => 'Extra',
         'plural' => 'Extra',
@@ -223,5 +224,7 @@ return [
     'model' => [
         'label' => 'extra.model',
 >>>>>>> laraxot/master
+=======
+>>>>>>> .merge_file_xIqcqE
     ],
 ];
