@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 return [
     'fields' => [
+<<<<<<< HEAD
         'qty' => ['label' => 'qty', 'tooltip' => '', 'helper_text' => '', 'description' => '', 'placeholder' => 'qty'],
     ],
     'label' => 'Fake Seeder Header',
@@ -20,5 +21,10 @@ return [
         'create' => ['label' => 'Crea Fake Seeder Header'],
         'edit' => ['label' => 'Modifica Fake Seeder Header'],
         'delete' => ['label' => 'Elimina Fake Seeder Header'],
+=======
+        'qty' => [
+            'label' => 'qty',
+        ],
+>>>>>>> laraxot/master
     ],
 ];

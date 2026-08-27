@@ -128,6 +128,7 @@ class GetFactoryAction
     {
         $factory_class = $this->getFactoryClass($model_class);
 
+<<<<<<< HEAD
         if (! class_exists($factory_class)) {
             $this->loadFactoryFromDisk($model_class);
         }
@@ -142,10 +143,23 @@ class GetFactoryAction
         Assert::classExists($factory_class, '... run composer dump-autoload ...');
 
         return $this->instantiateFactory($factory_class);
+=======
+        // Se esiste, la usa
+        if (class_exists($factory_class)) {
+            return $factory_class::new();
+        }
+
+        // Altrimenti la crea
+        $this->createFactory($model_class);
+
+        // Richiede refresh per caricarla
+        throw new Exception('Factory created, press F5 to refresh');
+>>>>>>> laraxot/master
     }
 }
 ```
 
+<<<<<<< HEAD
 ### Flusso di risoluzione
 
 1. **Autoload Composer** — se la factory è già registrata, viene usata subito.
@@ -153,6 +167,8 @@ class GetFactoryAction
 3. **`createFactory()`** — se il file non esiste, viene invocato `module:make-factory`; se il file esiste già, non viene rigenerato.
 4. **Errore esplicito** — se dopo tutti i tentativi la classe non è caricabile, messaggio con invito a `composer dump-autoload`.
 
+=======
+>>>>>>> laraxot/master
 ### Convenzioni Naming
 
 La factory viene cercata/creata seguendo le convenzioni Laravel:
@@ -240,6 +256,7 @@ php artisan module:make-factory User User
 php artisan route:list --compact
 ```
 
+<<<<<<< HEAD
 ### Errore: "Expected an existing class name" (ide-helper)
 
 **Problema**: `php artisan ide-helper:models` fallisce con factory mancante o non autoloadata
@@ -264,6 +281,21 @@ Da Laraxot 2026, `GetFactoryAction::loadFactoryFromDisk()` carica il file con `r
 ```bash
 composer dump-autoload
 php artisan module:make-factory NomeModello NomeModulo
+=======
+### Errore: "Press F5 to refresh"
+
+**Problema**: Factory appena creata, non ancora autoloaded
+
+**Causa**: Composer autoload non aggiornato
+
+**Soluzione**:
+```bash
+# Refresh autoload
+composer dump-autoload
+
+# Riprova
+php artisan test
+>>>>>>> laraxot/master
 ```
 
 ### Conflitto con HasFactory standard
@@ -366,18 +398,24 @@ protected static function newFactory(): Factory
 
 - [GetFactoryAction](../actions/get-factory-action.md)
 - [BaseModel](../models/basemodel.md)
+<<<<<<< HEAD
 - [BasePivot](../../User/docs/models/basepivot.md)
+=======
+>>>>>>> laraxot/master
 - [BasePivot](../../user/docs/models/basepivot.md)
 - [Testing Guide](../testing/factory-testing.md)
 - [Laravel Factories Documentation](https://laravel.com/docs/eloquent-factories)
 
 ## Changelog
 
+<<<<<<< HEAD
 ### v3.1.0 - Giugno 2025
 - ✅ **loadFactoryFromDisk** per factory su disco non ancora autoloadate (fix ide-helper su Sigma)
 - ✅ **createFactory** non rigenera se il file esiste già
 - ✅ Messaggio errore con `composer dump-autoload` al posto di "press F5"
 
+=======
+>>>>>>> laraxot/master
 ### v3.0.0 - 22 Ottobre 2025
 - ✅ **Ripristinato** trait dopo cancellazione accidentale
 - ✅ **Documentato** business logic e architettura
@@ -387,6 +425,12 @@ protected static function newFactory(): Factory
 ---
 
 **Autore**: Laraxot Core Team
+<<<<<<< HEAD
 **Ultima modifica**: Giugno 2025
 **Stato**: ✅ Produzione
 **PHPStan**: Level 9 compliant
+=======
+**Ultima modifica**: 22 Ottobre 2025
+**Stato**: ✅ Produzione
+**PHPStan**: Level 9 compliant
+>>>>>>> laraxot/master

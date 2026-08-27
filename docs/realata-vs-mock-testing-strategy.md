@@ -63,12 +63,20 @@ Il modulo Xot definisce le **linee guida strategiche** per l'approccio al testin
 uses(Tests\TestCase::class);
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
+<<<<<<< HEAD
 // ✅ Fast, isolated, <nome progetto>able
+=======
+// ✅ Fast, isolated, predictable
+>>>>>>> laraxot/master
 test('user registration with mock data', function () {
     // Database reset every test
     $user = User::factory()->create();
 
+<<<<<<< HEAD
     expect($user->id)->toBe(1); // Always <nome progetto>able
+=======
+    expect($user->id)->toBe(1); // Always predictable
+>>>>>>> laraxot/master
 
     // Data destroyed after test
 });
@@ -78,7 +86,11 @@ test('user registration with mock data', function () {
 - ⚡ **Speed**: 10x faster execution
 - 🎯 **Isolation**: Perfect test independence
 - 🛠️ **Simplicity**: Easy setup and maintenance
+<<<<<<< HEAD
 - 🐛 **Debugging**: Clear, <nome progetto>able outcomes
+=======
+- 🐛 **Debugging**: Clear, predictable outcomes
+>>>>>>> laraxot/master
 
 **Disadvantages (Mock)**:
 - 🎭 **Unrealistic**: Doesn't reflect production
@@ -386,4 +398,8 @@ test('legacy feature with mocks', function () {
 **Strategic Analysis Date**: Gennaio 2025
 **Review Cycle**: Quarterly assessment
 **Decision Authority**: Technical Architecture Committee
+<<<<<<< HEAD
 **Implementation Timeline**: 4-week migration
+=======
+**Implementation Timeline**: 4-week migration
+>>>>>>> laraxot/master

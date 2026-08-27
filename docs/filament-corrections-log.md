@@ -1,6 +1,10 @@
 # Log delle Correzioni Filament
 
+<<<<<<< HEAD
 ## Data: 2024-12-19
+=======
+## Data: [DATE]
+>>>>>>> laraxot/master
 
 ### **REGOLA CRITICA IDENTIFICATA: Trait Translatable**
 

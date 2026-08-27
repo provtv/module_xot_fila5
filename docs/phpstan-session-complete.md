@@ -1,6 +1,9 @@
 # PHPStan Level 10 - Sessione Completata
 
+<<<<<<< HEAD
 **Data**: 9 Gennaio 2026  
+=======
+>>>>>>> laraxot/master
 **Status**: ✅ **COMPLETATO** (97% errori risolti)
 
 ---
@@ -161,4 +164,8 @@ Tutti i moduli principali sono ora conformi a PHPStan Level 10.
 
 ---
 
+<<<<<<< HEAD
 **Ultimo aggiornamento**: 2026-01-09 - Sessione completata
+=======
+**Ultimo aggiornamento**: [DATE] - Sessione completata
+>>>>>>> laraxot/master

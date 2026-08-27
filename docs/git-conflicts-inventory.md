@@ -55,5 +55,9 @@
 
 ## Stato
 - ❌ Conflitti da risolvere
+<<<<<<< HEAD
 - 📅 Data rilevamento: 2025-11-12
+=======
+- 📅 Data rilevamento: [DATE]
+>>>>>>> laraxot/master
 - 🔄 Priorità: ALTA - File critici del core framework

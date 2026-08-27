@@ -1,8 +1,12 @@
+<<<<<<< HEAD
 ---
 module: theme
 topic: jpgraph
 canonical: ../../../../Themes/docs/shared-components/jpgraph-guide.txt
 ---
+=======
+# JpGraph 4.4.2 Guide
+>>>>>>> laraxot/master
 
 ## Overview
 JpGraph 4.4.2 is a PHP charting library with 200+ functions for server-side chart generation with PDF embedding support.

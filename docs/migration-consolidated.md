@@ -508,5 +508,6 @@ composer dump-autoload
 
 ---
 
+*Ultimo aggiornamento: [DATE]*
 *Modulo: Xot*
 *Categoria: Migrazioni*

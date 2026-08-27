@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 # Creazione Classi Base Forms Components - 2025-12-23
 
 **Data**: 2025-12-23
+=======
+# Creazione Classi Base Forms Components - [DATE]
+
+>>>>>>> laraxot/master
 **Obiettivo**: Creare classi base XotBase per Forms Components core seguendo la regola fondamentale
 
 ## ⚠️ Problema Identificato
@@ -163,5 +168,9 @@ grep -r "extends.*Filament\\Forms\\Components\\" Modules/*/app/Filament/Forms/Co
 ---
 
 **Stato**: ✅ Classi base create e componenti refactorizzati
+<<<<<<< HEAD
 **Data Creazione**: 2025-12-23
+=======
+**Data Creazione**: [DATE]
+>>>>>>> laraxot/master
 **Conformità**: ✅ Regola fondamentale rispettata

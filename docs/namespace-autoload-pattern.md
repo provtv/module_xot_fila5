@@ -82,5 +82,10 @@ namespace Modules\ModuleName\App\Console\Commands;
 
 ## Collegamenti
 
+<<<<<<< HEAD
 - [Convenzioni di Namespace](../Xot/docs/namespace_conventions.md)
 - [Struttura Moduli](../Xot/docs/module_structure.md)
+=======
+- [Convenzioni di Namespace](/var/www/html/base_saluteora/laravel/Modules/Xot/docs/namespace_conventions.md)
+- [Struttura Moduli](/var/www/html/base_saluteora/laravel/Modules/Xot/docs/module_structure.md)
+>>>>>>> laraxot/master

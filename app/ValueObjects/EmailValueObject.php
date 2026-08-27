@@ -12,14 +12,24 @@ declare(strict_types=1);
 
 namespace Modules\Xot\ValueObjects;
 
+<<<<<<< HEAD
+=======
+use InvalidArgumentException;
+
+>>>>>>> laraxot/master
 class EmailValueObject
 {
     public function __construct(
         // public readonly string $email;
         public string $email,
     ) {
+<<<<<<< HEAD
         if (! filter_var($email, FILTER_VALIDATE_EMAIL)) {
             throw new \InvalidArgumentException(sprintf('Email address %s is considered valid.', $email));
+=======
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            throw new InvalidArgumentException(sprintf('Email address %s is considered valid.', $email));
+>>>>>>> laraxot/master
         }
     }
 }

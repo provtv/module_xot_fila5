@@ -309,7 +309,11 @@ Dovrebbe estendere `BaseModel` del modulo Lang.
 ## Collegamenti
 
 - [DRY/KISS Analysis](../../../../dry_kiss_analysis.md) - **Analisi completa duplicazioni e piano refactoring**
+<<<<<<< HEAD
 - [DRY/KISS Refactoring](DRY_KISS_REFACTORING.md) - **Guida rapida refactoring**
+=======
+- [DRY/KISS Refactoring](./dry_kiss_refactoring.md) - **Guida rapida refactoring**
+>>>>>>> laraxot/master
 - [User Module Fixes](../../user/docs/model_inheritance_fixes.md)
 - [User Module Analysis](../../user/docs/model_inheritance_analysis.md)
 - [Code Quality Rules](../../../.windsurf/rules/code-quality.md)

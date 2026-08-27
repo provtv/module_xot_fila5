@@ -34,7 +34,11 @@ return [
         'mysql' => [       // SOLO connessione base
             'driver' => 'mysql',
             'host' => env('DB_HOST', '127.0.0.1'),
+<<<<<<< HEAD
             'database' => env('DB_DATABASE', '<nome progetto>_data'),
+=======
+            'database' => env('DB_DATABASE', 'laravelpizza_data'),
+>>>>>>> laraxot/master
             'username' => env('DB_USERNAME', 'marco'),
             'password' => env('DB_PASSWORD', 'marco'),
             // ... configurazione base
@@ -163,7 +167,11 @@ php artisan optimize:clear
 # .env o .env.testing
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
+<<<<<<< HEAD
 DB_DATABASE=<nome progetto>_data
+=======
+DB_DATABASE=laravelpizza_data
+>>>>>>> laraxot/master
 DB_USERNAME=marco
 DB_PASSWORD=marco
 ```
@@ -201,10 +209,17 @@ Questa regola DEVE essere sempre rispettata da tutti gli agenti AI. Non deve MAI
 ## 🔄 REGOLE AGGIORNATE
 
 ### REGOLA DATABASE AGGIORNATA:
+<<<<<<< HEAD
 IL FILE `/var/www/_bases/base_<nome progetto>/laravel/config/database.php` DEVE SEGUIRE LA FILOSOFIA LARAVEL 12.x CON SINGOLA CONNESSIONE 'mysql' E MULTI-TENANT TRAMITE DATABASE/SCHEMA SEPARATI. NON DEVE AVERE CONNESSIONI MODULARI PERCHÉ QUESTE VENGONO GESTITE AUTOMATICAMENTE DAL TenantServiceProvider.
 
 ### REGOLA DATABASE AGGIORNATA:
 CRITICAL DATABASE ERROR IDENTIFIED: Il file `/var/www/_bases/base_<nome progetto>/laravel/config/database.php` conteneva una definizione manuale della connessione 'gdpr' che è un errore GRAVE. Il TenantServiceProvider gestisce automaticamente tutte le connessioni database tramite il metodo registerDB() che crea copie della connessione mysql per ogni modulo. Aggiungere definizioni manuali in database.php viola l'architettura Laraxot e causa duplicazioni pericolose. Questo errore non deve mai più accadere.
+=======
+IL FILE `/var/www/_bases/base_laravelpizza/laravel/config/database.php` DEVE SEGUIRE LA FILOSOFIA LARAVEL 12.x CON SINGOLA CONNESSIONE 'mysql' E MULTI-TENANT TRAMITE DATABASE/SCHEMA SEPARATI. NON DEVE AVERE CONNESSIONI MODULARI PERCHÉ QUESTE VENGONO GESTITE AUTOMATICAMENTE DAL TenantServiceProvider.
+
+### REGOLA DATABASE AGGIORNATA:
+CRITICAL DATABASE ERROR IDENTIFIED: Il file `/var/www/_bases/base_laravelpizza/laravel/config/database.php` conteneva una definizione manuale della connessione 'gdpr' che è un errore GRAVE. Il TenantServiceProvider gestisce automaticamente tutte le connessioni database tramite il metodo registerDB() che crea copie della connessione mysql per ogni modulo. Aggiungere definizioni manuali in database.php viola l'architettura Laraxot e causa duplicazioni pericolose. Questo errore non deve mai più accadere.
+>>>>>>> laraxot/master
 
 ---
 

@@ -1,7 +1,11 @@
 # PHPStan Livello 10 - Audit Completo Progetto
 
 ## Data Audit
+<<<<<<< HEAD
 2025-01-27
+=======
+[DATE]
+>>>>>>> laraxot/master
 
 ## Risultati Generali
 
@@ -59,7 +63,11 @@
 - **File**: `../UI/app/Filament/Forms/Components/LocationSelector.php`
 - **Errori**: 32 errori PHPStan livello 10
 - **Causa**: Classe `Modules\Geo\Models\Comune` non esiste
+<<<<<<< HEAD
 - **Status**: Documentato in [phpstan-errors-locationselector.md](../UI/docs/phpstan-errors-locationselector.md)
+=======
+- **Status**: Documentato in [phpstan-errors-locationselector.md](../ui/docs/phpstan-errors-locationselector.md)
+>>>>>>> laraxot/master
 - **Soluzione Proposta**: Creare modulo Geo con modello Comune (refactoring architetturale)
 
 ## Correzioni Implementate Durante Audit
@@ -71,7 +79,11 @@
   - Aggiunti cast espliciti `(int)` per tutti i `count()`
   - Sostituito `mapWithKeys()` con loop `foreach` per evitare problemi con `stdClass`
   - Aggiunta annotazione PHPDoc `@var array<string, int>`
+<<<<<<< HEAD
 - **Documentazione**: [phpstan-errors-activitylogger.md](../Activity/docs/phpstan-errors-activitylogger.md)
+=======
+- **Documentazione**: [phpstan-errors-activitylogger.md](../activity/docs/phpstan-errors-activitylogger.md)
+>>>>>>> laraxot/master
 
 ### 2. Ptv Module
 - **File**: `ValutatoreField.php`
@@ -80,7 +92,11 @@
   - Rimosso `Select::make()` errato
   - Usato `$this->options()` per configurare il componente
   - Rimosso codice debug e commentato
+<<<<<<< HEAD
 - **Documentazione**: [phpstan-errors-valutatorefield.md](../Ptv/docs/phpstan-errors-valutatorefield.md)
+=======
+- **Documentazione**: [phpstan-errors-valutatorefield.md](../ptv/docs/phpstan-errors-valutatorefield.md)
+>>>>>>> laraxot/master
 
 ### 3. IndennitaResponsabilita Module
 - **File**: `CompilaIndennitaResponsabilita.php`
@@ -88,7 +104,11 @@
 - **Correzioni**:
   - Sostituito `getRatingsWhere()` con query diretta `wherePivot()`
   - Aggiunta annotazione `@phpstan-ignore-next-line` per `withExtraAttributes()` (Spatie Schemaless)
+<<<<<<< HEAD
 - **Documentazione**: [phpstan-errors-compilaindennita.md](../IndennitaResponsabilita/docs/phpstan-errors-compilaindennita.md)
+=======
+- **Documentazione**: [phpstan-errors-compilaindennita.md](../indennitaresponsabilita/docs/phpstan-errors-compilaindennita.md)
+>>>>>>> laraxot/master
 
 ### 4. Notify Module
 - **File**: `NotifyBasePolicy.php`
@@ -150,5 +170,9 @@
 - Qualità codice complessiva: **Eccellente** (97% conformità)
 - Tutte le correzioni seguono le regole Laraxot e metodologia "Super Mucca"
 
+<<<<<<< HEAD
 *Ultimo aggiornamento: 2025-01-27*
+=======
+*Ultimo aggiornamento: [DATE]*
+>>>>>>> laraxot/master
 

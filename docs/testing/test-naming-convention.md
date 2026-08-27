@@ -75,10 +75,18 @@ Esempi:
 
 ## 📚 Documentazione Correlata
 
+<<<<<<< HEAD
 - [Regola Critica Progetto](../../../../../docs/regole-critiche/test-naming-pascalcase.md)
+=======
+- [Regola Critica Progetto](../../../../docs/regole-critiche/test-naming-pascalcase.md)
+>>>>>>> laraxot/master
 - [Testing Best Practices](./testing-best-practices.md)
 - [PHPStan Compliance](../phpstan-compliance.md)
 
 ---
 
+<<<<<<< HEAD
 **Xot Module - Test Naming PascalCase** ✅
+=======
+**Xot Module - Test Naming PascalCase** ✅
+>>>>>>> laraxot/master

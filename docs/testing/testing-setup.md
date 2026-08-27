@@ -31,7 +31,11 @@ APP_URL=http://localhost
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
+<<<<<<< HEAD
 DB_DATABASE=healthcare_app_data_test
+=======
+DB_DATABASE=quaeris_data_test
+>>>>>>> laraxot/master
 DB_USERNAME=your_username
 DB_PASSWORD=your_password
 
@@ -136,6 +140,7 @@ abstract class TestCase extends BaseTestCase
 
 ## Important Rules
 
+<<<<<<< HEAD
 ### Never Use `migrate:fresh` in Tests (CRITICAL)
 
 `migrate:fresh` **drops ALL tables** in the target database. In a shared test database (like `<nome progetto>_data_test`) this destroys data for ALL modules and causes cascading failures across the entire test suite.
@@ -153,6 +158,8 @@ php artisan migrate:fresh --env=testing --force
 ```
 Then never repeat it again in the suite.
 
+=======
+>>>>>>> laraxot/master
 ### Never Use RefreshDatabase
 
 The project uses `DatabaseTransactions` instead of `RefreshDatabase` because:
@@ -272,4 +279,8 @@ trait CreatesApplication
 - [Laravel 12 Testing](https://laravel.com/docs/12.x/testing)
 - [Pest PHP Documentation](https://pestphp.com/docs)
 - [Laravel Modules Testing](https://laravelmodules.com/docs/12/advanced/tests)
+<<<<<<< HEAD
 - [Composer Merge Plugin](https://github.com/wikimedia/composer-merge-plugin)
+=======
+- [Composer Merge Plugin](https://github.com/wikimedia/composer-merge-plugin)
+>>>>>>> laraxot/master

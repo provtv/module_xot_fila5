@@ -88,5 +88,9 @@ Dopo la modifica, verifica con:
 
 ---
 
+<<<<<<< HEAD
 *Risolto: 2025-01-10*
+=======
+*Risolto: [DATE]*
+>>>>>>> laraxot/master
 *Architecture Version: XotBase 2.1*

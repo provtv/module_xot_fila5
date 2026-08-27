@@ -10,10 +10,15 @@ L'architettura Filament-Xot definisce come il modulo Xot estende e personalizza 
 
 Il sistema è costruito attorno a classi base che forniscono funzionalità comuni:
 
+<<<<<<< HEAD
 - [XotBasePage](../Xot/docs/filament/pages/xotbasepage.md) - Classe base per le pagine Filament
 - [XotBaseWidget](../Xot/docs/filament/widgets/xotbasewidget.md) - Classe base per i widget Filament
 - [XotBasePage](../xot/docs/filament/pages/xotbasepage.md) - Classe base per le pagine Filament
 - [XotBaseWidget](../xot/docs/filament/widgets/xotbasewidget.md) - Classe base per i widget Filament
+=======
+- [XotBasePage](/var/www/html/base_generic/laravel/Modules/Xot/docs/filament/pages/xotbasepage.md) - Classe base per le pagine Filament
+- [XotBaseWidget](/var/www/html/base_generic/laravel/Modules/Xot/docs/filament/widgets/xotbasewidget.md) - Classe base per i widget Filament
+>>>>>>> laraxot/master
 
 ### Principi Architetturali
 
@@ -47,4 +52,8 @@ class MyPage extends XotBasePage
 - **Compatibilità**: Aggiornamenti Filament più sicuri
 - **Consistenza**: Comportamento uniforme tra moduli
 - **Manutenibilità**: Modifiche centralizzate nelle classi base
+<<<<<<< HEAD
 - **Estensibilità**: Facile aggiunta di nuove funzionalità
+=======
+- **Estensibilità**: Facile aggiunta di nuove funzionalità 
+>>>>>>> laraxot/master

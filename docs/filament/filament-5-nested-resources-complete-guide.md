@@ -42,11 +42,19 @@ php artisan make:filament-page ManageCourseLessons --resource=CourseResource --t
 ```php
 <?php
 
+<<<<<<< HEAD
 namespace Modules\healthcare_app\Filament\Resources\Courses;
 
 use Filament\Resources\Resource;
 use Filament\Resources\Pages\Page;
 use Modules\healthcare_app\Filament\Resources\Courses\Resources\Lessons\LessonResource;
+=======
+namespace Modules\Quaeris\Filament\Resources\Courses;
+
+use Filament\Resources\Resource;
+use Filament\Resources\Pages\Page;
+use Modules\Quaeris\Filament\Resources\Courses\Resources\Lessons\LessonResource;
+>>>>>>> laraxot/master
 
 class CourseResource extends Resource
 {
@@ -83,11 +91,19 @@ class CourseResource extends Resource
 ```php
 <?php
 
+<<<<<<< HEAD
 namespace Modules\healthcare_app\Filament\Resources\Courses\Resources\Lessons;
 
 use Filament\Resources\Resource;
 use Filament\Resources\Pages\Page;
 use Modules\healthcare_app\Filament\Resources\Courses\CourseResource;
+=======
+namespace Modules\Quaeris\Filament\Resources\Courses\Resources\Lessons;
+
+use Filament\Resources\Resource;
+use Filament\Resources\Pages\Page;
+use Modules\Quaeris\Filament\Resources\Courses\CourseResource;
+>>>>>>> laraxot/master
 
 class LessonResource extends Resource
 {
@@ -126,14 +142,22 @@ class LessonResource extends Resource
 ```php
 <?php
 
+<<<<<<< HEAD
 namespace Modules\healthcare_app\Filament\Resources\Courses\Resources\Lessons;
+=======
+namespace Modules\Quaeris\Filament\Resources\Courses\Resources\Lessons;
+>>>>>>> laraxot/master
 
 use Filament\Resources\RelationManagers\RelationManager;
 use Filament\Tables;
 use Filament\Forms;
 use Filament\Tables\Table;
 use Filament\Forms\Form;
+<<<<<<< HEAD
 use Modules\healthcare_app\Filament\Resources\Courses\Resources\Lessons\LessonResource;
+=======
+use Modules\Quaeris\Filament\Resources\Courses\Resources\Lessons\LessonResource;
+>>>>>>> laraxot/master
 
 class LessonsRelationManager extends RelationManager
 {
@@ -196,11 +220,19 @@ class LessonsRelationManager extends RelationManager
 ```php
 <?php
 
+<<<<<<< HEAD
 namespace Modules\healthcare_app\Filament\Resources\Courses\Resources\Lessons;
 
 use Filament\Resources\RelationManagers\RelationManager;
 use Filament\Resources\ParentResourceRegistration;
 use Modules\healthcare_app\Filament\Resources\Courses\CourseResource;
+=======
+namespace Modules\Quaeris\Filament\Resources\Courses\Resources\Lessons;
+
+use Filament\Resources\RelationManagers\RelationManager;
+use Filament\Resources\ParentResourceRegistration;
+use Modules\Quaeris\Filament\Resources\Courses\CourseResource;
+>>>>>>> laraxot/master
 
 class LessonResource extends Resource
 {
@@ -221,7 +253,11 @@ class LessonResource extends Resource
 ```php
 <?php
 
+<<<<<<< HEAD
 namespace Modules\healthcare_app\Filament\Resources\Courses\Resources\Lessons;
+=======
+namespace Modules\Quaeris\Filament\Resources\Courses\Resources\Lessons;
+>>>>>>> laraxot/master
 
 use Filament\Resources\RelationManagers\RelationManager;
 use Illuminate\Database\Eloquent\Model;
@@ -248,7 +284,11 @@ class LessonsRelationManager extends RelationManager
 ```php
 <?php
 
+<<<<<<< HEAD
 namespace Modules\healthcare_app\Filament\Resources\Courses\Resources\Lessons;
+=======
+namespace Modules\Quaeris\Filament\Resources\Courses\Resources\Lessons;
+>>>>>>> laraxot/master
 
 use Filament\Resources\RelationManagers\RelationManager;
 use Illuminate\Database\Eloquent\Model;
@@ -320,11 +360,19 @@ public function create(): array
 ```php
 <?php
 
+<<<<<<< HEAD
 namespace Modules\healthcare_app\Filament\Resources\Courses\Resources\Lessons\Pages;
 
 use Filament\Resources\Pages\CreateRecord;
 use Modules\healthcare_app\Filament\Resources\Courses\Resources\Lessons\LessonResource;
 use Modules\healthcare_app\Models\Course;
+=======
+namespace Modules\Quaeris\Filament\Resources\Courses\Resources\Lessons\Pages;
+
+use Filament\Resources\Pages\CreateRecord;
+use Modules\Quaeris\Filament\Resources\Courses\Resources\Lessons\LessonResource;
+use Modules\Quaeris\Models\Course;
+>>>>>>> laraxot/master
 
 class CreateLesson extends CreateRecord
 {
@@ -349,10 +397,17 @@ class CreateLesson extends CreateRecord
 ```php
 <?php
 
+<<<<<<< HEAD
 namespace Modules\healthcare_app\Filament\Resources\Courses\Resources\Lessons\Pages;
 
 use Filament\Resources\Pages\CreateRecord;
 use Modules\healthcare_app\Filament\Resources\Courses\Resources\Lessons\LessonResource;
+=======
+namespace Modules\Quaeris\Filament\Resources\Courses\Resources\Lessons\Pages;
+
+use Filament\Resources\Pages\CreateRecord;
+use Modules\Quaeris\Filament\Resources\Courses\Resources\Lessons\LessonResource;
+>>>>>>> laraxot/master
 use Illuminate\Validation\Rule;
 
 class CreateLesson extends CreateRecord
@@ -453,7 +508,11 @@ dd($this->getRouteKey(), $this->getRecord());
 public function test_nested_resource_routing()
 {
     $course = Course::factory()->create();
+<<<<<<< HEAD
     $response = $this->get(route('filament.healthcare_app.resources.courses.resources.lessons.list', [
+=======
+    $response = $this->get(route('filament.quaeris.resources.courses.resources.lessons.list', [
+>>>>>>> laraxot/master
         'course' => $course,
     ]));
     
@@ -467,7 +526,11 @@ public function test_nested_resource_routing()
 - **API Reference**: https://filamentphp.com/docs/5.x/api/resources/nested-resources
 - **Plugin Guava**: https://filamentphp.com/plugins/guava-nested-resources
 
+<<<<<<< HEAD
 ## 🔄 **Integrazione con healthcare_app**
+=======
+## 🔄 **Integrazione con Quaeris**
+>>>>>>> laraxot/master
 
 ### **Pattern di Integrazione**
 

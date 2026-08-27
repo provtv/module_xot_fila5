@@ -16,11 +16,19 @@ public static function getFormSchema(): array
         TextInput::make('name')
             ->required()
             ->maxLength(255),
+<<<<<<< HEAD
 
         // Relazioni
         Select::make('type')
             ->relationship('type', 'name'),
 
+=======
+            
+        // Relazioni
+        Select::make('type')
+            ->relationship('type', 'name'),
+            
+>>>>>>> laraxot/master
         // File e Media
         FileUpload::make('avatar')
             ->image()
@@ -64,6 +72,7 @@ public static function getFormSchema(): array
 - Ottimizzare le query del database
 ### Versione HEAD
 
+<<<<<<< HEAD
 ## Collegamenti tra versioni di filament-integration.md
 * [filament-integration.md](../../../xot/project_docs/laraxot/filament-integration.md)
 * [filament-integration.md](../../../cms/project_docs/roadmap/features/filament-integration.md)
@@ -72,3 +81,17 @@ public static function getFormSchema(): array
 ### Versione Incoming
 
 ---
+=======
+
+## Collegamenti tra versioni di filament-integration.md
+* [filament-integration.md](../../../Xot/docs/laraxot/filament-integration.md)
+* [filament-integration.md](../../../Cms/docs/roadmap/features/filament-integration.md)
+* [filament-integration.md](../../../Cms/docs/filament-integration.md)
+
+
+### Versione Incoming
+
+
+---
+
+>>>>>>> laraxot/master

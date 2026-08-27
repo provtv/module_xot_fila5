@@ -72,3 +72,4 @@ Dopo aver aggiunto o spostato test:
 - [ ] PHPStan livello 9+ passa senza errori
 - [ ] Documentazione aggiornata (questo file & root docs)
 
+*Ultimo aggiornamento: [DATE] – aggiunte linee guida per prevenire posizionamenti errati (es. `MetatagDataTest`).*

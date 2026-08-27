@@ -1,8 +1,12 @@
+<<<<<<< HEAD
 ---
 module: theme
 topic: access-level-parameter
 canonical: ../../../Themes/docs/shared-components/access-level-parameter-fix.md
 ---
+=======
+# Fixing Access Level and Parameter Initialization Issues
+>>>>>>> laraxot/master
 
 ## Issue 1: Access Level Mismatch in getTableHeaderActions()
 

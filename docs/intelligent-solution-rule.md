@@ -1,6 +1,9 @@
 # Regola Critica: Soluzione Intelligente e Professionale
 
+<<<<<<< HEAD
 **Data**: 2025-01-22
+=======
+>>>>>>> laraxot/master
 **Status**: ✅ Regola Critica OBBLIGATORIA
 **Integrazione**: Metodologia Super Mucca
 
@@ -273,6 +276,10 @@ Questa regola si integra perfettamente con la [Metodologia Super Mucca](./super-
 
 ---
 
+<<<<<<< HEAD
 **Ultimo aggiornamento**: 2025-01-22
+=======
+**Ultimo aggiornamento**: [DATE]
+>>>>>>> laraxot/master
 **Versione**: 1.0.0
 **Status**: ✅ Regola Critica OBBLIGATORIA

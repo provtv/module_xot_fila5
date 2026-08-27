@@ -200,7 +200,11 @@ Questo è INUTILE perché:
 
 ---
 
+<<<<<<< HEAD
 **Data:** 2026-01-09
+=======
+**Data:** [DATE]
+>>>>>>> laraxot/master
 **Stato:** Pronto per implementazione
 **Righe:** 126 → ~25 (-80%)
 **Complessità:** ESTREMA → MINIMALE

@@ -30,7 +30,10 @@ class LivewireComponentsListCommand extends Command
 
     /**
      * Create a new command instance.
+     *
+     * @return void
      */
+    
 
     /**
      * Execute the console command.

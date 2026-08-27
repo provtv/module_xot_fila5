@@ -1,6 +1,9 @@
 # PHPStan Level 10 - Sessione di Correzione
 
+<<<<<<< HEAD
 **Data**: 9 Gennaio 2026  
+=======
+>>>>>>> laraxot/master
 **Status**: 🔄 **IN CORSO** (64% completato)
 
 ---
@@ -124,4 +127,8 @@ return $result;
 
 ---
 
+<<<<<<< HEAD
 **Ultimo aggiornamento**: 2026-01-09 - Sessione in corso
+=======
+**Ultimo aggiornamento**: [DATE] - Sessione in corso
+>>>>>>> laraxot/master

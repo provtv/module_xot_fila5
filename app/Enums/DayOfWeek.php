@@ -10,7 +10,10 @@ use Filament\Support\Contracts\HasDescription;
 use Filament\Support\Contracts\HasIcon;
 use Filament\Support\Contracts\HasLabel;
 use Illuminate\Support\Collection;
+<<<<<<< HEAD
 use Modules\Xot\Traits\EnumTrait;
+=======
+>>>>>>> laraxot/master
 
 /**
  * Enum per la gestione dei giorni della settimana.
@@ -22,10 +25,15 @@ use Modules\Xot\Traits\EnumTrait;
  * - Calcolare giorni successivi
  * - Integrazione con Filament UI
  */
+<<<<<<< HEAD
 enum DayOfWeek: int implements HasColor, HasDescription, HasIcon, HasLabel
 {
     use EnumTrait;
 
+=======
+enum DayOfWeek: int implements HasLabel, HasColor, HasIcon, HasDescription
+{
+>>>>>>> laraxot/master
     case MONDAY = 1;
     case TUESDAY = 2;
     case WEDNESDAY = 3;
@@ -35,27 +43,118 @@ enum DayOfWeek: int implements HasColor, HasDescription, HasIcon, HasLabel
     case SUNDAY = 7;
 
     /**
+<<<<<<< HEAD
+=======
+     * Restituisce l'etichetta localizzata per questo giorno della settimana.
+     * Implementazione dell'interfaccia HasLabel di Filament.
+     */
+    public function getLabel(): string
+    {
+        $carbon = Carbon::now()->startOfWeek()->addDays($this->value - 1);
+        $carbon->locale('it');
+        return (string) $carbon->isoFormat('dddd');
+    }
+
+    /**
+     * Restituisce il colore associato a questo giorno della settimana.
+     * Implementazione dell'interfaccia HasColor di Filament.
+     */
+    public function getColor(): string
+    {
+        return match ($this) {
+            self::MONDAY => 'primary',
+            self::TUESDAY => 'success',
+            self::WEDNESDAY => 'warning',
+            self::THURSDAY => 'danger',
+            self::FRIDAY => 'info',
+            self::SATURDAY => 'gray',
+            self::SUNDAY => 'gray',
+        };
+    }
+
+    /**
+     * Restituisce l'icona associata a questo giorno della settimana.
+     * Implementazione dell'interfaccia HasIcon di Filament.
+     */
+    public function getIcon(): string
+    {
+        return match ($this) {
+            self::MONDAY => 'heroicon-o-calendar',
+            self::TUESDAY => 'heroicon-o-calendar',
+            self::WEDNESDAY => 'heroicon-o-calendar',
+            self::THURSDAY => 'heroicon-o-calendar',
+            self::FRIDAY => 'heroicon-o-calendar',
+            self::SATURDAY => 'heroicon-o-calendar',
+            self::SUNDAY => 'heroicon-o-calendar',
+        };
+    }
+
+    /**
+     * Restituisce la descrizione dettagliata di questo giorno della settimana.
+     * Implementazione dell'interfaccia HasDescription di Filament.
+     */
+    public function getDescription(): string
+    {
+        return match ($this) {
+            self::MONDAY => __('saluteora::common.days.description.monday'),
+            self::TUESDAY => __('saluteora::common.days.description.tuesday'),
+            self::WEDNESDAY => __('saluteora::common.days.description.wednesday'),
+            self::THURSDAY => __('saluteora::common.days.description.thursday'),
+            self::FRIDAY => __('saluteora::common.days.description.friday'),
+            self::SATURDAY => __('saluteora::common.days.description.saturday'),
+            self::SUNDAY => __('saluteora::common.days.description.sunday'),
+        };
+    }
+
+    /**
+>>>>>>> laraxot/master
      * Restituisce l'etichetta abbreviata per questo giorno della settimana.
      */
     public function shortLabel(): string
     {
         $carbon = Carbon::now()->startOfWeek()->addDays($this->value - 1);
         $carbon->locale('it');
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/master
         return (string) $carbon->isoFormat('ddd');
     }
 
     /**
+<<<<<<< HEAD
+=======
+     * Converte tutti i casi dell'enum in un array associativo per l'uso nei componenti select.
+     *
+     * @return array<int, string>
+     */
+    public static function toArray(): array
+    {
+        $result = [];
+        foreach (self::cases() as $case) {
+            $result[$case->value] = $case->getLabel();
+        }
+        return $result;
+    }
+
+    /**
+>>>>>>> laraxot/master
      * Restituisce una collezione dei giorni lavorativi (lunedì-venerdì).
      *
      * @return Collection<int, self>
      */
     public static function workingDays(): Collection
     {
+<<<<<<< HEAD
         /** @var Collection<int, self> $result */
         $result = collect(self::cases())->filter(static fn (self $day): bool => $day->value <= 5);
 
         return $result;
+=======
+        /** @var Collection<int, self> $filtered */
+        $filtered = collect(self::cases())->filter(fn(self $day): bool => $day->value <= 5);
+        return $filtered;
+>>>>>>> laraxot/master
     }
 
     /**
@@ -65,10 +164,16 @@ enum DayOfWeek: int implements HasColor, HasDescription, HasIcon, HasLabel
      */
     public static function weekendDays(): Collection
     {
+<<<<<<< HEAD
         /** @var Collection<int, self> $result */
         $result = collect(self::cases())->filter(static fn (self $day): bool => $day->value > 5);
 
         return $result;
+=======
+        /** @var Collection<int, self> $filtered */
+        $filtered = collect(self::cases())->filter(fn(self $day): bool => $day->value > 5);
+        return $filtered;
+>>>>>>> laraxot/master
     }
 
     /**

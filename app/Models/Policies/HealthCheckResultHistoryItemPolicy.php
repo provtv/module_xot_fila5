@@ -4,6 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Models\Policies;
 
+<<<<<<< HEAD
+=======
+use Override;
+>>>>>>> laraxot/master
 use Modules\Xot\Contracts\UserContract;
 use Modules\Xot\Models\HealthCheckResultHistoryItem;
 
@@ -12,7 +16,11 @@ class HealthCheckResultHistoryItemPolicy extends XotBasePolicy
     /**
      * Determine whether the user can view any models.
      */
+<<<<<<< HEAD
     #[\Override]
+=======
+    #[Override]
+>>>>>>> laraxot/master
     public function viewAny(UserContract $user): bool
     {
         return $user->hasPermissionTo('health_check_result_history_item.viewAny');

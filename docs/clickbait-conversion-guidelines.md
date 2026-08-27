@@ -2,7 +2,11 @@
 
 ## Overview
 
+<<<<<<< HEAD
 This document outlines conversion optimization and clickbait strategies for <nome progetto> Meetups.
+=======
+This document outlines conversion optimization and clickbait strategies for LaravelPizza Meetups.
+>>>>>>> laraxot/master
 
 ## Conversion Principles
 
@@ -142,4 +146,8 @@ Balance clickbait with performance:
 ## Related Documentation
 - [UI/UX Guidelines](./ui-ux-guidelines.md)
 - [SEO Guidelines](./seo-guidelines.md)
+<<<<<<< HEAD
 - [WCAG Accessibility](./wcag-accessibility-guidelines.md)
+=======
+- [WCAG Accessibility](./wcag-accessibility-guidelines.md)
+>>>>>>> laraxot/master

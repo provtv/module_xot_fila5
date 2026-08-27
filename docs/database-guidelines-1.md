@@ -266,7 +266,11 @@ return new class extends XotBaseMigration {
 ```
 
 **Collegamenti:**
+<<<<<<< HEAD
 - [Regola Performance](../../Performance/docs/database_migrations.md)
+=======
+- [Regola Performance](../../performance/docs/database_migrations.md)
+>>>>>>> laraxot/master
 - [Regole globali root](../../../docs/database_migrations.md)
 
     /**

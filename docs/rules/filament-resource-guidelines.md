@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Linee Guida per le Risorse Filament nel Progetto
 # Linee Guida per le Risorse Filament nel Progetto <nome progetto>
 # Linee Guida per le Risorse Filament nel Progetto <nome progetto>
@@ -41,6 +42,8 @@
 # Linee Guida per le Risorse Filament nel Progetto <nome progetto>
 # Linee Guida per le Risorse Filament nel Progetto <nome progetto>
 # Linee Guida per le Risorse Filament nel Progetto <nome progetto>
+=======
+>>>>>>> laraxot/master
 # Linee Guida per le Risorse Filament nel Progetto <nome progetto>
 
 ## Regole Generali
@@ -52,12 +55,17 @@
 
 ## Collegamenti Bidirezionali
 
+<<<<<<< HEAD
 - [Documentazione Principale sui Problemi di Namespace](../../../../../docs/references/namespace-issues.md)
+=======
+- [Documentazione Principale sui Problemi di Namespace](../../../../docs/references/namespace-issues.md)
+>>>>>>> laraxot/master
 - [Documentazione del Modulo Patient](../patient/docs/errors/undefined-type-pending.md)
 - [Riferimento alle Linee Guida nel Modulo Patient](../patient/docs/references/filament-guidelines-link.md)
 
 ## Note
 
+<<<<<<< HEAD
 Queste linee guida sono centrali per tutti i moduli del progetto . Ogni modulo deve fare riferimento a questo documento per garantire coerenza nello sviluppo delle risorse Filament.
 Queste linee guida sono centrali per tutti i moduli del progetto <nome progetto>. Ogni modulo deve fare riferimento a questo documento per garantire coerenza nello sviluppo delle risorse Filament.
 Queste linee guida sono centrali per tutti i moduli del progetto <nome progetto>. Ogni modulo deve fare riferimento a questo documento per garantire coerenza nello sviluppo delle risorse Filament.
@@ -101,4 +109,6 @@ Queste linee guida sono centrali per tutti i moduli del progetto <nome progetto>
 Queste linee guida sono centrali per tutti i moduli del progetto <nome progetto>. Ogni modulo deve fare riferimento a questo documento per garantire coerenza nello sviluppo delle risorse Filament.
 Queste linee guida sono centrali per tutti i moduli del progetto <nome progetto>. Ogni modulo deve fare riferimento a questo documento per garantire coerenza nello sviluppo delle risorse Filament.
 Queste linee guida sono centrali per tutti i moduli del progetto <nome progetto>. Ogni modulo deve fare riferimento a questo documento per garantire coerenza nello sviluppo delle risorse Filament.
+=======
+>>>>>>> laraxot/master
 Queste linee guida sono centrali per tutti i moduli del progetto <nome progetto>. Ogni modulo deve fare riferimento a questo documento per garantire coerenza nello sviluppo delle risorse Filament.

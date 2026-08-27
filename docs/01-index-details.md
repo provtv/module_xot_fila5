@@ -17,6 +17,7 @@
 - [GitHub Workflows Standard](./github-workflows-standard.md)
 
 ## PHPStan Analysis Reports
+<<<<<<< HEAD
 - [PHPStan Analysis 2025-01-27](./phpstan-analysis-2025-01-27.md)
 - [PHPStan Analysis 2025-12-17](./phpstan-analysis-2025-12-17.md)
 - [PHPStan Analysis 2025-12-18](./phpstan-analysis-2025-12-18.md)
@@ -24,6 +25,15 @@
 
 ## Quality & Improvement
 - [Quality Improvements Summary 2025-11-18](./quality-improvements-summary-2025-11-18.md)
+=======
+- [PHPStan Analysis [DATE]](./phpstan-analysis-[DATE].md)
+- [PHPStan Analysis [DATE]](./phpstan-analysis-[DATE].md)
+- [PHPStan Analysis [DATE]](./phpstan-analysis-[DATE].md)
+- [PHPStan Specific Patterns](./phpstan-specific-patterns.md)
+
+## Quality & Improvement
+- [Quality Improvements Summary [DATE]](./quality-improvements-summary-[DATE].md)
+>>>>>>> laraxot/master
 - [Laraxot Meetup Service Provider Refactor](./laraxot-meetup-service-provider-refactor.md)
 - [PHPStan Fix Meetup Service Provider](./phpstan-fix-meetup-service-provider.md)
 
@@ -39,4 +49,8 @@
 - [Architectural Rules Directory](./architectural_rules/)
 
 ---
+<<<<<<< HEAD
 *Last updated: 2025-12-18*
+=======
+*
+>>>>>>> laraxot/master

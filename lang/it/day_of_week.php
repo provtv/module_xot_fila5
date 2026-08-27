@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 return [
+<<<<<<< HEAD
     'values' => [
         1 => ['label' => 'Lunedì', 'icon' => 'heroicon-o-calendar-days', 'color' => 'primary', 'description' => 'Primo giorno lavorativo della settimana'],
         ['label' => 'Martedì', 'icon' => 'heroicon-o-calendar-days', 'color' => 'primary', 'description' => 'Secondo giorno della settimana'],
@@ -14,16 +15,36 @@ return [
     ],
     'label' => 'Giorno della Settimana',
     'options' => [1 => 'Lunedì', 'Martedì', 'Mercoledì', 'Giovedì', 'Venerdì', 'Sabato', 'Domenica'],
+=======
+    'label' => 'Giorno della Settimana',
+    'options' => [
+        1 => 'Lunedì',
+        2 => 'Martedì',
+        3 => 'Mercoledì',
+        4 => 'Giovedì',
+        5 => 'Venerdì',
+        6 => 'Sabato',
+        7 => 'Domenica',
+    ],
+>>>>>>> laraxot/master
     'plural_label' => 'Day Of Week (Plurale)',
     'navigation' => [
         'name' => 'Day Of Week',
         'plural' => 'Day Of Week',
+<<<<<<< HEAD
         'group' => ['name' => 'General', 'description' => 'General Settings'],
+=======
+        'group' => [
+            'name' => 'General',
+            'description' => 'General Settings',
+        ],
+>>>>>>> laraxot/master
         'label' => 'Day Of Week',
         'sort' => 1,
         'icon' => 'heroicon-o-collection',
     ],
     'fields' => [
+<<<<<<< HEAD
         'id' => ['label' => 'Identificativo', 'tooltip' => 'Identificativo univoco del record', 'helper_text' => '', 'description' => ''],
         'created_at' => ['label' => 'Data Creazione', 'tooltip' => '', 'helper_text' => '', 'description' => ''],
         'updated_at' => ['label' => 'Ultima Modifica', 'tooltip' => '', 'helper_text' => '', 'description' => ''],
@@ -39,5 +60,36 @@ return [
         'create' => ['label' => 'Crea Day Of Week'],
         'edit' => ['label' => 'Modifica Day Of Week'],
         'delete' => ['label' => 'Elimina Day Of Week'],
+=======
+        'id' => [
+            'label' => 'Identificativo',
+            'tooltip' => 'Identificativo univoco del record',
+            'helper_text' => '',
+            'description' => '',
+        ],
+        'created_at' => [
+            'label' => 'Data Creazione',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+        'updated_at' => [
+            'label' => 'Ultima Modifica',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+    ],
+    'actions' => [
+        'create' => [
+            'label' => 'Crea Day Of Week',
+        ],
+        'edit' => [
+            'label' => 'Modifica Day Of Week',
+        ],
+        'delete' => [
+            'label' => 'Elimina Day Of Week',
+        ],
+>>>>>>> laraxot/master
     ],
 ];

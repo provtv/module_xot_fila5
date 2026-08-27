@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Struttura dei Prompt
 
 I prompt sono file di testo che contengono istruzioni per l'AI. Devono seguire queste regole:
@@ -51,6 +52,33 @@ Per la regola universale sui prompt condivisi (come quelli in bashscripts/prompt
 - [Regola Universale per i Prompt](./PROMPT_RULES.md)
 
 ## Collegamenti
+=======
+# Struttura dei prompt
+
+## Scopo
+I prompt definiscono regole operative riutilizzabili tra progetti. Devono essere portabili, coerenti e senza riferimenti al progetto specifico.
+
+## Regole principali
+- **Posizione**: `bashscripts/tools/prompts/`.
+- **Formato**: Markdown consentito; se un prompt richiede una singola riga, dichiararlo esplicitamente nel file.
+- **Portabilita'**: vietati percorsi assoluti e nomi di progetto; usare segnaposto (`<project_root>`, `<module>`, `<theme>`).
+- **Coerenza**: allineare i prompt alle regole e alla documentazione dei moduli/temi.
+
+## Processo di aggiornamento
+1. Studiare la documentazione del modulo/tema coinvolto.
+2. Aggiornare il prompt con esempi generici e path relativi.
+3. Aggiornare le regole/memorie pertinenti se richiesto.
+4. Verificare che i prompt restino project-agnostic.
+
+## Collegamenti
+<<<<<<< .merge_file_ooazFP
+- [regole prompt consolidate](./consolidated/prompt-rules.md)
+- [organizzazione bashscripts](./bashscripts-organization-1.md)
+- [regole documentazione](./consolidated/documentation-rules.md)
+- [prompts consolidati](./consolidated/prompts.md)
+- [indice documentazione](./00-index.md)
+=======
+>>>>>>> laraxot/master
 - [Documentazione Generale](./documentation.md)
 - [Regole del Progetto](./rules.md)
 - [Miglioramenti al Prompt docs.txt](./prompt_docs_improvements.md)
@@ -61,7 +89,11 @@ Per la regola universale sui prompt condivisi (come quelli in bashscripts/prompt
 
 ## Collegamenti tra versioni di prompts.md
 * [prompts.md](docs/prompts.md)
+<<<<<<< HEAD
 * [prompts.md](../../../Xot/docs/prompts.md)
+=======
+* [prompts.md](../../../xot/project_docs/prompts.md)
+>>>>>>> laraxot/master
 
 ## Modifiche al Prompt docs.txt
 
@@ -78,15 +110,24 @@ Per la regola universale sui prompt condivisi (come quelli in bashscripts/prompt
 4. Verifica dei collegamenti bidirezionali
 
 ### Collegamenti Correlati
+<<<<<<< HEAD
 - [Regole Universali](./PROMPT_RULES.md)
 - [Gestione Documentazione](./DOCUMENTATION_MANAGEMENT.md)
+=======
+- [Regole Universali](./prompt_rules.md)
+- [Gestione Documentazione](./documentation_management.md)
+>>>>>>> laraxot/master
 - [Struttura Moduli](./module-structure.md)
 
 ## Errori Comuni da Evitare
 
 ### Percorsi Assoluti
 ⚠️ **Problema Identificato**: Uso di percorsi assoluti nei collegamenti
+<<<<<<< HEAD
 ❌ Esempio errato: `../Xot/docs/file.md`
+=======
+❌ Esempio errato: `Modules/Xot/project_docs/file.md`
+>>>>>>> laraxot/master
 ✅ Esempio corretto: `./file.md` o `../altro-modulo/file.md`
 
 ### Impatto dell'Errore
@@ -174,3 +215,7 @@ Il prompt `docs.txt` serve come:
    ```markdown
    [Documento](./path/relativo) #tag-correlati
    ```
+<<<<<<< HEAD
+=======
+>>>>>>> .merge_file_rJcEWm
+>>>>>>> laraxot/master

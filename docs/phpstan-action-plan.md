@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # PHPStan Action Plan - 2025-11-18
+=======
+# PHPStan Action Plan - [DATE]
+>>>>>>> laraxot/master
 
 ## Executive Summary
 
@@ -262,6 +266,10 @@ class ChartDataValidator
 
 ---
 
+<<<<<<< HEAD
 **Last Updated**: 2025-11-18
 **Next Review**: 2025-11-25
+=======
+
+>>>>>>> laraxot/master
 **Status**: 🟡 IN PROGRESS

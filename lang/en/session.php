@@ -2,6 +2,10 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> laraxot/master
 return [
     'navigation' => [
         'name' => 'Sessioni',
@@ -25,10 +29,13 @@ return [
                 'placeholder' => 'Seleziona l\'utente',
                 'help' => 'Utente proprietario della sessione',
             ],
+<<<<<<< HEAD
             'label' => '',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
+=======
+>>>>>>> laraxot/master
         ],
         'connection' => [
             'ip_address' => [
@@ -43,10 +50,13 @@ return [
                 'label' => 'Posizione',
                 'help' => 'Localizzazione geografica approssimativa',
             ],
+<<<<<<< HEAD
             'label' => '',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
+=======
+>>>>>>> laraxot/master
         ],
         'data' => [
             'payload' => [
@@ -57,10 +67,13 @@ return [
                 'label' => 'Dimensione',
                 'help' => 'Dimensione dei dati in memoria',
             ],
+<<<<<<< HEAD
             'label' => '',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
+=======
+>>>>>>> laraxot/master
         ],
         'timing' => [
             'created_at' => [
@@ -75,10 +88,13 @@ return [
                 'label' => 'Scadenza',
                 'help' => 'Momento di scadenza previsto',
             ],
+<<<<<<< HEAD
             'label' => '',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
+=======
+>>>>>>> laraxot/master
         ],
     ],
     'actions' => [
@@ -141,12 +157,21 @@ return [
             'label' => 'Durata Sessione',
             'help' => 'Tempo massimo di inattività',
             'options' => [
+<<<<<<< HEAD
                 120 => '2 ore',
                 240 => '4 ore',
                 480 => '8 ore',
                 720 => '12 ore',
                 1440 => '1 giorno',
                 10080 => '1 settimana',
+=======
+                '120' => '2 ore',
+                '240' => '4 ore',
+                '480' => '8 ore',
+                '720' => '12 ore',
+                '1440' => '1 giorno',
+                '10080' => '1 settimana',
+>>>>>>> laraxot/master
             ],
         ],
         'security' => [
@@ -185,6 +210,9 @@ return [
             ],
         ],
     ],
+<<<<<<< HEAD
     'label' => 'Missing Label',
     'plural_label' => 'Missing Plural label',
+=======
+>>>>>>> laraxot/master
 ];

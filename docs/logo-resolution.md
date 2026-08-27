@@ -60,7 +60,11 @@ Il sistema utilizza il metodo `module_path()` per risolvere questi percorsi:
 function resolveModulePath($path) {
     // Esempio: 'module::images/logo.svg'
     list($module, $resourcePath) = explode('::', $path);
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> laraxot/master
     // Converte in: '/path/to/project/laravel/Modules/Module/resources/images/logo.svg'
     return module_path(ucfirst($module)) . '/resources/' . $resourcePath;
 }
@@ -77,8 +81,13 @@ Nei template Blade, i loghi vengono referenziati utilizzando gli helper appropri
 Per la versione dark:
 
 ```blade
+<<<<<<< HEAD
 <img src="{{ Theme::asset($metatag['logo_header_dark']) }}"
      alt="{{ $metatag['logo_alt'] ?? 'Logo' }}"
+=======
+<img src="{{ Theme::asset($metatag['logo_header_dark']) }}" 
+     alt="{{ $metatag['logo_alt'] ?? 'Logo' }}" 
+>>>>>>> laraxot/master
      class="hidden dark:block">
 ```
 
@@ -103,11 +112,19 @@ Per la versione dark:
 
 ### Collegamenti ad Altri Moduli
 - [Gestione Domini e Configurazioni](DOMAIN_CONFIGURATION.md)
+<<<<<<< HEAD
 - [Configurazione Generale](configuration.md)
 - [Struttura dei Moduli](MODULE_STRUCTURE.md)
 - [Architettura Folio + Volt](FOLIO_VOLT_ARCHITECTURE.md)
 - [Regole per la Case Sensitivity](directory-case-sensitivity.md)
 - [Regole per i Namespace](namespace-rules.md)
+=======
+- [Configurazione Generale](CONFIGURATION.md)
+- [Struttura dei Moduli](MODULE_STRUCTURE.md)
+- [Architettura Folio + Volt](FOLIO_VOLT_ARCHITECTURE.md)
+- [Regole per la Case Sensitivity](DIRECTORY-CASE-SENSITIVITY.md)
+- [Regole per i Namespace](NAMESPACE-RULES.md)
+>>>>>>> laraxot/master
 - [Convenzioni di Naming](naming-conventions.md)
 
 ### Collegamenti alla Root del Progetto

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # PHPStan Level 10 + DRY/KISS Complete Analysis - 2025-10-17
+=======
+# PHPStan Level 10 + DRY/KISS Complete Analysis - [DATE]
+>>>>>>> laraxot/master
 
 ## Executive Summary
 
@@ -935,9 +939,15 @@ Con il refactoring di Contact e creazione scope traits: **→ 92% - Eccellente!*
 
 ## Related Documentation
 
+<<<<<<< HEAD
 - [DRY/KISS Model Refactoring (2025-10-15)](./dry-kiss-model-refactoring-2025-10-15.md)
 - [Model Inheritance Rules (User Module)](../../User/docs/model-inheritance-rules.md)
 - [Model Usage in Themes](../../../Themes/Zero/docs/model-usage-in-themes.md)
+=======
+- [DRY/KISS Model Refactoring ([DATE])](./dry-kiss-model-refactoring-[DATE].md)
+- [Model Inheritance Rules (User Module)](../../user/docs/model-inheritance-rules.md)
+- [Model Usage in Themes](../../../themes/zero/docs/model-usage-in-themes.md)
+>>>>>>> laraxot/master
 - [Duplicate Methods Analysis](./duplicate-methods-analysis.md)
 
 ---

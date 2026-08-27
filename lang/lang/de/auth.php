@@ -10,4 +10,17 @@ return [
     ],
     'throttle' => 'Zuviele Login versuche. Bitte warte :seconds Sekunden.',
     'unknown' => 'Ein unbekannter Fehler ist aufgetreten',
+    'navigation' => [
+        'label' => 'Missing Navigation Label',
+        'plural_label' => 'Missing Navigation Plural Label',
+        'group' => 'Missing Group',
+        'icon' => 'heroicon-o-puzzle-piece',
+        'sort' => 100,
+    ],
+    'label' => 'Missing Label',
+    'plural_label' => 'Missing Plural label',
+    'fields' => [
+    ],
+    'actions' => [
+    ],
 ];

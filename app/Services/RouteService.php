@@ -4,10 +4,19 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Services;
 
+<<<<<<< HEAD
 use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Str;
 use Spatie\QueueableAction\QueueableAction;
+=======
+use Exception;
+use Illuminate\Support\Facades\Request;
+use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Str;
+
+use function count;
+>>>>>>> laraxot/master
 
 /**
  * Class RouteService.
@@ -17,12 +26,19 @@ use Spatie\QueueableAction\QueueableAction;
  */
 class RouteService
 {
+<<<<<<< HEAD
     use QueueableAction;
 
     /**
      * Verifica se l'utente è in modalità amministrazione.
      *
      * @param  array<string,string>  $params  Parametri aggiuntivi
+=======
+    /**
+     * Verifica se l'utente è in modalità amministrazione.
+     *
+     * @param array<string,string> $params Parametri aggiuntivi
+>>>>>>> laraxot/master
      * @return bool True se l'utente è in modalità amministrazione, false altrimenti
      */
     public static function inAdmin(array $params = []): bool
@@ -34,7 +50,11 @@ class RouteService
         }
 
         // Se il primo segmento dell'URL è 'admin', siamo in modalità amministrazione
+<<<<<<< HEAD
         if (Request::segment(1) === 'admin') {
+=======
+        if ('admin' === Request::segment(1)) {
+>>>>>>> laraxot/master
             return true;
         }
 
@@ -42,6 +62,7 @@ class RouteService
         $segments = Request::segments();
 
         // Se abbiamo almeno un segmento, è 'livewire' e la sessione 'in_admin' è true
+<<<<<<< HEAD
         return (is_countable($segments) ? \count($segments) : 0) > 0
             && $segments[0] === 'livewire'
             && session('in_admin', false) === true;
@@ -49,6 +70,17 @@ class RouteService
 
     /**
      * @param  array<string,string>  $params
+=======
+        return (
+            (is_countable($segments) ? \count($segments) : 0) > 0 &&
+            'livewire' === $segments[0] &&
+            session('in_admin', false) === true
+        );
+    }
+
+    /**
+     * @param array<string,string> $params
+>>>>>>> laraxot/master
      */
     public static function urlAct(array $params): string
     {
@@ -69,16 +101,28 @@ class RouteService
         // Cannot call method getName() on mixed.
         $routename = ''; // Request::route()->getName();
         $old_act_route = last(explode('.', $routename));
+<<<<<<< HEAD
         if (! \is_string($old_act_route)) {
             throw new \Exception('['.__LINE__.']['.class_basename(self::class).']');
         }
 
         $routename_act = Str::before($routename, $old_act_route).''.$act;
+=======
+        if (!\is_string($old_act_route)) {
+            throw new Exception('[' . __LINE__ . '][' . class_basename(self::class) . ']');
+        }
+
+        $routename_act = Str::before($routename, $old_act_route) . '' . $act;
+>>>>>>> laraxot/master
         $route_current = Route::current();
         $route_params = [];
         if ($route_current instanceof \Illuminate\Routing\Route) {
             $route_params = $route_current->parameters();
+<<<<<<< HEAD
             // $routename non utilizzata dopo l'assegnazione
+=======
+            $routename = $route_current->getName();
+>>>>>>> laraxot/master
         }
 
         /*
@@ -95,13 +139,21 @@ class RouteService
             return route($routename_act, $parz);
         }
 
+<<<<<<< HEAD
         return '#'.$routename_act;
+=======
+        return '#' . $routename_act;
+>>>>>>> laraxot/master
     }
 
     // se n=0 => 'container0'
     // se n=1 => 'containers.container1'
     /**
+<<<<<<< HEAD
      * @param  array<string,string>  $params
+=======
+     * @param array<string,string> $params
+>>>>>>> laraxot/master
      */
     public static function getRoutenameN(array $params): string
     {
@@ -115,8 +167,13 @@ class RouteService
             $tmp[] = 'admin';
         }
 
+<<<<<<< HEAD
         for ($i = 0; $i <= $n; $i++) {
             $tmp[] = 'container'.$i;
+=======
+        for ($i = 0; $i <= $n; ++$i) {
+            $tmp[] = 'container' . $i;
+>>>>>>> laraxot/master
         }
 
         $tmp[] = $act;
@@ -187,7 +244,11 @@ class RouteService
      * $url = str_replace(url(''), '', route($route_name, $route_params));
      * } catch (\Exception $e) {
      * if (request()->input('debug', false)) {
+<<<<<<< HEAD
      * dddx([
+=======
+     * dd([
+>>>>>>> laraxot/master
      * 'route_name' => $route_name,
      * 'route_params' => $route_params,
      * 'line' => __LINE__,
@@ -203,7 +264,11 @@ class RouteService
      * }
      */
     /**
+<<<<<<< HEAD
      * @param  array<string,string>  $params
+=======
+     * @param array<string,string> $params
+>>>>>>> laraxot/master
      */
     public static function urlLang(array $params = []): string
     {
@@ -275,13 +340,22 @@ class RouteService
     /**
      * Function getAct.
      *
+<<<<<<< HEAD
      * @throws \Exception
+=======
+     * @throws Exception
+>>>>>>> laraxot/master
      */
     public static function getAct(): string
     {
         $route_action = Route::currentRouteAction();
+<<<<<<< HEAD
         if ($route_action === null) {
             throw new \Exception('$route_action is null');
+=======
+        if (null === $route_action) {
+            throw new Exception('$route_action is null');
+>>>>>>> laraxot/master
         }
 
         $act = Str::after($route_action, '@');
@@ -301,13 +375,22 @@ class RouteService
     /**
      * Function.
      *
+<<<<<<< HEAD
      * @throws \Exception
+=======
+     * @throws Exception
+>>>>>>> laraxot/master
      */
     public static function getModuleName(): string
     {
         $route_action = Route::currentRouteAction();
+<<<<<<< HEAD
         if ($route_action === null) {
             throw new \Exception('$route_action is null');
+=======
+        if (null === $route_action) {
+            throw new Exception('$route_action is null');
+>>>>>>> laraxot/master
         }
 
         return Str::between($route_action, 'Modules\\', '\Http');
@@ -316,13 +399,22 @@ class RouteService
     /**
      * Function.
      *
+<<<<<<< HEAD
      * @throws \Exception
+=======
+     * @throws Exception
+>>>>>>> laraxot/master
      */
     public static function getControllerName(): string
     {
         $route_action = Route::currentRouteAction();
+<<<<<<< HEAD
         if ($route_action === null) {
             throw new \Exception('$route_action is null');
+=======
+        if (null === $route_action) {
+            throw new Exception('$route_action is null');
+>>>>>>> laraxot/master
         }
 
         return Str::between($route_action, 'Http\Controllers\\', 'Controller');
@@ -333,6 +425,7 @@ class RouteService
         $controllerName = self::getControllerName();
         $tmp_arr = explode('\\', $controllerName);
 
+<<<<<<< HEAD
         $routeCurrent = Route::current();
         /** @var array<string, mixed> $params */
         $params = $routeCurrent instanceof \Illuminate\Routing\Route ? $routeCurrent->parameters() : [];
@@ -355,4 +448,20 @@ class RouteService
     }
 
     public function execute(): void {}
+=======
+        $params = getRouteParameters();
+        [$containers, $items] = params2ContainerItem($params);
+
+        $params['containers'] = implode('.', $containers);
+
+        return collect($tmp_arr)
+            ->filter(static fn($item): bool => !\in_array($item, ['Module', 'Item'], false))
+            ->map(static function ($item) use ($params) {
+                $item = Str::snake($item);
+
+                return $params[$item] ?? $item;
+            })
+            ->implode('.');
+    }
+>>>>>>> laraxot/master
 }

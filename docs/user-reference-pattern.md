@@ -1,6 +1,9 @@
 # Pattern per Riferimenti User - Laraxot
 
+<<<<<<< HEAD
 **Data**: 2025-01-10
+=======
+>>>>>>> laraxot/master
 **Obiettivo**: Standardizzare i riferimenti a User nel sistema Laraxot
 **Problema**: PHPStan segnala errori su `App\Models\User` che non esiste
 
@@ -223,4 +226,8 @@ if ($user instanceof UserContract) {
 
 ---
 
+<<<<<<< HEAD
 *Ultimo aggiornamento: 2025-01-10*
+=======
+*Ultimo aggiornamento: [DATE]*
+>>>>>>> laraxot/master

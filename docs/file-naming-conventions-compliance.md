@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 # File Naming Conventions Compliance - 2026-01-09
 
 **Data**: 2026-01-09  
+=======
+# File Naming Conventions Compliance - [DATE]
+
+>>>>>>> laraxot/master
 **Status**: ✅ **COMPLETATO**
 
 ---
@@ -33,7 +38,11 @@
 
 ### Pattern di Rinomina
 ```
+<<<<<<< HEAD
 ❌ PRIMA: nome-file-2026-01-09.md
+=======
+❌ PRIMA: nome-file-[DATE].md
+>>>>>>> laraxot/master
 ✅ DOPO: nome-file.md
 ```
 
@@ -79,4 +88,8 @@
 
 **Status**: ✅ **COMPLETATO**
 
+<<<<<<< HEAD
 **Ultimo aggiornamento**: 2026-01-09
+=======
+**Ultimo aggiornamento**: [DATE]
+>>>>>>> laraxot/master

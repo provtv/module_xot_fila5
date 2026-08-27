@@ -18,7 +18,11 @@ Identificazione sistematica di codice replicato e opportunità di ottimizzazione
 class ModuleServiceProvider extends XotBaseServiceProvider
 {
     public string $name = 'ModuleName';
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> laraxot/master
     public function boot(): void
     {
         parent::boot();
@@ -44,7 +48,11 @@ abstract class XotBaseServiceProvider extends ServiceProvider
         $reflection = new \ReflectionClass($this);
         $modulePath = dirname($reflection->getFileName(), 3);
         $moduleNamespace = $this->extractModuleNamespace($reflection);
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> laraxot/master
         // Auto-load resources basato su convenzioni
         $this->autoLoadViews($modulePath, $moduleNamespace);
         $this->autoLoadTranslations($modulePath, $moduleNamespace);
@@ -76,7 +84,11 @@ protected function getHeading(): ?string
     return __($this->getTranslationKey() . '.heading');
 }
 
+<<<<<<< HEAD
 protected function getDescription(): ?string
+=======
+protected function getDescription(): ?string  
+>>>>>>> laraxot/master
 {
     return __($this->getTranslationKey() . '.description');
 }
@@ -96,14 +108,22 @@ trait HasWidgetConfigurationTrait
 {
     use HasTranslationPatternsTrait;
     use HasCachingPatternsTrait;
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> laraxot/master
     protected function configureWidget(): void
     {
         $this->heading = $this->getTranslatedHeading();
         $this->description = $this->getTranslatedDescription();
         $this->configureCaching();
     }
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> laraxot/master
     protected function getWidgetTranslationPrefix(): string
     {
         return 'widgets.' . Str::snake(class_basename($this));
@@ -129,13 +149,21 @@ abstract class XotBaseFormComponent extends Field
     use HasFieldConfigurationTrait;
     use HasValidationPatternsTrait;
     use HasTranslationPatternsTrait;
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> laraxot/master
     protected function setUp(): void
     {
         parent::setUp();
         $this->autoConfigureField();
     }
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> laraxot/master
     protected function autoConfigureField(): void
     {
         $this->label($this->getAutoLabel())
@@ -164,12 +192,20 @@ class QueryAnalysisService
     {
         // Logica centralizzata per analisi query duplicate
     }
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> laraxot/master
     public function identifySlowQueries(array $queries, int $threshold = 100): array
     {
         // Logica per identificazione query lente
     }
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> laraxot/master
     public function generateOptimizationSuggestions(array $analysis): array
     {
         // Generazione automatica suggerimenti ottimizzazione
@@ -196,16 +232,28 @@ abstract class XotBaseMigration extends Migration
         if ($this->hasTable($tableName)) {
             return;
         }
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> laraxot/master
         Schema::create($tableName, function (Blueprint $table) use ($schemaCallback) {
             $table->id();
             $schemaCallback($table);
             $table->timestamps();
+<<<<<<< HEAD
 
             // Standard indexes
             $this->addStandardIndexes($table);
         });
 
+=======
+            
+            // Standard indexes
+            $this->addStandardIndexes($table);
+        });
+        
+>>>>>>> laraxot/master
         $this->addTableComment($tableName, $this->getTableComment());
     }
 }
@@ -263,10 +311,17 @@ abstract class XotBaseMigration extends Migration
 - **Query analysis** automatica
 
 ## 🔗 Collegamenti Correlati
+<<<<<<< HEAD
 - [XotBaseServiceProvider.php](Modules/Xot/app/Providers/XotBaseServiceProvider.php)
 - [XotBaseWidget.php](Modules/Xot/app/Filament/Widgets/XotBaseWidget.php)
 - [XotBaseFormComponent.php](Modules/Xot/app/Filament/Forms/Components/XotBaseFormComponent.php)
 - [AnalyzePerformanceCommand.php](Modules/Xot/app/Console/Commands/AnalyzePerformanceCommand.php)
+=======
+- [XotBaseServiceProvider.php](/var/www/html/_bases/base_quaeris_fila3_mono/laravel/Modules/Xot/app/Providers/XotBaseServiceProvider.php)
+- [XotBaseWidget.php](/var/www/html/_bases/base_quaeris_fila3_mono/laravel/Modules/Xot/app/Filament/Widgets/XotBaseWidget.php)
+- [XotBaseFormComponent.php](/var/www/html/_bases/base_quaeris_fila3_mono/laravel/Modules/Xot/app/Filament/Forms/Components/XotBaseFormComponent.php)
+- [AnalyzePerformanceCommand.php](/var/www/html/_bases/base_quaeris_fila3_mono/laravel/Modules/Xot/app/Console/Commands/AnalyzePerformanceCommand.php)
+>>>>>>> laraxot/master
 
 ---
 *Analisi completata con principi DRY + KISS | Data: $(date)*

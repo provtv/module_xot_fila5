@@ -410,5 +410,9 @@ public function mount(): void
 
 ---
 
+<<<<<<< HEAD
 **Last Updated:** 28 January 2026
+=======
+**
+>>>>>>> laraxot/master
 **Maintainer:** Laraxot Team + Claude Opus 4.5

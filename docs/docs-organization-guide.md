@@ -220,7 +220,11 @@ find Modules/*/docs -type f | sort -f | uniq -di
 
 ```bash
 # Sposta file vecchi in _archive con data
+<<<<<<< HEAD
 mv old-file.md _archive/2024-01-15-old-file.md
+=======
+mv old-file.md _archive/[DATE]-old-file.md
+>>>>>>> laraxot/master
 ```
 
 **Quando archiviare**:
@@ -239,7 +243,11 @@ mv old-file.md _archive/2024-01-15-old-file.md
 ✅ CORRETTO:
 [Link](./same-folder/file.md)
 [Link](../parent-folder/file.md)
+<<<<<<< HEAD
 [Link](../../Modules/Other/docs/file.md)
+=======
+[Link](../../modules/other/docs/file.md)
+>>>>>>> laraxot/master
 
 ❌ SBAGLIATO:
 [Link](/absolute/path/file.md)
@@ -565,7 +573,11 @@ Per migliorare questa guida:
 
 ---
 
+<<<<<<< HEAD
 **Ultimo aggiornamento**: 2025-01-06
+=======
+**Ultimo aggiornamento**: [DATE]
+>>>>>>> laraxot/master
 **Versione**: 1.0
 **Status**: ✅ Active
 **Maintainer**: Team Laraxot

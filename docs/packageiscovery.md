@@ -339,7 +339,11 @@ The command discovered these categories:
 **Module Packages**:
 - Xot → XotServiceProvider + AdminPanelProvider
 - User → UserServiceProvider + AdminPanelProvider + PassportServiceProvider
+<<<<<<< HEAD
 - Activity, Tenant, UI, Geo, Media, Notify, Chart, Lang, Cms, Job, Gdpr, DbForge, CloudStorage, Limesurvey, healthcare_app
+=======
+- Activity, Tenant, UI, Geo, Media, Notify, Chart, Lang, Cms, Job, Gdpr, DbForge, CloudStorage, Limesurvey, Quaeris
+>>>>>>> laraxot/master
 
 **Supporting Libraries**:
 - Blade icons, Carbon, Excel, Debugbar, IDE Helper, PHPInsights
@@ -350,7 +354,11 @@ Each module uses this pattern:
 
 ```json
 {
+<<<<<<< HEAD
     "name": "laraxot/module_user_fila5",
+=======
+    "name": "laraxot/module_user_fila3",
+>>>>>>> laraxot/master
     "extra": {
         "laravel": {
             "providers": [
@@ -550,4 +558,8 @@ In this codebase with 80+ packages and 17 modules, package discovery is not just
 **Related Documentation**:
 - [Service Provider Architecture](./service-provider-architecture.md)
 - [Module System](./packages.md)
+<<<<<<< HEAD
 - [XotBase Pattern](../../CLAUDE.md#xotbase-pattern)
+=======
+- [XotBase Pattern](../../CLAUDE.md#xotbase-pattern)
+>>>>>>> laraxot/master

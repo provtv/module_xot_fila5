@@ -11,7 +11,11 @@ return [
         'dashboard' => 'Tableau de bord',
         'login' => 'Connexion',
         'macros' => 'Macros',
+<<<<<<< HEAD
         'register' => "S'enregistrer",
+=======
+        'register' => 'S\'enregistrer',
+>>>>>>> laraxot/master
         'user' => [
             'account' => 'My Account',
             'administration' => 'Administration',
@@ -20,4 +24,20 @@ return [
             'profile' => 'Profile',
         ],
     ],
+<<<<<<< HEAD
+=======
+    'navigation' => [
+        'label' => 'Missing Navigation Label',
+        'plural_label' => 'Missing Navigation Plural Label',
+        'group' => 'Missing Group',
+        'icon' => 'heroicon-o-puzzle-piece',
+        'sort' => 100,
+    ],
+    'label' => 'Missing Label',
+    'plural_label' => 'Missing Plural label',
+    'fields' => [
+    ],
+    'actions' => [
+    ],
+>>>>>>> laraxot/master
 ];

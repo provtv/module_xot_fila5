@@ -20,8 +20,12 @@
   - Array access on mixed types
   - Invalid binary operations
 
+<<<<<<< HEAD
 #### healthcare_app Module (Complex Issues)
 #### ModuloEsempio Module (Complex Issues)
+=======
+#### Quaeris Module (Complex Issues)
+>>>>>>> laraxot/master
 - **Errors:** ~500+ across chart export and quantum actions
 - **Main Issues:**
   - Missing class definitions (quantum-related classes)
@@ -56,12 +60,18 @@ Function preg_replace is unsafe to use. Please add 'use function Safe\preg_repla
 #### Missing Class Definitions
 ```php
 // ❌ Quantum-related classes not found
+<<<<<<< HEAD
 Class Modules\healthcare_app\Actions\Charts\Quantum\GenerateConsciousChartAction
 implements unknown interface Spatie\Queable\Contracts\Queable.
 Class Modules\healthcare_app\Actions\Charts\Quantum\GenerateConsciousChartAction
 Class Modules\ModuloEsempio\Actions\Charts\Quantum\GenerateConsciousChartAction
 implements unknown interface Spatie\Queable\Contracts\Queable.
 Class Modules\ModuloEsempio\Actions\Charts\Quantum\GenerateConsciousChartAction
+=======
+Class Modules\Quaeris\Actions\Charts\Quantum\GenerateConsciousChartAction
+implements unknown interface Spatie\Queable\Contracts\Queable.
+Class Modules\Quaeris\Actions\Charts\Quantum\GenerateConsciousChartAction
+>>>>>>> laraxot/master
 uses unknown trait Spatie\Queable\QueableAction.
 ```
 
@@ -79,6 +89,7 @@ uses unknown trait Spatie\Queable\QueableAction.
 3. **Function Safety**: Missing Safe library imports
 4. **Return Types**: Incorrect PHPDoc return types
 
+<<<<<<< HEAD
 #### healthcare_app Module Issues
 **Primary Files:**
 - `healthcare_app/app/Actions/Charts/Export/ExportFilamentWidgetToPngAction.php` (100+ errors)
@@ -89,6 +100,13 @@ uses unknown trait Spatie\Queable\QueableAction.
 - `ModuloEsempio/app/Actions/Charts/Export/ExportFilamentWidgetToPngAction.php` (100+ errors)
 - `ModuloEsempio/app/Actions/Charts/Export/ExportFilamentWidgetToSvgAction.php` (150+ errors)
 - `ModuloEsempio/app/Actions/Charts/Quantum/GenerateConsciousChartAction.php` (200+ errors)
+=======
+#### Quaeris Module Issues
+**Primary Files:**
+- `Quaeris/app/Actions/Charts/Export/ExportFilamentWidgetToPngAction.php` (100+ errors)
+- `Quaeris/app/Actions/Charts/Export/ExportFilamentWidgetToSvgAction.php` (150+ errors)
+- `Quaeris/app/Actions/Charts/Quantum/GenerateConsciousChartAction.php` (200+ errors)
+>>>>>>> laraxot/master
 
 **Key Problems:**
 1. **Missing Classes**: Quantum architecture classes not implemented
@@ -422,9 +440,12 @@ jobs:
 
 ### Module-Specific Documentation
 
+<<<<<<< HEAD
 - [Geo Module Errors](../../Geo/docs/phpstan-errors-2025-12-16.md)
 - [Cms Module Errors](../../Cms/docs/phpstan-errors-2025-12-16.md)
 - [Activity Module Errors](../../Activity/docs/phpstan-errors-2025-12-16.md)
+=======
+>>>>>>> laraxot/master
 - [Geo Module Errors](../../geo/docs/phpstan-errors-2025-12-16.md)
 - [Cms Module Errors](../../cms/docs/phpstan-errors-2025-12-16.md)
 - [Activity Module Errors](../../activity/docs/phpstan-errors-2025-12-16.md)
@@ -768,7 +789,11 @@ test('it can create and manage tenants', function (): void {
 - ✅ **check-all-modules.sh** - Controllo batch tutti i moduli
 
 ### Path Corretti
+<<<<<<< HEAD
 - ✅ **mysql-db-connector.js** - Path corretto a `base_techplanner_fila5_mono`
+=======
+- ✅ **mysql-db-connector.js** - Path corretto a `base_techplanner_fila4_mono`
+>>>>>>> laraxot/master
 
 ---
 
@@ -1061,4 +1086,8 @@ class MyModel extends BaseModel
 
 **Stato**: 🔄 Analisi Completata - Correzioni in Corso
 **phpstan.neon**: ✅ INTOCCATO
+<<<<<<< HEAD
 **Approccio**: DRY + KISS + Type Safety
+=======
+**Approccio**: DRY + KISS + Type Safety
+>>>>>>> laraxot/master

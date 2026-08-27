@@ -1,6 +1,10 @@
 ## stato analisi phpstan
 
+<<<<<<< HEAD
 - **data**: 2025-11-12
+=======
+- **data**: [DATE]
+>>>>>>> laraxot/master
 - **ambito**: `Modules/Xot`
 - **comando**: `./vendor/bin/phpstan analyse Modules/Xot --memory-limit=-1`
 - **risultato**: ✅ nessun errore (livello massimo configurato)

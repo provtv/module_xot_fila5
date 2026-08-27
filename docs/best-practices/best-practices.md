@@ -711,8 +711,12 @@ public function createModel(array $data): MioModello
 
 ## 🔗 **Collegamenti e Riferimenti**
 
+<<<<<<< HEAD
 - [**README.md**](README.md) - Documentazione principale del modulo
 - [**README.md**](README.md) - Documentazione principale del modulo
+=======
+- [**README.md**](readme.md) - Documentazione principale del modulo
+>>>>>>> laraxot/master
 - [**Architettura**](architecture.md) - Architettura del modulo Xot
 - [**Best Practices Globali**](../project_docs/best-practices.md) - Best practices globali
 
@@ -766,4 +770,8 @@ public function process(UserContract $user) {
 public function process(\Modules\User\Models\User $user) {
     // Codice
 }
+<<<<<<< HEAD
 ```
+=======
+```
+>>>>>>> laraxot/master

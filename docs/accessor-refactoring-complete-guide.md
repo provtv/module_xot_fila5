@@ -303,12 +303,21 @@ Moduli con logica inline complessa:
 ## Collegamenti Documentazione
 
 ### Guide Filosofiche
+<<<<<<< HEAD
 - [Accessor Refactoring Philosophy](../../Sigma/docs/accessor-refactoring-philosophy.md)
 - [Philosophy Guide PTVX](../../../docs/philosophy-guide.md)
 
 ### Guide Operative
 - [Accessor Refactoring Roadmap](../../Sigma/docs/accessor-refactoring-roadmap.md)
 - [Progress Tracker](../../Sigma/docs/refactoring-progress-tracker.md)
+=======
+- [Accessor Refactoring Philosophy](../../sigma/docs/accessor-refactoring-philosophy.md)
+- [Philosophy Guide PTVX](../../../docs/philosophy-guide.md)
+
+### Guide Operative
+- [Accessor Refactoring Roadmap](../../sigma/docs/accessor-refactoring-roadmap.md)
+- [Progress Tracker](../../sigma/docs/refactoring-progress-tracker.md)
+>>>>>>> laraxot/master
 - [File Locking Pattern](./file-locking-pattern.md)
 
 ### Guide Tecniche
@@ -316,12 +325,21 @@ Moduli con logica inline complessa:
 - [Accessor Audit Cross-Modules](./accessor-audit-cross-modules.md)
 
 ### Implementazioni Modulo
+<<<<<<< HEAD
 - [Sigma - SchedaTrait](../../Sigma/docs/session-complete-summary.md)
 - [IndennitaCondizioniLavoro - Audit](../../IndennitaCondizioniLavoro/docs/accessor-guard-audit.md)
 
 ---
 
 **Creato**: 2025-01-29
+=======
+- [Sigma - SchedaTrait](../../sigma/docs/session-complete-summary.md)
+- [IndennitaCondizioniLavoro - Audit](../../indennitacondizionilavoro/docs/accessor-guard-audit.md)
+
+---
+
+**Creato**: [DATE]
+>>>>>>> laraxot/master
 **Tipo**: Guida Completa Master
 **Scope**: Tutti i moduli progetto
 **Status**: 📚 Documentazione completa, 🔄 Implementazione 13% globale

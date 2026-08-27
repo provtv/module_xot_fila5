@@ -1,6 +1,10 @@
 # Autonomous Priority Rule
 
+<<<<<<< HEAD
 **Date**: 2025-12-18
+=======
+**Date**: [DATE]
+>>>>>>> laraxot/master
 **Context**: "Super Mucca" Mode
 
 ## The Rule

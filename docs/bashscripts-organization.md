@@ -201,7 +201,10 @@ Le seguenti sottocartelle esistevano già e contengono script specifici:
 
 ## Implementazione
 
+<<<<<<< HEAD
 La riorganizzazione è stata completata il **2025-01-29** seguendo questi passaggi:
+=======
+>>>>>>> laraxot/master
 La riorganizzazione è stata completata il **[DATE]** seguendo questi passaggi:
 
 1. **Creazione sottocartelle tematiche**
@@ -227,6 +230,7 @@ Per mantenere questa organizzazione:
 
 ---
 
+<<<<<<< HEAD
 *Ultimo aggiornamento: 2025-01-29*
 *Responsabile: Sistema di Automazione Laraxot*
 # Organizzazione Cartella BashScripts
@@ -368,3 +372,7 @@ Per mantenere questa organizzazione:
 
 *Ultimo aggiornamento: 2025-01-29*
 *Responsabile: Sistema di Automazione Laraxot*
+=======
+*Ultimo aggiornamento: [DATE]*
+*Responsabile: Sistema di Automazione Laraxot*
+>>>>>>> laraxot/master

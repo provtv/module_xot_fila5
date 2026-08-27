@@ -78,16 +78,27 @@ return [
             'js_injected_from_controller' => 'Javascript Injected from a Controller',
             'using_blade_extensions' => 'إستخدام Blade Extensions',
             'using_access_helper' => [
+<<<<<<< HEAD
                 'array_permissions' => "Using Access Helper with Array of Permission Names or ID's where the user does have to possess all.",
                 'array_permissions_not' => "Using Access Helper with Array of Permission Names or ID's where the user does not have to possess all.",
                 'array_roles' => "Using Access Helper with Array of Role Names or ID's where the user does have to possess all.",
                 'array_roles_not' => "Using Access Helper with Array of Role Names or ID's where the user does not have to possess all.",
+=======
+                'array_permissions' => 'Using Access Helper with Array of Permission Names or ID\'s where the user does have to possess all.',
+                'array_permissions_not' => 'Using Access Helper with Array of Permission Names or ID\'s where the user does not have to possess all.',
+                'array_roles' => 'Using Access Helper with Array of Role Names or ID\'s where the user does have to possess all.',
+                'array_roles_not' => 'Using Access Helper with Array of Role Names or ID\'s where the user does not have to possess all.',
+>>>>>>> laraxot/master
                 'permission_id' => 'Using Access Helper with Permission ID',
                 'permission_name' => 'Using Access Helper with Permission Name',
                 'role_id' => 'Using Access Helper with Role ID',
                 'role_name' => 'Using Access Helper with Role Name',
             ],
+<<<<<<< HEAD
             'view_console_it_works' => "View console, you should see 'it works!' which is coming from FrontendController@index",
+=======
+            'view_console_it_works' => 'View console, you should see \'it works!\' which is coming from FrontendController@index',
+>>>>>>> laraxot/master
             'you_can_see_because' => 'أنت ترى هذا لأن لديك دور \':role\'!',
             'you_can_see_because_permission' => 'أنت ترى هذا لإن لديك صلاحية \':permission\'!',
         ],
@@ -97,4 +108,20 @@ return [
         ],
         'welcome_to' => 'مرحبا بك في :place',
     ],
+<<<<<<< HEAD
+=======
+    'navigation' => [
+        'label' => 'Missing Navigation Label',
+        'plural_label' => 'Missing Navigation Plural Label',
+        'group' => 'Missing Group',
+        'icon' => 'heroicon-o-puzzle-piece',
+        'sort' => 100,
+    ],
+    'label' => 'Missing Label',
+    'plural_label' => 'Missing Plural label',
+    'fields' => [
+    ],
+    'actions' => [
+    ],
+>>>>>>> laraxot/master
 ];

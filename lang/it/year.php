@@ -1,6 +1,7 @@
 <?php
 
 declare(strict_types=1);
+<<<<<<< HEAD
 
 return [
     'fields' => [
@@ -33,6 +34,12 @@ return [
         ],
         'delete' => [
             'label' => 'Elimina Year',
+=======
+ return [
+    'fields' => [
+        'anno' => [
+            'label' => 'anno',
+>>>>>>> laraxot/master
         ],
     ],
 ];

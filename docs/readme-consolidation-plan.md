@@ -1,6 +1,9 @@
 # Piano Consolidamento File readme.md Duplicati
 
+<<<<<<< HEAD
 **Data**: 2026-01-09  
+=======
+>>>>>>> laraxot/master
 **Metodologia**: Super Mucca  
 **Regola**: Solo `README.md` (maiuscolo) permesso, `readme.md` (minuscolo) da rimuovere
 
@@ -63,4 +66,8 @@
 
 **Status**: 🧘 **IN PIANIFICAZIONE**
 
+<<<<<<< HEAD
 **Ultimo aggiornamento**: 2026-01-09
+=======
+**Ultimo aggiornamento**: [DATE]
+>>>>>>> laraxot/master

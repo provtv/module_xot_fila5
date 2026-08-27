@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 > **Version**: 3.0 - DRY + KISS Documentation Refactor
 > **Status**: ✅ Core Framework Module
 > **Last Updated**: December 2025
@@ -87,6 +88,56 @@ php artisan xot:status
 **Critical Level**: 🔴 Maximum (Required by all modules)
 **Architecture**: SOLID, DRY, KISS compliant
 **Quality**: PHPStan Level 10, 95% test coverage
+=======
+# 🚀 Xot - Il MOTORE FONDAMENTALE di Laraxot! ⚡
+
+[![PHP Version](https://img.shields.io/badge/PHP-8.2+-blue.svg)](https://php.net)
+[![Laravel Version](https://img.shields.io/badge/Laravel-12.x-orange.svg)](https://laravel.com)
+[![Filament Version](https://img.shields.io/badge/Filament-4.x-purple.svg)](https://filamentphp.com)
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![Code Quality](https://img.shields.io/badge/code%20quality-A+-brightgreen.svg)](.codeclimate.yml)
+[![Test Coverage](https://img.shields.io/badge/coverage-98%25-success.svg)](phpunit.xml.dist)
+[![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)](https://github.com/laraxot/xot)
+[![Downloads](https://img.shields.io/badge/downloads-10k+-blue.svg)](https://packagist.org/packages/laraxot/xot)
+[![Stars](https://img.shields.io/badge/stars-1k+-yellow.svg)](https://github.com/laraxot/xot)
+[![Issues](https://img.shields.io/github/issues/laraxot/xot)](https://github.com/laraxot/xot/issues)
+[![Pull Requests](https://img.shields.io/github/issues-pr/laraxot/xot)](https://github.com/laraxot/xot/pulls)
+[![Security](https://img.shields.io/badge/security-A+-brightgreen.svg)](https://github.com/laraxot/xot/security)
+[![Documentation](https://img.shields.io/badge/docs-complete-brightgreen.svg)](docs/README.md)
+[![Base Classes](https://img.shields.io/badge/base%20classes-50+-orange.svg)](app/Models/)
+[![Service Providers](https://img.shields.io/badge/providers-20+-purple.svg)](app/Providers/)
+[![Traits](https://img.shields.io/badge/traits-15+-blue.svg)](app/Models/Traits/)
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/laraxot/xot/main/docs/assets/xot-banner.png" alt="Xot Banner" width="800">
+  <br>
+  <em>🎯 Il modulo base che POTENZIA tutti gli altri moduli Laraxot!</em>
+</div>
+
+## 🌟 Perché Xot è il CUORE di Laraxot?
+
+### 🚀 **Architettura Fondamentale**
+- **🏗️ Base Classes**: 50+ classi base per tutti i moduli
+- **⚡ Service Providers**: 20+ provider per funzionalità core
+- **🎯 Traits Avanzati**: 15+ trait per funzionalità condivise
+- **🔧 Migrations**: Pattern XotBaseMigration per consistenza
+
+### 🎯 **Funzionalità Core Avanzate**
+- **📊 Base Models**: Modelli base con funzionalità comuni
+- **🔐 Authentication**: Sistema di autenticazione avanzato
+- **👥 Authorization**: Policy e permessi granulari
+- **🌍 Localization**: Sistema di traduzioni strutturato
+- **📱 Filament Integration**: Componenti Filament base
+- **🔄 State Management**: Gestione stati con Spatie
+
+### 🏗️ **Pattern Architetturali**
+- **DRY Compliance**: Zero duplicazione di codice
+- **SOLID Principles**: Architettura pulita e manutenibile
+- **Type Safety**: PHPStan livello 10+ per tutto il codice
+- **Performance**: Ottimizzazioni per applicazioni enterprise
+
+## 🎯 Funzionalità PRINCIPALI
+>>>>>>> laraxot/master
 
 ### 🏗️ **Base Classes Avanzate**
 ```php
@@ -94,7 +145,11 @@ php artisan xot:status
 class XotBaseModel extends Model
 {
     use HasFactory, SoftDeletes, HasUuid;
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> laraxot/master
     // Funzionalità automatiche
     protected $guarded = [];
     protected $casts = ['created_at' => 'datetime'];
@@ -119,13 +174,21 @@ class XotBaseServiceProvider extends ServiceProvider
 class XotBaseUser extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable, HasRoles;
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> laraxot/master
     // Relazioni automatiche
     public function teams(): BelongsToMany
     {
         return $this->belongsToMany(Team::class);
     }
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> laraxot/master
     public function tenants(): BelongsToMany
     {
         return $this->belongsToMany(Tenant::class);
@@ -139,12 +202,20 @@ class XotBaseUser extends Authenticatable
 class XotBaseResource extends Resource
 {
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> laraxot/master
     public static function getNavigationGroup(): ?string
     {
         return __('xot::navigation.groups.main');
     }
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> laraxot/master
     public static function getNavigationSort(): ?int
     {
         return 1;
@@ -240,11 +311,19 @@ class MyResource extends XotBaseResource
 class MyModuleServiceProvider extends XotBaseServiceProvider
 {
     protected string $module_name = 'MyModule';
+<<<<<<< HEAD
 
     public function boot(): void
     {
         parent::boot(); // Carica automaticamente views, translations, migrations
 
+=======
+    
+    public function boot(): void
+    {
+        parent::boot(); // Carica automaticamente views, translations, migrations
+        
+>>>>>>> laraxot/master
         // Aggiungi funzionalità specifiche del modulo
         $this->registerCustomComponents();
     }
@@ -262,7 +341,11 @@ return new class extends XotBaseMigration
         if ($this->hasTable('my_table')) {
             return;
         }
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> laraxot/master
         Schema::create('my_table', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
@@ -280,7 +363,11 @@ trait HasParent
     {
         return $this->belongsTo(static::class, 'parent_id');
     }
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> laraxot/master
     public function children(): HasMany
     {
         return $this->hasMany(static::class, 'parent_id');
@@ -450,6 +537,7 @@ Questo progetto è distribuito sotto la licenza MIT. Vedi il file [LICENSE](LICE
   <br>
   <em>Costruito con ❤️ per la comunità Laravel</em>
 </div>
+<<<<<<< HEAD
 # ⚡ Xot
 
 [![Core](https://img.shields.io/badge/Role-Platform%20Core-6A1B9A.svg)](#)
@@ -506,3 +594,5 @@ Stack frontoffice: **Tailwind · Alpine · Lit · DaisyUI · Flowbite · Filamen
 ---
 
 **Modulo** `xot` · **Laraxot** · **FixCity Platform** · PHPStan 10 · Filament 5
+=======
+>>>>>>> laraxot/master

@@ -414,7 +414,11 @@ $graph->Stroke();
 - **API Reference**: https://jpgraph.net/doc/
 - **FAQ**: https://jpgraph.net/doc/faq.html
 
+<<<<<<< HEAD
 ## 🔄 **Integrazione con healthcare_app**
+=======
+## 🔄 **Integrazione con Quaeris**
+>>>>>>> laraxot/master
 
 ### **Pattern di Integrazione**
 ```php

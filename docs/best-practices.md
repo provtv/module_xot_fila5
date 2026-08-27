@@ -757,7 +757,11 @@ public function createModel(array $data): MioModello
 
 ## 🔗 **Collegamenti e Riferimenti**
 
+<<<<<<< HEAD
 - [**README.md**](README.md) - Documentazione principale del modulo
+=======
+- [**README.md**](readme.md) - Documentazione principale del modulo
+>>>>>>> laraxot/master
 - [**Architettura**](architecture.md) - Architettura del modulo Xot
 - [**Best Practices Globali**](../docs/best-practices.md) - Best practices globali
 

@@ -50,7 +50,11 @@ userfactory.php              → ELIMINA
 - `Pest.php` - Uppercase per convenzione Pest framework
 - `CHANGELOG.md`, `LICENSE`, `CONTRIBUTING.md` - Uppercase per visibilità
 
+<<<<<<< HEAD
 ## 🗑️ Cleanup Effettuato (2025-11-04)
+=======
+## 🗑️ Cleanup Effettuato ([DATE])
+>>>>>>> laraxot/master
 
 ### Modulo Xot (6 file)
 ```bash
@@ -246,6 +250,7 @@ EOF
 Ogni modulo interessato ha documentazione dettagliata:
 
 - [Xot Module](./case-sensitivity-rules.md)
+<<<<<<< HEAD
 - [Gdpr Module](../../Gdpr/docs/case-sensitivity-rules.md)
 - [Lang Module](../../Lang/docs/case-sensitivity-rules.md)
 - [Media Module](../../Media/docs/case-sensitivity-rules.md)
@@ -253,6 +258,15 @@ Ogni modulo interessato ha documentazione dettagliata:
 - [Rating Module](../../Rating/docs/case-sensitivity-rules.md)
 - [Tenant Module](../../Tenant/docs/case-sensitivity-rules.md)
 - [User Module](../../User/docs/case-sensitivity-rules.md)
+=======
+- [Gdpr Module](../../gdpr/docs/case-sensitivity-rules.md)
+- [Lang Module](../../lang/docs/case-sensitivity-rules.md)
+- [Media Module](../../media/docs/case-sensitivity-rules.md)
+- [Notify Module](../../notify/docs/case-sensitivity-rules.md)
+- [Rating Module](../../rating/docs/case-sensitivity-rules.md)
+- [Tenant Module](../../tenant/docs/case-sensitivity-rules.md)
+- [User Module](../../user/docs/case-sensitivity-rules.md)
+>>>>>>> laraxot/master
 
 ## 🔧 Prevenzione
 
@@ -310,7 +324,11 @@ python3 /path/to/check_duplicates.py
 ### Internal Documentation
 - [Modulo Xot Architecture](./architecture.md)
 - [Bashscripts Location Policy](./bashscripts-location-policy.md)
+<<<<<<< HEAD
 - [CLAUDE.md - Project Guidelines](CLAUDE.md)
+=======
+- [CLAUDE.md - Project Guidelines](claude.md)
+>>>>>>> laraxot/master
 
 ## 🎯 Conclusioni
 
@@ -336,6 +354,10 @@ Questa non è solo una regola tecnica, è una **filosofia di sviluppo**:
 
 ---
 
+<<<<<<< HEAD
 **Ultimo aggiornamento**: 2025-11-04
+=======
+**Ultimo aggiornamento**: [DATE]
+>>>>>>> laraxot/master
 **Status**: ✅ Cleanup completato, enforcement attivo
 **Revisione**: Trimestrale (ogni 3 mesi)

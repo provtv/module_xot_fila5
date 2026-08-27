@@ -1,6 +1,10 @@
 # PHPStan Remaining Errors Analysis
 
+<<<<<<< HEAD
 **Data:** 2025-01-10
+=======
+**Data:** [DATE]
+>>>>>>> laraxot/master
 **PHPStan Level:** max
 **Initial Errors:** 19,337
 **Final Errors:** 92

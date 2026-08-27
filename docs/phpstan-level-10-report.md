@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # PHPStan Livello 10 (MAX) - Report Qualità Codice
 
 ## Data Analisi
@@ -216,3 +217,41 @@ vendor/bin/phpstan analyse --level=8 --error-format=github
 - [Assert Best Practices](https://github.com/webmozarts/assert)
 - [PHP Type System](https://www.php.net/manual/en/language.types.php)
 - [Generics in PHP](https://phpstan.org/blog/generics-in-php-using-phpdocs)
+=======
+ ------ -------------- 
+  Line   app/Filament  
+         /Resources/R  
+         elationManag  
+         ers/XotBaseR  
+         elationManag  
+         er.php        
+ ------ -------------- 
+  :149   Call to       
+         function      
+         is_object()   
+         with          
+         Filament\Tab  
+         les\Columns\  
+         Column|Filam  
+         ent\Tables\C  
+         olumns\Layou  
+         t\Component   
+         will always   
+         evaluate to   
+         true.         
+         🪪            
+         function.alr  
+         eadyNarrowed  
+         Type          
+         ✏️  app/Filam  
+         ent/Resource  
+         s/RelationMa  
+         nagers/XotBa  
+         seRelationMa  
+         nager.php     
+ ------ -------------- 
+
+
+ [ERROR] Found 1 error 
+
+>>>>>>> laraxot/master

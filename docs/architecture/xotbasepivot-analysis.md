@@ -84,7 +84,11 @@ use Updater;  // Presente in TUTTI
 
 ```php
 // ❌ VARIA PER MODULO
+<<<<<<< HEAD
 protected $connection = 'user';    // o 'blog', 'ptv', 'geo', ...
+=======
+protected $connection = 'user';    // o 'blog', 'fixcity', 'geo', ...
+>>>>>>> laraxot/master
 ```
 
 ---

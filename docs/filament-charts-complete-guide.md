@@ -921,7 +921,11 @@ class BlogPostsChartTest extends TestCase
 - [Awesome Chart.js](https://github.com/chartjs/awesome)
 
 ### Documentazione PTVX
+<<<<<<< HEAD
 - [Widget Implementation Rules](WIDGET_IMPLEMENTATION_RULES.md)
+=======
+- [Widget Implementation Rules](./widget_implementation_rules.md)
+>>>>>>> laraxot/master
 - [Export Chart to PNG/SVG](./chart-export-guide.md)
 - [Filament Best Practices](./filament-best-practices.md)
 
@@ -940,7 +944,11 @@ class BlogPostsChartTest extends TestCase
 Per garantire un look "Premium" e la possibilità di esportare PDF perfetti in ambito Quaeris/PTVX:
 
 ### 1. Configurazione Professionale
+<<<<<<< HEAD
 Consultare la guida **[LimeSurvey Professional Charts Guide](../../../Limesurvey/docs/professional-charts-and-pdfs.md)**.
+=======
+Consultare la guida **[LimeSurvey Professional Charts Guide](../../../limesurvey/docs/professional-charts-and-pdfs.md)**.
+>>>>>>> laraxot/master
 - Font unificati (Inter/Roboto).
 - Legende posizionate correttamente.
 - Gridline minimali.
@@ -952,5 +960,9 @@ Pattern:
 2.  Iniettare gli stessi dati del Dashboard (usando Actions).
 3.  Impostare `animation: false` nelle opzioni Chart.js per la stampa.
 
+<<<<<<< HEAD
 Vedi: **[Dashboard Best Practices](../../../Limesurvey/docs/dashboard-best-practices.md)**.
+=======
+Vedi: **[Dashboard Best Practices](../../../limesurvey/docs/dashboard-best-practices.md)**.
+>>>>>>> laraxot/master
 

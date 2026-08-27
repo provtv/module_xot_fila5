@@ -1,5 +1,6 @@
 <?php
 
+<<<<<<< HEAD
 declare(strict_types=1);
 
 namespace Modules\Xot\Models\Traits;
@@ -31,3 +32,12 @@ trait HasXotFactory
         return $factory;
     }
 }
+=======
+namespace Modules\Xot\Models\Traits;
+
+trait HasXotFactory
+{
+    // Trait temporaneo per permettere a phpstan di funzionare
+    // Da implementare correttamente in seguito
+}
+>>>>>>> laraxot/master

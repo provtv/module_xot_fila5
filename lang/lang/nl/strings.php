@@ -76,18 +76,31 @@ return [
             'js_injected_from_controller' => 'Javascript geinjecteerd vanuit de Controller',
             'using_blade_extensions' => 'Gebruik makend van Blade Extensies',
             'using_access_helper' => [
+<<<<<<< HEAD
                 'array_permissions' => "Gebruik makend van Access Helper met Array van Permissies van Namen of id's waar de gebruiker ze allemaal benodigd is.",
                 'array_permissions_not' => "Gebruik makend van Access Helper met Array van Permissies van Namen of id's waar de gebruiker ze niet allemaal benodigd is.",
                 'array_roles' => "Gebruik makend van Access Helper met Array van Permissies van Rolnamen of id's waar de gebruiker ze allemaal benodigd is.",
                 'array_roles_not' => "Gebruik makend van Access Helper met Array van Permissies van Rolnamen of id's waar de gebruiker ze niet allemaal benodigd is.",
+=======
+                'array_permissions' => 'Gebruik makend van Access Helper met Array van Permissies van Namen of id\'s waar de gebruiker ze allemaal benodigd is.',
+                'array_permissions_not' => 'Gebruik makend van Access Helper met Array van Permissies van Namen of id\'s waar de gebruiker ze niet allemaal benodigd is.',
+                'array_roles' => 'Gebruik makend van Access Helper met Array van Permissies van Rolnamen of id\'s waar de gebruiker ze allemaal benodigd is.',
+                'array_roles_not' => 'Gebruik makend van Access Helper met Array van Permissies van Rolnamen of id\'s waar de gebruiker ze niet allemaal benodigd is.',
+>>>>>>> laraxot/master
                 'permission_id' => 'Gebruik makend van Access Helper met Permissie ID',
                 'permission_name' => 'Gebruik makend van Access Helper met Permission Naam',
                 'role_id' => 'Gebruik makend van Access Helper met Rol ID',
                 'role_name' => 'Gebruik makend van Access Helper met Rol Naam',
             ],
+<<<<<<< HEAD
             'view_console_it_works' => "U zou 'it works!' in de console moeten zien, welke komt vanuit FrontendController@index",
             'you_can_see_because' => "U kunt dit zien omdat u de rol heeft van ':role'!",
             'you_can_see_because_permission' => "U kunt dit zien omdat u de permissie van ':permission'!",
+=======
+            'view_console_it_works' => 'U zou \'it works!\' in de console moeten zien, welke komt vanuit FrontendController@index',
+            'you_can_see_because' => 'U kunt dit zien omdat u de rol heeft van \':role\'!',
+            'you_can_see_because_permission' => 'U kunt dit zien omdat u de permissie van \':permission\'!',
+>>>>>>> laraxot/master
         ],
         'user' => [
             'profile_updated' => 'Profiel succesvol bijgewerkt.',
@@ -95,4 +108,20 @@ return [
         ],
         'welcome_to' => 'Welkom bij :place',
     ],
+<<<<<<< HEAD
+=======
+    'navigation' => [
+        'label' => 'Missing Navigation Label',
+        'plural_label' => 'Missing Navigation Plural Label',
+        'group' => 'Missing Group',
+        'icon' => 'heroicon-o-puzzle-piece',
+        'sort' => 100,
+    ],
+    'label' => 'Missing Label',
+    'plural_label' => 'Missing Plural label',
+    'fields' => [
+    ],
+    'actions' => [
+    ],
+>>>>>>> laraxot/master
 ];

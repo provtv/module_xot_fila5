@@ -102,10 +102,20 @@ public static function getModel(): null|string
 ## Collegamenti
 - [XotBasePage](../app/Filament/Resources/Pages/XotBasePage.php)
 - [Filament Page Documentation](https://filamentphp.com/docs/3.x/resources/pages)
+<<<<<<< HEAD
 - [Laraxot Extension Rules](../../../../docs/laraxot-conventions.md)
+=======
+- [Laraxot Extension Rules](../../../docs/laraxot-conventions.md)
+>>>>>>> laraxot/master
 
 ## Note di Manutenzione
 - **Data correzione**: Gennaio 2025
 - **Versione Filament**: 3.x
 - **PHP Version**: 8.3+
+<<<<<<< HEAD
 - **Livello PHPStan**: 9+
+=======
+- **Livello PHPStan**: 9+
+
+*Ultimo aggiornamento: gennaio 2025*
+>>>>>>> laraxot/master

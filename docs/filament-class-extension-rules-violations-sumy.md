@@ -43,8 +43,12 @@ Rimuovere tutte le proprietà e metodi vietati dalle classi che estendono `XotBa
 4. OauthPersonalAccessClientResource - 5 violazioni rimosse
 5. PersonalAccessTokenResource - 1 violazione rimossa
 
+<<<<<<< HEAD
 ### Modulo healthcare_app (5 Resources + 7 Pages)
 ### Modulo ExternalProject (5 Resources + 7 Pages)
+=======
+### Modulo Quaeris (5 Resources + 7 Pages)
+>>>>>>> laraxot/master
 6. ContactResource - 1 violazione rimossa
 7. CustomerResource - 2 violazioni rimosse
 8. QuestionChartResource - 1 violazione rimossa
@@ -102,4 +106,8 @@ I seguenti prompt sono stati migliorati seguendo DRY+KISS+SOLID+ROBUST+Laraxot:
 - [ ] Verificare altri moduli per violazioni simili
 - [ ] Creare script di verifica automatica per prevenire future violazioni
 - [ ] Aggiornare documentazione moduli interessati
+<<<<<<< HEAD
 - [ ] Verificare che tutti i file di traduzione abbiano tutte le chiavi obbligatorie
+=======
+- [ ] Verificare che tutti i file di traduzione abbiano tutte le chiavi obbligatorie
+>>>>>>> laraxot/master

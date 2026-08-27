@@ -6,7 +6,11 @@ return [
     'backend' => [
         'access' => [
             'users' => [
+<<<<<<< HEAD
                 'delete_user_confirm' => "Are you sure you want to delete this user permanently? Anywhere in the application that references this user's id will most likely error. Proceed at your own risk. This can not be un-done.",
+=======
+                'delete_user_confirm' => 'Are you sure you want to delete this user permanently? Anywhere in the application that references this user\'s id will most likely error. Proceed at your own risk. This can not be un-done.',
+>>>>>>> laraxot/master
                 'if_confirmed_off' => '(If confirmed is off)',
                 'restore_user_confirm' => 'Restore this user to its original state?',
             ],
@@ -34,9 +38,15 @@ return [
                 'offline' => 'Offline',
             ],
             'you_have' => [
+<<<<<<< HEAD
                 'messages' => "{0} You don't have messages|{1} You have 1 message|[2,Inf] You have :number messages",
                 'notifications' => "{0} You don't have notifications|{1} You have 1 notification|[2,Inf] You have :number notifications",
                 'tasks' => "{0} You don't have tasks|{1} You have 1 task|[2,Inf] You have :number tasks",
+=======
+                'messages' => '{0} You don\'t have messages|{1} You have 1 message|[2,Inf] You have :number messages',
+                'notifications' => '{0} You don\'t have notifications|{1} You have 1 notification|[2,Inf] You have :number notifications',
+                'tasks' => '{0} You don\'t have tasks|{1} You have 1 task|[2,Inf] You have :number tasks',
+>>>>>>> laraxot/master
             ],
         ],
         'search' => [
@@ -76,18 +86,31 @@ return [
             'js_injected_from_controller' => 'Javascript Injected from a Controller',
             'using_blade_extensions' => 'Using Blade Extensions',
             'using_access_helper' => [
+<<<<<<< HEAD
                 'array_permissions' => "Using Access Helper with Array of Permission Names or ID's where the user does have to possess all.",
                 'array_permissions_not' => "Using Access Helper with Array of Permission Names or ID's where the user does not have to possess all.",
                 'array_roles' => "Using Access Helper with Array of Role Names or ID's where the user does have to possess all.",
                 'array_roles_not' => "Using Access Helper with Array of Role Names or ID's where the user does not have to possess all.",
+=======
+                'array_permissions' => 'Using Access Helper with Array of Permission Names or ID\'s where the user does have to possess all.',
+                'array_permissions_not' => 'Using Access Helper with Array of Permission Names or ID\'s where the user does not have to possess all.',
+                'array_roles' => 'Using Access Helper with Array of Role Names or ID\'s where the user does have to possess all.',
+                'array_roles_not' => 'Using Access Helper with Array of Role Names or ID\'s where the user does not have to possess all.',
+>>>>>>> laraxot/master
                 'permission_id' => 'Using Access Helper with Permission ID',
                 'permission_name' => 'Using Access Helper with Permission Name',
                 'role_id' => 'Using Access Helper with Role ID',
                 'role_name' => 'Using Access Helper with Role Name',
             ],
+<<<<<<< HEAD
             'view_console_it_works' => "View console, you should see 'it works!' which is coming from FrontendController@index",
             'you_can_see_because' => "You can see this because you have the role of ':role'!",
             'you_can_see_because_permission' => "You can see this because you have the permission of ':permission'!",
+=======
+            'view_console_it_works' => 'View console, you should see \'it works!\' which is coming from FrontendController@index',
+            'you_can_see_because' => 'You can see this because you have the role of \':role\'!',
+            'you_can_see_because_permission' => 'You can see this because you have the permission of \':permission\'!',
+>>>>>>> laraxot/master
         ],
         'user' => [
             'profile_updated' => 'Profile successfully updated.',
@@ -95,4 +118,20 @@ return [
         ],
         'welcome_to' => 'Welcome to :place',
     ],
+<<<<<<< HEAD
+=======
+    'navigation' => [
+        'label' => 'Missing Navigation Label',
+        'plural_label' => 'Missing Navigation Plural Label',
+        'group' => 'Missing Group',
+        'icon' => 'heroicon-o-puzzle-piece',
+        'sort' => 100,
+    ],
+    'label' => 'Missing Label',
+    'plural_label' => 'Missing Plural label',
+    'fields' => [
+    ],
+    'actions' => [
+    ],
+>>>>>>> laraxot/master
 ];

@@ -148,7 +148,11 @@ public static function getFormSchema(): array
 ### Composer.json
 ```json
 {
+<<<<<<< HEAD
     "name": "laraxot/module_xot_fila5",
+=======
+    "name": "laraxot/module_xot_fila3",
+>>>>>>> laraxot/master
     "autoload": {
         "psr-4": {
             "Modules\\Xot\\": "app/",
@@ -793,4 +797,8 @@ $count = CountAction::execute(User::class);
 - [ ] Implementare cache opzionale
 - [ ] Aggiungere supporto per filtri
 - [ ] Ottimizzare per grandi dataset
+<<<<<<< HEAD
 - [ ] Aggiungere test di performance
+=======
+- [ ] Aggiungere test di performance
+>>>>>>> laraxot/master

@@ -76,7 +76,11 @@ patient::images/logo-horizontal.svg -> /Modules/Patient/resources/images/logo-ho
 ```
 
 ## Collegamenti
+<<<<<<< HEAD
 - [Configurazione Generale](configuration.md)
+=======
+- [Configurazione Generale](CONFIGURATION.md)
+>>>>>>> laraxot/master
 - [Risoluzione dei Loghi](LOGO_RESOLUTION.md) - **IMPORTANTE**: Processo dettagliato di risoluzione dei loghi
 - [Gestione Asset](assets.md)
 - [Struttura Temi](themes.md)
@@ -89,9 +93,15 @@ patient::images/logo-horizontal.svg -> /Modules/Patient/resources/images/logo-ho
 
 ## Collegamenti Correlati
 - [Configurazione Moduli](MODULE_CONFIGURATION.md)
+<<<<<<< HEAD
 - [Gestione Risorse](assets.md)
 - [Linee Guida Sviluppo](DEVELOPMENT_GUIDELINES.md)
 - [Troubleshooting](troubleshooting.md)
+=======
+- [Gestione Risorse](ASSETS.md)
+- [Linee Guida Sviluppo](DEVELOPMENT_GUIDELINES.md)
+- [Troubleshooting](TROUBLESHOOTING.md)
+>>>>>>> laraxot/master
 
 ## Vedi Anche
 - [Documentazione UI](../../UI/docs/configuration.md)
@@ -169,6 +179,12 @@ patient::images/logo-horizontal.svg -> /Modules/Patient/resources/images/logo-ho
    - Assicurarsi che tutte le versioni necessarie del logo siano presenti
 
 ## Collegamenti
+<<<<<<< HEAD
 - [Configurazione Generale](configuration.md)
 - [Gestione Asset](assets.md)
 - [Struttura Temi](themes.md)
+=======
+- [Configurazione Generale](CONFIGURATION.md)
+- [Gestione Asset](assets.md)
+- [Struttura Temi](themes.md) 
+>>>>>>> laraxot/master

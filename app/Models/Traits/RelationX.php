@@ -18,16 +18,23 @@ use Webmozart\Assert\Assert;
 trait RelationX
 {
     /**
+<<<<<<< HEAD
      * @template TRelatedModel of Model
      *
      * @param  class-string<TRelatedModel>  $related  Related model class
+=======
+     * @param  class-string<Model>  $related  Related model class
+>>>>>>> laraxot/master
      * @param  class-string<Model>|string|null  $_table  Pivot table name
      * @param  string|null  $foreignPivotKey  Foreign pivot key
      * @param  string|null  $relatedPivotKey  Related pivot key
      * @param  string|null  $parentKey  Parent key
      * @param  string|null  $relatedKey  Related key
      * @param  string|null  $relation  Relation name
+<<<<<<< HEAD
      * @return BelongsToMany<TRelatedModel, $this, Pivot, 'pivot'>
+=======
+>>>>>>> laraxot/master
      */
     public function belongsToManyX(
         string $related,
@@ -38,8 +45,11 @@ trait RelationX
         ?string $relatedKey = null,
         ?string $relation = null,
     ): BelongsToMany {
+<<<<<<< HEAD
         /** @var class-string<TRelatedModel> $related */
         Assert::subclassOf($related, Model::class);
+=======
+>>>>>>> laraxot/master
         Assert::isInstanceOf(
             $related_model = app($related),
             Model::class,
@@ -63,8 +73,12 @@ trait RelationX
         }
         // }
 
+<<<<<<< HEAD
         /** @var BelongsToMany<TRelatedModel, $this, Pivot, 'pivot'> $relationInstance */
         $relationInstance = $this->belongsToMany(
+=======
+        return $this->belongsToMany(
+>>>>>>> laraxot/master
             related: $related,
             table: $table,
             foreignPivotKey: $foreignPivotKey,
@@ -76,8 +90,11 @@ trait RelationX
             ->using($pivot::class)
             ->withPivot($pivotFields)
             ->withTimestamps();
+<<<<<<< HEAD
 
         return $relationInstance;
+=======
+>>>>>>> laraxot/master
     }
 
     /**
@@ -98,20 +115,33 @@ trait RelationX
         ?string $relatedKey = null,
         ?string $relation = null,
         bool $inverse = false,
+<<<<<<< HEAD
     ): MorphToMany {
         /** @var class-string<TRelatedModel> $related */
         Assert::subclassOf($related, Model::class);
+=======
+    ) {
+>>>>>>> laraxot/master
         $pivot = $this->guessMorphPivot($related);
         $table = $pivot->getTable();
         $pivotFields = $pivot->getFillable();
 
+<<<<<<< HEAD
+=======
+        $pivotDbName = $pivot->getConnection()->getDatabaseName();
+        $dbName = $this->getConnection()->getDatabaseName();
+>>>>>>> laraxot/master
         // $relatedDbName = $related_model->getConnection()->getDatabaseName();
         if ($table === null) {
             $table = $pivot->getTable();
         }
 
+<<<<<<< HEAD
         /** @var MorphToMany<TRelatedModel, $this, MorphPivot, 'pivot'> $relationInstance */
         $relationInstance = $this->morphToMany(
+=======
+        return $this->morphToMany(
+>>>>>>> laraxot/master
             related: $related,
             name: $name,
             table: $table,
@@ -125,11 +155,20 @@ trait RelationX
             ->using($pivot::class)
             ->withPivot($pivotFields)
             ->withTimestamps();
+<<<<<<< HEAD
 
         return $relationInstance;
     }
 
     public function guessMorphPivot(string $related, ?string $_class = null): MorphPivot
+=======
+    }
+
+    /**
+     * @return MorphPivot
+     */
+    public function guessMorphPivot(string $related, ?string $_class = null)
+>>>>>>> laraxot/master
     {
         $class = $this::class;
         $pivot_name = class_basename($related).'Morph';
@@ -146,8 +185,14 @@ trait RelationX
      *
      * @param  string  $related  The related model class name
      * @param  string|class-string|null  $class  The class to use for parent class lookup (used internally)
+<<<<<<< HEAD
      */
     public function guessPivot(string $related, ?string $class = null): Pivot
+=======
+     * @return Pivot
+     */
+    public function guessPivot(string $related, ?string $class = null)
+>>>>>>> laraxot/master
     {
         $class ??= $this::class;
         $model_names = [
@@ -155,6 +200,10 @@ trait RelationX
             class_basename($related),
         ];
         sort($model_names);
+<<<<<<< HEAD
+=======
+        $msg = '';
+>>>>>>> laraxot/master
         $pivot_name = implode('', $model_names);
 
         $pivot_class = $this->guessPivotFullClass($pivot_name, $related, $class);
@@ -168,6 +217,7 @@ trait RelationX
     public function guessPivotFullClass(string $pivot_name, string $related, ?string $class = null): string
     {
         $class ??= $this::class;
+<<<<<<< HEAD
 
         // Try class-based pivot first
         $pivot_class = $this->buildPivotClassName($class, $pivot_name);
@@ -214,5 +264,33 @@ trait RelationX
         $new_pivot_name = implode('', $model_names);
 
         return $this->guessPivotFullClass($new_pivot_name, $related, $parent_class);
+=======
+        $pivot_class = Str::of($class)
+            ->beforeLast('\\')
+            ->append('\\'.$pivot_name)
+            ->toString();
+        if (! class_exists($pivot_class)) {
+            $pivot_class = Str::of($related)
+                ->beforeLast('\\')
+                ->append('\\'.$pivot_name)
+                ->toString();
+        }
+        if (! class_exists($pivot_class)) {
+            if (get_parent_class($class) !== false) {
+                if (! Str::endsWith(get_parent_class($class), 'Morph')) {
+                    $model_names = [
+                        class_basename(get_parent_class($class)),
+                        class_basename($related),
+                    ];
+                    sort($model_names);
+                    $pivot_name = implode('', $model_names);
+                }
+
+                return $this->guessPivotFullClass($pivot_name, $related, get_parent_class($class));
+            }
+        }
+
+        return $pivot_class;
+>>>>>>> laraxot/master
     }
 }

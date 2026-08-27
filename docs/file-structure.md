@@ -22,12 +22,17 @@ Warning: Ambiguous class resolution, "Modules\Cms\Database\Seeders\CmsDatabaseSe
 - **Factories**: `PageFactory.php`, `ConfFactory.php`, `ModuleFactory.php`, etc.
 
 ## Correct File Structure Patterns
+<<<<<<< HEAD
+=======
+
+>>>>>>> laraxot/master
 ### ✅ Option 1: Traditional Laravel Structure (Recommended)
 
 ```
 Modules/{ModuleName}/
 ├── database/
 │   ├── factories/
+<<<<<<< HEAD
 │   ├── migrations/
 │   └── seeders/
 └── app/
@@ -35,11 +40,23 @@ Modules/{ModuleName}/
     ├── Application/
     ├── Events/
     ├── Listeners/
+=======
+│   │   ├── PageFactory.php
+│   │   ├── ConfFactory.php
+│   │   └── ...
+│   ├── migrations/
+│   │   ├── 2024_01_01_000000_create_pages_table.php
+│   │   └── ...
+│   └── seeders/
+│       └── CmsDatabaseSeeder.php
+└── app/
+>>>>>>> laraxot/master
     ├── Models/
     ├── Filament/
     └── ...
 ```
 
+<<<<<<< HEAD
 ### ❌ WRONG: Root-Level Capitalized Directories
 
 ```
@@ -53,6 +70,8 @@ Modules/{ModuleName}/
 ```
 
 ## Why This Matters
+=======
+>>>>>>> laraxot/master
 ### ✅ Option 2: App-Centric Structure
 
 ```
@@ -97,7 +116,11 @@ Modules/{ModuleName}/
 
 ### 1. **Autoloader Confusion**
 - PHP autoloader cannot determine which file to use
+<<<<<<< HEAD
 - "First found" approach leads to un<nome progetto>able behavior
+=======
+- "First found" approach leads to unpredictable behavior
+>>>>>>> laraxot/master
 - Different environments may load different files
 
 ### 2. **Maintenance Nightmare**
@@ -177,8 +200,12 @@ Modules/
 │   │   ├── migrations/
 │   │   └── seeders/
 │   └── app/
+<<<<<<< HEAD
 └── healthcare_app/
 └── ExternalProject/
+=======
+└── Quaeris/
+>>>>>>> laraxot/master
     ├── database/
     │   ├── factories/
     │   ├── migrations/
@@ -214,4 +241,8 @@ find Modules -name "*.php" | grep -E "(factories|seeders)" | sort
 
 ---
 
+<<<<<<< HEAD
 **Philosophy Summary**: In Laraxot, consistency and <nome progetto>ability are more valuable than flexibility. Choose one file structure pattern and apply it consistently across all modules. Eliminate ambiguity to ensure reliable, <nome progetto>able behavior.
+=======
+**Philosophy Summary**: In Laraxot, consistency and predictability are more valuable than flexibility. Choose one file structure pattern and apply it consistently across all modules. Eliminate ambiguity to ensure reliable, predictable behavior.
+>>>>>>> laraxot/master

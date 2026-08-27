@@ -8,7 +8,11 @@ return [
             'users' => [
                 'delete_user_confirm' => 'Sei sicuro di voler eliminare definitivamente questo utente? Ovunque ci sia un riferimento a questo utente all\'interno dell\'applicazione si vedrà un errore. Procedi a tuo rischio e pericolo, non si potrà annullare questa operazione.',
                 'if_confirmed_off' => '(Se non è confermato)',
+<<<<<<< HEAD
                 'restore_user_confirm' => "Ripristinare l'utente al suo stato originario?",
+=======
+                'restore_user_confirm' => 'Ripristinare l\'utente al suo stato originario?',
+>>>>>>> laraxot/master
             ],
         ],
         'dashboard' => [
@@ -82,6 +86,7 @@ return [
             'js_injected_from_controller' => 'Javascript iniettato da un controller',
             'using_blade_extensions' => 'Usando estensioni Blade',
             'using_access_helper' => [
+<<<<<<< HEAD
                 'array_permissions' => "Si sta usando l'Access Helper con un array di nomi o ID di permessi, l'utente li deve possedere tutti.",
                 'array_permissions_not' => "Si sta usando l'Access Helper con un array di nomi o ID di permessi, l'utente non li deve possedere tutti.",
                 'array_roles' => "Si sta usando l'Access Helper con un array di nomi o ID di ruoli, l'utente li deve possedere tutti.",
@@ -92,6 +97,18 @@ return [
                 'role_name' => "Si sta usando l'Access Helper con un nome di ruolo",
             ],
             'view_console_it_works' => "Apri la console Javascript del browser, dovresti vedere 'it works!' generato da FrontendController@index",
+=======
+                'array_permissions' => 'Si sta usando l\'Access Helper con un array di nomi o ID di permessi, l\'utente li deve possedere tutti.',
+                'array_permissions_not' => 'Si sta usando l\'Access Helper con un array di nomi o ID di permessi, l\'utente non li deve possedere tutti.',
+                'array_roles' => 'Si sta usando l\'Access Helper con un array di nomi o ID di ruoli, l\'utente li deve possedere tutti.',
+                'array_roles_not' => 'Si sta usando l\'Access Helper con un array di nomi o ID di ruoli, l\'utente non li deve possedere tutti.',
+                'permission_id' => 'Si sta usando l\'Access Helper con un ID di permesso',
+                'permission_name' => 'Si sta usando l\'Access Helper con un nome di permesso',
+                'role_id' => 'Si sta usando l\'Access Helper con un ID di ruolo',
+                'role_name' => 'Si sta usando l\'Access Helper con un nome di ruolo',
+            ],
+            'view_console_it_works' => 'Apri la console Javascript del browser, dovresti vedere \'it works!\' generato da FrontendController@index',
+>>>>>>> laraxot/master
             'you_can_see_because' => 'Puoi vedere questo perché il tuo ruolo è \':role\'!',
             'you_can_see_because_permission' => 'Puoi vedere questo perché hai il permesso \':permission\'!',
         ],
@@ -101,4 +118,20 @@ return [
         ],
         'welcome_to' => 'Benvenuto su :place',
     ],
+<<<<<<< HEAD
+=======
+    'navigation' => [
+        'label' => 'Missing Navigation Label',
+        'plural_label' => 'Missing Navigation Plural Label',
+        'group' => 'Missing Group',
+        'icon' => 'heroicon-o-puzzle-piece',
+        'sort' => 100,
+    ],
+    'label' => 'Missing Label',
+    'plural_label' => 'Missing Plural label',
+    'fields' => [
+    ],
+    'actions' => [
+    ],
+>>>>>>> laraxot/master
 ];

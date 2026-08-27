@@ -1,7 +1,13 @@
+<<<<<<< HEAD
 # Fix Race Condition firstOrCreate con UUID - 2026-01-22
 
 **Status**: ✅ Completato  
 **Data**: 2026-01-22
+=======
+# Fix Race Condition firstOrCreate con UUID - [DATE]
+
+**Status**: ✅ Completato  
+>>>>>>> laraxot/master
 
 ## Problema
 
@@ -163,10 +169,19 @@ expect($profileA->id)->toBe($profileB->id);
 
 ## Riferimenti
 
+<<<<<<< HEAD
 - [Activity Module: firstOrCreate Error Handling](../../Activity/docs/errori/attributerawvalues-null-firstorcreate.md)
 - [User Profile Models: Transaction Patterns](../../User/docs/user-profile-models.md)
 - [Query Safety Principle](../../../docs/operational-rules/query-safety-principle.md)
 
 **Versione**: 1.0  
 **Ultimo aggiornamento**: 2026-01-22  
+=======
+- [Activity Module: firstOrCreate Error Handling](../../activity/docs/errori/attributerawvalues-null-firstorcreate.md)
+- [User Profile Models: Transaction Patterns](../../user/docs/user-profile-models.md)
+- [Query Safety Principle](../../../docs/operational-rules/query-safety-principle.md)
+
+**Versione**: 1.0  
+**Ultimo aggiornamento**: [DATE]  
+>>>>>>> laraxot/master
 **Status**: ✅ Completato

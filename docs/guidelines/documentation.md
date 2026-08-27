@@ -3,8 +3,13 @@
 ## Principi Fondamentali
 
 1. **Struttura Modulare**
+<<<<<<< HEAD
    - Ogni modulo ha la sua documentazione in `/Modules/{ModuleName}/project_docs/`
    - Le regole generali sono in `/Modules/Xot/project_docs/`
+=======
+   - Ogni modulo ha la sua documentazione in `/Modules/{ModuleName}/docs/`
+   - Le regole generali sono in `/Modules/Xot/docs/`
+>>>>>>> laraxot/master
    - La root `/docs` contiene solo indici e collegamenti
 
 2. **Collegamenti Bidirezionali**
@@ -14,7 +19,11 @@
 
 3. **Organizzazione dei Contenuti**
    ```
+<<<<<<< HEAD
    Modules/Xot/project_docs/
+=======
+   Modules/Xot/docs/
+>>>>>>> laraxot/master
    ├── guidelines/           # Linee guida generali
    ├── conventions/          # Convenzioni di codice
    ├── architecture/         # Architettura del framework
@@ -80,7 +89,11 @@ public function example(): void
 
 ### 1. Struttura Base
 ```
+<<<<<<< HEAD
 Modules/{ModuleName}/project_docs/
+=======
+Modules/{ModuleName}/docs/
+>>>>>>> laraxot/master
 ├── README.md              # Panoramica del modulo
 ├── installation.md        # Istruzioni di installazione
 ├── configuration.md       # Configurazione
@@ -159,13 +172,25 @@ php artisan api:generate
 
 ## Collegamenti
 
+<<<<<<< HEAD
 - [Convenzioni di Codice](README.md)
 - [Architettura](../architecture/readme.md)
 - [Best Practices](../best-practices/README.md)
+=======
+- [Convenzioni di Codice](../conventions/readme.md)
+- [Architettura](../architecture/readme.md)
+- [Best Practices](../best-practices/readme.md)
+>>>>>>> laraxot/master
 - [Markdown Guide](https://www.markdownguide.org)
 
 ## Collegamenti tra versioni di documentation.md
 * [documentation.md](docs/rules/documentation.md)
+<<<<<<< HEAD
 * [documentation.md](../../../xot/project_docs/documentation.md)
 * [documentation.md](../../../xot/project_docs/guidelines/documentation.md)
 * [documentation.md](../../../cms/project_docs/roadmap/features/documentation.md)
+=======
+* [documentation.md](../../../xot/docs/documentation.md)
+* [documentation.md](../../../xot/docs/guidelines/documentation.md)
+* [documentation.md](../../../cms/docs/roadmap/features/documentation.md)
+>>>>>>> laraxot/master

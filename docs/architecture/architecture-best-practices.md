@@ -7,7 +7,11 @@ Per tutte le azioni che operano su chiavi di aggregazione specifiche (es. stabi,
 Questa convenzione migliora la leggibilità e la chiarezza del codice, rendendo immediatamente evidente la logica di aggregazione utilizzata.
 
 **Collegamento bidirezionale:**
+<<<<<<< HEAD
 - [Motivazione e applicazione nel modulo Performance](../../Performance/project_docs/azioni_organizzativa.md)
+=======
+- [Motivazione e applicazione nel modulo Performance](../../performance/project_docs/azioni_organizzativa.md)
+>>>>>>> laraxot/master
 
 ## Memo e regole operative permanenti (per tutti i moduli che seguono Xot)
 

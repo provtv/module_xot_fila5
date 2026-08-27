@@ -2,6 +2,10 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> laraxot/master
 return [
     'backend' => [
         'access' => [
@@ -51,10 +55,17 @@ return [
         'voucher' => [
             'title' => 'Voucher Title',
         ],
+<<<<<<< HEAD
         'welcome' => '<p>This is the AdminLTE theme by <a href="https://almsaeedstudio.com/" target="_blank">https://almsaeedstudio.com/</a>. This is a stripped down version with only the necessary styles and scripts to get it running. Download the full version to start adding components to your dashboard.</p>
 <p>All the functionality is for show with the exception of the <strong>User Management</strong> to the left. This boilerplate comes with a fully functional access control library to manage users/roles/permissions.</p>
 <p>Keep in mind it is a work in progress and their may be bugs or other issues I have not come across. I will do my best to fix them as I receive them.</p>
 <p>Hope you enjoy all of the work I have put into this. Please visit the <a href="https://github.com/rappasoft/laravel-5-boilerplate" target="_blank">GitHub</a> page for more information and report any <a href="https://github.com/rappasoft/Laravel-5-Boilerplate/issues" target="_blank">issues here</a>.</p>
+=======
+        'welcome' => '<p>This is the AdminLTE theme by <a href=\"https://almsaeedstudio.com/\" target=\"_blank\">https://almsaeedstudio.com/</a>. This is a stripped down version with only the necessary styles and scripts to get it running. Download the full version to start adding components to your dashboard.</p>
+<p>All the functionality is for show with the exception of the <strong>User Management</strong> to the left. This boilerplate comes with a fully functional access control library to manage users/roles/permissions.</p>
+<p>Keep in mind it is a work in progress and their may be bugs or other issues I have not come across. I will do my best to fix them as I receive them.</p>
+<p>Hope you enjoy all of the work I have put into this. Please visit the <a href=\"https://github.com/rappasoft/laravel-5-boilerplate\" target=\"_blank\">GitHub</a> page for more information and report any <a href=\"https://github.com/rappasoft/Laravel-5-Boilerplate/issues\" target=\"_blank\">issues here</a>.</p>
+>>>>>>> laraxot/master
 <p><strong>This project is very demanding to keep up with given the rate at which the master Laravel branch changes, so any help is appreciated.</strong></p>
 <p>- Anthony Rappa</p>',
     ],
@@ -63,7 +74,11 @@ return [
             'error' => 'Whoops!',
             'greeting' => 'Hello!',
             'regards' => 'Regards,',
+<<<<<<< HEAD
             'trouble_clicking_button' => 'If you’re having trouble clicking the ":actionText" button, copy and paste the URL below into your web browser:',
+=======
+            'trouble_clicking_button' => 'If you’re having trouble clicking the \":actionText\" button, copy and paste the URL below into your web browser:',
+>>>>>>> laraxot/master
             'thank_you_for_using_app' => 'Thank you for using our application!',
             'password_reset_subject' => 'Reset Password',
             'password_cause_of_email' => 'You are receiving this email because we received a password reset request for your account.',
@@ -101,6 +116,7 @@ return [
         ],
         'welcome_to' => 'Welcome to :place',
     ],
+<<<<<<< HEAD
     'navigation' => [
         'label' => 'Missing Navigation Label',
         'plural_label' => 'Missing Navigation Plural Label',
@@ -114,4 +130,6 @@ return [
     ],
     'actions' => [
     ],
+=======
+>>>>>>> laraxot/master
 ];

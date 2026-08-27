@@ -1,9 +1,12 @@
 <?php
 
+<<<<<<< HEAD
 /**
  * da.
  */
 
+=======
+>>>>>>> laraxot/master
 declare(strict_types=1);
 
 return [
@@ -117,7 +120,11 @@ return [
                 ],
             ],
             'territories' => [
+<<<<<<< HEAD
                 'canada' => "Canada's provinser og territorier",
+=======
+                'canada' => 'Canada\'s provinser og territorier',
+>>>>>>> laraxot/master
             ],
             'timezone' => 'Tidszone',
         ],
@@ -136,4 +143,20 @@ return [
             ],
         ],
     ],
+<<<<<<< HEAD
+=======
+    'navigation' => [
+        'label' => 'Missing Navigation Label',
+        'plural_label' => 'Missing Navigation Plural Label',
+        'group' => 'Missing Group',
+        'icon' => 'heroicon-o-puzzle-piece',
+        'sort' => 100,
+    ],
+    'label' => 'Missing Label',
+    'plural_label' => 'Missing Plural label',
+    'fields' => [
+    ],
+    'actions' => [
+    ],
+>>>>>>> laraxot/master
 ];

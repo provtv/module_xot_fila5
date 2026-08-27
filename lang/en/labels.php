@@ -2,6 +2,10 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> laraxot/master
 return [
     'general' => [
         'actions' => 'Action',
@@ -13,6 +17,11 @@ return [
         'buttons' => [
             'save' => 'Save',
             'update' => 'Update',
+<<<<<<< HEAD
+=======
+            'add' => 'Aggiungi',
+            'edit' => 'Cambia',
+>>>>>>> laraxot/master
         ],
         'hide' => 'Hide',
         'inactive' => 'Inactive',
@@ -1007,6 +1016,7 @@ return [
             ],
         ],
     ],
+<<<<<<< HEAD
     'navigation' => [
         'label' => 'Missing Navigation Label',
         'plural_label' => 'Missing Navigation Plural Label',
@@ -1020,4 +1030,6 @@ return [
     ],
     'actions' => [
     ],
+=======
+>>>>>>> laraxot/master
 ];

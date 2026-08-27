@@ -41,8 +41,13 @@ class MyWidget extends XotBaseWidget
 4. Mantenere aggiornate le dipendenze Livewire
 
 ## Collegamenti Correlati
+<<<<<<< HEAD
 - [Documentazione Livewire](https://livewire.laravel.com/project_docs/security)
 - [Documentazione Laravel CSRF](https://laravel.com/project_docs/csrf)
+=======
+- [Documentazione Livewire](https://livewire.laravel.com/docs/security)
+- [Documentazione Laravel CSRF](https://laravel.com/docs/csrf)
+>>>>>>> laraxot/master
 - [XotBaseWidget Implementation](../xot_base_classes.md)
 
 ## Esempio di Correzione
@@ -72,4 +77,8 @@ class FindDoctorAndAppointmentWidget extends XotBaseWidget
 - [ ] Token CSRF gestito nel mount()
 - [ ] Token presente nella vista
 - [ ] Meta tag CSRF nel layout
+<<<<<<< HEAD
 - [ ] Dipendenze Livewire aggiornate
+=======
+- [ ] Dipendenze Livewire aggiornate 
+>>>>>>> laraxot/master

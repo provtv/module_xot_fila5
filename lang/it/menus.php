@@ -38,6 +38,7 @@ return [
     'language-picker' => [
         'language' => 'Lingua',
         'langs' => [
+<<<<<<< HEAD
             'ar' => 'العربية (Arabic]',
             'da' => 'Danese (Danish]',
             'de' => 'Tedesco (German]',
@@ -96,4 +97,20 @@ return [
             'label' => 'Elimina Menus',
         ],
     ],
+=======
+            'ar' => 'العربية (Arabic)',
+            'da' => 'Danese (Danish)',
+            'de' => 'Tedesco (German)',
+            'el' => '(Greek)',
+            'en' => 'Inglese (English)',
+            'es' => 'Spagnol (Spanish)',
+            'fr' => 'Francese (French)',
+            'it' => 'Italiano (Italian)',
+            'nl' => 'Olandese (Dutch)',
+            'pt_BR' => 'Portoghese Brasiliano (Brazilian Portuguese)',
+            'sv' => 'Svedese (Swedish)',
+            'th' => 'Thai',
+        ],
+    ],
+>>>>>>> laraxot/master
 ];

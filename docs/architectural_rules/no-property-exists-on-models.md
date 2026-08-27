@@ -2,7 +2,11 @@
 
 ## **CRITICAL LARAXOT PRINCIPLE**
 
+<<<<<<< HEAD
 **NEVER use `property_exists()` directly on Eloquent model instances.** This rule is fundamental to maintaining a robust, type-safe, and <nome progetto>able codebase within the Laraxot architectural framework.
+=======
+**NEVER use `property_exists()` directly on Eloquent model instances.** This rule is fundamental to maintaining a robust, type-safe, and predictable codebase within the Laraxot architectural framework.
+>>>>>>> laraxot/master
 
 ### **Motivation**
 
@@ -80,4 +84,8 @@ Any instances found (especially outside of `Safe*CastAction` implementations tha
 
 ## **Conclusion**
 
+<<<<<<< HEAD
 By strictly avoiding `property_exists()` on Eloquent models and instead utilizing `hasAttribute()`, direct property access with null coalescing, or specialized `SafeEloquentCastAction` methods, we ensure a more type-safe, robust, and architecturally consistent codebase. This practice aligns perfectly with the principles of DRY, KISS, and SOLID, reinforcing the foundational tenets of Laraxot.
+=======
+By strictly avoiding `property_exists()` on Eloquent models and instead utilizing `hasAttribute()`, direct property access with null coalescing, or specialized `SafeEloquentCastAction` methods, we ensure a more type-safe, robust, and architecturally consistent codebase. This practice aligns perfectly with the principles of DRY, KISS, and SOLID, reinforcing the foundational tenets of Laraxot.
+>>>>>>> laraxot/master

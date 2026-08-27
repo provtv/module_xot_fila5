@@ -132,6 +132,7 @@ php artisan lang:check
 
 ### Modulo Xot
 - [Git Conflicts Resolution](laravel/modules/xot/project_docs/git-conflicts-resolution-2025-01-06.md)
+<<<<<<< HEAD
 - [Conflict Resolution](laravel/Modules/Geo/project_docs/conflict-resolution.md)
 
 ### Modulo User
@@ -139,6 +140,8 @@ php artisan lang:check
 
 ### Modulo Xot
 - [Git Conflicts Resolution](laravel/Modules/Xot/project_docs/git-conflicts-resolution-2025-01-06.md)
+=======
+>>>>>>> laraxot/master
 
 ## Best Practices Applicate
 
@@ -193,18 +196,29 @@ php artisan lang:check
 ## Collegamenti Correlati
 
 ### Documentazione Moduli
+<<<<<<< HEAD
 - [Geo Conflict Resolution](laravel/Modules/Geo/project_docs/conflict-resolution.md)
 - [User Theme Conflicts](laravel/Modules/User/project_docs/theme-translation-conflicts-resolution.md)
+=======
+>>>>>>> laraxot/master
 - [Geo Conflict Resolution](laravel/modules/geo/project_docs/conflict-resolution.md)
 - [User Theme Conflicts](laravel/modules/user/project_docs/theme-translation-conflicts-resolution.md)
 
 ### Documentazione Generale
 - [Translation Standards](../../project_docs/translation-standards.md)
+<<<<<<< HEAD
 - [PHPStan Guidelines](../../project_docs/phpstan-usage.md)
+=======
+- [PHPStan Guidelines](../../project_docs/phpstan_usage.md)
+>>>>>>> laraxot/master
 - [Git Best Practices](../../project_docs/git-best-practices.md)
 
 ---
 
 **Ultimo aggiornamento**: 2025-01-06
 **Autore**: Sistema di correzione automatica
+<<<<<<< HEAD
 **Stato**: ✅ Completato
+=======
+**Stato**: ✅ Completato
+>>>>>>> laraxot/master

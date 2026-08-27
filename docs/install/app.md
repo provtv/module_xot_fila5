@@ -12,6 +12,7 @@ return [
 ~~~
 ### Versione HEAD
 
+<<<<<<< HEAD
 ## Collegamenti tra versioni di app.md
 * [app.md](../../../xot/project_docs/install/app.md)
 * [app.md](../../../tenant/project_docs/it/config/app.md)
@@ -19,3 +20,16 @@ return [
 ### Versione Incoming
 
 ---
+=======
+
+## Collegamenti tra versioni di app.md
+* [app.md](../../../Xot/docs/install/app.md)
+* [app.md](../../../Tenant/docs/it/config/app.md)
+
+
+### Versione Incoming
+
+
+---
+
+>>>>>>> laraxot/master

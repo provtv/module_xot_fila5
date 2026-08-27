@@ -336,16 +336,27 @@ grep -r "function.*\\\Modules\\\.*\\\Models\\\User" --include="*.php" ./
 - [IsTenant Trait](../../User/app/Models/Traits/IsTenant.php)
 
 ### **Documentazione Moduli**
+<<<<<<< HEAD
 - [Cms Architecture](../../Cms/project_docs/architecture-xotdata-pattern.md)
 - [User Module Traits](../../User/project_docs/traits_complete_guide.md)
+=======
+- [Cms Architecture](../../cms/project_docs/architecture-xotdata-pattern.md)
+- [User Module Traits](../../user/project_docs/traits_complete_guide.md)
+>>>>>>> laraxot/master
 - [Testing Strategy](../../<nome progetto>/project_docs/testing/real-data-testing-strategy.md)
 
 ---
 
+<<<<<<< HEAD
 **Ultimo Aggiornamento**: Gennaio 2025
 **Stato**: ✅ Pattern Documentato e Implementato
 ---
 
 **Ultimo Aggiornamento**: Gennaio 2025
+=======
+**Stato**: ✅ Pattern Documentato e Implementato
+---
+
+>>>>>>> laraxot/master
 **Stato**: ✅ Pattern Documentato e Implementato
 **Responsabile**: Team Architettura Laraxot

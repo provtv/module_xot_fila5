@@ -1,6 +1,9 @@
 # ⚠️ REGOLA CRITICA - Namespace Laravel Modules OBBLIGATORIA
 
+<<<<<<< HEAD
 **Data**: 2025-01-22
+=======
+>>>>>>> laraxot/master
 **Status**: ✅ Regola Critica OBBLIGATORIA
 **Fonte**: [Laravel Modules Documentation](https://laravelmodules.com/docs/12/getting-started/introduction)
 
@@ -145,6 +148,10 @@ Prima di ogni commit, verificare:
 
 ---
 
+<<<<<<< HEAD
 **Ultimo aggiornamento**: 2025-01-22
+=======
+**Ultimo aggiornamento**: [DATE]
+>>>>>>> laraxot/master
 **Versione**: 1.0.0
 **Status**: ✅ Regola Critica OBBLIGATORIA

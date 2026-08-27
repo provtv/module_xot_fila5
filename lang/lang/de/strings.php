@@ -76,18 +76,31 @@ return [
             'js_injected_from_controller' => 'Javascript von einem Controller Eingefügt',
             'using_blade_extensions' => 'Verwenden von Blade-Erweiterungen',
             'using_access_helper' => [
+<<<<<<< HEAD
                 'array_permissions' => "Verwenden von Access Helper mit Array von Berechtigungs-Namen oder ID's bei der der Benutzer alle besitzen muss.",
                 'array_permissions_not' => "Verwenden von Access Helper mit Array von Berechtigungs-Namen oder ID's bei der der Benutzer nicht alle besitzen muss.",
                 'array_roles' => "Verwenden von Access Helper mit Array von Rollen-Namen oder ID's bei der der Benutzer alle besitzen muss.",
                 'array_roles_not' => "Verwenden von Access Helper mit Array von Rolen-Namen oder ID's bei der der Benutzer nicht alle besitzen muss.",
+=======
+                'array_permissions' => 'Verwenden von Access Helper mit Array von Berechtigungs-Namen oder ID\'s bei der der Benutzer alle besitzen muss.',
+                'array_permissions_not' => 'Verwenden von Access Helper mit Array von Berechtigungs-Namen oder ID\'s bei der der Benutzer nicht alle besitzen muss.',
+                'array_roles' => 'Verwenden von Access Helper mit Array von Rollen-Namen oder ID\'s bei der der Benutzer alle besitzen muss.',
+                'array_roles_not' => 'Verwenden von Access Helper mit Array von Rolen-Namen oder ID\'s bei der der Benutzer nicht alle besitzen muss.',
+>>>>>>> laraxot/master
                 'permission_id' => 'Verwenden von Access Helper mit Berechtigungs-ID',
                 'permission_name' => 'Verwenden von Access Helper mit Berechtigungs-Name',
                 'role_id' => 'Vverwenden von Access Helper mit Rollen-ID',
                 'role_name' => 'Verwenden von Access Helper mit Rollen-Name',
             ],
+<<<<<<< HEAD
             'view_console_it_works' => "Schaue in die Konsole, du solltest 'it works!' sehen, welches vom FrontendController@index kommt",
             'you_can_see_because' => "Du kannst dies sehen, da du folgende Rolle besitzt ':role'!",
             'you_can_see_because_permission' => "Du kannst dies sehen, da du folgende Berechtigung besitzt ':permission'!",
+=======
+            'view_console_it_works' => 'Schaue in die Konsole, du solltest \'it works!\' sehen, welches vom FrontendController@index kommt',
+            'you_can_see_because' => 'Du kannst dies sehen, da du folgende Rolle besitzt \':role\'!',
+            'you_can_see_because_permission' => 'Du kannst dies sehen, da du folgende Berechtigung besitzt \':permission\'!',
+>>>>>>> laraxot/master
         ],
         'user' => [
             'profile_updated' => 'Profil aktualisiert.',
@@ -95,4 +108,20 @@ return [
         ],
         'welcome_to' => 'Wilkommen bei :place',
     ],
+<<<<<<< HEAD
+=======
+    'navigation' => [
+        'label' => 'Missing Navigation Label',
+        'plural_label' => 'Missing Navigation Plural Label',
+        'group' => 'Missing Group',
+        'icon' => 'heroicon-o-puzzle-piece',
+        'sort' => 100,
+    ],
+    'label' => 'Missing Label',
+    'plural_label' => 'Missing Plural label',
+    'fields' => [
+    ],
+    'actions' => [
+    ],
+>>>>>>> laraxot/master
 ];

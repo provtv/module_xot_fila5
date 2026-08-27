@@ -2,7 +2,10 @@
 
 ## 📋 Riepilogo Intervento
 
+<<<<<<< HEAD
 **Data**: 17 Novembre 2025
+=======
+>>>>>>> laraxot/master
 **Modulo**: Xot
 **Esito**: ✅ **0 ERRORI** - PHPStan Level 10 completato con successo
 
@@ -143,7 +146,13 @@ protected static function newFactory(): Factory
 
 **Pattern applicato**: Rimozione nullable per rispettare covarianza con parent class.
 
+<<<<<<< HEAD
 
+=======
+### 5. TypedHasRecursiveRelationships.php
+
+**File**: `app/Models/Traits/TypedHasRecursiveRelationships.php`
+>>>>>>> laraxot/master
 **Errori risolti**: 2
 
 #### Problema
@@ -311,4 +320,8 @@ $data = process_items();
 
 Il modulo Xot è ora **completamente compliant** con PHPStan Level 10. Tutti i pattern applicati possono essere riutilizzati negli altri moduli per una correzione sistematica e coerente.
 
+<<<<<<< HEAD
 **Status**: ✅ **COMPLETATO** - Pronto per production con type safety massima.
+=======
+**Status**: ✅ **COMPLETATO** - Pronto per production con type safety massima.
+>>>>>>> laraxot/master

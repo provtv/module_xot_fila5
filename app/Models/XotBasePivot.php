@@ -4,7 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Models;
 
+<<<<<<< HEAD
 use Illuminate\Database\Eloquent\Factories\Factory;
+=======
+>>>>>>> laraxot/master
 use Illuminate\Database\Eloquent\Relations\Pivot as EloquentPivot;
 use Illuminate\Support\Carbon;
 use Modules\Xot\Models\Traits\HasXotFactory;
@@ -18,19 +21,30 @@ use function Safe\preg_match;
  * Centralizes common Pivot configurations and behaviors.
  * The $connection is automatically set based on the child class namespace.
  *
+<<<<<<< HEAD
  * @property string|int      $id
  * @property Carbon|null     $created_at
  * @property Carbon|null     $updated_at
  * @property Carbon|null     $deleted_at
+=======
+ * @property string|int $id
+ * @property Carbon|null $created_at
+ * @property Carbon|null $updated_at
+ * @property Carbon|null $deleted_at
+>>>>>>> laraxot/master
  * @property string|int|null $created_by
  * @property string|int|null $updated_by
  * @property string|int|null $deleted_by
  */
 abstract class XotBasePivot extends EloquentPivot
 {
+<<<<<<< HEAD
     /** @use HasXotFactory<Factory<static>> */
     use HasXotFactory;
 
+=======
+    use HasXotFactory;
+>>>>>>> laraxot/master
     use Updater;
 
     /**
@@ -66,12 +80,18 @@ abstract class XotBasePivot extends EloquentPivot
     public function getConnectionName(): ?string
     {
         if (isset($this->connection)) {
+<<<<<<< HEAD
             return $this->normalizeConnectionName($this->connection);
+=======
+            /** @var string */
+            return $this->connection;
+>>>>>>> laraxot/master
         }
 
         // Extract module name from namespace: Modules\User\... → user
         $namespace = static::class;
         $matches = [];
+<<<<<<< HEAD
         if (1 === preg_match('/Modules\\\\(\w+)\\\\/', $namespace, $matches) && isset($matches[1])) {
             return strtolower($matches[1]);
         }
@@ -90,6 +110,13 @@ abstract class XotBasePivot extends EloquentPivot
         }
 
         return $connection;
+=======
+        if (preg_match('/Modules\\\\(\w+)\\\\/', $namespace, $matches) === 1 && isset($matches[1])) {
+            return strtolower($matches[1]);
+        }
+
+        return parent::getConnectionName();
+>>>>>>> laraxot/master
     }
 
     /**

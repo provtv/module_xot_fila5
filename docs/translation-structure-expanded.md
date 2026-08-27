@@ -163,14 +163,24 @@ Il file attuale contiene principalmente etichette generali per l'interfaccia amm
 - [Principi DRY/KISS](/docs/dry-kiss-principles.md)
 
 ### Documentazione Moduli Correlati
+<<<<<<< HEAD
 - [Geo Module Translations](/Modules/Geo/docs/translation-structure-expanded.md)
 - [User Module Translations](/Modules/User/docs/translation-guidelines.md)
+=======
+- [Geo Module Translations](/modules/geo/docs/translation-structure-expanded.md)
+- [User Module Translations](/modules/user/docs/translation-guidelines.md)
+>>>>>>> laraxot/master
 - [Struttura Traduzioni Espansa](/project_docs/translation-structure-expanded.md)
 - [Principi DRY/KISS](/project_docs/dry-kiss-principles.md)
 
 ### Documentazione Moduli Correlati
+<<<<<<< HEAD
 - [Geo Module Translations](/Modules/Geo/project_docs/translation-structure-expanded.md)
 - [User Module Translations](/Modules/User/project_docs/translation-guidelines.md)
+=======
+- [Geo Module Translations](/modules/geo/project_docs/translation-structure-expanded.md)
+- [User Module Translations](/modules/user/project_docs/translation-guidelines.md)
+>>>>>>> laraxot/master
 
 ### File di Implementazione
 - `lang/es/labels.php` - Etichette generali spagnole
@@ -199,4 +209,7 @@ Il file attuale contiene principalmente etichette generali per l'interfaccia amm
 **Stato**: Documentazione completata, implementazione in corso
 **Priorità**: Media (file già corretto linguisticamente)
 **Responsabile**: Sistema automatico DRY/KISS
+<<<<<<< HEAD
 **Data**: 2025-08-08
+=======
+>>>>>>> laraxot/master

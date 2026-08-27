@@ -1,6 +1,10 @@
 # Module Path Error Resolution - Activity Assets Issue
 
+<<<<<<< HEAD
 **Data Creazione**: 2026-01-02
+=======
+**Data Creazione**: [DATE]
+>>>>>>> laraxot/master
 **Status**: 🔧 RESOLVED
 **Versione**: 1.0.0
 
@@ -130,7 +134,11 @@ try {
 
 - [Module Path Generation Philosophy](./module-path-generation-philosophy.md)
 - [Xot Philosophy](./philosophy.md)
+<<<<<<< HEAD
 - [Activity Philosophy](../Activity/docs/philosophy.md)
+=======
+- [Activity Philosophy](../activity/docs/philosophy.md)
+>>>>>>> laraxot/master
 
 ---
 

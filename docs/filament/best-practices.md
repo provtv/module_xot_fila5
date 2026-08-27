@@ -64,7 +64,11 @@ class UserResource extends XotBaseResource
             // Schema del form
         ];
     }
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> laraxot/master
     public static function getTableColumns(): array
     {
         return [
@@ -145,11 +149,19 @@ public static function getFormSchema(): array
         Forms\Components\TextInput::make('name')
             ->required()
             ->maxLength(255),
+<<<<<<< HEAD
 
         Forms\Components\EmailInput::make('email')
             ->required()
             ->unique(ignoreRecord: true),
 
+=======
+            
+        Forms\Components\EmailInput::make('email')
+            ->required()
+            ->unique(ignoreRecord: true),
+            
+>>>>>>> laraxot/master
         Forms\Components\Select::make('role')
             ->options([
                 'admin' => 'Amministratore',
@@ -168,6 +180,7 @@ public static function getTableColumns(): array
         Tables\Columns\TextColumn::make('name')
             ->searchable()
             ->sortable(),
+<<<<<<< HEAD
 
         Tables\Columns\TextColumn::make('email')
             ->searchable()
@@ -177,6 +190,17 @@ public static function getTableColumns(): array
             ->badge()
             ->color('primary'),
 
+=======
+            
+        Tables\Columns\TextColumn::make('email')
+            ->searchable()
+            ->sortable(),
+            
+        Tables\Columns\TextColumn::make('role')
+            ->badge()
+            ->color('primary'),
+            
+>>>>>>> laraxot/master
         Tables\Columns\TextColumn::make('created_at')
             ->dateTime()
             ->sortable(),
@@ -212,7 +236,11 @@ public static function getTableBulkActions(): array
 public function boot(): void
 {
     parent::boot();
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> laraxot/master
     // Registrazione risorse Filament
     Filament::registerResources([
         UserResource::class,
@@ -263,10 +291,19 @@ return [
 
 - [Architettura Modulo Xot](../core/architecture.md)
 - [Convenzioni di Naming](../core/naming-conventions.md)
+<<<<<<< HEAD
 - [Best Practices Sistema](../../../../docs/core/best-practices.md)
+=======
+- [Best Practices Sistema](../../../docs/core/best-practices.md)
+>>>>>>> laraxot/master
 - [Template Filament](../templates/filament.md)
 
 ---
 
+<<<<<<< HEAD
 **Ultimo aggiornamento:** Gennaio 2025
 **Versione:** 2.0 - Consolidata DRY + KISS
+=======
+**Ultimo aggiornamento:** Gennaio 2025  
+**Versione:** 2.0 - Consolidata DRY + KISS
+>>>>>>> laraxot/master

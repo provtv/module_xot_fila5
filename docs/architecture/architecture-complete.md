@@ -1,6 +1,10 @@
 # Xot Module - Complete Architecture Guide (2025)
 
+<<<<<<< HEAD
 > **Last Updated:** 2025-11-19
+=======
+> **
+>>>>>>> laraxot/master
 > **PHPStan Level:** 10
 > **Status:** Core Foundation Module
 
@@ -335,7 +339,11 @@ Defines contracts for modular extensibility:
 
 ### 9. Helper Functions (200+)
 
+<<<<<<< HEAD
 **File:** `Modules/Xot/helpers/Helper.php`
+=======
+**File:** `Modules/Xot/Helpers/Helper.php`
+>>>>>>> laraxot/master
 
 **Categories:**
 
@@ -830,7 +838,11 @@ $value = $model->getExtra('custom_field');
 - Filament Resource Base: `Modules/Xot/app/Filament/Resources/XotBaseResource.php`
 - Provider Base: `Modules/Xot/app/Providers/XotBaseServiceProvider.php`
 - Central Config: `Modules/Xot/app/Datas/XotData.php`
+<<<<<<< HEAD
 - Global Helpers: `Modules/Xot/helpers/Helper.php`
+=======
+- Global Helpers: `Modules/Xot/Helpers/Helper.php`
+>>>>>>> laraxot/master
 - Actions: `Modules/Xot/app/Actions/` (150+ classes)
 - Test Base: `Modules/Xot/tests/TestCase.php`
 
@@ -860,5 +872,8 @@ The Xot module is a comprehensive foundation providing:
 ---
 
 **Document Version:** 1.0
+<<<<<<< HEAD
 **Generated:** 2025-11-19
+=======
+>>>>>>> laraxot/master
 **Author:** Claude Code Analysis

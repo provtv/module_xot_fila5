@@ -4,11 +4,16 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Exceptions\Handlers;
 
+<<<<<<< HEAD
+=======
+use Throwable;
+>>>>>>> laraxot/master
 use Illuminate\Contracts\Debug\ExceptionHandler;
 use Symfony\Component\HttpFoundation\Response as SymfonyResponse;
 
 class HandlerDecorator implements ExceptionHandler
 {
+<<<<<<< HEAD
     /**
      * The custom handlers reporting exceptions.
      *
@@ -38,6 +43,17 @@ class HandlerDecorator implements ExceptionHandler
     /**
      * @param array<int, mixed> $parameters
      */
+=======
+    protected HandlersRepository $repository;
+
+    public function __construct(
+        protected ExceptionHandler $defaultHandler,
+        HandlersRepository $repository,
+    ) {
+        $this->repository = $repository;
+    }
+
+>>>>>>> laraxot/master
     public function __call(string $name, array $parameters): mixed
     {
         /** @var callable */
@@ -46,9 +62,15 @@ class HandlerDecorator implements ExceptionHandler
         return \call_user_func_array($callable, $parameters);
     }
 
+<<<<<<< HEAD
     public function report(\Throwable $e): void
     {
         foreach ($this->getReportersByException($e) as $reporter) {
+=======
+    public function report(Throwable $e): void
+    {
+        foreach ($this->repository->getReportersByException($e) as $reporter) {
+>>>>>>> laraxot/master
             if (is_callable($reporter)) {
                 $reporter($e);
             }
@@ -57,9 +79,15 @@ class HandlerDecorator implements ExceptionHandler
         $this->defaultHandler->report($e);
     }
 
+<<<<<<< HEAD
     public function render($request, \Throwable $e): SymfonyResponse
     {
         foreach ($this->getRenderersByException($e) as $renderer) {
+=======
+    public function render($request, Throwable $e): SymfonyResponse
+    {
+        foreach ($this->repository->getRenderersByException($e) as $renderer) {
+>>>>>>> laraxot/master
             if (is_callable($renderer)) {
                 $response = $renderer($e, $request);
                 if ($response instanceof SymfonyResponse) {
@@ -71,29 +99,52 @@ class HandlerDecorator implements ExceptionHandler
         return $this->defaultHandler->render($request, $e);
     }
 
+<<<<<<< HEAD
     public function renderForConsole($output, \Throwable $e): void
     {
         foreach ($this->getConsoleRenderersByException($e) as $renderer) {
+=======
+    /**
+     * @phpstan-ignore-next-line
+     */
+    public function renderForConsole($output, Throwable $e): void
+    {
+        foreach ($this->repository->getConsoleRenderersByException($e) as $renderer) {
+>>>>>>> laraxot/master
             if (is_callable($renderer)) {
                 $renderer($e, $output);
             }
         }
 
+<<<<<<< HEAD
         $this->__call('renderForConsole', [$output, $e]);
+=======
+        /** @phpstan-ignore-next-line */
+        $this->defaultHandler->renderForConsole($output, $e);
+>>>>>>> laraxot/master
     }
 
     public function reporter(callable $reporter): int
     {
+<<<<<<< HEAD
         return $this->addReporter($reporter);
+=======
+        return $this->repository->addReporter($reporter);
+>>>>>>> laraxot/master
     }
 
     public function renderer(callable $renderer): int
     {
+<<<<<<< HEAD
         return $this->addRenderer($renderer);
+=======
+        return $this->repository->addRenderer($renderer);
+>>>>>>> laraxot/master
     }
 
     public function consoleRenderer(callable $renderer): int
     {
+<<<<<<< HEAD
         return $this->addConsoleRenderer($renderer);
     }
 
@@ -185,4 +236,13 @@ class HandlerDecorator implements ExceptionHandler
 
         return is_a($e, $type->getName(), true);
     }
+=======
+        return $this->repository->addConsoleRenderer($renderer);
+    }
+
+    public function shouldReport(Throwable $e): bool
+    {
+        return $this->defaultHandler->shouldReport($e);
+    }
+>>>>>>> laraxot/master
 }

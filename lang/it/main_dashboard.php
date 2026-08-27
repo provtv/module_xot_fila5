@@ -5,24 +5,36 @@ declare(strict_types=1);
 return [
     'sections' => [
         'empty' => [
+<<<<<<< HEAD
             'label' => 'Vuoto',
             'heading' => 'Nessun Dato',
+=======
+            'label' => '',
+            'heading' => '',
+>>>>>>> laraxot/master
         ],
     ],
     'actions' => [
         'logout' => [
             'icon' => 'logout',
             'label' => 'logout',
+<<<<<<< HEAD
             'tooltip' => 'logout',
+=======
+>>>>>>> laraxot/master
         ],
         'profile' => [
             'icon' => 'profile',
             'label' => 'profile',
+<<<<<<< HEAD
             'tooltip' => 'profile',
+=======
+>>>>>>> laraxot/master
         ],
         'il-mio-profilo' => [
             'icon' => 'il-mio-profilo',
             'label' => 'il-mio-profilo',
+<<<<<<< HEAD
             'tooltip' => 'il-mio-profilo',
         ],
     ],
@@ -57,6 +69,8 @@ return [
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
+=======
+>>>>>>> laraxot/master
         ],
     ],
 ];

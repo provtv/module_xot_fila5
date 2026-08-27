@@ -1,6 +1,10 @@
 # PHPStan Roadmap - Xot Module
 
+<<<<<<< HEAD
 > **Date**: 2026-01-14
+=======
+> **Date**: [DATE]
+>>>>>>> laraxot/master
 > **Status**: ✅ Fully Compliant (Level 10)
 > **Errors**: 0
 

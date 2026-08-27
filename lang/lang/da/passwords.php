@@ -8,4 +8,17 @@ return [
     'sent' => 'Vi har sendt dig et link til at nulstille din adgangskode!',
     'token' => 'Dette link til at nulstille din adgangskode er ugyldig.',
     'user' => 'Vi kan ikke finde en bruger med denne e-mailadresse.',
+    'navigation' => [
+        'label' => 'Missing Navigation Label',
+        'plural_label' => 'Missing Navigation Plural Label',
+        'group' => 'Missing Group',
+        'icon' => 'heroicon-o-puzzle-piece',
+        'sort' => 100,
+    ],
+    'label' => 'Missing Label',
+    'plural_label' => 'Missing Plural label',
+    'fields' => [
+    ],
+    'actions' => [
+    ],
 ];

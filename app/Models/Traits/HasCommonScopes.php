@@ -4,9 +4,13 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Models\Traits;
 
+<<<<<<< HEAD
 use DateTimeInterface;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Carbon;
+=======
+use Illuminate\Database\Eloquent\Builder;
+>>>>>>> laraxot/master
 
 /**
  * Common query scopes for Laraxot models.
@@ -30,7 +34,10 @@ use Illuminate\Support\Carbon;
  *
  * @see docs/METODI_DUPLICATI_ANALISI.md - Proposta 4: Model Traits
  */
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/master
 trait HasCommonScopes
 {
     /**
@@ -38,7 +45,10 @@ trait HasCommonScopes
      *
      * Found 100% identical in: Activity, Blog, Cms, User, Fixcity modules.
      *
+<<<<<<< HEAD
      * @param  Builder<static>  $query
+=======
+>>>>>>> laraxot/master
      * @return Builder<static>
      */
     public function scopeActive(Builder $query): Builder
@@ -49,7 +59,10 @@ trait HasCommonScopes
     /**
      * Scope query to only inactive records.
      *
+<<<<<<< HEAD
      * @param  Builder<static>  $query
+=======
+>>>>>>> laraxot/master
      * @return Builder<static>
      */
     public function scopeInactive(Builder $query): Builder
@@ -62,7 +75,10 @@ trait HasCommonScopes
      *
      * Records with published_at <= now().
      *
+<<<<<<< HEAD
      * @param  Builder<static>  $query
+=======
+>>>>>>> laraxot/master
      * @return Builder<static>
      */
     public function scopePublished(Builder $query): Builder
@@ -76,12 +92,19 @@ trait HasCommonScopes
      *
      * Records with published_at = null or > now().
      *
+<<<<<<< HEAD
      * @param  Builder<static>  $query
+=======
+>>>>>>> laraxot/master
      * @return Builder<static>
      */
     public function scopeDraft(Builder $query): Builder
     {
+<<<<<<< HEAD
         return $query->where(static function (Builder $q): void {
+=======
+        return $query->where(function ($q): void {
+>>>>>>> laraxot/master
             $q->whereNull('published_at')
                 ->orWhere('published_at', '>', now());
         });
@@ -93,7 +116,11 @@ trait HasCommonScopes
      * @param  Builder<static>  $query
      * @return Builder<static>
      */
+<<<<<<< HEAD
     public function scopeCreatedAfter(Builder $query, Carbon|string|DateTimeInterface $date): Builder
+=======
+    public function scopeCreatedAfter(Builder $query, mixed $date): Builder
+>>>>>>> laraxot/master
     {
         return $query->where('created_at', '>=', $date);
     }
@@ -104,7 +131,11 @@ trait HasCommonScopes
      * @param  Builder<static>  $query
      * @return Builder<static>
      */
+<<<<<<< HEAD
     public function scopeCreatedBefore(Builder $query, Carbon|string|DateTimeInterface $date): Builder
+=======
+    public function scopeCreatedBefore(Builder $query, mixed $date): Builder
+>>>>>>> laraxot/master
     {
         return $query->where('created_at', '<=', $date);
     }
@@ -115,7 +146,11 @@ trait HasCommonScopes
      * @param  Builder<static>  $query
      * @return Builder<static>
      */
+<<<<<<< HEAD
     public function scopeUpdatedAfter(Builder $query, Carbon|string|DateTimeInterface $date): Builder
+=======
+    public function scopeUpdatedAfter(Builder $query, mixed $date): Builder
+>>>>>>> laraxot/master
     {
         return $query->where('updated_at', '>=', $date);
     }
@@ -136,6 +171,7 @@ trait HasCommonScopes
      */
     public function isPublished(): bool
     {
+<<<<<<< HEAD
         $publishedAt = $this->getAttribute('published_at');
 
         if (! $publishedAt instanceof Carbon) {
@@ -143,6 +179,14 @@ trait HasCommonScopes
         }
 
         return $publishedAt->isPast();
+=======
+        if (! isset($this->published_at)) {
+            return false;
+        }
+
+        return $this->published_at !== null &&
+               $this->published_at->isPast();
+>>>>>>> laraxot/master
     }
 
     /**
@@ -158,6 +202,10 @@ trait HasCommonScopes
      */
     public function isActive(): bool
     {
+<<<<<<< HEAD
         return $this->getAttribute('is_active') === true;
+=======
+        return isset($this->is_active) && $this->is_active === true;
+>>>>>>> laraxot/master
     }
 }

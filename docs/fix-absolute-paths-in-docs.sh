@@ -5,7 +5,11 @@
 set -e
 
 DOCS_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+<<<<<<< HEAD
 PROJECT_ROOT="/var/www/_bases/base_<nome progetto>_fila5_mono"
+=======
+PROJECT_ROOT="/var/www/_bases/base_quaeris_fila4_mono"
+>>>>>>> laraxot/master
 
 echo "🔍 Analisi link assoluti in: $DOCS_DIR"
 echo ""
@@ -54,4 +58,9 @@ echo "🎯 NEXT STEPS:"
 echo "1. Verificare manualmente alcuni file campione"
 echo "2. Testare conversione su singolo file"
 echo "3. Solo dopo, applicare a tutti i file"
+<<<<<<< HEAD
 echo "4. Verificare che link funzionino dopo conversione"
+=======
+echo "4. Verificare che link funzionino dopo conversione"
+
+>>>>>>> laraxot/master

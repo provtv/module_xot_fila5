@@ -19,7 +19,11 @@ Based on the latest analysis:
 ### Common Error Types
 
 #### 1. Class Not Found Errors (15%)
+<<<<<<< HEAD
 - Missing classes from Modules\ModuloEsempio\Models namespace
+=======
+- Missing classes from Modules\SaluteOra\Models namespace
+>>>>>>> laraxot/master
 - Missing traits (EnumTrait from Modules\Core\Traits)
 - Undefined classes in factories
 
@@ -66,11 +70,19 @@ Based on the latest analysis:
 
 ### Notify Module
 **Key Issues**:
+<<<<<<< HEAD
 - Missing ModuloEsempio model classes
 - String function parameter type issues
 - Method not found errors on models
 
 ### <nome progetto> Module
+=======
+- Missing SaluteOra model classes
+- String function parameter type issues
+- Method not found errors on models
+
+### Predict Module
+>>>>>>> laraxot/master
 **Key Issues**:
 - Mixed type operations in price calculations
 - Property access on nullable objects
@@ -89,7 +101,11 @@ Based on the latest analysis:
 **Solution**:
 ```php
 // Use class_exists checks before referencing
+<<<<<<< HEAD
 if (!class_exists('Modules\\ModuloEsempio\\Models\\Appointment')) {
+=======
+if (!class_exists('Modules\\SaluteOra\\Models\\Appointment')) {
+>>>>>>> laraxot/master
     // Handle missing class gracefully
     throw new \Exception('Required class not available');
 }
@@ -185,7 +201,11 @@ vendor/bin/phpstan analyse --generate-baseline
 ## Remaining Issues Requiring Manual Intervention
 
 ### High Priority
+<<<<<<< HEAD
 1. **Missing ModuloEsempio Models**: Classes referenced but not available
+=======
+1. **Missing SaluteOra Models**: Classes referenced but not available
+>>>>>>> laraxot/master
 2. **Cross-Module Dependencies**: Tight coupling between modules
 3. **Factory Configuration**: Incorrect model references in factories
 

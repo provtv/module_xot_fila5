@@ -112,7 +112,11 @@ architecture-overview.md
 # ❌ SBAGLIATO
 MY_DOCUMENT.md              # UPPERCASE
 my_document.md              # underscore
+<<<<<<< HEAD
 analysis-2025-11-04.md      # date in name (use CHANGELOG.md)
+=======
+analysis-[DATE].md      # date in name (use CHANGELOG.md)
+>>>>>>> laraxot/master
 ```
 
 ### 8. DRY Principle
@@ -397,7 +401,11 @@ git push origin feature-branch
 
 ---
 
+<<<<<<< HEAD
 **Creato:** 2025-11-04
+=======
+**Creato:** [DATE]
+>>>>>>> laraxot/master
 **Versione:** 1.0
 **Autori:** Team Laraxot + AI Claude Process Filosofico
 **Prossimo Review:** Trimestrale o dopo major changes

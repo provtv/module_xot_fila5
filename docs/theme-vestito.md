@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: "Theme System: The 'Vestito' (Clothing) Philosophy"
 module: xot
@@ -7,6 +8,8 @@ created: 2026-08-24
 updated: 2026-08-24
 ---
 
+=======
+>>>>>>> laraxot/master
 # Theme System: The "Vestito" (Clothing) Philosophy
 
 ## Core Concept: Theme as "Vestito"
@@ -61,8 +64,12 @@ Themes/[ThemeName]/
 │   │   ├── components/
 │   │   ├── layouts/
 │   │   └── pages/
+<<<<<<< HEAD
 ├── _healthcare_app_fila5_mono.code-workspace
 ├── _app_fila5_mono.code-workspace
+=======
+├── _quaeris_fila4_mono.code-workspace
+>>>>>>> laraxot/master
 ├── package.json
 ├── postcss.config.js
 ├── tailwind.config.js
@@ -303,7 +310,11 @@ Themes implement accessibility features while maintaining module functionality:
 
 ### KISS (Keep It Simple, Stupid)
 - Simple theme switching
+<<<<<<< HEAD
 - <nome progetto>able view resolution
+=======
+- Predictable view resolution
+>>>>>>> laraxot/master
 - Clear separation of concerns
 - Minimal configuration needed
 
@@ -351,4 +362,8 @@ The "Vestito" philosophy embodies several core values:
 - Implement asset caching
 - Minimize theme-specific logic
 
+<<<<<<< HEAD
 This architecture ensures that themes can be changed, updated, or replaced without affecting the core business logic, while maintaining a consistent and professional user experience across the application.
+=======
+This architecture ensures that themes can be changed, updated, or replaced without affecting the core business logic, while maintaining a consistent and professional user experience across the application.
+>>>>>>> laraxot/master

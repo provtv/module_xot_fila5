@@ -2,6 +2,10 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> laraxot/master
 return [
     'backend' => [
         'access' => [
@@ -34,6 +38,7 @@ return [
         'save' => 'Speichern',
         'view' => 'Anzeigen',
     ],
+<<<<<<< HEAD
     'navigation' => [
         'label' => 'Missing Navigation Label',
         'plural_label' => 'Missing Navigation Plural Label',
@@ -47,4 +52,10 @@ return [
     ],
     'actions' => [
     ],
+=======
+    'save' => 'Salva',
+    'close' => 'Chiudi',
+    'back' => 'Indietro',
+    'confirm' => 'Conferma',
+>>>>>>> laraxot/master
 ];

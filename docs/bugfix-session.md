@@ -275,4 +275,8 @@ Eccezioni rare:
 **Documentazione correlata**:
 - [git-conflicts-mal-risolti.md](./git-conflicts-mal-risolti.md)
 - [../../bashscripts/docs/file-locking-pattern.md](../../../bashscripts/docs/file-locking-pattern.md)
+<<<<<<< HEAD
 - [../../User/docs/syntax-errors-to-fix.md](../../User/docs/syntax-errors-to-fix.md)
+=======
+- [../../User/docs/syntax-errors-to-fix.md](../../user/docs/syntax-errors-to-fix.md)
+>>>>>>> laraxot/master

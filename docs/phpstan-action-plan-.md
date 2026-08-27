@@ -3,14 +3,22 @@
 ## Executive Summary
 
 **Total Issues Identified:** 744 PHPStan errors
+<<<<<<< HEAD
 **Critical Modules:** Chart, healthcare_app
+=======
+**Critical Modules:** Chart, Quaeris
+>>>>>>> laraxot/master
 **Status:** 🔴 **Requires Immediate Action**
 
 ## Quick Start Guide
 
 ### Immediate Actions (Today)
 1. **Add Safe function imports** to all problematic files
+<<<<<<< HEAD
 2. **Comment out quantum code** in healthcare_app module
+=======
+2. **Comment out quantum code** in Quaeris module
+>>>>>>> laraxot/master
 3. **Run PHPStan again** to verify progress
 
 ### Week 1 Goals
@@ -32,7 +40,11 @@
 Modules/Chart/app/Actions/ChartJs/ExportToSvgAction.php
 Modules/Chart/app/Actions/ExportChartToPngAction.php
 Modules/Chart/app/Actions/ExportChartToSvgAction.php
+<<<<<<< HEAD
 Modules/healthcare_app/app/Actions/Charts/Export/Concerns/HandlesChartWidgetData.php
+=======
+Modules/Quaeris/app/Actions/Charts/Export/Concerns/HandlesChartWidgetData.php
+>>>>>>> laraxot/master
 # ... and others identified in analysis
 ```
 
@@ -50,7 +62,11 @@ use function Safe\htmlspecialchars;
 #### Task 1.2: Quantum Code Stabilization
 **Priority:** 🔴 CRITICAL
 **Estimated Time:** 1-2 hours
+<<<<<<< HEAD
 **Files:** healthcare_app quantum actions
+=======
+**Files:** Quaeris quantum actions
+>>>>>>> laraxot/master
 
 **Options:**
 1. **Comment out** quantum features temporarily
@@ -225,7 +241,11 @@ class ChartDataValidator
 - [Safe Library Documentation](https://github.com/thecodingmachine/safe)
 - [PHPStan Configuration](../phpstan.neon)
 - [Chart Module Documentation](../Chart/docs/)
+<<<<<<< HEAD
 - [healthcare_app Module Documentation](../healthcare_app/docs/)
+=======
+- [Quaeris Module Documentation](../Quaeris/docs/)
+>>>>>>> laraxot/master
 
 ## Emergency Procedures
 
@@ -264,4 +284,8 @@ class ChartDataValidator
 
 **Last Updated**: 2025-11-18
 **Next Review**: 2025-11-25
+<<<<<<< HEAD
 **Status**: 🟡 IN PROGRESS
+=======
+**Status**: 🟡 IN PROGRESS
+>>>>>>> laraxot/master

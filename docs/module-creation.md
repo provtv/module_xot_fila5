@@ -186,5 +186,10 @@ NomeModulo/
 - [service-provider-best-practices.md](service-provider-best-practices.md)
 - [blade-component-registration.md](blade-component-registration.md)
 - [XotBaseServiceProvider.md](xotbaseserviceprovider.md)
+<<<<<<< HEAD
 - [XotBaseRouteServiceProvider.md](XotBaseRouteServiceProvider.md)
 - [XotBaseEventServiceProvider.md](XotBaseEventServiceProvider.md)
+=======
+- [XotBaseRouteServiceProvider.md](xotbaserouteserviceprovider.md)
+- [XotBaseEventServiceProvider.md](xotbaseeventserviceprovider.md)
+>>>>>>> laraxot/master

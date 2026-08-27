@@ -89,10 +89,17 @@ public function getTableActions(): array
 public function __construct()
 {
     parent::__construct();
+<<<<<<< HEAD
 
     // Disabilita la replica dei record
     static::$canReplicate = false;
 
+=======
+    
+    // Disabilita la replica dei record
+    static::$canReplicate = false;
+    
+>>>>>>> laraxot/master
     // Disabilita la visualizzazione dei record
     static::$canView = false;
 }
@@ -109,7 +116,11 @@ public function __construct()
 protected function setUp(): void
 {
     parent::setUp();
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> laraxot/master
     // Imposta il layout a griglia
     $this->layoutView = TableLayoutEnum::GRID;
 }
@@ -137,6 +148,7 @@ return [
 ## Best Practices per l'Utilizzo
 
 1. **Non Sovrascrivere il Metodo table()**:
+<<<<<<< HEAD
    Il metodo `table()` nel trait `HasXotTable` è `final` e contiene logica importante. Utilizzare invece `getTableColumns()`, `getTableActions()`, ecc.
    
    Per personalizzazioni (defaultSort, paginated array, poll), usare i metodi dedicati:
@@ -146,6 +158,9 @@ return [
 
 2. **Visibilità Metodi getTable*()**:
    Tutti i metodi `getTableHeading()`, `getTableHeaderActions()`, `getTableActions()`, `getTableBulkActions()`, `getTableFilters()`, `getTableSearch()` **DEVONO** essere `public`, non `protected`.
+=======
+   Il metodo `table()` nel trait `HasXotTable` contiene logica importante. Utilizzare invece `getTableColumns()`, `getTableActions()`, ecc.
+>>>>>>> laraxot/master
 
 2. **Utilizzare Traduzioni per Tutte le Label**:
    ```php
@@ -201,9 +216,15 @@ use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
 class DatiRelationManager extends XotBaseRelationManager
 {
     protected static string $relationship = 'dati';
+<<<<<<< HEAD
 
     protected static ?string $recordTitleAttribute = 'nome';
 
+=======
+    
+    protected static ?string $recordTitleAttribute = 'nome';
+    
+>>>>>>> laraxot/master
     /**
      * Definisce le colonne della tabella.
      *
@@ -221,7 +242,11 @@ class DatiRelationManager extends XotBaseRelationManager
                 ->dateTime(),
         ];
     }
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> laraxot/master
     /**
      * Definisce lo schema del form.
      *
@@ -240,10 +265,13 @@ class DatiRelationManager extends XotBaseRelationManager
 
 ## Collegamenti alla Documentazione Correlata
 
+<<<<<<< HEAD
 - [XotBaseRelationManager](/laravel/modules/xot/docs/filament/relation_managers.md)
 - [Regole di Traduzione](/laravel/modules/xot/docs/translation_rules.md)
 - [Filament Resources](/laravel/modules/xot/docs/filament/resources.md)
 
+=======
+>>>>>>> laraxot/master
 - [XotBaseRelationManager](/laravel/Modules/Xot/docs/filament/relation_managers.md)
 - [Regole di Traduzione](/laravel/Modules/Xot/docs/translation_rules.md)
 - [Filament Resources](/laravel/Modules/Xot/docs/filament/resources.md)

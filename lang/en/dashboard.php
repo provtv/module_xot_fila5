@@ -2,6 +2,10 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> laraxot/master
 return [
     'resources' => 'Risorse',
     'pages' => 'Pagine',
@@ -14,6 +18,7 @@ return [
         ],
     ],
     'fields' => [
+<<<<<<< HEAD
         'name' => [
             'label' => 'Nome',
             'tooltip' => '',
@@ -57,6 +62,17 @@ return [
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
+=======
+        'name' => 'Nome',
+        'guard_name' => 'Guard',
+        'permissions' => 'Permessi',
+        'updated_at' => 'Aggiornato il',
+        'first_name' => 'Nome',
+        'last_name' => 'Cognome',
+        'select_all' => [
+            'name' => 'Seleziona Tutti',
+            'message' => '',
+>>>>>>> laraxot/master
         ],
     ],
     'actions' => [
@@ -73,6 +89,9 @@ return [
             ],
         ],
     ],
+<<<<<<< HEAD
     'label' => 'Missing Label',
     'plural_label' => 'Missing Plural label',
+=======
+>>>>>>> laraxot/master
 ];

@@ -6,12 +6,22 @@ use Illuminate\Database\Schema\Blueprint;
 use Modules\Xot\Database\Migrations\XotBaseMigration;
 use Modules\Xot\Models\HealthCheckResultHistoryItem;
 
+<<<<<<< HEAD
 return new class extends XotBaseMigration
 {
     protected ?string $model_class = HealthCheckResultHistoryItem::class;
 
     /**
      * Run the migrations.
+=======
+return new class extends XotBaseMigration {
+    protected null|string $model_class = HealthCheckResultHistoryItem::class;
+
+    /**
+     * Run the migrations.
+     *
+     * @return void
+>>>>>>> laraxot/master
      */
     public function up(): void
     {

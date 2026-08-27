@@ -1,16 +1,23 @@
 # Best Practices per Volt e Folio
 
 ## Collegamenti correlati
+<<<<<<< HEAD
 - [README modulo Xot](./README.md)
+=======
+- [README modulo Xot](./readme.md)
+>>>>>>> laraxot/master
 - [Struttura dei moduli](./module_structure.md)
 - [Convenzioni di Path](../user/docs/path_conventions.md)
 - [Implementazione Auth con Volt e Folio](../user/docs/volt_folio_auth_implementation.md)
 - [Analisi Logout Blade](../user/docs/logout_blade_analysis.md)
+<<<<<<< HEAD
 - [README modulo Xot](./README.md)
 - [Struttura dei moduli](./MODULE_STRUCTURE.md)
 - [Convenzioni di Path](../User/docs/PATH_CONVENTIONS.md)
 - [Implementazione Auth con Volt e Folio](../User/docs/VOLT_FOLIO_AUTH_IMPLEMENTATION.md)
 - [Analisi Logout Blade](../User/docs/LOGOUT_BLADE_ANALYSIS.md)
+=======
+>>>>>>> laraxot/master
 
 ## Introduzione
 
@@ -269,4 +276,8 @@ Seguendo queste best practices per l'utilizzo di Volt e Folio, garantirai che il
 - [Documentazione Volt](https://livewire.laravel.com/docs/volt)
 - [Documentazione Folio](https://laravel.com/docs/10.x/folio)
 - [Documentazione Livewire](https://livewire.laravel.com/docs)
+<<<<<<< HEAD
 - [Documentazione Filament](https://filamentphp.com/docs)
+=======
+- [Documentazione Filament](https://filamentphp.com/docs)
+>>>>>>> laraxot/master

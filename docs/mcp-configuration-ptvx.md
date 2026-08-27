@@ -1,7 +1,11 @@
 # Configurazione MCP per base_ptvx_fila4_mono
 
+<<<<<<< HEAD
 **Data Creazione**: 2026-01-12  
 **Ultimo Aggiornamento**: 2026-01-12  
+=======
+**Data Creazione**: [DATE]  
+>>>>>>> laraxot/master
 **Status**: ✅ Configurazione Completa e Ottimizzata
 
 ---

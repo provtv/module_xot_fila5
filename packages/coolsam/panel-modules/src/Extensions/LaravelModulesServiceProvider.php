@@ -13,7 +13,11 @@ class LaravelModulesServiceProvider extends BaseModulesServiceProvider
     {
         $this->registerPanels();
         parent::register();
+<<<<<<< HEAD
         Log::debug('Registered Modules');
+=======
+        Log::info('Registered Modules');
+>>>>>>> laraxot/master
     }
 
     public function registerPanels(): void

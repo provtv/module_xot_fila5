@@ -36,14 +36,22 @@ The Xot module's MCP configuration enables AI assistants to interact with:
     },
     "filesystem": {
       "command": "npx",
+<<<<<<< HEAD
       "args": ["-y", "@modelcontextprotocol/server-filesystem", "/var/www/_bases/base_<nome progetto>/laravel"],
+=======
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "/var/www/_bases/base_laravelpizza/laravel"],
+>>>>>>> laraxot/master
       "description": "Access to Xot module files"
     },
     "database": {
       "command": "npx",
       "args": ["-y", "@bytebase/dbhub"],
       "env": {
+<<<<<<< HEAD
         "DATABASE_URL": "sqlite:///var/www/_bases/base_<nome progetto>/laravel/database/database.sqlite"
+=======
+        "DATABASE_URL": "sqlite:///var/www/_bases/base_laravelpizza/laravel/database/database.sqlite"
+>>>>>>> laraxot/master
       },
       "description": "SQLite database queries"
     }
@@ -58,7 +66,11 @@ The Xot module's MCP configuration enables AI assistants to interact with:
 ### Asana Integration
 ```bash
 # Create task
+<<<<<<< HEAD
 "Create task in '<nome progetto> - Xot Module' project: 'Implement Filament v5 migration'"
+=======
+"Create task in 'LaravelPizza - Xot Module' project: 'Implement Filament v5 migration'"
+>>>>>>> laraxot/master
 
 # Track PHPStan compliance
 "Create task: 'Verify PHPStan Level 10 compliance for all base classes'"
@@ -133,10 +145,17 @@ Map Xot module roadmap tasks to Asana:
 
 | Roadmap Task | Asana Project | Priority |
 |--------------|---------------|----------|
+<<<<<<< HEAD
 | Filament v5 migration | <nome progetto> - Xot Module | High |
 | Documentation consolidation | <nome progetto> - Xot Module | Medium |
 | Test coverage improvement | <nome progetto> - Xot Module | High |
 | Performance optimization | <nome progetto> - Xot Module | Medium |
+=======
+| Filament v5 migration | LaravelPizza - Xot Module | High |
+| Documentation consolidation | LaravelPizza - Xot Module | Medium |
+| Test coverage improvement | LaravelPizza - Xot Module | High |
+| Performance optimization | LaravelPizza - Xot Module | Medium |
+>>>>>>> laraxot/master
 
 ---
 
@@ -147,11 +166,19 @@ Map Xot module roadmap tasks to Asana:
 - **Server URL**: `https://mcp.asana.com/sse`
 
 ### Cursor
+<<<<<<< HEAD
 - **Config File**: `/var/www/_bases/base_<nome progetto>/laravel/.cursor-mcp.json`
 - **Command**: `npx mcp-remote https://mcp.asana.com/sse`
 
 ### Windsurf
 - **Config File**: `/var/www/_bases/base_<nome progetto>/laravel/.windsurf-mcp.json`
+=======
+- **Config File**: `/var/www/_bases/base_laravelpizza/laravel/.cursor-mcp.json`
+- **Command**: `npx mcp-remote https://mcp.asana.com/sse`
+
+### Windsurf
+- **Config File**: `/var/www/_bases/base_laravelpizza/laravel/.windsurf-mcp.json`
+>>>>>>> laraxot/master
 - **Command**: `npx mcp-remote https://mcp.asana.com/sse`
 
 ---
@@ -166,7 +193,11 @@ Map Xot module roadmap tasks to Asana:
    ```
 
 2. **Project Organization**:
+<<<<<<< HEAD
    - Create dedicated Asana project: "<nome progetto> - Xot Module"
+=======
+   - Create dedicated Asana project: "LaravelPizza - Xot Module"
+>>>>>>> laraxot/master
    - Use sections: "Features", "Fixes", "Refactoring", "Testing", "Documentation"
 
 3. **Tagging System**:
@@ -210,9 +241,15 @@ Map Xot module roadmap tasks to Asana:
 
 ## 📚 Related Documentation
 
+<<<<<<< HEAD
 - [Asana MCP Configuration](../../../../docs/mcp-asana-configuration.md)
 - [ClickUp MCP Configuration](../../../../docs/mcp-clickup-configuration.md)
 - [Redmine MCP Configuration](../../../../docs/mcp-redmine-configuration.md)
+=======
+- [Asana MCP Configuration](../../../docs/mcp-asana-configuration.md)
+- [ClickUp MCP Configuration](../../../docs/mcp-clickup-configuration.md)
+- [Redmine MCP Configuration](../../../docs/mcp-redmine-configuration.md)
+>>>>>>> laraxot/master
 - [Xot Module Roadmap](./roadmap-[date].md)
 
 ---
@@ -227,4 +264,8 @@ Map Xot module roadmap tasks to Asana:
 
 **Module**: Xot (Foundation)
 **MCP Version**: 2.0.0
+<<<<<<< HEAD
 **Last Review**: 31 Gennaio 2026
+=======
+**Last Review**: 31 Gennaio 2026
+>>>>>>> laraxot/master

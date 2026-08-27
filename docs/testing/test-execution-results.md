@@ -18,8 +18,13 @@
 ### 1. Database Migration Issues
 
 Many tests are failing due to missing database tables:
+<<<<<<< HEAD
 - `Table '<nome progetto>_user_test.roles' doesn't exist`
 - `Table '<nome progetto>_user_test.permissions' doesn't exist`
+=======
+- `Table 'laravelpizza_user_test.roles' doesn't exist`
+- `Table 'laravelpizza_user_test.permissions' doesn't exist`
+>>>>>>> laraxot/master
 - Tests expect tables to exist but migrations haven't been run
 
 **Root Cause**: Tests are trying to use the database without running migrations first.
@@ -144,4 +149,8 @@ Some tests have type errors:
 - **Use .env.testing** - All tests use test environment
 - **No RefreshDatabase** - Use transactions or manual cleanup
 - **Pest format only** - Convert any PHPUnit tests
+<<<<<<< HEAD
 - **Run PHPStan after fixes** - Ensure test code quality
+=======
+- **Run PHPStan after fixes** - Ensure test code quality
+>>>>>>> laraxot/master

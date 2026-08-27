@@ -1,6 +1,9 @@
 # Laraxot Testing Philosophy: The Unified Approach
 
+<<<<<<< HEAD
 ## The Contradiction We Discovered (2026-01-09)
+=======
+>>>>>>> laraxot/master
 ## The Contradiction We Discovered ([DATE])
 
 ### The Problem
@@ -17,9 +20,15 @@ Our testing infrastructure had a FUNDAMENTAL CONTRADICTION:
 **What `.env.testing` says:**
 ```ini
 DB_CONNECTION=mysql
+<<<<<<< HEAD
 DB_DATABASE=<nome progetto>_data_test
 USER_DB_CONNECTION=mysql
 USER_DB_DATABASE=<nome progetto>_user_test
+=======
+DB_DATABASE=laravelpizza_data_test
+USER_DB_CONNECTION=mysql
+USER_DB_DATABASE=laravelpizza_user_test
+>>>>>>> laraxot/master
 ```
 
 **What TestCase.php actually does:**
@@ -48,7 +57,11 @@ $this->app['config']->set('database.connections.testing', [
 
 ### Position C (WINNER): "Fix the contradiction!"
 - **Argument**: The problem isn't MySQL vs SQLite - it's that `.env.testing` is IGNORED
+<<<<<<< HEAD
 - **Pro**: Respects configuration, DRY, KISS, <nome progetto>able
+=======
+- **Pro**: Respects configuration, DRY, KISS, predictable
+>>>>>>> laraxot/master
 - **Con**: Requires refactoring all TestCase files
 
 ## The Zen Solution
@@ -59,7 +72,11 @@ $this->app['config']->set('database.connections.testing', [
 
 ### Why This Wins
 
+<<<<<<< HEAD
 1. **<nome progetto>ability**: Developers expect `.env.testing` to work
+=======
+1. **Predictability**: Developers expect `.env.testing` to work
+>>>>>>> laraxot/master
 2. **DRY**: Single source of truth for test configuration
 3. **KISS**: Simple - just use the config that's already there
 4. **Flexibility**: Want SQLite? Change `.env.testing`. Want MySQL? Change `.env.testing`
@@ -168,15 +185,26 @@ abstract class TestCase extends BaseTestCase
 ```ini
 # Production parity - same dialect as production
 DB_CONNECTION=mysql
+<<<<<<< HEAD
 DB_DATABASE=<nome progetto>_test
+=======
+DB_DATABASE=laravelpizza_test
+>>>>>>> laraxot/master
 DB_USERNAME=marco
 DB_PASSWORD=marco
 
 USER_DB_CONNECTION=mysql
+<<<<<<< HEAD
 USER_DB_DATABASE=<nome progetto>_user_test
 
 JOB_DB_CONNECTION=mysql
 JOB_DB_DATABASE=<nome progetto>_job_test
+=======
+USER_DB_DATABASE=laravelpizza_user_test
+
+JOB_DB_CONNECTION=mysql
+JOB_DB_DATABASE=laravelpizza_job_test
+>>>>>>> laraxot/master
 ```
 
 **Pros**: Real MySQL behavior, catches dialect-specific bugs
@@ -245,7 +273,12 @@ JOB_DB_DATABASE=:memory:
 
 ---
 
+<<<<<<< HEAD
 **Version**: 1.0
 **Date**: 2026-01-09
 **Date**: [DATE]
 **Status**: CANONICAL - This is the new standard
+=======
+**Date**: [DATE]
+**Status**: CANONICAL - This is the new standard
+>>>>>>> laraxot/master

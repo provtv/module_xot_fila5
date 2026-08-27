@@ -15,21 +15,34 @@ trait EnumTrait
 
     public function getLabel(): string
     {
+<<<<<<< HEAD
         return $this->transClass(static::class, 'values.'.$this->value.'.label');
+=======
+        return $this->transClass(static::class, $this->value.'.label');
+>>>>>>> laraxot/master
     }
 
     public function getColor(): string
     {
+<<<<<<< HEAD
         return $this->transClass(static::class, 'values.'.$this->value.'.color');
+=======
+        return $this->transClass(static::class, $this->value.'.color');
+>>>>>>> laraxot/master
     }
 
     public function getIcon(): string
     {
+<<<<<<< HEAD
         return $this->transClass(static::class, 'values.'.$this->value.'.icon');
+=======
+        return $this->transClass(static::class, $this->value.'.icon');
+>>>>>>> laraxot/master
     }
 
     public function getDescription(): string
     {
+<<<<<<< HEAD
         return $this->transClass(static::class, 'values.'.$this->value.'.description');
     }
 
@@ -41,6 +54,9 @@ trait EnumTrait
     public function getHelperText(): string
     {
         return $this->transClass(self::class, 'values.'.$this->value.'.helper_text');
+=======
+        return $this->transClass(static::class, $this->value.'.description');
+>>>>>>> laraxot/master
     }
 
     /**
@@ -48,7 +64,11 @@ trait EnumTrait
      */
     public static function getSearchable(): array
     {
+<<<<<<< HEAD
         return array_map(static fn (self $item): string => (string) $item->value, static::cases());
+=======
+        return array_map(fn ($item) => (string) $item->value, static::cases());
+>>>>>>> laraxot/master
     }
 
     /**
@@ -85,7 +105,11 @@ trait EnumTrait
      * - **Religion**: Strong typing through enum values
      * - **Zen**: Form without form - one method adapts to both contexts
      *
+<<<<<<< HEAD
      * Inspired by Modules/<nome progetto>/database/migrations/2019_12_12_000004_create_workers_table.php:
+=======
+     * Inspired by Modules/TechPlanner/database/migrations/2019_12_12_000004_create_workers_table.php:
+>>>>>>> laraxot/master
      * ```php
      * $address_components = Place::$address_components;
      * foreach ($address_components as $el) {
@@ -149,7 +173,11 @@ trait EnumTrait
      */
     public static function getColumnNames(): array
     {
+<<<<<<< HEAD
         return array_values(array_map(static fn (self $case): string => (string) $case->value, static::cases()));
+=======
+        return array_map(fn ($case) => (string) $case->value, static::cases());
+>>>>>>> laraxot/master
     }
 
     /**
@@ -162,6 +190,7 @@ trait EnumTrait
     {
         return [];
     }
+<<<<<<< HEAD
 
     /** @return array<int|string, string> */
     public static function toArray(): array
@@ -174,4 +203,6 @@ trait EnumTrait
 
         return $result;
     }
+=======
+>>>>>>> laraxot/master
 }

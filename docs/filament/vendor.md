@@ -1,7 +1,14 @@
 ---
+<<<<<<< HEAD
 module: theme
 topic: vendor
 canonical: ../../../../Themes/docs/shared-components/vendor.md
+=======
+title: Ripristinare cartella vendor
+description: Ripristinare cartella vendor
+extends: _layouts.documentation
+section: content
+>>>>>>> laraxot/master
 ---
 
 # Ripristinare la cartella vendor

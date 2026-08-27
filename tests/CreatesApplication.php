@@ -7,6 +7,7 @@ namespace Modules\Xot\Tests;
 use Illuminate\Contracts\Console\Kernel;
 use Illuminate\Foundation\Application;
 
+<<<<<<< HEAD
 use function Safe\realpath;
 
 /**
@@ -15,6 +16,8 @@ use function Safe\realpath;
  * Provides the createApplication method for test cases.
  * This trait is used by all module test cases to bootstrap the Laravel application.
  */
+=======
+>>>>>>> laraxot/master
 trait CreatesApplication
 {
     /**
@@ -22,6 +25,7 @@ trait CreatesApplication
      */
     public function createApplication(): Application
     {
+<<<<<<< HEAD
         // Get base path (assuming tests are in Modules/{Module}/tests/)
         $basePath = realpath(__DIR__.'/../../../');
         $testingEnvPath = $basePath.'/.env.testing';
@@ -68,6 +72,11 @@ trait CreatesApplication
         if (! $app instanceof Application) {
             throw new \RuntimeException('bootstrap/app.php must return an Application instance.');
         }
+=======
+        $app = require __DIR__ . '/../../../bootstrap/app.php';
+
+        $app->make(Kernel::class)->bootstrap();
+>>>>>>> laraxot/master
 
         return $app;
     }

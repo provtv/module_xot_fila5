@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
 return [
     /*
     |--------------------------------------------------------------------------
@@ -14,6 +15,10 @@ return [
     |
     */
 
+=======
+
+return [
+>>>>>>> laraxot/master
     'backend' => [
         'access' => [
             'roles' => [
@@ -26,7 +31,10 @@ return [
                 'not_found' => 'Diese Rolle existiert nicht.',
                 'update_error' => 'Beim aktualisieren der Rolle ist ein Fehler aufgetreten. Bitte versuche es erneut.',
             ],
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/master
             'users' => [
                 'cant_deactivate_self' => 'Du kannst das nicht mit dir selber machen.',
                 'cant_delete_self' => 'Du kannst dich nciht selber löschen.',
@@ -45,7 +53,10 @@ return [
             ],
         ],
     ],
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/master
     'frontend' => [
         'auth' => [
             'confirmation' => [
@@ -54,6 +65,7 @@ return [
                 'created_confirm' => 'Dein Account wurde erstellt. Wir haben dir eiene Aktivierungsmail gesendet.',
                 'mismatch' => 'Der Aktivierungscode ist nicht korrekt.',
                 'not_found' => 'Der Aktivierungscode existiert nicht.',
+<<<<<<< HEAD
                 'resend' => 'Dein Account ist nicht aktiviert. Bitte klicke auf den Link in der Aktivierungsmail, oder <a href="'.route('frontend.auth.account.confirm.resend', ':user_id').'">klicke hier</a> um die aktivierungsmail erneut zu senden.',
                 'success' => 'Dein Account wurde aktiviert!',
                 'resent' => 'Eine neue aktivierungsmail wurde an die hinterlegte E-Mailadresse gesendet.',
@@ -62,6 +74,14 @@ return [
             'deactivated' => 'Dein Account wurde deaktiviert.',
             'email_taken' => 'Diese E-Mailadresse wird schon verwendet.',
 
+=======
+                'resend' => 'Dein Account ist nicht aktiviert. Bitte klicke auf den Link in der Aktivierungsmail, oder klicke hier</a> um die aktivierungsmail erneut zu senden.',
+                'success' => 'Dein Account wurde aktiviert!',
+                'resent' => 'Eine neue aktivierungsmail wurde an die hinterlegte E-Mailadresse gesendet.',
+            ],
+            'deactivated' => 'Dein Account wurde deaktiviert.',
+            'email_taken' => 'Diese E-Mailadresse wird schon verwendet.',
+>>>>>>> laraxot/master
             'password' => [
                 'change_mismatch' => 'Das ist nicht dein altes Passwort.',
             ],

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Best Practices per Risorse Filament in Laraxot
 
 Questo documento riassume le migliori pratiche per la creazione e gestione delle risorse Filament all'interno dell'ecosistema Laraxot. Seguire queste linee guida garantirà compatibilità e coerenza in tutto il progetto.
@@ -166,6 +167,8 @@ public function getTableColumns(): array
         'created_at' => Tables\Columns\TextColumn::make('created_at')
             ->dateTime('d/m/Y H:i')
             ->sortable(),
+=======
+>>>>>>> laraxot/master
 # Filament Best Practices (Moduli Riutilizzabili)
 
 ## Descrizione
@@ -181,8 +184,11 @@ Best practice generiche per l'utilizzo di Filament in moduli Laravel riutilizzab
 - Non usare ->label() direttamente nei form: usare sempre i file di traduzione
 
 ## Esempi
+<<<<<<< HEAD
 ```
 
+=======
+>>>>>>> laraxot/master
 ```php
 // ❌ Anti-pattern
 class MyResource extends \Filament\Resources\Resource {}
@@ -223,6 +229,7 @@ public static function getFormSchema(): array
 }
 ```
 
+<<<<<<< HEAD
 ## Regole per XotBaseEditRecord
 
 ### Implementazione Corretta
@@ -292,6 +299,8 @@ class CreateAppointment extends XotBaseCreateRecord
 ## Esempi di Implementazione Corretta
 
 ### ReportResource.php - IMPLEMENTAZIONE CORRETTA
+=======
+>>>>>>> laraxot/master
 #### ❌ DON'T - Non utilizzare il metodo form()
 
 ```php
@@ -344,6 +353,7 @@ TextInput::make('nome')
 ```php
 <?php
 
+<<<<<<< HEAD
 declare(strict_types=1);
 
 namespace Modules\<nome progetto>\Filament\Resources;
@@ -394,6 +404,8 @@ class ReportResource extends XotBaseResource
             'create' => Pages\CreateReport::route('/create'),
             'edit' => Pages\EditReport::route('/{record}/edit'),
         ];
+=======
+>>>>>>> laraxot/master
 namespace Modules\Brain\Filament\Resources;
 
 use Filament\Forms\Components\TextInput;
@@ -483,6 +495,7 @@ class SocioResource extends XotBaseResource
 }
 ```
 
+<<<<<<< HEAD
 ## Checklist di Conformità
 
 Prima di considerare completa una risorsa Filament, verificare:
@@ -545,6 +558,8 @@ Prima di considerare completa una risorsa Filament, verificare:
    - **Indirizzo e contatti**: via, cap, regione_id, provincia_id, etc.
    - **Dati bancari**: iban, intestatario, banca, filiale
    - **Modalità di ricezione**: Lista di modalità selezionabili
+=======
+>>>>>>> laraxot/master
 ## Struttura delle Traduzioni
 
 ### File di Traduzione Completo
@@ -939,8 +954,13 @@ Consulta l'esempio completo all'inizio di questo documento per una implementazio
 ## Riferimenti
 
 - [Documentazione Filament](https://filamentphp.com/docs)
+<<<<<<< HEAD
 - [Documentazione XotBaseResource](base_orisbroker_fila3/laravel/Modules/Xot/docs/resource.md)
 - [Best Practices Laraxot](base_orisbroker_fila3/laravel/Modules/Xot/docs/best-practices.md)
+=======
+- [Documentazione XotBaseResource](base_orisbroker_fila3/laravel/modules/xot/project_docs/resource.md)
+- [Best Practices Laraxot](base_orisbroker_fila3/laravel/modules/xot/project_docs/best-practices.md)
+>>>>>>> laraxot/master
 
 ## Regole per Widget Filament: Path View e Localizzazione
 
@@ -1012,4 +1032,7 @@ Appointment::where('doctor_id', $doctorId)
 - Un solo punto di verità: nessuna duplicazione, nessun lock-in
 - DRY, KISS, serenità del codice
 - Refactoring sicuro, massima estendibilità
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/master

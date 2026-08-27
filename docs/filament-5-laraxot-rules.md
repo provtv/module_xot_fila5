@@ -74,8 +74,13 @@ L'upgrade da Filament 4 a 5 **DEVE** seguire l'ordine seguente (per l'intero pro
 
 1. **Backup del progetto**
    ```bash
+<<<<<<< HEAD
    cp -r /var/www/_bases/base_<nome progetto>/laravel \
          /var/www/_bases/base_<nome progetto>_backup_$(date +%Y%m%d)
+=======
+   cp -r /var/www/_bases/base_laravelpizza/laravel \
+         /var/www/_bases/base_laravelpizza_backup_$(date +%Y%m%d)
+>>>>>>> laraxot/master
    ```
 
 2. **Risolvere conflitti git**
@@ -196,7 +201,10 @@ Filament 5 introduce cambi a livello di API e di ecosistema. Dal punto di vista 
 3. **Actions, Notifications, Widgets**
    - Azioni custom Filament continuano a seguire le regole Laraxot esistenti (override `setUp()`, niente stringhe hardcoded, traduzioni centralizzate, ecc.).
    - I widget devono continuare ad estendere le classi base Xot/UI, non direttamente widget Filament.
+<<<<<<< HEAD
    - **Inclusione nei Blade View**: Per includere un widget Filament (che è un componente Livewire) all'interno di una vista Blade o di una pagina Folio, **non** usare la sintassi del tag `<livewire:module::widget-name />` a meno che non sia esplicitamente registrato. La sintassi corretta e sicura per Filament 5.x è l'uso diretto della classe: `@livewire(\Modules\User\Filament\Widgets\Auth\LoginWidget::class)`. Questo evita errori di `ComponentNotFoundException` nelle architetture modulari.
+=======
+>>>>>>> laraxot/master
    - Ogni breaking change v5 su actions/widgets va documentato qui e nei moduli che li usano in modo intensivo (`UI`, `User`, `Notify`, `Cms`, `Job`, …).
 
 4. **Panel configuration / AdminPanelProvider**
@@ -284,4 +292,8 @@ La documentazione **DEVE** esplicitare cosa succede all’utente:
 
 ---
 
+<<<<<<< HEAD
 *Questo documento è il riferimento centrale Xot per l’uso di Filament 5 nei moduli Laraxot/PTVX. Ogni variazione sostanziale alle API Filament deve essere riflessa qui e poi propagata alla documentazione dei singoli moduli.*
+=======
+*Questo documento è il riferimento centrale Xot per l’uso di Filament 5 nei moduli Laraxot/PTVX. Ogni variazione sostanziale alle API Filament deve essere riflessa qui e poi propagata alla documentazione dei singoli moduli.*
+>>>>>>> laraxot/master

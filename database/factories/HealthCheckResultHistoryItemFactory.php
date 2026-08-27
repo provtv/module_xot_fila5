@@ -8,7 +8,11 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 use Modules\Xot\Models\HealthCheckResultHistoryItem;
 
 /**
+<<<<<<< HEAD
  * HealthCheckResultHistoryItem Factory.
+=======
+ * HealthCheckResultHistoryItem Factory
+>>>>>>> laraxot/master
  *
  * @extends Factory<HealthCheckResultHistoryItem>
  */
@@ -16,9 +20,12 @@ class HealthCheckResultHistoryItemFactory extends Factory
 {
     protected $model = HealthCheckResultHistoryItem::class;
 
+<<<<<<< HEAD
     /**
      * @return array<string, mixed>
      */
+=======
+>>>>>>> laraxot/master
     public function definition(): array
     {
         return [
@@ -43,7 +50,11 @@ class HealthCheckResultHistoryItemFactory extends Factory
 
     public function ok(): static
     {
+<<<<<<< HEAD
         return $this->state(fn (array $_attributes): array => [
+=======
+        return $this->state(fn(array $_attributes): array => [
+>>>>>>> laraxot/master
             'status' => 'ok',
             'notification_message' => null,
         ]);
@@ -51,7 +62,11 @@ class HealthCheckResultHistoryItemFactory extends Factory
 
     public function failed(): static
     {
+<<<<<<< HEAD
         return $this->state(fn (array $_attributes): array => [
+=======
+        return $this->state(fn(array $_attributes): array => [
+>>>>>>> laraxot/master
             'status' => 'failed',
             'notification_message' => $this->faker->sentence(),
         ]);

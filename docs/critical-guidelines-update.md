@@ -3,7 +3,11 @@
 ## 1. VIOLAZIONE GRAVE: Cartella Docs Root
 
 ### Problema Identificato
+<<<<<<< HEAD
 La cartella `docs` ESISTE e viola la regola fondamentale:
+=======
+La cartella `/var/www/html/ptvx/docs` ESISTE e viola la regola fondamentale:
+>>>>>>> laraxot/master
 - ❌ **VIOLAZIONE CRITICA**: Cartella docs root esistente
 - ❌ **RIFERIMENTI ASSOLUTI**: Link hardcoded in vari moduli
 - ❌ **DUPLICAZIONE**: Documentazione fuori dai moduli
@@ -21,11 +25,28 @@ Nei seguenti file sono presenti riferimenti assoluti alla cartella docs root:
 ```bash
 # 1. Spostare il contenuto utile nei moduli appropriati
 # 2. Eliminare la cartella root docs
+<<<<<<< HEAD
 rm -rf docs/
 
 # 3. Verificare che non esistano altre cartelle docs root
 find translations.md)
 - [Standard Traduzioni](docs/translation-standards.md)
+=======
+rm -rf /var/www/html/ptvx/docs/
+
+# 3. Verificare che non esistano altre cartelle docs root
+find /var/www/html/ptvx -maxdepth 2 -name "docs" -type d | grep -E "(^/var/www/html/ptvx/docs$)"
+# Se restituisce output → ERRORE CRITICO
+```
+
+#### B. Correzione Riferimenti
+Sostituire tutti i riferimenti assoluti con riferimenti relativi:
+
+**PRIMA (VIETATO):**
+```markdown
+- [Traduzioni Root](/var/www/html/ptvx/docs/translations.md)
+- [Standard Traduzioni](/var/www/html/ptvx/docs/translation-standards.md)
+>>>>>>> laraxot/master
 ```
 
 **DOPO (CORRETTO):**
@@ -95,8 +116,13 @@ if (property_exists($model, 'attachments')) {
 }
 
 // ✅ MIGLIORE - Pattern con default value
+<<<<<<< HEAD
 $attachments = property_exists($model, 'attachments')
     ? $model::$attachments
+=======
+$attachments = property_exists($model, 'attachments') 
+    ? $model::$attachments 
+>>>>>>> laraxot/master
     : [];
 ```
 
@@ -125,7 +151,11 @@ if (!method_exists($record, 'getEmailAttribute')) {
 
 ### Fase 1: Eliminazione Docs Root (24 ore)
 - [ ] Spostare documentazione utile in `Modules/Xot/docs/`
+<<<<<<< HEAD
 - [ ] Eliminare cartella `docs`
+=======
+- [ ] Eliminare cartella `/var/www/html/ptvx/docs`
+>>>>>>> laraxot/master
 - [ ] Aggiornare tutti i riferimenti assoluti
 
 ### Fase 2: Correzione property_exists (48 ore)
@@ -157,7 +187,14 @@ if (!method_exists($record, 'getEmailAttribute')) {
 ## 6. Verifica Automatica
 ```bash
 # Verifica cartelle docs root
+<<<<<<< HEAD
 find  --include="*.php" | grep -v "static" | grep -v "::"
+=======
+find /var/www/html/ptvx -maxdepth 2 -name "docs" -type d | grep -E "(^/var/www/html/ptvx/docs$)"
+
+# Verifica usi errati di property_exists
+grep -r "property_exists" /var/www/html/ptvx/laravel/Modules/ --include="*.php" | grep -v "static" | grep -v "::"
+>>>>>>> laraxot/master
 ```
 
 ---
@@ -166,4 +203,8 @@ find  --include="*.php" | grep -v "static" | grep -v "::"
 **PRIORITÀ**: CRITICA
 **RESPONSABILE**: Tutto il team sviluppo
 
+<<<<<<< HEAD
 *Questo documento sostituisce tutte le linee guida precedenti in conflitto.*
+=======
+*Questo documento sostituisce tutte le linee guida precedenti in conflitto.*
+>>>>>>> laraxot/master

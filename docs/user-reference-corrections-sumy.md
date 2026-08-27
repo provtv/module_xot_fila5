@@ -79,7 +79,11 @@ public static function getPluralModelLabel(): string
 ## 📚 Documentazione Creata
 
 - **[User Reference Pattern](./user-reference-pattern.md)** - Guida completa pattern corretti
+<<<<<<< HEAD
 - **[PHPStan Corrections January 2025](./phpstan-corrections-january.md)** - Aggiornato con riferimenti User
+=======
+- **[PHPStan Corrections January 2025](./phpstan-corrections-january-2025.md)** - Aggiornato con riferimenti User
+>>>>>>> laraxot/master
 
 ---
 
@@ -146,3 +150,7 @@ $userClass = XotData::make()->getUserClass();
 
 ---
 
+<<<<<<< HEAD
+=======
+*Ultimo aggiornamento: [DATE]*
+>>>>>>> laraxot/master

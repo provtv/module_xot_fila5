@@ -5,8 +5,12 @@
 The system utilizes three main database connections:
 
 ### 1. Limesurvey Database (`limesurvey` connection)
+<<<<<<< HEAD
 - **Schema**: `txaesfry_healthcare_app_survey` 
 - **Schema**: `txaesfry_app_survey` 
+=======
+- **Schema**: `txaesfry_quaeris_survey` 
+>>>>>>> laraxot/master
 - **Purpose**: Main Limesurvey installation with surveys, questions, and responses
 - **Key tables**: 
   - `lime_questions` - Question structure and metadata
@@ -16,6 +20,7 @@ The system utilizes three main database connections:
   - `lime_answers` - Possible answer options
   - `lime_answer_l10ns` - Answer translations
 
+<<<<<<< HEAD
 ### 2. healthcare_app Database (`healthcare_app` connection) 
 - **Purpose**: Application-specific data including survey mappings
 - **Key tables**:
@@ -24,6 +29,12 @@ The system utilizes three main database connections:
 - **Purpose**: Application-specific data including survey mappings
 - **Key tables**:
   - `survey_pdfs` - Links Limesurvey surveys to ExternalProject functionality
+=======
+### 2. Quaeris Database (`quaeris` connection) 
+- **Purpose**: Application-specific data including survey mappings
+- **Key tables**:
+  - `survey_pdfs` - Links Limesurvey surveys to Quaeris functionality
+>>>>>>> laraxot/master
   - `question_charts` - Custom chart configurations for survey data
   - `charts` - Chart visualization settings
   - `contacts` - Participant contact and communication tracking
@@ -99,8 +110,12 @@ The system utilizes three main database connections:
 
 ## Integration Points
 
+<<<<<<< HEAD
 ### healthcare_app-Specific Features
 ### ExternalProject-Specific Features
+=======
+### Quaeris-Specific Features
+>>>>>>> laraxot/master
 - Links Limesurvey data to `survey_pdfs` table via survey_id mapping
 - Custom chart configurations in `question_charts` table
 - Participant tracking through `contacts` table
@@ -115,4 +130,8 @@ The system utilizes three main database connections:
 - Database connections properly separated by purpose
 - Survey-specific table access verified before queries
 - Participant data handling follows privacy guidelines
+<<<<<<< HEAD
 - Token-based access control for survey participation
+=======
+- Token-based access control for survey participation
+>>>>>>> laraxot/master

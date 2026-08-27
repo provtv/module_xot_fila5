@@ -25,4 +25,8 @@ Fase 1 completata.
 
 - [Roadmap Xot](roadmap.md)
 - [Lista task Xot](tasks-index.md)
+<<<<<<< HEAD
 - [Action Classes Static Rule](../../../../docs/operational-rules/action-classes-static-rule.md)
+=======
+- [Action Classes Static Rule](../../../docs/operational-rules/action-classes-static-rule.md)
+>>>>>>> laraxot/master

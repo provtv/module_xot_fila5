@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # PHPStan Audit Completo - 2025-01-27
+=======
+# PHPStan Audit Completo - [DATE]
+>>>>>>> laraxot/master
 
 ## Obiettivo
 Eseguire analisi PHPStan livello 10 per tutti i moduli del progetto seguendo metodologia "Super Mucca".
@@ -98,8 +102,13 @@ Eseguire analisi PHPStan livello 10 per tutti i moduli del progetto seguendo met
 ## Documentazione Aggiornata
 
 ### File Creati/Modificati
+<<<<<<< HEAD
 - `laravel/Modules/DbForge/docs/phpstan-fixes-2025-01-22.md` - Documentazione esistente verificata
 - `laravel/Modules/Xot/docs/phpstan-audit-2025-01-27.md` - Questo file
+=======
+- `laravel/Modules/DbForge/docs/phpstan-fixes-[DATE].md` - Documentazione esistente verificata
+- `laravel/Modules/Xot/docs/phpstan-audit-[DATE].md` - Questo file
+>>>>>>> laraxot/master
 
 ## Pattern Applicati
 
@@ -142,4 +151,8 @@ Eseguire analisi PHPStan livello 10 per tutti i moduli del progetto seguendo met
 - La qualità del codice è stata migliorata seguendo best practices Laraxot
 - La documentazione è stata aggiornata per tracciare le correzioni
 
+<<<<<<< HEAD
 *Ultimo aggiornamento: 2025-01-27*
+=======
+*Ultimo aggiornamento: [DATE]*
+>>>>>>> laraxot/master

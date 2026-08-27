@@ -1,6 +1,10 @@
 # PHPStan Code Quality Guide - Laraxot
 
+<<<<<<< HEAD
 **Ultimo aggiornamento**: 2025-01-10
+=======
+**Ultimo aggiornamento**: [DATE]
+>>>>>>> laraxot/master
 **Principi**: DRY + KISS + SOLID + Robust
 **Stack**: Laravel 12 + Filament 4 + PHP 8.3 + Laraxot
 **Obiettivo**: 0 errori PHPStan Level 10 + Complexity < 10 + Quality > 80%

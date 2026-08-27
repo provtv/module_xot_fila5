@@ -1,12 +1,20 @@
 # Configurazione MCP Ottimizzata per base_techplanner_fila4_mono
 
+<<<<<<< HEAD
 **Data Creazione**: 2025-01-27
 **Ultimo Aggiornamento**: 2025-01-27
+=======
+**Data Creazione**: [DATE]
+>>>>>>> laraxot/master
 **Status**: ✅ Configurazione Completa e Ottimizzata
 **Metodologia**: Super Mucca 🐮⚡
 
 ### ⚠️ Cambiamenti Recenti
+<<<<<<< HEAD
 - **2025-01-27**: Rimosso `mcp-package-docs` (deprecato e non supportato) - Usare Laravel Boost per documentazione
+=======
+- **[DATE]**: Rimosso `mcp-package-docs` (deprecato e non supportato) - Usare Laravel Boost per documentazione
+>>>>>>> laraxot/master
 
 ---
 
@@ -458,6 +466,10 @@ npx -y @modelcontextprotocol/server-filesystem --version
 
 ---
 
+<<<<<<< HEAD
 **Ultimo aggiornamento**: 2025-01-27
+=======
+**Ultimo aggiornamento**: [DATE]
+>>>>>>> laraxot/master
 **Autore**: Super Mucca Analysis
 **Status**: ✅ Configurazione Completa e Ottimizzata

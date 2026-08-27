@@ -280,7 +280,11 @@ quality-check:
 
 ---
 
+<<<<<<< HEAD
 **Creato**: 2025-01-29
+=======
+**Creato**: [DATE]
+>>>>>>> laraxot/master
 **Tipo**: Regola Quality Gate Obbligatoria
 **Applicazione**: Ogni modifica file
 **Severità**: 🔴 CRITICA

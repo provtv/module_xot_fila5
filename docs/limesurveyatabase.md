@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 module: theme
 topic: limesurveyatabase
@@ -6,11 +7,21 @@ canonical: ../../../Themes/docs/shared-components/limesurvey-database-analysis.m
 
 ## Overview
 The `Quaeris_survey` database (identified as `txaesfry_Quaeris_survey` in the code) is a Limesurvey database used by the system for handling survey data, questions, answers, and responses.
+=======
+# Limesurvey Database Analysis - quaeris_survey
+
+## Overview
+The `quaeris_survey` database (identified as `txaesfry_quaeris_survey` in the code) is a Limesurvey database used by the system for handling survey data, questions, answers, and responses.
+>>>>>>> laraxot/master
 
 ## Database Schema Analysis
 
 ### Connection Configuration
+<<<<<<< HEAD
 - Database: `txaesfry_Quaeris_survey`
+=======
+- Database: `txaesfry_quaeris_survey`
+>>>>>>> laraxot/master
 - Connection name: `limesurvey` (configured in config files)
 - Access through: `DB::connection('limesurvey')`
 
@@ -76,7 +87,11 @@ From the code, it's evident that Limesurvey follows the standard schema where:
 - Translation tables use `_l10ns` suffix (localization)
 
 ## Usage in Application
+<<<<<<< HEAD
 The Quaeris_survey database is used primarily for:
+=======
+The quaeris_survey database is used primarily for:
+>>>>>>> laraxot/master
 - Survey response analysis
 - Question/answer extraction
 - Response aggregation by time periods

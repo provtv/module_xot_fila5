@@ -134,6 +134,10 @@ If you encounter this error:
 
 ---
 
+<<<<<<< HEAD
 *Last Updated: 2025-08-27*
+=======
+*
+>>>>>>> laraxot/master
 *Trait Standards Version: 2.0*
 

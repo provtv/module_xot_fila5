@@ -25,6 +25,7 @@
         "POSTGRES_CONNECTION_STRING": "${DATABASE_URL}"
       }
     },
+<<<<<<< HEAD
     "laravel-artisan": {
       "command": "node",
       "args": ["./laravel/Modules/Xot/docs/mcp-laravel-artisan-server.js"],
@@ -35,6 +36,13 @@
       "args": [],
       "env": {
         "LARAVEL_PROJECT_ROOT": "./laravel"
+=======
+    "laravel-boost": {
+      "command": "/var/www/_bases/base_quaeris_fila5_mono/bashscripts/mcp/laravel-boost-wrapper.sh",
+      "args": [],
+      "env": {
+        "LARAVEL_PROJECT_ROOT": "/var/www/_bases/base_quaeris_fila5_mono/laravel"
+>>>>>>> laraxot/master
       }
     },
     "fetch": {
@@ -54,4 +62,9 @@
         "args": ["-y", "@assistant-ui/mcp-docs-server"]
     }
   }
+<<<<<<< HEAD
 }
+=======
+}
+
+>>>>>>> laraxot/master

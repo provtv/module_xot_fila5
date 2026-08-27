@@ -3,8 +3,11 @@
 **Status**: ✅ REGOLA ASSOLUTA - NESSUNA ECCEZIONE  
 **Priorità**: MASSIMA
 
+<<<<<<< HEAD
 > **Sync operativo:** `./bashscripts/tools/sync-env-testing.sh` — wiki [architecture-env-testing-parity.md](../../../../docs/wiki/bmad/architecture-env-testing-parity.md) · [env-testing-parity-copy-env.md](../wiki/concepts/env-testing-parity-copy-env.md)
 
+=======
+>>>>>>> laraxot/master
 ## 🚨 Principio Fondamentale
 
 > **Il file `.env.testing` è la fonte unica di verità per la configurazione dei test.**
@@ -22,11 +25,19 @@ Il file `.env.testing` deve essere una copia esatta del `.env` con **una sola mo
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
+<<<<<<< HEAD
 DB_DATABASE=<nome progetto>_data
 DB_USERNAME=marco
 DB_PASSWORD=marco
 
 DB_DATABASE_USER=<nome progetto>_user
+=======
+DB_DATABASE=laravelpizza_data
+DB_USERNAME=marco
+DB_PASSWORD=marco
+
+DB_DATABASE_USER=laravelpizza_user
+>>>>>>> laraxot/master
 DB_USERNAME_USER=marco
 DB_PASSWORD_USER=marco
 ```
@@ -36,11 +47,19 @@ DB_PASSWORD_USER=marco
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
+<<<<<<< HEAD
 DB_DATABASE=<nome progetto>_data_test
 DB_USERNAME=marco
 DB_PASSWORD=marco
 
 DB_DATABASE_USER=<nome progetto>_user_test
+=======
+DB_DATABASE=laravelpizza_data_test
+DB_USERNAME=marco
+DB_PASSWORD=marco
+
+DB_DATABASE_USER=laravelpizza_user_test
+>>>>>>> laraxot/master
 DB_USERNAME_USER=marco
 DB_PASSWORD_USER=marco
 ```
@@ -48,15 +67,25 @@ DB_PASSWORD_USER=marco
 ### ❌ MAI FARE QUESTO (ERRORI GRAVI)
 ```bash
 # ❌ SBAGLIATO - Inventare database che NON esistono nel .env
+<<<<<<< HEAD
 NOTIFY_DB_DATABASE=<nome progetto>_data_test
 GEO_DB_DATABASE=<nome progetto>_data_test
 MEDIA_DB_DATABASE=<nome progetto>_data_test
+=======
+NOTIFY_DB_DATABASE=laravelpizza_data_test
+GEO_DB_DATABASE=laravelpizza_data_test
+MEDIA_DB_DATABASE=laravelpizza_data_test
+>>>>>>> laraxot/master
 
 # ❌ SBAGLIATO - Cambiare struttura connessioni
 DB_CONNECTION=user
 
 # ❌ SBAGLIATO - Usare database diversi da quelli nel .env
+<<<<<<< HEAD
 DB_DATABASE=<nome progetto>_notify_test
+=======
+DB_DATABASE=laravelpizza_notify_test
+>>>>>>> laraxot/master
 ```
 
 ### ❌ REGOLA CRITICA: config/database.php
@@ -69,12 +98,20 @@ Le connessioni per i moduli (notify, geo, media, etc.) vengono create **automati
 // ❌ SBAGLIATO - Non fare mai questo nel database.php
 'notify' => [
     'driver' => 'mysql',
+<<<<<<< HEAD
     'database' => env('NOTIFY_DB_DATABASE', '<nome progetto>_notify_test'),
+=======
+    'database' => env('NOTIFY_DB_DATABASE', 'laravelpizza_notify_test'),
+>>>>>>> laraxot/master
     ...
 ],
 'geo' => [
     'driver' => 'mysql',
+<<<<<<< HEAD
     'database' => env('GEO_DB_DATABASE', '<nome progetto>_geo_test'),
+=======
+    'database' => env('GEO_DB_DATABASE', 'laravelpizza_geo_test'),
+>>>>>>> laraxot/master
     ...
 ],
 
@@ -99,7 +136,11 @@ $dbName = 'file:memdb_test_'.Str::random(10).'?mode=memory&cache=shared';
 // ✅ CORRETTO - Usa sempre MySQL da .env.testing
 // Il file .env.testing definisce:
 // DB_CONNECTION=mysql
+<<<<<<< HEAD
 // DB_DATABASE=healthcare_app_data_test  (suffisso "_test" obbligatorio)
+=======
+// DB_DATABASE=quaeris_data_test  (suffisso "_test" obbligatorio)
+>>>>>>> laraxot/master
 // DB_HOST=127.0.0.1
 // DB_PORT=3306
 
@@ -110,9 +151,15 @@ $dbName = 'file:memdb_test_'.Str::random(10).'?mode=memory&cache=shared';
 ### 3. Pattern Database Test
 ```bash
 # Schema: {nome_database_produzione}_test
+<<<<<<< HEAD
 PRODUZIONE: healthcare_app_data    → TEST: healthcare_app_data_test
 PRODUZIONE: healthcare_app_user    → TEST: healthcare_app_user_test  
 PRODUZIONE: healthcare_app_survey  → TEST: healthcare_app_survey_test
+=======
+PRODUZIONE: quaeris_data    → TEST: quaeris_data_test
+PRODUZIONE: quaeris_user    → TEST: quaeris_user_test  
+PRODUZIONE: quaeris_survey  → TEST: quaeris_survey_test
+>>>>>>> laraxot/master
 
 # Pattern: {nome}_test - SEMPRE e SOLO _test
 ```
@@ -126,7 +173,11 @@ APP_DEBUG=true
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
+<<<<<<< HEAD
 DB_DATABASE=healthcare_app_data_test          # Suffisso "_test" obbligatorio
+=======
+DB_DATABASE=quaeris_data_test          # Suffisso "_test" obbligatorio
+>>>>>>> laraxot/master
 DB_USERNAME=marco
 DB_PASSWORD=marco
 
@@ -244,10 +295,18 @@ protected function setUp(): void
 
 ## Riferimenti
 
+<<<<<<< HEAD
 - [Database Testing Consistency Rule](../../../../../docs/operational-rules/database-testing-consistency-rule.md)
+=======
+- [Database Testing Consistency Rule](../../../../docs/operational-rules/database-testing-consistency-rule.md)
+>>>>>>> laraxot/master
 - [Testing Strategy](./testing-strategy.md)
 - [MySQL Testing Only Rule](../../../../.cursor/rules/mysql-testing-only.mdc)
 
 **Versione**: 1.0  
 **Ultimo aggiornamento**: 2026-01-21  
+<<<<<<< HEAD
 **Status**: REGOLA ASSOLUTA - NESSUNA ECCEZIONE
+=======
+**Status**: REGOLA ASSOLUTA - NESSUNA ECCEZIONE
+>>>>>>> laraxot/master

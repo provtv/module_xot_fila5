@@ -32,7 +32,11 @@ return [
     'exists' => 'La selezione per :attribute non è valida.',
     'file' => 'The :attribute must be a file.',
     'filled' => ':attribute è obbligatorio.',
+<<<<<<< HEAD
     'image' => ':attribute deve essere un\'immagine.',
+=======
+    'image' => ":attribute deve essere un'immagine.",
+>>>>>>> laraxot/master
     'in' => 'La selezione per :attribute non è valida.',
     'in_array' => 'The :attribute field does not exist in :other.',
     'integer' => ':attribute deve essere un numero intero.',
@@ -128,6 +132,7 @@ return [
             'new_password_confirmation' => 'Conferma nuova password',
         ],
     ],
+<<<<<<< HEAD
     'label' => 'Validation',
     'plural_label' => 'Validation (Plurale)',
     'navigation' => [
@@ -172,4 +177,6 @@ return [
             'label' => 'Elimina Validation',
         ],
     ],
+=======
+>>>>>>> laraxot/master
 ];

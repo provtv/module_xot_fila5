@@ -1,7 +1,11 @@
 # Risoluzione Conflitti Git - Filament Class Extension Rules
 
 ## Data Risoluzione
+<<<<<<< HEAD
 2026-01-02
+=======
+[DATE]
+>>>>>>> laraxot/master
 
 ## Problema Identificato
 

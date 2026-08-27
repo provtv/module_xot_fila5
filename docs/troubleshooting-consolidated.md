@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: "Troubleshooting - Documentazione Consolidata DRY + KISS"
 module: xot
@@ -7,6 +8,8 @@ created: 2026-08-24
 updated: 2026-08-24
 ---
 
+=======
+>>>>>>> laraxot/master
 # Troubleshooting - Documentazione Consolidata DRY + KISS
 
 > **🎯 Single Source of Truth**: Questo documento centralizza TUTTI i problemi comuni e le soluzioni del progetto
@@ -469,8 +472,11 @@ Class not found: Modules\ModuleName\NewClass
 ```
 
 **Soluzione**
+<<<<<<< HEAD
 ```
 
+=======
+>>>>>>> laraxot/master
 ```bash
 composer dump-autoload
 ```
@@ -603,5 +609,9 @@ php artisan view:clear
 
 ---
 
+<<<<<<< HEAD
+=======
+*Ultimo aggiornamento: [DATE]*
+>>>>>>> laraxot/master
 *Modulo: Xot*
 *Categoria: Troubleshooting*

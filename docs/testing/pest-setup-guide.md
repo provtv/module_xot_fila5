@@ -54,7 +54,11 @@ All tests **MUST** use `laravel/.env.testing` for configuration.
 
 **Key Requirements**:
 - Database type in `.env.testing` MUST match `.env` (avoid dialect issues)
+<<<<<<< HEAD
 - Each module should have its own test database (e.g., `<nome progetto>_user_test`)
+=======
+- Each module should have its own test database (e.g., `laravelpizza_user_test`)
+>>>>>>> laraxot/master
 - Use `array` driver for cache and sessions in testing
 - Use `sync` queue connection for immediate execution
 
@@ -292,4 +296,8 @@ git push
 - [Pest Documentation](https://pestphp.com/docs)
 - [Laravel Testing](https://laravel.com/docs/12.x/testing)
 - [Laravel Modules](https://laravelmodules.com/docs/12/advanced/tests)
+<<<<<<< HEAD
 - [Composer Merge Plugin](https://github.com/wikimedia/composer-merge-plugin)
+=======
+- [Composer Merge Plugin](https://github.com/wikimedia/composer-merge-plugin)
+>>>>>>> laraxot/master

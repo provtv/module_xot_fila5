@@ -155,7 +155,11 @@ docs/
 
 ### Tra moduli (Xot → User)
 ```markdown
+<<<<<<< HEAD
 [user docs](../../User/docs/user-guide.md)
+=======
+[user docs](../../user/docs/user-guide.md)
+>>>>>>> laraxot/master
 ```
 
 ### All'interno dello stesso modulo
@@ -417,7 +421,11 @@ docs/
 
 ### Tra moduli (Xot → User)
 ```markdown
+<<<<<<< HEAD
 [user docs](../../User/docs/user-guide.md)
+=======
+[user docs](../../user/docs/user-guide.md)
+>>>>>>> laraxot/master
 ```
 
 ### All'interno dello stesso modulo

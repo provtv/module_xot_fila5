@@ -1,8 +1,12 @@
+<<<<<<< HEAD
 ---
 module: theme
 topic: module
 canonical: ../../../Themes/docs/shared-components/module-analysis-Modules.md
 ---
+=======
+# Xot Module - Comprehensive Analysis
+>>>>>>> laraxot/master
 
 ## Module Overview
 **Module Name**: Xot  

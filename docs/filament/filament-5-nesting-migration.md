@@ -80,7 +80,11 @@ class ListContacts extends XotBaseListRecords
 ### Comando Artisan
 
 ```bash
+<<<<<<< HEAD
 php artisan make:filament-resource Contact --nested --module=healthcare_app
+=======
+php artisan make:filament-resource Contact --nested --module=Quaeris
+>>>>>>> laraxot/master
 ```
 
 Questo comando crea automaticamente:
@@ -253,9 +257,15 @@ protected static ?string $relatedResource = ContactResource::class;
 
 ## Opportunità di Nesting per Moduli
 
+<<<<<<< HEAD
 ### Modulo healthcare_app
 
 Vedi: [Modules/healthcare_app/docs/filament-nesting-opportunities.md](../../healthcare_app/docs/filament-nesting-opportunities.md)
+=======
+### Modulo Quaeris
+
+Vedi: [Modules/Quaeris/docs/filament-nesting-opportunities.md](../../quaeris/docs/filament-nesting-opportunities.md)
+>>>>>>> laraxot/master
 
 **Opportunità**:
 - Contact → Nested di SurveyPdf
@@ -363,11 +373,19 @@ Filament 5.x gestisce automaticamente i breadcrumbs per nested resources. Non se
 ## Collegamenti
 
 - [Filament 5.x Nesting Documentation](https://filamentphp.com/docs/5.x/resources/nesting)
+<<<<<<< HEAD
 - [healthcare_app Nesting Opportunities](../../healthcare_app/docs/filament-nesting-opportunities.md)
+=======
+- [Quaeris Nesting Opportunities](../../quaeris/docs/filament-nesting-opportunities.md)
+>>>>>>> laraxot/master
 - [Limesurvey Nesting Opportunities](../../limesurvey/docs/filament-nesting-opportunities.md)
 - [Cms Nesting Opportunities](../../cms/docs/filament-nesting-opportunities.md)
 - [User Nesting Opportunities](../../user/docs/filament-nesting-opportunities.md)
 
 ---
 
+<<<<<<< HEAD
 **Prossima Revisione**: 2026-02-22
+=======
+**Prossima Revisione**: 2026-02-22
+>>>>>>> laraxot/master

@@ -28,5 +28,10 @@ Lista dei task del modulo con link ai file .md separati. Ogni task è un file ne
 ## Collegamenti
 
 - [Roadmap Xot](../roadmap.md)
+<<<<<<< HEAD
 - [README Xot](../README.md)
 - [Scopo moduli progetto](../../../../../docs/moduli-scopo.md)
+=======
+- [README Xot](../readme.md)
+- [Scopo moduli progetto](../../../../docs/moduli-scopo.md)
+>>>>>>> laraxot/master

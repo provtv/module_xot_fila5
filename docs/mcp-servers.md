@@ -517,7 +517,11 @@ iflow
 
 ## Changelog
 
+<<<<<<< HEAD
 - **2025-01-06**: Documentazione iniziale creata
+=======
+- **[DATE]**: Documentazione iniziale creata
+>>>>>>> laraxot/master
   - Cursor, Windsurf, Cline, iFlow
   - Server MCP essenziali configurati
   - Best practices e troubleshooting

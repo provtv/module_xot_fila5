@@ -54,5 +54,10 @@ return [
 
 ## Collegamenti
 - [Filament Best Practices](../filament-best-practices.md)
+<<<<<<< HEAD
 - [Form Components](../COMPONENTI_PERSONALIZZATI.md)
 - [PHPStan Level 9 Guide](../PHPSTAN-LEVEL9-GUIDE.md)
+=======
+- [Form Components](../componenti_personalizzati.md)
+- [PHPStan Level 9 Guide](../phpstan-level9-guide.md)
+>>>>>>> laraxot/master

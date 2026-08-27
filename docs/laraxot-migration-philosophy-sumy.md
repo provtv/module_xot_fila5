@@ -13,7 +13,11 @@ In Laraxot architecture, we **NEVER** create multiple `create_table` migration f
 - No ambiguity about which migration defines the "real" table structure
 - Clear, linear evolution of database schema
 
+<<<<<<< HEAD
 ### 2. **<nome progetto>able Migration Order**
+=======
+### 2. **Predictable Migration Order**
+>>>>>>> laraxot/master
 - No confusion about which migration runs first
 - Consistent behavior across all environments (local, staging, production)
 - Eliminates race conditions in migration execution
@@ -123,7 +127,11 @@ When duplicate migrations are discovered:
 ### Laraxot Core Values
 - **Simplicity**: One table, one migration, no exceptions
 - **Clarity**: Clear, unambiguous schema definitions
+<<<<<<< HEAD
 - **<nome progetto>ability**: Consistent migration behavior across environments
+=======
+- **Predictability**: Consistent migration behavior across environments
+>>>>>>> laraxot/master
 - **Maintainability**: Easy to understand and modify schema evolution
 
 ### Why This Matters
@@ -131,4 +139,8 @@ In Laraxot, migrations are the definitive history of your database schema. Keep 
 
 ---
 
+<<<<<<< HEAD
 **Remember**: In Laraxot philosophy, simplicity and clarity trump flexibility. One table, one migration, no exceptions.
+=======
+**Remember**: In Laraxot philosophy, simplicity and clarity trump flexibility. One table, one migration, no exceptions.
+>>>>>>> laraxot/master

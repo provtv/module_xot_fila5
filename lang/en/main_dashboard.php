@@ -1,5 +1,6 @@
 <?php
 
+<<<<<<< HEAD
 declare(strict_types=1);
 
 return [
@@ -23,3 +24,15 @@ return [
     'actions' => [
     ],
 ];
+=======
+return array (
+  'sections' => 
+  array (
+    'empty' => 
+    array (
+      'label' => 'empty',
+      'heading' => 'empty',
+    ),
+  ),
+);
+>>>>>>> laraxot/master

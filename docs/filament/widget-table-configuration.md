@@ -87,7 +87,11 @@ protected function getTablePollInterval(): ?string
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
 namespace Modules\healthcare_app\Filament\Widgets;
+=======
+namespace Modules\Quaeris\Filament\Widgets;
+>>>>>>> laraxot/master
 
 use Modules\Xot\Filament\Widgets\XotBaseTableWidget;
 
@@ -227,12 +231,17 @@ MyTableWidget::make([
 **⚠️ IMPORTANTE**: Le proprietà `protected` o `private` **NON** vengono inizializzate da `make()`.
 
 Per documentazione completa, vedere:
+<<<<<<< HEAD
 - [Widget Property Initialization Pattern](../../../modules/healthcare_app/docs/widget-property-initialization-pattern.md)
+=======
+- [Widget Property Initialization Pattern](../../../modules/quaeris/docs/widget-property-initialization-pattern.md)
+>>>>>>> laraxot/master
 
 ## Riferimenti
 
 - [HasXotTable Trait](../../../modules/xot/docs/filament/xot-table.md)
 - [No Table Override Rule](../../../modules/xot/docs/filament/no-table-override.md)
+<<<<<<< HEAD
 - [Widget Property Initialization Pattern](../../../Modules/Quaeris/docs/widget-property-initialization-pattern.md)
 
 ## Riferimenti
@@ -245,3 +254,9 @@ Per documentazione completa, vedere:
 *Ultimo aggiornamento: 2025-01-27*
 - [Widget Table Method Final Analysis](../../../modules/healthcare_app/docs/widget-table-method-final-analysis.md)
 - [Widget Property Initialization Pattern](../../../modules/healthcare_app/docs/widget-property-initialization-pattern.md)
+=======
+- [Widget Table Method Final Analysis](../../../modules/quaeris/docs/widget-table-method-final-analysis.md)
+- [Widget Property Initialization Pattern](../../../modules/quaeris/docs/widget-property-initialization-pattern.md)
+
+*Ultimo aggiornamento: 2025-01-27*
+>>>>>>> laraxot/master

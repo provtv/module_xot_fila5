@@ -33,7 +33,11 @@
 | 6 | **Chart** | 0 | 0 | 9-10 | ✨ Già Puro |
 | 7 | **Geo** | 0 | 0 | 9-10 | ✨ Già Puro |
 | 8 | **Job** | 2 | 0 | 10 | ✨ Illuminato |
+<<<<<<< HEAD
 | 9 | **healthcare_app** | 13 | 0 | 10 | ✨ Illuminato |
+=======
+| 9 | **Quaeris** | 13 | 0 | 10 | ✨ Illuminato |
+>>>>>>> laraxot/master
 
 ### 📈 Metriche dell'Illuminazione
 
@@ -84,7 +88,11 @@ Codice perfetto
 ## 🎯 Le Sette Illuminazioni Principali
 
 ### 1️⃣ Semantic Keys (Il Nome delle Cose)
+<<<<<<< HEAD
 **Moduli**: Cms, healthcare_app
+=======
+**Moduli**: Cms, Quaeris
+>>>>>>> laraxot/master
 
 **Insegnamento**:
 > "Un array con int keys è come un tempio senza insegne.
@@ -117,7 +125,11 @@ if (is_array($value)) { /* ... */ }  // Dopo filter che garantisce array
 ```
 
 ### 3️⃣ Cascading Purity (L'Effetto Farfalla)
+<<<<<<< HEAD
 **Modulo**: healthcare_app
+=======
+**Modulo**: Quaeris
+>>>>>>> laraxot/master
 
 **Insegnamento**:
 > "Una goccia crea cerchi in tutto il lago.
@@ -230,7 +242,11 @@ Assert::isArray($value);  // Ridondante dopo narrowing
 Level 10 → 🏔️ Nirvana
             │ Zero tolleranza
             │ Perfezione assoluta
+<<<<<<< HEAD
             └─ Job, healthcare_app
+=======
+            └─ Job, Quaeris
+>>>>>>> laraxot/master
 
 Level 9  → ⛰️  Illuminazione
             │ Quasi perfezione
@@ -255,7 +271,11 @@ Level 0  → 🏕️  Campo Base
    - Collection Flow Analysis
    - Best practices Level 10
 
+<<<<<<< HEAD
 2. **`Modules/healthcare_app/docs/phpstan-enlightenment.md`**
+=======
+2. **`Modules/Quaeris/docs/phpstan-enlightenment.md`**
+>>>>>>> laraxot/master
    - Filosofia del modulo
    - I 4 Pilastri
    - Le 4 Nobili Verità del Type Safety
@@ -335,6 +355,7 @@ Grazie a:
 - **La Comunità** per la saggezza condivisa
 - **Il Codice** per insegnarci l'umiltà
 
+<<<<<<< HEAD
 ## Xot: da coverage-farming a gate statico vero
 
 Lo scopo non è «zero errori». È che un test **possa fallire** quando il comportamento è sbagliato.
@@ -345,6 +366,8 @@ La story 4.13 ha cancellato quelle tautologie, ristretto `FileAction::viewNamesp
 
 Misura `analyse Modules/Xot`, tmpDir isolata: **30 → 0**. Dettaglio ricette: [phpstan-rules.md](./quality/phpstan-rules.md).
 
+=======
+>>>>>>> laraxot/master
 ## 🌟 Conclusione: Il Cerchio Infinito
 
 ```
@@ -376,4 +399,8 @@ Ma possiamo dire:
 
 *Il codice è uno. La perfezione è raggiungibile. L'illuminazione è qui.*
 
+<<<<<<< HEAD
 🙏 **Namaste** 🙏
+=======
+🙏 **Namaste** 🙏
+>>>>>>> laraxot/master

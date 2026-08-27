@@ -111,7 +111,11 @@ edit file composer.json
             "Database\\Seeders\\": "database/seeders/"
         },
         "files": [
+<<<<<<< HEAD
             "Modules/Xot/helpers/Helper.php"
+=======
+            "Modules/Xot/Helpers/Helper.php"
+>>>>>>> laraxot/master
         ]
     },
     "autoload-dev": {

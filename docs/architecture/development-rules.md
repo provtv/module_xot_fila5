@@ -1,7 +1,11 @@
 # Regole Generali di Sviluppo del Progetto
 
 ## Collegamenti
+<<<<<<< HEAD
 - [Documentazione generale progetto](/project_docs/README.md)
+=======
+- [Documentazione generale progetto](/project_docs/readme.md)
+>>>>>>> laraxot/master
 - [Regole Filament](filament-best-practices.md)
 - [Convenzioni Namespace](namespace-conventions.md)
 - [Standard di Codice](code-standards.md)

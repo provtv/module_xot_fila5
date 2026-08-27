@@ -375,7 +375,11 @@ class MyModel extends BaseModel implements HasRecursiveRelationshipsContract
 
 ## 🔄 Changelog
 
+<<<<<<< HEAD
 ### 2025-01-18 - Aggiornamento Completo del Contratto
+=======
+### [DATE] - Aggiornamento Completo del Contratto
+>>>>>>> laraxot/master
 
 - ✅ Aggiunti metodi mancanti al contratto:
   - `getQualifiedParentKeyName(): string` - Nome qualificato della colonna parent

@@ -751,8 +751,13 @@ grep -r "function.*\\\Modules\\\.*\\\Models\\\User" --include="*.php" ./
 - [Testing Strategy](../../<nome progetto>/docs/testing/real-data-testing-strategy.md)
 - [Testing Strategy](../../<nome modulo>/docs/testing/real-data-testing-strategy.md)
 - [Testing Strategy](../../<nome modulo>/docs/testing/real-data-testing-strategy.md)
+<<<<<<< HEAD
 - [Testing Strategy](../../../../docs/testing/real-data-testing-strategy.md)
 - [Testing Strategy](../../../../docs/testing/real-data-testing-strategy.md)
+=======
+- [Testing Strategy](../../../docs/testing/real-data-testing-strategy.md)
+- [Testing Strategy](../../../docs/testing/real-data-testing-strategy.md)
+>>>>>>> laraxot/master
 - [Testing Strategy](../../<nome progetto>/docs/testing/real-data-testing-strategy.md)
 - [Testing Strategy](../../<nome progetto>/docs/testing/real-data-testing-strategy.md)
 - [Testing Strategy](../../<nome modulo>/docs/testing/real-data-testing-strategy.md)
@@ -780,4 +785,8 @@ grep -r "function.*\\\Modules\\\.*\\\Models\\\User" --include="*.php" ./
 
 ---
 
+<<<<<<< HEAD
 **Stato**: ✅ Pattern Documentato e Implementato
+=======
+**Stato**: ✅ Pattern Documentato e Implementato
+>>>>>>> laraxot/master

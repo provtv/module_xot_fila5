@@ -4,7 +4,11 @@
 2025-10-22
 
 ## Contesto
+<<<<<<< HEAD
 Il progetto presentava **323 conflitti Git** distribuiti su tutto il modulo Xot, User e healthcare_app, causando errori ParseError e blocco di `composer dump-autoload`.
+=======
+Il progetto presentava **323 conflitti Git** distribuiti su tutto il modulo Xot, User e Quaeris, causando errori ParseError e blocco di `composer dump-autoload`.
+>>>>>>> laraxot/master
 
 ## Strategia Adottata
 
@@ -78,7 +82,11 @@ find Modules/Xot/app/Actions -name "*.php" | xargs php -l 2>&1 | grep -c "No syn
 
 **Soluzione**: Ripristino da Git dopo tentativo fallito con sed
 ```bash
+<<<<<<< HEAD
 git checkout HEAD -- $(find Modules/healthcare_app -name "*Widget.php" -type f)
+=======
+git checkout HEAD -- $(find Modules/Quaeris -name "*Widget.php" -type f)
+>>>>>>> laraxot/master
 ```
 
 **Widget corretti**:
@@ -197,4 +205,8 @@ curl -I http://127.0.0.1:8000
 1. ✅ Server funzionante
 2. ⏳ PHPStan livello 10 su `Modules/`
 3. ⏳ Documentazione aggiornata per moduli
+<<<<<<< HEAD
 4. ⏳ Test di regressione
+=======
+4. ⏳ Test di regressione
+>>>>>>> laraxot/master

@@ -7,7 +7,11 @@ return [
         'export_xls' => [
             'label' => 'Esporta Excel',
             'icon' => 'heroicon-o-arrow-down-tray',
+<<<<<<< HEAD
             'tooltip' => 'Esporta i dati in formato Excel (.xlsx]',
+=======
+            'tooltip' => 'Esporta i dati in formato Excel (.xlsx)',
+>>>>>>> laraxot/master
             'placeholder' => 'Esporta in Excel',
             'help' => 'Scarica i dati correnti in formato Excel per analisi offline',
             'description' => 'Azione per esportare i dati in formato Excel',
@@ -26,6 +30,7 @@ return [
             ],
         ],
     ],
+<<<<<<< HEAD
     'label' => 'Export Xls',
     'plural_label' => 'Export Xls (Plurale)',
     'navigation' => [
@@ -59,4 +64,6 @@ return [
             'description' => '',
         ],
     ],
+=======
+>>>>>>> laraxot/master
 ];

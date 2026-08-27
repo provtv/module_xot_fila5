@@ -25,4 +25,8 @@ Nessuna.
 
 - [Roadmap Xot](roadmap.md)
 - [Lista task Xot](tasks-index.md)
+<<<<<<< HEAD
 - [README Xot](../README.md)
+=======
+- [README Xot](../readme.md)
+>>>>>>> laraxot/master

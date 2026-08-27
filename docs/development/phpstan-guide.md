@@ -44,7 +44,11 @@ parameters:
 ### **2. Esecuzione Comando**
 ```bash
 # Esecuzione dalla root del progetto Laravel
+<<<<<<< HEAD
 cd laravel
+=======
+cd /var/www/html/_bases/base_ptvx_fila3_mono/laravel
+>>>>>>> laraxot/master
 
 # Analisi modulo specifico
 ./vendor/bin/phpstan analyze Modules/Xot --level=9
@@ -158,5 +162,9 @@ use Modules\User\Models\User; // Namespace corretto
 
 ---
 
+<<<<<<< HEAD
 **Ultimo aggiornamento:** Gennaio 2025
+=======
+**Ultimo aggiornamento:** Gennaio 2025  
+>>>>>>> laraxot/master
 **Versione:** 2.0 - Consolidata DRY + KISS

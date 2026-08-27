@@ -1,6 +1,10 @@
 # Analisi Approfondita del Modulo Xot
 
+<<<<<<< HEAD
 > **Generato**: 2025-12-24
+=======
+> **Generato**: [DATE]
+>>>>>>> laraxot/master
 > **Scopo**: Documentare la filosofia, logica, business logic e architettura del modulo Xot
 
 ---

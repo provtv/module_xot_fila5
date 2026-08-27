@@ -27,7 +27,11 @@ return [
                 'edit' => 'Editer un rôle',
                 'management' => 'Gestion des rôles',
                 'table' => [
+<<<<<<< HEAD
                     'number_of_users' => 'Nombre d\'utilisateurs',
+=======
+                    'number_of_users' => "Nombre d'utilisateurs",
+>>>>>>> laraxot/master
                     'permissions' => 'Permissions',
                     'role' => 'Rôle',
                     'sort' => 'Ordre',
@@ -86,7 +90,11 @@ return [
             'login_box_title' => 'Connexion',
             'login_button' => 'Entrer',
             'login_with' => 'Se connecter avec :social_media',
+<<<<<<< HEAD
             'register_box_title' => 'S\'enregistrer',
+=======
+            'register_box_title' => "S'enregistrer",
+>>>>>>> laraxot/master
             'register_button' => 'Créer le compte',
             'remember_me' => 'Se souvenir de moi',
         ],
@@ -132,6 +140,7 @@ return [
             ],
         ],
     ],
+<<<<<<< HEAD
     'navigation' => [
         'label' => 'Missing Navigation Label',
         'plural_label' => 'Missing Navigation Plural Label',
@@ -145,4 +154,6 @@ return [
     ],
     'actions' => [
     ],
+=======
+>>>>>>> laraxot/master
 ];

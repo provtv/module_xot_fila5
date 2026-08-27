@@ -157,7 +157,11 @@ performance::admin
 - [PDND Redirect Loop Fix](../../pdnd/project_docs/redirect_loop_fix.md)
 - [XotBasePanelProvider](xotbasepanelprovider.md)
 - [User Role Management](../../user/project_docs/console_commands/readme.md)
+<<<<<<< HEAD
 - [Filament Best Practices](../../../../docs/project/filament-best-practices.md)
+=======
+- [Filament Best Practices](../../../project_docs/filament-best-practices.md)
+>>>>>>> laraxot/master
 
 ## Aggiornamenti
 
@@ -331,7 +335,11 @@ performance::admin
 - [PDND Redirect Loop Fix](../../pdnd/docs/redirect_loop_fix.md)
 - [XotBasePanelProvider](xotbasepanelprovider.md)
 - [User Role Management](../../user/docs/console_commands/readme.md)
+<<<<<<< HEAD
 - [Filament Best Practices](../../../../docs/filament-best-practices.md)
+=======
+- [Filament Best Practices](../../../docs/filament-best-practices.md)
+>>>>>>> laraxot/master
 
 ## Aggiornamenti
 
@@ -345,4 +353,8 @@ performance::admin
 ### [DATE] - Verifica Compatibilità
 - ✅ **Backward Compatible**: Nessun breaking change
 - ✅ **Multi-Ruolo**: Supporto mantenuto
+<<<<<<< HEAD
 - ✅ **Performance**: Nessun impatto negativo
+=======
+- ✅ **Performance**: Nessun impatto negativo
+>>>>>>> laraxot/master

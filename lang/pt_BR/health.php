@@ -14,6 +14,7 @@ return [
                 'label' => 'Saúde da aplicação',
             ],
             'notifications' => [
+<<<<<<< HEAD
                 'check_results' => 'Verificar resultados de',
             ],
         ],
@@ -31,4 +32,10 @@ return [
     ],
     'actions' => [
     ],
+=======
+                'check_results' => 'Ver resultados de verificação',
+            ],
+        ],
+    ],
+>>>>>>> laraxot/master
 ];

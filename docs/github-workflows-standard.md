@@ -1,6 +1,10 @@
 # GitHub Workflows Standard - base_laravelpizza
 
+<<<<<<< HEAD
 **Ultimo aggiornamento**: 2025-01-10
+=======
+**Ultimo aggiornamento**: [DATE]
+>>>>>>> laraxot/master
 **Principi**: DRY + KISS + SOLID + Robust
 **Stack**: Laravel 12 + Filament 4 + PHP 8.3 + Laraxot
 

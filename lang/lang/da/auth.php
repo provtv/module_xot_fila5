@@ -10,4 +10,17 @@ return [
     ],
     'throttle' => 'For mange mislykkede forsøg. Prøv igen om :seconds sekunder.',
     'unknown' => 'Der opstod en ukendt fejl.',
+    'navigation' => [
+        'label' => 'Missing Navigation Label',
+        'plural_label' => 'Missing Navigation Plural Label',
+        'group' => 'Missing Group',
+        'icon' => 'heroicon-o-puzzle-piece',
+        'sort' => 100,
+    ],
+    'label' => 'Missing Label',
+    'plural_label' => 'Missing Plural label',
+    'fields' => [
+    ],
+    'actions' => [
+    ],
 ];

@@ -15,17 +15,20 @@ return [
             'buttons' => [
                 'refresh' => 'Refresh',
             ],
-
             'heading' => 'Application Health',
-
             'navigation' => [
                 'group' => 'Settings',
                 'label' => 'Application Health',
             ],
-
             'notifications' => [
                 'check_results' => 'Check results from',
             ],
         ],
+    ],
+    'label' => 'Missing Label',
+    'plural_label' => 'Missing Plural label',
+    'fields' => [
+    ],
+    'actions' => [
     ],
 ];

@@ -9,6 +9,10 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Traits;
 
+<<<<<<< HEAD
+=======
+use Closure;
+>>>>>>> laraxot/master
 use Illuminate\Database\Eloquent\Model;
 use Modules\Xot\Relations\CustomRelation;
 use Webmozart\Assert\Assert;
@@ -22,6 +26,7 @@ trait HasCustomRelations
 {
     public function customRelation(
         string $related,
+<<<<<<< HEAD
         \Closure $baseConstraints,
         ?\Closure $eagerConstraints = null,
         ?\Closure $eagerMatcher = null,
@@ -29,6 +34,15 @@ trait HasCustomRelations
         $instance = new $related();
         // Call to an undefined method object::newQuery()
         Assert::isInstanceOf($instance, Model::class, '['.__LINE__.']['.class_basename($this).']');
+=======
+        Closure $baseConstraints,
+        null|Closure $eagerConstraints = null,
+        null|Closure $eagerMatcher = null,
+    ): CustomRelation {
+        $instance = new $related();
+        // Call to an undefined method object::newQuery()
+        Assert::isInstanceOf($instance, Model::class, '[' . __LINE__ . '][' . class_basename($this) . ']');
+>>>>>>> laraxot/master
         $query = $instance->newQuery();
 
         return new CustomRelation($query, $this, $baseConstraints, $eagerConstraints, $eagerMatcher);

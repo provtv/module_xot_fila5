@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: "Analisi e Miglioramenti del Prompt docs.txt"
 module: xot
@@ -11,6 +12,12 @@ updated: 2026-08-24
 
 > **Collegamenti correlati**
 > - [README.md documentazione generale](../../../../../docs/project/readme.md)
+=======
+# Analisi e Miglioramenti del Prompt docs.txt
+
+> **Collegamenti correlati**
+> - [README.md documentazione generale](../../../../project_docs/readme.md)
+>>>>>>> laraxot/master
 > - [Struttura dei Prompt](./prompts.md)
 > - [Regole per i Prompt](./prompt_rules.md)
 > - [Regole per i Percorsi Relativi](./relative_paths_rules.md)
@@ -90,7 +97,11 @@ Il prompt `docs.txt` è un componente critico per garantire la coerenza e la qua
 # Analisi e Miglioramenti del Prompt docs.txt
 
 > **Collegamenti correlati**
+<<<<<<< HEAD
 > - [README.md documentazione generale](../../../../../docs/readme.md)
+=======
+> - [README.md documentazione generale](../../../../docs/readme.md)
+>>>>>>> laraxot/master
 > - [Struttura dei Prompt](./prompts.md)
 > - [Regole per i Prompt](./prompt_rules.md)
 > - [Regole per i Percorsi Relativi](./relative_paths_rules.md)
@@ -166,4 +177,8 @@ Dal punto di vista tecnico, l'implementazione di questi miglioramenti richiede:
 
 ## Conclusione
 
+<<<<<<< HEAD
 Il prompt `docs.txt` è un componente critico per garantire la coerenza e la qualità della documentazione nel progetto. I miglioramenti proposti mirano a renderlo più efficace e facile da seguire, mantenendo al contempo la sua natura di stringa continua come richiesto dalle regole del progetto.
+=======
+Il prompt `docs.txt` è un componente critico per garantire la coerenza e la qualità della documentazione nel progetto. I miglioramenti proposti mirano a renderlo più efficace e facile da seguire, mantenendo al contempo la sua natura di stringa continua come richiesto dalle regole del progetto.
+>>>>>>> laraxot/master

@@ -47,6 +47,7 @@
         "args": ["-y", "@assistant-ui/mcp-docs-server"]
     },
     "laravel-boost": {
+<<<<<<< HEAD
       "command": "./bashscripts/mcp/laravel-boost-wrapper.sh",
       "args": [],
       "env": {
@@ -58,7 +59,17 @@
       "args": [],
       "env": {
         "LARAVEL_PROJECT_ROOT": "./laravel"
+=======
+      "command": "/var/www/_bases/base_quaeris_fila5_mono/bashscripts/mcp/laravel-boost-wrapper.sh",
+      "args": [],
+      "env": {
+        "LARAVEL_PROJECT_ROOT": "/var/www/_bases/base_quaeris_fila5_mono/laravel"
+>>>>>>> laraxot/master
       }
     }
   }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> laraxot/master

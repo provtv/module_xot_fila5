@@ -10,7 +10,11 @@
 ### Analysis Phase ✅
 - ✅ Analyzed Xot module with phpmd (1 warning found)
 - ✅ Analyzed Xot module with phpinsights (440 files)
+<<<<<<< HEAD
 - ✅ Documented findings in `phpinsights-report.md`
+=======
+- ✅ Documented findings in `phpinsights-report-2025-11-12.md`
+>>>>>>> laraxot/master
 
 ### Code Improvements ✅
 
@@ -126,7 +130,11 @@
 4. `Modules/Xot/app/Actions/Filament/GenerateTableColumnsByFileAction.php` - Modified
 5. `Modules/Xot/app/Actions/File/CopyAction.php` - Modified
 6. `Modules/Xot/app/**/*.php` (14 files) - Auto-formatted by Pint
+<<<<<<< HEAD
 7. `Modules/Xot/docs/quality-analysis/phpinsights-report.md` - Created
+=======
+7. `Modules/Xot/docs/quality-analysis/phpinsights-report-2025-11-12.md` - Created
+>>>>>>> laraxot/master
 8. `Modules/Xot/docs/quality-analysis/progress-summary.md` - Created (this file)
 
 ## Commands Used

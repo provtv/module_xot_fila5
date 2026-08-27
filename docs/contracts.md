@@ -11,7 +11,11 @@ Il modulo Xot definisce vari contratti (interfacce) che standardizzano il compor
 ### Scopo
 Definisce l'interfaccia per tutti i modelli User nel sistema, includendo autenticazione, autorizzazione, ruoli, permessi e media.
 
+<<<<<<< HEAD
 ### Problema Critico Identificato (2025-01-06)
+=======
+### Problema Critico Identificato ([DATE])
+>>>>>>> laraxot/master
 
 **ERRORE PHPSTAN**: Il metodo `hasPermissionTo()` è utilizzato in tutte le policy ma non è definito nel contratto `UserContract`.
 
@@ -87,6 +91,7 @@ Contratto per modelli che hanno profili.
 **ALTA PRIORITÀ**: Risolvere il problema `hasPermissionTo()` per eliminare 350+ errori PHPStan.
 
 ## Collegamenti
+<<<<<<< HEAD
 - [Policy PHPStan Errors](../User/project_docs/policy-phpstan-errors.md)
 - [Root PHPStan Errors](../../project_docs/troubleshooting/phpstan-errors.md)
 - [Spatie Permission Documentation](https://spatie.be/project_docs/laravel-permission)
@@ -116,3 +121,10 @@ public function whereHas($relation, Closure $callback = null, $operator = '>=', 
 
 //---- Illuminate\Database\Eloquent\Builder  (class Builder)
  public function getModel()
+=======
+- [Policy PHPStan Errors](../user/project_docs/policy-phpstan-errors.md)
+- [Root PHPStan Errors](../../project_docs/troubleshooting/phpstan-errors.md)
+- [Spatie Permission Documentation](https://spatie.be/project_docs/laravel-permission)
+
+*Ultimo aggiornamento: [DATE]*
+>>>>>>> laraxot/master

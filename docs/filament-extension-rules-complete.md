@@ -2,7 +2,11 @@
 
 **Principio Fondamentale**: Mai estendere classi Filament direttamente - sempre usare classi XotBase
 
+<<<<<<< HEAD
 **Ultimo aggiornamento**: 2025-12-22
+=======
+**Ultimo aggiornamento**: [DATE]
+>>>>>>> laraxot/master
 
 ---
 

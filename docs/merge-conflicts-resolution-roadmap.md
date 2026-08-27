@@ -1,6 +1,9 @@
 # Roadmap Risoluzione Merge Conflicts - PHPStan Bloccanti
 
+<<<<<<< HEAD
 **Data**: 2025-01-22
+=======
+>>>>>>> laraxot/master
 **Status**: ⚠️ In Lavorazione
 **Scopo**: Documentare la roadmap per risolvere i merge conflicts che bloccano PHPStan
 
@@ -194,6 +197,10 @@ class ResourceName extends XotBaseResource
 
 ---
 
+<<<<<<< HEAD
 **Ultimo aggiornamento**: 2025-01-22
+=======
+**Ultimo aggiornamento**: [DATE]
+>>>>>>> laraxot/master
 **Versione**: 1.0.0
 **Status**: ⚠️ In Lavorazione

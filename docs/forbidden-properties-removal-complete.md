@@ -1,6 +1,9 @@
 # Rimozione Completa Proprietà Vietate da XotBaseResource - Analisi e Implementazione
 
+<<<<<<< HEAD
 **Data**: 2026-01-09  
+=======
+>>>>>>> laraxot/master
 **Status**: 🧘 **IN LAVORO**
 
 ---
@@ -229,4 +232,8 @@ return [
 
 **Status**: ✅ **COMPLETATO**
 
+<<<<<<< HEAD
 **Ultimo aggiornamento**: 2026-01-09
+=======
+**Ultimo aggiornamento**: [DATE]
+>>>>>>> laraxot/master

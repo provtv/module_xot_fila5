@@ -36,7 +36,11 @@
 - Multi-tenant aware models
 - Social authentication integration
 
+<<<<<<< HEAD
 #### 3. **healthcare_app Module - Business Core**
+=======
+#### 3. **Quaeris Module - Business Core**
+>>>>>>> laraxot/master
 **Role**: Survey management, reporting, analytics
 **Priority**: 0 (Standard priority)
 **Dependencies**: Xot, User, Geo, Media
@@ -228,7 +232,11 @@
 #### 15. **Limesurvey Module - External Integration**
 **Role**: Limesurvey integration, survey synchronization
 **Priority**: 0 (Standard priority)
+<<<<<<< HEAD
 **Dependencies**: Xot, healthcare_app
+=======
+**Dependencies**: Xot, Quaeris
+>>>>>>> laraxot/master
 
 **Key Components**:
 - `LimeSurvey`, `LimeQuestion` models
@@ -276,7 +284,11 @@
 Xot (Foundation)
 ├── User (Security)
 │   └── Tenant (Multi-tenancy)
+<<<<<<< HEAD
 ├── healthcare_app (Business Core)
+=======
+├── Quaeris (Business Core)
+>>>>>>> laraxot/master
 │   ├── Geo (Locations)
 │   ├── Media (Files)
 │   └── Limesurvey (External Integration)
@@ -385,7 +397,11 @@ public function register(): void
 #### ⚠️ Needs Attention
 - **Cms**: Mixed file structure issues
 - **UI**: Mixed test structure issues
+<<<<<<< HEAD
 - **healthcare_app**: Missing module.json description
+=======
+- **Quaeris**: Missing module.json description
+>>>>>>> laraxot/master
 
 #### 🔧 Technical Debt
 - **Translation consistency**: Some .navigation placeholders
@@ -396,7 +412,11 @@ public function register(): void
 
 #### High-Usage Modules
 - **User**: Authentication checks on every request
+<<<<<<< HEAD
 - **healthcare_app**: Survey processing and reporting
+=======
+- **Quaeris**: Survey processing and reporting
+>>>>>>> laraxot/master
 - **Media**: File uploads and conversions
 - **Job**: Background processing
 
@@ -429,4 +449,8 @@ public function register(): void
 
 **Analysis Date**: [DATE]
 **Architecture Health**: Good with some technical debt
+<<<<<<< HEAD
 **Recommendations**: Address file structure inconsistencies, complete documentation, optimize performance-critical modules
+=======
+**Recommendations**: Address file structure inconsistencies, complete documentation, optimize performance-critical modules
+>>>>>>> laraxot/master

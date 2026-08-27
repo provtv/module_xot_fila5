@@ -1,8 +1,12 @@
 # MCP (Management Control Panel) Tools for Database Analysis
 
 ## Overview
+<<<<<<< HEAD
 MCP (Model Context Protocol) tools provide enhanced capabilities for database analysis, including access to the healthcare_app_survey database used in the Limesurvey integration.
 MCP (Model Context Protocol) tools provide enhanced capabilities for database analysis, including access to the app_survey database used in the Limesurvey integration.
+=======
+MCP (Model Context Protocol) tools provide enhanced capabilities for database analysis, including access to the quaeris_survey database used in the Limesurvey integration.
+>>>>>>> laraxot/master
 
 ## Available MCP Tools for Database Work
 
@@ -13,13 +17,21 @@ MCP (Model Context Protocol) tools provide enhanced capabilities for database an
 {
   "command": "node",
   "args": [
+<<<<<<< HEAD
     "/var/www/_bases/base_techplanner_fila5_mono/bashscripts/mcp/mysql-db-connector.js"
+=======
+    "/var/www/_bases/base_techplanner_fila4_mono/bashscripts/mcp/mysql-db-connector.js"
+>>>>>>> laraxot/master
   ]
 }
 ```
 
+<<<<<<< HEAD
 **Use Cases for healthcare_app_survey Database**:
 **Use Cases for app_survey Database**:
+=======
+**Use Cases for quaeris_survey Database**:
+>>>>>>> laraxot/master
 - Query Limesurvey tables directly
 - Analyze survey responses in `lime_survey_{sid}` tables
 - Examine question structures in `lime_questions`
@@ -53,8 +65,12 @@ MCP (Model Context Protocol) tools provide enhanced capabilities for database an
 
 ### Direct Database Queries (using MySQL MCP)
 ```sql
+<<<<<<< HEAD
 -- List all survey tables in healthcare_app_survey database
 -- List all survey tables in app_survey database
+=======
+-- List all survey tables in quaeris_survey database
+>>>>>>> laraxot/master
 SHOW TABLES LIKE 'lime_survey_%';
 
 -- Analyze question structure
@@ -96,14 +112,22 @@ Ensure database connections are properly configured in:
 ## MCP Configuration File
 Location: `~/.cursor/mcp.json`
 
+<<<<<<< HEAD
 Current configuration includes MySQL access that automatically uses Laravel's .env credentials, making it ideal for accessing the healthcare_app_survey database without additional configuration.
 Current configuration includes MySQL access that automatically uses Laravel's .env credentials, making it ideal for accessing the app_survey database without additional configuration.
+=======
+Current configuration includes MySQL access that automatically uses Laravel's .env credentials, making it ideal for accessing the quaeris_survey database without additional configuration.
+>>>>>>> laraxot/master
 
 ## Best Practices for Database Analysis
 
 1. **Always verify survey IDs** before querying dynamic tables like `lime_survey_{id}`
+<<<<<<< HEAD
 2. **Use proper connection** (`limesurvey` connection for healthcare_app_survey database)
 2. **Use proper connection** (`limesurvey` connection for app_survey database)
+=======
+2. **Use proper connection** (`limesurvey` connection for quaeris_survey database)
+>>>>>>> laraxot/master
 3. **Limit result sets** when exploring large survey response tables
 4. **Check table existence** before querying survey-specific tables
 5. **Respect data privacy** when handling survey responses
@@ -118,4 +142,8 @@ Current configuration includes MySQL access that automatically uses Laravel's .e
 ### MySQL MCP connection issues
 - Verify database server is running
 - Check database credentials in .env file
+<<<<<<< HEAD
 - Ensure MySQL MCP server script exists at specified path
+=======
+- Ensure MySQL MCP server script exists at specified path
+>>>>>>> laraxot/master

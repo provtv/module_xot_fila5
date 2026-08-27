@@ -1030,6 +1030,7 @@ tests_old
 
 ## Collegamenti tra versioni di structure.md
 * [structure.md](bashscripts/project_docs/structure.md)
+<<<<<<< HEAD
 * [structure.md](../../../Gdpr/project_docs/structure.md)
 * [structure.md](../../../Notify/project_docs/structure.md)
 * [structure.md](../../../Xot/project_docs/structure.md)
@@ -1045,6 +1046,23 @@ tests_old
 * [structure.md](../../../Cms/project_docs/structure.md)
 * [structure.md](../../../Cms/project_docs/themes/structure.md)
 * [structure.md](../../../Cms/project_docs/components/structure.md)
+=======
+* [structure.md](../../../gdpr/project_docs/structure.md)
+* [structure.md](../../../notify/project_docs/structure.md)
+* [structure.md](../../../xot/project_docs/structure.md)
+* [structure.md](../../../xot/project_docs/base/structure.md)
+* [structure.md](../../../xot/project_docs/config/structure.md)
+* [structure.md](../../../user/project_docs/structure.md)
+* [structure.md](../../../ui/project_docs/structure.md)
+* [structure.md](../../../lang/project_docs/structure.md)
+* [structure.md](../../../job/project_docs/structure.md)
+* [structure.md](../../../media/project_docs/structure.md)
+* [structure.md](../../../tenant/project_docs/structure.md)
+* [structure.md](../../../activity/project_docs/structure.md)
+* [structure.md](../../../cms/project_docs/structure.md)
+* [structure.md](../../../cms/project_docs/themes/structure.md)
+* [structure.md](../../../cms/project_docs/components/structure.md)
+>>>>>>> laraxot/master
 
 ---
 

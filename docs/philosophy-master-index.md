@@ -1,6 +1,10 @@
 # Indice Filosofico Completo - Tutti i Moduli
 
+<<<<<<< HEAD
 **Data Creazione**: 2025-12-23
+=======
+**Data Creazione**: [DATE]
+>>>>>>> laraxot/master
 **Status**: Indice Master Completo
 
 ## 📋 Panoramica
@@ -27,7 +31,11 @@ Questo documento fornisce un indice completo di tutta la documentazione filosofi
 ## 💼 Moduli Business
 
 ### TechPlanner - Business Principale
+<<<<<<< HEAD
 **File**: [../../TechPlanner/docs/philosophy-complete.md](../../TechPlanner/docs/philosophy-complete.md)
+=======
+**File**: [../../TechPlanner/docs/philosophy-complete.md](../../techplanner/docs/philosophy-complete.md)
+>>>>>>> laraxot/master
 
 **Filosofia**: Client-Centric, Compliance-First, Integration Over Duplication
 
@@ -44,7 +52,11 @@ Questo documento fornisce un indice completo di tutta la documentazione filosofi
 ## 🔧 Moduli Supporto
 
 ### User - Foundation Identity
+<<<<<<< HEAD
 **File**: [../../User/docs/philosophy-complete.md](../../User/docs/philosophy-complete.md)
+=======
+**File**: [../../User/docs/philosophy-complete.md](../../user/docs/philosophy-complete.md)
+>>>>>>> laraxot/master
 
 **Filosofia**: STI Unity, RBAC Standard, Multi-Tenant Isolation
 
@@ -59,7 +71,11 @@ Questo documento fornisce un indice completo di tutta la documentazione filosofi
 ---
 
 ### UI - Componenti Interfaccia
+<<<<<<< HEAD
 **File**: [../../UI/docs/philosophy.md](../../UI/docs/philosophy.md)
+=======
+**File**: [../../UI/docs/philosophy.md](../../ui/docs/philosophy.md)
+>>>>>>> laraxot/master
 
 **Filosofia**: Riusabilità, Consistenza Visiva, Type Safety
 
@@ -74,7 +90,11 @@ Questo documento fornisce un indice completo di tutta la documentazione filosofi
 ---
 
 ### Geo - Geolocalizzazione
+<<<<<<< HEAD
 **File**: [../../Geo/docs/philosophy.md](../../Geo/docs/philosophy.md)
+=======
+**File**: [../../Geo/docs/philosophy.md](../../geo/docs/philosophy.md)
+>>>>>>> laraxot/master
 
 **Filosofia**: Schema.org Compliance, Polymorphic Flexibility, Geographic Type Safety
 
@@ -89,7 +109,11 @@ Questo documento fornisce un indice completo di tutta la documentazione filosofi
 ---
 
 ### Tenant - Multi-Tenancy
+<<<<<<< HEAD
 **File**: [../../Tenant/docs/philosophy.md](../../Tenant/docs/philosophy.md)
+=======
+**File**: [../../Tenant/docs/philosophy.md](../../tenant/docs/philosophy.md)
+>>>>>>> laraxot/master
 
 **Filosofia**: Sovranità Digitale Distribuita, Isolamento Assoluto
 
@@ -104,7 +128,11 @@ Questo documento fornisce un indice completo di tutta la documentazione filosofi
 ---
 
 ### Notify - Comunicazione
+<<<<<<< HEAD
 **File**: [../../Notify/docs/philosophy.md](../../Notify/docs/philosophy.md)
+=======
+**File**: [../../Notify/docs/philosophy.md](../../notify/docs/philosophy.md)
+>>>>>>> laraxot/master
 
 **Filosofia**: Comunicazione Responsabile, Minimalismo Funzionale
 
@@ -119,7 +147,11 @@ Questo documento fornisce un indice completo di tutta la documentazione filosofi
 ---
 
 ### Activity - Audit Trail
+<<<<<<< HEAD
 **File**: [../../Activity/docs/philosophy-complete.md](../../Activity/docs/philosophy-complete.md)
+=======
+**File**: [../../Activity/docs/philosophy-complete.md](../../activity/docs/philosophy-complete.md)
+>>>>>>> laraxot/master
 
 **Filosofia**: Track Everything, Reconstruct Anything, Privacy First
 
@@ -134,7 +166,11 @@ Questo documento fornisce un indice completo di tutta la documentazione filosofi
 ---
 
 ### Media - File Management
+<<<<<<< HEAD
 **File**: [../../Media/docs/philosophy-complete.md](../../Media/docs/philosophy-complete.md)
+=======
+**File**: [../../Media/docs/philosophy-complete.md](../../media/docs/philosophy-complete.md)
+>>>>>>> laraxot/master
 
 **Filosofia**: Secure Upload, Smart Storage, Automatic Processing
 
@@ -149,7 +185,11 @@ Questo documento fornisce un indice completo di tutta la documentazione filosofi
 ---
 
 ### Cms - Content Management
+<<<<<<< HEAD
 **File**: [../../Cms/docs/philosophy.md](../../Cms/docs/philosophy.md)
+=======
+**File**: [../../Cms/docs/philosophy.md](../../cms/docs/philosophy.md)
+>>>>>>> laraxot/master
 
 **Filosofia**: Contenuto Strutturato e Modulare, Gerarchia Sacra
 
@@ -164,7 +204,11 @@ Questo documento fornisce un indice completo di tutta la documentazione filosofi
 ---
 
 ### Employee - HR Management
+<<<<<<< HEAD
 **File**: [../../Employee/docs/philosophy-complete.md](../../Employee/docs/philosophy-complete.md)
+=======
+**File**: [../../Employee/docs/philosophy-complete.md](../../employee/docs/philosophy-complete.md)
+>>>>>>> laraxot/master
 
 **Filosofia**: Actions-Only, Compliance-First, Italian Labor Law
 
@@ -266,5 +310,8 @@ Quando si modifica business logic, workflow, o pattern di un modulo:
 
 ---
 
+<<<<<<< HEAD
 **Ultimo Aggiornamento**: 2025-12-23
+=======
+>>>>>>> laraxot/master
 **Status**: ✅ Documentazione Filosofica Completa per Tutti i Moduli Principali

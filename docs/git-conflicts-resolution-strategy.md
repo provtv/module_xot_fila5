@@ -2,7 +2,11 @@
 
 ## Contesto
 
+<<<<<<< HEAD
 **Data analisi:** 2025-01-27
+=======
+**Data analisi:** [DATE]
+>>>>>>> laraxot/master
 **File con conflitti identificati:** 586 file PHP
 **Approccio:** Risoluzione manuale focalizzata su business logic
 
@@ -232,7 +236,11 @@ I conflitti sono stati causati da:
 
 ## Stato Corrente
 
+<<<<<<< HEAD
 **Ultimo aggiornamento:** 2025-01-27
+=======
+**Ultimo aggiornamento:** [DATE]
+>>>>>>> laraxot/master
 
 ### Completati ✅
 - [x] Analisi complessiva (586 file identificati)

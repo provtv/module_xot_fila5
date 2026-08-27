@@ -357,7 +357,11 @@ echo 'User models count: ' . count(getModuleModels('User')) . PHP_EOL;
 - [nwidart/laravel-modules GitHub](https://github.com/nWidart/laravel-modules)
 - [wikimedia/composer-merge-plugin GitHub](https://github.com/wikimedia/composer-merge-plugin)
 - [Xot Helpers Documentation](./helpers.md)
+<<<<<<< HEAD
 - [Tenant Helper Dependency](../../Tenant/docs/helper-functions-dependency.md)
+=======
+- [Tenant Helper Dependency](../../tenant/docs/helper-functions-dependency.md)
+>>>>>>> laraxot/master
 - [RouteService Implementation](../app/Services/RouteService.php)
 - [GetAllModelsByModuleNameAction](../app/Actions/Model/GetAllModelsByModuleNameAction.php)
 
@@ -440,7 +444,10 @@ Docs: aggiornata documentazione Xot e Tenant
 
 ## 🔄 Fix Aggiuntivo: getModuleModels() durante package:discover
 
+<<<<<<< HEAD
 **Data**: Gennaio 2025
+=======
+>>>>>>> laraxot/master
 **Problema**: Anche dopo aver aggiunto le helper functions, `getModuleModels()` causava ancora errori durante `package:discover`.
 
 **Causa**: Le helper functions sono caricate tramite `"files": ["Helpers/Helper.php"]` in `composer.json`, ma durante `package:discover` l'ordine di autoload non è garantito.

@@ -2,7 +2,11 @@
 
 ## Overview
 
+<<<<<<< HEAD
 This document outlines the UI/UX standards for <nome progetto> Meetups frontend development.
+=======
+This document outlines the UI/UX standards for LaravelPizza Meetups frontend development.
+>>>>>>> laraxot/master
 
 ## Mobile-First Design
 
@@ -111,4 +115,8 @@ font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe
 ## Related Documentation
 - [WCAG Accessibility Guidelines](./wcag-accessibility-guidelines.md)
 - [SEO Guidelines](./seo-guidelines.md)
+<<<<<<< HEAD
 - [Clickbait & Conversion](./clickbait-conversion-guidelines.md)
+=======
+- [Clickbait & Conversion](./clickbait-conversion-guidelines.md)
+>>>>>>> laraxot/master

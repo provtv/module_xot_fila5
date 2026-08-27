@@ -1,7 +1,11 @@
 # Mass Fix Errori Sintassi PHP
 
 > **Versione**: 1.0
+<<<<<<< HEAD
 > **Ultima modifica**: Vedi [CHANGELOG.md](./CHANGELOG.md)
+=======
+> **Ultima modifica**: Vedi [CHANGELOG.md](./changelog.md)
+>>>>>>> laraxot/master
 
 **Stato**: ✅ COMPLETATO
 **Causa Radice**: Conflitti Git risolti automaticamente con duplicazioni non rilevate
@@ -268,4 +272,8 @@ done < /tmp/broken_files.txt
 
 **Status**: ✅ COMPLETATO
 **Filosofia**: "Ogni bug è un maestro. Ogni fix è una lezione."
+<<<<<<< HEAD
 **Cronologia**: Vedi [CHANGELOG.md](./CHANGELOG.md)
+=======
+**Cronologia**: Vedi [CHANGELOG.md](./changelog.md)
+>>>>>>> laraxot/master

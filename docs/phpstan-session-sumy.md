@@ -243,7 +243,11 @@ Eseguire PHPStan su tutti i moduli, comprendere logica, politica, business logic
 
 ## 📖 Documentazione Aggiornata
 
+<<<<<<< HEAD
 - ✅ `Modules/Xot/docs/phpstan-corrections-archive-1.md` - Documentazione completa correzioni
+=======
+- ✅ `Modules/Xot/docs/phpstan-corrections-january-2026.md` - Documentazione completa correzioni
+>>>>>>> laraxot/master
 - ✅ `Modules/Xot/docs/phpstan-session-january-2026-summary.md` - Questo file
 
 ---
@@ -280,3 +284,7 @@ Eseguire PHPStan su tutti i moduli, comprendere logica, politica, business logic
 
 ---
 
+<<<<<<< HEAD
+=======
+*Ultimo aggiornamento: [DATE]*
+>>>>>>> laraxot/master

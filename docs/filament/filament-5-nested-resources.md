@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 module: theme
 topic: filament-5-nested-resources
@@ -18,6 +19,9 @@ module: theme
 topic: filament-5-nested-resources
 canonical: ../../../../Themes/docs/shared-components/filament-5-nested-resources.txt
 ---
+=======
+# Filament 5.x Nested Resources Guide
+>>>>>>> laraxot/master
 
 ## Overview
 Filament 5.x Nested Resources allow hierarchical relationships between resources with automatic routing and breadcrumb generation.
@@ -306,4 +310,8 @@ $this->assertDatabaseHas('posts', $data->toArray());
 2. **Implement proper authorization** checks
 3. **Use parameterized queries** to prevent SQL injection
 4. **Sanitize user input** before storage
+<<<<<<< HEAD
 5. **Implement proper error handling** without information leakage
+=======
+5. **Implement proper error handling** without information leakage
+>>>>>>> laraxot/master

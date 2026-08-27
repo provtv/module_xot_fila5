@@ -1,6 +1,9 @@
 # PHPStan Fix Roadmap - XotBaseWidget View-String Error
 
+<<<<<<< HEAD
 **Data**: 2025-01-22
+=======
+>>>>>>> laraxot/master
 **Status**: ✅ Completato
 **Errore**: 1 (risolto)
 **Modulo**: Xot
@@ -78,7 +81,11 @@ private function resolveView(): void
 ## 🔗 Riferimenti
 
 - [Property Type Fixes](./consolidated/archive/property-type-fixes.md) - Documentazione esistente
+<<<<<<< HEAD
 - [View-String Type Fixes (User Module)](../User/docs/type-safety-improvements.md) - Pattern simile risolto
+=======
+- [View-String Type Fixes (User Module)](../user/docs/type-safety-improvements.md) - Pattern simile risolto
+>>>>>>> laraxot/master
 - [Path Resolution Fixes](./consolidated/archive/path-resolution-fixes.md) - Soluzione simile
 
 ---
@@ -96,5 +103,9 @@ private function resolveView(): void
 
 ---
 
+<<<<<<< HEAD
 **Ultimo aggiornamento**: 2025-01-22
+=======
+**Ultimo aggiornamento**: [DATE]
+>>>>>>> laraxot/master
 **Versione**: 1.0.0

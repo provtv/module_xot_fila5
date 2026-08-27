@@ -1,7 +1,11 @@
 # Aggiornamento File di Traduzione xot_base.php
 
 ## Data Aggiornamento
+<<<<<<< HEAD
 2025-01-27
+=======
+[DATE]
+>>>>>>> laraxot/master
 
 ## File Modificato
 `Modules/Xot/lang/it/xot_base.php`

@@ -26,7 +26,11 @@ return [
     // Configurazioni di base
     'name' => env('MODULE_NAME', 'default'),
     'enabled' => env('MODULE_ENABLED', true),
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> laraxot/master
     // Cache
     'cache' => [
         'enabled' => env('MODULE_CACHE_ENABLED', true),
@@ -34,7 +38,11 @@ return [
         'driver' => env('MODULE_CACHE_DRIVER', 'redis'),
         'prefix' => env('MODULE_CACHE_PREFIX', 'module_'),
     ],
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> laraxot/master
     // Storage
     'storage' => [
         'disk' => env('MODULE_STORAGE_DISK', 'local'),
@@ -44,7 +52,11 @@ return [
         ],
         'max_size' => env('MODULE_STORAGE_MAX_SIZE', 10240),
     ],
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> laraxot/master
     // API
     'api' => [
         'prefix' => env('MODULE_API_PREFIX', 'api/module'),
@@ -58,14 +70,22 @@ return [
             'minutes' => 1,
         ],
     ],
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> laraxot/master
     // Database
     'database' => [
         'prefix' => env('MODULE_DB_PREFIX', 'module_'),
         'connection' => env('MODULE_DB_CONNECTION', null),
         'soft_deletes' => true,
     ],
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> laraxot/master
     // Views
     'views' => [
         'namespace' => 'module',
@@ -88,7 +108,11 @@ class ConfigValidator
     public function validate(): ValidationResult
     {
         $config = config('module');
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> laraxot/master
         $rules = [
             'name' => 'required|string',
             'enabled' => 'required|boolean',
@@ -96,9 +120,15 @@ class ConfigValidator
             'cache.ttl' => 'required|integer|min:0',
             // ... altre regole
         ];
+<<<<<<< HEAD
 
         $validator = Validator::make($config, $rules);
 
+=======
+        
+        $validator = Validator::make($config, $rules);
+        
+>>>>>>> laraxot/master
         return new ValidationResult($validator);
     }
 }
@@ -144,6 +174,7 @@ return array_merge(require __DIR__.'/../vendor/module/config/module.php', [
 ## Collegamenti
 
 - [Architettura](../architecture/module-structure.md)
+<<<<<<< HEAD
 - [Best Practices](../best-practices.md)
 - [Sicurezza](../security/readme.md)
 - [Performance](../performance/readme.md)
@@ -165,3 +196,27 @@ return array_merge(require __DIR__.'/../vendor/module/config/module.php', [
 * [structure.md](../../../cms/project_docs/structure.md)
 * [structure.md](../../../cms/project_docs/themes/structure.md)
 * [structure.md](../../../cms/project_docs/components/structure.md)
+=======
+- [Best Practices](../BEST-PRACTICES.md)
+- [Sicurezza](../security/README.md)
+- [Performance](../performance/README.md) 
+
+## Collegamenti tra versioni di structure.md
+* [structure.md](bashscripts/docs/structure.md)
+* [structure.md](../../../Gdpr/docs/structure.md)
+* [structure.md](../../../Notify/docs/structure.md)
+* [structure.md](../../../Xot/docs/structure.md)
+* [structure.md](../../../Xot/docs/base/structure.md)
+* [structure.md](../../../Xot/docs/config/structure.md)
+* [structure.md](../../../User/docs/structure.md)
+* [structure.md](../../../UI/docs/structure.md)
+* [structure.md](../../../Lang/docs/structure.md)
+* [structure.md](../../../Job/docs/structure.md)
+* [structure.md](../../../Media/docs/structure.md)
+* [structure.md](../../../Tenant/docs/structure.md)
+* [structure.md](../../../Activity/docs/structure.md)
+* [structure.md](../../../Cms/docs/structure.md)
+* [structure.md](../../../Cms/docs/themes/structure.md)
+* [structure.md](../../../Cms/docs/components/structure.md)
+
+>>>>>>> laraxot/master

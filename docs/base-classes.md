@@ -101,7 +101,11 @@ class XotBaseEditRecord
    - Seguire le convenzioni PSR-4
 
 ## Collegamenti Bidirezionali
+<<<<<<< HEAD
 - [README](README.md)
+=======
+- [README](readme.md)
+>>>>>>> laraxot/master
 - [Struttura Moduli](module-structure.md)
 - [Convenzioni Namespace](namespace-conventions.md)
 
@@ -287,8 +291,13 @@ class PolizzaConvenzioneController extends XotBaseController
 
    - Documentare le modifiche significative
 ## Collegamenti tra versioni di base-classes.md
+<<<<<<< HEAD
 * [base-classes.md](../../../Xot/docs/base-classes.md)
 * [base-classes.md](../../../Xot/docs/roadmap/base-classes.md)
+=======
+* [base-classes.md](../../../xot/docs/base-classes.md)
+* [base-classes.md](../../../xot/docs/roadmap/base-classes.md)
+>>>>>>> laraxot/master
 
 ### Versione Incoming
 

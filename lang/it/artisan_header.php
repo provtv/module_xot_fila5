@@ -1,8 +1,12 @@
 <?php
 
 declare(strict_types=1);
+<<<<<<< HEAD
 
 return [
+=======
+ return [
+>>>>>>> laraxot/master
     'actions' => [
         'route:list' => [
             'label' => 'route:list',
@@ -17,6 +21,7 @@ return [
             'label' => 'filament:clear-cached-components',
         ],
     ],
+<<<<<<< HEAD
     'label' => 'Artisan Header',
     'plural_label' => 'Artisan Header (Plurale)',
     'navigation' => [
@@ -50,4 +55,6 @@ return [
             'description' => '',
         ],
     ],
+=======
+>>>>>>> laraxot/master
 ];

@@ -32,6 +32,7 @@ Questa regola si applica a:
 Non è necessario applicare questa regola a:
 - Prompt utilizzati una sola volta
 - Prompt che richiedono specificamente formattazione per la leggibilità
+<<<<<<< HEAD
 - Documentazione dei prompt
 
 ## Collegamenti tra versioni di PROMPT_RULES.md
@@ -82,3 +83,15 @@ Non è necessario applicare questa regola a:
 
 ## Collegamenti tra versioni di prompt_rules.md
 * [prompt_rules.md](../prompt_rules.md)
+=======
+- Documentazione dei prompt 
+
+## Collegamenti tra versioni di PROMPT_RULES.md
+* [PROMPT_RULES.md](../../../Xot/docs/PROMPT_RULES.md)
+* [PROMPT_RULES.md](../../../Xot/docs/rules/PROMPT_RULES.md)
+
+
+## Collegamenti tra versioni di prompt_rules.md
+* [prompt_rules.md](../prompt_rules.md)
+
+>>>>>>> laraxot/master

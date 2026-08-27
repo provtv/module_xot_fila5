@@ -137,7 +137,11 @@ class YourModel extends BaseModel
 
 ### 5. **Consistency**
 - Same pattern across all models
+<<<<<<< HEAD
 - <nome progetto>able code structure
+=======
+- Predictable code structure
+>>>>>>> laraxot/master
 - Easier onboarding for developers
 
 ## Migration Strategy
@@ -264,4 +268,8 @@ public function getFillable(): array
 
 The enum-driven fillable pattern is a cornerstone of Laraxot architecture. It embodies the principles of DRY, KISS, and Single Source of Truth while providing a maintainable, scalable, and self-documenting approach to model field management.
 
+<<<<<<< HEAD
 By adopting this pattern, you ensure that your models are always in sync with your enums, forms, and migrations, reducing bugs and improving developer experience.
+=======
+By adopting this pattern, you ensure that your models are always in sync with your enums, forms, and migrations, reducing bugs and improving developer experience.
+>>>>>>> laraxot/master

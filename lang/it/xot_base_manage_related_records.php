@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 return [
     'actions' => [
+<<<<<<< HEAD
         'create' => ['label' => 'create'],
     ],
     'fields' => [
@@ -26,4 +27,30 @@ return [
     ],
     'plural' => ['label' => 'xot base manage related records.plural'],
     'test' => 'xot base manage related records',
+=======
+        'create' => [
+            'label' => 'create',
+        ],
+    ],
+    'fields' => [
+        'delete' => [
+            'label' => 'delete',
+        ],
+        'edit' => [
+            'label' => 'edit',
+        ],
+        'view' => [
+            'label' => 'view',
+        ],
+        'attach' => [
+            'label' => 'attach',
+        ],
+        'detach' => [
+            'label' => 'detach',
+        ],
+        'create' => [
+            'label' => 'create',
+        ],
+    ],
+>>>>>>> laraxot/master
 ];

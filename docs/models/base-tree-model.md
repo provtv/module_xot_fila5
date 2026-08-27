@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: "BaseTreeModel Documentation"
 type: documentation
@@ -16,6 +17,8 @@ related:
   - ../contracts/has-recursive-relationships-contract.md
 ---
 
+=======
+>>>>>>> laraxot/master
 # BaseTreeModel Documentation
 
 ## Overview
@@ -56,9 +59,15 @@ BaseModel
 - Ensures PHPStan Level 10 compliance
 
 ### 2. Trait Integration
+<<<<<<< HEAD
 - Uses vendor `Staudenmeir\LaravelAdjacencyList\Eloquent\HasRecursiveRelationships` directly
 - Keeps relationship type details in `HasRecursiveRelationshipsContract` PHPDoc
 - Avoids local wrapper drift from the upstream package
+=======
+- Uses `TypedHasRecursiveRelationships` trait
+- Wraps vendor package with type safety
+- Provides method aliasing for consistency
+>>>>>>> laraxot/master
 
 ### 3. BaseModel Inheritance
 - Inherits all base model functionality
@@ -212,7 +221,11 @@ In pratica:
 - **Nested Set (kalnoy)**: ottimizzato per query di alberi molto grandi con letture veloci,
   ma con migrazioni e update più complessi (serve gestire `_lft`/`_rgt`).
 - **BaseTreeModel (adjacency list tipizzata)**: usa `parent_id`/`depth`/`path` con trait
+<<<<<<< HEAD
   vendor `HasRecursiveRelationships`, privilegiando:
+=======
+  `TypedHasRecursiveRelationships`, privilegiando:
+>>>>>>> laraxot/master
   - type safety (PHPStan livello 10),
   - semplicità nelle migrazioni (nessun `_lft`/`_rgt` da mantenere a mano),
   - integrazione diretta con il pacchetto `staudenmeir/laravel-adjacency-list`.
@@ -401,5 +414,9 @@ $model->children;  // Should return collection
 ## Related Documentation
 
 - [HasRecursiveRelationshipsContract](contracts/has-recursive-relationships-contract.md)
+<<<<<<< HEAD
 - [Recursive relationships vendor direct](../recursive-relationships-vendor-direct.md)
+=======
+- [TypedHasRecursiveRelationships Trait](traits/typed-has-recursive-relationships.md)
+>>>>>>> laraxot/master
 - [Laravel Adjacency List Package](https://github.com/staudenmeir/laravel-adjacency-list)

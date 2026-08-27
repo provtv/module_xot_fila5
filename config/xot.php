@@ -2,6 +2,10 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> laraxot/master
 return [
     /*
      * |--------------------------------------------------------------------------
@@ -13,10 +17,17 @@ return [
      * |
      */
     'paths' => [
+<<<<<<< HEAD
         'base' => '/var/www/html/exa/base_orisbroker_fila5',
         'laravel' => '/var/www/html/exa/base_orisbroker_fila5/laravel',
         'modules' => '/var/www/html/exa/base_orisbroker_fila5/laravel/Modules',
         'docs' => '/var/www/html/exa/base_orisbroker_fila5/docs',
+=======
+        'base' => '/var/www/html/exa/base_orisbroker_fila3',
+        'laravel' => '/var/www/html/exa/base_orisbroker_fila3/laravel',
+        'modules' => '/var/www/html/exa/base_orisbroker_fila3/laravel/Modules',
+        'docs' => '/var/www/html/exa/base_orisbroker_fila3/docs',
+>>>>>>> laraxot/master
     ],
     /*
      * |--------------------------------------------------------------------------
@@ -28,7 +39,12 @@ return [
      * |
      */
     'module_paths' => [
+<<<<<<< HEAD
         'xot' => '/var/www/html/exa/base_orisbroker_fila5/laravel/Modules/Xot',
         'broker' => '/var/www/html/exa/base_orisbroker_fila5/laravel/Modules/Broker',
+=======
+        'xot' => '/var/www/html/exa/base_orisbroker_fila3/laravel/Modules/Xot',
+        'broker' => '/var/www/html/exa/base_orisbroker_fila3/laravel/Modules/Broker',
+>>>>>>> laraxot/master
     ],
 ];

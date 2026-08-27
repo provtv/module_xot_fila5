@@ -32,7 +32,11 @@ return [
     'exists' => 'La selezione per :attribute non è valida.',
     'file' => 'The :attribute must be a file.',
     'filled' => ':attribute è obbligatorio.',
+<<<<<<< HEAD
     'image' => ":attribute deve essere un'immagine.",
+=======
+    'image' => ':attribute deve essere un\'immagine.',
+>>>>>>> laraxot/master
     'in' => 'La selezione per :attribute non è valida.',
     'in_array' => 'The :attribute field does not exist in :other.',
     'integer' => ':attribute deve essere un numero intero.',
@@ -128,4 +132,20 @@ return [
             'new_password_confirmation' => 'Conferma nuova password',
         ],
     ],
+<<<<<<< HEAD
+=======
+    'navigation' => [
+        'label' => 'Missing Navigation Label',
+        'plural_label' => 'Missing Navigation Plural Label',
+        'group' => 'Missing Group',
+        'icon' => 'heroicon-o-puzzle-piece',
+        'sort' => 100,
+    ],
+    'label' => 'Missing Label',
+    'plural_label' => 'Missing Plural label',
+    'fields' => [
+    ],
+    'actions' => [
+    ],
+>>>>>>> laraxot/master
 ];

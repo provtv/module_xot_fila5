@@ -8,4 +8,17 @@ return [
     'sent' => 'قمنا بإرسال رابط إعادة تعيين كلمة مرورك إلى بريدك الإلكتروني!',
     'token' => 'رمز إعادة تعيين كلمة المرور هذا غير صالح.',
     'user' => 'لم نستطع إيجاد مستخدم ينتمي إليه هذا البريد الإلكتروني.',
+    'navigation' => [
+        'label' => 'Missing Navigation Label',
+        'plural_label' => 'Missing Navigation Plural Label',
+        'group' => 'Missing Group',
+        'icon' => 'heroicon-o-puzzle-piece',
+        'sort' => 100,
+    ],
+    'label' => 'Missing Label',
+    'plural_label' => 'Missing Plural label',
+    'fields' => [
+    ],
+    'actions' => [
+    ],
 ];

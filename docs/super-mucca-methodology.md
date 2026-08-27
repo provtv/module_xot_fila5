@@ -1,4 +1,9 @@
 # 🐃 **Metodologia Super Mucca: AI-Native Edition**
+<<<<<<< HEAD
+=======
+<<<<<<< .merge_file_47N62a
+=======
+>>>>>>> laraxot/master
 
 **Ultimo aggiornamento**: 31 Gennaio 2026  
 **Filosofia**: DRY + KISS + SOLID + ROBUST
@@ -36,6 +41,10 @@ L'AI deve usare strumenti di validazione per assicurarsi che i link tra i docume
 ---
 *Documentazione conforme agli standard Laraxot - L'eccellenza è un'abitudine.*
 # 🐄 Metodologia "Super Mucca"
+<<<<<<< HEAD
+=======
+>>>>>>> .merge_file_DBHwgE
+>>>>>>> laraxot/master
 
 **Ultimo aggiornamento**: 31 Gennaio 2026  
 **Filosofia**: DRY + KISS + SOLID + ROBUST
@@ -72,6 +81,11 @@ L'AI deve usare strumenti di validazione per assicurarsi che i link tra i docume
 
 ---
 *Documentazione conforme agli standard Laraxot - L'eccellenza è un'abitudine.*
+<<<<<<< HEAD
+=======
+<<<<<<< .merge_file_47N62a
+=======
+>>>>>>> laraxot/master
 # 🐄 Metodologia "Super Mucca"
 
 **Ultimo aggiornamento**: 31 Gennaio 2026  
@@ -109,6 +123,7 @@ L'AI deve usare strumenti di validazione per assicurarsi che i link tra i docume
 
 ---
 *Documentazione conforme agli standard Laraxot - L'eccellenza è un'abitudine.*
+<<<<<<< HEAD
 # 🐄 Metodologia "Super Mucca"
 
 ## Filosofia
@@ -344,3 +359,6 @@ L'AI deve usare strumenti di validazione per assicurarsi che i link tra i docume
 
 ---
 *Documentazione conforme agli standard Laraxot - L'eccellenza è un'abitudine.*
+=======
+>>>>>>> .merge_file_DBHwgE
+>>>>>>> laraxot/master

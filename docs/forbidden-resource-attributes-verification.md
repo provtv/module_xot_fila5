@@ -1,6 +1,9 @@
 # Verifica Proprietà Vietate in XotBaseResource - Report Completo
 
+<<<<<<< HEAD
 **Data**: 2026-01-09  
+=======
+>>>>>>> laraxot/master
 **Status**: ✅ **COMPLETATO**
 
 ---
@@ -81,4 +84,8 @@ Le uniche proprietà vietate trovate sono commentate, quindi non attive. Il sist
 
 **Status**: ✅ **VERIFICA COMPLETATA**
 
+<<<<<<< HEAD
 **Ultimo aggiornamento**: 2026-01-09
+=======
+**Ultimo aggiornamento**: [DATE]
+>>>>>>> laraxot/master

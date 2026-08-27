@@ -1,6 +1,10 @@
 # Code Quality Improvements - Documento Consolidato
 
+<<<<<<< HEAD
 **Data creazione**: 2025-01-22
+=======
+**Data creazione**: [DATE]
+>>>>>>> laraxot/master
 **Filosofia**: Super Mucca + DRY + KISS + Type Safety
 **Obiettivo**: Miglioramento continuo qualità codice basato su best practices 2024-2025
 
@@ -346,6 +350,10 @@ $content = file_get_contents($path); // Lancia eccezione se fallisce
 
 ---
 
+<<<<<<< HEAD
 **Ultimo aggiornamento**: 2025-01-22
+=======
+**Ultimo aggiornamento**: [DATE]
+>>>>>>> laraxot/master
 **Versione**: 1.0.0
 **Status**: In progress

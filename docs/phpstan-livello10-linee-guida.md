@@ -91,9 +91,15 @@ public function processValue(?string $value): string
 ## Collegamenti Correlati
 
 - [PHPStan Documentation](https://phpstan.org/user-guide/getting-started)
+<<<<<<< HEAD
 - [Best Practices](best-practices.md)
 - [Code Standards](code-standards.md)
 - [Risoluzione Conflitti](conflitti_merge_risolti.md)
+=======
+- [Best Practices](./best-practices.md)
+- [Code Standards](./code-standards.md)
+- [Risoluzione Conflitti](./conflitti_merge_risolti.md)
+>>>>>>> laraxot/master
 
 # Linee Guida per PHPStan Livello 10 - Regole Comuni
 
@@ -641,5 +647,8 @@ namespace Modules\Xot\Console\Commands;
 ```
 
 Errori PHPStan come `Class Modules\Xot\Console\Commands\DatabaseSchemaExportCommand not found` indicano che è necessario rimuovere il segmento `app` dal namespace.
+<<<<<<< HEAD
 
 ```
+=======
+>>>>>>> laraxot/master

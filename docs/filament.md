@@ -470,6 +470,10 @@ class ExampleResource extends XotBaseResource
 
 ---
 
+<<<<<<< HEAD
 *Ultimo aggiornamento: 2025-08-04*
+=======
+*Ultimo aggiornamento: [DATE]*
+>>>>>>> laraxot/master
 *Modulo: Xot*
 *Categoria: Filament*

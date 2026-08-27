@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Exceptions\Formatters;
 
+<<<<<<< HEAD
 use Illuminate\Support\Facades\Auth;
 
 use function Safe\json_encode;
@@ -14,6 +15,16 @@ class WebhookErrorFormatter
         private \Throwable $exception,
     ) {
     }
+=======
+use Throwable;
+use Illuminate\Support\Facades\Auth;
+
+class WebhookErrorFormatter
+{
+    public function __construct(
+        private Throwable $exception,
+    ) {}
+>>>>>>> laraxot/master
 
     /**
      * @return array<string, mixed>

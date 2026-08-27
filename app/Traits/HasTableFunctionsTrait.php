@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Traits;
 
+<<<<<<< HEAD
 use Filament\Actions\Action;
 use Filament\Actions\BulkAction;
 use Filament\Tables\Columns\Column;
@@ -11,6 +12,12 @@ use Filament\Tables\Columns\TextColumn;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Collection;
 
+=======
+use Filament\Tables\Columns\Column;
+use Filament\Actions\Action;
+use Filament\Actions\BulkAction;
+use Filament\Tables\Columns\TextColumn;
+>>>>>>> laraxot/master
 
 trait HasTableFunctionsTrait
 {
@@ -39,12 +46,20 @@ trait HasTableFunctionsTrait
         return [
             'edit' => Action::make('edit')
                 ->label('Modifica')
+<<<<<<< HEAD
                 ->url(fn (Model $record): string => route('filament.resources.'.$this->getResourceSlug().'.edit', [
+=======
+                ->url(fn($record): string => route('filament.resources.' . $this->getResourceSlug() . '.edit', [
+>>>>>>> laraxot/master
                     'record' => $record,
                 ])),
             'delete' => Action::make('delete')
                 ->label('Elimina')
+<<<<<<< HEAD
                 ->action(fn (Model $record) => $record->delete())
+=======
+                ->action(fn($record) => $record->delete())
+>>>>>>> laraxot/master
                 ->requiresConfirmation(),
         ];
     }
@@ -59,13 +74,22 @@ trait HasTableFunctionsTrait
         return [
             'delete' => BulkAction::make('delete')
                 ->label('Elimina selezionati')
+<<<<<<< HEAD
                 ->action(fn (Collection $records) => $records->each->delete())
+=======
+                ->action(fn($records) => $records->each->delete())
+>>>>>>> laraxot/master
                 ->requiresConfirmation(),
         ];
     }
 
     /**
      * Get the resource slug.
+<<<<<<< HEAD
+=======
+     *
+     * @return string
+>>>>>>> laraxot/master
      */
     protected function getResourceSlug(): string
     {

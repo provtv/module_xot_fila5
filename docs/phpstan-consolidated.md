@@ -258,8 +258,16 @@ $variabile = $oggetto->proprietaNonStandard;
 
 - [PHPStan Documentation](https://phpstan.org/user-guide/getting-started)
 - [Modules/Xot/docs/PHPSTAN_LIVELLO10_LINEE_GUIDA.md](phpstan_livello10_linee_guida.md)
+<<<<<<< HEAD
 - [docs/PHPSTAN_LEVEL10_FIXES.md](../../../../docs/phpstan_level10_fixes.md)
 
 ---
 
 *Guida consolidata che elimina duplicazioni e semplifica la manutenzione della documentazione PHPStan.*
+=======
+- [docs/PHPSTAN_LEVEL10_FIXES.md](../../../docs/phpstan_level10_fixes.md)
+
+---
+
+*Guida consolidata che elimina duplicazioni e semplifica la manutenzione della documentazione PHPStan.*
+>>>>>>> laraxot/master

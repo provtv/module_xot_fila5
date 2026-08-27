@@ -1,6 +1,9 @@
 # Regola Critica: NO Services - Solo Spatie QueueableActions
 
+<<<<<<< HEAD
 **Data Creazione**: 2025-01-18
+=======
+>>>>>>> laraxot/master
 **Data Creazione**: [DATE]
 **Status**: Regola Fondamentale Laraxot
 **Priorità**: CRITICA - Mai Violare
@@ -19,7 +22,11 @@
 
 ```php
 // ❌ VIETATO - Non creare mai classi Service
+<<<<<<< HEAD
 namespace Modules\healthcare_app\Services\Charts;
+=======
+namespace Modules\Quaeris\Services\Charts;
+>>>>>>> laraxot/master
 
 class ChartService
 {
@@ -62,7 +69,11 @@ class UserService
 
 ```php
 // ✅ CORRETTO - Usa sempre Actions
+<<<<<<< HEAD
 namespace Modules\healthcare_app\Actions\Chart;
+=======
+namespace Modules\Quaeris\Actions\Chart;
+>>>>>>> laraxot/master
 
 use Spatie\QueueableAction\QueueableAction;
 
@@ -162,7 +173,11 @@ class [ActionName]Action
 
 **❌ PRIMA (Service)**:
 ```php
+<<<<<<< HEAD
 namespace Modules\healthcare_app\Services\Charts;
+=======
+namespace Modules\Quaeris\Services\Charts;
+>>>>>>> laraxot/master
 
 class ChartService
 {
@@ -183,12 +198,21 @@ class ChartService
 
 **✅ DOPO (Actions)**:
 ```php
+<<<<<<< HEAD
 // Modules/healthcare_app/Actions/Chart/GenerateChartAction.php
 namespace Modules\healthcare_app\Actions\Chart;
 
 use Spatie\QueueableAction\QueueableAction;
 use Modules\healthcare_app\Models\Chart;
 use Modules\healthcare_app\Actions\Chart\ProcessChartAction;
+=======
+// Modules/Quaeris/Actions/Chart/GenerateChartAction.php
+namespace Modules\Quaeris\Actions\Chart;
+
+use Spatie\QueueableAction\QueueableAction;
+use Modules\Quaeris\Models\Chart;
+use Modules\Quaeris\Actions\Chart\ProcessChartAction;
+>>>>>>> laraxot/master
 
 class GenerateChartAction
 {
@@ -202,11 +226,19 @@ class GenerateChartAction
     }
 }
 
+<<<<<<< HEAD
 // Modules/healthcare_app/Actions/Chart/ProcessChartAction.php
 namespace Modules\healthcare_app\Actions\Chart;
 
 use Spatie\QueueableAction\QueueableAction;
 use Modules\healthcare_app\Models\Chart;
+=======
+// Modules/Quaeris/Actions/Chart/ProcessChartAction.php
+namespace Modules\Quaeris\Actions\Chart;
+
+use Spatie\QueueableAction\QueueableAction;
+use Modules\Quaeris\Models\Chart;
+>>>>>>> laraxot/master
 
 class ProcessChartAction
 {
@@ -255,7 +287,11 @@ I Chart Widgets sperimentali spesso usano dati demo statici. **NON creare Servic
 
 ```php
 // ❌ MAI FARE - ChartService per dati demo
+<<<<<<< HEAD
 namespace Modules\healthcare_app\Services;
+=======
+namespace Modules\Quaeris\Services;
+>>>>>>> laraxot/master
 
 class ChartService
 {
@@ -284,7 +320,11 @@ class Simple02ChartWidget extends XotBaseChartWidget
 
 ```php
 // ✅ CORRETTO - Widget completamente self-contained
+<<<<<<< HEAD
 namespace Modules\healthcare_app\Filament\Widgets;
+=======
+namespace Modules\Quaeris\Filament\Widgets;
+>>>>>>> laraxot/master
 
 use Modules\Xot\Filament\Widgets\XotBaseChartWidget;
 
@@ -324,7 +364,11 @@ class Simple02ChartWidget extends XotBaseChartWidget
 
 ### 28 Gennaio 2026 - ChartService Eliminato
 
+<<<<<<< HEAD
 **Problema**: `Modules\healthcare_app\Services\ChartService` causava errori "Cannot call constructor" nei widget Simple05, Simple06, Simple11, Simple13, Simple20.
+=======
+**Problema**: `Modules\Quaeris\Services\ChartService` causava errori "Cannot call constructor" nei widget Simple05, Simple06, Simple11, Simple13, Simple20.
+>>>>>>> laraxot/master
 
 **Causa**:
 - Il Service non era correttamente autoloadato da Composer
@@ -343,4 +387,8 @@ class Simple02ChartWidget extends XotBaseChartWidget
 - `Simple06ChartWidget.php` → Self-contained
 - `Simple11ChartWidget.php` → Self-contained
 - `Simple13ChartWidget.php` → Self-contained
+<<<<<<< HEAD
 - `Simple20ChartWidget.php` → Self-contained
+=======
+- `Simple20ChartWidget.php` → Self-contained
+>>>>>>> laraxot/master

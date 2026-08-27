@@ -1,5 +1,9 @@
 # Guida Completa: Upgrade Filament 5 + Livewire 4 - Modulo Xot
 
+<<<<<<< HEAD
+=======
+**Ultimo aggiornamento:** [DATE]
+>>>>>>> laraxot/master
 
 ## 📋 Sommario
 
@@ -383,8 +387,13 @@ Tutti i cambiamenti sono legati alla migrazione a Livewire 4:
 #### 1.1 Backup
 
 ```bash
+<<<<<<< HEAD
 cp -r /var/www/_bases/base_<nome progetto>/laravel \
       /var/www/_bases/base_<nome progetto>_backup_$(date +%Y%m%d)
+=======
+cp -r /var/www/_bases/base_laravelpizza/laravel \
+      /var/www/_bases/base_laravelpizza_backup_$(date +%Y%m%d)
+>>>>>>> laraxot/master
 ```
 
 #### 1.2 Risolvere Conflitti Git
@@ -392,7 +401,11 @@ cp -r /var/www/_bases/base_<nome progetto>/laravel \
 Il progetto ha conflitti git da risolvere prima dell'upgrade:
 
 ```bash
+<<<<<<< HEAD
 cd /var/www/_bases/base_<nome progetto>
+=======
+cd /var/www/_bases/base_laravelpizza
+>>>>>>> laraxot/master
 
 # Verifica stato git
 git status
@@ -441,7 +454,11 @@ git commit -m "Risolto conflitti git prima upgrade Filament 5"
 #### 3.1 Installa Script di Upgrade
 
 ```bash
+<<<<<<< HEAD
 cd /var/www/_bases/base_<nome progetto>/laravel
+=======
+cd /var/www/_bases/base_laravelpizza/laravel
+>>>>>>> laraxot/master
 
 composer require filament/upgrade:"^5.0" -W --dev
 ```
@@ -895,5 +912,9 @@ Se incontri problemi:
 ---
 
 *Documento mantenuto da: Marco Sottana*
+<<<<<<< HEAD
 *Ultimo aggiornamento: 2026-01-30*
+=======
+*Ultimo aggiornamento: [DATE]*
+>>>>>>> laraxot/master
 *Progetto: Laraxot / base_laravelpizza*

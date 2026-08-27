@@ -1,5 +1,6 @@
 # PHPStan Level 10 Compliance Status
 
+<<<<<<< HEAD
 **Last Updated**: 2026-07-06
 
 **Status**: ✅ FULLY COMPLIANT (0 errors, level max)
@@ -7,6 +8,10 @@
 Baseline STORY-287: 282 errori → 0. Pattern: Contracts `Model` generics, Cast/Export/Trait PHPDoc, `HasXotFactory` covariant.
 
 Baseline sessione 2026-07-06: 1 → 0. `Modules\Xot\Contracts\UserContract::membershipTeams()` era disallineato con `HasTeams::teams()` (secondo parametro generico di `BelongsToMany` — `$this` non è un sottotipo valido di `Model` nel bound del contratto). Allineato a `Model`. `HasSchemalessAttributesTest.php` chiamava un metodo mai esistito (`getSchemalessAttributes()`) invece dell'accesso magico `$model->extra_attributes`; corretto il test.
+=======
+
+**Status**: ✅ FULLY COMPLIANT (0 errors)
+>>>>>>> laraxot/master
 
 ## Summary
 The Xot module is now fully compliant with PHPStan Level 10 analysis. All static analysis errors have been resolved, ensuring type safety and code quality.
@@ -76,6 +81,7 @@ To maintain PHPStan compliance:
 - [Framework Integration Patterns](framework-integration.md)
 - [HTTP Client Best Practices](http-client-best-practices.md)
 - [Dummy Actions Pattern](dummy-actions-pattern.md)
+<<<<<<< HEAD
 ## Aggiornamento 2026-07-06
 
 - `app/Contracts/UserContract.php`: aggiunto `membershipTeams(): BelongsToMany`
@@ -92,3 +98,5 @@ To maintain PHPStan compliance:
 
 Ri-verificato: `./vendor/bin/phpstan analyse Modules` → `[OK] No errors`
 sull'intero progetto.
+=======
+>>>>>>> laraxot/master

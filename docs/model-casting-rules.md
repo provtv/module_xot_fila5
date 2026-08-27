@@ -118,7 +118,11 @@ protected function casts(): array
 }
 ```
 
+<<<<<<< HEAD
 ## Audit Risultati (2025-08-01)
+=======
+## Audit Risultati ([DATE])
+>>>>>>> laraxot/master
 
 ### File con Errori Trovati: 20
 

@@ -1,8 +1,12 @@
+<<<<<<< HEAD
 ---
 module: theme
 topic: envevelopment-configuration
 canonical: ../../../Themes/docs/shared-components/env-development-configuration.md
 ---
+=======
+# Configurazione .env Development in Laraxot
+>>>>>>> laraxot/master
 
 ## Panoramica
 Il file `.env.development` nel progetto Laraxot è configurato in modo appropriato per fornire un ambiente di sviluppo immediato e senza complicazioni.

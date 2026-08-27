@@ -35,7 +35,11 @@ use Modules\Xot\Filament\Pages\XotBasePage;
 class YourPage extends XotBasePage
 {
     protected static string $view = 'your-module::pages.your-page';
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> laraxot/master
     protected function getFormSchema(): array
     {
         return [
@@ -96,11 +100,21 @@ Verifica se l'utente ha l'accesso alla pagina.
    - Laravel Authorization
 
 3. **Compatibilità**
+<<<<<<< HEAD
    - Compatibile con Filament 3.x
+=======
+   - Compatibile con Filament 4.x
+>>>>>>> laraxot/master
    - Richiede PHP 8.1+
 
 ## Link Correlati
 
+<<<<<<< HEAD
 - [Documentazione Filament](../../../project_docs/filament/index.md)
 - [Best Practices](../../../project_docs/best-practices.md)
 - [Guida Traduzioni](../../../project_docs/translations.md)
+=======
+- [Documentazione Filament](../../../docs/filament/index.md)
+- [Best Practices](../../../docs/best-practices.md)
+- [Guida Traduzioni](../../../docs/translations.md) 
+>>>>>>> laraxot/master

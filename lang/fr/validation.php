@@ -4,7 +4,11 @@ declare(strict_types=1);
 
 return [
     'accepted' => 'Le champ :attribute doit être accepté.',
+<<<<<<< HEAD
     'active_url' => 'Le champ :attribute n\'est pas une URL valide.',
+=======
+    'active_url' => "Le champ :attribute n'est pas une URL valide.",
+>>>>>>> laraxot/master
     'after' => 'Le champ :attribute doit être une date postérieure à :date.',
     'after_or_equal' => 'The :attribute must be a date after or equal to :date.',
     'alpha' => 'Le champ :attribute ne peut contenir que des lettres.',
@@ -21,7 +25,11 @@ return [
     ],
     'boolean' => 'Le champ :attribute doit être vrai ou faux.',
     'confirmed' => 'La confirmation du champ :attribute ne correspond pas.',
+<<<<<<< HEAD
     'date' => 'Le champ :attribute n\'est pas une date valide.',
+=======
+    'date' => "Le champ :attribute n'est pas une date valide.",
+>>>>>>> laraxot/master
     'date_format' => 'Le champ :attribute ne correspond pas au format :format.',
     'different' => 'Le champ :attribute et le champ :other doivent être différents.',
     'digits' => 'Le champ :attribute doit contenir :digits chiffres.',
@@ -29,7 +37,11 @@ return [
     'dimensions' => 'The :attribute has invalid image dimensions.',
     'distinct' => 'The :attribute field has a duplicate value.',
     'email' => 'Le champ :attribute doit être une adresse email valide.',
+<<<<<<< HEAD
     'exists' => 'Le champ :attribute n\'existe pas.',
+=======
+    'exists' => "Le champ :attribute n'existe pas.",
+>>>>>>> laraxot/master
     'file' => 'Le champ :attribute doit être un fichier.',
     'filled' => 'Le champ :attribute est obligatoire.',
     'image' => 'Le champ :attribute doit être une image.',
@@ -60,8 +72,13 @@ return [
     'required_unless' => 'Le champ :attribute est obligatoire sauf si :other est :value.',
     'required_with' => 'Le champ :attribute est obligatoire lorsque :values a une valeur.',
     'required_with_all' => 'Le champ :attribute est obligatoire lorsque :values existe.',
+<<<<<<< HEAD
     'required_without' => 'Le champ :attribute est obligatoire lorsque :values n\'a pas de valeur.',
     'required_without_all' => 'Le champ :attribute est obligatoire lorsque :values n\'existe pas.',
+=======
+    'required_without' => "Le champ :attribute est obligatoire lorsque :values n'a pas de valeur.",
+    'required_without_all' => "Le champ :attribute est obligatoire lorsque :values n'existe pas.",
+>>>>>>> laraxot/master
     'same' => 'Le champ :attribute et :other doivent être identiques.',
     'size' => [
         'numeric' => 'Le champ :attribute doit avoir une taille de :size.',
@@ -121,6 +138,7 @@ return [
             'new_password_confirmation' => 'Confirmation du nouveau mot de passe',
         ],
     ],
+<<<<<<< HEAD
     'navigation' => [
         'label' => 'Missing Navigation Label',
         'plural_label' => 'Missing Navigation Plural Label',
@@ -134,4 +152,6 @@ return [
     ],
     'actions' => [
     ],
+=======
+>>>>>>> laraxot/master
 ];

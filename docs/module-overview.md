@@ -82,7 +82,11 @@ Esempi chiave (non esaustivi):
 ## Documentazione esistente (come orientarsi)
 
 - `README.md` (indice ad alto livello)
+<<<<<<< HEAD
 - `FILOSOFIA_MODULO_XOT.md` (filosofia/politica/dogmi, generato 2025-12-24)
+=======
+- `FILOSOFIA_MODULO_XOT.md` (filosofia/politica/dogmi, generato [DATE])
+>>>>>>> laraxot/master
 - `filament/` e `consolidated/` (guide dettagliate)
 
 ## Da migliorare (DRY + KISS)

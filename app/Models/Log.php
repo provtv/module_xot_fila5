@@ -4,17 +4,27 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Models;
 
+<<<<<<< HEAD
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Facades\File;
 use Modules\Xot\Contracts\ProfileContract;
 use Modules\Xot\Database\Factories\LogFactory;
 use Sushi\Sushi;
+=======
+use Sushi\Sushi;
+use Override;
+use Modules\Xot\Database\Factories\FeedFactory;
+use Illuminate\Database\Eloquent\Builder;
+use Modules\Xot\Contracts\ProfileContract;
+use Illuminate\Support\Facades\File;
+>>>>>>> laraxot/master
 
 // --- services
 // --- TRAITS ---
 /**
  * Modules\Xot\Models\Feed.
  *
+<<<<<<< HEAD
  * @property string|null $id
  * @property string|null $name
  * @property int|null    $size
@@ -29,6 +39,25 @@ use Sushi\Sushi;
  * @property ProfileContract|null $deleter
  * @property string|null          $file_content
  * @property ProfileContract|null $updater
+=======
+ * @method static FeedFactory factory($count = null, $state = [])
+ * @method static Builder|Feed newModelQuery()
+ * @method static Builder|Feed newQuery()
+ * @method static Builder|Feed query()
+ * @method static Builder|Feed newModelQuery()
+ * @method static Builder|Feed newQuery()
+ * @method static Builder|Feed query()
+ * @property string|null $id
+ * @property string|null $name
+ * @property int|null    $size
+ * @property string|null $file_content
+ * @method static Builder|Log whereId($value)
+ * @method static Builder|Log whereName($value)
+ * @method static Builder|Log whereSize($value)
+ * @property ProfileContract|null $creator
+ * @property ProfileContract|null $updater
+ * @mixin IdeHelperLog
+>>>>>>> laraxot/master
  * @mixin \Eloquent
  */
 class Log extends BaseModel
@@ -58,6 +87,7 @@ class Log extends BaseModel
         return $rows;
     }
 
+<<<<<<< HEAD
     public function getFileContentAttribute(?string $value): ?string
     {
         return File::get(storage_path('logs/'.$this->id.'.log'));
@@ -65,6 +95,15 @@ class Log extends BaseModel
 
     /** @return array<string, string> */
     #[\Override]
+=======
+    public function getFileContentAttribute(null|string $value): null|string
+    {
+        return File::get(storage_path('logs/' . $this->id . '.log'));
+    }
+
+    /** @return array<string, string> */
+    #[Override]
+>>>>>>> laraxot/master
     protected function casts(): array
     {
         return [
@@ -117,11 +156,19 @@ class Log extends BaseModel
  * "getRelativePath" => ""
  * "getRelativePathname" => "laravel-2024-03-01.log"
  * "getFilenameWithoutExtension" => "laravel-2024-03-01"
+<<<<<<< HEAD
  * "getPath" => "C:\var\www\_bases\base_camping_fila5\laravel\storage\logs"
  * "getFilename" => "laravel-2024-03-01.log"
  * "getExtension" => "log"
  * "getBasename" => "laravel-2024-03-01.log"
  * "getPathname" => "C:\var\www\_bases\base_camping_fila5\laravel\storage\logs\laravel-2024-03-01.log"
+=======
+ * "getPath" => "C:\var\www\_bases\base_camping_fila3\laravel\storage\logs"
+ * "getFilename" => "laravel-2024-03-01.log"
+ * "getExtension" => "log"
+ * "getBasename" => "laravel-2024-03-01.log"
+ * "getPathname" => "C:\var\www\_bases\base_camping_fila3\laravel\storage\logs\laravel-2024-03-01.log"
+>>>>>>> laraxot/master
  * "getPerms" => 33206
  * "getInode" => 32369622322094035
  * "getSize" => 12497
@@ -137,6 +184,11 @@ class Log extends BaseModel
  * "isFile" => true
  * "isDir" => false
  * "isLink" => false
+<<<<<<< HEAD
  * "getLinkTarget" => "C:\var\www\_bases\base_camping_fila5\laravel\storage\logs\laravel-2024-03-01.log"
  * "getRealPath" => "C:\var\www\_bases\base_camping_fila5\laravel\storage\logs\laravel-2024-03-01.log"
+=======
+ * "getLinkTarget" => "C:\var\www\_bases\base_camping_fila3\laravel\storage\logs\laravel-2024-03-01.log"
+ * "getRealPath" => "C:\var\www\_bases\base_camping_fila3\laravel\storage\logs\laravel-2024-03-01.log"
+>>>>>>> laraxot/master
  */

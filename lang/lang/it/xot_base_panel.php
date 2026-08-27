@@ -40,21 +40,37 @@ Per questo Le chiediamo il permesso di trasmettere i Suoi dati e le Sue risposte
     'Ha avuto difficoltà a prendere la linea/a parlare con l\'operatore del Servizio Clienti? - Può descrivere le difficoltà che ha avuto? ' => 'Ha avuto difficoltà a prendere la linea/a parlare con l\'operatore del Servizio Clienti? - Può descrivere le difficoltà che ha avuto? ',
     'Ha avuto difficoltà a prendere la linea/a parlare con l\'operatore del Servizio Clienti?' => 'Ha avuto difficoltà a prendere la linea/a parlare con l\'operatore del Servizio Clienti?',
     'La Sua richiesta è stata soddisfatta e risolta? - Può descrivere le difficoltà che sono intercorse? ' => 'La Sua richiesta è stata soddisfatta e risolta? - Può descrivere le difficoltà che sono intercorse? ',
+<<<<<<< HEAD
     "Complessivamente, per quanto riguarda la pratica appena conclusa, secondo una scala che va da 1 (per nulla) a 10 (molto), quanto si ritiene soddisfatto/a del contatto telefonico con BIM GSP S.p.A.?
 \u{a0}
   - Perché ha risposto così?" => "Complessivamente, per quanto riguarda la pratica appena conclusa, secondo una scala che va da 1 (per nulla) a 10 (molto), quanto si ritiene soddisfatto/a del contatto telefonico con BIM GSP S.p.A.?
 \u{a0}
   - Perché ha risposto così?",
+=======
+    'Complessivamente, per quanto riguarda la pratica appena conclusa, secondo una scala che va da 1 (per nulla) a 10 (molto), quanto si ritiene soddisfatto/a del contatto telefonico con BIM GSP S.p.A.?
+ 
+  - Perché ha risposto così?' => 'Complessivamente, per quanto riguarda la pratica appena conclusa, secondo una scala che va da 1 (per nulla) a 10 (molto), quanto si ritiene soddisfatto/a del contatto telefonico con BIM GSP S.p.A.?
+ 
+  - Perché ha risposto così?',
+>>>>>>> laraxot/master
     'In una scala che va da 1 (per nulla soddisfacente) a 10 (molto soddisfacente), come valuta il livello di accessibilità allo sportello? (presenza di barriere architettoniche o altro) - Perché ha risposto così?' => 'In una scala che va da 1 (per nulla soddisfacente) a 10 (molto soddisfacente), come valuta il livello di accessibilità allo sportello? (presenza di barriere architettoniche o altro) - Perché ha risposto così?',
     'SPORTELLO AL PUBBLICO - La sua richiesta è stata soddisfatta e risolta? - Può descrivere le difficoltà che sono intercorse? ' => 'SPORTELLO AL PUBBLICO - La sua richiesta è stata soddisfatta e risolta? - Può descrivere le difficoltà che sono intercorse? ',
     'OPERATIVO - La sua richiesta è stata soddisfatta e risolta? - Può descrivere le difficoltà che sono intercorse? ' => 'OPERATIVO - La sua richiesta è stata soddisfatta e risolta? - Può descrivere le difficoltà che sono intercorse? ',
     'SPORTELLO ONLINE - Complessivamente, per quanto riguarda lo sportello Online, secondo una scala che va da 1 (per nulla) a 10 (molto), quanto si ritiene soddisfatto/a del prodotto? - Perché ha risposto così?' => 'SPORTELLO ONLINE - Complessivamente, per quanto riguarda lo sportello Online, secondo una scala che va da 1 (per nulla) a 10 (molto), quanto si ritiene soddisfatto/a del prodotto? - Perché ha risposto così?',
     'SERVIZIO EMERGENZA E GUASTI - Ha avuto difficoltà a prendere la linea/a parlare con l\'operatore telefonico di pronto intervento? - Può descrivere le difficoltà che ha avuto? ' => 'SERVIZIO EMERGENZA E GUASTI - Ha avuto difficoltà a prendere la linea/a parlare con l\'operatore telefonico di pronto intervento? - Può descrivere le difficoltà che ha avuto? ',
+<<<<<<< HEAD
     "SERVIZIO CLIENTI TELEFONICO - Complessivamente, per quanto riguarda la pratica appena conclusa, secondo una scala che va da 1 (per nulla) a 10 (molto), quanto si ritiene soddisfatto/a del contatto telefonico con BIM GSP S.p.A.?
 \u{a0}
   - Perché ha risposto così?" => "SERVIZIO CLIENTI TELEFONICO - Complessivamente, per quanto riguarda la pratica appena conclusa, secondo una scala che va da 1 (per nulla) a 10 (molto), quanto si ritiene soddisfatto/a del contatto telefonico con BIM GSP S.p.A.?
 \u{a0}
   - Perché ha risposto così?",
+=======
+    'SERVIZIO CLIENTI TELEFONICO - Complessivamente, per quanto riguarda la pratica appena conclusa, secondo una scala che va da 1 (per nulla) a 10 (molto), quanto si ritiene soddisfatto/a del contatto telefonico con BIM GSP S.p.A.?
+ 
+  - Perché ha risposto così?' => 'SERVIZIO CLIENTI TELEFONICO - Complessivamente, per quanto riguarda la pratica appena conclusa, secondo una scala che va da 1 (per nulla) a 10 (molto), quanto si ritiene soddisfatto/a del contatto telefonico con BIM GSP S.p.A.?
+ 
+  - Perché ha risposto così?',
+>>>>>>> laraxot/master
     'SERVIZIO CLIENTI TELEFONICO - Ha avuto difficoltà a prendere la linea/a parlare con l\'operatore del Servizio Clienti? - Può descrivere le difficoltà che ha avuto? ' => 'SERVIZIO CLIENTI TELEFONICO - Ha avuto difficoltà a prendere la linea/a parlare con l\'operatore del Servizio Clienti? - Può descrivere le difficoltà che ha avuto? ',
     'COMUNICAZIONE SCRITTA - La sua richiesta è stata soddisfatta e risolta? - Può descrivere le difficoltà che sono intercorse? ' => 'COMUNICAZIONE SCRITTA - La sua richiesta è stata soddisfatta e risolta? - Può descrivere le difficoltà che sono intercorse? ',
     'SERVIZIO CLIENTI TELEFONICO - La Sua richiesta è stata soddisfatta e risolta? - Può descrivere le difficoltà che sono intercorse? ' => 'SERVIZIO CLIENTI TELEFONICO - La Sua richiesta è stata soddisfatta e risolta? - Può descrivere le difficoltà che sono intercorse? ',
@@ -77,4 +93,20 @@ Per questo Le chiediamo il permesso di trasmettere i Suoi dati e le Sue risposte
     'emailstatus' => 'emailstatus',
     'year' => 'year',
     'week' => 'week',
+<<<<<<< HEAD
+=======
+    'navigation' => [
+        'label' => 'Missing Navigation Label',
+        'plural_label' => 'Missing Navigation Plural Label',
+        'group' => 'Missing Group',
+        'icon' => 'heroicon-o-puzzle-piece',
+        'sort' => 100,
+    ],
+    'label' => 'Missing Label',
+    'plural_label' => 'Missing Plural label',
+    'fields' => [
+    ],
+    'actions' => [
+    ],
+>>>>>>> laraxot/master
 ];

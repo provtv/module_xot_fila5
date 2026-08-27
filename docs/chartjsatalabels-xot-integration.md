@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: "Chart.js Datalabels Plugin Implementation in Xot Module"
 module: xot
@@ -7,6 +8,8 @@ created: 2026-08-24
 updated: 2026-08-24
 ---
 
+=======
+>>>>>>> laraxot/master
 # Chart.js Datalabels Plugin Implementation in Xot Module
 
 ## Overview
@@ -930,7 +933,11 @@ class ExampleChartWidget extends XotBaseChartWidget
 
 For a minimal, production-ready example showing 2 labels per bar using `RawJs::make()`, see:
 
+<<<<<<< HEAD
 **`Modules/healthcare_app/Filament/Widgets/SimpleChartWidget.php`**
+=======
+**`Modules/Quaeris/Filament/Widgets/SimpleChartWidget.php`**
+>>>>>>> laraxot/master
 
 Key pattern:
 ```php
@@ -961,4 +968,8 @@ JS);
 4. **Flexibility**: Provide configuration methods that allow child classes to customize behavior
 5. **Maintainability**: Keep the base implementation clean and well-documented
 6. **Scalability**: Design configuration options that can be extended without breaking existing functionality
+<<<<<<< HEAD
 7. **Use RawJs**: Always use `RawJs::make()` for JavaScript callbacks in chart options
+=======
+7. **Use RawJs**: Always use `RawJs::make()` for JavaScript callbacks in chart options
+>>>>>>> laraxot/master

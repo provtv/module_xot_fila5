@@ -160,8 +160,13 @@ $result = $model->traitMethod();
 
 - [PHPStan Code Quality Guide](./phpstan-code-quality-guide.md)
 - [Riepilogo Precedente](./phpstan-january-2026-summary.md)
+<<<<<<< HEAD
 - [Quaeris Corrections Parte 1](../Quaeris/docs/phpstan-corrections-january-2026.md)
 - [Quaeris Corrections Parte 2](../Quaeris/docs/phpstan-corrections-january-2026-part2.md)
+=======
+- [Quaeris Corrections Parte 1](../quaeris/docs/phpstan-corrections-january-2026.md)
+- [Quaeris Corrections Parte 2](../quaeris/docs/phpstan-corrections-january-2026-part2.md)
+>>>>>>> laraxot/master
 
 ---
 

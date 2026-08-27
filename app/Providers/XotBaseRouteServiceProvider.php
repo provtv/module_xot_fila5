@@ -4,6 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Providers;
 
+<<<<<<< HEAD
+=======
+use Exception;
+>>>>>>> laraxot/master
 use Filament\Notifications\Notification;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider;
 use Illuminate\Support\Facades\Config;
@@ -15,14 +19,22 @@ use Illuminate\Support\Facades\Route;
  */
 abstract class XotBaseRouteServiceProvider extends RouteServiceProvider
 {
+<<<<<<< HEAD
     public string $name = '';
 
+=======
+>>>>>>> laraxot/master
     protected string $moduleNamespace = 'Modules\Xot\Http\Controllers';
 
     protected string $module_dir = __DIR__;
 
     protected string $module_ns = __NAMESPACE__;
 
+<<<<<<< HEAD
+=======
+    public string $name = '';
+
+>>>>>>> laraxot/master
     /**
      * Undocumented function.
      */
@@ -56,7 +68,11 @@ abstract class XotBaseRouteServiceProvider extends RouteServiceProvider
 
             return;
         }
+<<<<<<< HEAD
         Route::middleware('web')->namespace($this->moduleNamespace)->group($this->module_dir.'/../../routes/web.php');
+=======
+        Route::middleware('web')->namespace($this->moduleNamespace)->group($this->module_dir . '/../../routes/web.php');
+>>>>>>> laraxot/master
     }
 
     /**
@@ -65,11 +81,19 @@ abstract class XotBaseRouteServiceProvider extends RouteServiceProvider
     protected function mapApiRoutes(): void
     {
         if ('' === $this->name) {
+<<<<<<< HEAD
             throw new \Exception('name is empty on ['.static::class.']');
+=======
+            throw new Exception('name is empty on [' . static::class . ']');
+>>>>>>> laraxot/master
         }
         Route::prefix('api')
             ->middleware('api')
             ->namespace($this->moduleNamespace)
+<<<<<<< HEAD
             ->group($this->module_dir.'/../../routes/api.php');
+=======
+            ->group($this->module_dir . '/../../routes/api.php');
+>>>>>>> laraxot/master
     }
 }

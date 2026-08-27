@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Models;
 
+<<<<<<< HEAD
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Database\Eloquent\Model as EloquentModel;
 use Illuminate\Support\Arr;
@@ -12,16 +13,28 @@ use Modules\Xot\Models\Traits\HasXotFactory;
 use Modules\Xot\Models\Traits\RelationX;
 use Modules\Xot\Traits\Updater;
 use Webmozart\Assert\Assert;
+=======
+use Illuminate\Database\Eloquent\Model;
+// use Laravel\Scout\Searchable;
+// ---- Traits ----
+use Modules\Xot\Traits\Updater;
+>>>>>>> laraxot/master
 
 /**
  * Class XotBaseModel.
  */
+<<<<<<< HEAD
 abstract class XotBaseModel extends EloquentModel
 {
     /** @use HasXotFactory<Factory<static>> */
     use HasXotFactory;
 
     use RelationX;
+=======
+abstract class XotBaseModel extends Model
+{
+    // use Searchable;
+>>>>>>> laraxot/master
     use Updater;
 
     /**
@@ -35,6 +48,7 @@ abstract class XotBaseModel extends EloquentModel
 
     /** @var int */
     protected $perPage = 30;
+<<<<<<< HEAD
 
     /** @var string */
     protected $connection = 'xot';
@@ -116,4 +130,6 @@ abstract class XotBaseModel extends EloquentModel
             'deleted_by' => 'string',
         ];
     }
+=======
+>>>>>>> laraxot/master
 }

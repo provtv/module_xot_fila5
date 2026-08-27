@@ -3,22 +3,38 @@
 declare(strict_types=1);
 
 return [
+<<<<<<< HEAD
     'values' => [
         'spipu' => ['label' => 'Spipu', 'icon' => 'heroicon-o-table-cells', 'color' => 'info', 'description' => 'Motore PDF basato su TCPDF/mPDF per report tabellari'],
         'spatie' => ['label' => 'Spatie', 'icon' => 'heroicon-o-document-text', 'color' => 'primary', 'description' => 'Motore PDF basato su DomPDF per documenti HTML/CSS'],
     ],
     'label' => 'Motore PDF',
     'options' => ['spipu' => 'Spipu', 'spatie' => 'Spatie'],
+=======
+    'label' => 'Motore PDF',
+    'options' => [
+        'spipu' => 'Spipu',
+        'spatie' => 'Spatie',
+    ],
+>>>>>>> laraxot/master
     'plural_label' => 'Pdf Engine Enum (Plurale)',
     'navigation' => [
         'name' => 'Pdf Engine Enum',
         'plural' => 'Pdf Engine Enum',
+<<<<<<< HEAD
         'group' => ['name' => 'General', 'description' => 'General Settings'],
+=======
+        'group' => [
+            'name' => 'General',
+            'description' => 'General Settings',
+        ],
+>>>>>>> laraxot/master
         'label' => 'Pdf Engine Enum',
         'sort' => 1,
         'icon' => 'heroicon-o-collection',
     ],
     'fields' => [
+<<<<<<< HEAD
         'id' => ['label' => 'Identificativo', 'tooltip' => 'Identificativo univoco del record', 'helper_text' => '', 'description' => ''],
         'created_at' => ['label' => 'Data Creazione', 'tooltip' => '', 'helper_text' => '', 'description' => ''],
         'updated_at' => ['label' => 'Ultima Modifica', 'tooltip' => '', 'helper_text' => '', 'description' => ''],
@@ -30,4 +46,36 @@ return [
         'delete' => ['label' => 'Elimina Pdf Engine Enum'],
     ],
     'test' => 'pdf engine enum',
+=======
+        'id' => [
+            'label' => 'Identificativo',
+            'tooltip' => 'Identificativo univoco del record',
+            'helper_text' => '',
+            'description' => '',
+        ],
+        'created_at' => [
+            'label' => 'Data Creazione',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+        'updated_at' => [
+            'label' => 'Ultima Modifica',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+    ],
+    'actions' => [
+        'create' => [
+            'label' => 'Crea Pdf Engine Enum',
+        ],
+        'edit' => [
+            'label' => 'Modifica Pdf Engine Enum',
+        ],
+        'delete' => [
+            'label' => 'Elimina Pdf Engine Enum',
+        ],
+    ],
+>>>>>>> laraxot/master
 ];

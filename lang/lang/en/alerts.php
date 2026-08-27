@@ -184,7 +184,26 @@ return [
             'deleted_permanently' => 'The user was deleted permanently.',
             'restored' => 'The user was successfully restored.',
             'updated' => 'The user was successfully updated.',
+<<<<<<< HEAD
             'updated_password' => "The user's password was successfully updated.",
         ],
     ],
+=======
+            'updated_password' => 'The user\'s password was successfully updated.',
+        ],
+    ],
+    'navigation' => [
+        'label' => 'Missing Navigation Label',
+        'plural_label' => 'Missing Navigation Plural Label',
+        'group' => 'Missing Group',
+        'icon' => 'heroicon-o-puzzle-piece',
+        'sort' => 100,
+    ],
+    'label' => 'Missing Label',
+    'plural_label' => 'Missing Plural label',
+    'fields' => [
+    ],
+    'actions' => [
+    ],
+>>>>>>> laraxot/master
 ];

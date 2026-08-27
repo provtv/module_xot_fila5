@@ -2,14 +2,22 @@
 
 ## Overview
 
+<<<<<<< HEAD
 This document outlines SEO best practices for <nome progetto> Meetups.
+=======
+This document outlines SEO best practices for LaravelPizza Meetups.
+>>>>>>> laraxot/master
 
 ## Meta Tags
 
 ### Required Meta Tags
 ```blade
 <x-slot name="title">
+<<<<<<< HEAD
     {{ __('Page Title') }} - <nome progetto> Community
+=======
+    {{ __('Page Title') }} - LaravelPizza Community
+>>>>>>> laraxot/master
 </x-slot>
 
 <x-slot name="description">
@@ -46,12 +54,21 @@ This document outlines SEO best practices for <nome progetto> Meetups.
 {
     "@context": "https://schema.org",
     "@type": "Organization",
+<<<<<<< HEAD
     "name": "<nome progetto> Meetups",
     "url": "https://<nome progetto>.com",
     "logo": "https://<nome progetto>.com/logo.png",
     "sameAs": [
         "https://twitter.com/<nome progetto>",
         "https://github.com/laraxot/<nome progetto>"
+=======
+    "name": "LaravelPizza Meetups",
+    "url": "https://laravelpizza.com",
+    "logo": "https://laravelpizza.com/logo.png",
+    "sameAs": [
+        "https://twitter.com/laravelpizza",
+        "https://github.com/laraxot/laravelpizza"
+>>>>>>> laraxot/master
     ]
 }
 </script>
@@ -144,7 +161,11 @@ All translatable SEO content should use translation files:
 ```php
 // modules/Gdpr/lang/it/register.php
 'seo' => [
+<<<<<<< HEAD
     'title' => 'Registrati - <nome progetto>',
+=======
+    'title' => 'Registrati - LaravelPizza',
+>>>>>>> laraxot/master
     'description' => 'Iscriviti alla community...',
 ]
 ```
@@ -152,4 +173,8 @@ All translatable SEO content should use translation files:
 ## Related Documentation
 - [UI/UX Guidelines](./ui-ux-guidelines.md)
 - [WCAG Accessibility](./wcag-accessibility-guidelines.md)
+<<<<<<< HEAD
 - [Clickbait & Conversion](./clickbait-conversion-guidelines.md)
+=======
+- [Clickbait & Conversion](./clickbait-conversion-guidelines.md)
+>>>>>>> laraxot/master

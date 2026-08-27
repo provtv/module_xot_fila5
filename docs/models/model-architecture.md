@@ -1,6 +1,9 @@
 # Model Architecture - Guida Completa
 
+<<<<<<< HEAD
 **Data**: 2025-10-16
+=======
+>>>>>>> laraxot/master
 **Modulo**: Xot (Base Module)
 **Autore**: Claude Code Analysis
 
@@ -66,8 +69,12 @@ Tutti i modelli devono estendere una delle classi base appropriate:
 │ Livello 3: Concrete Models                                 │
 │ - Modules/User/Models/Tenant                                │
 │ - Modules/User/Models/TeamUser                              │
+<<<<<<< HEAD
 │ - Modules/healthcare_app/Models/Contact                            │
 │ - Modules/ModuloEsempio/Models/Contact                            │
+=======
+│ - Modules/Quaeris/Models/Contact                            │
+>>>>>>> laraxot/master
 │                                                             │
 │ Implementano: Business logic, Relationships, Scopes         │
 └─────────────────────────────────────────────────────────────┘
@@ -192,8 +199,12 @@ abstract class BaseMorphPivot extends XotBaseMorphPivot
 
 **Scopo**:
 - Definire la connection specifica del modulo
+<<<<<<< HEAD
 - Aggiungere traits specifici del modulo (es: `InteractsWithMedia` in healthcare_app)
 - Aggiungere traits specifici del modulo (es: `InteractsWithMedia` in ModuloEsempio)
+=======
+- Aggiungere traits specifici del modulo (es: `InteractsWithMedia` in Quaeris)
+>>>>>>> laraxot/master
 - Configurare casts specifici del modulo
 - Configurare eager loading predefinito (`$with`)
 
@@ -234,8 +245,12 @@ class Tenant extends BaseModel
 
 **Esempi**:
 - `Modules/User/Models/Tenant.php`
+<<<<<<< HEAD
 - `Modules/healthcare_app/Models/Contact.php`
 - `Modules/ModuloEsempio/Models/Contact.php`
+=======
+- `Modules/Quaeris/Models/Contact.php`
+>>>>>>> laraxot/master
 - `Modules/Cms/Models/Page.php`
 - `Modules/Geo/Models/GeoNamesCap.php`
 
@@ -351,9 +366,13 @@ public function getConnectionName(): ?string
 ### Convenzione
 
 - Namespace: `Modules\User\Models\*` → Connection: `user`
+<<<<<<< HEAD
 **Nota**: Attualmente `XotBaseModel` NON ha auto-discovery (vedi [DRY-KISS-ANALYSIS.md](./dry-kiss-analysis.md) per proposta di implementazione).
 - Namespace: `Modules\healthcare_app\Models\*` → Connection: `healthcare_app`
 - Namespace: `Modules\ModuloEsempio\Models\*` → Connection: `modulo_esempio`
+=======
+- Namespace: `Modules\Quaeris\Models\*` → Connection: `quaeris`
+>>>>>>> laraxot/master
 - Namespace: `Modules\Cms\Models\*` → Connection: `cms`
 
 **Nota**: Attualmente `XotBaseModel` NON ha auto-discovery (vedi [DRY-KISS-ANALYSIS.md](./dry-kiss-analysis.md) per proposta di implementazione).
@@ -553,6 +572,7 @@ class ModelHasRole extends BaseMorphPivot
 }
 ```
 
+<<<<<<< HEAD
 ### Esempio 4: BaseModel con Traits Specifici (healthcare_app Module)
 
 ```php
@@ -561,6 +581,12 @@ namespace Modules\healthcare_app\Models;
 
 ```php
 namespace Modules\ModuloEsempio\Models;
+=======
+### Esempio 4: BaseModel con Traits Specifici (Quaeris Module)
+
+```php
+namespace Modules\Quaeris\Models;
+>>>>>>> laraxot/master
 
 use Modules\Xot\Models\XotBaseModel;
 use Modules\Xot\Contracts\ModelContract;
@@ -570,8 +596,12 @@ use Spatie\MediaLibrary\InteractsWithMedia;
 use GeneaLabs\LaravelModelCaching\Traits\Cachable;
 
 /**
+<<<<<<< HEAD
  * Base Model per healthcare_app module.
  * Base Model per ModuloEsempio module.
+=======
+ * Base Model per Quaeris module.
+>>>>>>> laraxot/master
  *
  * Aggiunge supporto per:
  * - Media Library (Spatie)
@@ -584,7 +614,11 @@ abstract class BaseModel extends XotBaseModel implements HasMedia, ModelContract
     use HasExtraTrait;
     use InteractsWithMedia;
 
+<<<<<<< HEAD
     protected $connection = 'healthcare_app';
+=======
+    protected $connection = 'quaeris';
+>>>>>>> laraxot/master
 
     // Eager load sempre la relazione extra
     protected $with = ['extra'];
@@ -594,8 +628,12 @@ abstract class BaseModel extends XotBaseModel implements HasMedia, ModelContract
 Poi i modelli concreti ereditano tutto:
 
 ```php
+<<<<<<< HEAD
 namespace Modules\healthcare_app\Models;
 namespace Modules\ModuloEsempio\Models;
+=======
+namespace Modules\Quaeris\Models;
+>>>>>>> laraxot/master
 
 class Contact extends BaseModel
 {
@@ -655,8 +693,12 @@ protected $connection = 'user';  // ← Già ereditato da BaseModel
 
 ```php
 // ✅ CORRETTO - Aggiungere traits specifici in BaseModel
+<<<<<<< HEAD
 // Modules/healthcare_app/Models/BaseModel.php
 // Modules/ModuloEsempio/Models/BaseModel.php
+=======
+// Modules/Quaeris/Models/BaseModel.php
+>>>>>>> laraxot/master
 use InteractsWithMedia;
 use HasExtraTrait;
 
@@ -788,8 +830,11 @@ it('tracks who created the record', function () {
 - [XotBasePivot.php](../../app/Models/XotBasePivot.php) - Base class per pivot tables
 - [XotBaseMorphPivot.php](../../app/Models/XotBaseMorphPivot.php) - Base class per morph pivots
 - [DRY-KISS-ANALYSIS.md](./dry-kiss-analysis.md) - Analisi duplicazioni e proposte miglioramento
+<<<<<<< HEAD
 - [CLAUDE.md](../../../CLAUDE.md) - Convenzioni generali del progetto
 - [DRY-KISS-ANALYSIS.md](./dry-kiss-analysis.md) - Analisi duplicazioni e proposte miglioramento
+=======
+>>>>>>> laraxot/master
 - [CLAUDE.md](../../../claude.md) - Convenzioni generali del progetto
 
 ---
@@ -817,7 +862,10 @@ A: Estendi comunque BaseModel, ma usa `setTable()` nel costruttore o in metodi f
 **Prossimo aggiornamento**: Dopo implementazione auto-discovery in XotBaseModel
 # Model Architecture - Guida Completa
 
+<<<<<<< HEAD
 **Data**: 2025-10-16
+=======
+>>>>>>> laraxot/master
 **Modulo**: Xot (Base Module)
 **Autore**: Claude Code Analysis
 
@@ -883,8 +931,12 @@ Tutti i modelli devono estendere una delle classi base appropriate:
 │ Livello 3: Concrete Models                                 │
 │ - Modules/User/Models/Tenant                                │
 │ - Modules/User/Models/TeamUser                              │
+<<<<<<< HEAD
 │ - Modules/healthcare_app/Models/Contact                            │
 │ - Modules/ModuloEsempio/Models/Contact                            │
+=======
+│ - Modules/Quaeris/Models/Contact                            │
+>>>>>>> laraxot/master
 │                                                             │
 │ Implementano: Business logic, Relationships, Scopes         │
 └─────────────────────────────────────────────────────────────┘
@@ -1009,8 +1061,12 @@ abstract class BaseMorphPivot extends XotBaseMorphPivot
 
 **Scopo**:
 - Definire la connection specifica del modulo
+<<<<<<< HEAD
 - Aggiungere traits specifici del modulo (es: `InteractsWithMedia` in healthcare_app)
 - Aggiungere traits specifici del modulo (es: `InteractsWithMedia` in ModuloEsempio)
+=======
+- Aggiungere traits specifici del modulo (es: `InteractsWithMedia` in Quaeris)
+>>>>>>> laraxot/master
 - Configurare casts specifici del modulo
 - Configurare eager loading predefinito (`$with`)
 
@@ -1051,8 +1107,12 @@ class Tenant extends BaseModel
 
 **Esempi**:
 - `Modules/User/Models/Tenant.php`
+<<<<<<< HEAD
 - `Modules/healthcare_app/Models/Contact.php`
 - `Modules/ModuloEsempio/Models/Contact.php`
+=======
+- `Modules/Quaeris/Models/Contact.php`
+>>>>>>> laraxot/master
 - `Modules/Cms/Models/Page.php`
 - `Modules/Geo/Models/GeoNamesCap.php`
 
@@ -1168,9 +1228,13 @@ public function getConnectionName(): ?string
 ### Convenzione
 
 - Namespace: `Modules\User\Models\*` → Connection: `user`
+<<<<<<< HEAD
 **Nota**: Attualmente `XotBaseModel` NON ha auto-discovery (vedi [DRY-KISS-ANALYSIS.md](./dry-kiss-analysis.md) per proposta di implementazione).
 - Namespace: `Modules\healthcare_app\Models\*` → Connection: `healthcare_app`
 - Namespace: `Modules\ModuloEsempio\Models\*` → Connection: `modulo_esempio`
+=======
+- Namespace: `Modules\Quaeris\Models\*` → Connection: `quaeris`
+>>>>>>> laraxot/master
 - Namespace: `Modules\Cms\Models\*` → Connection: `cms`
 
 **Nota**: Attualmente `XotBaseModel` NON ha auto-discovery (vedi [DRY-KISS-ANALYSIS.md](./dry-kiss-analysis.md) per proposta di implementazione).
@@ -1370,6 +1434,7 @@ class ModelHasRole extends BaseMorphPivot
 }
 ```
 
+<<<<<<< HEAD
 ### Esempio 4: BaseModel con Traits Specifici (healthcare_app Module)
 
 ```php
@@ -1378,6 +1443,12 @@ namespace Modules\healthcare_app\Models;
 
 ```php
 namespace Modules\ModuloEsempio\Models;
+=======
+### Esempio 4: BaseModel con Traits Specifici (Quaeris Module)
+
+```php
+namespace Modules\Quaeris\Models;
+>>>>>>> laraxot/master
 
 use Modules\Xot\Models\XotBaseModel;
 use Modules\Xot\Contracts\ModelContract;
@@ -1387,8 +1458,12 @@ use Spatie\MediaLibrary\InteractsWithMedia;
 use GeneaLabs\LaravelModelCaching\Traits\Cachable;
 
 /**
+<<<<<<< HEAD
  * Base Model per healthcare_app module.
  * Base Model per ModuloEsempio module.
+=======
+ * Base Model per Quaeris module.
+>>>>>>> laraxot/master
  *
  * Aggiunge supporto per:
  * - Media Library (Spatie)
@@ -1401,7 +1476,11 @@ abstract class BaseModel extends XotBaseModel implements HasMedia, ModelContract
     use HasExtraTrait;
     use InteractsWithMedia;
 
+<<<<<<< HEAD
     protected $connection = 'healthcare_app';
+=======
+    protected $connection = 'quaeris';
+>>>>>>> laraxot/master
 
     // Eager load sempre la relazione extra
     protected $with = ['extra'];
@@ -1411,8 +1490,12 @@ abstract class BaseModel extends XotBaseModel implements HasMedia, ModelContract
 Poi i modelli concreti ereditano tutto:
 
 ```php
+<<<<<<< HEAD
 namespace Modules\healthcare_app\Models;
 namespace Modules\ModuloEsempio\Models;
+=======
+namespace Modules\Quaeris\Models;
+>>>>>>> laraxot/master
 
 class Contact extends BaseModel
 {
@@ -1472,8 +1555,12 @@ protected $connection = 'user';  // ← Già ereditato da BaseModel
 
 ```php
 // ✅ CORRETTO - Aggiungere traits specifici in BaseModel
+<<<<<<< HEAD
 // Modules/healthcare_app/Models/BaseModel.php
 // Modules/ModuloEsempio/Models/BaseModel.php
+=======
+// Modules/Quaeris/Models/BaseModel.php
+>>>>>>> laraxot/master
 use InteractsWithMedia;
 use HasExtraTrait;
 
@@ -1605,8 +1692,11 @@ it('tracks who created the record', function () {
 - [XotBasePivot.php](../../app/Models/XotBasePivot.php) - Base class per pivot tables
 - [XotBaseMorphPivot.php](../../app/Models/XotBaseMorphPivot.php) - Base class per morph pivots
 - [DRY-KISS-ANALYSIS.md](./dry-kiss-analysis.md) - Analisi duplicazioni e proposte miglioramento
+<<<<<<< HEAD
 - [CLAUDE.md](../../../CLAUDE.md) - Convenzioni generali del progetto
 - [DRY-KISS-ANALYSIS.md](./dry-kiss-analysis.md) - Analisi duplicazioni e proposte miglioramento
+=======
+>>>>>>> laraxot/master
 - [CLAUDE.md](../../../claude.md) - Convenzioni generali del progetto
 
 ---
@@ -1631,4 +1721,8 @@ A: Estendi comunque BaseModel, ma usa `setTable()` nel costruttore o in metodi f
 ---
 
 **Ultima revisione**: 2025-10-16
+<<<<<<< HEAD
 **Prossimo aggiornamento**: Dopo implementazione auto-discovery in XotBaseModel
+=======
+**Prossimo aggiornamento**: Dopo implementazione auto-discovery in XotBaseModel
+>>>>>>> laraxot/master

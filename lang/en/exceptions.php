@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
 return [
     /*
     |--------------------------------------------------------------------------
@@ -19,6 +20,14 @@ return [
             'newsletterSubscribe' => [
                 'messages' => [
                 ],
+=======
+
+return [
+    'backend' => [
+        'takeaway' => [
+            'newsletterSubscribe' => [
+                'messages' => [],
+>>>>>>> laraxot/master
             ],
             'category' => [
                 'create_error' => 'Create Error',
@@ -95,7 +104,10 @@ return [
                 'not_found' => 'That role does not exist.',
                 'update_error' => 'There was a problem updating this role. Please try again.',
             ],
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/master
             'users' => [
                 'cant_deactivate_self' => 'You can not do that to yourself.',
                 'cant_delete_self' => 'You can not delete yourself.',
@@ -114,7 +126,10 @@ return [
             ],
         ],
     ],
+<<<<<<< HEAD
 
+=======
+>>>>>>> laraxot/master
     'general' => [
         'messages' => [
             'merchant' => [
@@ -138,6 +153,7 @@ return [
                 'created_confirm' => 'Your account was successfully created. We have sent you an e-mail to confirm your account.',
                 'mismatch' => 'Your confirmation code does not match.',
                 'not_found' => 'That confirmation code does not exist.',
+<<<<<<< HEAD
                 'resend' => 'Your account is not confirmed. Please click the confirmation link in your e-mail, or <a href="'.route('frontend.auth.account.confirm.resend', ':user_id').'">click here</a> to resend the confirmation e-mail.',
                 'success' => 'Your account has been successfully confirmed!',
                 'resent' => 'A new confirmation e-mail has been sent to the address on file.',
@@ -146,6 +162,14 @@ return [
             'deactivated' => 'Your account has been deactivated.',
             'email_taken' => 'That e-mail address is already taken.',
 
+=======
+                'resend' => 'Your account is not confirmed. Please click the confirmation link in your e-mail, or click here</a> to resend the confirmation e-mail.',
+                'success' => 'Your account has been successfully confirmed!',
+                'resent' => 'A new confirmation e-mail has been sent to the address on file.',
+            ],
+            'deactivated' => 'Your account has been deactivated.',
+            'email_taken' => 'That e-mail address is already taken.',
+>>>>>>> laraxot/master
             'password' => [
                 'change_mismatch' => 'That is not your old password.',
             ],

@@ -91,8 +91,11 @@ $floatValue = app(SafeFloatCastAction::class)->execute($mixedValue, 0.0);
 $stringValue = app(SafeStringCastAction::class)->execute($mixedValue, '');
 ```
 
+<<<<<<< HEAD
 `ArrayToRawJsAction::jsValue` non è bordo opaco: i caller passano solo scalari, quindi la firma è `string|int|float|bool|null`. `SafeStringCastAction` resta solo per un oggetto inatteso dopo il filtro di array e `RawJs`.
 
+=======
+>>>>>>> laraxot/master
 ## Pattern di Utilizzo
 
 ### Pattern 1: Verifica e Accesso
@@ -210,10 +213,17 @@ class NewWidget extends Widget
 
 ## Testing
 
+<<<<<<< HEAD
 Le azioni di cast sono testate; PHPStan usa `laravel/phpstan.neon` (mai `--level`):
 
 ```bash
 ./vendor/bin/phpstan analyse Modules/Xot/app/Actions/Cast --no-progress --memory-limit=-1
+=======
+Le azioni di cast sono completamente testate e supportano PHPStan livello 9+:
+
+```bash
+./vendor/bin/phpstan analyse Modules/Xot/app/Actions/Cast --level=9
+>>>>>>> laraxot/master
 ```
 
 ## Collegamenti
@@ -225,6 +235,9 @@ Le azioni di cast sono testate; PHPStan usa `laravel/phpstan.neon` (mai `--level
 - [SafeStringCastAction](../app/Actions/Cast/SafeStringCastAction.php)
 - [SafeBooleanCastAction](../app/Actions/Cast/SafeBooleanCastAction.php)
 - [SafeArrayCastAction](../app/Actions/Cast/SafeArrayCastAction.php)
+<<<<<<< HEAD
 - [ArrayToRawJsAction](../app/Actions/Array/ArrayToRawJsAction.php) — `jsValue` scalare; SafeString solo per oggetti inattesi
 - [PHPStan rules](./quality/phpstan-rules.md)
 - [Mixed ultima spiaggia](../../Notify/docs/mixed-type-ultima-spiaggia.md)
+=======
+>>>>>>> laraxot/master

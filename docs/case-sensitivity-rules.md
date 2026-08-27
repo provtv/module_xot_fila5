@@ -193,6 +193,10 @@ EOF
 
 ## Update Log
 
+<<<<<<< HEAD
 - **2025-11-04**: Initial documentation and cleanup
+=======
+- **[DATE]**: Initial documentation and cleanup
+>>>>>>> laraxot/master
   - Removed: `metatagdatatest.php`, `pest.php`, `xotbasecontroller.php`, `pt_br/`
   - Established rules and conventions
