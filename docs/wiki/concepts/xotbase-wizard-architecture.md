@@ -36,7 +36,7 @@ updated: 2026-08-24
            │                                    │
            ▼                                    ▼
 http://127.0.0.1:8000/it/tests/segnalazione-crea
-           (citizen frontoffice)              http://127.0.0.1:8000/fixcity/admin/tickets/create
+           (citizen frontoffice)              http://127.0.0.1:8000/ptv/admin/tickets/create
                                             (admin panel)
 
 SAME Wizard component, DIFFERENT "dresses" (CSS/Blade in theme)
@@ -168,7 +168,7 @@ CreateTicketWizardWidget (Modules/Fixcity - concrete widget)
 - [ ] CSS in `laravel/Themes/Sixteen/resources/css/app.css`
 - [ ] Run `npm run build && npm run copy` after CSS changes
 
-### Admin (`/fixcity/admin/tickets/create`)
+### Admin (`/ptv/admin/tickets/create`)
 
 - [ ] Standard Filament wizard rendering
 - [ ] No theme overrides needed (uses vendor Blade directly)

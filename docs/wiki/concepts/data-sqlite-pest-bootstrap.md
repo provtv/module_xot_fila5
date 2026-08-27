@@ -1,26 +1,26 @@
 ---
-title: "fixcity_data.sqlite — bootstrap Pest (fail-fast)"
+title: "ptv_data.sqlite — bootstrap Pest (fail-fast)"
 type: concept
 module: Xot
 tags: [testing, pest, sqlite, xotbasetestcase, database-transactions]
 created: 2026-07-12
 updated: 2026-07-12
-qmd: "fixcity_data.sqlite prepareSharedFixcitySqliteForTesting pest hang empty sqlite fail fast"
+qmd: "ptv_data.sqlite prepareSharedFixcitySqliteForTesting pest hang empty sqlite fail fast"
 issues:
-  - "https://github.com/laraxot/base_fixcity_fila5/issues/372"
+  - "https://github.com/laraxot/base_ptv_fila5/issues/372"
 discussions:
-  - "https://github.com/laraxot/base_fixcity_fila5/discussions/273"
+  - "https://github.com/laraxot/base_ptv_fila5/discussions/273"
 related:
   - ../concepts/module-testcase-xotbase-hierarchy.md
   - ../../../../../../docs/wiki/memories/data-sacred-no-destructive-db.md
   - ../../../../../../bashscripts/ai/wiki/rules/testing-modules-pest.md
 ---
 
-# fixcity_data.sqlite — bootstrap Pest
+# ptv_data.sqlite — bootstrap Pest
 
 ## Scopo
 
-I moduli con `DatabaseTransactions` chiamano `prepareSharedFixcitySqliteForTesting()` **prima** di `parent::setUp()` per condividere un unico PDO SQLite su `laravel/database/fixcity_data.sqlite` ed evitare `database is locked`.
+I moduli con `DatabaseTransactions` chiamano `prepareSharedFixcitySqliteForTesting()` **prima** di `parent::setUp()` per condividere un unico PDO SQLite su `laravel/database/ptv_data.sqlite` ed evitare `database is locked`.
 
 ## Sintomo (root cause hang)
 
@@ -30,7 +30,7 @@ I moduli con `DatabaseTransactions` chiamano `prepareSharedFixcitySqliteForTesti
 | File **0 byte** (`touch`) | SQLite non valido → lock / `busy_timeout` 10s → **Pest sembra bloccato** senza output |
 | Header non `SQLite format 3` | Stesso comportamento |
 
-`touch database/fixcity_data.sqlite` **non** crea un database utilizzabile.
+`touch database/ptv_data.sqlite` **non** crea un database utilizzabile.
 
 ## Guard in XotBaseTestCase
 
@@ -47,11 +47,11 @@ I moduli con `DatabaseTransactions` chiamano `prepareSharedFixcitySqliteForTesti
 ### Verifica locale
 
 ```bash
-ls -la laravel/database/fixcity_data.sqlite
+ls -la laravel/database/ptv_data.sqlite
 # atteso: size >> 0 (tipico ~1MB+), non 0 byte
 
 cd laravel
-php -r 'echo file_get_contents("database/fixcity_data.sqlite", false, null, 0, 16);'
+php -r 'echo file_get_contents("database/ptv_data.sqlite", false, null, 0, 16);'
 # atteso: SQLite format 3
 ```
 

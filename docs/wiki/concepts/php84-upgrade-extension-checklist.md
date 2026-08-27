@@ -18,7 +18,7 @@ sources:
 
 ## Scopo
 
-Prerequisito per installare `spatie/laravel-model-states` ^2.14 e allineare Laravel 13 nel lock condiviso. Tracker: [#87](https://github.com/laraxot/base_fixcity_fila5/issues/87).
+Prerequisito per installare `spatie/laravel-model-states` ^2.14 e allineare Laravel 13 nel lock condiviso. Tracker: [#87](https://github.com/laraxot/base_ptv_fila5/issues/87).
 
 Installazione distro (Sury / Apache / MariaDB): [`docs/lamp/install.txt`](../../lamp/install.txt). Script: [`upgrade_php84.sh`](../../../../../../bashscripts/tools/lamp/upgrade_php84.sh), [`migrate_mysql_to_mariadb.sh`](../../../../../../bashscripts/tools/lamp/migrate_mysql_to_mariadb.sh). Policy DB: [mariadb-runtime-policy.md](mariadb-runtime-policy.md).
 
@@ -34,7 +34,7 @@ Estensioni rilevate su ambiente dev (`php -m`):
 1. Verificare `php8.4 -v` → 8.4.x (su WSL2 FixCity: **8.4.17** già presente; `php` default può restare 8.3 senza `sudo`).
 2. Estensioni: su questo host **nessuna mancante** rispetto a 8.3 (`comm` moduli vuoto).
 3. **Composer/artisan/PHPStan:** prefissare con `php8.4` oppure `sudo update-alternatives --set php /usr/bin/php8.4`.
-4. Workflow Composer in [#87](https://github.com/laraxot/base_fixcity_fila5/issues/87) — **completato** 2026-05-21.
+4. Workflow Composer in [#87](https://github.com/laraxot/base_ptv_fila5/issues/87) — **completato** 2026-05-21.
 
 ## Comandi post-upgrade (modulo Xot)
 

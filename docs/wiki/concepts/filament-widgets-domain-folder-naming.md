@@ -23,7 +23,7 @@ updated: 2026-08-24
 - **Politica modulare:** un widget = un ruolo su un aggregato (`Ticket`, `Auth`, `Rating`).
 - **DRY nei namespace:** `ViewWidget` è leggibile nel contesto `Ticket\`; niente prefissi `Ticket*` su ogni file.
 - **KISS in CMS JSON:** `Modules\Fixcity\Filament\Widgets\Ticket\ViewWidget` — percorso = documentazione vivente.
-- **Allineamento risorse:** `GetViewByClassAction` risolve `fixcity::filament.widgets.ticket.view` da `Ticket\ViewWidget`.
+- **Allineamento risorse:** `GetViewByClassAction` risolve `ptv::filament.widgets.ticket.view` da `Ticket\ViewWidget`.
 
 ## Struttura file
 

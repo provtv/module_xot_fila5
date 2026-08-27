@@ -8,7 +8,7 @@ qmd: "xot git forward-only no reset restore revert agent study show"
 issues:
   - https://github.com/provtv/base_ptv_fila5/issues/124
 discussions:
-  - https://github.com/laraxot/base_fixcity_fila5/discussions/273
+  - https://github.com/laraxot/base_ptv_fila5/discussions/273
 ---
 
 # Git Forward-Only Rule

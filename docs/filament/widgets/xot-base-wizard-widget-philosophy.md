@@ -134,8 +134,8 @@ TextInput::make('address')
 **Come funziona**:
 1. `AutoLabelAction` inspects call stack via `debug_backtrace()`
 2. Trova la classe chiamante (es. `CreateTicketWizardWidget`)
-3. Deriva chiave traduzione: `fixcity::create_ticket_wizard`
-4. Costruisce label key: `fixcity::create_ticket_wizard.fields.address.label`
+3. Deriva chiave traduzione: `ptv::create_ticket_wizard`
+4. Costruisce label key: `ptv::create_ticket_wizard.fields.address.label`
 5. Applica traduzione: `$component->label(trans($label_key))`
 6. Se traduzione non esiste, la salva automaticamente
 

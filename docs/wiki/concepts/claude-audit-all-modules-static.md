@@ -6,9 +6,9 @@ created: 2026-07-09
 updated: 2026-07-09
 qmd: "claude-audit static tutti moduli 80/100 max-files 2000 boost audit-coverage"
 issues:
-  - "https://github.com/laraxot/base_fixcity_fila5/issues/704"
+  - "https://github.com/laraxot/base_ptv_fila5/issues/704"
 discussions:
-  - "https://github.com/laraxot/base_fixcity_fila5/discussions/705"
+  - "https://github.com/laraxot/base_ptv_fila5/discussions/705"
 related:
   - ../../../../docs/wiki/guidelines/claude-audit-static-free-tier.md
   - ../../../../bashscripts/tools/run-claude-audit-all-modules-static.sh

@@ -19,7 +19,7 @@ related:
 
 ## Problema
 
-`XotBaseTestCase` rimappa le connessioni su `database/fixcity_data.sqlite`, che non contiene
+`XotBaseTestCase` rimappa le connessioni su `database/ptv_data.sqlite`, che non contiene
 tabelle di dominio (`activity_log`, `media`, `users`, …). I test Feature che persistono dati
 falliscono con `no such table`; la suite resta rossa e **Pest non stampa coverage** (exit ≠ 0).
 

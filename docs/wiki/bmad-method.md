@@ -3,10 +3,16 @@ title: "Bmad Method"
 type: reference
 tags: [wiki, no-frontmatter-fix]
 created: 2026-08-24
-updated: 2026-08-24
+updated: 2026-08-26
 ---
 
 # BMAD Method v6.3 operativo nel progetto
+
+## Standing order (sempre)
+
+**Ogni richiesta utente passa da BMAD.** Non e' opzionale. Persistenza: `.cursor/rules/bmad-always.mdc` (`alwaysApply: true`), memoria [bmad-always-standing-order](../../../../bashscripts/ai/wiki/memories/bmad-always-standing-order.md), sezione BMAD in `AGENTS.md`.
+
+Disciplina sempre; payload BMAD solo on-demand (niente preload).
 
 ## Regola pratica
 

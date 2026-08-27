@@ -23,7 +23,7 @@ protected function useNativeSubmitButton(): bool
 #[\Override]
 protected function getNativeSubmitButtonLabel(): string
 {
-    return (string) __('fixcity::create_ticket_wizard.actions.submit.label');
+    return (string) __('ptv::create_ticket_wizard.actions.submit.label');
 }
 
 #[\Override]
@@ -70,7 +70,7 @@ protected function getWizardSubmitAction(): Htmlable
 // ✅ SEMPLICE: 1 metodo, tutto inline
 protected function getWizardSubmitAction(): Htmlable
 {
-    $label = (string) __('fixcity::create_ticket_wizard.actions.submit.label');
+    $label = (string) __('ptv::create_ticket_wizard.actions.submit.label');
     
     return new HtmlString(
         "<button type=\"submit\" class=\"btn btn-primary mobile-full\">{$label}</button>"
@@ -125,7 +125,7 @@ class MyWidget extends XotBaseWizardWidget
 {
     protected function getWizardSubmitAction(): Htmlable
     {
-        $label = (string) __('fixcity::create_ticket_wizard.actions.submit.label');
+        $label = (string) __('ptv::create_ticket_wizard.actions.submit.label');
         
         return new HtmlString(
             "<button type=\"submit\" class=\"btn btn-primary mobile-full\">{$label}</button>"
@@ -187,7 +187,7 @@ class MyWidget extends XotBaseWizardWidget
 #[\Override]
 protected function getWizardSubmitAction(): Htmlable
 {
-    $label = (string) __('fixcity::create_ticket_wizard.actions.submit.label');
+    $label = (string) __('ptv::create_ticket_wizard.actions.submit.label');
     
     return new HtmlString(
         "<button type=\"submit\" class=\"btn btn-primary mobile-full\">{$label}</button>"
@@ -335,7 +335,7 @@ protected function getNativeSubmitButtonClasses(): string { return 'btn btn-prim
 // ✅ CORRETTO: tutto inline nel metodo principale
 protected function getWizardSubmitAction(): Htmlable
 {
-    $label = (string) __('fixcity::create_ticket_wizard.actions.submit.label');
+    $label = (string) __('ptv::create_ticket_wizard.actions.submit.label');
     
     return new HtmlString(
         "<button type=\"submit\" class=\"btn btn-primary mobile-full\">{$label}</button>"
@@ -430,7 +430,7 @@ Abbiamo rimosso gli hook e reso `getWizardSubmitAction()` direttamente overridea
 #[\Override]
 protected function getWizardSubmitAction(): Htmlable
 {
-    $label = (string) __('fixcity::create_ticket_wizard.actions.submit.label');
+    $label = (string) __('ptv::create_ticket_wizard.actions.submit.label');
     
     return new HtmlString(
         "<button type=\"submit\" class=\"btn btn-primary mobile-full\">{$label}</button>"

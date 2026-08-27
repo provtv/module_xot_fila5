@@ -72,7 +72,7 @@ Text::make(new HtmlString('<p>Informativa privacy...</p>'))
 
 ```php
 // ❌ Sbagliato
-SchemaView::make('fixcity::filament.widgets.partials.ticket-create-wizard-summary')
+SchemaView::make('ptv::filament.widgets.partials.ticket-create-wizard-summary')
 ```
 
 Perche:

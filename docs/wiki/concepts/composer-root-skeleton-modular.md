@@ -6,14 +6,14 @@ created: 2026-06-09
 updated: 2026-06-30
 issues:
   - "https://github.com/laraxot/module_xot_fila5/issues/30"
-  - "https://github.com/laraxot/base_fixcity_fila5/issues/305"
+  - "https://github.com/laraxot/base_ptv_fila5/issues/305"
 discussions:
-  - "https://github.com/laraxot/base_fixcity_fila5/discussions/304"
+  - "https://github.com/laraxot/base_ptv_fila5/discussions/304"
 related:
   - ../../../../../../bashscripts/ai/rules/composer-root-skeleton-modular.md
   - ../../../../../../docs/stories/STORY-282-composer-root-require-skeleton-modular.md
   - ./composer-merge-plugin-modules-only.md
-  - ../../raw/notes/composer-root-skeleton-fixcity-comparison-2026-06-30.md
+  - ../../raw/notes/composer-root-skeleton-ptv-comparison-2026-06-30.md
   - ./theme-psr4-autoload-without-merge.md
 ---
 

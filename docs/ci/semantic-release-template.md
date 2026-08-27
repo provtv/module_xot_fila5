@@ -2,7 +2,7 @@
 
 ## Scopo
 
-Un solo stack **semantic-release** + **Conventional Commits** per ogni repo owner (`module_*_fila5`, `theme_*_fila5`) e orchestrazione monorepo su `base_fixcity_fila5`.
+Un solo stack **semantic-release** + **Conventional Commits** per ogni repo owner (`module_*_fila5`, `theme_*_fila5`) e orchestrazione monorepo su `base_ptv_fila5`.
 
 ## Golden reference
 
@@ -37,7 +37,7 @@ Crea:
 
 ## Fixcity root
 
-- `.releaserc.json` con `tagFormat: fixcity-v${version}`
+- `.releaserc.json` con `tagFormat: ptv-v${version}`
 - Legacy: `.github/workflows/semantic-release.yml` (git-auto-semver) — deprecato; canonico: `semantic-release-monorepo.yml`
 
 ## Deprecazioni

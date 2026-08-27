@@ -7,7 +7,7 @@ created: 2026-06-13
 updated: 2026-08-19
 qmd: "Xot Tests autoload XotBaseTestCase class not found phpstan composer psr-4"
 issues:
-  - "https://github.com/laraxot/base_fixcity_fila5/issues/330"
+  - "https://github.com/laraxot/base_ptv_fila5/issues/330"
 related:
   - ../../../../../../docs/wiki/PHPSTAN-INDEX.md
   - ../../../../../../docs/wiki/memories/phpstan-neon-immutable-agents.md

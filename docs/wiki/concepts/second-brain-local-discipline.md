@@ -13,7 +13,7 @@ discussions:
   - "https://github.com/laraxot/module_xot_fila5/discussions/29"
 related:
   - ./ai-harness-xot-discipline.md
-  - ../../../../../../docs/wiki/concepts/hackernoon-ai-coding-tips-fixcity-map.md
+  - ../../../../../../docs/wiki/concepts/hackernoon-ai-coding-tips-ptv-map.md
 ---
 
 # Second Brain Local Discipline
@@ -62,7 +62,7 @@ Distillato Fixcity — **non** copiare i tip nel bootstrap:
 | Qualità | 006/021 | Self-review diff; no workslop; PHPStan L10 |
 | Obbedienza | 015/022 | Trigger map + quality-gates + `.cursor/rules/` |
 
-Mappa completa: [hackernoon-ai-coding-tips-fixcity-map.md](../../../../../../docs/wiki/concepts/hackernoon-ai-coding-tips-fixcity-map.md)  
+Mappa completa: [hackernoon-ai-coding-tips-ptv-map.md](../../../../../../docs/wiki/concepts/hackernoon-ai-coding-tips-ptv-map.md)  
 Prompt router: [llm-wiki.txt](../../../../../../bashscripts/tools/prompts/llm-wiki.txt)
 
 ## Quality Gate

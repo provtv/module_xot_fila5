@@ -14,6 +14,7 @@ use Mockery;
 use Modules\Xot\Exports\QueryExport;
 use Modules\Xot\Filament\Actions\Form\FieldRefreshAction;
 use Modules\Xot\Models\Cache as CacheModel;
+use Modules\Xot\Tests\Fixtures\Stubs\XotRefreshRecord;
 use Modules\Xot\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 use ReflectionClass;
@@ -24,19 +25,6 @@ uses(TestCase::class)->group('no-xot-db');
 afterEach(function (): void {
     Mockery::close();
 });
-
-final class XotRefreshRecord extends CacheModel
-{
-    public function getTitle(): string
-    {
-        return 'T';
-    }
-
-    protected function getSecret(): string
-    {
-        return 'secret';
-    }
-}
 
 describe('Xot FieldRefresh QueryExport coverage', function (): void {
     test('FieldRefreshAction setUp closure branches', function (): void {

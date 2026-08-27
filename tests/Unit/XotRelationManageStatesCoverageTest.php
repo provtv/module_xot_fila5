@@ -4,56 +4,16 @@ declare(strict_types=1);
 
 namespace Modules\Xot\Tests\Unit;
 
-use Illuminate\Database\Eloquent\Relations\MorphPivot;
-use Illuminate\Database\Eloquent\Relations\Pivot;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
-use Modules\Xot\Filament\Resources\XotBaseResource\Pages\XotBaseManageRelatedRecords;
 use Modules\Xot\Models\Cache as CacheModel;
+use Modules\Xot\Tests\Fixtures\Stubs\XotCovManageRelated;
+use Modules\Xot\Tests\Fixtures\Stubs\XotCovRelationHost;
 use Modules\Xot\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
 uses(TestCase::class)->group('no-xot-db');
-
-final class XotCovPivot extends Pivot
-{
-    protected $table = 'cache_cache';
-
-    public $incrementing = true;
-
-    protected $fillable = ['cache_id', 'related_id', 'extra'];
-}
-
-final class XotCovMorphPivot extends MorphPivot
-{
-    protected $table = 'cache_morph';
-
-    protected $fillable = ['cache_id', 'related_id', 'related_type'];
-}
-
-final class XotCovRelationHost extends CacheModel
-{
-    public $timestamps = false;
-
-    public function guessPivot(string $related, ?string $class = null): Pivot
-    {
-        return new XotCovPivot;
-    }
-
-    public function guessMorphPivot(string $related, ?string $_class = null): MorphPivot
-    {
-        return new XotCovMorphPivot;
-    }
-}
-
-/** @extends XotBaseManageRelatedRecords<CacheModel> */
-final class XotCovManageRelated extends XotBaseManageRelatedRecords
-{
-    protected static string $resource = \Modules\Xot\Filament\Resources\XotBaseResource::class;
-
-    protected static string $relationship = 'sessions';
-}
 
 describe('Xot RelationX ManageRelated StatesChart', function (): void {
     test('RelationX belongsToManyX morphToManyX con pivot stub', function (): void {

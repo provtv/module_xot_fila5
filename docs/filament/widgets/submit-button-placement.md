@@ -162,7 +162,7 @@ protected function getWizardSubmitAction(): Htmlable
 protected function getWizardSubmitAction(): Htmlable
 {
     // Design Comuni button classes
-    $label = (string) __('fixcity::create_ticket_wizard.actions.submit.label');
+    $label = (string) __('ptv::create_ticket_wizard.actions.submit.label');
     
     return new HtmlString(
         "<button type=\"submit\" class=\"btn btn-primary mobile-full\">{$label}</button>"
@@ -239,7 +239,7 @@ class CreateTicketWizardWidget extends XotBaseWizardWidget
     #[\Override]
     protected function getWizardSubmitAction(): Htmlable
     {
-        $label = (string) __('fixcity::create_ticket_wizard.actions.submit.label');
+        $label = (string) __('ptv::create_ticket_wizard.actions.submit.label');
         
         return new HtmlString(
             "<button type=\"submit\" class=\"btn btn-primary mobile-full\">{$label}</button>"

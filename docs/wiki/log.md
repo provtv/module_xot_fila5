@@ -183,7 +183,7 @@ discussions:
 - Verificato: `laravel/composer.json` Predict gia' skeleton (piu' stretto di FixCity: no responsecache/phpmd/seeders nel root).
 - Nuova pagina progetto: [`docs/wiki/concepts/composer-root-minimal-nwidart.md`](../../../../../../docs/wiki/concepts/composer-root-minimal-nwidart.md).
 - Nuova pagina Xot: [`composer-merge-plugin-modules-only.md`](concepts/composer-merge-plugin-modules-only.md).
-- Raw confronto aggiornato: [`composer-root-skeleton-fixcity-comparison-2026-06-30.md`](../raw/notes/composer-root-skeleton-fixcity-comparison-2026-06-30.md).
+- Raw confronto aggiornato: [`composer-root-skeleton-ptv-comparison-2026-06-30.md`](../raw/notes/composer-root-skeleton-ptv-comparison-2026-06-30.md).
 
 ## [2026-06-30] composer | gate start.txt + autoload runtime temi
 
@@ -197,7 +197,7 @@ discussions:
 - Rimosso merge di `Themes/*/composer.json`; vietato anche PSR-4 root per temi e `Database\\Seeders\\`.
 - Pagina corretta: [`theme-psr4-autoload-without-merge.md`](concepts/theme-psr4-autoload-without-merge.md).
 - Aggiornata: [`composer-root-skeleton-modular.md`](concepts/composer-root-skeleton-modular.md).
-- Raw: [`composer-root-skeleton-fixcity-comparison-2026-06-30.md`](../raw/notes/composer-root-skeleton-fixcity-comparison-2026-06-30.md).
+- Raw: [`composer-root-skeleton-ptv-comparison-2026-06-30.md`](../raw/notes/composer-root-skeleton-ptv-comparison-2026-06-30.md).
 
 ## [2026-06-29] phpstan | HasXotTable grid label/state normalization
 
@@ -231,7 +231,7 @@ discussions:
 - Creato [overviews/platform-completion-roadmap.md](overviews/platform-completion-roadmap.md) — SSoT completamento 16 moduli + 4 temi.
 - Aggiornati [PHPSTAN-BEST-PRACTICES.md](PHPSTAN-BEST-PRACTICES.md), [phpstan-pest-bridge-discipline.md](concepts/phpstan-pest-bridge-discipline.md).
 - Fix test: `FileActionsTest`, `GetClassNameByPathActionTest` (pattern `@var` / `assertIsString`).
-- Base [#372](https://github.com/laraxot/base_fixcity_fila5/issues/372).
+- Base [#372](https://github.com/laraxot/base_ptv_fila5/issues/372).
 
 ## [2026-06-12] testing | Pest global class imports
 
@@ -271,8 +271,8 @@ discussions:
 
 ## [2026-06-05] docs | HackerNoon harness — tips 001-022 in wiki locale
 
-- Stub/checklist: second-brain → canon Xot, ai-harness, [hackernoon map](../../../../../docs/wiki/concepts/hackernoon-ai-coding-tips-fixcity-map.md), [llm-wiki.txt](../../../../../bashscripts/tools/prompts/llm-wiki.txt)
-- GitHub: [#272](https://github.com/laraxot/base_fixcity_fila5/issues/272) / [D#273](https://github.com/laraxot/base_fixcity_fila5/discussions/273)
+- Stub/checklist: second-brain → canon Xot, ai-harness, [hackernoon map](../../../../../docs/wiki/concepts/hackernoon-ai-coding-tips-ptv-map.md), [llm-wiki.txt](../../../../../bashscripts/tools/prompts/llm-wiki.txt)
+- GitHub: [#272](https://github.com/laraxot/base_ptv_fila5/issues/272) / [D#273](https://github.com/laraxot/base_ptv_fila5/discussions/273)
 
 ## [2026-06-05] docs | AI harness canon + stub moduli allineati
 
@@ -287,7 +287,7 @@ discussions:
 ## [2026-05-25] docs | audit profondo ridondanze — second brain ripulito da merge-marker
 
 - **Obiettivo**: consolidare osservabilità delle ripetizioni (codice + documentazione) senza toccare applicativo.
-- **Deliverable**: [`redundancy/audit-profondo-ridondanze-holistic.md`](redundancy/audit-profondo-ridondanze-holistic.md); aggiornato [`byte-identical-files-static-scan.md`](redundancy/byte-identical-files-static-scan.md) (riesame numeri SHA256 rigorosi `.php` vs `.blade.php`); sistemati hub [`concepts/ridondanze-cross-cutting-codebase.md`](concepts/ridondanze-cross-cutting-codebase.md) e [`concepts/redundancy-catalog.md`](concepts/redundancy-catalog.md) (prima gravemente corrotti da `- **Nota modulo Fixcity tema**: superfici duplicate cross-modulo in [`fixcity-cross-module-duplicate-surfaces.md`](../../../Fixcity/docs/wiki/redundancy/fixcity-cross-module-duplicate-surfaces.md).
+- **Deliverable**: [`redundancy/audit-profondo-ridondanze-holistic.md`](redundancy/audit-profondo-ridondanze-holistic.md); aggiornato [`byte-identical-files-static-scan.md`](redundancy/byte-identical-files-static-scan.md) (riesame numeri SHA256 rigorosi `.php` vs `.blade.php`); sistemati hub [`concepts/ridondanze-cross-cutting-codebase.md`](concepts/ridondanze-cross-cutting-codebase.md) e [`concepts/redundancy-catalog.md`](concepts/redundancy-catalog.md) (prima gravemente corrotti da `- **Nota modulo Fixcity tema**: superfici duplicate cross-modulo in [`ptv-cross-module-duplicate-surfaces.md`](../../../Fixcity/docs/wiki/redundancy/ptv-cross-module-duplicate-surfaces.md).
 
 ## [2026-05-24] refactor | wizard — normalizzazione stato **rimossa dalla base**
 
@@ -354,10 +354,10 @@ discussions:
 
 ## [2026-06-30] governance | Composer root skeleton modulare
 
-- Confrontato `base_fixcity_fila5/laravel/composer.json` con Predict.
+- Confrontato `base_ptv_fila5/laravel/composer.json` con Predict.
 - Aggiornata la regola: root minimo con `php`, `laravel/framework`, `nwidart/laravel-modules`; merge solo `Modules/*/composer.json`.
 - Chiariti anti-pattern: niente `Modules\\`, `Database\\Seeders\\` o `Themes\\*\\` nell'autoload root, niente merge dei temi, niente dipendenze funzionali nel root.
-- Raw note: `docs/raw/notes/composer-root-skeleton-fixcity-comparison-2026-06-30.md`.
+- Raw note: `docs/raw/notes/composer-root-skeleton-ptv-comparison-2026-06-30.md`.
 - Wiki: `docs/wiki/concepts/composer-root-skeleton-modular.md`.
 
 ## [2026-04-27] governance | policy module matrix

@@ -192,7 +192,7 @@ TextEntry::make('review_images_count')
     ->state(function (Get $get): string {
         $images = $get('images');
         $count = is_array($images) ? count($images) : 0;
-        return trans_choice('fixcity::ticket.messages.images_uploaded.text', $count);
+        return trans_choice('ptv::ticket.messages.images_uploaded.text', $count);
     }),
 ```
 

@@ -7,14 +7,14 @@ namespace Modules\Xot\Tests\Unit;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Process;
 use Mockery;
-use Modules\Xot\Filament\Forms\Components\XotBaseCheckboxList;
-use Modules\Xot\Filament\Forms\Components\XotBaseRadio;
-use Modules\Xot\Filament\Forms\Components\XotBaseSelect;
-use Modules\Xot\Filament\Schemas\Components\XotBaseGroup;
-use Modules\Xot\Filament\Schemas\Components\XotBaseSection;
-use Modules\Xot\Filament\Tables\Actions\XotBaseTableAction;
-use Modules\Xot\Filament\Tables\Columns\XotBaseViewColumn;
-use Modules\Xot\Filament\Widgets\XotBaseWizardWidget;
+use Modules\Xot\Tests\Fixtures\Stubs\XotAbsCheckbox3;
+use Modules\Xot\Tests\Fixtures\Stubs\XotAbsGroup3;
+use Modules\Xot\Tests\Fixtures\Stubs\XotAbsRadio3;
+use Modules\Xot\Tests\Fixtures\Stubs\XotAbsSection3;
+use Modules\Xot\Tests\Fixtures\Stubs\XotAbsSelect3;
+use Modules\Xot\Tests\Fixtures\Stubs\XotAbsTableAction3;
+use Modules\Xot\Tests\Fixtures\Stubs\XotAbsViewColumn3;
+use Modules\Xot\Tests\Fixtures\Stubs\XotAbsWizard3;
 use Modules\Xot\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 use ReflectionClass;
@@ -25,44 +25,6 @@ uses(TestCase::class)->group('no-xot-db');
 afterEach(function (): void {
     Mockery::close();
 });
-
-final class XotAbsSelect3 extends XotBaseSelect
-{
-}
-
-final class XotAbsRadio3 extends XotBaseRadio
-{
-}
-
-final class XotAbsCheckbox3 extends XotBaseCheckboxList
-{
-}
-
-final class XotAbsSection3 extends XotBaseSection
-{
-}
-
-final class XotAbsGroup3 extends XotBaseGroup
-{
-}
-
-final class XotAbsTableAction3 extends XotBaseTableAction
-{
-}
-
-final class XotAbsViewColumn3 extends XotBaseViewColumn
-{
-}
-
-final class XotAbsWizard3 extends XotBaseWizardWidget
-{
-    protected string $view = 'xot::filament.widgets.base';
-
-    public function getSteps(): array
-    {
-        return [];
-    }
-}
 
 describe('Xot abstract Filament stubs', function (): void {
     test('make e setUp su stub concreti', function (): void {

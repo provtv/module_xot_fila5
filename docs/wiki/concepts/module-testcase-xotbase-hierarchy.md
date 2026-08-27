@@ -7,9 +7,9 @@ created: 2026-06-10
 updated: 2026-06-11
 qmd: "testcase xotbasetestcase nwidart laravel modules pest phpstan hierarchy"
 issues:
-  - https://github.com/laraxot/base_fixcity_fila5/issues/316
+  - https://github.com/laraxot/base_ptv_fila5/issues/316
 discussions:
-  - https://github.com/laraxot/base_fixcity_fila5/discussions/316
+  - https://github.com/laraxot/base_ptv_fila5/discussions/316
 related:
   - ../../testing/xot-base-testcase-rule.md
   - ../concepts/phpstan-pest-bridge-discipline.md

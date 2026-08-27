@@ -25,7 +25,7 @@ Un solo punto di lettura che **aggrega tipi di ripetizioni** osservati nel monor
 
 ## Ridondanza byte-identica (checksum), moduli + temi
 
-Pass SHA256 senza interprete AST: sintesi e pattern in **[byte-identical-files-static-scan.md](../redundancy/byte-identical-files-static-scan.md)** — include baseline 2026-05-23 e **riesame 2026-05-25**. Tracker [#89](https://github.com/laraxot/base_fixcity_fila5/issues/89) · [#90](https://github.com/laraxot/base_fixcity_fila5/issues/90).
+Pass SHA256 senza interprete AST: sintesi e pattern in **[byte-identical-files-static-scan.md](../redundancy/byte-identical-files-static-scan.md)** — include baseline 2026-05-23 e **riesame 2026-05-25**. Tracker [#89](https://github.com/laraxot/base_ptv_fila5/issues/89) · [#90](https://github.com/laraxot/base_ptv_fila5/issues/90).
 
 ## Volumi documentazione moduli (indicativo)
 

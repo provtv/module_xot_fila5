@@ -126,7 +126,7 @@ class TicketForm extends XotBaseResourceForm
 
 ### 4. **LangServiceProvider Integration (Right Speech)**
 - NO `->label()` or `->tooltip()` in form fields
-- Labels come from `fixcity::ticket-wizard.steps.privacy.label`
+- Labels come from `ptv::ticket-wizard.steps.privacy.label`
 - Single source of truth for translations
 
 ### 5. **Module Boundary (Universal Love)**

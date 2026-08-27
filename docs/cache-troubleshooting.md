@@ -1,6 +1,6 @@
 # Cache troubleshooting (module Xot)
 
-Symptom: "SQLSTATE[42S02]: Base table or view not found: 1146 Table 'fixcity_data.cache' doesn't exist"
+Symptom: "SQLSTATE[42S02]: Base table or view not found: 1146 Table 'ptv_data.cache' doesn't exist"
 
 Cause: Application is configured to use the database cache driver but the required `cache` table is missing.
 

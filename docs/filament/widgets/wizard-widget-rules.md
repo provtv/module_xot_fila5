@@ -34,7 +34,7 @@ TextInput::make('address')
 **Perche**: LangServiceProvider configura automaticamente label, placeholder, helperText, tooltip per TUTTI i componenti Filament via `AutoLabelAction`.
 
 **Pattern chiave**: `{namespace}::{widget_snake_case}.{type}.{name}.{property}`  
-**Esempio**: `fixcity::create_ticket_wizard.fields.address.label`
+**Esempio**: `ptv::create_ticket_wizard.fields.address.label`
 
 ---
 

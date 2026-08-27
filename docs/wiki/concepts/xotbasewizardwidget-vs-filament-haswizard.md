@@ -143,7 +143,7 @@ abstract class XotBaseWizardWidget extends XotBaseWidget
 
 ## Visual Parity: The "Avanti" Button Problem
 
-**Issue**: Frontoffice wizard (`/it/tests/segnalazione-crea`) missing "Avanti" button compared to admin (`/fixcity/admin/tickets/create`).
+**Issue**: Frontoffice wizard (`/it/tests/segnalazione-crea`) missing "Avanti" button compared to admin (`/ptv/admin/tickets/create`).
 
 ### Root Cause
 

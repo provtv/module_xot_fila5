@@ -165,7 +165,7 @@ Misura concorrente (suite non necessariamente verde → clover comunque scritto)
 | Ptv | 23,1 | |
 | Activity / Sigma / User | TBD | run in corso |
 
-**Blocco operativo:** ~27 processi Pest in parallelo sullo stesso `fixcity_data.sqlite`
+**Blocco operativo:** ~27 processi Pest in parallelo sullo stesso `ptv_data.sqlite`
 → `SQLITE_BUSY`. Mitigazione: skip write DB in Lang/Tenant TestCase durante campagna 5.26.
 
 
@@ -225,7 +225,7 @@ suite verde + test mirati, la % live supera spesso il clover (vedi Activity 29% 
 
 ## Tetto strutturale (schema sqlite)
 
-`database/fixcity_data.sqlite` non contiene tabelle di dominio (`users`, `media`, `activity_log`).
+`database/ptv_data.sqlite` non contiene tabelle di dominio (`users`, `media`, `activity_log`).
 Finché non c’è schema deterministico ([5.25](./stories/5.25.module-suite-green-offline.story.md)),
 i moduli DB-heavy usano **skip condizionato** (pilota Activity) per suite verde offline e
 misura onesta del perimetro Unit.
